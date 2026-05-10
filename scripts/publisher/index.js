@@ -1,24 +1,32 @@
-const { isDryRun, isDoctor, episodeDir, credentials } = require('./config');
+#!/usr/bin/env node
+
+const { resolveConfig } = require('./config');
 const { colors, logDoctor, printHeader } = require('./logger');
 const { getEpisodeData, getLocalTranscripts } = require('./file-manager');
 const { initYouTube, fetchVideoDetails, updateVideo, downloadExistingCaptions, uploadCaptions } = require('./youtube-api');
 
 async function main() {
-  let modeTitle = 'Angularidades Youtube Publisher';
+  const args = process.argv.slice(2);
+  const isDoctor = args.includes('--doctor');
+  const isDryRun = args.includes('--dry-run');
+
   if (isDoctor) modeTitle += ' Doctor';
   else if (isDryRun) modeTitle += ' Dry Run';
-  
-  printHeader(modeTitle);
+
+  printHeader('Angularidades: YouTube Publisher');
+
+  const config = await resolveConfig();
+  const { episodeDir, credentials } = config;
 
   const { metadata, videoId, titleEs, titleEn, descriptionEs, descriptionEn, tags } = getEpisodeData(episodeDir, logDoctor, isDoctor);
 
   const hasFullAuth = credentials.CLIENT_ID && credentials.CLIENT_SECRET && credentials.REFRESH_TOKEN;
 
   if (isDoctor) {
-    logDoctor(hasFullAuth, 'YouTube OAuth2 credentials found in environment');
-    logDoctor(!!titleEs, 'youtube_title_es.txt found', true);
-    logDoctor(!!descriptionEs, 'youtube_description_es.md found', true);
-    logDoctor(tags.length > 0, 'youtube_tags.txt or metadata tags found', true);
+    logDoctor(hasFullAuth, 'YouTube OAuth2 credentials in environment');
+    logDoctor(!!titleEs, 'youtube_title_es.txt', true);
+    logDoctor(!!descriptionEs, 'youtube_description_es.md', true);
+    logDoctor(tags.length > 0, 'youtube_tags.txt or metadata tags', true);
   }
 
   const transcripts = getLocalTranscripts(episodeDir);
@@ -91,7 +99,7 @@ async function main() {
       console.log(JSON.stringify(updatePayload, null, 2));
       console.log(`${colors.cyan}${colors.bold}---------------------------------------${colors.reset}\n`);
       console.log(`${colors.green}✔${colors.reset} Dry run complete. No changes were pushed to YouTube.`);
-      
+
       transcripts.forEach(lang => {
         if (lang.exists) {
           console.log(`${colors.cyan}↳${colors.reset} [DRY RUN] Would upload transcript: ${lang.file} for language: ${lang.code}`);
@@ -103,7 +111,7 @@ async function main() {
 
     await updateVideo(youtube, videoId, updatePayload);
     await uploadCaptions(youtube, videoId, transcripts);
-    
+
     console.log(`\n${colors.bold}✨ Publishing complete.${colors.reset}\n`);
 
   } catch (error) {

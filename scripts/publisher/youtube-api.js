@@ -81,7 +81,7 @@ async function downloadExistingCaptions(youtube, videoId, episodeDir, isDoctor, 
              || captions[0];
              
     if (track) {
-      console.log(`Downloading YouTube captions (${track.snippet.language} - ${track.snippet.trackKind})...`);
+      if (isDoctor) console.log(`Downloading YouTube captions (${track.snippet.language} - ${track.snippet.trackKind})...`);
       const downloadRes = await youtube.captions.download({
         id: track.id,
         tfmt: 'sbv'
@@ -94,7 +94,7 @@ async function downloadExistingCaptions(youtube, videoId, episodeDir, isDoctor, 
       }
       
       saveCaptions(episodeDir, data);
-      console.log(`Successfully downloaded youtube_captions.sbv`);
+      if (isDoctor) console.log(`Successfully downloaded youtube_captions.sbv`);
     }
   } catch (error) {
     if (isDoctor) logDoctor(false, `Failed to fetch captions list: ${error.message}`);

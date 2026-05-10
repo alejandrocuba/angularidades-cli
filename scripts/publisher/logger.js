@@ -19,11 +19,11 @@ function logDoctor(success, message, isWarning = false) {
 }
 
 function printHeader(title) {
-  console.log(`\n${colors.blue}${colors.bold}╔════════════════════════════════════════════╗`);
-  const padding = Math.max(0, Math.floor((44 - title.length) / 2));
-  const extraPadding = (44 - title.length) % 2;
-  console.log(`║${' '.repeat(padding)}${title.toUpperCase()}${' '.repeat(padding + extraPadding)}║`);
-  console.log(`╚════════════════════════════════════════════╝${colors.reset}\n`);
+  console.log(`\n${colors.blue}${colors.bold}╔════════════════════════════════════════════════════╗`);
+  const padding = Math.max(0, Math.floor((52 - title.length) / 2));
+  const extraPadding = (52 - title.length) % 2;
+  console.log(`║${' '.repeat(padding)}${title}${' '.repeat(padding + extraPadding)}║`);
+  console.log(`╚════════════════════════════════════════════════════╝${colors.reset}\n`);
 }
 
 module.exports = { colors, logDoctor, printHeader };

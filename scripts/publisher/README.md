@@ -4,23 +4,28 @@ This directory contains the modular implementation of the YouTube publishing pip
 
 ## Architecture
 
-The script is split into cohesive modules following Node.js best practices:
+The CLI is split into cohesive modules following Node.js best practices:
 
-- **`index.js`**: The main entry point and orchestrator. It coordinates the flow between data loading, API calls, and UI output.
-- **`config.js`**: Handles CLI argument parsing (`--doctor`, `--dry-run`, `-e`), environment variable loading, and episode directory resolution.
-- **`youtube-api.js`**: Encapsulates all interactions with the Google YouTube Data API v3 (Authentication, Video updates, and Caption management).
-- **`file-manager.js`**: Manages all file system operations, including reading episode metadata, local publisher assets (titles, descriptions, tags), and saving downloaded captions.
-- **`logger.js`**: Provides a consistent UI/UX for the terminal, including ANSI colors, status symbols, and the "Doctor" diagnostic layout.
+- **`scaffold.js`**: Handles new episode directory creation and YouTube caption fetching.
+- **`index.js`**: The main publisher orchestrator for YouTube API sync.
+- **`config.js`**: Handles CLI argument parsing, interactive menus, and environment resolution.
+- **`youtube-api.js`**: Encapsulates all interactions with the Google YouTube Data API v3.
+- **`file-manager.js`**: Manages all file system operations.
+- **`logger.js`**: Provides a consistent UI/UX with ANSI colors and status symbols.
 
 ## Usage
+
+While you can use `pnpm run`, the recommended way is using the global CLI.
 
 ### Commands
 
 | Command | Description |
 |---------|-------------|
-| `npm run youtube:publish -- <episode>` | Publishes all metadata and transcripts to YouTube (Requires full Auth). |
-| `npm run youtube:dry-run -- <episode>` | Simulates the publishing process and prints the payload. |
-| `npm run youtube:doctor -- <episode>` | Runs a diagnostic check of all requirements and API connectivity. |
+| `angularidades new`     | Creates the scaffolding AND fetches initial captions from YouTube. |
+| `angularidades publish` | Publishes all metadata and transcripts to YouTube (Requires full Auth). |
+| `angularidades dry-run` | Simulates the publishing process and prints the payload. |
+| `angularidades doctor`  | Runs a diagnostic check of all requirements and API connectivity. |
+
 
 ### Parameters
 
