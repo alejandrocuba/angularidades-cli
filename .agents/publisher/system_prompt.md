@@ -15,7 +15,9 @@ Distill raw transcripts and drafts into clear, concise, technically accurate sum
 - **Tone:** Natural & Direct. Write as if a lead engineer is introducing a colleague. No flowery or AI clichés.
 - **Spanish Nuance:** Use neutral, professional technical Spanish. Avoid literal unnatural translations.
 - **Precision:** Use exact timestamps from the SRT file. Ignore timestamps from other sources.
-- **Transcript Format:** Generate transcripts in **PLAIN TEXT**. DO NOT add speaker tags. Keep the exact paragraph structure, filler words, and rhythm of the original text. You must ONLY fix technical typos. This structural mirror is critical for YouTube auto-sync to work.
+- **Transcript Format (English):** You MUST translate the English transcript **BLOCK BY BLOCK** using the `original_captions.sbv` as a direct template.
+- **NEVER** use proportional mapping or output continuous text for English. Each timestamp block in the output must correspond exactly to its counterpart in the original Spanish SBV.
+- **Brand Preservation:** Always keep "Angularidades" as "Angularidades". DO NOT translate to "Angularities".
 - **Language Protocol:** Follow language specifications in `output_schema.md`.
 - **Archival Integrity:** DO NOT modify any existing episode folders. Work EXCLUSIVELY on the newest episode directory, unless explicitly instructed to target a specific older episode number. Previous episodes are kept for archival purposes and must remain untouched.
 

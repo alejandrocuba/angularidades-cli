@@ -41,15 +41,15 @@ async function updateVideo(youtube, videoId, updatePayload) {
 async function downloadExistingCaptions(youtube, videoId, episodeDir, isDoctor, isDryRun) {
   const recordingDir = path.join(episodeDir, '1_recording');
   
-  // Only proceed if no original transcript/caption files exist
-  if (fs.existsSync(recordingDir)) {
-    const existingFiles = fs.readdirSync(recordingDir);
-    const hasOriginal = existingFiles.some(f => f.startsWith('original_') || f === 'youtube_captions.sbv');
-    
-    if (hasOriginal) {
-      if (isDoctor) logDoctor(true, 'Original transcript already exists locally. Skipping download.');
-      return;
-    }
+  // Only proceed if NO transcript/caption files exist in either recording or publisher folders
+  const publisherDir = path.join(episodeDir, '2_publisher');
+  
+  const hasLocalFiles = (fs.existsSync(recordingDir) && fs.readdirSync(recordingDir).some(f => f.startsWith('original_') || f.endsWith('.sbv')))
+                     || (fs.existsSync(publisherDir) && fs.readdirSync(publisherDir).some(f => f.startsWith('youtube_transcript_') || f.startsWith('youtube_captions_')));
+
+  if (hasLocalFiles) {
+    if (isDoctor) logDoctor(true, 'Local transcript/caption files found. Skipping download from YouTube to protect local edits.');
+    return;
   }
 
   try {
