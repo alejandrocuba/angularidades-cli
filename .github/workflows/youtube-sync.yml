@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       episode_dir:
-        description: 'Path to the episode directory (e.g., episodes/ep_001)'
+        description: 'Path to the episode directory (e.g., episodes/0001)'
         required: true
         type: string
 

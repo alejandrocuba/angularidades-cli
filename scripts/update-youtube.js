@@ -10,7 +10,7 @@ const CLIENT_ID = process.env.YOUTUBE_CLIENT_ID;
 const CLIENT_SECRET = process.env.YOUTUBE_CLIENT_SECRET;
 const REFRESH_TOKEN = process.env.YOUTUBE_REFRESH_TOKEN;
 
-// Expecting episode path as the first argument, e.g. "episodes/ep_001"
+// Expecting episode path as the first argument, e.g. "episodes/001"
 const args = process.argv.slice(2);
 const episodeDir = args.find(arg => !arg.startsWith('--'));
 const isDryRun = args.includes('--dry-run');
@@ -21,8 +21,8 @@ if (!episodeDir) {
 }
 
 const metadataPath = path.join(episodeDir, 'metadata.json');
-const descriptionPath = path.join(episodeDir, 'outputs', '01_description.md');
-const chaptersPath = path.join(episodeDir, 'outputs', '03_chapters.txt');
+const descriptionPath = path.join(episodeDir, '2_publisher', '01_description.md');
+const chaptersPath = path.join(episodeDir, '2_publisher', '03_chapters.txt');
 
 async function updateYouTubeVideo() {
   if (!fs.existsSync(metadataPath)) {
@@ -43,7 +43,7 @@ async function updateYouTubeVideo() {
   if (fs.existsSync(descriptionPath)) {
     description = fs.readFileSync(descriptionPath, 'utf8');
   } else {
-    console.warn(`Warning: 01_description.md not found in ${episodeDir}/outputs/`);
+    console.warn(`Warning: 01_description.md not found in ${episodeDir}/2_publisher/`);
   }
 
   // Read Chapters and append to description
@@ -54,7 +54,7 @@ async function updateYouTubeVideo() {
 
   // Handle Offline Dry Run
   const hasFullAuth = CLIENT_ID && CLIENT_SECRET && REFRESH_TOKEN;
-  
+
   if (!hasFullAuth) {
     if (isDryRun) {
       console.warn('Warning: Running offline dry-run because OAuth credentials are missing.');
@@ -122,7 +122,7 @@ async function updateYouTubeVideo() {
     }
 
     console.log(`Updating YouTube Video: ${snippet.title}`);
-    
+
     // Perform the update
     const response = await youtube.videos.update({
       part: 'snippet,recordingDetails',
