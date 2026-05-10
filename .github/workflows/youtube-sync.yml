@@ -21,7 +21,7 @@ jobs:
           node-version: '24'
 
       - name: Install Dependencies
-        run: npm ci
+        run: pnpm install
 
       - name: Run YouTube Sync Script
         env:
