@@ -21,6 +21,10 @@ switch (command) {
   case 'dry-run':
     finalArgs = ['--dry-run', ...remainingArgs];
     break;
+  case 'new':
+  case 'scaffold':
+    require('../scripts/publisher/scaffold').scaffoldEpisode();
+    return;
   default:
     // If no command matched, assume it's a direct call to publish or show help
     if (command && !command.startsWith('-')) {

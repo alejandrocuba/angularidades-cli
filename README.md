@@ -7,10 +7,11 @@ The official Command Line Interface for automating the post-production and publi
 - [Spotify](creators.spotify.com/pod/show/angularidades)
 
 ## Features
-- 🛠️ **Diagnostics:** Use `angularidades doctor` to check metadata and credentials.
+- 💬 **Interactive Menu:** Select episodes from an elegant, state-of-the-art terminal UI.
+- 🆕 **Scaffolding:** Create a new episode structure with `angularidades new`.
 - 📦 **Publishing:** Sync transcripts, descriptions, and tags to YouTube via `angularidades publish`.
 - 🔍 **Dry Run:** Preview exactly what will be sent to YouTube before making changes.
-- 💬 **Interactive Menu:** Select episodes from an elegant, state-of-the-art terminal UI.
+- 🛠️ **Diagnostics:** Use `angularidades doctor` to check metadata and credentials.
 
 ## Project Structure
 - `.agents/`: Specialized AI agents for planning and publishing.
@@ -39,6 +40,10 @@ The project provides a unified CLI tool: `angularidades`. If you haven't linked 
 4. Use the generated `script.md` to conduct the interview via teleprompter.
 
 ### 2. Publishing Phase (Post-recording)
+0. **Scaffolding:** Create the episode structure and metadata:
+   ```bash
+   angularidades new
+   ```
 1. **Diagnostics:** Run the Doctor check to ensure all metadata and credentials are ready:
    ```bash
    angularidades doctor

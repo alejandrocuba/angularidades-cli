@@ -20,6 +20,7 @@ While you can use `pnpm run`, the recommended way is using the global CLI.
 
 | Command | Description |
 |---------|-------------|
+| `angularidades new`     | Creates the scaffolding for a new episode (dirs & metadata). |
 | `angularidades publish` | Publishes all metadata and transcripts to YouTube (Requires full Auth). |
 | `angularidades dry-run` | Simulates the publishing process and prints the payload. |
 | `angularidades doctor`  | Runs a diagnostic check of all requirements and API connectivity. |
