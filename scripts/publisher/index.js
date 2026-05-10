@@ -1,14 +1,23 @@
-const { isDryRun, isDoctor, episodeDir, credentials } = require('./config');
+#!/usr/bin/env node
+
+const { resolveConfig } = require('./config');
 const { colors, logDoctor, printHeader } = require('./logger');
 const { getEpisodeData, getLocalTranscripts } = require('./file-manager');
 const { initYouTube, fetchVideoDetails, updateVideo, downloadExistingCaptions, uploadCaptions } = require('./youtube-api');
 
 async function main() {
-  let modeTitle = 'Angularidades Youtube Publisher';
+  const args = process.argv.slice(2);
+  const isDoctor = args.includes('--doctor');
+  const isDryRun = args.includes('--dry-run');
+
+  let modeTitle = 'Angularidades: YouTube Publisher';
   if (isDoctor) modeTitle += ' Doctor';
   else if (isDryRun) modeTitle += ' Dry Run';
   
   printHeader(modeTitle);
+
+  const config = await resolveConfig();
+  const { episodeDir, credentials } = config;
 
   const { metadata, videoId, titleEs, titleEn, descriptionEs, descriptionEn, tags } = getEpisodeData(episodeDir, logDoctor, isDoctor);
 

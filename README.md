@@ -1,19 +1,36 @@
-# Angularidades Content-Ops
+# Angularidades Ops CLI 🚀
 
-Official repository for the automated generation of summaries, chapters, and posts for the Angularidades podcast.
+The official Command Line Interface for automating the post-production and publishing workflow of the **Angularidades** podcast.
 
 ## Links
 - [YouTube](https://www.youtube.com/@angularidades)
 - [Spotify](creators.spotify.com/pod/show/angularidades)
 
+## Features
+- 🛠️ **Diagnostics:** Use `angularidades doctor` to check metadata and credentials.
+- 📦 **Publishing:** Sync transcripts, descriptions, and tags to YouTube via `angularidades publish`.
+- 🔍 **Dry Run:** Preview exactly what will be sent to YouTube before making changes.
+- 💬 **Interactive Menu:** Select episodes from an elegant, state-of-the-art terminal UI.
+
 ## Project Structure
-- `.agents/`: Contains the agents' core, organized into specialized subdirectories for different phases:
-  - `planner/`: Pre-recording agent for interview strategy and questions.
-  - `publisher/`: Post-recording agent for all publishing tasks (descriptions, posts, chapters, and transcript translation/correction).
-  - `skills/`: Official shared Angular context.
-- `episodes/`: Work directory. Each episode has its own subfolder organized by phases (`0_planner/`, `1_recording/`, `2_publisher/`).
+- `.agents/`: Specialized AI agents for planning and publishing.
+- `bin/`: CLI entry points.
+- `episodes/`: Work directory organized by episode number.
+- `scripts/`: Internal logic and YouTube API integrations.
+
+## Installation & Setup
+
+To get started with the Angularidades Ops pipeline, run the initialization script:
+
+```bash
+./init.sh
+```
+
+This script will install dependencies and link the `angularidades` CLI tool globally on your system.
 
 ## Workflow
+
+The project provides a unified CLI tool: `angularidades`. If you haven't linked it yet, you can also use `pnpm run youtube:<command>`.
 
 ### 1. Planning Phase (Pre-recording)
 1. Determine the upcoming episode's Topic or Guest Profile.
@@ -24,18 +41,20 @@ Official repository for the automated generation of summaries, chapters, and pos
 ### 2. Publishing Phase (Post-recording)
 1. **Diagnostics:** Run the Doctor check to ensure all metadata and credentials are ready:
    ```bash
-   pnpm run youtube:doctor <episode-number>
+   angularidades doctor
    ```
 2. **Recording Input:** The script automatically fetches the recorded transcripts and captions from YouTube and places them inside the `episodes/<episode-number>/1_recording/` folder for the agent.
 3. **Generation:** Run the Publisher agent pointing to `.agents/publisher/system_prompt.md`. The agent reads from `0_planner/` and `1_recording/` and places all generated files (titles, descriptions, LinkedIn posts, and corrected transcripts) into the `2_publisher/` folder.
 4. **Verification:** Run a dry-run to verify the payload that will be sent to YouTube:
    ```bash
-   pnpm run youtube:dry-run <episode-number>
+   angularidades dry-run
    ```
 5. **Publishing:** Push the metadata and transcripts to the YouTube API:
    ```bash
-   pnpm run youtube:publish <episode-number>
+   angularidades publish
    ```
+   *Note: If no episode is provided, the CLI will present an interactive selection menu.*
+
 
 ## YouTube Authentication Setup
 

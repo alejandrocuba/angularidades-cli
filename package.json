@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Automated generation of summaries, chapters, and posts for the Angularidades podcast.",
   "main": "index.js",
+  "bin": {
+    "angularidades": "./bin/cli.js"
+  },
   "scripts": {
-    "youtube:publish": "node scripts/publisher/index.js",
-    "youtube:dry-run": "node scripts/publisher/index.js --dry-run",
-    "youtube:doctor": "node scripts/publisher/index.js --doctor"
+    "youtube:publish": "node bin/cli.js publish",
+    "youtube:dry-run": "node bin/cli.js dry-run",
+    "youtube:doctor": "node bin/cli.js doctor"
   },
   "repository": {
     "type": "git",
@@ -26,6 +29,7 @@
   },
   "homepage": "https://github.com/alejandrocuba/angularidades-ops#readme",
   "dependencies": {
+    "@clack/prompts": "^1.3.0",
     "dotenv": "^17.4.2",
     "googleapis": "^171.4.0"
   }
