@@ -1,6 +1,6 @@
-Why does your Enterprise application's performance depend on Angular SSR even if SEO isn't a priority? Firebase App Hosting or Google Cloud Run? Discover when to abandon abstraction for total control.
+Why is SSR important for a web application, even if SEO isn't your priority? Firebase App Hosting or Google Cloud Run?
 
-Learn directly from Antonio Cárdenas and Ricardo Chavarría, Angular GDEs from Honduras. From Google Cloud Next 2026 in Las Vegas, they break down the challenges of running Angular in hybrid mode, how to avoid breaking your app on the server, and how to choose the right infrastructure on Google Cloud Platform.
+Learn directly from Antonio Cárdenas and Ricardo Chavarría, who from #GoogleCloudNext shared their experiences on the challenges of running Angular in hybrid mode, how to avoid breaking the application on the server, and choosing the right infrastructure on Google Cloud Platform.
 
 ## Topics we cover:
 00:00:00 Intro
