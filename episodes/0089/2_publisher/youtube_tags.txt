@@ -1,0 +1,1 @@
+angular, ssr, hybrid-rendering, firebase-app-hosting, google-cloud-run, gcp, cloud-logging, performance

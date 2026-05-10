@@ -1,25 +1,35 @@
-# 01_description.md (English and Spanish)
-```
-{{ 1-2 direct technical questions engaging the listener's curiosity about specific pain points discussed }}
+# youtube_description_es.md / youtube_description_en.md
+[NO MARKDOWN FORMATTING IN CONTENT - ONLY PLAIN TEXT AND LINKS]
+Generate two separate files, one in Spanish and one in English.
 
-{{Call to action: "Learn directly from" / "Aprende directamente de"}} {{guest}} ({{handle/nickname}}), {{role/bio}}. {{Context: From [Location], Guest breaks down [Topic]... describing briefly how they solve [Problem] or their story}}.
+{{ 1-2 direct technical questions engaging the listener's curiosity }}
 
-{{Key Points Header: "Key Points:" / "Puntos clave:"}}
-* {{Concise Title 1}}
-* {{Concise Title 2}}
-* {{Concise Title N}}
+Aprende directamente de {{guest1}} y {{guest2}}, {{role/bio}}. Desde el {{Location}}, desglosan {{Topic}} y cómo resuelven {{Problem}}.
+[English version should translate this naturally]
 
-{{Guest Name}} en {{Platform}}: {{Link if available}}
-{{Call to action: "Follow us on LinkedIn" / "Síguenos en LinkedIn"}}: https://www.linkedin.com/company/angularidades/
-```
+## Temas que abordamos:
+00:00:00 Intro
+hh:mm:ss {{Chapter title 1}}
+hh:mm:ss {{Chapter title 2}}
+
+## Conecta con los invitados:
+{{Guest 1 Name}}: {{Link}}
+{{Guest 2 Name}}: {{Link}}
+
+Angularidades en LinkedIn (Angularidades on LinkedIn): https://www.linkedin.com/company/angularidades/
+
 *Rules:*
-- Maintain professional, concise, technical tone.
-- Highlight frameworks, methodologies, concrete advice.
-- Key Points must be short, descriptive, specific. Between 3-7 words, noun phrases (Title Case), suitable for YouTube Chapters.
-- Hook Questions: Focus on technical pain points or misconceptions (e.g., "Why does your build fail silently?").
+- GENERATE BOTH SPANISH AND ENGLISH FILES.
+- NEVER hallucinate URLs. If guest last names or LinkedIn URLs are not provided, stop and ASK the user for them.
+- No markdown formatting.
+- Group guests naturally in the intro sentence.
+- Use Title Case for section headers, not CAPS.
+- Simple line breaks between sections.
+- For Chapters: Extract precise timestamps directly from the SRT. Chapters reflect the exact second a topic begins. Do not round or infer times.
 
 ---
-# 02_linkedin.md (English)
+# linkedin_post_es.md / linkedin_post_en.md
+Generate two separate files, one in Spanish and one in English.
 ```
 {{ same pitch of the description }}
 
@@ -28,42 +38,57 @@ Temas que abordamos durante la conversación:
 ✔️ {{Point 2}}
 ✔️ {{Point 3}}
 
-🎧 Escucha el episodio #{{episode_number}} en YouTube: {{link}} o en tu plataforma de podcast favorita.
+🎧 Escucha el episodio #{{episode_number}} en YouTube (Audio en español con subtítulos en inglés): {{link}} o en tu plataforma de podcast favorita.
 ```
 *Rules:*
+- GENERATE BOTH SPANISH AND ENGLISH FILES.
+- English version must mention: "Spanish audio with English subtitles". Spanish version must mention "Audio en español con subtítulos en inglés".
 - Intro: factual, concise, relevant for technical audience.
 - Mention guest's name and episode number. Use bullet points (✔️).
 
 ---
-# 03_chapters.txt (English and Spanish)
-**[CRITICAL INSTRUCTION - SOURCE ISOLATION]**
-ONLY generate this if `youtube.srt` or a YouTube transcript file is provided.
-EXCLUSIVELY use the YouTube transcript/SRT file. IGNORE timestamps from other sources. DO NOT hallucinate.
-Check the final timestamp of the SRT file. If a "Key Point" happens after the SRT file ends, DO NOT include that chapter.
-Timestamps must reflect the EXACT second (HH:MM:SS) the topic begins. If a topic falls outside the SRT length, skip it.
+---
+# youtube_captions_en.sbv
+**[CRITICAL INSTRUCTION - YOUTUBE SYNC COMPATIBILITY]**
+Technically reviewed and translated English transcript WITH TIMESTAMPS.
+FORMAT: Valid SBV (SubViewer) format, strictly maintaining the exact same timestamps from `original_captions.sbv`.
+DO NOT translate the brand name "Angularidades" (keep it as "Angularidades", do not use "Angularities").
+DO NOT add speaker tags (e.g., "Name:").
+ONLY correct technical terms and translate accurately to English.
+Final file must contain the exact same timestamp blocks as the original Spanish SBV, but with the text translated.
+
+---
+# youtube_transcript_es.md
+**[CRITICAL INSTRUCTION - YOUTUBE SYNC COMPATIBILITY]**
+Technically reviewed and corrected Spanish transcript.
+FORMAT: Single block of text (or exactly matching the structure of `original_transcript.txt`).
+DO NOT add speaker tags (e.g., "Name:").
+DO NOT remove filler words (e.g., "eh", "ah") or change the pacing.
+ONLY correct technical typos (e.g., "Cloud Room" -> "Cloud Run").
+Final file must be structurally identical to the original for YouTube auto-sync.
+---
+# youtube_title_es.txt / youtube_title_en.txt
+Generate two separate files, one in Spanish and one in English.
+
+ES Format:
+Despliegue de Angular SSR con {{Guest1 Name}} y {{Guest2 Name}} - Episodio {{episode_number}}
+
+EN Format:
+{{Technical Topic}} with {{Guest1 Name}} and {{Guest2 Name}} - Episode {{episode_number}}
+
+*Rules:*
+- ES title MUST start with "Despliegue de Angular SSR con" (or suitable technical hook).
+- Include full names of guests.
+- Use Title Case for English titles.
+- Keep titles under 100 characters if possible.
+
+---
+# youtube_tags.txt
+Comma-separated technical tags based on the episode content for YouTube.
 
 ```
-Temas que abordamos:
-
-00:00:00 Intro
-hh:mm:ss {{Chapter title 1}}
-hh:mm:ss {{Chapter title 2}}
+angular, ssr, hybrid rendering, {{tag1}}, {{tag2}}
 ```
 *Rules:*
-- Extract precise timestamps directly from the SRT.
-- Chapters reflect the exact second a topic begins. Do not round or infer times.
-- If YouTube file is absent, do not use the Riverside transcript as a fallback.
-
----
-# 04_transcript_en.md
-**[CRITICAL INSTRUCTION - SOURCE ISOLATION]**
-ONLY generate this if `youtube.srt` or a YouTube transcript file is provided.
-The technically reviewed, corrected, and perfectly translated English transcript.
-Ensure it reads natively and accurately reflects the technical context of the discussion.
-
----
-# 05_transcript_es.md
-**[CRITICAL INSTRUCTION - SOURCE ISOLATION]**
-ONLY generate this if `youtube.srt` or a YouTube transcript file is provided.
-The technically reviewed, corrected, and naturally flowing Spanish transcript.
-Use neutral, professional technical Spanish. Avoid literal, unnatural translations of technical idioms.
+- Output as a single line of comma-separated values.
+- Include 5-10 relevant technical tags.

@@ -90,7 +90,7 @@ userForm = form(this.userModel, (schemaPath) => {
     },
   });
   // when is only available for required
-  // Do NOT do this: pattern(p.name, /xxx/, {when /* ERROR */)
+  // Do NOT do this: pattern(p.name, /0000/, {when /* ERROR */)
 
   // Email
   email(schemaPath.email, {message: 'Invalid email'});

@@ -4,7 +4,9 @@
   "description": "Automated generation of summaries, chapters, and posts for the Angularidades podcast.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "youtube:publish": "node scripts/publisher/index.js",
+    "youtube:dry-run": "node scripts/publisher/index.js --dry-run",
+    "youtube:doctor": "node scripts/publisher/index.js --doctor"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/alejandrocuba/angularidades-ops/issues"
   },
-  "homepage": "https://github.com/alejandrocuba/angularidades-ops#readme"
+  "homepage": "https://github.com/alejandrocuba/angularidades-ops#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "googleapis": "^171.4.0"
+  }
 }
