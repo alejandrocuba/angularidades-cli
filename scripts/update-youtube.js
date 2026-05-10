@@ -11,15 +11,12 @@ const CLIENT_SECRET = process.env.YOUTUBE_CLIENT_SECRET;
 const REFRESH_TOKEN = process.env.YOUTUBE_REFRESH_TOKEN;
 
 // Expecting episode path as the first argument, e.g. "episodes/ep_001"
-const episodeDir = process.argv[2];
+const args = process.argv.slice(2);
+const episodeDir = args.find(arg => !arg.startsWith('--'));
+const isDryRun = args.includes('--dry-run');
 
 if (!episodeDir) {
-  console.error('Error: Episode directory argument is missing. Usage: node update-youtube.js <episode_dir>');
-  process.exit(1);
-}
-
-if (!CLIENT_ID || !CLIENT_SECRET || !REFRESH_TOKEN) {
-  console.error('Error: Missing YouTube OAuth2 credentials in environment variables.');
+  console.error('Error: Episode directory argument is missing. Usage: node update-youtube.js <episode_dir> [--dry-run]');
   process.exit(1);
 }
 
@@ -55,6 +52,26 @@ async function updateYouTubeVideo() {
     description += '\n\n' + chapters;
   }
 
+  // Handle Offline Dry Run
+  const hasFullAuth = CLIENT_ID && CLIENT_SECRET && REFRESH_TOKEN;
+  
+  if (!hasFullAuth) {
+    if (isDryRun) {
+      console.warn('Warning: Running offline dry-run because OAuth credentials are missing.');
+      console.log('\n--- DRY RUN PAYLOAD (Offline) ---');
+      console.log('Video ID:', videoId);
+      console.log('Tags:', metadata.tags);
+      console.log('Recording Date:', metadata.recordingDate);
+      console.log('Description:\n', description);
+      console.log('---------------------------------\n');
+      return;
+    } else {
+      console.error('Error: Missing YouTube OAuth2 credentials in environment variables.');
+      console.error('YouTube Data API v3 requires full OAuth2 User Consent (Client ID, Secret, and Refresh Token) to update videos.');
+      process.exit(1);
+    }
+  }
+
   // Set up OAuth2 client
   const oauth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET);
   oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
@@ -78,17 +95,11 @@ async function updateYouTubeVideo() {
 
     const video = videoResponse.data.items[0];
     const snippet = video.snippet;
-    const status = video.status;
-
-    // Only update if the video is in a draft/private/unlisted state? Or we can just update anyway.
-    // The prompt says "when the episode is uploaded and in a draft state".
-
-    console.log(`Updating YouTube Video: ${snippet.title}`);
 
     // Update snippet
     snippet.description = description;
     if (metadata.tags && Array.isArray(metadata.tags)) {
-      snippet.tags = metadata.tags; // Add relevant tags
+      snippet.tags = metadata.tags;
     }
 
     const updatePayload = {
@@ -96,13 +107,22 @@ async function updateYouTubeVideo() {
       snippet: snippet,
     };
 
-    // Include recording date if provided
     if (metadata.recordingDate) {
       updatePayload.recordingDetails = {
         recordingDate: new Date(metadata.recordingDate).toISOString()
       };
     }
 
+    if (isDryRun) {
+      console.log('\n--- DRY RUN PAYLOAD (Authenticated) ---');
+      console.log(JSON.stringify(updatePayload, null, 2));
+      console.log('---------------------------------------\n');
+      console.log('Dry run complete. No changes were pushed to YouTube.');
+      return;
+    }
+
+    console.log(`Updating YouTube Video: ${snippet.title}`);
+    
     // Perform the update
     const response = await youtube.videos.update({
       part: 'snippet,recordingDetails',
@@ -113,9 +133,9 @@ async function updateYouTubeVideo() {
   } catch (error) {
     console.error('Error updating YouTube video:');
     if (error.response && error.response.data && error.response.data.error) {
-        console.error(error.response.data.error.message);
+      console.error(error.response.data.error.message);
     } else {
-        console.error(error);
+      console.error(error);
     }
     process.exit(1);
   }
