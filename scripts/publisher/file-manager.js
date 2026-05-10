@@ -53,8 +53,8 @@ function getEpisodeData(episodeDir, logDoctor, isDoctor) {
 
 function getLocalTranscripts(episodeDir) {
   const langFiles = [
-    { code: 'es', file: 'youtube_transcript_es.md', name: 'Spanish (Transcribed)' },
-    { code: 'en', file: 'youtube_transcript_en.md', name: 'English (Translated)' }
+    { code: 'es', file: 'youtube_transcript_es.md', name: 'Spanish' },
+    { code: 'en', file: 'youtube_captions_en.sbv', name: 'English' }
   ];
   return langFiles.map(lang => ({
     ...lang,

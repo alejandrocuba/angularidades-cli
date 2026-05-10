@@ -114,20 +114,21 @@ async function uploadCaptions(youtube, videoId, transcripts) {
     console.warn(`  ${colors.yellow}⚠${colors.reset} Could not fetch existing captions for overriding. Proceeding with insert. (${error.message})`);
   }
 
-  for (const lang of transcripts) {
+    for (const lang of transcripts) {
     if (lang.exists) {
       console.log(`${colors.cyan}↳${colors.reset} Uploading transcript for ${lang.name}...`);
       const transcript = fs.readFileSync(lang.path, 'utf8');
+      const isSyncRequired = lang.path.endsWith('.md');
       
-      const existingTrack = existingCaptions.find(
-        c => c.snippet.language === lang.code && c.snippet.name === lang.name
-      );
+      const existingTrack = existingCaptions.find(c => c.snippet.language === lang.code && c.snippet.name === lang.name)
+                         || existingCaptions.find(c => c.snippet.language === lang.code && c.snippet.trackKind?.toLowerCase() === 'standard');
       
       try {
         if (existingTrack) {
-          console.log(`  ${colors.cyan}↳${colors.reset} Overriding existing track: ${existingTrack.id}`);
+          console.log(`  ${colors.cyan}↳${colors.reset} Overriding existing track: ${existingTrack.id} (${existingTrack.snippet.name || 'no name'})`);
           await youtube.captions.update({
             part: 'snippet',
+            sync: isSyncRequired,
             requestBody: {
               id: existingTrack.id,
               snippet: {
@@ -146,6 +147,7 @@ async function uploadCaptions(youtube, videoId, transcripts) {
         } else {
           await youtube.captions.insert({
             part: 'snippet',
+            sync: isSyncRequired,
             requestBody: {
               snippet: {
                 videoId: videoId,

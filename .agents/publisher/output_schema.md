@@ -47,14 +47,15 @@ Temas que abordamos durante la conversación:
 - Mention guest's name and episode number. Use bullet points (✔️).
 
 ---
-# youtube_transcript_en.md
+---
+# youtube_captions_en.sbv
 **[CRITICAL INSTRUCTION - YOUTUBE SYNC COMPATIBILITY]**
-Technically reviewed and translated English transcript.
-FORMAT: Single block of text (or exactly matching the structure of `original_transcript.txt`).
+Technically reviewed and translated English transcript WITH TIMESTAMPS.
+FORMAT: Valid SBV (SubViewer) format, strictly maintaining the exact same timestamps from `original_captions.sbv`.
+DO NOT translate the brand name "Angularidades" (keep it as "Angularidades", do not use "Angularities").
 DO NOT add speaker tags (e.g., "Name:").
-DO NOT remove filler words (e.g., "uh", "ah") or change the pacing.
-ONLY correct technical terms and translate accurately.
-Final file must be a direct word-for-word equivalent ready for YouTube auto-sync.
+ONLY correct technical terms and translate accurately to English.
+Final file must contain the exact same timestamp blocks as the original Spanish SBV, but with the text translated.
 
 ---
 # youtube_transcript_es.md

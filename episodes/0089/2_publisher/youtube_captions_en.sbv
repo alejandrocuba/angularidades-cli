@@ -1,0 +1,530 @@
+0:00:08.320,0:00:11.960
+Welcome to Angularidades, where we discuss topics
+
+0:00:11.960,0:00:16.880
+around the Angular development framework for creating web applications.
+
+0:00:18.280,0:00:27.000
+Hello, in today's episode we are joined by Antonio from Tegucigalpa and Ricardo from San Pedro
+
+0:00:27.000,0:00:35.920
+Sula, both from Honduras, and we are here in a Creator Studio Pod within the
+
+0:00:35.920,0:00:43.040
+convention dedicated to Google Cloud Next 2026. What do you think of the space?
+
+0:00:43.040,0:00:48.440
+Amazing, it couldn't be better. Yes, we have a great setup for this episode. Yes, we
+
+0:00:48.440,0:00:53.960
+have a teleprompter down here, so we will be guiding ourselves from time to time to keep the
+
+0:00:53.960,0:01:00.200
+rhythm of the questions. We have to try to do it in supposedly 20 minutes. So let's see
+
+0:01:00.200,0:01:06.000
+how we can go through the whole process. And since we are at an event that revolves around everything
+
+0:01:06.000,0:01:13.440
+related to cloud computing, we are going to be talking today about how to run
+
+0:01:13.440,0:01:21.920
+Angular applications in hybrid mode, how to avoid breaking the application, of course, on the
+
+0:01:21.920,0:01:27.560
+server, and how to face that paralysis problem that can usually come to many of us
+
+0:01:27.560,0:01:35.280
+about going on one side with the managed abstraction of Firebase App Hosting or going
+
+0:01:35.280,0:01:43.200
+with a very precise, very granular control with Google Cloud Run. Let's start by giving a little more
+
+0:01:43.200,0:01:52.000
+context to the topic that for years the Angular ecosystem was dominated by CSR, that is,
+
+0:01:52.000,0:01:56.760
+by Client-Side Rendering, and however with the recent stabilization, with the
+
+0:01:56.760,0:02:04.200
+versions fundamentally after Angular 17 they managed to stabilize everything that has to do
+
+0:02:04.200,0:02:09.640
+with SSR, with Incremental Hydration, we already have a series of powerful tools that allow
+
+0:02:09.640,0:02:16.280
+us to take the load from the client side to the server and use the
+
+0:02:16.280,0:02:24.040
+static mechanisms also with which the web was used to working since the 90s with
+
+0:02:24.040,0:02:30.880
+Static Site Generation and well, finally the code that always lived on the browser side today can
+
+0:02:30.880,0:02:39.320
+also run on the server. But, how would you face from a technical leadership point
+
+0:02:39.320,0:02:49.160
+of view the decision to move your application to Server-Side Rendering, even if the business side
+
+0:02:49.160,0:02:54.760
+application does not have a need to have a strong presence on the search engines side,
+
+0:02:54.760,0:03:01.520
+that is, since it doesn't need to target SEO well, but somehow get some advantage out
+
+0:03:01.520,0:03:07.040
+of SSR. What would be the main motivation from a technical point of view? I think
+
+0:03:07.040,0:03:11.480
+we can't just look at it because it's trendy, but obviously we have to look
+
+0:03:11.480,0:03:17.160
+at other variables and other factors, and one of them is obviously the performance we
+
+0:03:17.160,0:03:22.720
+can have. Yes, because many developers or many companies don't see performance that
+
+0:03:22.720,0:03:26.800
+much, they simply see that obviously the work is being done on the server and that's when we
+
+0:03:26.800,0:03:31.480
+want to send all the computing load to the server and let the server
+
+0:03:31.480,0:03:37.880
+do its work. But obviously we also have many other benefits and that's where Core Web
+
+0:03:37.880,0:03:43.680
+Vitals come in with certain metrics, right, that are going to improve a lot if the work is no longer
+
+0:03:43.680,0:03:48.800
+done in the browser because the biggest load is going to pass to the
+
+0:03:48.800,0:03:54.720
+server and we are going to have obviously many improvements like in the Largest Contentful
+
+0:03:54.720,0:04:01.000
+Paint. That is a very important metric for the performance topic. So it is
+
+0:04:01.000,0:04:07.520
+a metric that benefits a lot from the migration to Server-Side Rendering. Exactly. If
+
+0:04:07.520,0:04:12.280
+for example, as you said it's an Enterprise application, what we can do
+
+0:04:12.280,0:04:17.640
+is divide, for example, the section for administrators, the internal tools. The internal tools don't
+
+0:04:17.640,0:04:21.920
+need to have good SEO and be discovered, but they need to run well
+
+0:04:21.920,0:04:29.040
+and run fast so that we don't have so many tickets of, "Hey, this thing is slow,
+
+0:04:29.040,0:04:33.920
+I'm trying to send this form, it never loads, I'm trying to see this part,
+
+0:04:33.920,0:04:39.680
+it never loads." And also see that, for example, if in the Enterprise there are people who work
+
+0:04:39.680,0:04:45.160
+in areas with internet that is not very good, like in Latin America, India or some
+
+0:04:45.160,0:04:50.320
+parts with little internet access, we are going to have those problems if we have it on
+
+0:04:50.320,0:04:57.680
+the browser side. So, if we already send it from the server precompiled and it's just
+
+0:04:57.680,0:05:06.200
+a lot of parts are pure HTML, that's going to go pretty fast. We're going to
+
+0:05:06.200,0:05:13.120
+reduce tickets and besides that our application is going to flow. Exactly. Yes. Yes.
+
+0:05:13.120,0:05:18.160
+And if suddenly, for example, we have to make the decision to go with a
+
+0:05:18.160,0:05:23.160
+service provider that basically Firebase App Hosting offers in a very fluid way
+
+0:05:24.360,0:05:31.720
+the ability to deploy applications on it, but if we have to make the
+
+0:05:31.720,0:05:38.200
+decision between one and the other that we had previously mentioned Cloud Run, what is the narrative
+
+0:05:38.200,0:05:44.360
+from a technical point of view that you should normally consider given that obviously Firebase App Hosting
+
+0:05:44.360,0:05:49.880
+is mounted on top of the entire Cloud Run architecture. Yes, yes, as you said. Obviously if it's
+
+0:05:49.880,0:05:55.840
+a layer on top of Cloud Run or the Google Cloud architecture, for that
+
+0:05:55.840,0:05:59.880
+point I would think that something very valid that we must take into account. Obviously App
+
+0:05:59.880,0:06:06.520
+Hosting is super fast, we can do the deploy in a very
+
+0:06:06.520,0:06:10.400
+fast way, obviously it has many benefits too, but at the moment the limitations
+
+0:06:10.400,0:06:15.240
+to be able to continue scaling arrive, that is where Cloud Run comes into play. Exactly. Yes.
+
+0:06:16.760,0:06:21.520
+And at that moment where we need much more control, do other little things there that
+
+0:06:21.520,0:06:26.320
+we can't do with App Hosting because it's a much more closed abstraction. So
+
+0:06:26.320,0:06:32.040
+there at that moment it is analyzed and said, "Okay, let's go to the
+
+0:06:32.040,0:06:38.000
+next step and that is now Cloud Run." It is also a cost issue because the
+
+0:06:38.000,0:06:42.880
+costs are quite different and also of necessity because there are some things that we have inside App
+
+0:06:42.880,0:06:48.600
+Hosting, as you told me, which are certain customizations that we can do, but Cloud Run allows more
+
+0:06:48.600,0:06:54.240
+flexibility if you already know, that is, if you already know what specific
+
+0:06:54.240,0:07:04.240
+things you need with Load Balancers, what things you need, for example, with Redis or what
+
+0:07:04.240,0:07:12.720
+other things you are going to put on it, I think it is better that you
+
+0:07:12.720,0:07:19.680
+use Cloud Run. So, everything depends on what the architecture you have in the app
+
+0:07:19.680,0:07:25.240
+is and how big it is. Sure. Yes. And well, Angular
+
+0:07:25.240,0:07:30.400
+currently natively supports modern Angular everything that has to do with the hybrid architecture of being able to
+
+0:07:30.400,0:07:36.480
+define a file that is easy to read, to write what is the way in which
+
+0:07:36.480,0:07:45.000
+one is going to serve the application in a pre-rendered way using SSG or dynamic, using the whole load
+
+0:07:45.000,0:07:51.800
+on the client side or using what is coming from the server with non-destructive hydration mechanisms. But regardless
+
+0:07:51.800,0:07:57.280
+of the fact that it is very easy from a user experience point of view to define what
+
+0:07:57.280,0:08:01.520
+thing is going to be pre-rendered or loaded on the server side or the client side, what is
+
+0:08:01.520,0:08:06.760
+the foundation behind it when making the decision to go for any of these three
+
+0:08:06.760,0:08:11.400
+variants and take the Angular application in a way that can be efficient so that they use the
+
+0:08:11.400,0:08:16.400
+best of each of those worlds. Yes, I think that's a fairly normal pattern and it's
+
+0:08:16.400,0:08:21.480
+one of the best patterns when saying not only choose just one path, but you can
+
+0:08:21.480,0:08:28.000
+we can do a mix or mix two paths. For example, when we have super
+
+0:08:28.000,0:08:33.320
+static content that is not going to change, that is the same from when
+
+0:08:33.320,0:08:37.800
+it's local and the build is done until it's in production, it never changes. To give an
+
+0:08:37.800,0:08:42.520
+example, a blog post. That blog post is going to be the same at all times.
+
+0:08:42.520,0:08:48.680
+So that's a starting point so we can use Static Site Generation with Angular. Correct. Yes. Then we
+
+0:08:48.680,0:08:54.840
+can move on to other pages that may have something a bit more dynamic and there we
+
+0:08:54.840,0:09:01.040
+can use Server-Side Rendering when we need to change user data, something that comes
+
+0:09:01.040,0:09:05.920
+a bit more dynamic. And then the client part, if we want to process some data
+
+0:09:05.920,0:09:10.000
+on the client, we have to have access, obviously to the browser
+
+0:09:10.000,0:09:16.480
+APIs, maybe the storage and things like that. At that moment, well, yes it is
+
+0:09:16.480,0:09:23.720
+like each of the paths to follow for what type of rendering to choose at
+
+0:09:23.720,0:09:29.920
+a given moment, but while it is true, well, the first two can be combined
+
+0:09:29.920,0:09:37.400
+and obviously make a great team. Exactly. Yes, I agree with that. It's mostly the need
+
+0:09:37.400,0:09:44.120
+of our final user and the experience we are giving them. And in fact, related to
+
+0:09:44.120,0:09:53.520
+the final experience, the experience of us developers also matters. And for example, one of the
+
+0:09:53.520,0:10:00.360
+things that one of the technical problems that one faces when deploying applications with
+
+0:10:00.360,0:10:04.920
+Server-Side Rendering is where really and how should the critical path of the whole debugging process be
+
+0:10:04.920,0:10:10.440
+to be able to debug an application, because the console logs and the client-side errors that
+
+0:10:10.440,0:10:14.720
+trigger JavaScript problems are no longer necessarily visible, in fact they are
+
+0:10:14.720,0:10:18.960
+not when there is a server-side problem, how do you cohesively handle the transmission, the trace
+
+0:10:18.960,0:10:24.680
+that is generated from the servers to the problems that can occur on
+
+0:10:25.320,0:10:28.480
+the client or vice versa? Yes, we have to change the mentality
+
+0:10:28.480,0:10:33.680
+a little bit, right? Because we can no longer just double click and open the Developer Tools,
+
+0:10:33.680,0:10:39.120
+but now we have to think of something more like a distributed system where there are several
+
+0:10:39.120,0:10:45.080
+streams, so to speak. Obviously we always have the browser, which is what the final user
+
+0:10:45.080,0:10:50.280
+sees. We also have the backend part, which can be, for example, Node.js, possibly external
+
+0:10:50.280,0:10:54.360
+apps that we are using in our application. So, errors are no longer in the browser. If something
+
+0:10:54.360,0:10:58.440
+fails, it's not in the browser. Obviously it's done in Google Cloud Logging
+
+0:10:58.440,0:11:04.320
+or Google Cloud Trace to track errors. But what happens there is that we lose
+
+0:11:04.320,0:11:10.560
+the context a bit, right? While it's true, obviously the final user says, "There was an error, but how
+
+0:11:10.560,0:11:15.200
+do we how do we track it? How do we know where that error
+
+0:11:15.200,0:11:20.280
+came from?" Because it can be the browser itself, it can be an error in
+
+0:11:20.280,0:11:26.320
+a request, it can be an error in the backend, there are many places where it can happen and
+
+0:11:26.320,0:11:30.840
+we don't know clearly. So there we have to start using certain tools and a slightly simple strategy
+
+0:11:30.840,0:11:37.680
+or a common strategy could be that each of the requests can have an ID or an identical
+
+0:11:37.680,0:11:42.800
+ID for the requests that are related, for example. We can use something that Angular has, which
+
+0:11:42.800,0:11:48.800
+is a TransferState in combination with Google Cloud Trace, Google Cloud Logging, to be able
+
+0:11:48.800,0:11:54.600
+to track and give a little more context to each of those requests that may be happening
+
+0:11:54.600,0:12:01.200
+and there know where the error is coming from and we are not lost in
+
+0:12:01.200,0:12:08.040
+the context of knowing, oh, okay, an error happened, but we don't know
+
+0:12:08.040,0:12:17.120
+where it comes from. Exactly. Yes, yes, usually it is using a trace which
+
+0:12:17.120,0:12:25.000
+is a Trace ID in which one can debug from the console because we
+
+0:12:25.000,0:12:31.320
+are no longer seeing console logs, we are no longer debugging, we are tracing what things are happening
+
+0:12:31.320,0:12:39.720
+and what processes are the ones that are not working well and from there we can come
+
+0:12:39.720,0:12:46.840
+and repair, build and make better solutions. Exactly. And generally in today's world, when
+
+0:12:46.840,0:12:55.160
+one uses a generative artificial intelligence model to go develop the foundations, an Angular
+
+0:12:55.160,0:13:00.960
+application with Server-Side Rendering, sometimes it may happen that if we don't
+
+0:13:01.720,0:13:07.600
+have our model, our agents well trained, it can generate elements that
+
+0:13:07.600,0:13:11.800
+assume direct access to the DOM, to the browser's document, for example, it could be window, or it
+
+0:13:11.800,0:13:16.760
+could be contexts that are not available in Node.js on the server side. What is the most direct
+
+0:13:16.760,0:13:22.360
+way, even the most efficient way to be able to train and be able to help
+
+0:13:22.360,0:13:27.720
+these artificial intelligence models to use both the Angular documentation and the knowledge that this application is
+
+0:13:27.720,0:13:35.960
+going to run on hybrid platforms that do not necessarily depend on the typical traditional
+
+0:13:35.960,0:13:41.680
+browser-side platform? The topic changes quite a bit there too because we normally write code
+
+0:13:41.680,0:13:46.000
+because it's going to run in the browser, right? The code is written for that and
+
+0:13:46.000,0:13:51.960
+sometimes LLMs write code that's going to run in the browser and can have access to certain APIs
+
+0:13:51.960,0:13:57.480
+that are out there and exist. When we start writing code that is going
+
+0:13:57.480,0:14:02.880
+to run on the server, we're going to start seeing like small parts of the application
+
+0:14:02.880,0:14:08.480
+can start to break, we're not just talking about LLMs. So, we must write
+
+0:14:08.480,0:14:13.520
+or have the LLM write code that is safe for the backend. But for that too,
+
+0:14:13.520,0:14:18.200
+besides adding other tools with this new Angular Skills and MCP stuff coming out,
+
+0:14:18.200,0:14:24.080
+with all these things, we also have to give a bit more context to the
+
+0:14:24.080,0:14:30.480
+LLM and tell it, "Okay, I want you to write code that is safe for Server-Side
+
+0:14:30.480,0:14:36.720
+Rendering, not just for the browser." And that from my experience helps a
+
+0:14:36.720,0:14:42.960
+lot so that the code is safe for the browser, to use, for example, in Angular the popular
+
+0:14:42.960,0:14:47.280
+Platform Browser to execute code that it only needs in the browser or use some component lifecycle
+
+0:14:47.280,0:14:51.400
+hooks as well to know when to make use of that code, trigger
+
+0:14:51.400,0:14:56.200
+certain functions, access certain APIs that will be available exclusively when the app has hydrated, has
+
+0:14:56.200,0:15:00.960
+completely rendered in the browser. One detail that we have to tell the LLM not to use,
+
+0:15:00.960,0:15:05.360
+which is for example Local Storage, because we are not using Local Storage on
+
+0:15:05.360,0:15:10.640
+the server. So yes there are other mechanisms to be able to persist the session or
+
+0:15:10.640,0:15:14.920
+somehow be able to use other types of elements that we don't have
+
+0:15:14.920,0:15:20.480
+time to cover today, but yes, right? That it can have access, but that it does it
+
+0:15:20.480,0:15:26.680
+at the time it should do it, right? Because obviously always the APIs of even in Server-Side
+
+0:15:26.680,0:15:31.600
+Rendering we are going to have at some point to use the browser APIs, right? Because the application
+
+0:15:31.600,0:15:37.120
+may require it, but do it at the ideal time, right? After it is
+
+0:15:37.120,0:15:43.720
+already rendered, that everything is loaded in the browser. There now yes we
+
+0:15:43.720,0:15:49.320
+are going to load some browser API. We can even access Local Storage to, I don't know,
+
+0:15:49.320,0:15:55.920
+save something or whatever. Minimally, obviously, because the app is already done on the server. Obviously
+
+0:15:55.920,0:16:03.880
+we can use other mechanisms, save it in other places too. So, in that way we will have
+
+0:16:03.880,0:16:09.440
+an application that is safe on the server and that doesn't start failing, obviously. Sure. And also
+
+0:16:09.440,0:16:15.440
+in the application planning part before writing even the first line of code, everything that has to do
+
+0:16:15.440,0:16:22.800
+with Spec-Driven Development, with being able to pass the necessary instructions so that it has a much more precise
+
+0:16:22.800,0:16:27.560
+context. How do you generally recommend doing it? Generally it's defining the architecture well, what
+
+0:16:27.560,0:16:31.880
+part we are going to start using, in what way, what is going to be static, what is going
+
+0:16:31.880,0:16:36.720
+to be generated on the server, what things are dynamic, that we need
+
+0:16:36.720,0:16:43.960
+to be on the client and besides that go defining well what the objective
+
+0:16:43.960,0:16:51.520
+goal is at the end. Sure, hey, I want this part here to be faster so
+
+0:16:51.520,0:16:57.520
+users can move to the next funnel, for example, hey, if I have an application where
+
+0:16:57.520,0:17:01.960
+I want people to log in, I mean, I need the login to go fast or
+
+0:17:01.960,0:17:07.080
+the first SPA it has, that something is seen, that the page doesn't stay blank, that
+
+0:17:07.080,0:17:12.000
+we don't have that giant infinite loading loop that makes people say, "This thing doesn't work,
+
+0:17:12.000,0:17:19.280
+it's broken and I'm leaving." And there one is going to look for all
+
+0:17:19.280,0:17:27.160
+the shortcuts and somehow be able to have that direct conversation with the
+
+0:17:27.160,0:17:32.320
+AI to be able to comment on it regardless of whether we are using Antigravity or
+
+0:17:32.320,0:17:36.760
+any other integrated development environment and start shaping the application before the application even
+
+0:17:36.760,0:17:43.880
+has its draft structure. Yes. So, thank you very much again for being here in Las Vegas at Google Cloud Next 2026, right? Thank you very much for the invitation. It's always a pleasure to talk about these kinds of tools and technologies and even more here at Google Cloud Next with this beautiful setup that I won't stop admiring, right? Because it's super top notch for what we are doing, so I feel pretty pro here, right? Well, see you soon then and stay tuned for new episodes. Bye. Thanks for listening to this podcast and I hope the topics discussed during the episode are useful to you. If you haven't subscribed yet, I invite you to do so to not miss any of the future topics related to frontend, graphical interfaces, software architecture and web development through Angular.
