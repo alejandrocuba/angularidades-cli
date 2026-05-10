@@ -1,4 +1,4 @@
-# Angularidades Ops CLI 🚀
+# Angularidades Ops CLI
 
 The official Command Line Interface for automating the post-production and publishing workflow of the **Angularidades** podcast.
 
