@@ -12,7 +12,7 @@ Learn directly from Antonio Cárdenas and Ricardo Chavarría, Angular GDEs from 
 00:16:51 Conclusion and Farewell
 
 ## Connect with the guests:
-Antonio Cárdenas: [INSERT_LINKEDIN_URL_HERE]
-Ricardo Chavarría: [INSERT_LINKEDIN_URL_HERE]
+Antonio Cárdenas: https://www.linkedin.com/in/antoniocardenas1/
+Ricardo Chavarría: https://www.linkedin.com/in/ricardochl21/
 
 Angularidades on LinkedIn: https://www.linkedin.com/company/angularidades/
