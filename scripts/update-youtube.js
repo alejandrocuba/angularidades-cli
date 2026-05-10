@@ -38,18 +38,34 @@ async function updateYouTubeVideo() {
     process.exit(1);
   }
 
-  // Read Description
-  let description = '';
-  if (fs.existsSync(descriptionPath)) {
-    description = fs.readFileSync(descriptionPath, 'utf8');
+  // Read ES Description
+  let descriptionEs = '';
+  const descriptionPathEs = path.join(episodeDir, '2_publisher', 'youtube_description_es.md');
+  if (fs.existsSync(descriptionPathEs)) {
+    descriptionEs = fs.readFileSync(descriptionPathEs, 'utf8');
   } else {
-    console.warn(`Warning: 01_description.md not found in ${episodeDir}/2_publisher/`);
+    console.warn(`Warning: youtube_description_es.md not found in ${episodeDir}/2_publisher/`);
   }
 
-  // Read Chapters and append to description
-  if (fs.existsSync(chaptersPath)) {
-    const chapters = fs.readFileSync(chaptersPath, 'utf8');
-    description += '\n\n' + chapters;
+  // Read ES Chapters
+  const chaptersPathEs = path.join(episodeDir, '2_publisher', 'youtube_chapters_es.txt');
+  if (fs.existsSync(chaptersPathEs)) {
+    descriptionEs += '\n\n' + fs.readFileSync(chaptersPathEs, 'utf8');
+  }
+
+  // Read EN Description
+  let descriptionEn = '';
+  const descriptionPathEn = path.join(episodeDir, '2_publisher', 'youtube_description_en.md');
+  if (fs.existsSync(descriptionPathEn)) {
+    descriptionEn = fs.readFileSync(descriptionPathEn, 'utf8');
+  } else {
+    console.warn(`Warning: youtube_description_en.md not found in ${episodeDir}/2_publisher/`);
+  }
+
+  // Read EN Chapters
+  const chaptersPathEn = path.join(episodeDir, '2_publisher', 'youtube_chapters_en.txt');
+  if (fs.existsSync(chaptersPathEn)) {
+    descriptionEn += '\n\n' + fs.readFileSync(chaptersPathEn, 'utf8');
   }
 
   // Handle Offline Dry Run
@@ -62,7 +78,8 @@ async function updateYouTubeVideo() {
       console.log('Video ID:', videoId);
       console.log('Tags:', metadata.tags);
       console.log('Recording Date:', metadata.recordingDate);
-      console.log('Description:\n', description);
+      console.log('Description (ES):\n', descriptionEs);
+      console.log('Description (EN):\n', descriptionEn);
       console.log('---------------------------------\n');
       return;
     } else {
@@ -84,7 +101,7 @@ async function updateYouTubeVideo() {
   try {
     // 1. Fetch current video details to preserve existing data (like title and categoryId)
     const videoResponse = await youtube.videos.list({
-      part: 'snippet,status,recordingDetails',
+      part: 'snippet,status,recordingDetails,localizations',
       id: videoId
     });
 
@@ -96,8 +113,9 @@ async function updateYouTubeVideo() {
     const video = videoResponse.data.items[0];
     const snippet = video.snippet;
 
-    // Update snippet
-    snippet.description = description;
+    // Update snippet (Spanish is default)
+    snippet.defaultLanguage = snippet.defaultLanguage || 'es';
+    snippet.description = descriptionEs;
     if (metadata.tags && Array.isArray(metadata.tags)) {
       snippet.tags = metadata.tags;
     }
@@ -105,7 +123,15 @@ async function updateYouTubeVideo() {
     const updatePayload = {
       id: videoId,
       snippet: snippet,
+      localizations: video.localizations || {}
     };
+
+    if (descriptionEn) {
+      updatePayload.localizations['en'] = {
+        title: updatePayload.localizations['en']?.title || snippet.title,
+        description: descriptionEn
+      };
+    }
 
     if (metadata.recordingDate) {
       updatePayload.recordingDetails = {
@@ -125,7 +151,7 @@ async function updateYouTubeVideo() {
 
     // Perform the update
     const response = await youtube.videos.update({
-      part: 'snippet,recordingDetails',
+      part: 'snippet,recordingDetails,localizations',
       requestBody: updatePayload
     });
 

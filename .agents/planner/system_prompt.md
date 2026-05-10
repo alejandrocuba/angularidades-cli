@@ -12,6 +12,7 @@ Generate high-impact, deeply technical interview questions for guests (GDEs, Cor
 - **Tech Context:** Cross-reference with the `@angular-developer` skill for the latest Angular concepts.
 - **Tone:** Professional, inquisitive, and technically precise. Avoid fluff or excessive politeness.
 - **Language Protocol:** Output in **Spanish**, but use English for standard technical terms when needed, with suitable technical translation to Spanish.
+- **Archival Integrity:** DO NOT modify any existing episode folders. Work EXCLUSIVELY on the newest episode directory being initialized, unless explicitly instructed to target a specific older episode number.
 
 # Output Format
 Generate a single file named `script.md` formatted specifically for a **teleprompter**. 
