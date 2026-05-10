@@ -1,12 +1,24 @@
 const fs = require('fs');
 const path = require('path');
 const p = require('@clack/prompts');
-const { colors } = require('./logger');
+const { colors, printHeader } = require('./logger');
 const { resolveConfig } = require('./config');
 const { initYouTube, downloadExistingCaptions } = require('./youtube-api');
 
+// Fix Clack symbols for consistency: solid green for completed, outline green for active
+const green = (s) => `${colors.green}${s}${colors.reset}`;
+
+p.S_STEP_ACTIVE = green('◇');
+p.S_STEP_SUBMIT = green('◆');
+p.S_SUCCESS = green('◆');
+const blue = (s) => `${colors.blue}${s}${colors.reset}`;
+p.S_INFO = blue('●');
+p.S_BAR = green('│');
+p.S_BAR_START = green('┌');
+p.S_BAR_END = green('└');
+
 async function scaffoldEpisode() {
-  p.intro(`${colors.cyan}${colors.bold}Create New Episode Scaffolding${colors.reset}`);
+  printHeader('Angularidades: Create New Episode Scaffolding');
 
   const episodesDir = path.join(__dirname, '../../episodes');
   const folders = fs.readdirSync(episodesDir)
@@ -92,25 +104,54 @@ async function scaffoldEpisode() {
     guests.push(nextGuest);
   }
 
-  const youtubeUrl = await p.text({
-    message: 'Enter the YouTube Video URL:',
-    placeholder: 'https://www.youtube.com/watch?v=...',
-    validate(value) {
-      if (!value) return 'URL is required.';
-      const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-      const match = value.match(regExp);
-      if (!match || !match[2] || match[2].length !== 11) return 'Invalid YouTube URL.';
-    }
+  const isVideoUploaded = await p.confirm({
+    message: 'Is the YouTube video already uploaded/recorded?',
+    initialValue: true
   });
 
-  if (p.isCancel(youtubeUrl)) {
+  if (p.isCancel(isVideoUploaded)) {
     p.cancel('Operation cancelled.');
     process.exit(0);
   }
 
-  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-  const videoId = youtubeUrl.match(regExp)[2];
+  let youtubeUrl = null;
+  let videoId = null;
+
+  if (isVideoUploaded) {
+    youtubeUrl = await p.text({
+      message: 'Enter the YouTube Video URL:',
+      placeholder: 'https://www.youtube.com/watch?v=...',
+      validate(value) {
+        if (!value) return 'URL is required.';
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        const match = value.match(regExp);
+        if (!match || !match[2] || match[2].length !== 11) return 'Invalid YouTube URL.';
+      }
+    });
+
+    if (p.isCancel(youtubeUrl)) {
+      p.cancel('Operation cancelled.');
+      process.exit(0);
+    }
+
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    videoId = youtubeUrl.match(regExp)[2];
+  }
+
   const today = new Date().toISOString().split('T')[0];
+  const recordingDate = await p.text({
+    message: 'Enter the recording date:',
+    placeholder: today,
+    initialValue: today,
+    validate(value) {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return 'Please enter a date in YYYY-MM-DD format.';
+    }
+  });
+
+  if (p.isCancel(recordingDate)) {
+    p.cancel('Operation cancelled.');
+    process.exit(0);
+  }
 
   const s = p.spinner();
   s.start('Generating directories and files...');
@@ -120,7 +161,7 @@ async function scaffoldEpisode() {
 
   fs.mkdirSync(newEpisodeDir, { recursive: true });
   subDirs.forEach(dir => fs.mkdirSync(path.join(newEpisodeDir, dir), { recursive: true }));
-  s.stop('Directories and metadata ready');
+  s.stop('Directories and metadata ready', p.S_SUCCESS);
 
   // Format titles
   const guestList = guests.join(', ');
@@ -129,46 +170,66 @@ async function scaffoldEpisode() {
 
   // Create metadata.json
   const metadata = {
-    videoId: videoId,
-    recordingDate: today
+    recordingDate: recordingDate
   };
+  if (videoId) {
+    metadata.videoId = videoId;
+  }
   fs.writeFileSync(path.join(newEpisodeDir, 'metadata.json'), JSON.stringify(metadata, null, 2));
 
   // Create working title file
   fs.writeFileSync(path.join(newEpisodeDir, '2_publisher', 'youtube_title_es.txt'), titleEs);
 
   console.log(''); // Visual spacing
-  s.start(`${colors.cyan}Connecting to YouTube to fetch recording data...${colors.reset}`);
 
-  try {
-    const config = await resolveConfig();
-    const hasFullAuth = config.credentials.CLIENT_ID && config.credentials.CLIENT_SECRET && config.credentials.REFRESH_TOKEN;
+  if (isVideoUploaded) {
+    s.start(`${colors.cyan}Connecting to YouTube to fetch recording data...${colors.reset}`);
 
-    if (hasFullAuth) {
-      const youtube = initYouTube(config.credentials);
-      s.message('Downloading captions from YouTube...');
-      await downloadExistingCaptions(youtube, videoId, newEpisodeDir, false, false);
-      s.stop('YouTube download finished');
-      p.log.success('Scaffolding created and YouTube captions downloaded.');
-    } else {
-      s.stop('YouTube skipped');
-      p.log.warn('Scaffolding created, but YouTube captions skipped (Missing OAuth credentials).');
+    try {
+      const config = await resolveConfig();
+      const hasFullAuth = config.credentials.CLIENT_ID && config.credentials.CLIENT_SECRET && config.credentials.REFRESH_TOKEN;
+
+      if (hasFullAuth) {
+        const youtube = initYouTube(config.credentials);
+        s.message('Downloading captions from YouTube...');
+        await downloadExistingCaptions(youtube, videoId, newEpisodeDir, false, false);
+        s.stop('YouTube download finished', p.S_SUCCESS);
+        p.log.success('Scaffolding created and YouTube captions downloaded.');
+      } else {
+        s.stop('YouTube skipped');
+        p.log.warn('Scaffolding created, but YouTube captions skipped (Missing OAuth credentials).');
+      }
+    } catch (error) {
+      s.stop('YouTube error');
+      p.log.error(`Scaffolding created, but failed to fetch captions: ${error.message}`);
     }
-  } catch (error) {
-    s.stop('YouTube error');
-    p.log.error(`Scaffolding created, but failed to fetch captions: ${error.message}`);
+  } else {
+    p.log.success('Scaffolding created for planning phase.');
   }
 
   console.log(''); // Visual spacing
 
-  p.note(
-    `Next steps:\n` +
-    `1. ${colors.bold}AI Processing${colors.reset}: Instruct the @publisher AI Agent to process the episode now that I have the captions.\n` +
-    `2. ${colors.bold}Diagnostics${colors.reset}: Run 'angularidades doctor ${episodeNumber}' to check everything.\n` +
-    `3. ${colors.bold}Dry Run${colors.reset}: Run 'angularidades dry-run ${episodeNumber}' to preview the payload.\n` +
-    `4. ${colors.bold}Publishing${colors.reset}: Run 'angularidades publish ${episodeNumber}' to publish.`,
-    'Ready for Processing'
-  );
+  if (isVideoUploaded) {
+    p.log.info(`${colors.bold}Ready for Processing${colors.reset}`);
+    p.note(
+      `Next steps:\n` +
+      `1. ${colors.bold}AI Processing${colors.reset}: Instruct the @publisher AI Agent to process the episode.\n` +
+      `2. ${colors.bold}Diagnostics${colors.reset}: Run 'angularidades doctor ${episodeNumber}' to check everything.\n` +
+      `3. ${colors.bold}Dry Run${colors.reset}: Run 'angularidades dry-run ${episodeNumber}' to preview the payload.\n` +
+      `4. ${colors.bold}Publishing${colors.reset}: Run 'angularidades publish ${episodeNumber}' to publish.`,
+      ''
+    );
+  } else {
+    p.log.info(`${colors.bold}Ready for Planning${colors.reset}`);
+    p.note(
+      `Next steps:\n` +
+      `1. ${colors.bold}Planning${colors.reset}: Instruct the @planner AI Agent to help you plan the episode questions and structure.\n` +
+      `2. ${colors.bold}Recording${colors.reset}: Record the episode following the plan.\n` +
+      `3. ${colors.bold}Uploading${colors.reset}: Upload the episode to YouTube.\n` +
+      `4. ${colors.bold}Update metadata${colors.reset}: Re-run tooling later or manually update metadata.json with the 'videoId'.`,
+      ''
+    );
+  }
 
   p.outro(`${colors.green}Disfruta el proceso!${colors.reset}`);
 }
