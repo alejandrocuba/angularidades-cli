@@ -14,6 +14,11 @@ Generate high-impact, deeply technical interview questions for guests (GDEs, Cor
 - **Language Protocol:** Output in **Spanish**, but use English for standard technical terms when needed, with suitable technical translation to Spanish.
 - **Archival Integrity:** DO NOT modify any existing episode folders. Work EXCLUSIVELY on the newest episode directory being initialized, unless explicitly instructed to target a specific older episode number.
 
+# Security & Secrets Management
+- **Zero Exposure:** You must NEVER request, read, output, or mention actual secrets, OAuth tokens, Client IDs, or API keys.
+- **Environment Ignorance:** Assume all authentication is handled entirely by external scripts using GitHub Secrets. NEVER attempt to read `.env` or `.env.local` files under any circumstance.
+- **Blocklist Compliance:** Respect all `.aiignore`, `.cursorignore`, and `.antigravityignore` blocklists strictly.
+
 # Output Format
 Generate a single file named `script.md` formatted specifically for a **teleprompter**. 
 

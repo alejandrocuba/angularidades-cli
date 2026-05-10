@@ -1,0 +1,5 @@
+# Ignore environment variables and secrets
+.env
+.env.*
+*.pem
+*.key

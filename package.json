@@ -4,8 +4,9 @@
   "description": "Automated generation of summaries, chapters, and posts for the Angularidades podcast.",
   "main": "index.js",
   "scripts": {
-    "youtube:publish": "node scripts/update-youtube.js",
-    "youtube:dry-run": "node scripts/update-youtube.js --dry-run"
+    "youtube:publish": "node scripts/publisher/index.js",
+    "youtube:dry-run": "node scripts/publisher/index.js --dry-run",
+    "youtube:doctor": "node scripts/publisher/index.js --doctor"
   },
   "repository": {
     "type": "git",

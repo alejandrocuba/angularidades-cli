@@ -7,12 +7,12 @@ Generate two separate files, one in Spanish and one in English.
 Aprende directamente de {{guest1}} y {{guest2}}, {{role/bio}}. Desde el {{Location}}, desglosan {{Topic}} y cómo resuelven {{Problem}}.
 [English version should translate this naturally]
 
-Temas tratados (Key topics covered):
-* {{Concise Title 1}}
-* {{Concise Title 2}}
-* {{Concise Title N}}
+Temas que abordamos (Topics we cover):
+00:00:00 Intro
+hh:mm:ss {{Chapter title 1}}
+hh:mm:ss {{Chapter title 2}}
 
-Invitados (Guests):
+Conecta con los invitados (Connect with the guests):
 {{Guest 1 Name}}: {{Link}}
 {{Guest 2 Name}}: {{Link}}
 
@@ -25,6 +25,7 @@ Angularidades en LinkedIn (Angularidades on LinkedIn): https://www.linkedin.com/
 - Group guests naturally in the intro sentence.
 - Use Title Case for section headers, not CAPS.
 - Simple line breaks between sections.
+- For Chapters: Extract precise timestamps directly from the SRT. Chapters reflect the exact second a topic begins. Do not round or infer times.
 
 ---
 # linkedin_post_es.md / linkedin_post_en.md
@@ -44,27 +45,6 @@ Temas que abordamos durante la conversación:
 - English version must mention: "Spanish audio with English subtitles". Spanish version must mention "Audio en español con subtítulos en inglés".
 - Intro: factual, concise, relevant for technical audience.
 - Mention guest's name and episode number. Use bullet points (✔️).
-
----
-# youtube_chapters_es.txt / youtube_chapters_en.txt
-Generate two separate files, one in Spanish and one in English.
-**[CRITICAL INSTRUCTION - SOURCE ISOLATION]**
-ONLY generate this if `youtube.srt` or a YouTube transcript file is provided.
-EXCLUSIVELY use the YouTube transcript/SRT file. IGNORE timestamps from other sources. DO NOT hallucinate.
-Check the final timestamp of the SRT file. If a "Key Point" happens after the SRT file ends, DO NOT include that chapter.
-Timestamps must reflect the EXACT second (HH:MM:SS) the topic begins. If a topic falls outside the SRT length, skip it.
-
-```
-Temas que abordamos:
-
-00:00:00 Intro
-hh:mm:ss {{Chapter title 1}}
-hh:mm:ss {{Chapter title 2}}
-```
-*Rules:*
-- Extract precise timestamps directly from the SRT.
-- Chapters reflect the exact second a topic begins. Do not round or infer times.
-- If YouTube file is absent, do not use the Riverside transcript as a fallback.
 
 ---
 # youtube_transcript_en.md
