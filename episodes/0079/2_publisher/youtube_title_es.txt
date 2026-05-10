@@ -1,1 +1,1 @@
-Despliegue de Angular SSR con Antonio Cárdenas y Ricardo Chavarría - Episodio 89
+Despliegue de Angular SSR con Antonio Cárdenas y Ricardo Chavarría - Episodio 79
