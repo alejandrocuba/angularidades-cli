@@ -10,10 +10,11 @@ async function main() {
   const isDoctor = args.includes('--doctor');
   const isDryRun = args.includes('--dry-run');
 
+  let modeTitle = 'Angularidades: YouTube Publisher';
   if (isDoctor) modeTitle += ' Doctor';
   else if (isDryRun) modeTitle += ' Dry Run';
 
-  printHeader('Angularidades: YouTube Publisher');
+  printHeader(modeTitle);
 
   const config = await resolveConfig();
   const { episodeDir, credentials } = config;

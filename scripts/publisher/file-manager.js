@@ -19,7 +19,7 @@ function getEpisodeData(episodeDir, logDoctor, isDoctor) {
     else console.error(`Error: videoId not found in ${metadataPath}.`);
     process.exit(1);
   }
-  if (isDoctor) logDoctor(true, `videoId found in metadata: ${videoId}`);
+  if (isDoctor) logDoctor(true, `videoId in metadata: ${videoId}`);
 
   let titleEs = '';
   const titlePathEs = path.join(episodeDir, '2_publisher', 'youtube_title_es.txt');
