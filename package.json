@@ -4,7 +4,8 @@
   "description": "Automated generation of summaries, chapters, and posts for the Angularidades podcast.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "youtube:publish": "node scripts/update-youtube.js",
+    "youtube:dry-run": "node scripts/update-youtube.js --dry-run"
   },
   "repository": {
     "type": "git",

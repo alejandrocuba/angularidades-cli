@@ -85,3 +85,29 @@ DO NOT add speaker tags (e.g., "Name:").
 DO NOT remove filler words (e.g., "eh", "ah") or change the pacing.
 ONLY correct technical typos (e.g., "Cloud Room" -> "Cloud Run").
 Final file must be structurally identical to the original for YouTube auto-sync.
+---
+# youtube_title_es.txt / youtube_title_en.txt
+Generate two separate files, one in Spanish and one in English.
+
+ES Format:
+Despliegue de Angular SSR con {{Guest1 Name}} y {{Guest2 Name}} - Episodio {{episode_number}}
+
+EN Format:
+{{Technical Topic}} with {{Guest1 Name}} and {{Guest2 Name}} - Episode {{episode_number}}
+
+*Rules:*
+- ES title MUST start with "Despliegue de Angular SSR con" (or suitable technical hook).
+- Include full names of guests.
+- Use Title Case for English titles.
+- Keep titles under 100 characters if possible.
+
+---
+# youtube_tags.txt
+Comma-separated technical tags based on the episode content for YouTube.
+
+```
+angular, ssr, hybrid rendering, {{tag1}}, {{tag2}}
+```
+*Rules:*
+- Output as a single line of comma-separated values.
+- Include 5-10 relevant technical tags.

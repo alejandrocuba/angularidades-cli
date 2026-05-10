@@ -10,15 +10,31 @@ const CLIENT_ID = process.env.YOUTUBE_CLIENT_ID;
 const CLIENT_SECRET = process.env.YOUTUBE_CLIENT_SECRET;
 const REFRESH_TOKEN = process.env.YOUTUBE_REFRESH_TOKEN;
 
-// Expecting episode path as the first argument, e.g. "episodes/001"
+// Expecting episode path as the first argument or via --episode/-e flag
 const args = process.argv.slice(2);
-const episodeDir = args.find(arg => !arg.startsWith('--'));
 const isDryRun = args.includes('--dry-run');
 
-if (!episodeDir) {
-  console.error('Error: Episode directory argument is missing. Usage: node update-youtube.js <episode_dir> [--dry-run]');
+let episodeInput = args.find(arg => !arg.startsWith('--') && !arg.startsWith('-'));
+
+// Check for --episode or -e flag
+const episodeIndex = args.findIndex(arg => arg === '--episode' || arg === '-e');
+if (episodeIndex !== -1 && args[episodeIndex + 1]) {
+  episodeInput = args[episodeIndex + 1];
+}
+
+if (!episodeInput) {
+  console.error('Error: Episode directory or number is missing.');
+  console.error('Usage:');
+  console.error('  node update-youtube.js -e 89 [--dry-run]');
+  console.error('  node update-youtube.js 89 [--dry-run]');
   process.exit(1);
 }
+
+// Resolution logic: if it's just a number, pad to 4 digits and prepend 'episodes/'
+const episodeDir = /^\d+$/.test(episodeInput) 
+  ? path.join('episodes', episodeInput.padStart(4, '0')) 
+  : episodeInput;
+
 
 const metadataPath = path.join(episodeDir, 'metadata.json');
 const descriptionPath = path.join(episodeDir, '2_publisher', '01_description.md');
@@ -36,6 +52,20 @@ async function updateYouTubeVideo() {
   if (!videoId) {
     console.error(`Error: videoId not found in ${metadataPath}.`);
     process.exit(1);
+  }
+
+  // Read ES Title
+  let titleEs = '';
+  const titlePathEs = path.join(episodeDir, '2_publisher', 'youtube_title_es.txt');
+  if (fs.existsSync(titlePathEs)) {
+    titleEs = fs.readFileSync(titlePathEs, 'utf8').trim();
+  }
+
+  // Read EN Title
+  let titleEn = '';
+  const titlePathEn = path.join(episodeDir, '2_publisher', 'youtube_title_en.txt');
+  if (fs.existsSync(titlePathEn)) {
+    titleEn = fs.readFileSync(titlePathEn, 'utf8').trim();
   }
 
   // Read ES Description
@@ -68,7 +98,15 @@ async function updateYouTubeVideo() {
     descriptionEn += '\n\n' + fs.readFileSync(chaptersPathEn, 'utf8');
   }
 
-  // Handle Offline Dry Run
+  // Read Tags from youtube_tags.txt
+  let tags = [];
+  const tagsPath = path.join(episodeDir, '2_publisher', 'youtube_tags.txt');
+  if (fs.existsSync(tagsPath)) {
+    const tagsContent = fs.readFileSync(tagsPath, 'utf8');
+    tags = tagsContent.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0);
+  } else if (metadata.tags && Array.isArray(metadata.tags)) {
+    tags = metadata.tags;
+  }
   const hasFullAuth = CLIENT_ID && CLIENT_SECRET && REFRESH_TOKEN;
 
   if (!hasFullAuth) {
@@ -76,11 +114,22 @@ async function updateYouTubeVideo() {
       console.warn('Warning: Running offline dry-run because OAuth credentials are missing.');
       console.log('\n--- DRY RUN PAYLOAD (Offline) ---');
       console.log('Video ID:', videoId);
-      console.log('Tags:', metadata.tags);
+      console.log('Tags:', tags);
       console.log('Recording Date:', metadata.recordingDate);
       console.log('Description (ES):\n', descriptionEs);
       console.log('Description (EN):\n', descriptionEn);
       console.log('---------------------------------\n');
+      
+      // Simulate Caption Upload Dry Run
+      const langFiles = [
+        { code: 'es', file: 'youtube_transcript_es.md' },
+        { code: 'en', file: 'youtube_transcript_en.md' }
+      ];
+      langFiles.forEach(lang => {
+        if (fs.existsSync(path.join(episodeDir, '2_publisher', lang.file))) {
+          console.log(`[DRY RUN] Would upload transcript: ${lang.file} for language: ${lang.code}`);
+        }
+      });
       return;
     } else {
       console.error('Error: Missing YouTube OAuth2 credentials in environment variables.');
@@ -115,10 +164,11 @@ async function updateYouTubeVideo() {
 
     // Update snippet (Spanish is default)
     snippet.defaultLanguage = snippet.defaultLanguage || 'es';
+    snippet.title = titleEs || snippet.title;
     snippet.description = descriptionEs;
-    if (metadata.tags && Array.isArray(metadata.tags)) {
-      snippet.tags = metadata.tags;
-    }
+
+    // Use pre-read Tags
+    snippet.tags = tags;
 
     const updatePayload = {
       id: videoId,
@@ -126,10 +176,10 @@ async function updateYouTubeVideo() {
       localizations: video.localizations || {}
     };
 
-    if (descriptionEn) {
+    if (descriptionEn || titleEn) {
       updatePayload.localizations['en'] = {
-        title: updatePayload.localizations['en']?.title || snippet.title,
-        description: descriptionEn
+        title: titleEn || updatePayload.localizations['en']?.title || snippet.title,
+        description: descriptionEn || updatePayload.localizations['en']?.description || snippet.description
       };
     }
 
@@ -144,6 +194,17 @@ async function updateYouTubeVideo() {
       console.log(JSON.stringify(updatePayload, null, 2));
       console.log('---------------------------------------\n');
       console.log('Dry run complete. No changes were pushed to YouTube.');
+      
+      // Simulate Caption Upload Dry Run
+      const langFiles = [
+        { code: 'es', file: 'youtube_transcript_es.md' },
+        { code: 'en', file: 'youtube_transcript_en.md' }
+      ];
+      langFiles.forEach(lang => {
+        if (fs.existsSync(path.join(episodeDir, '2_publisher', lang.file))) {
+          console.log(`[DRY RUN] Would upload transcript: ${lang.file} for language: ${lang.code}`);
+        }
+      });
       return;
     }
 
@@ -156,6 +217,10 @@ async function updateYouTubeVideo() {
     });
 
     console.log(`Success! Video description and tags updated for video ID: ${videoId}`);
+
+    // Upload Captions/Transcripts
+    await uploadCaptions(youtube, videoId, episodeDir);
+
   } catch (error) {
     console.error('Error updating YouTube video:');
     if (error.response && error.response.data && error.response.data.error) {
@@ -164,6 +229,47 @@ async function updateYouTubeVideo() {
       console.error(error);
     }
     process.exit(1);
+  }
+}
+
+async function uploadCaptions(youtube, videoId, episodeDir) {
+  const languages = [
+    { code: 'es', file: 'youtube_transcript_es.md', name: 'Spanish (Transcribed)' },
+    { code: 'en', file: 'youtube_transcript_en.md', name: 'English (Translated)' }
+  ];
+
+  for (const lang of languages) {
+    const filePath = path.join(episodeDir, '2_publisher', lang.file);
+    if (fs.existsSync(filePath)) {
+      console.log(`Uploading transcript for ${lang.name}...`);
+      const transcript = fs.readFileSync(filePath, 'utf8');
+      
+      try {
+        await youtube.captions.insert({
+          part: 'snippet',
+          requestBody: {
+            snippet: {
+              videoId: videoId,
+              language: lang.code,
+              name: lang.name,
+              isDraft: false
+            }
+          },
+          media: {
+            mimeType: 'text/plain',
+            body: transcript
+          }
+        });
+        console.log(`Successfully uploaded ${lang.name} transcript.`);
+      } catch (error) {
+        // If a track already exists, we might need to list and update, but for now we log the error
+        if (error.message.includes('duplicate')) {
+          console.warn(`Warning: A ${lang.name} caption track already exists for this video. Skipping upload.`);
+        } else {
+          console.error(`Error uploading ${lang.name} transcript:`, error.message);
+        }
+      }
+    }
   }
 }
 
