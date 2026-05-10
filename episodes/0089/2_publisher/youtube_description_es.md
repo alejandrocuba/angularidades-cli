@@ -2,7 +2,7 @@
 
 Aprende directamente de Antonio Cárdenas y Ricardo Chavarría, Angular GDEs de Honduras. Desde el Google Cloud Next 2026 en Las Vegas, desglosan los retos de ejecutar Angular en modo híbrido, cómo evitar romper la aplicación en el servidor y cómo elegir la infraestructura adecuada en Google Cloud Platform.
 
-Temas que abordamos:
+## Temas que abordamos:
 00:00:00 Intro
 00:02:30 Motivación Técnica para migrar a SSR
 00:04:57 Firebase App Hosting vs Google Cloud Run
@@ -11,7 +11,7 @@ Temas que abordamos:
 00:11:54 IA Generativa y SSR Seguro
 00:16:51 Conclusión y Despedida
 
-Conecta con los invitados:
+## Conecta con los invitados:
 Antonio Cárdenas: [INSERT_LINKEDIN_URL_HERE]
 Ricardo Chavarría: [INSERT_LINKEDIN_URL_HERE]
 

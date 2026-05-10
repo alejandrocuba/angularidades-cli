@@ -7,12 +7,12 @@ Generate two separate files, one in Spanish and one in English.
 Aprende directamente de {{guest1}} y {{guest2}}, {{role/bio}}. Desde el {{Location}}, desglosan {{Topic}} y cómo resuelven {{Problem}}.
 [English version should translate this naturally]
 
-Temas que abordamos (Topics we cover):
+## Temas que abordamos:
 00:00:00 Intro
 hh:mm:ss {{Chapter title 1}}
 hh:mm:ss {{Chapter title 2}}
 
-Conecta con los invitados (Connect with the guests):
+## Conecta con los invitados:
 {{Guest 1 Name}}: {{Link}}
 {{Guest 2 Name}}: {{Link}}
 
