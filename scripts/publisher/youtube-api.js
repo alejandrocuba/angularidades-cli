@@ -38,6 +38,19 @@ async function updateVideo(youtube, videoId, updatePayload) {
 }
 
 async function downloadExistingCaptions(youtube, videoId, episodeDir, isDoctor, isDryRun) {
+  const recordingDir = path.join(episodeDir, '1_recording');
+  
+  // Only proceed if no original transcript/caption files exist
+  if (fs.existsSync(recordingDir)) {
+    const existingFiles = fs.readdirSync(recordingDir);
+    const hasOriginal = existingFiles.some(f => f.startsWith('original_') || f === 'youtube_captions.sbv');
+    
+    if (hasOriginal) {
+      if (isDoctor) logDoctor(true, 'Original transcript already exists locally. Skipping download.');
+      return;
+    }
+  }
+
   try {
     const response = await youtube.captions.list({
       part: 'snippet',
@@ -72,7 +85,14 @@ async function downloadExistingCaptions(youtube, videoId, episodeDir, isDoctor, 
         id: track.id,
         tfmt: 'sbv'
       });
-      saveCaptions(episodeDir, downloadRes.data);
+      
+      let data = downloadRes.data;
+      // Handle Blob response if necessary (common in some Node environments/versions)
+      if (typeof data.arrayBuffer === 'function') {
+        data = Buffer.from(await data.arrayBuffer());
+      }
+      
+      saveCaptions(episodeDir, data);
       console.log(`Successfully downloaded youtube_captions.sbv`);
     }
   } catch (error) {
