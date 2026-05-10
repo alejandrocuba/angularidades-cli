@@ -6,7 +6,8 @@ This directory contains the modular implementation of the YouTube publishing pip
 
 The CLI is split into cohesive modules following Node.js best practices:
 
-- **`index.js`**: The main entry point and orchestrator.
+- **`scaffold.js`**: Handles new episode directory creation and YouTube caption fetching.
+- **`index.js`**: The main publisher orchestrator for YouTube API sync.
 - **`config.js`**: Handles CLI argument parsing, interactive menus, and environment resolution.
 - **`youtube-api.js`**: Encapsulates all interactions with the Google YouTube Data API v3.
 - **`file-manager.js`**: Manages all file system operations.
@@ -20,7 +21,7 @@ While you can use `pnpm run`, the recommended way is using the global CLI.
 
 | Command | Description |
 |---------|-------------|
-| `angularidades new`     | Creates the scaffolding for a new episode (dirs & metadata). |
+| `angularidades new`     | Creates the scaffolding AND fetches initial captions from YouTube. |
 | `angularidades publish` | Publishes all metadata and transcripts to YouTube (Requires full Auth). |
 | `angularidades dry-run` | Simulates the publishing process and prints the payload. |
 | `angularidades doctor`  | Runs a diagnostic check of all requirements and API connectivity. |

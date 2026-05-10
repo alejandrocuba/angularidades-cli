@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const p = require('@clack/prompts');
 const { colors } = require('./logger');
+const { resolveConfig } = require('./config');
+const { initYouTube, downloadExistingCaptions } = require('./youtube-api');
 
 async function scaffoldEpisode() {
   p.intro(`${colors.cyan}${colors.bold}Create New Episode Scaffolding${colors.reset}`);
@@ -50,26 +52,54 @@ async function scaffoldEpisode() {
     }
   }
 
-  const title = await p.text({
-    message: 'Enter the episode title (Working title):',
-    placeholder: 'Despliegue de Angular SSR...',
+  const titleTopic = await p.text({
+    message: 'Enter the episode topic (for the title):',
+    placeholder: 'Episode topic',
     validate(value) {
-      if (value.length < 5) return 'Title is too short.';
+      if (value.length < 5) return 'Topic is too short.';
     }
   });
 
-  if (p.isCancel(title)) {
+  if (p.isCancel(titleTopic)) {
     p.cancel('Operation cancelled.');
     process.exit(0);
+  }
+
+  // Guest Collection Loop
+  const guests = [];
+  let currentGuest = await p.text({
+    message: 'Enter the first guest name:',
+    placeholder: 'Guest name',
+    validate(value) {
+      if (value.length < 2) return 'Guest name is too short.';
+    }
+  });
+
+  if (p.isCancel(currentGuest)) {
+    p.cancel('Operation cancelled.');
+    process.exit(0);
+  }
+  guests.push(currentGuest);
+
+  while (true) {
+    let nextGuest = await p.text({
+      message: 'Enter another guest name (or press Enter to finish):',
+      placeholder: 'Next guest...'
+    });
+
+    if (p.isCancel(nextGuest)) break;
+    if (!nextGuest || nextGuest.trim() === '') break;
+    guests.push(nextGuest);
   }
 
   const youtubeUrl = await p.text({
     message: 'Enter the YouTube Video URL:',
     placeholder: 'https://www.youtube.com/watch?v=...',
     validate(value) {
+      if (!value) return 'URL is required.';
       const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
       const match = value.match(regExp);
-      if (!match || match[2].length !== 11) return 'Invalid YouTube URL.';
+      if (!match || !match[2] || match[2].length !== 11) return 'Invalid YouTube URL.';
     }
   });
 
@@ -82,15 +112,6 @@ async function scaffoldEpisode() {
   const videoId = youtubeUrl.match(regExp)[2];
   const today = new Date().toISOString().split('T')[0];
 
-  const confirm = await p.confirm({
-    message: `Create scaffolding for Episode ${episodeNumber}?`,
-  });
-
-  if (!confirm || p.isCancel(confirm)) {
-    p.cancel('Operation cancelled.');
-    process.exit(0);
-  }
-
   const s = p.spinner();
   s.start('Generating directories and files...');
 
@@ -99,6 +120,12 @@ async function scaffoldEpisode() {
 
   fs.mkdirSync(newEpisodeDir, { recursive: true });
   subDirs.forEach(dir => fs.mkdirSync(path.join(newEpisodeDir, dir), { recursive: true }));
+  s.stop('Directories and metadata ready');
+
+  // Format titles
+  const guestList = guests.join(', ');
+  const displayNum = parseInt(episodeNumber);
+  const titleEs = `${titleTopic} con ${guestList} - Angularidades #${displayNum}`;
 
   // Create metadata.json
   const metadata = {
@@ -108,19 +135,42 @@ async function scaffoldEpisode() {
   fs.writeFileSync(path.join(newEpisodeDir, 'metadata.json'), JSON.stringify(metadata, null, 2));
 
   // Create working title file
-  fs.writeFileSync(path.join(newEpisodeDir, '2_publisher', 'youtube_title_es.txt'), title);
+  fs.writeFileSync(path.join(newEpisodeDir, '2_publisher', 'youtube_title_es.txt'), titleEs);
 
-  s.stop(`Scaffolding created at episodes/${episodeNumber}`);
+  console.log(''); // Visual spacing
+  s.start(`${colors.cyan}Connecting to YouTube to fetch recording data...${colors.reset}`);
+
+  try {
+    const config = await resolveConfig();
+    const hasFullAuth = config.credentials.CLIENT_ID && config.credentials.CLIENT_SECRET && config.credentials.REFRESH_TOKEN;
+
+    if (hasFullAuth) {
+      const youtube = initYouTube(config.credentials);
+      s.message('Downloading captions from YouTube...');
+      await downloadExistingCaptions(youtube, videoId, newEpisodeDir, false, false);
+      s.stop('YouTube download finished');
+      p.log.success('Scaffolding created and YouTube captions downloaded.');
+    } else {
+      s.stop('YouTube skipped');
+      p.log.warn('Scaffolding created, but YouTube captions skipped (Missing OAuth credentials).');
+    }
+  } catch (error) {
+    s.stop('YouTube error');
+    p.log.error(`Scaffolding created, but failed to fetch captions: ${error.message}`);
+  }
+
+  console.log(''); // Visual spacing
 
   p.note(
     `Next steps:\n` +
-    `1. ${colors.bold}Planning${colors.reset}: Run the Planner Agent using scripts/planner/.\n` +
+    `1. ${colors.bold}AI Processing${colors.reset}: Instruct the @publisher AI Agent to process the episode now that I have the captions.\n` +
     `2. ${colors.bold}Diagnostics${colors.reset}: Run 'angularidades doctor ${episodeNumber}' to check everything.\n` +
-    `3. ${colors.bold}Publishing${colors.reset}: Once the recording is done, run 'angularidades publish ${episodeNumber}'.`,
-    'Scaffolding Ready'
+    `3. ${colors.bold}Dry Run${colors.reset}: Run 'angularidades dry-run ${episodeNumber}' to preview the payload.\n` +
+    `4. ${colors.bold}Publishing${colors.reset}: Run 'angularidades publish ${episodeNumber}' to publish.`,
+    'Ready for Processing'
   );
 
-  p.outro(`${colors.green}Happy recording!${colors.reset}`);
+  p.outro(`${colors.green}Disfruta el proceso!${colors.reset}`);
 }
 
 module.exports = { scaffoldEpisode };

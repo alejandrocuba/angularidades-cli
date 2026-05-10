@@ -1,0 +1,2340 @@
+0:00:01.780,0:00:04.980
+[Música]
+
+0:00:08.320,0:00:11.920
+Bienvenidos a Angularidades, donde
+
+0:00:10.200,0:00:13.599
+estaremos conversando sobre temas
+
+0:00:11.920,0:00:16.930
+alrededor del framework de desarrollo
+
+0:00:13.599,0:00:18.800
+Angular para crear aplicaciones web.
+
+0:00:16.930,0:00:22.080
+[Música]
+
+0:00:18.800,0:00:24.560
+Mauricio, haciendo un poco de recuento,
+
+0:00:22.080,0:00:26.720
+en el 2023, Jimmy Dolores de Angular
+
+0:00:24.560,0:00:29.759
+Perú estuvo acá en Angularidades
+
+0:00:26.720,0:00:33.079
+grabando el episodio número 18 sobre
+
+0:00:29.759,0:00:37.040
+adivina, Microfronce. En el año pasado,
+
+0:00:33.079,0:00:41.079
+en el 2024, Besel nos dio un poco más de
+
+0:00:37.040,0:00:44.000
+luces sobre este tema en el episodio 36
+
+0:00:41.079,0:00:46.559
+y ahora tenemos esta gran oportunidad en
+
+0:00:44.000,0:00:48.920
+el 2025 de que hayas aceptado la
+
+0:00:46.559,0:00:51.760
+invitación a este episodio que hemos
+
+0:00:48.920,0:00:54.120
+esperado con tanta anticipación y que va
+
+0:00:51.760,0:00:55.960
+a poder actualizarnos a todos con las
+
+0:00:54.120,0:00:57.840
+nuevas tendencias en el desarrollo con
+
+0:00:55.960,0:01:00.640
+Angular en lo que respecta a esta
+
+0:00:57.840,0:01:03.079
+arquitectura de Microfronets. Así que
+
+0:01:00.640,0:01:04.879
+muchísimas gracias por haber aceptado la
+
+0:01:03.079,0:01:07.439
+invitación a este episodio y es una
+
+0:01:04.879,0:01:09.119
+alegría grandísima tenerte por acá.
+
+0:01:07.439,0:01:11.720
+Gracias a ti por la invitación.
+
+0:01:09.119,0:01:14.119
+Realmente es un gran honor para mí poder
+
+0:01:11.720,0:01:16.560
+estar aquí porque sigo como tal el
+
+0:01:14.119,0:01:19.320
+trabajo que vienes realizando, Alandro y
+
+0:01:16.560,0:01:21.680
+me parece que es muy genial, es algo que
+
+0:01:19.320,0:01:23.000
+deja como toda una trayectoria y que se
+
+0:01:21.680,0:01:24.439
+queda para la posteridad, ¿no? El tema
+
+0:01:23.000,0:01:26.520
+de poder compartir todo tipo de
+
+0:01:24.439,0:01:27.960
+enseñanzas con con quienes están
+
+0:01:26.520,0:01:30.000
+interesados en el framework y en la
+
+0:01:27.960,0:01:31.720
+tecnología en general.
+
+0:01:30.000,0:01:34.240
+Muchas gracias, especialmente viniendo
+
+0:01:31.720,0:01:37.320
+de ti ese cumplido.
+
+0:01:34.240,0:01:39.759
+Permíteme presentarte primero ante
+
+0:01:37.320,0:01:42.600
+quienes aún no te conocen, Mauricio,
+
+0:01:39.759,0:01:44.439
+pues eres originalmente de Cochabamba,
+
+0:01:42.600,0:01:46.759
+Bolivia, de donde ha salido tanto
+
+0:01:44.439,0:01:49.360
+talento, incluyendo a Luis Avilés, a
+
+0:01:46.759,0:01:52.200
+Vania, también a Nikobites
+
+0:01:49.360,0:01:54.520
+y bueno, actualmente resides en la
+
+0:01:52.200,0:01:58.119
+preciosa ciudad de Madrid, fuiste
+
+0:01:54.520,0:01:59.640
+organizador de Angula Bolivia y del GDG
+
+0:01:58.119,0:02:02.039
+de Cochabamba.
+
+0:01:59.640,0:02:04.759
+Allá te graduaste como ingeniero de
+
+0:02:02.039,0:02:06.079
+sistemas con diplomado en gestión de
+
+0:02:04.759,0:02:09.080
+proyectos de tecnologías de la
+
+0:02:06.079,0:02:12.400
+información y hoy en día ejerces como
+
+0:02:09.080,0:02:15.120
+technical lead y Google developer expert
+
+0:02:12.400,0:02:17.319
+dentro de la categoría de Angular.
+
+0:02:15.120,0:02:20.280
+Además, llevas el canal de Comb Mau en
+
+0:02:17.319,0:02:22.200
+YouTube narrando la experiencia como
+
+0:02:20.280,0:02:25.200
+ingeniero de software, donde compartes
+
+0:02:22.200,0:02:27.640
+además información técnica de alta
+
+0:02:25.200,0:02:30.280
+calidad sobre Angular Signals,
+
+0:02:27.640,0:02:32.080
+enrutamiento, microfones en Angular, que
+
+0:02:30.280,0:02:34.519
+es el tema que vamos a estar abordando
+
+0:02:32.080,0:02:37.280
+hoy por acá. Así que muchísimas gracias
+
+0:02:34.519,0:02:38.200
+de nuevo por estar acá con nosotros,
+
+0:02:37.280,0:02:40.319
+Mauricio.
+
+0:02:38.200,0:02:43.560
+Gracias a ti. Gracias.
+
+0:02:40.319,0:02:46.440
+Y bueno, vamos a iniciar esta
+
+0:02:43.560,0:02:49.360
+conversación con una pregunta bastante
+
+0:02:46.440,0:02:52.319
+recurrente, la del por qué el equipo
+
+0:02:49.360,0:02:54.239
+central de Angular no añade soporte a
+
+0:02:52.319,0:02:55.720
+microfronents en el sistema que
+
+0:02:54.239,0:02:58.640
+mantienen alrededor del núcleo de
+
+0:02:55.720,0:03:01.480
+framework, aunque te importaría antes de
+
+0:02:58.640,0:03:03.720
+responderla dar un muy breve contexto
+
+0:03:01.480,0:03:07.840
+acerca del término de microfrontend y
+
+0:03:03.720,0:03:07.840
+cuánto realmente tiene de micro.
+
+0:03:08.159,0:03:13.840
+Bueno, yo como tal empecé a relacionarme
+
+0:03:10.280,0:03:16.720
+con el término hace un par de años, si
+
+0:03:13.840,0:03:18.760
+no recuerdo mal, y esto vino dado, ¿no?,
+
+0:03:16.720,0:03:21.159
+de debido a ciertos requerimientos del
+
+0:03:18.760,0:03:24.200
+proyecto en el cual yo trabajaba. Me
+
+0:03:21.159,0:03:25.560
+parece algo muy interesante porque el
+
+0:03:24.200,0:03:27.159
+por en el término de microservicios,
+
+0:03:25.560,0:03:31.760
+¿no?, del lado del backend es algo muy
+
+0:03:27.159,0:03:34.959
+extendido y como tal eh el querer llevar
+
+0:03:31.760,0:03:38.920
+eso al lado del frontend ah me parecía
+
+0:03:34.959,0:03:42.000
+como un reto muy interesante, ¿no? Las
+
+0:03:38.920,0:03:44.120
+la circunstancia en la cual teníamos que
+
+0:03:42.000,0:03:46.000
+que trabajar y es eso, ¿no? es
+
+0:03:44.120,0:03:47.400
+básicamente poder llevar este concepto
+
+0:03:46.000,0:03:50.920
+de microservicios que manejamos en
+
+0:03:47.400,0:03:53.040
+backend al frontend, donde tenemos
+
+0:03:50.920,0:03:54.400
+diferentes proyectos de lado frontend
+
+0:03:53.040,0:03:58.159
+conviviendo dentro de una misma
+
+0:03:54.400,0:04:00.640
+aplicación. Esto se puede dar eh
+
+0:03:58.159,0:04:02.400
+en diferentes entornos, se puede dar por
+
+0:04:00.640,0:04:04.959
+diferentes motivos que probablemente
+
+0:04:02.400,0:04:07.720
+exploraremos un poco más adelante,
+
+0:04:04.959,0:04:09.159
+pero y diría, ¿no?, que va va un poco
+
+0:04:07.720,0:04:10.680
+por ahí.
+
+0:04:09.159,0:04:13.280
+La idea es minimizar eso, ¿no? La
+
+0:04:10.680,0:04:15.799
+coordinación entre diferentes equipos
+
+0:04:13.280,0:04:18.440
+que desarrollan características para una
+
+0:04:15.799,0:04:20.560
+aplicación que requiere, por supuesto,
+
+0:04:18.440,0:04:22.800
+un nivel de modularización
+
+0:04:20.560,0:04:25.520
+que divida el sistema en lo que
+
+0:04:22.800,0:04:27.600
+normalmente se llaman verticales a nivel
+
+0:04:25.520,0:04:29.560
+de dominio, un bajo acoplamiento para
+
+0:04:27.600,0:04:31.680
+que esos equipos puedan tener la
+
+0:04:29.560,0:04:34.720
+suficiente autonomía y sobrevivir la
+
+0:04:31.680,0:04:37.039
+arquitectura de microphone, ¿verdad?
+
+0:04:34.720,0:04:38.759
+Sí, justamente voy a hablar un poco,
+
+0:04:37.039,0:04:40.680
+¿no?, de mi experiencia personal, lo que
+
+0:04:38.759,0:04:42.039
+sucedía con el proyecto donde me
+
+0:04:40.680,0:04:43.840
+introduje cómo estaba la tecnología,
+
+0:04:42.039,0:04:46.400
+bueno, la arquitectura se tenían
+
+0:04:43.840,0:04:47.840
+diferentes equipos, ¿sí? y cada equipo
+
+0:04:46.400,0:04:49.520
+venía trabajando en un proyecto
+
+0:04:47.840,0:04:52.199
+diferente, un producto diferente como
+
+0:04:49.520,0:04:54.759
+tal para el cliente y eventualmente se
+
+0:04:52.199,0:04:57.199
+requería el poder, ¿no?, eh involucrar
+
+0:04:54.759,0:04:59.199
+los diferentes proyectos en uno solo,
+
+0:04:57.199,0:05:01.759
+tener como que un shell precisamente que
+
+0:04:59.199,0:05:02.919
+pudiera con que se pudiera coordinar y
+
+0:05:01.759,0:05:04.560
+el desarrollo como tal de estos
+
+0:05:02.919,0:05:06.360
+proyectos siempre fue independiente,
+
+0:05:04.560,0:05:09.320
+¿no?
+
+0:05:06.360,0:05:11.000
+La tal vez, por así decirlo, la única
+
+0:05:09.320,0:05:14.759
+cosa que tenemos en común era el uso del
+
+0:05:11.000,0:05:16.720
+framework que era Angular, por suerte.
+
+0:05:14.759,0:05:18.319
+Y dada esa necesidad fue que
+
+0:05:16.720,0:05:20.319
+precisamente empezamos a explorar un
+
+0:05:18.319,0:05:23.120
+poco con la arquitectura.
+
+0:05:20.319,0:05:25.039
+también se dio debido a otros motivos
+
+0:05:23.120,0:05:27.440
+porque eh Microfones no solamente se
+
+0:05:25.039,0:05:29.560
+utiliza cuando tienes que tener como que
+
+0:05:27.440,0:05:31.440
+equipos desacoplados, sino igual bajo
+
+0:05:29.560,0:05:32.720
+otras circunstancias, ¿no? Una una de
+
+0:05:31.440,0:05:34.360
+las circunstancias, por ejemplo, que se
+
+0:05:32.720,0:05:38.560
+me ocurre es para el tema de los
+
+0:05:34.360,0:05:41.360
+despliegues independientes. teníamos eh
+
+0:05:38.560,0:05:44.240
+en en mi caso me ha servido mucho para
+
+0:05:41.360,0:05:46.280
+ese caso específico
+
+0:05:44.240,0:05:49.160
+donde hemos tenido un feature muy muy
+
+0:05:46.280,0:05:53.080
+grande con justamente como mencionabas
+
+0:05:49.160,0:05:57.000
+una vertical un dominio muy específico
+
+0:05:53.080,0:06:00.880
+y se requería tener iteraciones sobre
+
+0:05:57.000,0:06:02.960
+esa parte como tal del proyecto de forma
+
+0:06:00.880,0:06:04.479
+muy frecuente sin tener que como tal
+
+0:06:02.960,0:06:06.440
+involucrar todo lo que es proyecto,
+
+0:06:04.479,0:06:08.560
+¿no?, en sí.
+
+0:06:06.440,0:06:11.039
+Entonces sí, ese igual es otro de los
+
+0:06:08.560,0:06:12.520
+motivos, ¿no?, por el cual podrías
+
+0:06:11.039,0:06:15.039
+querer utilizar o integrar esta
+
+0:06:12.520,0:06:16.280
+arquitectura dentro de tus proyectos.
+
+0:06:15.039,0:06:18.240
+Claro. Y supongo que durante esa
+
+0:06:16.280,0:06:19.840
+exploración te diste cuenta de que no
+
+0:06:18.240,0:06:21.680
+era una característica que estaba
+
+0:06:19.840,0:06:24.000
+ofrecida por el núcleo como tal de
+
+0:06:21.680,0:06:26.400
+Angular y que uno requiere acceder a
+
+0:06:24.000,0:06:28.520
+terceros para poder hacerlo. ¿Y a qué se
+
+0:06:26.400,0:06:31.160
+debe esto en específico? ¿Por qué
+
+0:06:28.520,0:06:32.919
+Angular no soporta microfronends
+
+0:06:31.160,0:06:35.759
+desde cero? Es decir, como parte del
+
+0:06:32.919,0:06:38.280
+ecosistema ese nativo de ellos mismos.
+
+0:06:35.759,0:06:42.759
+Hasta donde tengo entendido, lo que
+
+0:06:38.280,0:06:44.120
+sucede, ¿no?, es que cuando se realiza
+
+0:06:42.759,0:06:45.960
+la implementación de este tipo de
+
+0:06:44.120,0:06:47.479
+arquitectura, es una arquitectura que
+
+0:06:45.960,0:06:48.919
+funciona mucho en tiempo de ejecución,
+
+0:06:47.479,0:06:50.919
+¿no? Porque tienes diferentes
+
+0:06:48.919,0:06:52.960
+aplicaciones que están conviviendo en
+
+0:06:50.919,0:06:54.720
+tiempo de ejecución más que llevarse al
+
+0:06:52.960,0:06:56.240
+tal momento de build, ¿no?, como tal de
+
+0:06:54.720,0:06:58.720
+aplicación.
+
+0:06:56.240,0:07:01.520
+Entonces, lo que sucede con frameworks
+
+0:06:58.720,0:07:03.960
+como Angular, ¿no?, que son frameworks
+
+0:07:01.520,0:07:07.720
+para hacer single page applications, es
+
+0:07:03.960,0:07:09.680
+que lo que buscan es precisamente
+
+0:07:07.720,0:07:11.520
+la mejora en en ese tipo de aspectos
+
+0:07:09.680,0:07:14.759
+solamente va a ser build. Entonces, por
+
+0:07:11.520,0:07:16.319
+ejemplo, se encargan del type check, del
+
+0:07:14.759,0:07:18.440
+tema de todo el tre shaking, ¿no? Ese
+
+0:07:16.319,0:07:21.120
+tipo de de escenarios los manejan muy
+
+0:07:18.440,0:07:23.120
+bien. Sin embargo, este otro escenario,
+
+0:07:21.120,0:07:26.599
+el que hablo del tiempo de ejecución, ya
+
+0:07:23.120,0:07:28.039
+no lo manejan tan bien. Entonces ahí
+
+0:07:26.599,0:07:31.360
+choca un poco, ¿no?, con el tema de la
+
+0:07:28.039,0:07:34.360
+filosofía de los microfonents. Y la
+
+0:07:31.360,0:07:36.800
+sugerencia del team de Angular vendría
+
+0:07:34.360,0:07:38.919
+dada tal vez el manejo de monos repos
+
+0:07:36.800,0:07:40.919
+librerías compartidas, ¿no? ese tipo tal
+
+0:07:38.919,0:07:46.080
+vez de soluciones.
+
+0:07:40.919,0:07:48.319
+Y otro motivo es que como tal Angular es
+
+0:07:46.080,0:07:50.159
+un framework, ¿no? No es una
+
+0:07:48.319,0:07:51.360
+necesariamente una arquitectura. Sí,
+
+0:07:50.159,0:07:52.680
+cuando hablamos de microfone estamos
+
+0:07:51.360,0:07:53.560
+hablando de una arquitectura.
+
+0:07:52.680,0:07:55.319
+Exactamente.
+
+0:07:53.560,0:07:58.120
+Y Angular como framework es bien
+
+0:07:55.319,0:07:59.520
+opinionated, ¿no? Y ya de por sí existen
+
+0:07:58.120,0:08:01.759
+varias soluciones, ¿no? Para poder
+
+0:07:59.520,0:08:03.400
+implementar lo que son microfens y
+
+0:08:01.759,0:08:06.080
+quiere darte como tal la libertad, ¿no?,
+
+0:08:03.400,0:08:07.720
+de poder tú decidir cuál quieres eh
+
+0:08:06.080,0:08:12.560
+utilizar,
+
+0:08:07.720,0:08:15.879
+cuál se acopla mejor a tu proyecto y no
+
+0:08:12.560,0:08:17.599
+como tal imponerte. Y creo que yo hay un
+
+0:08:15.879,0:08:18.800
+tercer aspecto y es el tema de la
+
+0:08:17.599,0:08:20.680
+integración. Cuando hablamos de
+
+0:08:18.800,0:08:22.840
+microfence igual es muy común pensar en
+
+0:08:20.680,0:08:24.599
+utilizar otros frameworks, ¿no? Aparte
+
+0:08:22.840,0:08:26.360
+de Angular, qué sé yo, utilizar eh
+
+0:08:24.599,0:08:28.759
+alguna librería con React, utilizar
+
+0:08:26.360,0:08:30.440
+view, utilizar Next y precisamente el
+
+0:08:28.759,0:08:32.880
+utilizar soluciones de terceros que ya
+
+0:08:30.440,0:08:35.159
+están probadas, que ya están integradas
+
+0:08:32.880,0:08:36.760
+en proyectos grandes, nos evita de
+
+0:08:35.159,0:08:38.240
+problemas, ¿no? Al momento de tratar de
+
+0:08:36.760,0:08:41.200
+utilizar una solución que está muy
+
+0:08:38.240,0:08:43.279
+pensada para un framework en específico.
+
+0:08:41.200,0:08:45.080
+Exacto. menos como una herramienta ahí
+
+0:08:43.279,0:08:46.640
+de transición, mientras tanto, una
+
+0:08:45.080,0:08:48.480
+decisión que uno tome para poder
+
+0:08:46.640,0:08:52.040
+incorporar diferentes frameworks dentro
+
+0:08:48.480,0:08:53.160
+de una misma experiencia que el usuario
+
+0:08:52.040,0:08:55.600
+no tiene ni idea de qué es lo que está
+
+0:08:53.160,0:08:58.959
+pasando por ahí atrás, que si usa
+
+0:08:55.600,0:09:02.279
+Angular o usa spelt o React o View o a
+
+0:08:58.959,0:09:04.079
+un HTML directo, pero se puede lograr
+
+0:09:02.279,0:09:06.720
+este tipo de entramado ahí hacer el
+
+0:09:04.079,0:09:08.600
+Frankenstein invisible que resulta en
+
+0:09:06.720,0:09:10.519
+una aplicación que es manejable
+
+0:09:08.600,0:09:12.240
+totalmente sin que haya demasiado
+
+0:09:10.519,0:09:16.519
+detrimento del lado. de rendimiento, por
+
+0:09:12.240,0:09:19.079
+supuesto. Y cuál debe ser en tu opinión
+
+0:09:16.519,0:09:20.519
+el tamaño, las características de una
+
+0:09:19.079,0:09:22.440
+aplicación, cómo es que debe estar
+
+0:09:20.519,0:09:24.480
+estructurada incluso la organización de
+
+0:09:22.440,0:09:27.079
+las personas detrás del desarrollo de
+
+0:09:24.480,0:09:28.760
+esta aplicación para llegar al punto de
+
+0:09:27.079,0:09:30.279
+considerar la arquitectura de
+
+0:09:28.760,0:09:32.760
+microfrontend
+
+0:09:30.279,0:09:36.360
+versus y por lo de las bibliotecas de
+
+0:09:32.760,0:09:37.600
+Angular, emplear monoriples aunque no
+
+0:09:36.360,0:09:39.279
+son mutuamente excluyentes, por
+
+0:09:37.600,0:09:42.680
+supuesto, uno puede hacerlo y a la vez
+
+0:09:39.279,0:09:44.040
+utilizar microfronets, pero cuando
+
+0:09:42.680,0:09:47.279
+las caracterí ísticas de todo lo que
+
+0:09:44.040,0:09:49.279
+tenemos adelante apunta hacia una
+
+0:09:47.279,0:09:51.600
+decisión arquitectónica que involucre
+
+0:09:49.279,0:09:54.680
+los microfonets.
+
+0:09:51.600,0:09:56.360
+Sa yo creo que más que definir el tamaño
+
+0:09:54.680,0:09:57.959
+de la aplicación tenemos que definir
+
+0:09:56.360,0:09:59.800
+cuáles son nuestras justamente que
+
+0:09:57.959,0:10:02.120
+mencionabas nuestras verticales, ¿no?
+
+0:09:59.800,0:10:04.120
+Cuando tenemos tal vez verticales que
+
+0:10:02.120,0:10:06.440
+son ya de por sí demasiado complejas,
+
+0:10:04.120,0:10:08.560
+¿sí? Y tenemos múltiples de ellas, es en
+
+0:10:06.440,0:10:09.959
+ese instante en el cual podemos empezar
+
+0:10:08.560,0:10:12.200
+a pensar en en utilizar esta
+
+0:10:09.959,0:10:15.360
+arquitectura. Entonces, no hay como tal,
+
+0:10:12.200,0:10:17.000
+creo yo, un tamaño así específico de que
+
+0:10:15.360,0:10:19.200
+esta aplicación tiene que tener pesar
+
+0:10:17.000,0:10:23.720
+tanto o tiene que tener que sido tantos
+
+0:10:19.200,0:10:26.200
+módulos, ¿no? Sino es más relacionado a
+
+0:10:23.720,0:10:27.440
+los a los diferentes dominios, ¿no?
+
+0:10:26.200,0:10:31.279
+Entonces, en el momento en que tenemos
+
+0:10:27.440,0:10:32.480
+dominios que son complejos, ¿sí? que con
+
+0:10:31.279,0:10:34.640
+con funcionalidades bastante
+
+0:10:32.480,0:10:36.360
+independientes podemos ya pensar en
+
+0:10:34.640,0:10:37.600
+utilizar microfones y también empezar a
+
+0:10:36.360,0:10:39.760
+independizar a los equipos de
+
+0:10:37.600,0:10:41.680
+desarrollo, que por ahí viene, ¿no? Otra
+
+0:10:39.760,0:10:45.040
+cuestión que me planteabas. Pienso,
+
+0:10:41.680,0:10:47.399
+¿no?, que si tenemos dominios que pueden
+
+0:10:45.040,0:10:49.320
+trabajar eh diferentes equipos de forma
+
+0:10:47.399,0:10:51.760
+independiente, es igual puede dar un
+
+0:10:49.320,0:10:53.120
+boost como tal al desarrollo de nuestros
+
+0:10:51.760,0:10:54.680
+productos.
+
+0:10:53.120,0:10:57.680
+Y esa es otra de las cosas que podemos
+
+0:10:54.680,0:11:00.519
+tomar en cuenta, ¿no? Si ya tenemos
+
+0:10:57.680,0:11:02.760
+si queremos integrar proyectos que
+
+0:11:00.519,0:11:04.600
+trabajan diferentes equipos, eso es
+
+0:11:02.760,0:11:06.440
+igual una buena opción. Un ejemplo que
+
+0:11:04.600,0:11:07.639
+podríamos llevar esto a un caso de la
+
+0:11:06.440,0:11:09.480
+vida real, por ejemplo, puede ser un
+
+0:11:07.639,0:11:13.240
+e-commerce, ¿no? Donde podríamos pensar
+
+0:11:09.480,0:11:14.639
+que que s que el buscador es eh un
+
+0:11:13.240,0:11:16.839
+dominio en específico, lo puede
+
+0:11:14.639,0:11:17.880
+desarrollar un equipo en específico y
+
+0:11:16.839,0:11:19.760
+dentro del buscador tenemos
+
+0:11:17.880,0:11:21.560
+funcionalidades como la búsqueda de
+
+0:11:19.760,0:11:23.839
+productos, igual tal vez el listado,
+
+0:11:21.560,0:11:25.519
+¿no? Ese tipo de cosas. Podemos tener
+
+0:11:23.839,0:11:27.399
+todo el proceso de checkout quizás
+
+0:11:25.519,0:11:29.240
+definido como un dominio separado que
+
+0:11:27.399,0:11:30.839
+puede trabajar otro equipo, ¿no? Podemos
+
+0:11:29.240,0:11:33.240
+tener la cuenta de usuario igual como
+
+0:11:30.839,0:11:36.040
+otro dominio. Ahí es cuando te puedes
+
+0:11:33.240,0:11:38.760
+dar cuenta, ¿no?, que puede ser útil
+
+0:11:36.040,0:11:43.040
+utilizar esta arquitectura. Claro, lo
+
+0:11:38.760,0:11:46.560
+mismo hace Amazon, Netflix, Spotify, si
+
+0:11:43.040,0:11:49.320
+teniendo la posibilidad de hacer un
+
+0:11:46.560,0:11:50.680
+despliegue independiente de que esas
+
+0:11:49.320,0:11:53.279
+diferentes partes del sistema que se
+
+0:11:50.680,0:11:57.000
+acoplan en tiempo de ejecución funcionen
+
+0:11:53.279,0:12:00.360
+con muy bajo acoplamiento,
+
+0:11:57.000,0:12:02.120
+reducieran mínimo ese contrato que
+
+0:12:00.360,0:12:05.600
+existe entre las diferentes partes, es
+
+0:12:02.120,0:12:08.279
+decir, los diferentes remotos con el
+
+0:12:05.600,0:12:11.519
+hospedero a a nivel de terminología como
+
+0:12:08.279,0:12:13.920
+tal de microfron y es posiblemente una
+
+0:12:11.519,0:12:15.320
+manera bastante grata de poder lidiar
+
+0:12:13.920,0:12:17.600
+con una serie de desafíos
+
+0:12:15.320,0:12:20.959
+arquitectónicos que al final ocurren
+
+0:12:17.600,0:12:23.399
+cuando uno tiene una empresa que está
+
+0:12:20.959,0:12:26.600
+constituida por diferentes equipos, como
+
+0:12:23.399,0:12:29.880
+estabas explicando, con esos niveles tan
+
+0:12:26.600,0:12:32.959
+verticales que separan unas áreas de
+
+0:12:29.880,0:12:35.720
+otras y posiblemente Microphones sea una
+
+0:12:32.959,0:12:37.360
+muy buena opción para tomar en cuenta
+
+0:12:35.720,0:12:38.839
+ese punto de vista técnico.
+
+0:12:37.360,0:12:40.680
+Sí, sí, sí. No, estoy de acuerdo.
+
+0:12:38.839,0:12:41.959
+Justamente ese es uno de los motivos,
+
+0:12:40.680,0:12:44.560
+¿no?, específicos por los cuales
+
+0:12:41.959,0:12:47.000
+nosotros, bueno, yo de forma personal
+
+0:12:44.560,0:12:48.639
+empecé utilizarlos. Y cuando empezaste a
+
+0:12:47.000,0:12:51.519
+utilizarlo, posiblemente en el mundo
+
+0:12:48.639,0:12:54.800
+este de Angular Microfronce era sinónimo
+
+0:12:51.519,0:12:57.199
+de M Federation de Angular Architects,
+
+0:12:54.800,0:12:59.680
+que es la empresa consultora de Austria
+
+0:12:57.199,0:13:04.399
+liderada por Manfred
+
+0:12:59.680,0:13:07.399
+Reiner, Michael y un grupo grandísimo de
+
+0:13:04.399,0:13:10.639
+personas para darle soporte a Modifer
+
+0:13:07.399,0:13:15.560
+Direction y ahora con la nueva evolución
+
+0:13:10.639,0:13:17.320
+de Native. Y basado en eso, ¿sabes? en
+
+0:13:15.560,0:13:19.639
+las exploraciones que has hecho
+
+0:13:17.320,0:13:21.160
+relacionadas con cómo enfrentar este
+
+0:13:19.639,0:13:23.720
+tipo de arquitectura, si existe alguna
+
+0:13:21.160,0:13:28.040
+otra herramienta más allá de la que
+
+0:13:23.720,0:13:30.639
+ofrecen ellos para poder sorventar
+
+0:13:28.040,0:13:32.480
+el tema de los microfronents
+
+0:13:30.639,0:13:34.560
+sí, de hecho, como tal, el microfronence
+
+0:13:32.480,0:13:37.079
+es una arquitectura no ligada
+
+0:13:34.560,0:13:39.839
+necesariamente de forma directa a una
+
+0:13:37.079,0:13:41.320
+tecnología y efectivamente las
+
+0:13:39.839,0:13:45.240
+soluciones de Angular Architect son como
+
+0:13:41.320,0:13:46.800
+que quizás eh las que uno puede ver de
+
+0:13:45.240,0:13:49.560
+primera cara, ¿no? Para empezar a
+
+0:13:46.800,0:13:51.480
+explorar esto, trabajar con con Angular.
+
+0:13:49.560,0:13:54.279
+Pero sin embargo, curiosamente, una de
+
+0:13:51.480,0:13:56.880
+las primeras soluciones que que me tocó
+
+0:13:54.279,0:13:59.320
+a mí implementar no fue utilizando ni
+
+0:13:56.880,0:14:02.639
+Model Federation ni Net Federation, sino
+
+0:13:59.320,0:14:04.199
+que fue utilizando Single SPA, que es un
+
+0:14:02.639,0:14:07.560
+metaframework con el cual puede
+
+0:14:04.199,0:14:09.000
+descargar diferentes aplicaciones, ¿no?
+
+0:14:07.560,0:14:12.000
+En diferentes frameworks o diferentes
+
+0:14:09.000,0:14:16.800
+librerías. Ya después puede explorar un
+
+0:14:12.000,0:14:18.360
+poco más sobre modifations y
+
+0:14:16.800,0:14:20.279
+evidentemente también considera otro
+
+0:14:18.360,0:14:22.440
+tipo de alternativas, ¿no? Como el uso
+
+0:14:20.279,0:14:24.759
+quizá directamente, por ejemplo, de
+
+0:14:22.440,0:14:26.079
+iframes, ¿no? Para poder hacer este tipo
+
+0:14:24.759,0:14:29.000
+de cargas
+
+0:14:26.079,0:14:31.759
+o de web components con elements.
+
+0:14:29.000,0:14:34.480
+Justamente web components. También sé
+
+0:14:31.759,0:14:37.320
+que existen igual otras librerías que
+
+0:14:34.480,0:14:38.720
+como Luigi o como Bit que también se
+
+0:14:37.320,0:14:41.959
+pueden utilizar, sin varas ya no les he
+
+0:14:38.720,0:14:44.759
+explorado tanto. También he utilizado en
+
+0:14:41.959,0:14:47.800
+alguna situación directamente iframes
+
+0:14:44.759,0:14:50.839
+para poder simular esta arquitectura
+
+0:14:47.800,0:14:53.160
+y en su momento igual vi la opción,
+
+0:14:50.839,0:14:54.279
+¿no?, de utilizar web components. Sin
+
+0:14:53.160,0:14:56.560
+embargo, esto ya no es a lo que ha
+
+0:14:54.279,0:14:58.399
+llevado como tal la producción. Claro,
+
+0:14:56.560,0:15:00.839
+problema fundamental viene siendo de que
+
+0:14:58.399,0:15:02.759
+mientras más
+
+0:15:00.839,0:15:05.519
+elementos tengas acoplándose ahí en
+
+0:15:02.759,0:15:07.279
+tiempo de ejecución, más sube la
+
+0:15:05.519,0:15:09.040
+cantidad de JavaScript que tenga que
+
+0:15:07.279,0:15:11.360
+cargar y que procesar el navegador del
+
+0:15:09.040,0:15:13.920
+otro lado. Y ahí es donde es excelente
+
+0:15:11.360,0:15:18.160
+el uso de mod Federation, bueno, con
+
+0:15:13.920,0:15:20.040
+Negri Federation, que permite declarar
+
+0:15:18.160,0:15:22.959
+elementos compartidos y no tener que
+
+0:15:20.040,0:15:25.480
+estar creciendo infinitamente ese tipo
+
+0:15:22.959,0:15:28.040
+de carga del lado del usuario. Si
+
+0:15:25.480,0:15:29.240
+justamente no uno, de hecho seguramente
+
+0:15:28.040,0:15:31.440
+vamos a hablar igual de algunas de las
+
+0:15:29.240,0:15:33.040
+desventajas, pero pues esa es una, ¿no?
+
+0:15:31.440,0:15:34.759
+El tema del crecimiento de los banders
+
+0:15:33.040,0:15:37.600
+que es bueno, tal vez más que desventaja
+
+0:15:34.759,0:15:39.639
+es uno de los desafíos que fation ha
+
+0:15:37.600,0:15:40.959
+logrado de alguna forma solventar.
+
+0:15:39.639,0:15:44.440
+Siempre igual hay otros desafíos, ¿no?
+
+0:15:40.959,0:15:44.920
+Como temas de UXUI no unificado,
+
+0:15:44.440,0:15:48.480
+¿correcto?
+
+0:15:44.920,0:15:50.199
+O qué sé yo, este, temas de eh
+
+0:15:48.480,0:15:52.519
+optimización de tiempo de compilación,
+
+0:15:50.199,0:15:54.399
+no sé, este tipo de de situaciones.
+
+0:15:52.519,0:15:56.040
+¿Cómo comunicas? Por ejemplo, cuéntame,
+
+0:15:54.399,0:15:59.800
+Mauricio, acerca de las estrategias que
+
+0:15:56.040,0:16:02.639
+has visto, acerca de cómo lograr esa
+
+0:15:59.800,0:16:05.920
+comunicación entre los diferentes
+
+0:16:02.639,0:16:08.279
+remotes con el host a nivel de
+
+0:16:05.920,0:16:11.160
+publisher, subscriber o utilizando tal
+
+0:16:08.279,0:16:12.839
+vez angular signals o eventos o
+
+0:16:11.160,0:16:15.839
+servicios compartidos. ¿Cómo es que
+
+0:16:12.839,0:16:17.920
+gestionas también la coherencia de la
+
+0:16:15.839,0:16:19.839
+interfaz gráfica y la experiencia de
+
+0:16:17.920,0:16:21.560
+usuario entre esos diferentes
+
+0:16:19.839,0:16:23.399
+microfonents para darle ilusión al
+
+0:16:21.560,0:16:26.199
+usuario que esté utilizando algo
+
+0:16:23.399,0:16:28.560
+coherente, teniendo en cuenta los
+
+0:16:26.199,0:16:29.800
+sistemas de diseño, respetar tokens,
+
+0:16:28.560,0:16:30.959
+etcétera.
+
+0:16:29.800,0:16:33.199
+Primero, cuando hablamos de estrategias
+
+0:16:30.959,0:16:35.399
+de comunicación, ¿no? Tenemos una serie
+
+0:16:33.199,0:16:37.600
+de estrategias, cosas simples como la
+
+0:16:35.399,0:16:40.519
+comunicación a través que sido de de la
+
+0:16:37.600,0:16:42.360
+URL, ¿no? utilizar routing, ah, cosas
+
+0:16:40.519,0:16:44.279
+quizá un poco más complejas como tener
+
+0:16:42.360,0:16:48.199
+servicios convencionados compartidos.
+
+0:16:44.279,0:16:50.040
+Sí, yo lo que recomiendo normalmente es
+
+0:16:48.199,0:16:52.079
+que cuando estás utilizando sobre todo
+
+0:16:50.040,0:16:53.880
+modifation, Federation, te puedas apoyar
+
+0:16:52.079,0:16:56.240
+en esta última estrategia en la cual se
+
+0:16:53.880,0:16:57.560
+puede utilizar módulos compartidos y
+
+0:16:56.240,0:16:59.360
+aprovechar el hecho de que se tiene un
+
+0:16:57.560,0:17:01.279
+injection context igual compartido para
+
+0:16:59.360,0:17:03.160
+poder compartir el estado, ¿no?,
+
+0:17:01.279,0:17:05.280
+directamente, ¿sí? Y así manejar la
+
+0:17:03.160,0:17:07.280
+comunicación. Otras estrategias son,
+
+0:17:05.280,0:17:09.839
+¿no? El tema de utilizar este custom
+
+0:17:07.280,0:17:13.240
+events. Luego igual para comunicación
+
+0:17:09.839,0:17:15.199
+cuando hacemos eh que s microfence con
+
+0:17:13.240,0:17:18.959
+ifence podemos utilizar post message
+
+0:17:15.199,0:17:20.760
+API. Y luego otra estrategia que igual
+
+0:17:18.959,0:17:22.600
+se puede considerar es la de el paso de
+
+0:17:20.760,0:17:25.839
+props, ¿no? Donde tenemos como tal un
+
+0:17:22.600,0:17:28.360
+shell que va pasándole como tal las
+
+0:17:25.839,0:17:29.679
+funcionalidades a los diferentes remotos
+
+0:17:28.360,0:17:33.600
+y los remotos solo se encargan de
+
+0:17:29.679,0:17:35.080
+ejecutarlas, ¿no? Que es otra opción.
+
+0:17:33.600,0:17:36.320
+Claro,
+
+0:17:35.080,0:17:39.679
+eso. Bueno, por el lado de la
+
+0:17:36.320,0:17:42.160
+comunicación. Ahora, cuando hablamos de
+
+0:17:39.679,0:17:44.240
+del tema de los estilos, ¿sí? Y ese es
+
+0:17:42.160,0:17:45.480
+justamente otro de los grandes retos que
+
+0:17:44.240,0:17:46.919
+con los que nos afrontamos cuando
+
+0:17:45.480,0:17:48.039
+estamos desarrollando microfance, sobre
+
+0:17:46.919,0:17:49.480
+todo por la independencia, ¿no?, que
+
+0:17:48.039,0:17:50.640
+pueden llegar a tener los equipos y el
+
+0:17:49.480,0:17:54.360
+hecho de que queremos que eso se
+
+0:17:50.640,0:17:57.400
+mantenga. Sin embargo, es eh importante
+
+0:17:54.360,0:18:00.120
+como que definir siempre un design
+
+0:17:57.400,0:18:02.880
+system, cosa de que podamos proveerle al
+
+0:18:00.120,0:18:04.360
+usuario un UI, un UX uniforme y
+
+0:18:02.880,0:18:06.559
+precisamente que no se den estas
+
+0:18:04.360,0:18:08.240
+situaciones en las cuales es muy notorio
+
+0:18:06.559,0:18:10.000
+el hecho de que tenemos diferentes
+
+0:18:08.240,0:18:11.559
+aplicaciones coexistiendo dentro de una
+
+0:18:10.000,0:18:13.480
+sola. Pienso que es importante, como
+
+0:18:11.559,0:18:15.200
+decía, ¿no?, tener este system, el cual
+
+0:18:13.480,0:18:16.679
+su output vendría a ser, por ejemplo,
+
+0:18:15.200,0:18:19.039
+quizá una librería de componentes
+
+0:18:16.679,0:18:21.200
+compartida, ¿no? Igual el tema de
+
+0:18:19.039,0:18:23.520
+manejar eh lo mencionabas, ¿no? Los
+
+0:18:21.200,0:18:25.840
+design tokens, esto por ejemplo es algo
+
+0:18:23.520,0:18:27.600
+muy común que se utiliza, no no
+
+0:18:25.840,0:18:28.640
+solamente cuando hablamos de microfence,
+
+0:18:27.600,0:18:30.320
+¿no?, sino cuando hablamos igual de
+
+0:18:28.640,0:18:32.000
+librerías compartidas, cuando queremos
+
+0:18:30.320,0:18:34.440
+customizar alguna librería, por ejemplo,
+
+0:18:32.000,0:18:36.400
+de elementos, angular material, por
+
+0:18:34.440,0:18:38.280
+ejemplo, se puede hacer esto eh
+
+0:18:36.400,0:18:41.799
+cambiando como tal los valores de
+
+0:18:38.280,0:18:44.280
+diferentes variables. Y
+
+0:18:41.799,0:18:46.360
+luego otra es el desarrollo, ¿no?,
+
+0:18:44.280,0:18:49.320
+compartidas, no solamente para el tema
+
+0:18:46.360,0:18:51.799
+de de los componentes que se pueden
+
+0:18:49.320,0:18:54.559
+reutilizar, sino igual para compartir
+
+0:18:51.799,0:18:56.080
+estilos directamente. Este fue uno de
+
+0:18:54.559,0:18:58.080
+los primeros approach de hecho, que
+
+0:18:56.080,0:19:00.360
+llevé a cabo, ¿no? donde teníamos una
+
+0:18:58.080,0:19:03.120
+librería de estilo CCS directamente que
+
+0:19:00.360,0:19:05.000
+se utilizaba en los diferentes remotos,
+
+0:19:03.120,0:19:07.200
+se cargaba directamente en el Shell y
+
+0:19:05.000,0:19:08.960
+luego ya los remotos la iban utilizando.
+
+0:19:07.200,0:19:11.880
+Y bueno, pienso que otro aspecto
+
+0:19:08.960,0:19:13.799
+importante al momento de estar eh
+
+0:19:11.880,0:19:15.520
+definiendo esto es el tema de definir
+
+0:19:13.799,0:19:18.240
+bien un layout. Para esto nos sirve
+
+0:19:15.520,0:19:20.240
+mucho el el shell. Podemos agarrar y
+
+0:19:18.240,0:19:23.480
+darle esa labor al shell, que es el que
+
+0:19:20.240,0:19:26.200
+se encargue de definir eh la estructura
+
+0:19:23.480,0:19:28.039
+visual que tiene nuestra aplicación. ¿Y
+
+0:19:26.200,0:19:30.360
+cómo garantizas entonces que las
+
+0:19:28.039,0:19:32.360
+personas que están colaborando con los
+
+0:19:30.360,0:19:34.760
+diferentes microfrontends que van a ser
+
+0:19:32.360,0:19:38.480
+después compuestos ahí en ese host, en
+
+0:19:34.760,0:19:41.799
+ese shell, tengan una coherencia visual?
+
+0:19:38.480,0:19:43.520
+¿Hay algún mecanismo con endesting o con
+
+0:19:41.799,0:19:47.440
+algún otro tipo de visual regression
+
+0:19:43.520,0:19:50.480
+testing que sientas que sea la mejor
+
+0:19:47.440,0:19:53.320
+opción a la hora de tener esa fluidez a
+
+0:19:50.480,0:19:55.200
+lo largo del CICD?
+
+0:19:53.320,0:19:56.280
+¿Sabes? ahí más que el tema de
+
+0:19:55.200,0:19:58.240
+integration testing, que bueno,
+
+0:19:56.280,0:19:59.760
+efectivamente eso se lo podemos venir
+
+0:19:58.240,0:20:02.280
+realizando, ¿no? Con herramientas que s
+
+0:19:59.760,0:20:04.400
+como Play Ric o Cypress. está en el tema
+
+0:20:02.280,0:20:07.840
+de que eh si bien tenemos equipos
+
+0:20:04.400,0:20:09.720
+desacoplados para ciertas cosas, hay
+
+0:20:07.840,0:20:11.400
+ciertos momentos en los cuales sí se
+
+0:20:09.720,0:20:13.440
+llega a trabajar un poquito en conjunto,
+
+0:20:11.400,0:20:14.960
+sobre todo para este tipo de de cosas,
+
+0:20:13.440,0:20:17.280
+¿no?, que son un poco más específicas,
+
+0:20:14.960,0:20:19.720
+que se quieren llegar a compartir.
+
+0:20:17.280,0:20:23.880
+Claro. Y con relación a los antipatrones
+
+0:20:19.720,0:20:26.559
+que puede uno cometer a la hora de estar
+
+0:20:23.880,0:20:28.919
+orquestando todo este tipo de estrategia
+
+0:20:26.559,0:20:31.440
+que están detrás de tener cada uno de
+
+0:20:28.919,0:20:34.679
+los equipos separados contribuyendo
+
+0:20:31.440,0:20:36.880
+hacia ese shell, además de, bueno, de
+
+0:20:34.679,0:20:39.039
+tratar de evitar a casi que a toda costa
+
+0:20:36.880,0:20:41.240
+mantener diferentes frameworks corriendo
+
+0:20:39.039,0:20:44.280
+dentro de un mismo shell, utilizando las
+
+0:20:41.240,0:20:46.919
+estrategias estas de microfon.
+
+0:20:44.280,0:20:50.760
+Otro que se me ocurre sería evitar
+
+0:20:46.919,0:20:53.679
+también la anidación de diferentes
+
+0:20:50.760,0:20:56.240
+microfrones uno de otro en extremo. ¿Hay
+
+0:20:53.679,0:21:00.120
+algún otro antipatrón
+
+0:20:56.240,0:21:01.919
+que hayas chocado en el desarrollo tuyo
+
+0:21:00.120,0:21:03.640
+con Microfrontance?
+
+0:21:01.919,0:21:04.559
+¿Sabes? Pienso que los que mencionas son
+
+0:21:03.640,0:21:06.840
+ahorita los que se me vienen
+
+0:21:04.559,0:21:09.080
+directamente a la mente, ¿no? Cuando
+
+0:21:06.840,0:21:10.200
+justamente una de las primeras cosas que
+
+0:21:09.080,0:21:12.000
+se te pueden venir a la mente cuando
+
+0:21:10.200,0:21:13.880
+quieres desarrollar microfonence es el
+
+0:21:12.000,0:21:16.159
+tema de querer mezclar angular con
+
+0:21:13.880,0:21:19.080
+react, con view, con next, qué sé yo,
+
+0:21:16.159,0:21:20.400
+tener toda una mezcla ahí es como que
+
+0:21:19.080,0:21:22.440
+puede llegar a ser tentador. Sin
+
+0:21:20.400,0:21:24.520
+embargo, el objetivo no es ese, no el
+
+0:21:22.440,0:21:26.279
+objetivo sino es el de poder llevar una
+
+0:21:24.520,0:21:29.360
+una integración saludable entre
+
+0:21:26.279,0:21:30.919
+diferentes equipos. Pienso que otras
+
+0:21:29.360,0:21:33.679
+cosas que se tienen que tratar de evitar
+
+0:21:30.919,0:21:35.559
+es precisamente incluso si utilizas el
+
+0:21:33.679,0:21:37.240
+mismo framework, tratar de de evitar
+
+0:21:35.559,0:21:40.400
+utilizar versiones diferentes del
+
+0:21:37.240,0:21:43.760
+framework porque así si es que tratas de
+
+0:21:40.400,0:21:45.200
+caer en eso vas a caer en otro de los de
+
+0:21:43.760,0:21:47.279
+los posibles problemas, ¿no?, que es el
+
+0:21:45.200,0:21:49.200
+crecimiento del bundle porque se va a
+
+0:21:47.279,0:21:50.919
+tener diferentes cargas y eso igual
+
+0:21:49.200,0:21:53.039
+puede acarrear otros problemas, ¿no? Por
+
+0:21:50.919,0:21:55.480
+ejemplo, igual el tema de comunicación,
+
+0:21:53.039,0:21:57.559
+si es que estamos igual con versiones
+
+0:21:55.480,0:21:59.240
+diferentes, hasta donde tengo entendido,
+
+0:21:57.559,0:22:01.200
+igual se rompe un poco el tema, ¿no?,
+
+0:21:59.240,0:22:02.240
+del injection context, sobre todo cuando
+
+0:22:01.200,0:22:05.240
+hablamos de Angular.
+
+0:22:02.240,0:22:07.760
+¿Y qué pasa cuando, por ejemplo, hay
+
+0:22:05.240,0:22:10.360
+varios equipos que utilizan
+
+0:22:07.760,0:22:12.440
+proyectos de Angular que contribuyen
+
+0:22:10.360,0:22:15.159
+características hacia ese shell, hacia
+
+0:22:12.440,0:22:17.159
+esa aplicación que centraliza todo a
+
+0:22:15.159,0:22:20.400
+nivel de microfronten?
+
+0:22:17.159,0:22:22.240
+Y unos emplean Modul Federation porque
+
+0:22:20.400,0:22:25.000
+están en a lo mejor en versiones
+
+0:22:22.240,0:22:27.159
+antiguas que todavía no soportan el
+
+0:22:25.000,0:22:31.080
+nuevo sistema de construcción de
+
+0:22:27.159,0:22:33.360
+proyecto utilizando ESBild con Bit y
+
+0:22:31.080,0:22:35.400
+siguen con Webpack, mientras otros ya
+
+0:22:33.360,0:22:38.480
+migraron hacia Ney Federation. ¿Cómo es
+
+0:22:35.400,0:22:40.080
+que se puede hacer ese esa estrategia de
+
+0:22:38.480,0:22:43.080
+puenteo que es como normalmente se le
+
+0:22:40.080,0:22:45.760
+llama el bridging para que hostados en
+
+0:22:43.080,0:22:48.200
+Ney Federation puedan cargar esos
+
+0:22:45.760,0:22:50.120
+remotos construidos sobre Webpack Mod
+
+0:22:48.200,0:22:53.240
+Federation?
+
+0:22:50.120,0:22:55.320
+Bueno, para hacer eso es eh importante
+
+0:22:53.240,0:22:57.640
+que nuestro shell esté utilizando Native
+
+0:22:55.320,0:23:00.080
+Federation o crear como tal un shell que
+
+0:22:57.640,0:23:02.159
+está utilizando Native Federation y este
+
+0:23:00.080,0:23:06.200
+tiene que cargar lo que es el model
+
+0:23:02.159,0:23:08.679
+Federation round time, asegurarse
+
+0:23:06.200,0:23:10.799
+de skipearlo de las librerías
+
+0:23:08.679,0:23:12.600
+compartidas. Sí.
+
+0:23:10.799,0:23:14.080
+Y
+
+0:23:12.600,0:23:16.600
+como tal ya en adelante para el
+
+0:23:14.080,0:23:18.400
+enrutado, ¿no? Cuando estemos cargando,
+
+0:23:16.600,0:23:19.880
+sí, los módulos remotos, si es que
+
+0:23:18.400,0:23:22.120
+cargamos un módulo remoto de Native
+
+0:23:19.880,0:23:24.919
+Federation, utilizamos el de Native
+
+0:23:22.120,0:23:26.559
+Federation. Y si queremos hacer el
+
+0:23:24.919,0:23:28.279
+cargado, ¿no? Módulo remoto que está
+
+0:23:26.559,0:23:31.360
+utilizando Model Federation, utilizamos
+
+0:23:28.279,0:23:32.840
+justamente este Mod Federation Runtime.
+
+0:23:31.360,0:23:36.480
+Es igual importante al momento de
+
+0:23:32.840,0:23:38.679
+configurar, ¿sí? nuestro nuestro shell,
+
+0:23:36.480,0:23:40.919
+el hacer la carga, sí, de la
+
+0:23:38.679,0:23:42.880
+configuración tanto de Net Federation
+
+0:23:40.919,0:23:44.360
+como de Model Federation. Manfred
+
+0:23:42.880,0:23:47.200
+justamente, ¿no?, de Angular Architex
+
+0:23:44.360,0:23:49.520
+provee un utilitario para poder hacer
+
+0:23:47.200,0:23:51.799
+este tipo de carga, para ayudarte en
+
+0:23:49.520,0:23:53.679
+hacer esta implementación. Incluso
+
+0:23:51.799,0:23:55.840
+ofrecen diferentes adaptadores para el
+
+0:23:53.679,0:24:01.480
+builder que estés utilizando. Agnóstico
+
+0:23:55.840,0:24:04.799
+a cual sea, puedes utilizar RS Pack o
+
+0:24:01.480,0:24:06.320
+Webpack o AS LAN, lo que sea. Incluso
+
+0:24:04.799,0:24:08.279
+con lo que estabas mencionando de los
+
+0:24:06.320,0:24:09.640
+round times pasa exactamente lo mismo
+
+0:24:08.279,0:24:13.240
+que si tienes que mantener diferentes
+
+0:24:09.640,0:24:17.400
+versiones simultáneamente, que si estás
+
+0:24:13.240,0:24:19.679
+en presencia de Mod Federation con Neri
+
+0:24:17.400,0:24:21.400
+Federation técnicamente durante un
+
+0:24:19.679,0:24:23.159
+tiempo bastante prolongado, los que van
+
+0:24:21.400,0:24:25.679
+a sufrir no solamente son las personas
+
+0:24:23.159,0:24:27.600
+de tu equipo que están trabajando con
+
+0:24:25.679,0:24:29.919
+este tipo de estrategias tan disímiles
+
+0:24:27.600,0:24:32.399
+de poder abordar microfrons, sino
+
+0:24:29.919,0:24:34.520
+también que el tamaño en bondo para que
+
+0:24:32.399,0:24:37.320
+eso round time pueda ejecutarse
+
+0:24:34.520,0:24:40.039
+del lado del navegador del usuario va a
+
+0:24:37.320,0:24:43.080
+crecer hasta que no lo logres converger
+
+0:24:40.039,0:24:45.240
+en una sola solución que vendría siendo
+
+0:24:43.080,0:24:48.000
+la Native Federation.
+
+0:24:45.240,0:24:50.440
+Y Mauricio, si tuvieras que darle un
+
+0:24:48.000,0:24:53.360
+solo consejo a un desarrollador, una
+
+0:24:50.440,0:24:55.120
+desarrolladora Fronend que quiera
+
+0:24:53.360,0:24:56.919
+aproximarse por primera vez a este tipo
+
+0:24:55.120,0:24:58.679
+de arquitecturas, ¿cuál consejo
+
+0:24:56.919,0:25:02.559
+escogería? ¿Qué es lo primero que tú le
+
+0:24:58.679,0:25:02.559
+estarías diciendo a esa persona?
+
+0:25:02.799,0:25:06.440
+Es una pregunta interesante.
+
+0:25:07.039,0:25:13.880
+Dando un poco de contexto, creo que
+
+0:25:10.440,0:25:16.200
+creo que cuando pensamos en eh este tipo
+
+0:25:13.880,0:25:18.559
+de arquitecturas, ¿no?, que que van
+
+0:25:16.200,0:25:21.039
+definiendo el diseño de nuestros
+
+0:25:18.559,0:25:23.679
+proyectos eh suelen llegar a ser un poco
+
+0:25:21.039,0:25:27.240
+intimidante, h como que lo vemos como
+
+0:25:23.679,0:25:29.440
+algo tal vez eh demasiado complejo que
+
+0:25:27.240,0:25:31.559
+no digo que no lo sea, pero el consejo
+
+0:25:29.440,0:25:34.640
+sería que
+
+0:25:31.559,0:25:37.120
+no te dé temor el experimentar con este
+
+0:25:34.640,0:25:39.080
+tipo de de arquitecturas solamente
+
+0:25:37.120,0:25:40.919
+porque por qué tan complejas las puedas
+
+0:25:39.080,0:25:43.240
+llegar a ver.
+
+0:25:40.919,0:25:45.880
+Yo precisamente
+
+0:25:43.240,0:25:49.200
+una de las cosas que quise hacer en los
+
+0:25:45.880,0:25:52.399
+últimos videos que publicaba en mi canal
+
+0:25:49.200,0:25:54.159
+relacionados a Microfonce es tratar de
+
+0:25:52.399,0:25:57.039
+postrarte esto de una forma muy
+
+0:25:54.159,0:25:59.440
+introductoria y hacerte ver de que tal
+
+0:25:57.039,0:26:03.000
+vez no es tan complicado como puedes
+
+0:25:59.440,0:26:04.679
+llegar a pensar. Entonces son como que
+
+0:26:03.000,0:26:06.039
+introducciones supercortas, no duran ni
+
+0:26:04.679,0:26:09.080
+10 minutos, en las cuales se llega a
+
+0:26:06.039,0:26:10.600
+implementar todo de forma superrápida.
+
+0:26:09.080,0:26:12.679
+Y claro, no nos vamos a engañar, ¿no?
+
+0:26:10.600,0:26:14.840
+Por detrás del del schematic que se
+
+0:26:12.679,0:26:16.720
+encarga de hacer toda la configuración y
+
+0:26:14.840,0:26:18.559
+todo eso. Hay toda una complejidad
+
+0:26:16.720,0:26:20.559
+bastante fuerte.
+
+0:26:18.559,0:26:23.080
+E
+
+0:26:20.559,0:26:25.600
+pero eso no tiene que ser como que tal
+
+0:26:23.080,0:26:28.240
+un stop para que no tratemos de de
+
+0:26:25.600,0:26:29.640
+implementar este tipo de cosas.
+
+0:26:28.240,0:26:31.480
+Exacto. Y si yo pudiera también
+
+0:26:29.640,0:26:35.399
+colaborar con un consejo, sería que no
+
+0:26:31.480,0:26:39.120
+se dejen confundir con la naturaleza del
+
+0:26:35.399,0:26:40.679
+término. Que diga micro como mismo con
+
+0:26:39.120,0:26:43.120
+lo de los microservicios, no quiere
+
+0:26:40.679,0:26:44.799
+decir que sea algo pequeñito. Realmente
+
+0:26:43.120,0:26:47.320
+este término que se acuñó, creo que fue
+
+0:26:44.799,0:26:51.279
+como en el año 2016 o 2017, si mal no
+
+0:26:47.320,0:26:54.720
+recuerdo, vino a llegar a ser popular en
+
+0:26:51.279,0:26:57.360
+todo el ecosistema este de Fronend.
+
+0:26:54.720,0:27:01.000
+Cuando uno piensa en microfonen de esa
+
+0:26:57.360,0:27:05.120
+manera un tanto errónea, termina
+
+0:27:01.000,0:27:08.440
+ocasionando un desmadre de microfone
+
+0:27:05.120,0:27:10.120
+conviviendo a la misma vez en un shell,
+
+0:27:08.440,0:27:11.960
+en una aplicación que los hospeda a
+
+0:27:10.120,0:27:13.640
+todos y eso puede causar
+
+0:27:11.960,0:27:15.840
+independientemente que utilices la misma
+
+0:27:13.640,0:27:18.120
+versión de Angular, que utilices todos
+
+0:27:15.840,0:27:19.600
+los mismos principios, el los mismos
+
+0:27:18.120,0:27:21.919
+niveles de configuración, incluso aunque
+
+0:27:19.600,0:27:25.760
+estén en un mismo monorrepositorio,
+
+0:27:21.919,0:27:27.640
+añade un overhead. ser una carga extra a
+
+0:27:25.760,0:27:30.559
+la hora de procesar todo eso del lado
+
+0:27:27.640,0:27:33.279
+del navegador. Por lo tanto,
+
+0:27:30.559,0:27:36.480
+ver los microfons, como hayamos visto
+
+0:27:33.279,0:27:37.960
+principios, no como verticales y no como
+
+0:27:36.480,0:27:39.320
+pequeñas piezas que pueden ser
+
+0:27:37.960,0:27:41.960
+solucionadas con componentes
+
+0:27:39.320,0:27:43.880
+reutilizables, parte de recursos
+
+0:27:41.960,0:27:44.840
+compartidos, una biblioteca de Angular,
+
+0:27:43.880,0:27:46.919
+etcétera.
+
+0:27:44.840,0:27:50.120
+Sí, sí, sí, estoy totalmente de acuerdo
+
+0:27:46.919,0:27:51.440
+con eso, ¿no? Este es muy importante lo
+
+0:27:50.120,0:27:53.000
+que mencionas, el tema de mantener
+
+0:27:51.440,0:27:54.679
+siempre
+
+0:27:53.000,0:27:56.000
+cuando me hacías la pregunta, ¿no? Este,
+
+0:27:54.679,0:27:57.880
+¿qué tan grande tiene que ser un
+
+0:27:56.000,0:28:00.120
+proyecto para poder empezar a utilizar
+
+0:27:57.880,0:28:02.640
+Microfrontance? Mencionaba justamente
+
+0:28:00.120,0:28:05.240
+esto, ¿no? Que no es tanto el tema del
+
+0:28:02.640,0:28:07.360
+proyecto, sino el tema de de la
+
+0:28:05.240,0:28:10.320
+complejidad de las verticales o de los
+
+0:28:07.360,0:28:13.279
+dominios. Y en este caso sí tenemos que
+
+0:28:10.320,0:28:15.200
+hablar ya de dominios que valga la pena
+
+0:28:13.279,0:28:17.120
+que que haya un equipo no específico,
+
+0:28:15.200,0:28:20.240
+tal vez trabajando en ellos y
+
+0:28:17.120,0:28:22.679
+efectivamente no convertir todo en un
+
+0:28:20.240,0:28:24.399
+microfront. En muchos escenarios va a
+
+0:28:22.679,0:28:27.720
+bastar con tener quizá una librería
+
+0:28:24.399,0:28:30.159
+compartida o soluciones de este estilo.
+
+0:28:27.720,0:28:32.640
+Exacto. Y bueno, antes de concluir
+
+0:28:30.159,0:28:34.200
+entonces el episodio, ¿hay algo que no
+
+0:28:32.640,0:28:36.039
+hayamos mencionado durante la
+
+0:28:34.200,0:28:37.480
+conversación sobre lo que quisiera
+
+0:28:36.039,0:28:38.960
+comentar?
+
+0:28:37.480,0:28:40.519
+Así que se me venga rápido ahorita la
+
+0:28:38.960,0:28:43.240
+mente.
+
+0:28:40.519,0:28:45.000
+Hay otra cuestión, ¿no?, de la que al
+
+0:28:43.240,0:28:47.080
+menos yo he escuchado bastante
+
+0:28:45.000,0:28:49.240
+relacionada con el tema microfon y es
+
+0:28:47.080,0:28:50.960
+que quizá es solamente una impresión
+
+0:28:49.240,0:28:52.799
+mía, pero he llegado a escuchar el hecho
+
+0:28:50.960,0:28:56.039
+de que es como que una arquitectura
+
+0:28:52.799,0:28:58.440
+demasiado compleja que no se debería
+
+0:28:56.039,0:29:00.880
+incluso utilizar.
+
+0:28:58.440,0:29:02.399
+Y creo yo que lo relevante es siempre
+
+0:29:00.880,0:29:04.000
+poder
+
+0:29:02.399,0:29:05.640
+darte cuenta cuál es cuál es el
+
+0:29:04.000,0:29:08.360
+escenario en el que te encuentras, ¿no?
+
+0:29:05.640,0:29:10.640
+Y hay como que ciertos casos de uso bajo
+
+0:29:08.360,0:29:13.640
+los cuales sí sería tal vez una opción
+
+0:29:10.640,0:29:15.840
+buena utilizar esta arquitectura, ¿no?
+
+0:29:13.640,0:29:18.279
+Ya mencionábamos, ¿no? El tema de
+
+0:29:15.840,0:29:21.320
+diferentes proyectos que se quieren que
+
+0:29:18.279,0:29:23.720
+cuestionar, el hecho de tener diferentes
+
+0:29:21.320,0:29:25.840
+equipos de trabajo, el hecho de tener
+
+0:29:23.720,0:29:27.840
+despliegues independientes,
+
+0:29:25.840,0:29:29.960
+todo ese tipo de cosas. Eh, ya debería
+
+0:29:27.840,0:29:32.559
+ser un indicativo de que probablemente
+
+0:29:29.960,0:29:36.360
+esta es la solución adecuada.
+
+0:29:32.559,0:29:38.399
+Así mismo. Y Mauricio, sigo ahí atento a
+
+0:29:36.360,0:29:41.679
+los videos que estás publicando en tu
+
+0:29:38.399,0:29:43.279
+canal de KB Mauri. Así que muchísimas
+
+0:29:41.679,0:29:45.320
+gracias por haber estado por acá
+
+0:29:43.279,0:29:48.200
+conversando con nosotros sobre este tema
+
+0:29:45.320,0:29:50.519
+de microfronce y espero que el 2026 nos
+
+0:29:48.200,0:29:51.760
+traiga nuevas estrategias técnicas
+
+0:29:50.519,0:29:53.200
+relacionadas con este patrón
+
+0:29:51.760,0:29:54.720
+arquitectónico.
+
+0:29:53.200,0:29:57.880
+Muchas gracias, Alejandro, muchas
+
+0:29:54.720,0:29:59.600
+gracias por por la invitación. Y
+
+0:29:57.880,0:30:01.240
+realmente espero que podamos llegar a
+
+0:29:59.600,0:30:02.640
+coincidir ya no solamente de esta forma,
+
+0:30:01.240,0:30:05.320
+¿no?, sino que eventualmente pueda ser
+
+0:30:02.640,0:30:09.440
+igual en persona. Y gracias,
+
+0:30:05.320,0:30:11.159
+definitivamente. Chao, hasta luego.
+
+0:30:09.440,0:30:12.840
+Gracias por escuchar este podcast y
+
+0:30:11.159,0:30:15.519
+espero que te sean útiles los temas
+
+0:30:12.840,0:30:17.159
+abordados durante el episodio. Si aún no
+
+0:30:15.519,0:30:18.799
+te has suscrito, te invito a hacerlo
+
+0:30:17.159,0:30:20.799
+para no perderte ninguno de los futuros
+
+0:30:18.799,0:30:22.840
+tópicos relacionados con frontend,
+
+0:30:20.799,0:30:24.919
+interfaces gráficas, arquitectura de
+
+0:30:22.840,0:30:27.180
+software y desarrollo web a través de
+
+0:30:24.919,0:30:30.599
+Angular.
+
+0:30:27.180,0:30:30.599
+[Música]
+

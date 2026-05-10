@@ -40,16 +40,15 @@ The project provides a unified CLI tool: `angularidades`. If you haven't linked 
 4. Use the generated `script.md` to conduct the interview via teleprompter.
 
 ### 2. Publishing Phase (Post-recording)
-0. **Scaffolding:** Create the episode structure and metadata:
+1. **Scaffolding:** Create the episode structure and metadata. It will automatically fetch captions from YouTube:
    ```bash
    angularidades new
    ```
-1. **Diagnostics:** Run the Doctor check to ensure all metadata and credentials are ready:
+2. **Diagnostics:** Run the Doctor check to ensure all metadata and credentials are ready:
    ```bash
    angularidades doctor
    ```
-2. **Recording Input:** The script automatically fetches the recorded transcripts and captions from YouTube and places them inside the `episodes/<episode-number>/1_recording/` folder for the agent.
-3. **Generation:** Run the Publisher agent pointing to `.agents/publisher/system_prompt.md`. The agent reads from `0_planner/` and `1_recording/` and places all generated files (titles, descriptions, LinkedIn posts, and corrected transcripts) into the `2_publisher/` folder.
+3. **AI Processing:** Instruct the `@publisher` AI Agent (your AI Assistant) to process the episode using the planner script and YouTube captions as inputs. The agent will place all generated files (titles, descriptions, LinkedIn posts, and corrected transcripts) into the `2_publisher/` folder.
 4. **Verification:** Run a dry-run to verify the payload that will be sent to YouTube:
    ```bash
    angularidades dry-run
@@ -59,7 +58,6 @@ The project provides a unified CLI tool: `angularidades`. If you haven't linked 
    angularidades publish
    ```
    *Note: If no episode is provided, the CLI will present an interactive selection menu.*
-
 
 ## YouTube Authentication Setup
 
