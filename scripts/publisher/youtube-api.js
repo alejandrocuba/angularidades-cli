@@ -82,28 +82,64 @@ async function downloadExistingCaptions(youtube, videoId, episodeDir, isDoctor, 
 }
 
 async function uploadCaptions(youtube, videoId, transcripts) {
+  let existingCaptions = [];
+  try {
+    const response = await youtube.captions.list({
+      part: 'snippet',
+      videoId: videoId
+    });
+    existingCaptions = response.data.items || [];
+  } catch (error) {
+    console.warn(`  ${colors.yellow}⚠${colors.reset} Could not fetch existing captions for overriding. Proceeding with insert. (${error.message})`);
+  }
+
   for (const lang of transcripts) {
     if (lang.exists) {
       console.log(`${colors.cyan}↳${colors.reset} Uploading transcript for ${lang.name}...`);
       const transcript = fs.readFileSync(lang.path, 'utf8');
       
+      const existingTrack = existingCaptions.find(
+        c => c.snippet.language === lang.code && c.snippet.name === lang.name
+      );
+      
       try {
-        await youtube.captions.insert({
-          part: 'snippet',
-          requestBody: {
-            snippet: {
-              videoId: videoId,
-              language: lang.code,
-              name: lang.name,
-              isDraft: false
+        if (existingTrack) {
+          console.log(`  ${colors.cyan}↳${colors.reset} Overriding existing track: ${existingTrack.id}`);
+          await youtube.captions.update({
+            part: 'snippet',
+            requestBody: {
+              id: existingTrack.id,
+              snippet: {
+                videoId: videoId,
+                language: lang.code,
+                name: lang.name,
+                isDraft: false
+              }
+            },
+            media: {
+              mimeType: 'text/plain',
+              body: transcript
             }
-          },
-          media: {
-            mimeType: 'text/plain',
-            body: transcript
-          }
-        });
-        console.log(`  ${colors.green}✔${colors.reset} Successfully uploaded ${lang.name} transcript.`);
+          });
+          console.log(`  ${colors.green}✔${colors.reset} Successfully overridden ${lang.name} transcript.`);
+        } else {
+          await youtube.captions.insert({
+            part: 'snippet',
+            requestBody: {
+              snippet: {
+                videoId: videoId,
+                language: lang.code,
+                name: lang.name,
+                isDraft: false
+              }
+            },
+            media: {
+              mimeType: 'text/plain',
+              body: transcript
+            }
+          });
+          console.log(`  ${colors.green}✔${colors.reset} Successfully uploaded ${lang.name} transcript.`);
+        }
       } catch (error) {
         if (error.message.includes('duplicate')) {
           console.warn(`  ${colors.yellow}⚠${colors.reset} A ${lang.name} caption track already exists. Skipping.`);
