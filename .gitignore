@@ -1,6 +1,7 @@
 # Dependencies
 node_modules/
 .pnpm-debug.log*
+.pnpm-workspace-state-v1.json
 
 # Environment
 .env
