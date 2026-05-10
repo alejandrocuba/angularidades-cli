@@ -1,0 +1,26 @@
+{
+  "name": "angularidades-ops",
+  "version": "1.0.0",
+  "description": "Automated generation of summaries, chapters, and posts for the Angularidades podcast.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandrocuba/angularidades-ops.git"
+  },
+  "keywords": [
+    "angular",
+    "podcast",
+    "ai",
+    "automation"
+  ],
+  "author": "Alejandro Cuba Ruiz",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alejandrocuba/angularidades-ops/issues"
+  },
+  "homepage": "https://github.com/alejandrocuba/angularidades-ops#readme"
+}

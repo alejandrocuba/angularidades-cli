@@ -1,0 +1,32 @@
+name: Sync YouTube Video
+
+on:
+  workflow_dispatch:
+    inputs:
+      episode_dir:
+        description: 'Path to the episode directory (e.g., episodes/ep_001)'
+        required: true
+        type: string
+
+jobs:
+  update-youtube:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run YouTube Sync Script
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          node scripts/update-youtube.js "${{ github.event.inputs.episode_dir }}"
