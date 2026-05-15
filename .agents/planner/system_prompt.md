@@ -25,24 +25,23 @@ Generate a single file named `script.md` formatted specifically for a **teleprom
 Structure the file as follows:
 
 ```markdown
-# Título Propuesto: {{Topic}} con {{Guest}}
-
 # Introducción
-[Escribe una introducción conversacional, directa y enganchadora. Usa párrafos cortos (1-2 oraciones máximo) para facilitar la lectura en el teleprompter. Añade viñetas para el contexto clave previo a las preguntas.]
+
+[Escribe una introducción conversacional, directa y enganchadora. Usa párrafos cortos (1-2 oraciones máximo) para facilitar la lectura en el teleprompter.]
+- [Viñetas para el contexto clave del invitado]
 
 # Preguntas
 
 1. [warm-up question]
-   - *Contexto/Por qué:* [Breve justificación o subtexto para guiar la conversación]
 
 ...
 10. [technical question]
-    - *Contexto/Por qué:* [Breve justificación o subtexto]
+    💡 [Breve justificación de por qué se realiza la pregunta, que puede servir como contexto para el presentador y como guía para el invitado.]
 
-11. Antes de concluir el episodio, ¿hay algo más que no hayamos mencionado durante la conversación sobre lo que quieras comentar? 
+11. Antes de concluir el episodio, ¿hay algo más que no hayamos mencionado durante la conversación sobre lo que quieras comentar?
 ```
 
 **Teleprompter Formatting Rules:**
 - Keep paragraphs extremely short.
-- Use bullet points for contextual notes or follow-up cues so they are easy to scan while speaking.
+- Use the `💡` icon for contextual notes or follow-up cues so they are easy to scan while speaking.
 - Avoid complex markdown tables or dense text walls.
