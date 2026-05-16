@@ -9,6 +9,23 @@ async function resolveConfig() {
   const isDryRun = args.includes('--dry-run');
   const isDoctor = args.includes('--doctor');
 
+  const episodesDir = path.join(__dirname, '../../episodes');
+  
+  if (!fs.existsSync(episodesDir)) {
+    p.log.error('Episodes directory not found.');
+    process.exit(1);
+  }
+
+  const episodeFolders = fs.readdirSync(episodesDir)
+    .filter(f => fs.lstatSync(path.join(episodesDir, f)).isDirectory() && /^\d+$/.test(f))
+    .sort((a, b) => parseInt(b) - parseInt(a)); // Newest first
+
+  if (episodeFolders.length === 0) {
+    p.log.error('No episodes found in the episodes directory.');
+    process.exit(1);
+  }
+
+  const latestEpisode = episodeFolders[0];
   let episodeInput = args.find(arg => !arg.startsWith('--') && !arg.startsWith('-'));
 
   const episodeIndex = args.findIndex(arg => arg === '--episode' || arg === '-e');
@@ -18,22 +35,6 @@ async function resolveConfig() {
 
   // If no episode provided, show a state-of-the-art selection menu
   if (!episodeInput) {
-    const episodesDir = path.join(__dirname, '../../episodes');
-    
-    if (!fs.existsSync(episodesDir)) {
-      p.log.error('Episodes directory not found.');
-      process.exit(1);
-    }
-
-    const episodeFolders = fs.readdirSync(episodesDir)
-      .filter(f => fs.lstatSync(path.join(episodesDir, f)).isDirectory() && /^\d+$/.test(f))
-      .sort((a, b) => parseInt(b) - parseInt(a)); // Newest first
-
-    if (episodeFolders.length === 0) {
-      p.log.error('No episodes found in the episodes directory.');
-      process.exit(1);
-    }
-
     const selected = await p.select({
       message: 'Select an episode to publish:',
       options: episodeFolders.map(folder => {
@@ -57,6 +58,20 @@ async function resolveConfig() {
 
   const episodeNumber = episodeInput.toString().padStart(4, '0');
   const episodeDir = path.join(__dirname, '../../episodes', episodeNumber);
+
+  // Protection layer for previous episodes
+  if (parseInt(episodeNumber) < parseInt(latestEpisode) && !isDryRun && !isDoctor) {
+    p.log.warn(`${colors.yellow}Warning: You are about to modify an older episode.${colors.reset}`);
+    const confirm = await p.confirm({
+      message: `Episode ${episodeNumber} is NOT the latest one (Latest is ${latestEpisode}). Continue?`,
+      initialValue: false
+    });
+
+    if (p.isCancel(confirm) || !confirm) {
+      p.cancel('Operation aborted to protect previous episode.');
+      process.exit(0);
+    }
+  }
 
   return {
     isDryRun,

@@ -10,7 +10,7 @@ Analog es un meta-framework basado en Angular que busca mejorar la experiencia d
 
 # Preguntas
 
-1. Ice breaker: recuerdas ****cuando fue la primera que escuchaste hablar de Analog? Que fue lo que te hizo contribuir con el proyecto?
+1. Ice breaker: recuerdas cuando fue la primera vez que escuchaste hablar de Analog? Que fue lo que te hizo contribuir con el proyecto?
 
 2. El equipo de Angular ha estabilizado el nuevo build system basado en esbuild + Vite y las capacidades de SSR en el CLI. Desde una perspectiva de producto y arquitectura, ¿cuál es el problema fundamental que Analog resuelve hoy que Angular por sí solo no puede (o es técnicamente costoso) abordar?
    💡 Define la propuesta de valor única de Analog, ayudando a decidir cuándo un proyecto necesita dar el salto a un meta-framework.
