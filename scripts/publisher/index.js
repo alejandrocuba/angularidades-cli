@@ -71,7 +71,7 @@ async function main() {
       return;
     }
 
-    snippet.defaultLanguage = snippet.defaultLanguage || 'es';
+    snippet.defaultLanguage = 'es';
     snippet.title = titleEs || snippet.title;
     snippet.description = descriptionEs || snippet.description;
     snippet.tags = tags;
