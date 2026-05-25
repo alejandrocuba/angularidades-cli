@@ -19,7 +19,7 @@ async function main() {
   const config = await resolveConfig();
   const { episodeDir, credentials } = config;
 
-  const { metadata, videoId, titleEs, titleEn, descriptionEs, descriptionEn, tags } = getEpisodeData(episodeDir, logDoctor, isDoctor);
+  const { metadata, videoId, titleEs, titleEn, descriptionEs, descriptionEn, tags } = await getEpisodeData(episodeDir, logDoctor, isDoctor);
 
   const hasFullAuth = credentials.CLIENT_ID && credentials.CLIENT_SECRET && credentials.REFRESH_TOKEN;
 
@@ -116,8 +116,29 @@ async function main() {
     console.log(`\n${colors.bold}✨ Publishing complete.${colors.reset}\n`);
 
   } catch (error) {
-    if (isDoctor) logDoctor(false, `YouTube API check failed: ${error.message}`);
-    else console.error('Error updating YouTube video:', error.message);
+    if (isDoctor) {
+      logDoctor(false, `YouTube API check failed: ${error.message}`);
+      if (error.message.includes('invalid_grant')) {
+        const p = require('@clack/prompts');
+        const confirmAuth = await p.confirm({
+          message: 'YouTube API check failed. It might be an authentication issue. Would you like to run the auth helper to retrieve a new token?',
+          initialValue: true
+        });
+
+        if (confirmAuth && !p.isCancel(confirmAuth)) {
+          const { spawnSync } = require('child_process');
+          const path = require('path');
+          const authHelperPath = path.join(__dirname, '../auth-helper.js');
+          console.log('');
+          spawnSync('node', [authHelperPath], { stdio: 'inherit' });
+        } else {
+          p.cancel(`Operation cancelled. Please run the auth helper script later to retrieve a new token:\n   ${colors.cyan}${colors.bold}node scripts/auth-helper.js${colors.reset}`);
+          process.exit(1);
+        }
+      }
+    } else {
+      console.error('Error updating YouTube video:', error.message);
+    }
     process.exit(1);
   }
 }

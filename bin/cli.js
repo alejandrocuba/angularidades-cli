@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const { spawn } = require('child_process');
 const path = require('path');
+const fs = require('fs');
 const p = require('@clack/prompts');
 const { colors } = require('../scripts/publisher/logger');
 
@@ -40,6 +41,38 @@ async function main() {
     } else {
       p.outro(`Usage: ${colors.cyan}angularidades <command> [options]${colors.reset}`);
       process.exit(0);
+    }
+  }
+
+  const episodesDir = path.join(__dirname, '../episodes');
+
+  const getEpisodeNumberFromArgs = (argsList) => {
+    let episodeInput = argsList.find(arg => !arg.startsWith('--') && !arg.startsWith('-') && /^\d+$/.test(arg));
+    const episodeIndex = argsList.findIndex(arg => arg === '--episode' || arg === '-e');
+    if (episodeIndex !== -1 && argsList[episodeIndex + 1] && /^\d+$/.test(argsList[episodeIndex + 1])) {
+      episodeInput = argsList[episodeIndex + 1];
+    }
+    return episodeInput ? episodeInput.toString().padStart(4, '0') : null;
+  };
+
+  const episodeNumber = getEpisodeNumberFromArgs(args);
+  if (episodeNumber) {
+    const episodeDir = path.join(episodesDir, episodeNumber);
+    if (!fs.existsSync(episodeDir)) {
+      p.intro(`${colors.cyan}${colors.bold}Angularidades CLI${colors.reset}`);
+      p.log.warn(`Episode ${episodeNumber} does not exist.`);
+      const confirmCreate = await p.confirm({
+        message: `Would you like to start the creation flow for Episode ${episodeNumber}?`,
+        initialValue: true
+      });
+
+      if (p.isCancel(confirmCreate) || !confirmCreate) {
+        p.cancel('Operation cancelled.');
+        process.exit(0);
+      }
+
+      await require('../scripts/publisher/scaffold').scaffoldEpisode(episodeNumber);
+      return;
     }
   }
 
