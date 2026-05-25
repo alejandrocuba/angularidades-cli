@@ -24,18 +24,18 @@ async function main() {
 
   const authUrl = oauth2Client.generateAuthUrl({
     access_type: 'offline',
+    response_type: 'code',
     scope: SCOPES,
     prompt: 'consent' // Forces receiving a refresh token
   });
 
-  p.note(
-    `1. Visit this URL in your browser to authorize the app:\n\n` +
-    `${colors.cyan}${authUrl}${colors.reset}\n\n` +
-    `2. Log in with the Google account that manages the YouTube channel.\n` +
-    `3. You will be redirected to a page that fails to load (localhost).\n` +
-    `4. Copy the "code" query parameter value from the browser's address bar.`,
-    'Authorization Instructions'
-  );
+  console.log(`\n${colors.bold}── Authorization Instructions ──────────────────────────────────────────────${colors.reset}`);
+  console.log(`\n1. Open the following URL in your browser (copy the full line):\n`);
+  console.log(`${colors.cyan}${authUrl}${colors.reset}\n`);
+  console.log(`2. Log in with the Google account that manages the YouTube channel.`);
+  console.log(`3. You will be redirected to a page that fails to load (localhost).`);
+  console.log(`4. Copy the "code" query parameter value from the browser's address bar.\n`);
+  console.log(`${colors.bold}───────────────────────────────────────────────────────────────────────────${colors.reset}\n`);
 
   const code = await p.text({
     message: 'Enter the code from the URL query string "code" after login:',
@@ -57,9 +57,8 @@ async function main() {
     const { tokens } = await oauth2Client.getToken(code.trim());
     s.stop('Tokens retrieved successfully!');
 
-    p.note(
-      `${colors.green}${colors.bold}${tokens.refresh_token}${colors.reset}`,
-      'YOUR REFRESH TOKEN'
+    p.console(
+      `Your refresh Token: ${tokens.refresh_token}`
     );
 
     p.outro(
