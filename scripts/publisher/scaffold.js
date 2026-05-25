@@ -17,7 +17,7 @@ p.S_BAR = green('│');
 p.S_BAR_START = green('┌');
 p.S_BAR_END = green('└');
 
-async function scaffoldEpisode() {
+async function scaffoldEpisode(predefinedEpisodeNumber) {
   printHeader('Angularidades: Create New Episode Scaffolding');
 
   const episodesDir = path.join(__dirname, '../../episodes');
@@ -29,38 +29,43 @@ async function scaffoldEpisode() {
   const lastEpisode = folders.length > 0 ? folders[folders.length - 1] : 0;
   const nextEpisodeProposed = (lastEpisode + 1).toString().padStart(4, '0');
 
-  const episodeNumberInput = await p.text({
-    message: 'Enter the episode number:',
-    placeholder: nextEpisodeProposed.replace(/^0+/, ''),
-    initialValue: nextEpisodeProposed.replace(/^0+/, ''),
-    validate(value) {
-      if (!/^\d+$/.test(value)) return 'Please enter a valid number.';
-      const num = parseInt(value);
-      const paddedValue = value.toString().padStart(4, '0');
-      if (folders.includes(num)) return `Episode ${paddedValue} already exists.`;
-      if (num <= lastEpisode) return `Episode ${paddedValue} is lower than the latest episode (${lastEpisode.toString().padStart(4, '0')}). Going back is not allowed.`;
-    }
-  });
+  let episodeNumber;
 
-  if (p.isCancel(episodeNumberInput)) {
-    p.cancel('Operation cancelled.');
-    process.exit(0);
-  }
-
-  // Normalize and pad
-  const num = parseInt(episodeNumberInput);
-  const episodeNumber = num.toString().padStart(4, '0');
-
-  // Gap validation
-  if (num > lastEpisode + 1) {
-    const confirmGap = await p.confirm({
-      message: `${colors.yellow}⚠ Warning: Episode ${num} creates a gap (Last episode was ${lastEpisode}). Is this intentional?${colors.reset}`,
-      initialValue: false
+  if (predefinedEpisodeNumber) {
+    episodeNumber = predefinedEpisodeNumber.toString().padStart(4, '0');
+  } else {
+    const episodeNumberInput = await p.text({
+      message: 'Enter the episode number:',
+      placeholder: nextEpisodeProposed.replace(/^0+/, ''),
+      initialValue: nextEpisodeProposed.replace(/^0+/, ''),
+      validate(value) {
+        if (!/^\d+$/.test(value)) return 'Please enter a valid number.';
+        const num = parseInt(value);
+        const paddedValue = value.toString().padStart(4, '0');
+        if (folders.includes(num)) return `Episode ${paddedValue} already exists.`;
+        if (num <= lastEpisode) return `Episode ${paddedValue} is lower than the latest episode (${lastEpisode.toString().padStart(4, '0')}). Going back is not allowed.`;
+      }
     });
 
-    if (!confirmGap || p.isCancel(confirmGap)) {
-      p.cancel('Operation cancelled. Please use the next sequential number.');
+    if (p.isCancel(episodeNumberInput)) {
+      p.cancel('Operation cancelled.');
       process.exit(0);
+    }
+
+    const num = parseInt(episodeNumberInput);
+    episodeNumber = num.toString().padStart(4, '0');
+
+    // Gap validation
+    if (num > lastEpisode + 1) {
+      const confirmGap = await p.confirm({
+        message: `${colors.yellow}⚠ Warning: Episode ${num} creates a gap (Last episode was ${lastEpisode}). Is this intentional?${colors.reset}`,
+        initialValue: false
+      });
+
+      if (!confirmGap || p.isCancel(confirmGap)) {
+        p.cancel('Operation cancelled. Please use the next sequential number.');
+        process.exit(0);
+      }
     }
   }
 

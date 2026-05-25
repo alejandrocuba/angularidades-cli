@@ -1,47 +1,77 @@
 const { google } = require('googleapis');
-const readline = require('readline');
-
-// Instructions:
-// 1. Create a .env file with YOUTUBE_CLIENT_ID and YOUTUBE_CLIENT_SECRET
-// 2. Run: node scripts/auth-helper.js
+const p = require('@clack/prompts');
+const { colors } = require('./publisher/logger');
 require('dotenv').config();
 
-const CLIENT_ID = process.env.YOUTUBE_CLIENT_ID;
-const CLIENT_SECRET = process.env.YOUTUBE_CLIENT_SECRET;
+async function main() {
+  p.intro(`${colors.cyan}${colors.bold}Angularidades: YouTube Auth Helper${colors.reset}`);
 
-if (!CLIENT_ID || !CLIENT_SECRET) {
-  console.error('Error: Please provide YOUTUBE_CLIENT_ID and YOUTUBE_CLIENT_SECRET in your .env file first.');
-  process.exit(1);
+  const CLIENT_ID = process.env.YOUTUBE_CLIENT_ID;
+  const CLIENT_SECRET = process.env.YOUTUBE_CLIENT_SECRET;
+
+  if (!CLIENT_ID || !CLIENT_SECRET) {
+    p.log.error(`Please provide ${colors.bold}YOUTUBE_CLIENT_ID${colors.reset} and ${colors.bold}YOUTUBE_CLIENT_SECRET${colors.reset} in your .env file first.`);
+    process.exit(1);
+  }
+
+  const oauth2Client = new google.auth.OAuth2(
+    CLIENT_ID,
+    CLIENT_SECRET,
+    'http://localhost' // Use a dummy redirect for desktop apps
+  );
+
+  const SCOPES = ['https://www.googleapis.com/auth/youtube.force-ssl'];
+
+  const authUrl = oauth2Client.generateAuthUrl({
+    access_type: 'offline',
+    response_type: 'code',
+    scope: SCOPES,
+    prompt: 'consent' // Forces receiving a refresh token
+  });
+
+  console.log(`\n${colors.bold}── Authorization Instructions ──────────────────────────────────────────────${colors.reset}`);
+  console.log(`\n1. Open the following URL in your browser (copy the full line):\n`);
+  console.log(`${colors.cyan}${authUrl}${colors.reset}\n`);
+  console.log(`2. Log in with the Google account that manages the YouTube channel.`);
+  console.log(`3. You will be redirected to a page that fails to load (localhost).`);
+  console.log(`4. Copy the "code" query parameter value from the browser's address bar.\n`);
+  console.log(`${colors.bold}───────────────────────────────────────────────────────────────────────────${colors.reset}\n`);
+
+  const code = await p.text({
+    message: 'Enter the code from the URL query string "code" after login:',
+    placeholder: 'e.g. 4/0AeoWu...',
+    validate(value) {
+      if (!value || !value.trim()) return 'Authorization code is required.';
+    }
+  });
+
+  if (p.isCancel(code)) {
+    p.cancel('Operation cancelled.');
+    process.exit(0);
+  }
+
+  const s = p.spinner();
+  s.start('Exchanging code for tokens...');
+
+  try {
+    const { tokens } = await oauth2Client.getToken(code.trim());
+    s.stop('Tokens retrieved successfully!');
+
+    p.console(
+      `Your refresh Token: ${tokens.refresh_token}`
+    );
+
+    p.outro(
+      `Add this to your ${colors.bold}.env${colors.reset} file and GitHub Secrets as ${colors.bold}YOUTUBE_REFRESH_TOKEN${colors.reset}`
+    );
+  } catch (error) {
+    s.stop('Failed to retrieve token.');
+    p.log.error(`Error exchanging code: ${error.message}`);
+    process.exit(1);
+  }
 }
 
-const oauth2Client = new google.auth.OAuth2(
-  CLIENT_ID,
-  CLIENT_SECRET,
-  'http://localhost' // Use a dummy redirect for desktop apps
-);
-
-const SCOPES = ['https://www.googleapis.com/auth/youtube.force-ssl'];
-
-const authUrl = oauth2Client.generateAuthUrl({
-  access_type: 'offline',
-  scope: SCOPES,
-  prompt: 'consent' // Forces receiving a refresh token
-});
-
-console.log('1. Authorize this app by visiting this url:', authUrl);
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-rl.question('2. Enter the code from that page here: ', (code) => {
-  rl.close();
-  oauth2Client.getToken(code, (err, token) => {
-    if (err) return console.error('Error retrieving access token', err);
-    console.log('\n--- YOUR REFRESH TOKEN ---');
-    console.log(token.refresh_token);
-    console.log('---------------------------\n');
-    console.log('Add this to your .env and GitHub Secrets as YOUTUBE_REFRESH_TOKEN');
-  });
+main().catch((err) => {
+  p.log.error(`Unexpected error: ${err.message}`);
+  process.exit(1);
 });

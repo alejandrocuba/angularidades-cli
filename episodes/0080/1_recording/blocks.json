@@ -1,0 +1,2017 @@
+[
+  {
+    "index": 0,
+    "timestamp": "0:00:07.080,0:00:12.120",
+    "text": "Luis, Analog es un metaframework basado en Angular, que entre varias cosas busca"
+  },
+  {
+    "index": 1,
+    "timestamp": "0:00:12.120,0:00:18.600",
+    "text": "mejorar la experiencia de desarrollo agregando una capa de convenciones, de herramientas para"
+  },
+  {
+    "index": 2,
+    "timestamp": "0:00:18.600,0:00:23.760",
+    "text": "la creación de aplicaciones web con técnicas de rendarizado híbrido, tanto del lado de cliente"
+  },
+  {
+    "index": 3,
+    "timestamp": "0:00:23.760,0:00:30.960",
+    "text": "como de servidor. Y de eso vamos a estar hablando hoy. Pero antes de ello me gustaría poder tener"
+  },
+  {
+    "index": 4,
+    "timestamp": "0:00:30.960,0:00:37.160",
+    "text": "la oportunidad de presentarte a quienes aún no te conozcan y por supuesto agradecerte por estar acá"
+  },
+  {
+    "index": 5,
+    "timestamp": "0:00:37.160,0:00:43.240",
+    "text": "en este espacio y contribuir con nosotros con el conocimiento tuyo acerca de este metaframework."
+  },
+  {
+    "index": 6,
+    "timestamp": "0:00:43.240,0:00:49.400",
+    "text": "No, te agradezco por la invitación. Gracias. Sí, eres originalmente de Mérida, de Yucatán."
+  },
+  {
+    "index": 7,
+    "timestamp": "0:00:49.400,0:00:55.760",
+    "text": "Actualmente resides un poquito más al norte en Tampa, Florida. Eres graduado en mecatrónica."
+  },
+  {
+    "index": 8,
+    "timestamp": "0:00:55.760,0:01:02.000",
+    "text": "Tienes más de una década de experiencia profesional en liderazgo técnico, ingeniería"
+  },
+  {
+    "index": 9,
+    "timestamp": "0:01:02.000,0:01:11.640",
+    "text": "La frontend y eres uno de los contribuidores del core team de analog framework de Angular."
+  },
+  {
+    "index": 10,
+    "timestamp": "0:01:11.640,0:01:18.040",
+    "text": "Entonces, ¿recuerdas acerca de cuándo fue la primera vez que escuchaste hablar de analog?"
+  },
+  {
+    "index": 11,
+    "timestamp": "0:01:19.800,0:01:27.080",
+    "text": "Yo inicio, pues digamos la la búsqueda de contribuir en algo, eh lo que viene siendo"
+  },
+  {
+    "index": 12,
+    "timestamp": "0:01:27.080,0:01:33.080",
+    "text": "open source, pues por curiosidad de pues nunca haberlo hecho antes. Eh ahí sí que hice pequeña"
+  },
+  {
+    "index": 13,
+    "timestamp": "0:01:33.080,0:01:39.480",
+    "text": "contribución a una pequeña librería de toast, creo que se llama NG Toast o algo así. hice una"
+  },
+  {
+    "index": 14,
+    "timestamp": "0:01:39.480,0:01:45.960",
+    "text": "pequeña contribución ahí y ahí inicié así como que el camino de empezar a hacer pues esa contribución"
+  },
+  {
+    "index": 15,
+    "timestamp": "0:01:45.960,0:01:51.280",
+    "text": "más amplia, ¿no? Entonces eso como que me dio el valor como para tratar de de hacer una"
+  },
+  {
+    "index": 16,
+    "timestamp": "0:01:51.280,0:01:56.560",
+    "text": "contribución en Angular como tal en el framework. E hice una pequeña ahí sí que Matthew, creo que"
+  },
+  {
+    "index": 17,
+    "timestamp": "0:01:56.560,0:02:03.080",
+    "text": "Matthew se llama, el este chavo de Francia, no recuerdo muy bien su nombre, Matthew. Él me ayudó"
+  },
+  {
+    "index": 18,
+    "timestamp": "0:02:03.080,0:02:07.520",
+    "text": "a a hacer una pequeña contribución en Angular. Era algo bastante simple. creo que era una corrección"
+  },
+  {
+    "index": 19,
+    "timestamp": "0:02:07.520,0:02:15.640",
+    "text": "de de un type en un en un type en Typescript, pero ahí sí que solamente el instalar localmente todas"
+  },
+  {
+    "index": 20,
+    "timestamp": "0:02:15.640,0:02:20.520",
+    "text": "las herramientas para tratar de contribuir en el framework, pues me dieron demasiada curiosidad,"
+  },
+  {
+    "index": 21,
+    "timestamp": "0:02:20.520,0:02:27.640",
+    "text": "¿no? Entonces, entre esa interacción en Twitter y y en otras redes sociales, pues eh ya ves que el"
+  },
+  {
+    "index": 22,
+    "timestamp": "0:02:27.640,0:02:33.600",
+    "text": "algoritmo empieza a sugerirte gente y empiezas a a ver más cosas que comparte la gente que"
+  },
+  {
+    "index": 23,
+    "timestamp": "0:02:33.600,0:02:38.600",
+    "text": "está en ese círculo. Ahí es donde encuentro por primera vez algo que compartió Brandon, que era"
+  },
+  {
+    "index": 24,
+    "timestamp": "0:02:38.600,0:02:45.960",
+    "text": "creo que un video donde proponía unas convenciones para full stack en esa etapa en el tiempo, ¿no?,"
+  },
+  {
+    "index": 25,
+    "timestamp": "0:02:45.960,0:02:53.000",
+    "text": "que existía creo que Angular Universal para SSR, pero no era como que muy bien visto en"
+  },
+  {
+    "index": 26,
+    "timestamp": "0:02:53.000,0:02:58.320",
+    "text": "ese entonces, hasta donde recuerdo, ¿no? Pues a partir de ahí, pues yo lo sigo en Twitter y pues"
+  },
+  {
+    "index": 27,
+    "timestamp": "0:02:58.320,0:03:04.880",
+    "text": "empiezo a ver pues que que las contribuciones que anda haciendo. que él era core member de NGRX y"
+  },
+  {
+    "index": 28,
+    "timestamp": "0:03:04.880,0:03:11.760",
+    "text": "pues anuncia analog como tal y me da bastante curiosidad porque pues en ese entonces daba la"
+  },
+  {
+    "index": 29,
+    "timestamp": "0:03:11.760,0:03:17.080",
+    "text": "casualidad que yo estaba aprendiendo un poco más de React y obviamente al aprender React pues te"
+  },
+  {
+    "index": 30,
+    "timestamp": "0:03:17.080,0:03:24.440",
+    "text": "empapas de todo lo que es next pues un framework de full stack como tal, ¿no? Entonces obviamente"
+  },
+  {
+    "index": 31,
+    "timestamp": "0:03:24.440,0:03:30.280",
+    "text": "al verlo yo buscaba algo similar en Angular y pues no no existía, ¿no? Entonces ahí es donde"
+  },
+  {
+    "index": 32,
+    "timestamp": "0:03:30.280,0:03:37.000",
+    "text": "yo creo que entra el puente y empiezo a tratar de colaborar primero con un poco de documentación."
+  },
+  {
+    "index": 33,
+    "timestamp": "0:03:37.000,0:03:47.080",
+    "text": "Luego yo creo que mi primera colaboración real fue para Marktown, para eh Analog maneja eh las rutas"
+  },
+  {
+    "index": 34,
+    "timestamp": "0:03:47.080,0:03:54.320",
+    "text": "de contenido como activas, o sea, si tú metes un archivo markdown eh como parte de tus ficheros,"
+  },
+  {
+    "index": 35,
+    "timestamp": "0:03:54.320,0:03:58.960",
+    "text": "lo reconoce el router y automáticamente te lo presenta como contenido, ¿no? Entonces, para"
+  },
+  {
+    "index": 36,
+    "timestamp": "0:03:58.960,0:04:05.760",
+    "text": "que eso funcione, se utilizaba una librería en ese entonces, creo que era Mark J, si no me equivoco,"
+  },
+  {
+    "index": 37,
+    "timestamp": "0:04:05.760,0:04:11.800",
+    "text": "estábamos en ese proceso en el que todas las librerías estaban migrándose hacia providers y"
+  },
+  {
+    "index": 38,
+    "timestamp": "0:04:11.800,0:04:18.360",
+    "text": "todo lo que conlleva migrar de de los NG modules a a la parte de standalone, ¿no? Entonces,"
+  },
+  {
+    "index": 39,
+    "timestamp": "0:04:18.360,0:04:24.600",
+    "text": "eso le hacía falta, había que hacerla un poco más abierta como para aceptar otras librerías, no solo"
+  },
+  {
+    "index": 40,
+    "timestamp": "0:04:24.600,0:04:29.040",
+    "text": "Mark JS. Entonces esa fue como que mi primera contribución. Ahí sí que entramos al código,"
+  },
+  {
+    "index": 41,
+    "timestamp": "0:04:29.040,0:04:36.680",
+    "text": "no lo conocíamos demasiado bien, era un código bastante grande. O sea, yo pensé, o sea, digo,"
+  },
+  {
+    "index": 42,
+    "timestamp": "0:04:36.680,0:04:44.880",
+    "text": "es es lógico tal vez que algo que se construye arriba o encima de algo que pues es gigante,"
+  },
+  {
+    "index": 43,
+    "timestamp": "0:04:44.880,0:04:49.480",
+    "text": "pues va a tener su nivel de complejidad, ¿no? Pero entonces ahí fuimos aprendiendo un poco"
+  },
+  {
+    "index": 44,
+    "timestamp": "0:04:49.480,0:04:56.200",
+    "text": "y fue ahí donde tuve ya mi primera interacción real con Brandon y con el MetaFramework como tal,"
+  },
+  {
+    "index": 45,
+    "timestamp": "0:04:56.200,0:05:01.680",
+    "text": "platicando con él. Eh, yo ya sabes, pidiéndole feedback, oye, ¿está bien el API así? Eh, si está"
+  },
+  {
+    "index": 46,
+    "timestamp": "0:05:01.680,0:05:07.960",
+    "text": "bien, si se exponen estos tipos o si se expone eh el API así como este y pues al final pues ya"
+  },
+  {
+    "index": 47,
+    "timestamp": "0:05:07.960,0:05:15.720",
+    "text": "se introdujo el primer PR y desde ahí empecé a colaborar. Tal vez no en gigantesca medida,"
+  },
+  {
+    "index": 48,
+    "timestamp": "0:05:15.720,0:05:22.040",
+    "text": "pero más bien empecé con la documentación, con la traducción, un poquito como si fuera así como un"
+  },
+  {
+    "index": 49,
+    "timestamp": "0:05:22.040,0:05:28.360",
+    "text": "developer advocate porque pues empecé a construir algunos ejemplos, pues los ejemplos de analog, no"
+  },
+  {
+    "index": 50,
+    "timestamp": "0:05:28.360,0:05:32.800",
+    "text": "sé si has visto la página y la documentación, pero son ejemplos bastantes de la misma época hispana,"
+  },
+  {
+    "index": 51,
+    "timestamp": "0:05:32.800,0:05:37.480",
+    "text": "es decir, Andrés Villanueva estaba desarrollando toda la infraestructura en docusaurus para poder"
+  },
+  {
+    "index": 52,
+    "timestamp": "0:05:37.480,0:05:43.880",
+    "text": "documentar los múltiples idiomas. Exactamente. Y hoy en día hay un git de efecto abierto para"
+  },
+  {
+    "index": 53,
+    "timestamp": "0:05:43.880,0:05:49.760",
+    "text": "migrar toda esa documentación de Docos a Astro. Parte de lo que tenía Analog como proyecto era que"
+  },
+  {
+    "index": 54,
+    "timestamp": "0:05:49.760,0:05:56.040",
+    "text": "ahora te permitía utilizar Angular o componentes de Angular dentro de del ecosistema de Astro."
+  },
+  {
+    "index": 55,
+    "timestamp": "0:05:56.040,0:06:00.800",
+    "text": "Entonces, eso como que fue una de las primeras cosas, creo llamó la atención de la comunidad."
+  },
+  {
+    "index": 56,
+    "timestamp": "0:06:00.800,0:06:07.800",
+    "text": "es como que empezó a tener cierto momentum lo como tal, porque personas que pues estaban bastante"
+  },
+  {
+    "index": 57,
+    "timestamp": "0:06:07.800,0:06:13.080",
+    "text": "ligadas a la comunidad empezaron a abrir los ojos acerca de lo que aportaba, sobre todo que puede"
+  },
+  {
+    "index": 58,
+    "timestamp": "0:06:13.080,0:06:20.680",
+    "text": "ser es un ecosistema que es integralmente hecho en en Vit y pues todos sabemos lo rápido que es."
+  },
+  {
+    "index": 59,
+    "timestamp": "0:06:20.680,0:06:25.960",
+    "text": "Incluso ahora, creo que ahora mismo estaba yo leyendo, acaban de, no sé si liberar o ya es"
+  },
+  {
+    "index": 60,
+    "timestamp": "0:06:25.960,0:06:33.800",
+    "text": "versión 1.0, eh, creo, ¿cómo se llama el el es roll up? El roll up, el roll down. Ah, confunde"
+  },
+  {
+    "index": 61,
+    "timestamp": "0:06:33.800,0:06:39.520",
+    "text": "un poquito si no lo usas como como first part y lo tienes a través de dependencias transitivas"
+  },
+  {
+    "index": 62,
+    "timestamp": "0:06:39.520,0:06:43.800",
+    "text": "de alguno de los framework que uno utilice. Sí. Y pues estaba yo viendo que ya como que se liberó la"
+  },
+  {
+    "index": 63,
+    "timestamp": "0:06:43.800,0:06:51.640",
+    "text": "versión 1.0 y pues eso pues Analog en las últimas versiones, al menos hasta donde recuerdo da 2.5 si"
+  },
+  {
+    "index": 64,
+    "timestamp": "0:06:51.640,0:06:57.920",
+    "text": "no me equivoco, que es de las últimas, ya estaba preparado para para la versión. Entonces, eso"
+  },
+  {
+    "index": 65,
+    "timestamp": "0:06:57.920,0:07:05.400",
+    "text": "conjuntado con lo ya veloz que es para hacer tu bundle, pues tenemos algo así, algo casi mágico,"
+  },
+  {
+    "index": 66,
+    "timestamp": "0:07:05.400,0:07:11.960",
+    "text": "diría yo, y que no se experimenta hasta que hasta que tienes un proyecto realmente grande"
+  },
+  {
+    "index": 67,
+    "timestamp": "0:07:11.960,0:07:20.400",
+    "text": "donde tratas de hacer pruebas y digamos que tienes un bondativo, pues los tiempos de carga,"
+  },
+  {
+    "index": 68,
+    "timestamp": "0:07:20.400,0:07:30.240",
+    "text": "los tiempos de compilación son mucho menores. Pero sí, básicamente así empieza como que mi digamos mi"
+  },
+  {
+    "index": 69,
+    "timestamp": "0:07:30.240,0:07:38.400",
+    "text": "interacción con todo el equipo. Empiezo a pues checar si hay algún proyecto que utilice analog"
+  },
+  {
+    "index": 70,
+    "timestamp": "0:07:38.400,0:07:44.600",
+    "text": "en ese entonces había otro proyecto que estaba a la par, que creo que sigue, es el Spartan."
+  },
+  {
+    "index": 71,
+    "timestamp": "0:07:44.600,0:07:53.240",
+    "text": "No estoy al 100% familiarizado con con el proyecto como tal, pero sé que utiliza eh analog como base"
+  },
+  {
+    "index": 72,
+    "timestamp": "0:07:53.240,0:07:59.520",
+    "text": "también para Sí, hace un par de años leí el artículo ese inicial que sentó las bases de que"
+  },
+  {
+    "index": 73,
+    "timestamp": "0:07:59.520,0:08:06.720",
+    "text": "iba toda la metodología esta de Spartime y tener a Analog ahí básicamente le abrió puertas que no"
+  },
+  {
+    "index": 74,
+    "timestamp": "0:08:06.720,0:08:11.800",
+    "text": "existían en aquel momento para un framework que estaba en una etapa incipiente. que muchas gracias"
+  },
+  {
+    "index": 75,
+    "timestamp": "0:08:11.800,0:08:18.640",
+    "text": "por compartir esa historia. Y por cierto, hoy en día como desarrollador de analog y contribuidor al"
+  },
+  {
+    "index": 76,
+    "timestamp": "0:08:18.640,0:08:25.360",
+    "text": "framework también, ¿cómo es que normalmente haces para responder a la típica pregunta"
+  },
+  {
+    "index": 77,
+    "timestamp": "0:08:25.360,0:08:33.880",
+    "text": "que tiene alguien que desarrolle en Angular acerca de cómo decidir cuál de los frameworks"
+  },
+  {
+    "index": 78,
+    "timestamp": "0:08:33.880,0:08:40.680",
+    "text": "utilizar en primer nivel? Es decir, ¿cuál es el problema fundamental que Analo resuelve hoy?"
+  },
+  {
+    "index": 79,
+    "timestamp": "0:08:40.680,0:08:49.880",
+    "text": "que Angula por sí solo le es muy difícil abordar de una manera sencilla. Bueno, en su momento y"
+  },
+  {
+    "index": 80,
+    "timestamp": "0:08:49.880,0:08:55.000",
+    "text": "estamos hablando de cuando inicia te resolvían un poco más de problemas de lo que se resuelve ahora,"
+  },
+  {
+    "index": 81,
+    "timestamp": "0:08:55.000,0:09:01.040",
+    "text": "pero todavía hay mucho hay mucha validez en lo que Analga aporta, un poco más de facilidad para"
+  },
+  {
+    "index": 82,
+    "timestamp": "0:09:01.040,0:09:07.200",
+    "text": "crear aplicaciones desde desde cero. Es un poco lo que hizo que se adopte, yo creo, NextJs en"
+  },
+  {
+    "index": 83,
+    "timestamp": "0:09:07.200,0:09:13.640",
+    "text": "muchas empresas. es una facilidad para simplemente crear cosas full stack al final del día dependerá,"
+  },
+  {
+    "index": 84,
+    "timestamp": "0:09:13.640,0:09:18.200",
+    "text": "obviamente, como todo, depende de las necesidades de de tu aplicación, qué requerimientos tengas,"
+  },
+  {
+    "index": 85,
+    "timestamp": "0:09:18.200,0:09:23.880",
+    "text": "pero pues como tal yo creo es una solución como que un poco más completa para construir"
+  },
+  {
+    "index": 86,
+    "timestamp": "0:09:23.880,0:09:30.480",
+    "text": "aplicaciones Fullstack y más que nada si son basadas en contenido. vez que te comentaba,"
+  },
+  {
+    "index": 87,
+    "timestamp": "0:09:30.480,0:09:37.200",
+    "text": "nunca me había escrito un blog jamás. digo, tal vez en la época cuando empezaba en esto"
+  },
+  {
+    "index": 88,
+    "timestamp": "0:09:37.200,0:09:42.560",
+    "text": "del internet y habría como que Metroflog y todas esas cosas, tal vez ahí llegué a intentar hacer"
+  },
+  {
+    "index": 89,
+    "timestamp": "0:09:42.560,0:09:48.400",
+    "text": "así un blog medio incipiente, pero realmente eh para escribir fue mi primer proyecto donde dije,"
+  },
+  {
+    "index": 90,
+    "timestamp": "0:09:48.400,0:09:53.480",
+    "text": "\"Okay, entonces vamos a experimentar un poco con analog como tal para ver las"
+  },
+  {
+    "index": 91,
+    "timestamp": "0:09:53.480,0:09:59.800",
+    "text": "diferencias principales entre cómo lo haría yo con Angular, cómo lo haría yo con analog.\" Entonces,"
+  },
+  {
+    "index": 92,
+    "timestamp": "0:09:59.800,0:10:06.520",
+    "text": "la primera cosa que salta a la vista es que su orientación a no orientación porque no podíamos"
+  },
+  {
+    "index": 93,
+    "timestamp": "0:10:06.520,0:10:12.600",
+    "text": "decir que es orientado a eso, pero el hecho de que tiene una facilidad para generar contenido"
+  },
+  {
+    "index": 94,
+    "timestamp": "0:10:12.600,0:10:19.760",
+    "text": "que Angular no tiene como característica, si tú tienes un markdown y lo pones en tus ficheros,"
+  },
+  {
+    "index": 95,
+    "timestamp": "0:10:19.760,0:10:25.200",
+    "text": "Analog lo va a presentar. Pues una de las principales cosas que en Angular pues no"
+  },
+  {
+    "index": 96,
+    "timestamp": "0:10:25.200,0:10:29.720",
+    "text": "se le facilita tanto a la persona que que lo toca por primera vez, sobre todo que hay mucha"
+  },
+  {
+    "index": 97,
+    "timestamp": "0:10:29.720,0:10:35.640",
+    "text": "gente que tal vez pase de reactan de de back end, hay conceptos que no se facilitan tanto,"
+  },
+  {
+    "index": 98,
+    "timestamp": "0:10:35.640,0:10:43.120",
+    "text": "¿no? Como pues no sé, la inyección de dependencias o el change detection, pero uno de los que veo"
+  },
+  {
+    "index": 99,
+    "timestamp": "0:10:43.120,0:10:50.240",
+    "text": "que más sufre la gente para entender de primera mano es el routing o el rutador."
+  },
+  {
+    "index": 100,
+    "timestamp": "0:10:50.240,0:10:57.240",
+    "text": "Totalmente. Y este sistema de enrutamiento basado en rutas del sistema de ficheros es genial. Y uno,"
+  },
+  {
+    "index": 101,
+    "timestamp": "0:10:57.240,0:11:03.920",
+    "text": "¿cuántas líneas de código, cuánto trabajo o cuánta cantidad de tokens uno tenía tendría que quemar y"
+  },
+  {
+    "index": 102,
+    "timestamp": "0:11:03.920,0:11:08.480",
+    "text": "de incrementar el boiler plate, de incrementar el bundle size y no hacerlo de una forma que"
+  },
+  {
+    "index": 103,
+    "timestamp": "0:11:08.480,0:11:14.040",
+    "text": "está bastante estandarizada, digamos ya en el metaframework de analog. Si uno lo hace desde"
+  },
+  {
+    "index": 104,
+    "timestamp": "0:11:14.040,0:11:20.000",
+    "text": "cero en Angular para este tipo de sistema que estás escribiendo, que sea un sitio de un carácter"
+  },
+  {
+    "index": 105,
+    "timestamp": "0:11:20.000,0:11:29.200",
+    "text": "digamos estático, que se nutra los beneficios que tiene el SSG, si el static side generation para no"
+  },
+  {
+    "index": 106,
+    "timestamp": "0:11:29.200,0:11:33.080",
+    "text": "tener que sobrecargar la parte del cliente y tener que estar solucionando con Java,"
+  },
+  {
+    "index": 107,
+    "timestamp": "0:11:33.080,0:11:38.440",
+    "text": "creas que en el servidor se pueden solucionar de antemano y además promover muchas mejores"
+  },
+  {
+    "index": 108,
+    "timestamp": "0:11:38.440,0:11:45.360",
+    "text": "prácticas en cuanto a la observabilidad Y el procesamiento del lado de motores de búsqueda,"
+  },
+  {
+    "index": 109,
+    "timestamp": "0:11:45.360,0:11:53.720",
+    "text": "básicamente analog, es un no brainer, como se dice en inglés. Es correcto. Y pues ahí sí que"
+  },
+  {
+    "index": 110,
+    "timestamp": "0:11:53.720,0:11:59.760",
+    "text": "al al construir mi blog pues fui aprendiendo un poquito más eh de cómo funcionaba eh bajo el agua,"
+  },
+  {
+    "index": 111,
+    "timestamp": "0:11:59.760,0:12:06.960",
+    "text": "porque pues eh obviamente te da cierta curiosidad porque tú ves el sistema de archivos que tú solo"
+  },
+  {
+    "index": 112,
+    "timestamp": "0:12:06.960,0:12:14.160",
+    "text": "colocas cierto archivo de cierto tipo con ciertas sintaxis en cierto directorio y solo"
+  },
+  {
+    "index": 113,
+    "timestamp": "0:12:14.160,0:12:20.120",
+    "text": "funciona. Entonces esa magia siempre quise o al menos de inicio quería yo saber cómo funcionaba,"
+  },
+  {
+    "index": 114,
+    "timestamp": "0:12:20.120,0:12:25.720",
+    "text": "¿no? Y es un código tremendamente complicado y ahí sí que demasiado mérito para Brandon porque"
+  },
+  {
+    "index": 115,
+    "timestamp": "0:12:25.720,0:12:33.760",
+    "text": "pues construir algo así en una época donde tal vez solo existía copilot para sugerirte cosas"
+  },
+  {
+    "index": 116,
+    "timestamp": "0:12:33.760,0:12:40.280",
+    "text": "es un como tú bien dices, ¿no? no brainer, es definitivamente es es código que considero arte"
+  },
+  {
+    "index": 117,
+    "timestamp": "0:12:40.280,0:12:48.120",
+    "text": "y pues simplemente eh funciona de manera pues básica, pues sabemos que es un metaframework,"
+  },
+  {
+    "index": 118,
+    "timestamp": "0:12:48.120,0:12:52.680",
+    "text": "que básicamente es un framework construido encima de otro framework, ¿no? Entonces,"
+  },
+  {
+    "index": 119,
+    "timestamp": "0:12:52.680,0:12:57.600",
+    "text": "lo que hace es simplemente checar tus ficheros dependiendo de dónde los pongas. hay ciertas"
+  },
+  {
+    "index": 120,
+    "timestamp": "0:12:57.600,0:13:03.680",
+    "text": "convenciones que que están en la documentación y dependiendo de esas convenciones te crea la ruta"
+  },
+  {
+    "index": 121,
+    "timestamp": "0:13:03.680,0:13:09.240",
+    "text": "exactamente como Angular lo haría. O sea, al final del día, si necesitas tú hacer algún ajuste manual"
+  },
+  {
+    "index": 122,
+    "timestamp": "0:13:09.240,0:13:15.400",
+    "text": "o hacer un una inclusive no eres fan pues del del enrutamiento por archivos que mucha gente no es no"
+  },
+  {
+    "index": 123,
+    "timestamp": "0:13:15.400,0:13:21.960",
+    "text": "es fan, pues simplemente puedes seguir utilizando el el enrutamiento de de Angular pues natural sin"
+  },
+  {
+    "index": 124,
+    "timestamp": "0:13:21.960,0:13:28.480",
+    "text": "necesidad de que dejes de usar otras cosas que analog pues provee como pues el soporte para"
+  },
+  {
+    "index": 125,
+    "timestamp": "0:13:28.480,0:13:33.440",
+    "text": "nitro para pues hacer tus deployment en cualquier en cualquier lugar que podemos platicar acerca"
+  },
+  {
+    "index": 126,
+    "timestamp": "0:13:33.440,0:13:40.120",
+    "text": "de eso. Exacto. Pues básicamente es una de las cosas que sentí más facilidad para construir algo"
+  },
+  {
+    "index": 127,
+    "timestamp": "0:13:40.120,0:13:47.680",
+    "text": "tan simple. Entonces yo diría que para mí sería una lección bastante simple, analog para blogs,"
+  },
+  {
+    "index": 128,
+    "timestamp": "0:13:47.680,0:13:55.960",
+    "text": "para cosas que sean ricas en contenido. ¿Por qué? Porque pues es muchísimo más fácil que utilizar eh"
+  },
+  {
+    "index": 129,
+    "timestamp": "0:13:55.960,0:14:03.880",
+    "text": "Angular como framework normal. Y eso que Angular ha mejorado muchísimo ahorita los cambios en la"
+  },
+  {
+    "index": 130,
+    "timestamp": "0:14:03.880,0:14:09.960",
+    "text": "API en general en Angular han hecho que el la curva de aprendizaje sea muchísimo menor"
+  },
+  {
+    "index": 131,
+    "timestamp": "0:14:09.960,0:14:18.440",
+    "text": "a mi parecer, pero aún eh el hecho de que sea un framework tan opinionado o eh pues simplemente tan"
+  },
+  {
+    "index": 132,
+    "timestamp": "0:14:18.440,0:14:25.040",
+    "text": "rígido como tal, que pero ha cambiado bastante en las últimas versiones, digamos, las últimas"
+  },
+  {
+    "index": 133,
+    "timestamp": "0:14:25.040,0:14:31.800",
+    "text": "cinco o seis versiones se han desacoplado de herramientas que tu proyecto dependía de ellas."
+  },
+  {
+    "index": 134,
+    "timestamp": "0:14:31.800,0:14:36.960",
+    "text": "Muchas de la gente que colabora con Analog es también parte de la comunidad de Angular."
+  },
+  {
+    "index": 135,
+    "timestamp": "0:14:36.960,0:14:41.920",
+    "text": "Entonces es difícil no pensar que en cierta forma varias de las convenciones que Analog"
+  },
+  {
+    "index": 136,
+    "timestamp": "0:14:41.920,0:14:49.280",
+    "text": "introdujo como parte de su ecosistema ayudaron a a definir o a dar luz verde a ciertos temas"
+  },
+  {
+    "index": 137,
+    "timestamp": "0:14:49.280,0:14:54.720",
+    "text": "dentro del framework de Angular que tal vez no se habían tocado como debía, pero vieron que sí había"
+  },
+  {
+    "index": 138,
+    "timestamp": "0:14:54.720,0:15:02.320",
+    "text": "un momentum porque analog lo estaba teniendo en algún punto y pues quiero pensar que se decidió"
+  },
+  {
+    "index": 139,
+    "timestamp": "0:15:02.320,0:15:07.680",
+    "text": "por ese tipo de situaciones. Por ejemplo, una de las cosas que que vi casi de manera inmediata,"
+  },
+  {
+    "index": 140,
+    "timestamp": "0:15:07.680,0:15:13.360",
+    "text": "aunque yo creo que era inevitable, ¿no? Pero pues ayudó bastante a que el equipo de Angular,"
+  },
+  {
+    "index": 141,
+    "timestamp": "0:15:13.360,0:15:20.760",
+    "text": "yo creo, decidiera implementar pues su propia versión de de su integración con Bit, porque pues"
+  },
+  {
+    "index": 142,
+    "timestamp": "0:15:20.760,0:15:27.160",
+    "text": "para empezar hubo una clara demostración de que funcionaba. Obviamente no estoy pues tan metido en"
+  },
+  {
+    "index": 143,
+    "timestamp": "0:15:27.160,0:15:32.600",
+    "text": "en cómo funcionan las decisiones en el framework ni mucho menos. no es una comunidad este bastante"
+  },
+  {
+    "index": 144,
+    "timestamp": "0:15:32.600,0:15:40.560",
+    "text": "amplia, pero al menos quiero pensar que en en su momento eso generó preguntas de la comunidad,"
+  },
+  {
+    "index": 145,
+    "timestamp": "0:15:40.560,0:15:53.840",
+    "text": "generó este incluso recuerdo eh cuando eh ano chao y y Brandon eh generaron los NG files, no sé si no"
+  },
+  {
+    "index": 146,
+    "timestamp": "0:15:53.840,0:16:01.160",
+    "text": "sé si recuerdas que era punto y eso causó terminar logrando el tipo nomenclatura que fue simplificada"
+  },
+  {
+    "index": 147,
+    "timestamp": "0:16:01.160,0:16:08.720",
+    "text": "también gracias a todo el vanguardismo que estaba llevando a cabo. Mm, entonces varias cosas que que"
+  },
+  {
+    "index": 148,
+    "timestamp": "0:16:08.720,0:16:16.480",
+    "text": "yo creo están implementadas en el framework han ayudado a que como que al final nosotros como"
+  },
+  {
+    "index": 149,
+    "timestamp": "0:16:16.480,0:16:23.200",
+    "text": "proyecto Analog se nutre de Angular, entonces es normal que si hay algún nuevo feature o algo"
+  },
+  {
+    "index": 150,
+    "timestamp": "0:16:23.200,0:16:30.520",
+    "text": "nuevo en el framework, pues de manera natural funcione en analog porque se construye encima."
+  },
+  {
+    "index": 151,
+    "timestamp": "0:16:30.520,0:16:38.480",
+    "text": "Y al mismo tiempo hay algunos conceptos que pues se pueden experimentar fuera de lo rígido que"
+  },
+  {
+    "index": 152,
+    "timestamp": "0:16:38.480,0:16:45.000",
+    "text": "puede ser Angular en ciertos aspectos, ¿no? Un buen ejemplo viene siendo en diciembre cuando"
+  },
+  {
+    "index": 153,
+    "timestamp": "0:16:45.000,0:16:53.880",
+    "text": "Brandon introdujo los Angular Skills dentro del proyecto de analog y no pasaron ni dos meses,"
+  },
+  {
+    "index": 154,
+    "timestamp": "0:16:53.880,0:17:00.640",
+    "text": "creo que fue un mes, un mes y medio después. Mark Thomson, el Death Rail Lead del equipo de Angular,"
+  },
+  {
+    "index": 155,
+    "timestamp": "0:17:00.640,0:17:06.520",
+    "text": "estaba después de una serie de conversaciones que obviamente ocurrieron entre ambos proyectos,"
+  },
+  {
+    "index": 156,
+    "timestamp": "0:17:06.520,0:17:12.960",
+    "text": "estar introduciendo este mismo tipo de skills para apoyar todo el conocimiento y poder dar"
+  },
+  {
+    "index": 157,
+    "timestamp": "0:17:12.960,0:17:17.320",
+    "text": "las instrucciones necesarias y reducir toda la cantidad de token que normalmente nosotros"
+  },
+  {
+    "index": 158,
+    "timestamp": "0:17:17.320,0:17:24.360",
+    "text": "tendríamos que gastar. Y los Angular Skills pasaron a ser parte intrínseca directa del"
+  },
+  {
+    "index": 159,
+    "timestamp": "0:17:24.360,0:17:30.040",
+    "text": "proyecto oficial de Angular. Exactamente. Entonces es lo mismo, eh es lo que vemos o al menos es lo"
+  },
+  {
+    "index": 160,
+    "timestamp": "0:17:30.040,0:17:38.720",
+    "text": "que yo veo en cuanto a proyecto. Siento que hay cierta inspiración que tal vez pues por todos los"
+  },
+  {
+    "index": 161,
+    "timestamp": "0:17:38.720,0:17:44.880",
+    "text": "procesos que ocurren eh dentro de dentro de Google como compañía, dentro de Angular, como Framework,"
+  },
+  {
+    "index": 162,
+    "timestamp": "0:17:44.880,0:17:51.200",
+    "text": "tal vez no pueden acelerarse de una forma como la comunidad quisiera. Ya ves que, por ejemplo, una"
+  },
+  {
+    "index": 163,
+    "timestamp": "0:17:51.200,0:17:57.800",
+    "text": "de las cosas que más se piden es el los llamados eh selectorless, los componentes sin selector,"
+  },
+  {
+    "index": 164,
+    "timestamp": "0:17:57.800,0:18:04.000",
+    "text": "es una de las cosas que que que más he escuchado a lo largo de de estos años en en en el framework"
+  },
+  {
+    "index": 165,
+    "timestamp": "0:18:04.000,0:18:10.600",
+    "text": "como tal. Y pues Signal Forms fue cuando se introdujeron las señales, obviamente la la gente"
+  },
+  {
+    "index": 166,
+    "timestamp": "0:18:10.600,0:18:18.600",
+    "text": "dijo, \"Oye, ¿y las formas para cuándo?\" Y y al fin me parece que en Angular 22 vamos a ver la luz en"
+  },
+  {
+    "index": 167,
+    "timestamp": "0:18:18.600,0:18:23.680",
+    "text": "ese aspecto. A mí me encantan. Yo ya estoy listo para migrar todo lo que tenemos a a Signal Forms."
+  },
+  {
+    "index": 168,
+    "timestamp": "0:18:23.680,0:18:28.680",
+    "text": "Inclusive mi blog es una forma muy pequeñita de contacto, pero pues lo primero que hice cuando"
+  },
+  {
+    "index": 169,
+    "timestamp": "0:18:28.680,0:18:37.280",
+    "text": "salió ya la API eh pues estable, digamos, es migrarlo y ver la versión 22 va a ser estable"
+  },
+  {
+    "index": 170,
+    "timestamp": "0:18:37.280,0:18:42.440",
+    "text": "un montón de características y funcionalidades que tiene framework que actualmente están en"
+  },
+  {
+    "index": 171,
+    "timestamp": "0:18:42.440,0:18:49.040",
+    "text": "developer preview o incluso en etapa experimental. Y una de las que más han sido es la de Angularia,"
+  },
+  {
+    "index": 172,
+    "timestamp": "0:18:49.040,0:18:56.800",
+    "text": "que permite tener component headless que no tengan de manera opinionada, ¿no?, eh,"
+  },
+  {
+    "index": 173,
+    "timestamp": "0:18:56.800,0:19:06.160",
+    "text": "de manera rígida todo el flujo de HTML y de CCS que se ponía por encima de la capa de sistema de"
+  },
+  {
+    "index": 174,
+    "timestamp": "0:19:06.160,0:19:10.840",
+    "text": "diseño que uno estuviera introduciendo. Y esto es algo que posiblemente en el futuro también ambos"
+  },
+  {
+    "index": 175,
+    "timestamp": "0:19:10.840,0:19:17.400",
+    "text": "proyectos continúen nutriéndose. Es correcto. De hecho, una de las de las funcionalidades que,"
+  },
+  {
+    "index": 176,
+    "timestamp": "0:19:17.400,0:19:22.560",
+    "text": "si no me equivoco, se acaban de implementar en como tal es la internacionalización."
+  },
+  {
+    "index": 177,
+    "timestamp": "0:19:23.240,0:19:29.280",
+    "text": "Yo para mi blog en en de manera personal yo utilizo Transloco. Es una librería que hace"
+  },
+  {
+    "index": 178,
+    "timestamp": "0:19:29.280,0:19:36.240",
+    "text": "exactamente eso, pero después eh pues obviamente Brandon implementó lo que es la internalización"
+  },
+  {
+    "index": 179,
+    "timestamp": "0:19:36.240,0:19:41.960",
+    "text": "que ya viene de manera nativa en en Angular como tal y pues simplemente se hereda del framework y"
+  },
+  {
+    "index": 180,
+    "timestamp": "0:19:41.960,0:19:47.440",
+    "text": "pues ya se puede utilizar de manera nativa también en analog. Entonces, me es una de mis una de mis"
+  },
+  {
+    "index": 181,
+    "timestamp": "0:19:47.440,0:19:52.160",
+    "text": "asignaturas pendientes de esigrarlo para ver cómo la experiencia cambia y obviamente pues"
+  },
+  {
+    "index": 182,
+    "timestamp": "0:19:52.160,0:19:58.120",
+    "text": "dependiendo pues el el habrá que documentarlo, tal vez tal vez escriba algo acerca de eso porque"
+  },
+  {
+    "index": 183,
+    "timestamp": "0:19:58.120,0:20:04.440",
+    "text": "pues obviamente mi principal idea cuando empecé a hacer el blog era primero aprender, aprender sobre"
+  },
+  {
+    "index": 184,
+    "timestamp": "0:20:04.440,0:20:12.440",
+    "text": "el metaframework, cuáles eran sus diferencias, cómo manejaba el CEO, cómo pues manejaba SSR,"
+  },
+  {
+    "index": 185,
+    "timestamp": "0:20:12.440,0:20:18.760",
+    "text": "SSG, cómo cómo manejaba el contenido, todo eso, tratar de aprenderlo lo mejor posible,"
+  },
+  {
+    "index": 186,
+    "timestamp": "0:20:18.760,0:20:24.560",
+    "text": "pero al mismo tiempo pues quería yo contribuir un poco con la comunidad y pues ya ves, dar darme tal"
+  },
+  {
+    "index": 187,
+    "timestamp": "0:20:24.560,0:20:31.800",
+    "text": "vez a conocer o algo así. Claro. Entonces parte de eso es de estar al día igual con el proyecto,"
+  },
+  {
+    "index": 188,
+    "timestamp": "0:20:31.800,0:20:38.200",
+    "text": "que no siempre es fácil. Ahí sí que eh considero extraterrestres a los que le dan seguimiento a"
+  },
+  {
+    "index": 189,
+    "timestamp": "0:20:38.200,0:20:43.480",
+    "text": "sus propias librerías y las mantienen siempre al día porque es un trabajo estratosférico,"
+  },
+  {
+    "index": 190,
+    "timestamp": "0:20:43.480,0:20:49.480",
+    "text": "sobre todo teniendo un trabajo de full time. Entonces ahí sí que toda mi admiración para la"
+  },
+  {
+    "index": 191,
+    "timestamp": "0:20:49.480,0:20:53.520",
+    "text": "gente que que también dedica su tiempo al open source, que pues te abre muchísimas puertas."
+  },
+  {
+    "index": 192,
+    "timestamp": "0:20:54.120,0:21:02.280",
+    "text": "Totalmente. Y Luis, históricamente el backend en Angular ha sido manejado por una entidad externa,"
+  },
+  {
+    "index": 193,
+    "timestamp": "0:21:02.280,0:21:08.240",
+    "text": "pero analog integra, hablando de Nitro, lo integra, integra también el H3 directamente en"
+  },
+  {
+    "index": 194,
+    "timestamp": "0:21:08.240,0:21:16.280",
+    "text": "el flujo de trabajo con analog y a permitirnos definir API rout y middlewares en el servidor,"
+  },
+  {
+    "index": 195,
+    "timestamp": "0:21:16.280,0:21:24.960",
+    "text": "¿consideras que esto de cierta manera está empujando a la comunidad de analogula más genera?"
+  },
+  {
+    "index": 196,
+    "timestamp": "0:21:24.960,0:21:32.840",
+    "text": "Erica hacia el concepto de un full stack unificado. Ojalá. Yo creo ahí sí que en los"
+  },
+  {
+    "index": 197,
+    "timestamp": "0:21:32.840,0:21:37.200",
+    "text": "tiempos que vivimos, mientras más conocimiento, mejor, de hecho, no en los tiempos que vivimos,"
+  },
+  {
+    "index": 198,
+    "timestamp": "0:21:37.200,0:21:41.920",
+    "text": "ahí en general como como developers, como ingenieros, como como personas, mientras más"
+  },
+  {
+    "index": 199,
+    "timestamp": "0:21:41.920,0:21:51.280",
+    "text": "conocimiento, mejor. Entonces, yo creo que todo lo que Analog pone en la mesa, como pues como bien"
+  },
+  {
+    "index": 200,
+    "timestamp": "0:21:51.280,0:21:58.760",
+    "text": "mencionabas, el H3 nitro, las capacidades de nitro de que tú lo puedas eh desplegar casi cualquier"
+  },
+  {
+    "index": 201,
+    "timestamp": "0:21:58.760,0:22:04.960",
+    "text": "lado con solamente cambiarle ciertos parámetros es para mí un no brainer, como tú bien dijiste."
+  },
+  {
+    "index": 202,
+    "timestamp": "0:22:04.960,0:22:11.960",
+    "text": "En un principio, cuando yo quería desplegar mi blog, Brandon me dijo, \"Oye, trata con Netlify.\""
+  },
+  {
+    "index": 203,
+    "timestamp": "0:22:11.960,0:22:17.200",
+    "text": "Entonces traté, no me gustó tanto la interfaz, ya sabes, el el dashboard en el define no me"
+  },
+  {
+    "index": 204,
+    "timestamp": "0:22:17.200,0:22:23.480",
+    "text": "gustó por ciertas razones. Entonces, eh yo tenía un par de proyectos en React que con un par de"
+  },
+  {
+    "index": 205,
+    "timestamp": "0:22:23.480,0:22:30.200",
+    "text": "cursos que había yo tomado que pues recomendaban Versel. Entonces yo inventé Versel y para mí fue"
+  },
+  {
+    "index": 206,
+    "timestamp": "0:22:30.200,0:22:35.480",
+    "text": "increíble que pues simplemente yo cambiaba un parámetro y pues ya no había mucho más que hacer,"
+  },
+  {
+    "index": 207,
+    "timestamp": "0:22:35.480,0:22:41.040",
+    "text": "¿no? Entonces es una de las cosas. Eh, muchas veces cuando empezamos en la parte de frontend"
+  },
+  {
+    "index": 208,
+    "timestamp": "0:22:41.040,0:22:47.960",
+    "text": "o back end, pues a mucha gente se le dificulta la parte de infraestructura. Entonces, facilitar"
+  },
+  {
+    "index": 209,
+    "timestamp": "0:22:47.960,0:22:55.040",
+    "text": "esas abrir esas puertas es parte de lo que yo creo que trae a la mesa. Como bien mencionaste,"
+  },
+  {
+    "index": 210,
+    "timestamp": "0:22:55.040,0:23:03.160",
+    "text": "las rutas de servidor es es una cosa pues sencilla porque pues al final del día tú que quieres a"
+  },
+  {
+    "index": 211,
+    "timestamp": "0:23:03.160,0:23:10.920",
+    "text": "nivel de arquitectura eh se trata de que tengas tus cosas lo más cercanas posibles cuando son del"
+  },
+  {
+    "index": 212,
+    "timestamp": "0:23:10.920,0:23:18.120",
+    "text": "mismo dominio, ¿no? Entonces, pues en un framework que es básicamente full stack, pues hace sentido"
+  },
+  {
+    "index": 213,
+    "timestamp": "0:23:18.120,0:23:22.720",
+    "text": "tener tus rutas de servidor, pues donde vive tu página, que es la que va a consumir el contenido,"
+  },
+  {
+    "index": 214,
+    "timestamp": "0:23:22.720,0:23:30.200",
+    "text": "¿no? Entonces, la parte de nitro, pues como funciona como que en muy alto nivel,"
+  },
+  {
+    "index": 215,
+    "timestamp": "0:23:30.200,0:23:36.800",
+    "text": "hasta donde puedo recordar, es que pues Nitro lleva como que la batuta a nivel servidor,"
+  },
+  {
+    "index": 216,
+    "timestamp": "0:23:36.800,0:23:41.480",
+    "text": "que tiene como que una función, una función que se llama función load, eh que esa es la"
+  },
+  {
+    "index": 217,
+    "timestamp": "0:23:41.480,0:23:48.520",
+    "text": "que corre de inicio cuando pues se pide la página, luego se pide el fetch hacia pues lo que tengas"
+  },
+  {
+    "index": 218,
+    "timestamp": "0:23:48.520,0:23:56.600",
+    "text": "externamente, el API o lo que sea, o los datos se crea el HTML y sea hace el embebido de Claro,"
+  },
+  {
+    "index": 219,
+    "timestamp": "0:23:56.600,0:24:01.200",
+    "text": "el empaquetado como tal de que se va después a poder desplegar, es decir, con manejadores evento"
+  },
+  {
+    "index": 220,
+    "timestamp": "0:24:01.200,0:24:09.040",
+    "text": "de H3 que obviamente de manera transitiva utiliza analog y lo traduce a formato que espera cada"
+  },
+  {
+    "index": 221,
+    "timestamp": "0:24:09.040,0:24:15.960",
+    "text": "proveedor. Si detecta o tú le indicas en ficheros de configuración cuál es el entorno y traduce esos"
+  },
+  {
+    "index": 222,
+    "timestamp": "0:24:15.960,0:24:22.280",
+    "text": "manejadores de evento. Así que no importa si desplegas en Google Cloud R o en Firebase o en"
+  },
+  {
+    "index": 223,
+    "timestamp": "0:24:22.280,0:24:29.560",
+    "text": "AWS Landa o como hayas dicho en Netlif en Bersel o cualquier otro proveedor, Nitro está gestionando"
+  },
+  {
+    "index": 224,
+    "timestamp": "0:24:29.560,0:24:36.720",
+    "text": "de manera pasiva para uno la adaptación a R time automáticamente. Y y yo aún ando"
+  },
+  {
+    "index": 225,
+    "timestamp": "0:24:36.720,0:24:42.360",
+    "text": "aprendiendo eh la parte de nitro eh como tal, toda la parte de middleares, todo lo que mencionaste,"
+  },
+  {
+    "index": 226,
+    "timestamp": "0:24:42.360,0:24:49.200",
+    "text": "porque pues eh para mí es sorprendente que algo tan pequeño, tan tan agnóstico eh sea tan potente"
+  },
+  {
+    "index": 227,
+    "timestamp": "0:24:49.200,0:24:55.120",
+    "text": "en el sentido de que hace muchísimo. Entonces ahí sí que aún ando explorándolo porque tengo un par"
+  },
+  {
+    "index": 228,
+    "timestamp": "0:24:55.120,0:25:00.880",
+    "text": "de proyectos en la empresa donde trabajo donde voy a sugerir el framework como tal. Entonces,"
+  },
+  {
+    "index": 229,
+    "timestamp": "0:25:00.880,0:25:07.080",
+    "text": "obviamente para sugerir algo que es va a ser full stack a nivel ya empresarial, pues prefiero"
+  },
+  {
+    "index": 230,
+    "timestamp": "0:25:07.080,0:25:12.880",
+    "text": "pues tener como que las ideas más claras en el sentido más que nada del backend, porque"
+  },
+  {
+    "index": 231,
+    "timestamp": "0:25:12.880,0:25:17.720",
+    "text": "pues me especializo un poquito más en la parte del frontend, pero ahí sí que soy curioso por"
+  },
+  {
+    "index": 232,
+    "timestamp": "0:25:17.720,0:25:24.320",
+    "text": "naturaleza y trato de de de ver y aprender sobre todas las cosas que que rodean al al metaframework"
+  },
+  {
+    "index": 233,
+    "timestamp": "0:25:24.320,0:25:32.400",
+    "text": "como tal, ¿no? Aún andamos en eso, pero si siempre tratando de pues que la curiosidad nos mueva o si"
+  },
+  {
+    "index": 234,
+    "timestamp": "0:25:32.400,0:25:37.600",
+    "text": "no pues ahí sí que tenemos a a Brandon y a otros integrantes del equipo que les podemos preguntar,"
+  },
+  {
+    "index": 235,
+    "timestamp": "0:25:37.600,0:25:43.840",
+    "text": "oye, ¿para dónde va esto? No, sí, cuando estábamos coordinando lo del episodio, me mencionaste acerca"
+  },
+  {
+    "index": 236,
+    "timestamp": "0:25:43.840,0:25:51.000",
+    "text": "del entusiasmo que tenías con lo de Bit 8 sobre el piline de compilación, sí, que posiciona una"
+  },
+  {
+    "index": 237,
+    "timestamp": "0:25:51.000,0:25:56.320",
+    "text": "vez más a analog hacia la vanguardia de las herramientas de construcción moderna. Así que,"
+  },
+  {
+    "index": 238,
+    "timestamp": "0:25:56.320,0:26:01.480",
+    "text": "¿qué piensas acerca de los tiempos de construcción de proyecto en todos los beneficios nuevos que"
+  },
+  {
+    "index": 239,
+    "timestamp": "0:26:01.480,0:26:07.840",
+    "text": "trae la nueva versión de Bit? Se ve, para empezar, se ve increíble. Eh, no sé, tal vez mucha gente"
+  },
+  {
+    "index": 240,
+    "timestamp": "0:26:07.840,0:26:12.880",
+    "text": "no sepa o sí sepa dependiendo de qué tan informado estés en el en cuanto a cómo funciona el framework"
+  },
+  {
+    "index": 241,
+    "timestamp": "0:26:12.880,0:26:23.720",
+    "text": "o cómo manejan pues los bundlers y cómo Angular implementó su versión de bit es si no me equivoco"
+  },
+  {
+    "index": 242,
+    "timestamp": "0:26:23.720,0:26:30.200",
+    "text": "y y espero espero no equivocarme, pero Angular maneja una versión solamente de"
+  },
+  {
+    "index": 243,
+    "timestamp": "0:26:30.200,0:26:41.000",
+    "text": "servidor de development para bit diferente a como analog lo hace. analog lo hace para de y también"
+  },
+  {
+    "index": 244,
+    "timestamp": "0:26:41.000,0:26:46.440",
+    "text": "pueda nutrir del ecosistema de los plugins. Exactamente. De todos los plugins y y no sucede"
+  },
+  {
+    "index": 245,
+    "timestamp": "0:26:46.440,0:26:52.680",
+    "text": "lo mismo por cuestiones de limitaciones técnicas que tiene Angular al ser parte de Monoriple que"
+  },
+  {
+    "index": 246,
+    "timestamp": "0:26:52.680,0:26:58.520",
+    "text": "ellos mismos tienen allá dentro del ecosistema de Google. Exactamente. Y pues ese es el tipo de"
+  },
+  {
+    "index": 247,
+    "timestamp": "0:26:58.520,0:27:04.400",
+    "text": "situaciones que al ser un framework un poquito más rígido, pues puede ser que en un futuro,"
+  },
+  {
+    "index": 248,
+    "timestamp": "0:27:04.400,0:27:08.560",
+    "text": "dependiendo de qué tan abiertos estén para hacer ciertas refactorizaciones en"
+  },
+  {
+    "index": 249,
+    "timestamp": "0:27:08.560,0:27:14.280",
+    "text": "su código interno y en su arquitectura, pues a futuro es muy probable que lo implementen,"
+  },
+  {
+    "index": 250,
+    "timestamp": "0:27:14.280,0:27:19.560",
+    "text": "porque al final del día se está viendo claramente que la tendencia de los frameworks,"
+  },
+  {
+    "index": 251,
+    "timestamp": "0:27:19.560,0:27:28.520",
+    "text": "los major frameworks, al menos creo que eh view eh si no me equivoco, es reactivamente Nex más"
+  },
+  {
+    "index": 252,
+    "timestamp": "0:27:28.520,0:27:38.880",
+    "text": "que nada, yo creo Solid y hay hay creo que hay varios que o la mayoría ya utilizan Bamente"
+  },
+  {
+    "index": 253,
+    "timestamp": "0:27:38.880,0:27:46.160",
+    "text": "casi todos, excepto uno de ellos, no recuerdo cuál es cuál en específico, creo que es NextJs"
+  },
+  {
+    "index": 254,
+    "timestamp": "0:27:46.160,0:27:52.120",
+    "text": "que es el que no está utilizando Bit por debajo de la fachada, pero bueno, en su mayoría pues"
+  },
+  {
+    "index": 255,
+    "timestamp": "0:27:52.120,0:27:57.800",
+    "text": "están viendo pues el potencial y pues están tratando de implementar de una manera u otra,"
+  },
+  {
+    "index": 256,
+    "timestamp": "0:27:57.800,0:28:03.800",
+    "text": "¿no? O están teniendo pues sus versiones de algo similar, ¿no? Entonces, yo creo que hablábamos"
+  },
+  {
+    "index": 257,
+    "timestamp": "0:28:03.800,0:28:09.240",
+    "text": "un poquito al inicio de la conversación de qué aporta analoga, ¿no? Porque ciertamente"
+  },
+  {
+    "index": 258,
+    "timestamp": "0:28:09.240,0:28:16.080",
+    "text": "no es lo mismo que aportaba de inicio, porque en algunas cosas Angular pues ya como que mejorado,"
+  },
+  {
+    "index": 259,
+    "timestamp": "0:28:16.080,0:28:20.960",
+    "text": "¿no? Porque en un inicio pues se tenía lo que era Angular Universal. Lo utilicé solo un par"
+  },
+  {
+    "index": 260,
+    "timestamp": "0:28:20.960,0:28:27.440",
+    "text": "de veces, pero sí tenía cierta cierto nivel de dificultad y ciertas cosas que pues tal vez no"
+  },
+  {
+    "index": 261,
+    "timestamp": "0:28:27.440,0:28:33.640",
+    "text": "hacían sentido a nivel de decisiones y todo cambia con Angular SSR, que es como que el"
+  },
+  {
+    "index": 262,
+    "timestamp": "0:28:33.640,0:28:40.480",
+    "text": "nuevo paquete y pues ya se siente muchísimo más natural y mucho mejor, ¿no? Mucho mejor pensado,"
+  },
+  {
+    "index": 263,
+    "timestamp": "0:28:40.480,0:28:47.960",
+    "text": "mucho mejor implementado. Entonces, obviamente es otra manera de hacer ese SAR, que no quiere"
+  },
+  {
+    "index": 264,
+    "timestamp": "0:28:47.960,0:28:53.320",
+    "text": "decir que simplemente ya no aporte valor lo que es analog, ¿no?, sino que simplemente ya se"
+  },
+  {
+    "index": 265,
+    "timestamp": "0:28:53.320,0:28:59.440",
+    "text": "puede hasta inclusive nutrir de ciertas cosas de Angular que antes tal vez no salía, como, no sé,"
+  },
+  {
+    "index": 266,
+    "timestamp": "0:28:59.440,0:29:04.880",
+    "text": "creo que hay unas API nuevas para eh las rutas, ¿no?, que son rutas, creo que ruta de cliente,"
+  },
+  {
+    "index": 267,
+    "timestamp": "0:29:04.880,0:29:10.160",
+    "text": "ruta de servidor. las rutas híbridas, es decir, el mecanismo de renderizado híbrido hybrid rendering,"
+  },
+  {
+    "index": 268,
+    "timestamp": "0:29:10.160,0:29:16.880",
+    "text": "que te permite definir si va a ser prerender, si va a ser server render con SSR o lo convencional"
+  },
+  {
+    "index": 269,
+    "timestamp": "0:29:16.880,0:29:21.880",
+    "text": "típico de estos framework de JavaScript desde un inicio que era todo el proceso de representación"
+  },
+  {
+    "index": 270,
+    "timestamp": "0:29:21.880,0:29:27.080",
+    "text": "y todo lo que estación de nodos, etcétera, ocurriendo del lado del cliente a un costo"
+  },
+  {
+    "index": 271,
+    "timestamp": "0:29:27.080,0:29:31.880",
+    "text": "grandísimo para el navegador. Exactamente. Sí. No, no para las máquinas de nosotros"
+  },
+  {
+    "index": 272,
+    "timestamp": "0:29:31.880,0:29:36.440",
+    "text": "como desarrolladores que normalmente tenemos una buena cantidad de RAM. tenemos un buen procesador,"
+  },
+  {
+    "index": 273,
+    "timestamp": "0:29:36.440,0:29:43.840",
+    "text": "un entorno que está respondiendo con una latencia mínima y con todas las capacidades de cómputo que"
+  },
+  {
+    "index": 274,
+    "timestamp": "0:29:43.840,0:29:50.200",
+    "text": "nosotros tenemos, pero pensando en una conexión bastante lenta o también en cómo las máquinas"
+  },
+  {
+    "index": 275,
+    "timestamp": "0:29:50.200,0:29:56.880",
+    "text": "que permiten trabajar con el base rank para poder visibilizar tu sitio en la búsqueda que vayan a"
+  },
+  {
+    "index": 276,
+    "timestamp": "0:29:56.880,0:30:03.720",
+    "text": "hacer los usuarios en Google o en Bing o cualquier otro motor de búsqueda. Cuando se trata de eso,"
+  },
+  {
+    "index": 277,
+    "timestamp": "0:30:03.720,0:30:10.240",
+    "text": "client rendering no es la mejor opción de representación. Exactamente. Una de las"
+  },
+  {
+    "index": 278,
+    "timestamp": "0:30:10.240,0:30:18.960",
+    "text": "primeras cosas que aprendí porque pues mi primer acercamiento con el renderizado de servidor fue"
+  },
+  {
+    "index": 279,
+    "timestamp": "0:30:18.960,0:30:26.480",
+    "text": "realmente con analog, pues había varios términos o varias situaciones que no esperaba, como ciertos"
+  },
+  {
+    "index": 280,
+    "timestamp": "0:30:26.480,0:30:32.120",
+    "text": "flickering o ciertos como que parpadeos en la página, que yo no me explicaba a veces cómo"
+  },
+  {
+    "index": 281,
+    "timestamp": "0:30:32.120,0:30:38.360",
+    "text": "sucedía eso, ya sabes, a nivel cliente o cómo tratar de evitarlo. Las técnicas que yo sabía"
+  },
+  {
+    "index": 282,
+    "timestamp": "0:30:38.360,0:30:44.720",
+    "text": "en su momento cuando empecé a explorar un poco el metaframework son muy diferentes a las que pues"
+  },
+  {
+    "index": 283,
+    "timestamp": "0:30:44.720,0:30:52.240",
+    "text": "ahora sé por los términos o por las convenciones que no fueron pues introducidas como tal porque"
+  },
+  {
+    "index": 284,
+    "timestamp": "0:30:52.240,0:30:59.560",
+    "text": "pues son muchas convenciones que ya existen, pero fueron implementadas un poquito más eh con bases"
+  },
+  {
+    "index": 285,
+    "timestamp": "0:30:59.560,0:31:06.920",
+    "text": "en Angular porque pues de nuevo Angular no te daba esas pautas para tú saber correctamente cómo ser"
+  },
+  {
+    "index": 286,
+    "timestamp": "0:31:06.920,0:31:13.400",
+    "text": "SSR, SSG y todo eso, ¿no? Incluso acompañado de la hidratación incremental no destructiva, que es"
+  },
+  {
+    "index": 287,
+    "timestamp": "0:31:13.400,0:31:19.120",
+    "text": "la que ocasiona ese tipo de de flashazo en blanco en el color que tú tengas ahí en el background de"
+  },
+  {
+    "index": 288,
+    "timestamp": "0:31:19.120,0:31:25.240",
+    "text": "la página, que dificulta totalmente una buena puntuación en los corw bit vitals que al final"
+  },
+  {
+    "index": 289,
+    "timestamp": "0:31:25.240,0:31:30.760",
+    "text": "lo que hacen es impactar en la experiencia de de los usuarios que están utilizando las aplicaciones"
+  },
+  {
+    "index": 290,
+    "timestamp": "0:31:30.760,0:31:35.600",
+    "text": "web que nosotros desarrollamos. Básicamente los tres cover wir virals estaban impactados,"
+  },
+  {
+    "index": 291,
+    "timestamp": "0:31:35.600,0:31:43.640",
+    "text": "pero especialmente que tenía que ver con con el first input delay y con este el interaction to"
+  },
+  {
+    "index": 292,
+    "timestamp": "0:31:43.640,0:31:50.200",
+    "text": "next pain también cumulative flyout shift eran uno de los más afectados para este tipo de caso que"
+  },
+  {
+    "index": 293,
+    "timestamp": "0:31:50.200,0:31:55.960",
+    "text": "utilizaban service rendering de una manera que no es la moderna que existe en el framew de Angular."
+  },
+  {
+    "index": 294,
+    "timestamp": "0:31:56.520,0:32:04.400",
+    "text": "Exactamente. Entonces digo, eh, y volviendo un poco al tema, hablabas un poco de de preguntabas"
+  },
+  {
+    "index": 295,
+    "timestamp": "0:32:04.400,0:32:10.920",
+    "text": "sobre Bit, la nueva versión y una de las primeras cosas que vi que hizo que aumentara mucho la"
+  },
+  {
+    "index": 296,
+    "timestamp": "0:32:10.920,0:32:18.920",
+    "text": "adopción era Vitest, que pues al final del día empezó como creo que como una rama y se volvió"
+  },
+  {
+    "index": 297,
+    "timestamp": "0:32:18.920,0:32:24.920",
+    "text": "casi casi su propio proyecto dentro de Analog a tal grado que se implementó en en NX, en el"
+  },
+  {
+    "index": 298,
+    "timestamp": "0:32:24.920,0:32:32.520",
+    "text": "mono RIPO como tal, ya tienes tú para pues poder agregar bites de analog como tal, desde cero en la"
+  },
+  {
+    "index": 299,
+    "timestamp": "0:32:32.520,0:32:39.680",
+    "text": "comunidad, en Angular como tal, ya se utiliza como un plugin para Angular. Entonces creo que Bit,"
+  },
+  {
+    "index": 300,
+    "timestamp": "0:32:39.680,0:32:46.160",
+    "text": "la nueva versión viene a mejorar eso inclusive muchísimo más con la velocidad B, el proyecto"
+  },
+  {
+    "index": 301,
+    "timestamp": "0:32:46.160,0:32:54.000",
+    "text": "que Brandon subió con muchísimos componentes para poder hacer bench marking y ver cuál era la"
+  },
+  {
+    "index": 302,
+    "timestamp": "0:32:54.000,0:33:01.720",
+    "text": "diferencia en tiempos de ejecución y compilación, ¿no? Era una cosa increíble. Entonces, como tal,"
+  },
+  {
+    "index": 303,
+    "timestamp": "0:33:01.720,0:33:08.280",
+    "text": "para el ecosistema, yo creo que Analy Angular son como que van de la mano muchas veces en el"
+  },
+  {
+    "index": 304,
+    "timestamp": "0:33:08.280,0:33:16.600",
+    "text": "sentido de que la innovación que sucede o que yo veo suceder de un lado muchas veces abre puertas"
+  },
+  {
+    "index": 305,
+    "timestamp": "0:33:16.600,0:33:24.320",
+    "text": "o da ideas sólidas que no creo que no existieran porque pues desde que desde que una persona tenga"
+  },
+  {
+    "index": 306,
+    "timestamp": "0:33:24.320,0:33:29.360",
+    "text": "la curiosidad de hacer algo es que muchísimas más dentro del mismo ecosistema es posible que"
+  },
+  {
+    "index": 307,
+    "timestamp": "0:33:29.360,0:33:34.440",
+    "text": "la hayan tenido. Entonces, ya ayuda a que otros levanten un poco la voz en el sentido de que, oye,"
+  },
+  {
+    "index": 308,
+    "timestamp": "0:33:34.440,0:33:40.760",
+    "text": "y esta parte de acá podríamos implementarla aquí, la arquitectura podría cambiar un poco, ya sabes."
+  },
+  {
+    "index": 309,
+    "timestamp": "0:33:40.760,0:33:46.920",
+    "text": "Entonces, esas esas cuestiones a mí en lo personal me ilusiona un poco pues hacia dónde va el"
+  },
+  {
+    "index": 310,
+    "timestamp": "0:33:46.920,0:33:52.880",
+    "text": "framework como tal y obviamente todo lo que hereda de de Angular, que también Angular ha mejorado de"
+  },
+  {
+    "index": 311,
+    "timestamp": "0:33:52.880,0:34:00.080",
+    "text": "manera increíble, ¿no? Igual necesito explorar un poco más qué puertas abre la nueva versión,"
+  },
+  {
+    "index": 312,
+    "timestamp": "0:34:00.080,0:34:06.920",
+    "text": "cómo se puede utilizar en en ciertos aspectos empresariales, porque pues al final del día la"
+  },
+  {
+    "index": 313,
+    "timestamp": "0:34:06.920,0:34:16.240",
+    "text": "diferencia entre un proyecto de blog o personal o de contenido y un proyecto empresarial es abismal."
+  },
+  {
+    "index": 314,
+    "timestamp": "0:34:16.800,0:34:22.640",
+    "text": "Y yo tengo un proyecto actualmente en desarrollo que es la conversión de blog"
+  },
+  {
+    "index": 315,
+    "timestamp": "0:34:22.640,0:34:29.200",
+    "text": "mío hablando retomando de los blogs de esos de antaño que había comenzado en el 2008 en la"
+  },
+  {
+    "index": 316,
+    "timestamp": "0:34:29.200,0:34:36.200",
+    "text": "plataforma de Google que se llama blogger.com que no lo han hecho prácticamente nada el año 2012,"
+  },
+  {
+    "index": 317,
+    "timestamp": "0:34:36.200,0:34:43.280",
+    "text": "2015 o algo así, lo han dejado en modo mantenimiento y esa fue la primer acercamiento"
+  },
+  {
+    "index": 318,
+    "timestamp": "0:34:43.280,0:34:49.080",
+    "text": "que yo tuve a analog hace aproximadamente ente un año, un año y medio. Lo dejé ahí durmiendo,"
+  },
+  {
+    "index": 319,
+    "timestamp": "0:34:49.080,0:34:56.080",
+    "text": "pero ahora pienso volver a rescatarlo después de esta conversación, por supuesto. Y la pregunta con"
+  },
+  {
+    "index": 320,
+    "timestamp": "0:34:56.080,0:35:03.040",
+    "text": "la que me gustaría ir cerrando el episodio es que al enfrentarse a un proyecto de analog en concreto"
+  },
+  {
+    "index": 321,
+    "timestamp": "0:35:03.040,0:35:09.800",
+    "text": "para un proyecto de migración de otra tecnología, no necesariamente tiene que ser un blog, también"
+  },
+  {
+    "index": 322,
+    "timestamp": "0:35:09.800,0:35:15.160",
+    "text": "puede ser un sitio de marketing, algún sitio que se beneficie de las características que ofrece el"
+  },
+  {
+    "index": 323,
+    "timestamp": "0:35:15.160,0:35:23.720",
+    "text": "renderizado de prerender el SSG. ¿Cuánto cambia el flujo de trabajo respecto a los estándares"
+  },
+  {
+    "index": 324,
+    "timestamp": "0:35:23.720,0:35:29.720",
+    "text": "de Angular con vista a loquestación de agentes de inteligencia artificial? Es decir, cuando lo"
+  },
+  {
+    "index": 325,
+    "timestamp": "0:35:29.720,0:35:36.480",
+    "text": "estamos corriendo, por ejemplo, en Antigravity o en Visual Studio Code o en cualquier otro ID,"
+  },
+  {
+    "index": 326,
+    "timestamp": "0:35:36.480,0:35:41.920",
+    "text": "donde uno tenga una serie de skills, de agentes corriendo, de instrucciones que uno le ponga,"
+  },
+  {
+    "index": 327,
+    "timestamp": "0:35:41.920,0:35:50.520",
+    "text": "¿cuál es la recomendación que harías para que el contexto de que nosotros estamos proveyéndole a"
+  },
+  {
+    "index": 328,
+    "timestamp": "0:35:50.520,0:35:58.480",
+    "text": "eso, a ese modelo tenga la capacidad de entender específicamente las bondades de analog y no se"
+  },
+  {
+    "index": 329,
+    "timestamp": "0:35:58.480,0:36:03.760",
+    "text": "confunde funda tanto con lo que tiene Angular que vayan a permitir que el proyecto fluya desde el"
+  },
+  {
+    "index": 330,
+    "timestamp": "0:36:03.760,0:36:09.280",
+    "text": "punto de vista de analog. Dependería mucho de tu proyecto como tal. mucha gente ya está muy"
+  },
+  {
+    "index": 331,
+    "timestamp": "0:36:09.280,0:36:14.280",
+    "text": "familiarizada con construir sus propios skills o construir sus instructions dependiendo que estés"
+  },
+  {
+    "index": 332,
+    "timestamp": "0:36:14.280,0:36:20.640",
+    "text": "utilizando, tu cloud MD o tu, ya sabes, ¿no? Tu agents toda toda esa parte que pues regula un"
+  },
+  {
+    "index": 333,
+    "timestamp": "0:36:20.640,0:36:29.000",
+    "text": "poco el contexto inicial para pues darle como que la idea principal al proyecto de cómo construir"
+  },
+  {
+    "index": 334,
+    "timestamp": "0:36:29.000,0:36:35.880",
+    "text": "las cosas. Ahora mismo tú habías mencionado los skills que se habían creado y pues los"
+  },
+  {
+    "index": 335,
+    "timestamp": "0:36:35.880,0:36:42.800",
+    "text": "skills como tal de Angular funcionan en analog porque pues al final del día son pares. Solo qué"
+  },
+  {
+    "index": 336,
+    "timestamp": "0:36:42.800,0:36:48.880",
+    "text": "cambiaría yo dependiendo de nuevo. Eh, haré como ejemplo copilot porque pues es el más simple que"
+  },
+  {
+    "index": 337,
+    "timestamp": "0:36:48.880,0:36:56.040",
+    "text": "conozco. Tal vez en tus instructions pondría ahí ciertos parámetros de cómo funciona el enrutado"
+  },
+  {
+    "index": 338,
+    "timestamp": "0:36:56.040,0:37:00.280",
+    "text": "por ficheros. Ese sería como que lo principal porque pues al final del día si vas a hacer un"
+  },
+  {
+    "index": 339,
+    "timestamp": "0:37:00.280,0:37:09.720",
+    "text": "sitio eh de marketing, de contenido o algo pues sencillo, digamos, te importa pues utilizar las"
+  },
+  {
+    "index": 340,
+    "timestamp": "0:37:09.720,0:37:15.360",
+    "text": "convenciones que lo harán más sencillo, ¿no? Porque pues al final el LM te puede crear un"
+  },
+  {
+    "index": 341,
+    "timestamp": "0:37:15.360,0:37:21.680",
+    "text": "routing casi perfecto out of the box si pues si haces tu prompting de manera adecuada, ya sabes,"
+  },
+  {
+    "index": 342,
+    "timestamp": "0:37:21.680,0:37:27.440",
+    "text": "pues con tu lazy loading, con todo lo que conlleva dependiendo de lo que tengas, ¿no? Pero pero no"
+  },
+  {
+    "index": 343,
+    "timestamp": "0:37:27.440,0:37:33.960",
+    "text": "en la manera que Analog está ofreciendo para tener el boiler play bien reducido, así que posiblemente"
+  },
+  {
+    "index": 344,
+    "timestamp": "0:37:33.960,0:37:39.680",
+    "text": "apuntar hacia la documentación oficial para hacer un mejor grounding sería un buen consejo y"
+  },
+  {
+    "index": 345,
+    "timestamp": "0:37:39.680,0:37:45.440",
+    "text": "y de hecho lo voy a lo voy a proponer. Habría que checar. Hace hace un buen rato que no checo el git"
+  },
+  {
+    "index": 346,
+    "timestamp": "0:37:45.440,0:37:51.240",
+    "text": "para para ver pues los issues y todo. A lo mejor incluso ya está ahí y simplemente una necesita de"
+  },
+  {
+    "index": 347,
+    "timestamp": "0:37:51.240,0:37:57.200",
+    "text": "alguien que levante la mano y quiera colaborar con skill sets o o con instructions o algo así."
+  },
+  {
+    "index": 348,
+    "timestamp": "0:37:57.200,0:38:02.080",
+    "text": "Pero yo creo que y es una excelente pregunta, lo primero que haría tal vez sería darle un contexto"
+  },
+  {
+    "index": 349,
+    "timestamp": "0:38:02.080,0:38:07.640",
+    "text": "adecuado de de un par de funcionalidades clave, que es el renderizado de Mackdown,"
+  },
+  {
+    "index": 350,
+    "timestamp": "0:38:07.640,0:38:15.560",
+    "text": "dónde van los archivos, tal vez la parte de pages, darle un contexto adecuado de cuándo es una ruta"
+  },
+  {
+    "index": 351,
+    "timestamp": "0:38:15.560,0:38:21.280",
+    "text": "de autorización, cuándo es un slog, todas esas situaciones que son como que muy específicas"
+  },
+  {
+    "index": 352,
+    "timestamp": "0:38:21.280,0:38:28.160",
+    "text": "de analog como framework y están totalmente despegadas de como Angular hace las cosas,"
+  },
+  {
+    "index": 353,
+    "timestamp": "0:38:28.160,0:38:34.280",
+    "text": "¿no? Aunque se traduzca al final como una ruta idéntica a la de Angular, que pues al final eso es"
+  },
+  {
+    "index": 354,
+    "timestamp": "0:38:34.280,0:38:40.440",
+    "text": "lo que hace, pues si es es bastante válido darle un contexto adecuado para que no alucine y no"
+  },
+  {
+    "index": 355,
+    "timestamp": "0:38:40.440,0:38:45.760",
+    "text": "empiece a crearte simplemente una ruta de Angular normal que pues no vas a estar aprovechando"
+  },
+  {
+    "index": 356,
+    "timestamp": "0:38:45.760,0:38:50.600",
+    "text": "los beneficios de utilizar el metaframework. Exacto. Incluso en la planificación de proyecto,"
+  },
+  {
+    "index": 357,
+    "timestamp": "0:38:50.600,0:38:55.240",
+    "text": "si en vez de un blog lo que estamos haciendo es un portafolio de proyectos, darle las instrucciones"
+  },
+  {
+    "index": 358,
+    "timestamp": "0:38:55.240,0:39:00.600",
+    "text": "para poder utilizar el mismo scaffolding que ofrece analop defecto cuando uno genera una"
+  },
+  {
+    "index": 359,
+    "timestamp": "0:39:00.600,0:39:06.800",
+    "text": "aplicación que te a escoger entre tres diferentes modalidades. La más básica es la mínima, pero"
+  },
+  {
+    "index": 360,
+    "timestamp": "0:39:06.800,0:39:12.840",
+    "text": "hay otras dos, incluyendo la de blog, pero esa de blog se puede ajustar para otro tipo de proyectos"
+  },
+  {
+    "index": 361,
+    "timestamp": "0:39:12.840,0:39:18.720",
+    "text": "que no necesariamente sean en torno a tener una bitácora que tenga una serie de post que estén"
+  },
+  {
+    "index": 362,
+    "timestamp": "0:39:18.720,0:39:24.720",
+    "text": "organizados de manera cronológica inversa. Si uno le da toda esa información de antemano, te puede"
+  },
+  {
+    "index": 363,
+    "timestamp": "0:39:24.720,0:39:30.600",
+    "text": "hacer la simplificación de la refactorización del proyecto de una manera fantástica. Sí. Y al final,"
+  },
+  {
+    "index": 364,
+    "timestamp": "0:39:30.600,0:39:38.480",
+    "text": "pues a día de hoy ahorrar tokens es es clave. en nuestra industria y el boom que vi en su"
+  },
+  {
+    "index": 365,
+    "timestamp": "0:39:38.480,0:39:44.360",
+    "text": "momento cuando analog pues empezó a agarrar cierto momentum fue que mucha gente su primer"
+  },
+  {
+    "index": 366,
+    "timestamp": "0:39:44.360,0:39:51.080",
+    "text": "proyecto fue de exploración, fue migrar lo que yo ya tenía de blog a Anglo, ¿no? Inclusive a"
+  },
+  {
+    "index": 367,
+    "timestamp": "0:39:51.080,0:39:57.040",
+    "text": "día de hoy aún veo y tú mismo tienes ese proyecto en mente. Es un caso de uso bastante común. Sí,"
+  },
+  {
+    "index": 368,
+    "timestamp": "0:39:57.040,0:40:02.760",
+    "text": "exacto. Es un caso bastante común. Entonces, yo creo que es como que tu tu línea de entrada."
+  },
+  {
+    "index": 369,
+    "timestamp": "0:40:02.760,0:40:08.760",
+    "text": "De hecho, eso llevó a Brandon. Creo que en su momento hubo un PR que daba el scaffolding del"
+  },
+  {
+    "index": 370,
+    "timestamp": "0:40:08.760,0:40:12.360",
+    "text": "modo blog, que es lo que tú mencionas, ¿no? Que cuando creas una aplicación nueva te dice,"
+  },
+  {
+    "index": 371,
+    "timestamp": "0:40:12.360,0:40:16.440",
+    "text": "\"Oye, ¿crees quieres crear un modo blog?\" En su momento fue por eso,"
+  },
+  {
+    "index": 372,
+    "timestamp": "0:40:16.440,0:40:24.000",
+    "text": "porque el boom real que se vio de inicio en analog fue ese mismo. Ya después inclusive una empresa"
+  },
+  {
+    "index": 373,
+    "timestamp": "0:40:24.000,0:40:29.080",
+    "text": "como tal empezó a ya a utilizar analog de manera empresarial. No tengo el nombre en este momento,"
+  },
+  {
+    "index": 374,
+    "timestamp": "0:40:29.080,0:40:33.200",
+    "text": "pero sé que Brandon tiene muy buena relación con ellos. creo que es el principal sponsor"
+  },
+  {
+    "index": 375,
+    "timestamp": "0:40:33.200,0:40:39.400",
+    "text": "de analog como proyecto open source y pues al final del día es un buen punto, o sea,"
+  },
+  {
+    "index": 376,
+    "timestamp": "0:40:39.400,0:40:44.520",
+    "text": "simplemente darle las instrucciones adecuadas para que de inicio el contexto sea adecuado te va a"
+  },
+  {
+    "index": 377,
+    "timestamp": "0:40:44.520,0:40:48.680",
+    "text": "ayudar tremendamente, ¿no? Exacto. Y cualquier persona que quiera construir con el proyecto,"
+  },
+  {
+    "index": 378,
+    "timestamp": "0:40:48.680,0:40:53.760",
+    "text": "a lo mejor lo que puede es indicar los skills correspondientes para ayudar al proceso de"
+  },
+  {
+    "index": 379,
+    "timestamp": "0:40:53.760,0:40:58.280",
+    "text": "migración, a lo mejor de convertir de esta misma plataforma que te estaba mencionando. Puede ser"
+  },
+  {
+    "index": 380,
+    "timestamp": "0:40:58.280,0:41:08.560",
+    "text": "Blogger o WordPress o algo creado en algún sistema de blogs que ya no tenga ese tipo de de trending"
+  },
+  {
+    "index": 381,
+    "timestamp": "0:41:08.560,0:41:14.360",
+    "text": "hoy en día, incluso hasta de Astro. Y por qué no hacer la documentación en analog en sí mismo"
+  },
+  {
+    "index": 382,
+    "timestamp": "0:41:14.360,0:41:20.280",
+    "text": "y poder emplear esa característica que tiene de poder potenciar bitácoras o documentaciones"
+  },
+  {
+    "index": 383,
+    "timestamp": "0:41:20.280,0:41:25.320",
+    "text": "dentro del mismo espacio de la documentación oficial de analog. Por ahí pueden haber varias"
+  },
+  {
+    "index": 384,
+    "timestamp": "0:41:25.320,0:41:32.680",
+    "text": "avenidas para poder continuar avanzando analog y se utilice a sí mismo. Es correcto. Entonces,"
+  },
+  {
+    "index": 385,
+    "timestamp": "0:41:32.680,0:41:38.120",
+    "text": "Luis, de nuevo, muchísimas gracias por haber participado. Si hay alguna otra cosa antes de"
+  },
+  {
+    "index": 386,
+    "timestamp": "0:41:38.120,0:41:43.000",
+    "text": "concluir el episodio que quisiera mencionar sobre algo que no hayamos tocado durante la"
+  },
+  {
+    "index": 387,
+    "timestamp": "0:41:43.000,0:41:50.480",
+    "text": "conversación. Obviamente se mencionó lo que es Vitest. eh es bastante básico en ayudó muchísimo"
+  },
+  {
+    "index": 388,
+    "timestamp": "0:41:50.480,0:41:57.760",
+    "text": "en la adopción de analog y en darle cierto nombre a al framework como tal, pero pues también analog"
+  },
+  {
+    "index": 389,
+    "timestamp": "0:41:57.760,0:42:04.680",
+    "text": "tiene integración con storybook para los sistemas de de diseño. storybook es claro que quiera tener"
+  },
+  {
+    "index": 390,
+    "timestamp": "0:42:04.680,0:42:10.960",
+    "text": "en un playground con los componentes aislados y poder estar no solamente usándolo viendo,"
+  },
+  {
+    "index": 391,
+    "timestamp": "0:42:10.960,0:42:15.840",
+    "text": "haciendo una ingeniería inversa o o viendo la documentación de cómo se desarrollaron,"
+  },
+  {
+    "index": 392,
+    "timestamp": "0:42:15.840,0:42:21.120",
+    "text": "sino desarrollar activamente componentes de manera aislada, storybook es genial."
+  },
+  {
+    "index": 393,
+    "timestamp": "0:42:21.120,0:42:27.360",
+    "text": "Exactamente. Al final del día, yo creo que podría tal vez dar una conclusión de que mucha gente tal"
+  },
+  {
+    "index": 394,
+    "timestamp": "0:42:27.360,0:42:35.560",
+    "text": "vez pudiera pensar o decir que Analog sería un fork de Angular, pero no es como tal, no para"
+  },
+  {
+    "index": 395,
+    "timestamp": "0:42:35.560,0:42:42.400",
+    "text": "allá va. Yo diría que es más una alternativa con convenciones encima. Así mismo, Luis. Y bueno,"
+  },
+  {
+    "index": 396,
+    "timestamp": "0:42:42.400,0:42:47.520",
+    "text": "muchísimas gracias por todo, por estar acá compartiendo tanto conocimiento. He disfrutado,"
+  },
+  {
+    "index": 397,
+    "timestamp": "0:42:47.520,0:42:54.440",
+    "text": "he aprendido mucho de la conversación, así que espero tener cosas para enseñarte de lo que"
+  },
+  {
+    "index": 398,
+    "timestamp": "0:42:54.440,0:42:59.880",
+    "text": "estaré haciendo en analog, incluso hasta el mismo sitio web. Tengo registrado angularidades.com que"
+  },
+  {
+    "index": 399,
+    "timestamp": "0:42:59.880,0:43:05.840",
+    "text": "está totalmente ahí dormido hace como un año con unas partículas moviéndose, pareciéndose"
+  },
+  {
+    "index": 400,
+    "timestamp": "0:43:05.840,0:43:12.240",
+    "text": "en la introducción, pero en un futuro lo voy a desplegar en analog y bueno, posiblemente tenga"
+  },
+  {
+    "index": 401,
+    "timestamp": "0:43:12.240,0:43:18.680",
+    "text": "el feedback tuyo también. Así que te lo agradeceré cantidad. Te agradezco por la invitación y por la"
+  },
+  {
+    "index": 402,
+    "timestamp": "0:43:18.680,0:43:22.920",
+    "text": "por la charla. Esto fue bastante entretenido y muchísimas gracias de nuevo por invitarme."
+  }
+]

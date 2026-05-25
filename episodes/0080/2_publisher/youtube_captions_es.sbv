@@ -1,0 +1,1610 @@
+0:00:07.080,0:00:12.120
+Luis, Analog es un metaframework basado 
+en Angular, que entre varias cosas busca
+
+0:00:12.120,0:00:18.600
+mejorar la experiencia de desarrollo agregando 
+una capa de convenciones, de herramientas para
+
+0:00:18.600,0:00:23.760
+la creación de aplicaciones web con técnicas de 
+rendarizado híbrido, tanto del lado de cliente
+
+0:00:23.760,0:00:30.960
+como de servidor. Y de eso vamos a estar hablando 
+hoy. Pero antes de ello me gustaría poder tener
+
+0:00:30.960,0:00:37.160
+la oportunidad de presentarte a quienes aún no te 
+conozcan y por supuesto agradecerte por estar acá
+
+0:00:37.160,0:00:43.240
+en este espacio y contribuir con nosotros con el 
+conocimiento tuyo acerca de este metaframework.
+
+0:00:43.240,0:00:49.400
+No, te agradezco por la invitación. Gracias. 
+Sí, eres originalmente de Mérida, de Yucatán.
+
+0:00:49.400,0:00:55.760
+Actualmente resides un poquito más al norte en 
+Tampa, Florida. Eres graduado en mecatrónica.
+
+0:00:55.760,0:01:02.000
+Tienes más de una década de experiencia 
+profesional en liderazgo técnico, ingeniería
+
+0:01:02.000,0:01:11.640
+frontend y eres uno de los contribuidores 
+del core team de Analog framework de Angular.
+
+0:01:11.640,0:01:18.040
+Entonces, ¿recuerdas acerca de cuándo fue la 
+primera vez que escuchaste hablar de Analog?
+
+0:01:19.800,0:01:27.080
+Yo inicio, pues digamos la la búsqueda de 
+contribuir en algo, eh lo que viene siendo
+
+0:01:27.080,0:01:33.080
+open source, pues por curiosidad de pues nunca 
+haberlo hecho antes. Eh ahí sí que hice pequeña
+
+0:01:33.080,0:01:39.480
+contribución a una pequeña librería de toast, 
+creo que se llama NgToast o algo así. hice una
+
+0:01:39.480,0:01:45.960
+pequeña contribución ahí y ahí inicié así como que 
+el camino de empezar a hacer pues esa contribución
+
+0:01:45.960,0:01:51.280
+más amplia, ¿no? Entonces eso como que me 
+dio el valor como para tratar de de hacer una
+
+0:01:51.280,0:01:56.560
+contribución en Angular como tal en el framework. 
+E hice una pequeña ahí sí que Matthew, creo que
+
+0:01:56.560,0:02:03.080
+Matthew se llama, el este chavo de Francia, no 
+recuerdo muy bien su nombre, Matthew. Él me ayudó
+
+0:02:03.080,0:02:07.520
+a a hacer una pequeña contribución en Angular. Era 
+algo bastante simple. creo que era una corrección
+
+0:02:07.520,0:02:15.640
+de de un type en un en un type en TypeScript, pero 
+ahí sí que solamente el instalar localmente todas
+
+0:02:15.640,0:02:20.520
+las herramientas para tratar de contribuir en el 
+framework, pues me dieron demasiada curiosidad,
+
+0:02:20.520,0:02:27.640
+¿no? Entonces, entre esa interacción en Twitter y 
+y en otras redes sociales, pues eh ya ves que el
+
+0:02:27.640,0:02:33.600
+algoritmo empieza a sugerirte gente y empiezas 
+a a ver más cosas que comparte la gente que
+
+0:02:33.600,0:02:38.600
+está en ese círculo. Ahí es donde encuentro por 
+primera vez algo que compartió Brandon, que era
+
+0:02:38.600,0:02:45.960
+creo que un video donde proponía unas convenciones 
+para full stack en esa etapa en el tiempo, ¿no?,
+
+0:02:45.960,0:02:53.000
+que existía creo que Angular Universal para 
+SSR, pero no era como que muy bien visto en
+
+0:02:53.000,0:02:58.320
+ese entonces, hasta donde recuerdo, ¿no? Pues a 
+partir de ahí, pues yo lo sigo en Twitter y pues
+
+0:02:58.320,0:03:04.880
+empiezo a ver pues que que las contribuciones que 
+anda haciendo. que él era core member de NgRx y
+
+0:03:04.880,0:03:11.760
+pues anuncia Analog como tal y me da bastante 
+curiosidad porque pues en ese entonces daba la
+
+0:03:11.760,0:03:17.080
+casualidad que yo estaba aprendiendo un poco más 
+de React y obviamente al aprender React pues te
+
+0:03:17.080,0:03:24.440
+empapas de todo lo que es next pues un framework 
+de full stack como tal, ¿no? Entonces obviamente
+
+0:03:24.440,0:03:30.280
+al verlo yo buscaba algo similar en Angular y 
+pues no no existía, ¿no? Entonces ahí es donde
+
+0:03:30.280,0:03:37.000
+yo creo que entra el puente y empiezo a tratar de 
+colaborar primero con un poco de documentación.
+
+0:03:37.000,0:03:47.080
+Luego yo creo que mi primera colaboración real fue 
+para Marked.js, para eh Analog maneja eh las rutas
+
+0:03:47.080,0:03:54.320
+de contenido como activas, o sea, si tú metes un 
+archivo Markdown eh como parte de tus ficheros,
+
+0:03:54.320,0:03:58.960
+lo reconoce el router y automáticamente te lo 
+presenta como contenido, ¿no? Entonces, para
+
+0:03:58.960,0:04:05.760
+que eso funcione, se utilizaba una librería en ese 
+entonces, creo que era Marked.js, si no me equivoco,
+
+0:04:05.760,0:04:11.800
+estábamos en ese proceso en el que todas las 
+librerías estaban migrándose hacia providers y
+
+0:04:11.800,0:04:18.360
+todo lo que conlleva migrar de de los NgModules 
+a a la parte de standalone, ¿no? Entonces,
+
+0:04:18.360,0:04:24.600
+eso le hacía falta, había que hacerla un poco más 
+abierta como para aceptar otras librerías, no solo
+
+0:04:24.600,0:04:29.040
+Marked.js. Entonces esa fue como que mi primera 
+contribución. Ahí sí que entramos al código,
+
+0:04:29.040,0:04:36.680
+no lo conocíamos demasiado bien, era un código 
+bastante grande. O sea, yo pensé, o sea, digo,
+
+0:04:36.680,0:04:44.880
+es es lógico tal vez que algo que se construye 
+arriba o encima de algo que pues es gigante,
+
+0:04:44.880,0:04:49.480
+pues va a tener su nivel de complejidad, ¿no? 
+Pero entonces ahí fuimos aprendiendo un poco
+
+0:04:49.480,0:04:56.200
+y fue ahí donde tuve ya mi primera interacción 
+real con Brandon y con el MetaFramework como tal,
+
+0:04:56.200,0:05:01.680
+platicando con él. Eh, yo ya sabes, pidiéndole 
+feedback, oye, ¿está bien el API así? Eh, si está
+
+0:05:01.680,0:05:07.960
+bien, si se exponen estos tipos o si se expone 
+eh el API así como este y pues al final pues ya
+
+0:05:07.960,0:05:15.720
+se introdujo el primer PR y desde ahí empecé 
+a colaborar. Tal vez no en gigantesca medida,
+
+0:05:15.720,0:05:22.040
+pero más bien empecé con la documentación, con la 
+traducción, un poquito como si fuera así como un
+
+0:05:22.040,0:05:28.360
+developer advocate porque pues empecé a construir 
+algunos ejemplos, pues los ejemplos de Analog, no
+
+0:05:28.360,0:05:32.800
+sé si has visto la página y la documentación, pero 
+son ejemplos bastantes de la misma época hispana,
+
+0:05:32.800,0:05:37.480
+es decir, Andrés Villanueva estaba desarrollando 
+toda la infraestructura en Docusaurus para poder
+
+0:05:37.480,0:05:43.880
+documentar los múltiples idiomas. Exactamente. 
+Y hoy en día hay un issue abierto para
+
+0:05:43.880,0:05:49.760
+migrar toda esa documentación de Docusaurus a Astro. 
+Parte de lo que tenía Analog como proyecto era que
+
+0:05:49.760,0:05:56.040
+ahora te permitía utilizar Angular o componentes 
+de Angular dentro de del ecosistema de Astro.
+
+0:05:56.040,0:06:00.800
+Entonces, eso como que fue una de las primeras 
+cosas, creo llamó la atención de la comunidad.
+
+0:06:00.800,0:06:07.800
+es como que empezó a tener cierto momentum lo como 
+tal, porque personas que pues estaban bastante
+
+0:06:07.800,0:06:13.080
+ligadas a la comunidad empezaron a abrir los ojos 
+acerca de lo que aportaba, sobre todo que puede
+
+0:06:13.080,0:06:20.680
+ser es un ecosistema que es integralmente hecho 
+en en Vit y pues todos sabemos lo rápido que es.
+
+0:06:20.680,0:06:25.960
+Incluso ahora, creo que ahora mismo estaba yo 
+leyendo, acaban de, no sé si liberar o ya es
+
+0:06:25.960,0:06:33.800
+versión 1.0, eh, creo, ¿cómo se llama el el es 
+roll up? El roll up, el Rolldown. Ah, confunde
+
+0:06:33.800,0:06:39.520
+un poquito si no lo usas como como first part y 
+lo tienes a través de dependencias transitivas
+
+0:06:39.520,0:06:43.800
+de alguno de los framework que uno utilice. Sí. Y 
+pues estaba yo viendo que ya como que se liberó la
+
+0:06:43.800,0:06:51.640
+versión 1.0 y pues eso pues Analog en las últimas 
+versiones, al menos hasta donde recuerdo da 2.5 si
+
+0:06:51.640,0:06:57.920
+no me equivoco, que es de las últimas, ya estaba 
+preparado para para la versión. Entonces, eso
+
+0:06:57.920,0:07:05.400
+conjuntado con lo ya veloz que es para hacer tu 
+bundle, pues tenemos algo así, algo casi mágico,
+
+0:07:05.400,0:07:11.960
+diría yo, y que no se experimenta hasta que 
+hasta que tienes un proyecto realmente grande
+
+0:07:11.960,0:07:20.400
+donde tratas de hacer pruebas y digamos que 
+tienes un bondativo, pues los tiempos de carga,
+
+0:07:20.400,0:07:30.240
+los tiempos de compilación son mucho menores. Pero 
+sí, básicamente así empieza como que mi digamos mi
+
+0:07:30.240,0:07:38.400
+interacción con todo el equipo. Empiezo a pues 
+checar si hay algún proyecto que utilice Analog
+
+0:07:38.400,0:07:44.600
+en ese entonces había otro proyecto que estaba 
+a la par, que creo que sigue, es el Spartan.
+
+0:07:44.600,0:07:53.240
+No estoy al 100% familiarizado con con el proyecto 
+como tal, pero sé que utiliza eh Analog como base
+
+0:07:53.240,0:07:59.520
+también para Sí, hace un par de años leí el 
+artículo ese inicial que sentó las bases de que
+
+0:07:59.520,0:08:06.720
+iba toda la metodología esta de Spartan y tener 
+a Analog ahí básicamente le abrió puertas que no
+
+0:08:06.720,0:08:11.800
+existían en aquel momento para un framework que 
+estaba en una etapa incipiente. que muchas gracias
+
+0:08:11.800,0:08:18.640
+por compartir esa historia. Y por cierto, hoy en 
+día como desarrollador de Analog y contribuidor al
+
+0:08:18.640,0:08:25.360
+framework también, ¿cómo es que normalmente 
+haces para responder a la típica pregunta
+
+0:08:25.360,0:08:33.880
+que tiene alguien que desarrolle en Angular 
+acerca de cómo decidir cuál de los frameworks
+
+0:08:33.880,0:08:40.680
+utilizar en primer nivel? Es decir, ¿cuál es 
+el problema fundamental que Analog resuelve hoy?
+
+0:08:40.680,0:08:49.880
+que Angular por sí solo le es muy difícil abordar 
+de una manera sencilla. Bueno, en su momento y
+
+0:08:49.880,0:08:55.000
+estamos hablando de cuando inicia te resolvían un 
+poco más de problemas de lo que se resuelve ahora,
+
+0:08:55.000,0:09:01.040
+pero todavía hay mucho hay mucha validez en lo 
+que Analog aporta, un poco más de facilidad para
+
+0:09:01.040,0:09:07.200
+crear aplicaciones desde desde cero. Es un poco 
+lo que hizo que se adopte, yo creo, Next.js en
+
+0:09:07.200,0:09:13.640
+muchas empresas. es una facilidad para simplemente 
+crear cosas full stack al final del día dependerá,
+
+0:09:13.640,0:09:18.200
+obviamente, como todo, depende de las necesidades 
+de de tu aplicación, qué requerimientos tengas,
+
+0:09:18.200,0:09:23.880
+pero pues como tal yo creo es una solución 
+como que un poco más completa para construir
+
+0:09:23.880,0:09:30.480
+aplicaciones Fullstack y más que nada si son 
+basadas en contenido. vez que te comentaba,
+
+0:09:30.480,0:09:37.200
+nunca me había escrito un blog jamás. digo, 
+tal vez en la época cuando empezaba en esto
+
+0:09:37.200,0:09:42.560
+del internet y habría como que Metroflog y todas 
+esas cosas, tal vez ahí llegué a intentar hacer
+
+0:09:42.560,0:09:48.400
+así un blog medio incipiente, pero realmente eh 
+para escribir fue mi primer proyecto donde dije,
+
+0:09:48.400,0:09:53.480
+"Okay, entonces vamos a experimentar un 
+poco con Analog como tal para ver las
+
+0:09:53.480,0:09:59.800
+diferencias principales entre cómo lo haría yo con 
+Angular, cómo lo haría yo con Analog." Entonces,
+
+0:09:59.800,0:10:06.520
+la primera cosa que salta a la vista es que su 
+orientación a no orientación porque no podíamos
+
+0:10:06.520,0:10:12.600
+decir que es orientado a eso, pero el hecho de 
+que tiene una facilidad para generar contenido
+
+0:10:12.600,0:10:19.760
+que Angular no tiene como característica, si tú 
+tienes un Markdown y lo pones en tus ficheros,
+
+0:10:19.760,0:10:25.200
+Analog lo va a presentar. Pues una de las 
+principales cosas que en Angular pues no
+
+0:10:25.200,0:10:29.720
+se le facilita tanto a la persona que que lo 
+toca por primera vez, sobre todo que hay mucha
+
+0:10:29.720,0:10:35.640
+gente que tal vez pase de React de de back 
+end, hay conceptos que no se facilitan tanto,
+
+0:10:35.640,0:10:43.120
+¿no? Como pues no sé, la inyección de dependencias 
+o el change detection, pero uno de los que veo
+
+0:10:43.120,0:10:50.240
+que más sufre la gente para entender de 
+primera mano es el routing o el rutador.
+
+0:10:50.240,0:10:57.240
+Totalmente. Y este sistema de enrutamiento basado 
+en rutas del sistema de ficheros es genial. Y uno,
+
+0:10:57.240,0:11:03.920
+¿cuántas líneas de código, cuánto trabajo o cuánta 
+cantidad de tokens uno tenía tendría que quemar y
+
+0:11:03.920,0:11:08.480
+de incrementar el boiler plate, de incrementar 
+el bundle size y no hacerlo de una forma que
+
+0:11:08.480,0:11:14.040
+está bastante estandarizada, digamos ya en el 
+metaframework de Analog. Si uno lo hace desde
+
+0:11:14.040,0:11:20.000
+cero en Angular para este tipo de sistema que 
+estás escribiendo, que sea un sitio de un carácter
+
+0:11:20.000,0:11:29.200
+digamos estático, que se nutra los beneficios que 
+tiene el SSG, si el static side generation para no
+
+0:11:29.200,0:11:33.080
+tener que sobrecargar la parte del cliente 
+y tener que estar solucionando con Java,
+
+0:11:33.080,0:11:38.440
+creas que en el servidor se pueden solucionar 
+de antemano y además promover muchas mejores
+
+0:11:38.440,0:11:45.360
+PRácticas en cuanto a la observabilidad Y el 
+procesamiento del lado de motores de búsqueda,
+
+0:11:45.360,0:11:53.720
+básicamente Analog, es un no brainer, como se 
+dice en inglés. Es correcto. Y pues ahí sí que
+
+0:11:53.720,0:11:59.760
+al al construir mi blog pues fui aprendiendo un 
+poquito más eh de cómo funcionaba eh bajo el agua,
+
+0:11:59.760,0:12:06.960
+porque pues eh obviamente te da cierta curiosidad 
+porque tú ves el sistema de archivos que tú solo
+
+0:12:06.960,0:12:14.160
+colocas cierto archivo de cierto tipo con 
+ciertas sintaxis en cierto directorio y solo
+
+0:12:14.160,0:12:20.120
+funciona. Entonces esa magia siempre quise o al 
+menos de inicio quería yo saber cómo funcionaba,
+
+0:12:20.120,0:12:25.720
+¿no? Y es un código tremendamente complicado y 
+ahí sí que demasiado mérito para Brandon porque
+
+0:12:25.720,0:12:33.760
+pues construir algo así en una época donde tal 
+vez solo existía Copilot para sugerirte cosas
+
+0:12:33.760,0:12:40.280
+es un como tú bien dices, ¿no? no brainer, es 
+definitivamente es es código que considero arte
+
+0:12:40.280,0:12:48.120
+y pues simplemente eh funciona de manera pues 
+básica, pues sabemos que es un metaframework,
+
+0:12:48.120,0:12:52.680
+que básicamente es un framework construido 
+encima de otro framework, ¿no? Entonces,
+
+0:12:52.680,0:12:57.600
+lo que hace es simplemente checar tus ficheros 
+dependiendo de dónde los pongas. hay ciertas
+
+0:12:57.600,0:13:03.680
+convenciones que que están en la documentación y 
+dependiendo de esas convenciones te crea la ruta
+
+0:13:03.680,0:13:09.240
+exactamente como Angular lo haría. O sea, al final 
+del día, si necesitas tú hacer algún ajuste manual
+
+0:13:09.240,0:13:15.400
+o hacer un una inclusive no eres fan pues del del 
+enrutamiento por archivos que mucha gente no es no
+
+0:13:15.400,0:13:21.960
+es fan, pues simplemente puedes seguir utilizando 
+el el enrutamiento de de Angular pues natural sin
+
+0:13:21.960,0:13:28.480
+necesidad de que dejes de usar otras cosas que 
+Analog pues provee como pues el soporte para
+
+0:13:28.480,0:13:33.440
+Nitro para pues hacer tus deployment en cualquier 
+en cualquier lugar que podemos platicar acerca
+
+0:13:33.440,0:13:40.120
+de eso. Exacto. Pues básicamente es una de las 
+cosas que sentí más facilidad para construir algo
+
+0:13:40.120,0:13:47.680
+tan simple. Entonces yo diría que para mí sería 
+una lección bastante simple, Analog para blogs,
+
+0:13:47.680,0:13:55.960
+para cosas que sean ricas en contenido. ¿Por qué? 
+Porque pues es muchísimo más fácil que utilizar eh
+
+0:13:55.960,0:14:03.880
+Angular como framework normal. Y eso que Angular 
+ha mejorado muchísimo ahorita los cambios en la
+
+0:14:03.880,0:14:09.960
+API en general en Angular han hecho que el 
+la curva de aprendizaje sea muchísimo menor
+
+0:14:09.960,0:14:18.440
+a mi parecer, pero aún eh el hecho de que sea un 
+framework tan opinionado o eh pues simplemente tan
+
+0:14:18.440,0:14:25.040
+rígido como tal, que pero ha cambiado bastante 
+en las últimas versiones, digamos, las últimas
+
+0:14:25.040,0:14:31.800
+cinco o seis versiones se han desacoplado de 
+herramientas que tu proyecto dependía de ellas.
+
+0:14:31.800,0:14:36.960
+Muchas de la gente que colabora con Analog 
+es también parte de la comunidad de Angular.
+
+0:14:36.960,0:14:41.920
+Entonces es difícil no pensar que en cierta 
+forma varias de las convenciones que Analog
+
+0:14:41.920,0:14:49.280
+introdujo como parte de su ecosistema ayudaron 
+a a definir o a dar luz verde a ciertos temas
+
+0:14:49.280,0:14:54.720
+dentro del framework de Angular que tal vez no se 
+habían tocado como debía, pero vieron que sí había
+
+0:14:54.720,0:15:02.320
+un momentum porque Analog lo estaba teniendo en 
+algún punto y pues quiero pensar que se decidió
+
+0:15:02.320,0:15:07.680
+por ese tipo de situaciones. Por ejemplo, una de 
+las cosas que que vi casi de manera inmediata,
+
+0:15:07.680,0:15:13.360
+aunque yo creo que era inevitable, ¿no? Pero 
+pues ayudó bastante a que el equipo de Angular,
+
+0:15:13.360,0:15:20.760
+yo creo, decidiera implementar pues su propia 
+versión de de su integración con Vite, porque pues
+
+0:15:20.760,0:15:27.160
+para empezar hubo una clara demostración de que 
+funcionaba. Obviamente no estoy pues tan metido en
+
+0:15:27.160,0:15:32.600
+en cómo funcionan las decisiones en el framework 
+ni mucho menos. no es una comunidad este bastante
+
+0:15:32.600,0:15:40.560
+amplia, pero al menos quiero pensar que en en 
+su momento eso generó preguntas de la comunidad,
+
+0:15:40.560,0:15:53.840
+generó este incluso recuerdo eh cuando eh Chau 
+y y Brandon eh generaron los NG files, no sé si no
+
+0:15:53.840,0:16:01.160
+sé si recuerdas que era punto y eso causó terminar 
+logrando el tipo nomenclatura que fue simplificada
+
+0:16:01.160,0:16:08.720
+también gracias a todo el vanguardismo que estaba 
+llevando a cabo. Mm, entonces varias cosas que que
+
+0:16:08.720,0:16:16.480
+yo creo están implementadas en el framework han 
+ayudado a que como que al final nosotros como
+
+0:16:16.480,0:16:23.200
+proyecto Analog se nutre de Angular, entonces 
+es normal que si hay algún nuevo feature o algo
+
+0:16:23.200,0:16:30.520
+nuevo en el framework, pues de manera natural 
+funcione en Analog porque se construye encima.
+
+0:16:30.520,0:16:38.480
+Y al mismo tiempo hay algunos conceptos que pues 
+se pueden experimentar fuera de lo rígido que
+
+0:16:38.480,0:16:45.000
+puede ser Angular en ciertos aspectos, ¿no? Un 
+buen ejemplo viene siendo en diciembre cuando
+
+0:16:45.000,0:16:53.880
+Brandon introdujo los Angular Skills dentro del 
+proyecto de Analog y no pasaron ni dos meses,
+
+0:16:53.880,0:17:00.640
+creo que fue un mes, un mes y medio después. Mark Thompson, el DevRel Lead del equipo de Angular,
+
+0:17:00.640,0:17:06.520
+estaba después de una serie de conversaciones 
+que obviamente ocurrieron entre ambos proyectos,
+
+0:17:06.520,0:17:12.960
+estar introduciendo este mismo tipo de skills 
+para apoyar todo el conocimiento y poder dar
+
+0:17:12.960,0:17:17.320
+las instrucciones necesarias y reducir toda 
+la cantidad de token que normalmente nosotros
+
+0:17:17.320,0:17:24.360
+tendríamos que gastar. Y los Angular Skills 
+pasaron a ser parte intrínseca directa del
+
+0:17:24.360,0:17:30.040
+proyecto oficial de Angular. Exactamente. Entonces 
+es lo mismo, eh es lo que vemos o al menos es lo
+
+0:17:30.040,0:17:38.720
+que yo veo en cuanto a proyecto. Siento que hay 
+cierta inspiración que tal vez pues por todos los
+
+0:17:38.720,0:17:44.880
+procesos que ocurren eh dentro de dentro de Google 
+como compañía, dentro de Angular, como Framework,
+
+0:17:44.880,0:17:51.200
+tal vez no pueden acelerarse de una forma como la 
+comunidad quisiera. Ya ves que, por ejemplo, una
+
+0:17:51.200,0:17:57.800
+de las cosas que más se piden es el los llamados 
+eh selectorless, los componentes sin selector,
+
+0:17:57.800,0:18:04.000
+es una de las cosas que que que más he escuchado 
+a lo largo de de estos años en en en el framework
+
+0:18:04.000,0:18:10.600
+como tal. Y pues Signal Forms fue cuando se 
+introdujeron las señales, obviamente la la gente
+
+0:18:10.600,0:18:18.600
+dijo, "Oye, ¿y las formas para cuándo?" Y y al fin 
+me parece que en Angular 22 vamos a ver la luz en
+
+0:18:18.600,0:18:23.680
+ese aspecto. A mí me encantan. Yo ya estoy listo 
+para migrar todo lo que tenemos a a Signal Forms.
+
+0:18:23.680,0:18:28.680
+Inclusive mi blog es una forma muy pequeñita de 
+contacto, pero pues lo primero que hice cuando
+
+0:18:28.680,0:18:37.280
+salió ya la API eh pues estable, digamos, es 
+migrarlo y ver la versión 22 va a ser estable
+
+0:18:37.280,0:18:42.440
+un montón de características y funcionalidades 
+que tiene framework que actualmente están en
+
+0:18:42.440,0:18:49.040
+developer preview o incluso en etapa experimental. 
+Y una de las que más han sido es la de Angular,
+
+0:18:49.040,0:18:56.800
+que permite tener component headless que 
+no tengan de manera opinionada, ¿no?, eh,
+
+0:18:56.800,0:19:06.160
+de manera rígida todo el flujo de HTML y de CSS 
+que se ponía por encima de la capa de sistema de
+
+0:19:06.160,0:19:10.840
+diseño que uno estuviera introduciendo. Y esto es 
+algo que posiblemente en el futuro también ambos
+
+0:19:10.840,0:19:17.400
+proyectos continúen nutriéndose. Es correcto. 
+De hecho, una de las de las funcionalidades que,
+
+0:19:17.400,0:19:22.560
+si no me equivoco, se acaban de implementar 
+en como tal es la internacionalización.
+
+0:19:23.240,0:19:29.280
+Yo para mi blog en en de manera personal yo 
+utilizo Transloco. Es una librería que hace
+
+0:19:29.280,0:19:36.240
+exactamente eso, pero después eh pues obviamente 
+Brandon implementó lo que es la internalización
+
+0:19:36.240,0:19:41.960
+que ya viene de manera nativa en en Angular como 
+tal y pues simplemente se hereda del framework y
+
+0:19:41.960,0:19:47.440
+pues ya se puede utilizar de manera nativa también 
+en Analog. Entonces, me es una de mis una de mis
+
+0:19:47.440,0:19:52.160
+asignaturas pendientes de esigrarlo para ver 
+cómo la experiencia cambia y obviamente pues
+
+0:19:52.160,0:19:58.120
+dependiendo pues el el habrá que documentarlo, 
+tal vez tal vez escriba algo acerca de eso porque
+
+0:19:58.120,0:20:04.440
+pues obviamente mi principal idea cuando empecé a 
+hacer el blog era primero aprender, aprender sobre
+
+0:20:04.440,0:20:12.440
+el metaframework, cuáles eran sus diferencias, 
+cómo manejaba el SEO, cómo pues manejaba SSR,
+
+0:20:12.440,0:20:18.760
+SSG, cómo cómo manejaba el contenido, todo 
+eso, tratar de aprenderlo lo mejor posible,
+
+0:20:18.760,0:20:24.560
+pero al mismo tiempo pues quería yo contribuir un 
+poco con la comunidad y pues ya ves, dar darme tal
+
+0:20:24.560,0:20:31.800
+vez a conocer o algo así. Claro. Entonces parte 
+de eso es de estar al día igual con el proyecto,
+
+0:20:31.800,0:20:38.200
+que no siempre es fácil. Ahí sí que eh considero 
+extraterrestres a los que le dan seguimiento a
+
+0:20:38.200,0:20:43.480
+sus propias librerías y las mantienen siempre 
+al día porque es un trabajo estratosférico,
+
+0:20:43.480,0:20:49.480
+sobre todo teniendo un trabajo de full time. 
+Entonces ahí sí que toda mi admiración para la
+
+0:20:49.480,0:20:53.520
+gente que que también dedica su tiempo al open 
+source, que pues te abre muchísimas puertas.
+
+0:20:54.120,0:21:02.280
+Totalmente. Y Luis, históricamente el backend en 
+Angular ha sido manejado por una entidad externa,
+
+0:21:02.280,0:21:08.240
+pero Analog integra, hablando de Nitro, lo 
+integra, integra también el H3 directamente en
+
+0:21:08.240,0:21:16.280
+el flujo de trabajo con Analog y a permitirnos 
+definir API rout y middlewares en el servidor,
+
+0:21:16.280,0:21:24.960
+¿consideras que esto de cierta manera está 
+empujando a la comunidad de analogula más genera?
+
+0:21:24.960,0:21:32.840
+Erica hacia el concepto de un full stack 
+unificado. Ojalá. Yo creo ahí sí que en los
+
+0:21:32.840,0:21:37.200
+tiempos que vivimos, mientras más conocimiento, 
+mejor, de hecho, no en los tiempos que vivimos,
+
+0:21:37.200,0:21:41.920
+ahí en general como como developers, como 
+ingenieros, como como personas, mientras más
+
+0:21:41.920,0:21:51.280
+conocimiento, mejor. Entonces, yo creo que todo 
+lo que Analog pone en la mesa, como pues como bien
+
+0:21:51.280,0:21:58.760
+mencionabas, el H3 Nitro, las capacidades de Nitro 
+de que tú lo puedas eh desplegar casi cualquier
+
+0:21:58.760,0:22:04.960
+lado con solamente cambiarle ciertos parámetros 
+es para mí un no brainer, como tú bien dijiste.
+
+0:22:04.960,0:22:11.960
+En un principio, cuando yo quería desplegar mi 
+blog, Brandon me dijo, "Oye, trata con Netlify."
+
+0:22:11.960,0:22:17.200
+Entonces traté, no me gustó tanto la interfaz, 
+ya sabes, el el dashboard en el define no me
+
+0:22:17.200,0:22:23.480
+gustó por ciertas razones. Entonces, eh yo tenía 
+un par de proyectos en React que con un par de
+
+0:22:23.480,0:22:30.200
+cursos que había yo tomado que pues recomendaban 
+Vercel. Entonces yo intenté Vercel y para mí fue
+
+0:22:30.200,0:22:35.480
+increíble que pues simplemente yo cambiaba un 
+parámetro y pues ya no había mucho más que hacer,
+
+0:22:35.480,0:22:41.040
+¿no? Entonces es una de las cosas. Eh, muchas 
+veces cuando empezamos en la parte de frontend
+
+0:22:41.040,0:22:47.960
+o back end, pues a mucha gente se le dificulta 
+la parte de infraestructura. Entonces, facilitar
+
+0:22:47.960,0:22:55.040
+esas abrir esas puertas es parte de lo que yo 
+creo que trae a la mesa. Como bien mencionaste,
+
+0:22:55.040,0:23:03.160
+las rutas de servidor es es una cosa pues sencilla 
+porque pues al final del día tú que quieres a
+
+0:23:03.160,0:23:10.920
+nivel de arquitectura eh se trata de que tengas 
+tus cosas lo más cercanas posibles cuando son del
+
+0:23:10.920,0:23:18.120
+mismo dominio, ¿no? Entonces, pues en un framework 
+que es básicamente full stack, pues hace sentido
+
+0:23:18.120,0:23:22.720
+tener tus rutas de servidor, pues donde vive tu 
+página, que es la que va a consumir el contenido,
+
+0:23:22.720,0:23:30.200
+¿no? Entonces, la parte de Nitro, pues 
+como funciona como que en muy alto nivel,
+
+0:23:30.200,0:23:36.800
+hasta donde puedo recordar, es que pues Nitro 
+lleva como que la batuta a nivel servidor,
+
+0:23:36.800,0:23:41.480
+que tiene como que una función, una función 
+que se llama función load, eh que esa es la
+
+0:23:41.480,0:23:48.520
+que corre de inicio cuando pues se pide la página, 
+luego se pide el fetch hacia pues lo que tengas
+
+0:23:48.520,0:23:56.600
+externamente, el API o lo que sea, o los datos 
+se crea el HTML y sea hace el embebido de Claro,
+
+0:23:56.600,0:24:01.200
+el empaquetado como tal de que se va después a 
+poder desplegar, es decir, con manejadores evento
+
+0:24:01.200,0:24:09.040
+de H3 que obviamente de manera transitiva utiliza 
+Analog y lo traduce a formato que espera cada
+
+0:24:09.040,0:24:15.960
+proveedor. Si detecta o tú le indicas en ficheros 
+de configuración cuál es el entorno y traduce esos
+
+0:24:15.960,0:24:22.280
+manejadores de evento. Así que no importa si 
+desplegas en Google Cloud Run o en Firebase o en
+
+0:24:22.280,0:24:29.560
+AWS Lambda o como hayas dicho en Netlify en Vercel 
+o cualquier otro proveedor, Nitro está gestionando
+
+0:24:29.560,0:24:36.720
+de manera pasiva para uno la adaptación 
+a R time automáticamente. Y y yo aún ando
+
+0:24:36.720,0:24:42.360
+aprendiendo eh la parte de Nitro eh como tal, toda 
+la parte de middleares, todo lo que mencionaste,
+
+0:24:42.360,0:24:49.200
+porque pues eh para mí es sorprendente que algo 
+tan pequeño, tan tan agnóstico eh sea tan potente
+
+0:24:49.200,0:24:55.120
+en el sentido de que hace muchísimo. Entonces ahí 
+sí que aún ando explorándolo porque tengo un par
+
+0:24:55.120,0:25:00.880
+de proyectos en la empresa donde trabajo donde 
+voy a sugerir el framework como tal. Entonces,
+
+0:25:00.880,0:25:07.080
+obviamente para sugerir algo que es va a ser 
+full stack a nivel ya empresarial, pues prefiero
+
+0:25:07.080,0:25:12.880
+pues tener como que las ideas más claras en 
+el sentido más que nada del backend, porque
+
+0:25:12.880,0:25:17.720
+pues me especializo un poquito más en la parte 
+del frontend, pero ahí sí que soy curioso por
+
+0:25:17.720,0:25:24.320
+naturaleza y trato de de de ver y aprender sobre 
+todas las cosas que que rodean al al metaframework
+
+0:25:24.320,0:25:32.400
+como tal, ¿no? Aún andamos en eso, pero si siempre 
+tratando de pues que la curiosidad nos mueva o si
+
+0:25:32.400,0:25:37.600
+no pues ahí sí que tenemos a a Brandon y a otros 
+integrantes del equipo que les podemos preguntar,
+
+0:25:37.600,0:25:43.840
+oye, ¿para dónde va esto? No, sí, cuando estábamos 
+coordinando lo del episodio, me mencionaste acerca
+
+0:25:43.840,0:25:51.000
+del entusiasmo que tenías con lo de Vite 8 sobre 
+el pipeline de compilación, sí, que posiciona una
+
+0:25:51.000,0:25:56.320
+vez más a Analog hacia la vanguardia de las 
+herramientas de construcción moderna. Así que,
+
+0:25:56.320,0:26:01.480
+¿qué piensas acerca de los tiempos de construcción 
+de proyecto en todos los beneficios nuevos que
+
+0:26:01.480,0:26:07.840
+trae la nueva versión de Vite? Se ve, para empezar, 
+se ve increíble. Eh, no sé, tal vez mucha gente
+
+0:26:07.840,0:26:12.880
+no sepa o sí sepa dependiendo de qué tan informado 
+estés en el en cuanto a cómo funciona el framework
+
+0:26:12.880,0:26:23.720
+o cómo manejan pues los bundlers y cómo Angular 
+implementó su versión de Vite es si no me equivoco
+
+0:26:23.720,0:26:30.200
+y y espero espero no equivocarme, pero 
+Angular maneja una versión solamente de
+
+0:26:30.200,0:26:41.000
+servidor de development para Vite diferente a como 
+Analog lo hace. Analog lo hace para de y también
+
+0:26:41.000,0:26:46.440
+pueda nutrir del ecosistema de los plugins. 
+Exactamente. De todos los plugins y y no sucede
+
+0:26:46.440,0:26:52.680
+lo mismo por cuestiones de limitaciones técnicas 
+que tiene Angular al ser parte de monorepo que
+
+0:26:52.680,0:26:58.520
+ellos mismos tienen allá dentro del ecosistema 
+de Google. Exactamente. Y pues ese es el tipo de
+
+0:26:58.520,0:27:04.400
+situaciones que al ser un framework un poquito 
+más rígido, pues puede ser que en un futuro,
+
+0:27:04.400,0:27:08.560
+dependiendo de qué tan abiertos estén 
+para hacer ciertas refactorizaciones en
+
+0:27:08.560,0:27:14.280
+su código interno y en su arquitectura, pues 
+a futuro es muy probable que lo implementen,
+
+0:27:14.280,0:27:19.560
+porque al final del día se está viendo 
+claramente que la tendencia de los frameworks,
+
+0:27:19.560,0:27:28.520
+los major frameworks, al menos creo que eh view 
+eh si no me equivoco, es reactivamente Nex más
+
+0:27:28.520,0:27:38.880
+que nada, yo creo Solid y hay hay creo que hay 
+varios que o la mayoría ya utilizan Bamente
+
+0:27:38.880,0:27:46.160
+casi todos, excepto uno de ellos, no recuerdo 
+cuál es cuál en específico, creo que es Next.js
+
+0:27:46.160,0:27:52.120
+que es el que no está utilizando Vite por debajo 
+de la fachada, pero bueno, en su mayoría pues
+
+0:27:52.120,0:27:57.800
+están viendo pues el potencial y pues están 
+tratando de implementar de una manera u otra,
+
+0:27:57.800,0:28:03.800
+¿no? O están teniendo pues sus versiones de algo 
+similar, ¿no? Entonces, yo creo que hablábamos
+
+0:28:03.800,0:28:09.240
+un poquito al inicio de la conversación de 
+qué aporta analoga, ¿no? Porque ciertamente
+
+0:28:09.240,0:28:16.080
+no es lo mismo que aportaba de inicio, porque en 
+algunas cosas Angular pues ya como que mejorado,
+
+0:28:16.080,0:28:20.960
+¿no? Porque en un inicio pues se tenía lo que 
+era Angular Universal. Lo utilicé solo un par
+
+0:28:20.960,0:28:27.440
+de veces, pero sí tenía cierta cierto nivel de 
+dificultad y ciertas cosas que pues tal vez no
+
+0:28:27.440,0:28:33.640
+hacían sentido a nivel de decisiones y todo 
+cambia con Angular SSR, que es como que el
+
+0:28:33.640,0:28:40.480
+nuevo paquete y pues ya se siente muchísimo más 
+natural y mucho mejor, ¿no? Mucho mejor pensado,
+
+0:28:40.480,0:28:47.960
+mucho mejor implementado. Entonces, obviamente 
+es otra manera de hacer ese SAR, que no quiere
+
+0:28:47.960,0:28:53.320
+decir que simplemente ya no aporte valor lo 
+que es Analog, ¿no?, sino que simplemente ya se
+
+0:28:53.320,0:28:59.440
+puede hasta inclusive nutrir de ciertas cosas de 
+Angular que antes tal vez no salía, como, no sé,
+
+0:28:59.440,0:29:04.880
+creo que hay unas API nuevas para eh las rutas, 
+¿no?, que son rutas, creo que ruta de cliente,
+
+0:29:04.880,0:29:10.160
+ruta de servidor. las rutas híbridas, es decir, el 
+mecanismo de renderizado híbrido hybrid rendering,
+
+0:29:10.160,0:29:16.880
+que te permite definir si va a ser prerender, si 
+va a ser server render con SSR o lo convencional
+
+0:29:16.880,0:29:21.880
+típico de estos framework de JavaScript desde un 
+inicio que era todo el proceso de representación
+
+0:29:21.880,0:29:27.080
+y todo lo que estación de nodos, etcétera, 
+ocurriendo del lado del cliente a un costo
+
+0:29:27.080,0:29:31.880
+grandísimo para el navegador. Exactamente. 
+Sí. No, no para las máquinas de nosotros
+
+0:29:31.880,0:29:36.440
+como desarrolladores que normalmente tenemos una 
+buena cantidad de RAM. tenemos un buen procesador,
+
+0:29:36.440,0:29:43.840
+un entorno que está respondiendo con una latencia 
+mínima y con todas las capacidades de cómputo que
+
+0:29:43.840,0:29:50.200
+nosotros tenemos, pero pensando en una conexión 
+bastante lenta o también en cómo las máquinas
+
+0:29:50.200,0:29:56.880
+que permiten trabajar con el base rank para poder 
+visibilizar tu sitio en la búsqueda que vayan a
+
+0:29:56.880,0:30:03.720
+hacer los usuarios en Google o en Bing o cualquier 
+otro motor de búsqueda. Cuando se trata de eso,
+
+0:30:03.720,0:30:10.240
+client rendering no es la mejor opción de 
+representación. Exactamente. Una de las
+
+0:30:10.240,0:30:18.960
+primeras cosas que aprendí porque pues mi primer 
+acercamiento con el renderizado de servidor fue
+
+0:30:18.960,0:30:26.480
+realmente con Analog, pues había varios términos 
+o varias situaciones que no esperaba, como ciertos
+
+0:30:26.480,0:30:32.120
+flickering o ciertos como que parpadeos en la 
+página, que yo no me explicaba a veces cómo
+
+0:30:32.120,0:30:38.360
+sucedía eso, ya sabes, a nivel cliente o cómo 
+tratar de evitarlo. Las técnicas que yo sabía
+
+0:30:38.360,0:30:44.720
+en su momento cuando empecé a explorar un poco el 
+metaframework son muy diferentes a las que pues
+
+0:30:44.720,0:30:52.240
+ahora sé por los términos o por las convenciones 
+que no fueron pues introducidas como tal porque
+
+0:30:52.240,0:30:59.560
+pues son muchas convenciones que ya existen, pero 
+fueron implementadas un poquito más eh con bases
+
+0:30:59.560,0:31:06.920
+en Angular porque pues de nuevo Angular no te daba 
+esas pautas para tú saber correctamente cómo ser
+
+0:31:06.920,0:31:13.400
+SSR, SSG y todo eso, ¿no? Incluso acompañado de 
+la hidratación incremental no destructiva, que es
+
+0:31:13.400,0:31:19.120
+la que ocasiona ese tipo de de flashazo en blanco 
+en el color que tú tengas ahí en el background de
+
+0:31:19.120,0:31:25.240
+la página, que dificulta totalmente una buena 
+puntuación en los Core Web Vitals que al final
+
+0:31:25.240,0:31:30.760
+lo que hacen es impactar en la experiencia de de 
+los usuarios que están utilizando las aplicaciones
+
+0:31:30.760,0:31:35.600
+web que nosotros desarrollamos. Básicamente 
+los tres Core Web Vitals estaban impactados,
+
+0:31:35.600,0:31:43.640
+pero especialmente que tenía que ver con con el 
+First Input Delay y con este el interaction to
+
+0:31:43.640,0:31:50.200
+next pain también Cumulative Layout Shift eran uno 
+de los más afectados para este tipo de caso que
+
+0:31:50.200,0:31:55.960
+utilizaban service rendering de una manera que no 
+es la moderna que existe en el framew de Angular.
+
+0:31:56.520,0:32:04.400
+Exactamente. Entonces digo, eh, y volviendo un 
+poco al tema, hablabas un poco de de preguntabas
+
+0:32:04.400,0:32:10.920
+sobre Vite, la nueva versión y una de las primeras 
+cosas que vi que hizo que aumentara mucho la
+
+0:32:10.920,0:32:18.920
+adopción era Vitest, que pues al final del día 
+empezó como creo que como una rama y se volvió
+
+0:32:18.920,0:32:24.920
+casi casi su propio proyecto dentro de Analog 
+a tal grado que se implementó en en Nx, en el
+
+0:32:24.920,0:32:32.520
+monorepo como tal, ya tienes tú para pues poder 
+agregar bites de Analog como tal, desde cero en la
+
+0:32:32.520,0:32:39.680
+comunidad, en Angular como tal, ya se utiliza como 
+un plugin para Angular. Entonces creo que Vite,
+
+0:32:39.680,0:32:46.160
+la nueva versión viene a mejorar eso inclusive 
+muchísimo más con la velocidad B, el proyecto
+
+0:32:46.160,0:32:54.000
+que Brandon subió con muchísimos componentes 
+para poder hacer bench marking y ver cuál era la
+
+0:32:54.000,0:33:01.720
+diferencia en tiempos de ejecución y compilación, 
+¿no? Era una cosa increíble. Entonces, como tal,
+
+0:33:01.720,0:33:08.280
+para el ecosistema, yo creo que Analog Angular 
+son como que van de la mano muchas veces en el
+
+0:33:08.280,0:33:16.600
+sentido de que la innovación que sucede o que yo 
+veo suceder de un lado muchas veces abre puertas
+
+0:33:16.600,0:33:24.320
+o da ideas sólidas que no creo que no existieran 
+porque pues desde que desde que una persona tenga
+
+0:33:24.320,0:33:29.360
+la curiosidad de hacer algo es que muchísimas 
+más dentro del mismo ecosistema es posible que
+
+0:33:29.360,0:33:34.440
+la hayan tenido. Entonces, ya ayuda a que otros 
+levanten un poco la voz en el sentido de que, oye,
+
+0:33:34.440,0:33:40.760
+y esta parte de acá podríamos implementarla aquí, 
+la arquitectura podría cambiar un poco, ya sabes.
+
+0:33:40.760,0:33:46.920
+Entonces, esas esas cuestiones a mí en lo personal 
+me ilusiona un poco pues hacia dónde va el
+
+0:33:46.920,0:33:52.880
+framework como tal y obviamente todo lo que hereda 
+de de Angular, que también Angular ha mejorado de
+
+0:33:52.880,0:34:00.080
+manera increíble, ¿no? Igual necesito explorar 
+un poco más qué puertas abre la nueva versión,
+
+0:34:00.080,0:34:06.920
+cómo se puede utilizar en en ciertos aspectos 
+empresariales, porque pues al final del día la
+
+0:34:06.920,0:34:16.240
+diferencia entre un proyecto de blog o personal o 
+de contenido y un proyecto empresarial es abismal.
+
+0:34:16.800,0:34:22.640
+Y yo tengo un proyecto actualmente en 
+desarrollo que es la conversión de blog
+
+0:34:22.640,0:34:29.200
+mío hablando retomando de los blogs de esos 
+de antaño que había comenzado en el 2008 en la
+
+0:34:29.200,0:34:36.200
+plataforma de Google que se llama Blogger que 
+no lo han hecho PRácticamente nada el año 2012,
+
+0:34:36.200,0:34:43.280
+2015 o algo así, lo han dejado en modo 
+mantenimiento y esa fue la primer acercamiento
+
+0:34:43.280,0:34:49.080
+que yo tuve a Analog hace aproximadamente ente 
+un año, un año y medio. Lo dejé ahí durmiendo,
+
+0:34:49.080,0:34:56.080
+pero ahora pienso volver a rescatarlo después de 
+esta conversación, por supuesto. Y la pregunta con
+
+0:34:56.080,0:35:03.040
+la que me gustaría ir cerrando el episodio es que 
+al enfrentarse a un proyecto de Analog en concreto
+
+0:35:03.040,0:35:09.800
+para un proyecto de migración de otra tecnología, 
+no necesariamente tiene que ser un blog, también
+
+0:35:09.800,0:35:15.160
+puede ser un sitio de marketing, algún sitio que 
+se beneficie de las características que ofrece el
+
+0:35:15.160,0:35:23.720
+renderizado de prerender el SSG. ¿Cuánto cambia 
+el flujo de trabajo respecto a los estándares
+
+0:35:23.720,0:35:29.720
+de Angular con vista a loquestación de agentes 
+de inteligencia artificial? Es decir, cuando lo
+
+0:35:29.720,0:35:36.480
+estamos corriendo, por ejemplo, en Antigravity 
+o en Visual Studio Code o en cualquier otro ID,
+
+0:35:36.480,0:35:41.920
+donde uno tenga una serie de skills, de agentes 
+corriendo, de instrucciones que uno le ponga,
+
+0:35:41.920,0:35:50.520
+¿cuál es la recomendación que harías para que el 
+contexto de que nosotros estamos proveyéndole a
+
+0:35:50.520,0:35:58.480
+eso, a ese modelo tenga la capacidad de entender 
+específicamente las bondades de Analog y no se
+
+0:35:58.480,0:36:03.760
+confunde funda tanto con lo que tiene Angular que 
+vayan a permitir que el proyecto fluya desde el
+
+0:36:03.760,0:36:09.280
+punto de vista de Analog. Dependería mucho de 
+tu proyecto como tal. mucha gente ya está muy
+
+0:36:09.280,0:36:14.280
+familiarizada con construir sus propios skills o 
+construir sus instructions dependiendo que estés
+
+0:36:14.280,0:36:20.640
+utilizando, tu cloud MD o tu, ya sabes, ¿no? Tu 
+agents toda toda esa parte que pues regula un
+
+0:36:20.640,0:36:29.000
+poco el contexto inicial para pues darle como que 
+la idea principal al proyecto de cómo construir
+
+0:36:29.000,0:36:35.880
+las cosas. Ahora mismo tú habías mencionado 
+los skills que se habían creado y pues los
+
+0:36:35.880,0:36:42.800
+skills como tal de Angular funcionan en Analog 
+porque pues al final del día son pares. Solo qué
+
+0:36:42.800,0:36:48.880
+cambiaría yo dependiendo de nuevo. Eh, haré como 
+ejemplo Copilot porque pues es el más simple que
+
+0:36:48.880,0:36:56.040
+conozco. Tal vez en tus instructions pondría ahí 
+ciertos parámetros de cómo funciona el enrutado
+
+0:36:56.040,0:37:00.280
+por ficheros. Ese sería como que lo principal 
+porque pues al final del día si vas a hacer un
+
+0:37:00.280,0:37:09.720
+sitio eh de marketing, de contenido o algo pues 
+sencillo, digamos, te importa pues utilizar las
+
+0:37:09.720,0:37:15.360
+convenciones que lo harán más sencillo, ¿no? 
+Porque pues al final el LLM te puede crear un
+
+0:37:15.360,0:37:21.680
+routing casi perfecto out of the box si pues si 
+haces tu prompting de manera adecuada, ya sabes,
+
+0:37:21.680,0:37:27.440
+pues con tu lazy loading, con todo lo que conlleva 
+dependiendo de lo que tengas, ¿no? Pero pero no
+
+0:37:27.440,0:37:33.960
+en la manera que Analog está ofreciendo para tener 
+el boilerplate bien reducido, así que posiblemente
+
+0:37:33.960,0:37:39.680
+apuntar hacia la documentación oficial para 
+hacer un mejor grounding sería un buen consejo y
+
+0:37:39.680,0:37:45.440
+y de hecho lo voy a lo voy a proponer. Habría que 
+checar. Hace hace un buen rato que no checo el git
+
+0:37:45.440,0:37:51.240
+para para ver pues los issues y todo. A lo mejor 
+incluso ya está ahí y simplemente una necesita de
+
+0:37:51.240,0:37:57.200
+alguien que levante la mano y quiera colaborar 
+con skill sets o o con instructions o algo así.
+
+0:37:57.200,0:38:02.080
+Pero yo creo que y es una excelente pregunta, lo 
+primero que haría tal vez sería darle un contexto
+
+0:38:02.080,0:38:07.640
+adecuado de de un par de funcionalidades 
+clave, que es el renderizado de Markdown,
+
+0:38:07.640,0:38:15.560
+dónde van los archivos, tal vez la parte de pages, 
+darle un contexto adecuado de cuándo es una ruta
+
+0:38:15.560,0:38:21.280
+de autorización, cuándo es un slog, todas esas 
+situaciones que son como que muy específicas
+
+0:38:21.280,0:38:28.160
+de Analog como framework y están totalmente 
+despegadas de como Angular hace las cosas,
+
+0:38:28.160,0:38:34.280
+¿no? Aunque se traduzca al final como una ruta 
+idéntica a la de Angular, que pues al final eso es
+
+0:38:34.280,0:38:40.440
+lo que hace, pues si es es bastante válido darle 
+un contexto adecuado para que no alucine y no
+
+0:38:40.440,0:38:45.760
+empiece a crearte simplemente una ruta de Angular 
+normal que pues no vas a estar aprovechando
+
+0:38:45.760,0:38:50.600
+los beneficios de utilizar el metaframework. 
+Exacto. Incluso en la planificación de proyecto,
+
+0:38:50.600,0:38:55.240
+si en vez de un blog lo que estamos haciendo es un 
+portafolio de proyectos, darle las instrucciones
+
+0:38:55.240,0:39:00.600
+para poder utilizar el mismo scaffolding que 
+ofrece Analog defecto cuando uno genera una
+
+0:39:00.600,0:39:06.800
+aplicación que te a escoger entre tres diferentes 
+modalidades. La más básica es la mínima, pero
+
+0:39:06.800,0:39:12.840
+hay otras dos, incluyendo la de blog, pero esa de 
+blog se puede ajustar para otro tipo de proyectos
+
+0:39:12.840,0:39:18.720
+que no necesariamente sean en torno a tener una 
+Viteácora que tenga una serie de post que estén
+
+0:39:18.720,0:39:24.720
+organizados de manera cronológica inversa. Si uno 
+le da toda esa información de antemano, te puede
+
+0:39:24.720,0:39:30.600
+hacer la simplificación de la refactorización del 
+proyecto de una manera fantástica. Sí. Y al final,
+
+0:39:30.600,0:39:38.480
+pues a día de hoy ahorrar tokens es es clave. 
+en nuestra industria y el boom que vi en su
+
+0:39:38.480,0:39:44.360
+momento cuando Analog pues empezó a agarrar 
+cierto momentum fue que mucha gente su primer
+
+0:39:44.360,0:39:51.080
+proyecto fue de exploración, fue migrar lo que 
+yo ya tenía de blog a Anglo, ¿no? Inclusive a
+
+0:39:51.080,0:39:57.040
+día de hoy aún veo y tú mismo tienes ese proyecto 
+en mente. Es un caso de uso bastante común. Sí,
+
+0:39:57.040,0:40:02.760
+exacto. Es un caso bastante común. Entonces, 
+yo creo que es como que tu tu línea de entrada.
+
+0:40:02.760,0:40:08.760
+De hecho, eso llevó a Brandon. Creo que en su 
+momento hubo un PR que daba el scaffolding del
+
+0:40:08.760,0:40:12.360
+modo blog, que es lo que tú mencionas, ¿no? 
+Que cuando creas una aplicación nueva te dice,
+
+0:40:12.360,0:40:16.440
+"Oye, ¿crees quieres crear un modo 
+blog?" En su momento fue por eso,
+
+0:40:16.440,0:40:24.000
+porque el boom real que se vio de inicio en Analog 
+fue ese mismo. Ya después inclusive una empresa
+
+0:40:24.000,0:40:29.080
+como tal empezó a ya a utilizar Analog de manera 
+empresarial. No tengo el nombre en este momento,
+
+0:40:29.080,0:40:33.200
+pero sé que Brandon tiene muy buena relación 
+con ellos. creo que es el principal sponsor
+
+0:40:33.200,0:40:39.400
+de Analog como proyecto open source y pues 
+al final del día es un buen punto, o sea,
+
+0:40:39.400,0:40:44.520
+simplemente darle las instrucciones adecuadas para 
+que de inicio el contexto sea adecuado te va a
+
+0:40:44.520,0:40:48.680
+ayudar tremendamente, ¿no? Exacto. Y cualquier 
+persona que quiera construir con el proyecto,
+
+0:40:48.680,0:40:53.760
+a lo mejor lo que puede es indicar los skills 
+correspondientes para ayudar al proceso de
+
+0:40:53.760,0:40:58.280
+migración, a lo mejor de convertir de esta misma 
+plataforma que te estaba mencionando. Puede ser
+
+0:40:58.280,0:41:08.560
+Blogger o WordPress o algo creado en algún sistema 
+de blogs que ya no tenga ese tipo de de trending
+
+0:41:08.560,0:41:14.360
+hoy en día, incluso hasta de Astro. Y por qué 
+no hacer la documentación en Analog en sí mismo
+
+0:41:14.360,0:41:20.280
+y poder emplear esa característica que tiene 
+de poder potenciar Viteácoras o documentaciones
+
+0:41:20.280,0:41:25.320
+dentro del mismo espacio de la documentación 
+oficial de Analog. Por ahí pueden haber varias
+
+0:41:25.320,0:41:32.680
+avenidas para poder continuar avanzando Analog 
+y se utilice a sí mismo. Es correcto. Entonces,
+
+0:41:32.680,0:41:38.120
+Luis, de nuevo, muchísimas gracias por haber 
+participado. Si hay alguna otra cosa antes de
+
+0:41:38.120,0:41:43.000
+concluir el episodio que quisiera mencionar 
+sobre algo que no hayamos tocado durante la
+
+0:41:43.000,0:41:50.480
+conversación. Obviamente se mencionó lo que es 
+Vitest. eh es bastante básico en ayudó muchísimo
+
+0:41:50.480,0:41:57.760
+en la adopción de Analog y en darle cierto nombre 
+a al framework como tal, pero pues también Analog
+
+0:41:57.760,0:42:04.680
+tiene integración con Storybook para los sistemas 
+de de diseño. Storybook es claro que quiera tener
+
+0:42:04.680,0:42:10.960
+en un playground con los componentes aislados 
+y poder estar no solamente usándolo viendo,
+
+0:42:10.960,0:42:15.840
+haciendo una ingeniería inversa o o viendo 
+la documentación de cómo se desarrollaron,
+
+0:42:15.840,0:42:21.120
+sino desarrollar activamente componentes 
+de manera aislada, Storybook es genial.
+
+0:42:21.120,0:42:27.360
+Exactamente. Al final del día, yo creo que podría 
+tal vez dar una conclusión de que mucha gente tal
+
+0:42:27.360,0:42:35.560
+vez pudiera pensar o decir que Analog sería un 
+fork de Angular, pero no es como tal, no para
+
+0:42:35.560,0:42:42.400
+allá va. Yo diría que es más una alternativa con 
+convenciones encima. Así mismo, Luis. Y bueno,
+
+0:42:42.400,0:42:47.520
+muchísimas gracias por todo, por estar acá 
+compartiendo tanto conocimiento. He disfrutado,
+
+0:42:47.520,0:42:54.440
+he aprendido mucho de la conversación, así que 
+espero tener cosas para enseñarte de lo que
+
+0:42:54.440,0:42:59.880
+estaré haciendo en Analog, incluso hasta el mismo 
+sitio web. Tengo registrado angularidades.com que
+
+0:42:59.880,0:43:05.840
+está totalmente ahí dormido hace como un año 
+con unas partículas moviéndose, pareciéndose
+
+0:43:05.840,0:43:12.240
+en la introducción, pero en un futuro lo voy a 
+desplegar en Analog y bueno, posiblemente tenga
+
+0:43:12.240,0:43:18.680
+el feedback tuyo también. Así que te lo agradeceré 
+cantidad. Te agradezco por la invitación y por la
+
+0:43:18.680,0:43:22.920
+por la charla. Esto fue bastante entretenido 
+y muchísimas gracias de nuevo por invitarme.
