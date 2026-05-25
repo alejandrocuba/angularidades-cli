@@ -48,24 +48,27 @@ Temas que abordamos durante la conversación:
 
 ---
 ---
+# youtube_captions_es.sbv
+**[CRITICAL INSTRUCTION - YOUTUBE SYNC COMPATIBILITY]**
+Technically reviewed and corrected Spanish transcript.
+FORMAT: Valid SBV (SubViewer) format, strictly maintaining the exact same timestamps from the original `captions.sbv`.
+DO NOT add speaker tags (e.g., "Name:").
+DO NOT remove filler words (e.g., "eh", "ah") or change the pacing.
+ONLY correct technical typos (e.g., "Cloud Room" -> "Cloud Run").
+Final file must be structurally identical to the original for YouTube auto-sync.
+
+---
 # youtube_captions_en.sbv
 **[CRITICAL INSTRUCTION - YOUTUBE SYNC COMPATIBILITY]**
 Technically reviewed and translated English transcript WITH TIMESTAMPS.
-FORMAT: Valid SBV (SubViewer) format, strictly maintaining the exact same timestamps from `original_captions.sbv`.
+FORMAT: Valid SBV (SubViewer) format, strictly maintaining the exact same timestamps from the original `captions.sbv`.
+Save tokens, use the same corrected terms from the spanish corrected transcript.
 DO NOT translate the brand name "Angularidades" (keep it as "Angularidades", do not use "Angularities").
 DO NOT add speaker tags (e.g., "Name:").
 ONLY correct technical terms and translate accurately to English.
 Final file must contain the exact same timestamp blocks as the original Spanish SBV, but with the text translated.
 
 ---
-# youtube_transcript_es.md
-**[CRITICAL INSTRUCTION - YOUTUBE SYNC COMPATIBILITY]**
-Technically reviewed and corrected Spanish transcript.
-FORMAT: Single block of text (or exactly matching the structure of `original_transcript.txt`).
-DO NOT add speaker tags (e.g., "Name:").
-DO NOT remove filler words (e.g., "eh", "ah") or change the pacing.
-ONLY correct technical typos (e.g., "Cloud Room" -> "Cloud Run").
-Final file must be structurally identical to the original for YouTube auto-sync.
 ---
 # youtube_title_es.txt / youtube_title_en.txt
 Generate two separate files, one in Spanish and one in English.

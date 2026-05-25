@@ -15,8 +15,15 @@ Distill raw transcripts and drafts into clear, concise, technically accurate sum
 - **Tone:** Natural & Direct. Write as if a lead engineer is introducing a colleague. No flowery or AI clichés.
 - **Spanish Nuance:** Use neutral, professional technical Spanish. Avoid literal unnatural translations.
 - **Precision:** Use exact timestamps from the SRT file. Ignore timestamps from other sources.
-- **Transcript Format (English):** You MUST translate the English transcript **BLOCK BY BLOCK** using the `original_captions.sbv` as a direct template.
-- **NEVER** use proportional mapping or output continuous text for English. Each timestamp block in the output must correspond exactly to its counterpart in the original Spanish SBV.
+- **Transcript Translation Protocol (Token-Saving & Alignment Check):** 
+  - To translate the Spanish captions to English block-by-block, NEVER translate the entire raw SBV file containing timestamps in a single prompt (this wastes input/output tokens and causes alignment/timestamp errors).
+  - Instead, use the automated script `scripts/publisher/translate-helper.js` to dump Spanish text blocks into JSON arrays:
+    `node scripts/publisher/translate-helper.js dump <episode>`
+  - Translate the generated chunk JSON files (`1_recording/chunk-X-Y.json`) in batches of 100 blocks, saving the translated JSON arrays to `<episodeDir>/2_publisher/trans-X-Y.json`.
+  - Finally, compile the translated SBV file:
+    `node scripts/publisher/translate-helper.js build <episode>`
+  - If a block count mismatch is detected, run the validation check:
+    `node scripts/publisher/translate-helper.js validate <episode>`
 - **Brand Preservation:** Always keep "Angularidades" as "Angularidades". DO NOT translate to "Angularities".
 - **Language Protocol:** Follow language specifications in `output_schema.md`.
 - **Archival Integrity:** DO NOT modify any existing episode folders. Work EXCLUSIVELY on the newest episode directory, unless explicitly instructed to target a specific older episode number. Previous episodes are kept for archival purposes and must remain untouched.

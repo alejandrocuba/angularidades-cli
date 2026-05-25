@@ -1,0 +1,1208 @@
+0:00:07.080,0:00:12.120
+Luis, Analog is a meta-framework based on Angular, which among other things aims to
+
+0:00:12.120,0:00:18.600
+improve the developer experience by adding a layer of conventions, of tools for
+
+0:00:18.600,0:00:23.760
+the creation of web applications with hybrid rendering techniques, both on the client side
+
+0:00:23.760,0:00:30.960
+as well as the server side. And that's what we'll be talking about today. But before that, I'd like to
+
+0:00:30.960,0:00:37.160
+have the opportunity to introduce you to those who don't know you yet, and of course thank you for being here
+
+0:00:37.160,0:00:43.240
+in this space and contributing to us with your knowledge about this meta-framework.
+
+0:00:43.240,0:00:49.400
+No, thank you for the invitation. Thanks. Yes, you are originally from Mérida, Yucatán.
+
+0:00:49.400,0:00:55.760
+Currently you reside a bit further north in Tampa, Florida. You are a mechatronics graduate.
+
+0:00:55.760,0:01:02.000
+You have over a decade of professional experience in technical leadership,
+
+0:01:02.000,0:01:11.640
+frontend engineering, and you are one of the contributors to the core team of Analog, the Angular framework.
+
+0:01:11.640,0:01:18.040
+So, do you remember when was the first time you heard about Analog?
+
+0:01:19.800,0:01:27.080
+I start, let's say, looking to contribute to something, in what is
+
+0:01:27.080,0:01:33.080
+open source, out of curiosity from never having done it before. I did a small
+
+0:01:33.080,0:01:39.480
+contribution to a toast library, I think it's called NgToast or something. I made a
+
+0:01:39.480,0:01:45.960
+small contribution there, and that's how I started the path of making a broader contribution,
+
+0:01:45.960,0:01:51.280
+you know? So that kind of gave me the courage to try to make a contribution to Angular itself, in the framework.
+
+0:01:51.280,0:01:56.560
+And I made a small one there. Matthieu, I think
+
+0:01:56.560,0:02:03.080
+Matthieu is his name, this guy from France, I don't remember his name very well, Matthieu. He helped me
+
+0:02:03.080,0:02:07.520
+to make a small contribution to Angular. It was something quite simple, I think it was a fix
+
+0:02:07.520,0:02:15.640
+for a type in TypeScript, but just installing all the tools locally
+
+0:02:15.640,0:02:20.520
+to try to contribute to the framework got me super curious, you know?
+
+0:02:20.520,0:02:27.640
+Then, between that interaction on Twitter and other social networks, you know how the
+
+0:02:27.640,0:02:33.600
+algorithm starts suggesting people to you and you start seeing more things shared by people in
+
+0:02:33.600,0:02:38.600
+that circle. That's where I find for the first time something Brandon shared, which was,
+
+0:02:38.600,0:02:45.960
+I think, a video proposing some conventions for full-stack at that point in time, right?
+
+0:02:45.960,0:02:53.000
+I think Angular Universal existed for SSR, but it wasn't very well-regarded back
+
+0:02:53.000,0:02:58.320
+then, as far as I remember. So from there, I followed him on Twitter and started
+
+0:02:58.320,0:03:04.880
+seeing the contributions he was making. He was a core member of NgRx, and then he
+
+0:03:04.880,0:03:11.760
+announces Analog, and I got quite curious because at that time, it happened that
+
+0:03:11.760,0:03:17.080
+I was learning a bit more about React, and obviously, learning React exposes you to everything that is
+
+0:03:17.080,0:03:24.440
+Next.js, a full-stack framework as such, right? So obviously
+
+0:03:24.440,0:03:30.280
+when I saw it, I was looking for something similar in Angular, and it didn't exist. So I think that's where
+
+0:03:30.280,0:03:37.000
+the bridge happened, and I started trying to collaborate, starting with documentation.
+
+0:03:37.000,0:03:47.080
+Then I think my first real collaboration was for Markdown. Analog handles content routes
+
+0:03:47.080,0:03:54.320
+as content routes, meaning if you include a Markdown file in your directory,
+
+0:03:54.320,0:03:58.960
+the router recognizes it and automatically presents it as content, right? So for that
+
+0:03:58.960,0:04:05.760
+to work, a library was used back then, I think it was marked.js, if I'm not mistaken. We were
+
+0:04:05.760,0:04:11.800
+in the process of all libraries migrating to providers and
+
+0:04:11.800,0:04:18.360
+everything that comes with migrating from NgModules to standalone components, right?
+
+0:04:18.360,0:04:24.600
+So that was missing; it had to be made a bit more open to support other libraries, not just
+
+0:04:24.600,0:04:29.040
+marked.js. So that was my first contribution. We really dove into the code there.
+
+0:04:29.040,0:04:36.680
+We didn't know it very well, and it was a pretty large codebase. I thought, you know,
+
+0:04:36.680,0:04:44.880
+it makes sense that something built on top of something that is massive is going to have
+
+0:04:44.880,0:04:49.480
+its level of complexity, right? But we learned as we went along,
+
+0:04:49.480,0:04:56.200
+and that's where I had my first real interaction with Brandon and the meta-framework itself,
+
+0:04:56.200,0:05:01.680
+talking to him, asking for feedback like, "Is the API okay like this? Is it good if we expose
+
+0:05:01.680,0:05:07.960
+these types or expose the API like that?" And in the end,
+
+0:05:07.960,0:05:15.720
+the first PR was merged, and I've been collaborating ever since. Maybe not in a huge capacity,
+
+0:05:15.720,0:05:22.040
+but I started mostly with documentation, translation, acting a bit like
+
+0:05:22.040,0:05:28.360
+a developer advocate, because I built some examples. If you've seen Analog's site
+
+0:05:28.360,0:05:32.800
+and docs, those examples are from the same Spanish-speaking era,
+
+0:05:32.800,0:05:37.480
+where Andrés Villanueva was developing the Docusaurus infrastructure to document in
+
+0:05:37.480,0:05:43.880
+multiple languages. Exactly. And today there is an open issue to
+
+0:05:43.880,0:05:49.760
+migrate all that documentation from Docusaurus to Astro. Part of what Analog had as a project was that
+
+0:05:49.760,0:05:56.040
+it allowed you to use Angular components inside the Astro ecosystem.
+
+0:05:56.040,0:06:00.800
+So that was one of the first things that caught the community's attention,
+
+0:06:00.800,0:06:07.800
+starting to build some momentum, because people closely
+
+0:06:07.800,0:06:13.080
+linked to the community opened their eyes to what it offered, especially since it's
+
+0:06:13.080,0:06:20.680
+an ecosystem entirely built on Vite, and we all know how fast Vite is.
+
+0:06:20.680,0:06:25.960
+Even now, I think I was reading that they just released version 1.0 of the
+
+0:06:25.960,0:06:33.800
+bundler successor, Rolldown. It can be a bit confusing if you don't use it as first-party
+
+0:06:33.800,0:06:39.520
+and get it through transit dependencies
+
+0:06:39.520,0:06:43.800
+of the framework you are using. Yes. And I saw that version 1.0 was released,
+
+0:06:43.800,0:06:51.640
+and Analog, in its latest versions, at least as far as I remember 2.5, if
+
+0:06:51.640,0:06:57.920
+I'm not mistaken, which is one of the latest, was already prepared for the version. So that,
+
+0:06:57.920,0:07:05.400
+combined with how fast it already is to make your bundle, gives us something almost magical,
+
+0:07:05.400,0:07:11.960
+I would say, which you don't experience until you have a really large project
+
+0:07:11.960,0:07:20.400
+where you do builds, and with a native bundle, build and load times
+
+0:07:20.400,0:07:30.240
+are much lower. But yes, basically that's how my interaction with the whole team started. I began
+
+0:07:30.240,0:07:38.400
+checking if there were other projects using Analog;
+
+0:07:38.400,0:07:44.600
+back then, there was another project running alongside it, which I think is still active: Spartan.
+
+0:07:44.600,0:07:53.240
+I'm not 100% familiar with that project itself, but I know it uses Analog as its foundation
+
+0:07:53.240,0:07:59.520
+as well. Yes, a couple of years ago I read that initial article setting the foundation of
+
+0:07:59.520,0:08:06.720
+Spartan's methodology, and having Analog there opened doors that did not
+
+0:08:06.720,0:08:11.800
+exist at the time for a nascent framework. Thank you so much
+
+0:08:11.800,0:08:18.640
+for sharing that story. And by the way, today, as an Analog developer and framework contributor,
+
+0:08:18.640,0:08:25.360
+how do you usually answer the typical question Angular developers have
+
+0:08:25.360,0:08:33.880
+about how to decide which framework
+
+0:08:33.880,0:08:40.680
+to use? That is, what is the fundamental problem Analog solves today
+
+0:08:40.680,0:08:49.880
+that Angular by itself has a hard time addressing in a simple way? Well, in the beginning—and
+
+0:08:49.880,0:08:55.000
+we are talking about when it started—it solved a few more problems than it does now,
+
+0:08:55.000,0:09:01.040
+but there's still a lot of validity in what Analog brings. It makes it easier to
+
+0:09:01.040,0:09:07.200
+build applications from scratch, which is what I think drove Next.js adoption in
+
+0:09:07.200,0:09:13.640
+many companies. It's the ease of simply creating full-stack things. In the end, it depends,
+
+0:09:13.640,0:09:18.200
+obviously, like everything, on your app's needs and requirements,
+
+0:09:18.200,0:09:23.880
+but overall, it's a more complete solution for building
+
+0:09:23.880,0:09:30.480
+full-stack apps, especially content-based ones. As I mentioned,
+
+0:09:30.480,0:09:37.200
+I had never written a blog in my life. Maybe back when the internet started
+
+0:09:37.200,0:09:42.560
+and we used Metroflog and all those things, I might have tried an early
+
+0:09:42.560,0:09:48.400
+blog, but writing for real was my first project where I said,
+
+0:09:48.400,0:09:53.480
+"Okay, let's experiment with Analog to see the main
+
+0:09:53.480,0:09:59.800
+differences between doing it with Angular and doing it with Analog." So,
+
+0:09:59.800,0:10:06.520
+the first thing that stands out is its orientation—not orientation, because we can't
+
+0:10:06.520,0:10:12.600
+say it's oriented to that—but the ease of generating content
+
+0:10:12.600,0:10:19.760
+that Angular does not have built-in. If you put a Markdown file in your directory,
+
+0:10:19.760,0:10:25.200
+Analog will display it. That's one of the main things that Angular doesn't
+
+0:10:25.200,0:10:29.720
+make easy for someone touching it for the first time. Especially since there's a lot of
+
+0:10:29.720,0:10:35.640
+people coming from React or backend, some concepts aren't as straightforward,
+
+0:10:35.640,0:10:43.120
+like dependency injection or change detection. But the one I see
+
+0:10:43.120,0:10:50.240
+people struggle with the most is routing.
+
+0:10:50.240,0:10:57.240
+Totally. And this file-system routing is great. And how many
+
+0:10:57.240,0:11:03.920
+lines of code, how much work, or how many tokens would one have to burn and
+
+0:11:03.920,0:11:08.480
+increase the boilerplate and bundle size, and not do it in a way that
+
+0:11:08.480,0:11:14.040
+is standardized, like in Analog's meta-framework. If you do it from
+
+0:11:14.040,0:11:20.000
+scratch in Angular for this type of system you are writing, let's say a static
+
+0:11:20.000,0:11:29.200
+site, leveraging the benefits of SSG (Static Site Generation) to avoid
+
+0:11:29.200,0:11:33.080
+overloading the client with JavaScript that could have been resolved on the server side
+
+0:11:33.080,0:11:38.440
+beforehand, and promoting search engine visibility, this is a choice that
+
+0:11:38.440,0:11:45.360
+is a complete no-brainer.
+
+0:11:45.360,0:11:53.720
+Exactly. And building my blog helped me learn more about how it works under the hood,
+
+0:11:53.720,0:11:59.760
+because you get curious when you see that putting a file of a certain type with a certain syntax in
+
+0:11:59.760,0:12:06.960
+a directory just works. I wanted to know how that magic worked. It's a tremendously
+
+0:12:06.960,0:12:14.160
+complex codebase, and Brandon deserves huge credit because building something like that when maybe only
+
+0:12:14.160,0:12:20.120
+Copilot existed to suggest code is, as you say, a no-brainer. It's code that I consider art,
+
+0:12:20.120,0:12:25.720
+and it works wonderfully. We know it's a meta-framework, built on top of another framework.
+
+0:12:25.720,0:12:33.760
+So what it does is check your files depending on where you put them. There are conventions in the docs,
+
+0:12:33.760,0:12:40.280
+and based on those it creates the route exactly as Angular would. In the end, if you need manual
+
+0:12:40.280,0:12:48.120
+adjustments, or if you are not a fan of file-based routing, you can still use Angular's native routing
+
+0:12:48.120,0:12:52.680
+without giving up other things Analog provides, like Nitro support to deploy anywhere. We can talk
+
+0:12:52.680,0:12:57.600
+about that. Exactly. That was one of the easiest things to build something so simple. So I'd
+
+0:12:57.600,0:13:03.680
+say Analog is a simple choice for blogs, for content-rich sites. Why? Because it's much easier than
+
+0:13:03.680,0:13:09.240
+using Angular as a normal framework. And Angular has improved a lot recently; general API
+
+0:13:09.240,0:13:15.400
+changes made the learning curve much gentler, in my opinion. But the fact that it is a very
+
+0:13:15.400,0:13:21.960
+opinionated and rigid framework, though it decoupled from project dependencies in recent versions...
+
+0:13:21.960,0:13:28.480
+Many people collaborating on Analog are also part of the Angular community, so it's natural
+
+0:13:28.480,0:13:33.440
+that Analog's conventions helped greenlight certain features in Angular that weren't being
+
+0:13:33.440,0:13:40.120
+addressed, seeing the momentum Analog had.
+
+0:13:40.120,0:13:47.680
+For example, one of the things I saw almost immediately, which I think was inevitable, but it
+
+0:13:47.680,0:13:55.960
+helped the Angular team decide to implement their own Vite integration, because they saw a clear
+
+0:13:55.960,0:14:03.880
+demonstration that it worked. Obviously, I'm not involved in framework decisions, but I like to
+
+0:14:03.880,0:14:09.960
+think it raised questions in the community. I remember when Chau and Brandon created the .ng
+
+0:14:09.960,0:14:18.440
+files, which simplified the nomenclature thanks to the pioneering work they did.
+
+0:14:18.440,0:14:25.040
+So, several features implemented in the framework have helped. Since Analog builds on top of
+
+0:14:25.040,0:14:31.800
+Angular, if there's a new feature in Angular, it naturally works in Analog because it is built
+
+0:14:31.800,0:14:36.960
+on top. At the same time, we can experiment with concepts outside of Angular's rigidity.
+
+0:14:36.960,0:14:41.920
+A good example was in December when Brandon introduced Angular Skills in Analog, and only a month
+
+0:14:41.920,0:14:49.280
+and a half later, Mark Thompson, the DevRel Lead for Angular, introduced this same type of
+
+0:14:49.280,0:14:54.720
+skills to support developer knowledge and reduce token consumption. And Angular Skills became an
+
+0:14:54.720,0:15:02.320
+intrinsic part of the official Angular project. Exactly. So that's what I see in the project.
+
+0:15:02.320,0:15:07.680
+I feel there is inspiration that, due to internal processes at Google and the framework, can't
+
+0:15:07.680,0:15:13.360
+be accelerated as fast as the community wants. For example, selectorless components are highly
+
+0:15:13.360,0:15:20.760
+requested, and when Signals were introduced, people asked about Signal Forms. We will finally
+
+0:15:20.760,0:15:27.160
+see them stable in Angular 22. I love them; I'm ready to migrate our forms. Even my blog
+
+0:15:27.160,0:15:32.600
+has a small contact form that I migrated as soon as the stable API was released. And version
+
+0:15:32.600,0:15:40.560
+22 will stabilize features currently in preview, like Spartan, allowing headless components without rigid
+
+0:15:40.560,0:15:53.840
+HTML/CSS styles. Correct. In fact, one feature recently
+
+0:15:53.840,0:16:01.160
+implemented is internationalization. For my blog, I personally use Transloco, but then Brandon
+
+0:16:01.160,0:16:08.720
+implemented native internationalization in Angular which is inherited by Analog. It's on my to-do
+
+0:16:08.720,0:16:16.480
+list to migrate and see how the experience changes. I'll write about it since my goal was
+
+0:16:16.480,0:16:23.200
+to learn how it handles SEO, SSR, SSG, and content. I also wanted to contribute to the
+
+0:16:23.200,0:16:30.520
+community and get noticed. Sure. Staying up to date is not easy. I
+
+0:16:30.520,0:16:38.480
+think those who maintain libraries alongside a full-time job are like aliens. I have total
+
+0:16:38.480,0:16:45.000
+admiration for open source contributors. Absolutely. And Luis, backend in Angular was
+
+0:16:45.000,0:16:53.880
+historically external, but Analog integrates Nitro and H3 directly in the workflow. By allowing
+
+0:16:53.880,0:17:00.640
+API routes and middleware on the server, do you think this pushes the community towards
+
+0:17:00.640,0:17:06.520
+a unified full-stack? Hopefully. I think the more knowledge, the
+
+0:17:06.520,0:17:12.960
+better, for developers and engineers alike. What Analog brings with H3 and Nitro
+
+0:17:12.960,0:17:17.320
+and deploying almost anywhere by changing a few parameters is a no-brainer. At first,
+
+0:17:17.320,0:17:24.360
+Brandon suggested Netlify for my blog. I tried it, but didn't like the dashboard.
+
+0:17:24.360,0:17:30.040
+Having React projects on Vercel, I tried Vercel and it was amazing—changing one parameter was all
+
+0:17:30.040,0:17:38.720
+it took. Many frontend or backend developers struggle with infrastructure, so opening those doors
+
+0:17:38.720,0:17:44.880
+is huge. Server routes are simple: architecturally, keeping things close makes sense when they are in
+
+0:17:44.880,0:17:51.200
+the same domain. In a full-stack framework, it makes sense to have server routes where the page
+
+0:17:51.200,0:17:57.800
+lives. Nitro handles the server side, running a load function when the page is requested, fetching
+
+0:17:57.800,0:18:04.000
+data, creating HTML, and embedding it. Right, packaging it for deployment. Using H3
+
+0:18:04.000,0:18:10.600
+event handlers, Analog translates them to the format expected by each cloud provider. Whether you
+
+0:18:10.600,0:18:18.600
+deploy on Google Cloud Run, Firebase, AWS Lambda, Netlify, or Vercel, Nitro passively
+
+0:18:18.600,0:18:23.680
+handles adaptation to the runtime automatically. And I'm still learning about Nitro middlewares
+
+0:18:23.680,0:18:28.680
+because it's amazing how powerful it is. I'm exploring it since I want to suggest the framework
+
+0:18:28.680,0:18:37.280
+at work. To suggest a full-stack framework at an enterprise level, I prefer to be clear on
+
+0:18:37.280,0:18:42.440
+the backend, since I specialize more in frontend, but I'm curious by nature and look to learn. We
+
+0:18:42.440,0:18:49.040
+can always ask Brandon and other team members where this is headed.
+
+0:18:49.040,0:18:56.800
+Yes, when coordinating, you mentioned your enthusiasm for Vite 8 on the build pipeline,
+
+0:18:56.800,0:19:06.160
+placing Analog at the forefront of modern build tools. What do you think about project build
+
+0:19:06.160,0:19:10.840
+times and the benefits of the new Vite version? It looks amazing. Maybe many people don't know
+
+0:19:10.840,0:19:17.400
+that Angular's Vite implementation handles dev server differently than Analog. Analog does it for
+
+0:19:17.400,0:19:22.560
+dev and can leverage the plugin ecosystem. Exactly, all the plugins. That doesn't happen
+
+0:19:23.240,0:19:29.280
+with Angular due to technical limitations within Google's monorepo.
+
+0:19:29.280,0:19:36.240
+Exactly. Being a rigid framework, they might implement it in the future after refactoring.
+
+0:19:36.240,0:19:41.960
+Major frameworks like Vue, Solid, and others already use Vite, except for Next.js which does not.
+
+0:19:41.960,0:19:47.440
+We talked about what Analog brings. It's not the same as before because Angular SSR is now a
+
+0:19:47.440,0:19:52.160
+much better implemented package. This doesn't mean Analog doesn't add value; it can now inherit
+
+0:19:52.160,0:19:58.120
+features from Angular, like customer/server routes for hybrid rendering. This lets you define
+
+0:19:58.120,0:20:04.440
+if it will be pre-rendered, server-rendered with SSR, or client-rendered, which comes at a high
+
+0:20:04.440,0:20:12.440
+browser cost. Exactly. Not for our development machines with lots of RAM and minimal latency, but
+
+0:20:12.440,0:20:18.760
+thinking of slow connections or search engine bot crawlers. For those, client-side rendering
+
+0:20:18.760,0:20:24.560
+is not the best option. Exactly. My first contact with server-side
+
+0:20:24.560,0:20:31.800
+rendering was with Analog, and I didn't expect issues like flickers or parpades on the page. The
+
+0:20:31.800,0:20:38.200
+techniques I knew then are different from what I know now. These conventions existed but were
+
+0:20:38.200,0:20:43.480
+implemented with Angular bases, since Angular didn't give guidelines on how to do SSR/SSG.
+
+0:20:43.480,0:20:49.480
+Non-destructive incremental hydration prevents that white flash in the background that affects
+
+0:20:49.480,0:20:53.520
+Core Web Vitals and user experience. All three vitals were impacted, especially First Input Delay,
+
+0:20:54.120,0:21:02.280
+Interaction to Next Paint, and Cumulative Layout Shift.
+
+0:21:02.280,0:21:08.240
+Exactly. And returning to Vite, one of the things that boosted adoption was Vitest, which became
+
+0:21:08.240,0:21:16.280
+its own subproject in Analog and was implemented in Nx to add Vitest from scratch, and in Angular
+
+0:21:16.280,0:21:24.960
+as a plugin. Vite 8 improves this further with speed, as shown in Brandon's benchmarks. Analog and
+
+0:21:24.960,0:21:32.840
+Angular go hand in hand; innovation on one side opens doors on the other. This makes me excited
+
+0:21:32.840,0:21:37.200
+for where the framework is going. I still need to explore what doors Vite 8 opens for enterprise
+
+0:21:37.200,0:21:41.920
+environments, which are very different from personal blogs.
+
+0:21:41.920,0:21:51.280
+And I have a project in development to migrate my old blog from 2008 on Blogger, which has been in
+
+0:21:51.280,0:21:58.760
+mentioned, H3, Nitro, the capabilities of Nitro that you can deploy it almost anywhere
+
+0:21:58.760,0:22:04.960
+by simply changing a few parameters, is a no-brainer for me, as you well said.
+
+0:22:04.960,0:22:11.960
+At first, when I wanted to deploy my blog, Brandon told me, 'Hey, try Netlify.'
+
+0:22:11.960,0:22:17.200
+So I tried, I didn't like the interface that much, you know, the dashboard on Netlify didn't
+
+0:22:17.200,0:22:23.480
+appeal to me for certain reasons. So I had a couple of React projects from a couple of
+
+0:22:23.480,0:22:30.200
+courses I had taken that recommended Vercel. So I tried Vercel, and for me it was
+
+0:22:30.200,0:22:35.480
+incredible that simply by changing a parameter, there wasn't much else to do,
+
+0:22:35.480,0:22:41.040
+right? So that's one of the things. Often, when we start in frontend
+
+0:22:41.040,0:22:47.960
+or backend, infrastructure is difficult for many people. So opening
+
+0:22:47.960,0:22:55.040
+those doors is part of what I believe it brings to the table. As you mentioned,
+
+0:22:55.040,0:23:03.160
+server routes are simple because in the end what you want at
+
+0:23:03.160,0:23:10.920
+an architectural level is to have your things as close as possible when they are in
+
+0:23:10.920,0:23:18.120
+the same domain, right? So in a framework that is basically full-stack, it makes sense
+
+0:23:18.120,0:23:22.720
+to have your server routes where your page lives, which is what will consume the content,
+
+0:23:22.720,0:23:30.200
+right? So, the Nitro part, how it works at a very high level,
+
+0:23:30.200,0:23:36.800
+as far as I can recall, is that Nitro runs the show on the server side,
+
+0:23:36.800,0:23:41.480
+having a function, a function called load function, which is the
+
+0:23:41.480,0:23:48.520
+one that runs initially when the page is requested, then does the fetch to whatever you have
+
+0:23:48.520,0:23:56.600
+externally, the API or whatever, or the data, creates the HTML and embeds it. Sure,
+
+0:23:56.600,0:24:01.200
+packaging it for deployment, using event handlers
+
+0:24:01.200,0:24:09.040
+from H3, which Analog transitively uses, and translates them to the format expected by each
+
+0:24:09.040,0:24:15.960
+provider. If it detects or you define in configuration files what the environment is, it translates those
+
+0:24:15.960,0:24:22.280
+event handlers. So it doesn't matter if you deploy on Google Cloud Run, Firebase,
+
+0:24:22.280,0:24:29.560
+AWS Lambda, Netlify, Vercel, or any other provider, Nitro is passively
+
+0:24:29.560,0:24:36.720
+handling the adaptation to the runtime automatically. And I'm still
+
+0:24:36.720,0:24:42.360
+learning about the Nitro part as such, the middlewares, and everything you mentioned,
+
+0:24:42.360,0:24:49.200
+because for me it's amazing how something so small and agnostic is so powerful
+
+0:24:49.200,0:24:55.120
+in that it does so much. So I'm still exploring it because I have a couple
+
+0:24:55.120,0:25:00.880
+of projects at my company where I'm going to suggest the framework. So,
+
+0:25:00.880,0:25:07.080
+obviously to suggest a full-stack framework at an enterprise level, I prefer
+
+0:25:07.080,0:25:12.880
+to have a clearer understanding of the backend, because
+
+0:25:12.880,0:25:17.720
+I specialize a bit more in frontend, but I'm curious by
+
+0:25:17.720,0:25:24.320
+nature and try to look and learn about everything that surrounds the meta-framework
+
+0:25:24.320,0:25:32.400
+as such. We are still on that, but always trying to let curiosity drive us, and if
+
+0:25:32.400,0:25:37.600
+not, we can always ask Brandon and other team members,
+
+0:25:37.600,0:25:43.840
+"Where is this going?" Yes, when coordinating the episode, you mentioned your
+
+0:25:43.840,0:25:51.000
+enthusiasm for Vite 8 on the build pipeline, which positions
+
+0:25:51.000,0:25:56.320
+Analog at the forefront of modern build tools. So,
+
+0:25:56.320,0:26:01.480
+what do you think about project build times and the new benefits that
+
+0:26:01.480,0:26:07.840
+the new version of Vite brings? First of all, it looks amazing. I don't know, maybe many people
+
+0:26:07.840,0:26:12.880
+don't know or do know, depending on how informed they are about how the framework works
+
+0:26:12.880,0:26:23.720
+or how they handle bundlers, and how Angular implemented its version of Vite—if I'm not mistaken
+
+0:26:23.720,0:26:30.200
+and I hope I'm not mistaken—but Angular handles only a
+
+0:26:30.200,0:26:41.000
+dev server version for Vite differently than Analog does. Analog does it for dev and can also
+
+0:26:41.000,0:26:46.440
+leverage the plugin ecosystem. Exactly. All the plugins. And that doesn't happen
+
+0:26:46.440,0:26:52.680
+with Angular due to technical limitations within Google's monorepo,
+
+0:26:52.680,0:26:58.520
+which they have inside Google's ecosystem. Exactly. And that's the type of
+
+0:26:58.520,0:27:04.400
+situation where, being a slightly more rigid framework, in the future,
+
+0:27:04.400,0:27:08.560
+depending on how open they are to refactoring
+
+0:27:08.560,0:27:14.280
+their internal code and architecture, they might implement it,
+
+0:27:14.280,0:27:19.560
+because in the end, it's clear that the trend of major frameworks,
+
+0:27:19.560,0:27:28.520
+at least Vue, if I'm not mistaken, and React—mainly Next.js—
+
+0:27:28.520,0:27:38.880
+and Solid, and I think several or most of them are using Vite,
+
+0:27:38.880,0:27:46.160
+almost all of them, except Next.js, which is the one
+
+0:27:46.160,0:27:52.120
+not using Vite under the hood, but overall, they see
+
+0:27:52.120,0:27:57.800
+the potential and are trying to implement it in one way or another,
+
+0:27:57.800,0:28:03.800
+or having their own versions of something similar. So I think we talked
+
+0:28:03.800,0:28:09.240
+a bit at the beginning of the conversation about what Analog brings, right? Because certainly
+
+0:28:09.240,0:28:16.080
+it's not the same as what it brought at first, because Angular has improved in some aspects,
+
+0:28:16.080,0:28:20.960
+right? Initially, we had Angular Universal. I used it only a couple of
+
+0:28:20.960,0:28:27.440
+times, but it had a certain level of difficulty and certain things that maybe didn't
+
+0:28:27.440,0:28:33.640
+make sense in terms of decisions, and everything changes with Angular SSR, which is
+
+0:28:33.640,0:28:40.480
+the new package, and it feels much more natural and much better, much better designed,
+
+0:28:40.480,0:28:47.960
+much better implemented. So, obviously it's another way to do SSR, which doesn't mean
+
+0:28:47.960,0:28:53.320
+that Analog no longer adds value, but rather that it can now inherit
+
+0:28:53.320,0:28:59.440
+features from Angular that weren't available before, like native API
+
+0:28:59.440,0:29:04.880
+routes, server routes, hybrid routes, meaning
+
+0:29:04.880,0:29:10.160
+the hybrid rendering mechanism, which
+
+0:29:10.160,0:29:16.880
+allows you to define if it will be pre-rendered, server-rendered with SSR, or the typical conventional
+
+0:29:16.880,0:29:21.880
+JavaScript framework client-side rendering where the rendering process
+
+0:29:21.880,0:29:27.080
+and DOM node instantiation, etc., occurred on the client side at a huge
+
+0:29:27.080,0:29:31.880
+cost for the browser. Exactly. Yes. Not for our development machines
+
+0:29:31.880,0:29:36.440
+with lots of RAM and good processors,
+
+0:29:36.440,0:29:43.840
+responding with minimal latency and all the compute power
+
+0:29:43.840,0:29:50.200
+we have, but thinking of slow connections or how search engine
+
+0:29:50.200,0:29:56.880
+bots rank your site for visibility when users search on
+
+0:29:56.880,0:30:03.720
+Google, Bing, or other search engines. When it comes to that,
+
+0:30:03.720,0:30:10.240
+client-side rendering is not the best option. Exactly. One of the
+
+0:30:10.240,0:30:18.960
+first things I learned because my first contact with server-side rendering was
+
+0:30:18.960,0:30:26.480
+really with Analog, where there were several terms or situations I didn't expect, like certain
+
+0:30:26.480,0:30:32.120
+flickers or page flashes that I couldn't explain at the time
+
+0:30:32.120,0:30:38.360
+how it happened on the client side or how to avoid it. The techniques I knew then
+
+0:30:38.360,0:30:44.720
+when I started exploring the meta-framework are very different from what
+
+0:30:44.720,0:30:52.240
+I know now, due to conventions that weren't introduced as such because
+
+0:30:52.240,0:30:59.560
+many of them already existed, but they were implemented with Angular bases
+
+0:30:59.560,0:31:06.920
+because Angular didn't give guidelines on how to do
+
+0:31:06.920,0:31:13.400
+SSR, SSG, and all that. Non-destructive incremental hydration prevents
+
+0:31:13.400,0:31:19.120
+that white flash in the background color of your page, which impacts
+
+0:31:19.120,0:31:25.240
+a good score in Core Web Vitals and ultimately
+
+0:31:25.240,0:31:30.760
+impacts the user experience of people using the web applications
+
+0:31:30.760,0:31:35.600
+we develop. Basically all three Core Web Vitals were impacted,
+
+0:31:35.600,0:31:43.640
+especially First Input Delay, Interaction to
+
+0:31:43.640,0:31:50.200
+Next Paint, and Cumulative Layout Shift. Those were the most affected for cases
+
+0:31:50.200,0:31:55.960
+using server-side rendering in a way that wasn't the modern way in Angular.
+
+0:31:56.520,0:32:04.400
+Exactly. And returning to the topic, you asked
+
+0:32:04.400,0:32:10.920
+about Vite's new version, and one of the things that boosted adoption was
+
+0:32:10.920,0:32:18.920
+Vitest, which started as a branch and became
+
+0:32:18.920,0:32:24.920
+almost its own project in Analog, to the point that it was implemented in Nx
+
+0:32:24.920,0:32:32.520
+monorepos to add Vitest from Analog from scratch, and in Angular
+
+0:32:32.520,0:32:39.680
+as a plugin. So I think Vite,
+
+0:32:39.680,0:32:46.160
+version 8, which Brandon shared in some benchmarks, improves it in
+
+0:32:46.160,0:32:54.000
+terms of speed. That is, Analog and Angular go hand in hand. Innovation on one side
+
+0:32:54.000,0:33:01.720
+opens doors on the other. So it makes me very excited to see where the framework is going.
+
+0:33:01.720,0:33:08.280
+I still need to explore the doors that Vite 8 opens for an
+
+0:33:08.280,0:33:16.600
+enterprise environment, which is very different from personal blogs.
+
+0:33:16.600,0:33:24.320
+or gives solid ideas that I don't think didn't exist because, as long as one person has
+
+0:33:24.320,0:33:29.360
+the curiosity to do something, it's possible that many more in the same ecosystem
+
+0:33:29.360,0:33:34.440
+have had it too. So, it helps others raise their voices in the sense that, hey,
+
+0:33:34.440,0:33:40.760
+we could implement this part here, the architecture could change a bit, you know.
+
+0:33:40.760,0:33:46.920
+So, those questions personally make me excited about where the
+
+0:33:46.920,0:33:52.880
+framework is going, and obviously everything it inherits from Angular, which has also improved
+
+0:33:52.880,0:34:00.080
+in an incredible way, right? I also need to explore a bit more what doors the new version opens,
+
+0:34:00.080,0:34:06.920
+how it can be used in certain enterprise aspects, because at the end of the day,
+
+0:34:06.920,0:34:16.240
+the difference between a blog or personal project and an enterprise project is huge.
+
+0:34:16.800,0:34:22.640
+And I have a project in development to migrate my old blog from 2008 on Blogger, which has been in
+
+0:34:22.640,0:34:29.200
+maintenance mode since 2012. My idea is to rescue it. And with this I close, the last question would be:
+
+0:34:29.200,0:34:36.200
+when one is migrating to Analog, it doesn't necessarily have to be a blog, but
+
+0:34:36.200,0:34:43.280
+it can be a marketing site, some site that benefits from the features offered by
+
+0:34:43.280,0:34:49.080
+that I had with Analog about a year ago,
+
+0:34:49.080,0:34:56.080
+but now I plan to rescue it.
+
+0:34:56.080,0:35:03.040
+The question with which I'd like to close the episode is,
+
+0:35:03.040,0:35:09.800
+for a project of migrating from another technology,
+
+0:35:09.800,0:35:15.160
+it can be a marketing site, some site that benefits from the features offered by
+
+0:35:15.160,0:35:23.720
+pre-rendering, SSG. How much does the workflow change compared to the standards
+
+0:35:23.720,0:35:29.720
+of Angular with a view to AI agent orchestration? That is, when we
+
+0:35:29.720,0:35:36.480
+are running it, for example, in Antigravity or Visual Studio Code or any other IDE,
+
+0:35:36.480,0:35:41.920
+where you have a series of skills, agents running, or instructions you set,
+
+0:35:41.920,0:35:50.520
+what recommendation would you make so that the context we are providing to
+
+0:35:50.520,0:35:58.480
+that model is able to specifically understand the benefits of Analog and not get
+
+0:35:58.480,0:36:03.760
+confused with standard Angular, allowing the project to flow from the
+
+0:36:03.760,0:36:09.280
+Analog perspective?
+
+0:36:09.280,0:36:14.280
+It depends a lot on your project. Many people are already very
+
+0:36:14.280,0:36:20.640
+familiar with building their own skills or instructions depending on what you are
+
+0:36:20.640,0:36:29.000
+using, your .clack.md or agents, all that part that regulates
+
+0:36:29.000,0:36:35.880
+the initial context to give the main idea to the project on how to build
+
+0:36:35.880,0:36:42.800
+things.
+
+0:36:42.800,0:36:48.880
+Just now you mentioned the skills that had been created, and the
+
+0:36:48.880,0:36:56.040
+Angular skills work in Analog because in the end they are peers. The only thing
+
+0:36:56.040,0:37:00.280
+I would change, depending again—I'll use Copilot as an example because it's the simplest
+
+0:37:00.280,0:37:09.720
+I know. Maybe in your instructions I'd put certain parameters of how file-based routing
+
+0:37:09.720,0:37:15.360
+works. That would be the main thing because in the end if you're making
+
+0:37:15.360,0:37:21.680
+a marketing site, content, or something simple, you care about using the
+
+0:37:21.680,0:37:27.440
+conventions that will make it simpler, right? Because the LLM can write a
+
+0:37:27.440,0:37:33.960
+nearly perfect routing out of the box if you prompt it properly, you know,
+
+0:37:33.960,0:37:39.680
+with your lazy loading and everything it entails depending on what you have, right? But not
+
+0:37:39.680,0:37:45.440
+in the way Analog is offering to keep the boilerplate reduced, so pointing
+
+0:37:45.440,0:37:51.240
+to the official documentation for better grounding would be a good tip,
+
+0:37:51.240,0:37:57.200
+and I'm actually going to suggest it. I should check. It's been a while since I checked the git
+
+0:37:57.200,0:38:02.080
+to see the issues and everything. Maybe it's already there and it just needs someone to
+
+0:38:02.080,0:38:07.640
+raise their hand and collaborate with skill sets or instructions or something.
+
+0:38:07.640,0:38:15.560
+But I think, and it's a great question, the first thing I would do is give it proper context
+
+0:38:15.560,0:38:21.280
+on a couple of key features: Markdown rendering,
+
+0:38:21.280,0:38:28.160
+where files go, maybe the pages directory, giving proper context on when it's an auth
+
+0:38:28.160,0:38:34.280
+route, when it's a slug, all those situations that are very specific
+
+0:38:34.280,0:38:40.440
+to Analog as a framework and are totally separate from how Angular does things,
+
+0:38:40.440,0:38:45.760
+right? Even if it compiles to an identical path to Angular's, which is what it does
+
+0:38:45.760,0:38:50.600
+in the end, it's very important to give it proper context so it doesn't hallucinate and
+
+0:38:50.600,0:38:55.240
+start creating a normal Angular route where you won't be leveraging
+
+0:38:55.240,0:39:00.600
+the benefits of using the meta-framework.
+
+0:39:00.600,0:39:06.800
+Exactly. Also in project planning, if instead of a blog we are building a
+
+0:39:06.800,0:39:12.840
+project portfolio, we can instruct it to use the default scaffolding offered by
+
+0:39:12.840,0:39:18.720
+Analog when generating a new app, which lets you choose between three modes.
+
+0:39:18.720,0:39:24.720
+The most basic is minimal, but there are two others including blog mode, which can be adjusted
+
+0:39:24.720,0:39:30.600
+for other kinds of projects, not necessarily about a log with posts organized
+
+0:39:30.600,0:39:38.480
+in reverse chronological order. If you give it this info beforehand, it can
+
+0:39:38.480,0:39:44.360
+perform the project refactoring in a fantastic way.
+
+0:39:44.360,0:39:51.080
+Yes. And in the end, saving tokens is key in our industry. And the boom I saw
+
+0:39:51.080,0:39:57.040
+when Analog started gaining momentum was that many people's first
+
+0:39:57.040,0:40:02.760
+project was exploratory, migrating their existing blog to Analog, right? Even
+
+0:40:02.760,0:40:08.760
+today you have this project in mind. It's a very common case. Yes,
+
+0:40:08.760,0:40:12.360
+exactly. It's a very common case. So I think it's like your entry point.
+
+0:40:12.360,0:40:16.440
+In fact, that led Brandon to merge a PR providing the blog mode scaffolding,
+
+0:40:16.440,0:40:24.000
+which is what you mentioned, right? When you create a new app, it asks
+
+0:40:24.000,0:40:29.080
+"Do you want to create it in blog mode?" It was because of that,
+
+0:40:29.080,0:40:33.200
+because the initial boom in Analog was exactly that. Later, companies started
+
+0:40:33.200,0:40:39.400
+using Analog for enterprise development. I don't recall the name right now,
+
+0:40:39.400,0:40:44.520
+but I know Brandon has a great relationship with them; they are the main sponsor
+
+0:40:44.520,0:40:48.680
+of Analog as an open-source project. In the end, it's a good point: simply
+
+0:40:48.680,0:40:53.760
+providing the right initial instructions to set the context properly will
+
+0:40:53.760,0:40:58.280
+help you tremendously, right? Exactly. And anyone looking to build with the project
+
+0:40:58.280,0:41:08.560
+could define the corresponding skills to assist in the migration
+
+0:41:08.560,0:41:14.360
+process, perhaps converting from platforms like Blogger,
+
+0:41:14.360,0:41:20.280
+WordPress, or other older systems, or even Astro. Why not
+
+0:41:20.280,0:41:25.320
+write Analog's documentation using Analog itself, leveraging its
+
+0:41:25.320,0:41:32.680
+capability to power wikis or docs within the official documentation
+
+0:41:32.680,0:41:38.120
+space of Analog itself? There are several avenues to continue
+
+0:41:38.120,0:41:43.000
+moving Analog forward and using it to document itself. That's correct. So,
+
+0:41:43.000,0:41:50.480
+Luis, thank you so much again for participating. Before we
+
+0:41:50.480,0:41:57.760
+wrap up the episode, is there anything else you'd like to mention that we didn't touch upon
+
+0:41:57.760,0:42:04.680
+during our conversation? Obviously we mentioned Vitest, which is very basic and helped
+
+0:42:04.680,0:42:10.960
+tremendously with Analog's adoption and name recognition. But Analog also
+
+0:42:10.960,0:42:15.840
+integrates with Storybook for design systems. For anyone wanting
+
+0:42:15.840,0:42:21.120
+a playground with isolated components, to not only view them
+
+0:42:21.120,0:42:27.360
+or do reverse engineering on the documentation,
+
+0:42:27.360,0:42:35.560
+but actively develop components in isolation, Storybook is great.
+
+0:42:35.560,0:42:42.400
+Exactly. In the end, I could perhaps draw a conclusion that many
+
+0:42:42.400,0:42:47.520
+might think Analog is a fork of Angular, but it's not. I'd say
+
+0:42:47.520,0:42:54.440
+it's more of an alternative with conventions built on top. Indeed, Luis. Well,
+
+0:42:54.440,0:42:59.880
+thank you so much for sharing all this knowledge. I've really enjoyed
+
+0:42:59.880,0:43:05.840
+and learned a lot from this conversation. I hope to have things to show you that
+
+0:43:05.840,0:43:12.240
+I'll be doing in Analog, even on my own website. I registered angularidades.com, which
+
+0:43:12.240,0:43:18.680
+has been dormant for about a year with some moving particles resembling
+
+0:43:18.680,0:43:22.920
+the intro, but in the future I'll deploy it on Analog, and hopefully get your feedback as well. I'd appreciate that so much. Thank you for the invitation and the talk. This was very entertaining, and thanks again for inviting me.
