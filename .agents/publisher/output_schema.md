@@ -3,6 +3,7 @@
 Generate two separate files, one in Spanish and one in English.
 
 {{ 1-2 direct technical questions engaging the listener's curiosity }}
+(Start by asking a specific and relevant question to the audience, like: "Are you considering using Analog for your next full-stack Angular project?")
 
 Aprende directamente de {{guest1}} y {{guest2}}, {{role/bio}}. Desde el {{Location}}, desglosan {{Topic}} y cómo resuelven {{Problem}}.
 [English version should translate this naturally]
