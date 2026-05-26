@@ -1,25 +1,36 @@
-# Security and Privacy Policy
+# Security Policy
 
-## Credential Handling
-- **DO NOT COMMIT** under any circumstances API keys (OpenAI, Gemini, Anthropic, Riverside) to this repository.
-- Ensure that your `.env` environment is always in your global or local `.gitignore` file.
+> [!IMPORTANT]
+> This document outlines the security posture, vulnerability reporting, and incident response procedures for this project. Maintainers and contributors must adhere to these practices to protect user data and ensure system integrity.
 
-## Data Privacy
-- Review the raw transcripts (`inputs/`) before processing them.
-- If a guest mentions confidential information, passwords, or PII (Personally Identifiable Information) that should be edited from the final episode, remove it from the text transcript BEFORE running the agent to prevent it from leaking into the generated summaries or metadata.
+## Supported Versions
 
-## Reporting a Vulnerability
+Only the latest release on the primary development branch is actively supported with security updates. We do not maintain security patches for older major or minor versions.
 
-If you discover a security vulnerability in Angularidades, please DO NOT open a public issue.
+## Dependency Management
 
-Instead, please report it privately to the maintainers to give us time to fix the issue before making it public.
+To prevent supply-chain vulnerabilities:
+* Automated dependency scanning must be enabled (e.g., GitHub Dependabot or Snyk).
+* No pull request containing dependencies with known high or critical severity CVEs (Common Vulnerabilities and Exposures) should be merged.
+* Dependencies should be regularly updated to their latest stable patches.
 
-- Email the core maintainers directly or use GitHub's private vulnerability reporting feature.
-- Provide a detailed summary of the vulnerability, including step-by-step instructions on how to reproduce it.
+## Vulnerability Reporting
+
+If you find a security vulnerability, **please do not open a public issue.** 
+
+Instead, report it privately to ensure we can resolve the issue before it is publicly disclosed.
+
+### Reporting Channels
+* Email the maintainers directly.
+* Or submit a report privately through GitHub's Private Vulnerability Reporting feature in the **Security** tab of the repository.
+
+### What to Include
+When reporting a vulnerability, please provide a detailed description including:
+* The affected version or component.
+* Step-by-step instructions to reproduce the issue (including proof-of-concept scripts or steps, if applicable).
+* The potential impact of the vulnerability.
 
 ### Our Process
-1. **Acknowledgment**: You should receive an acknowledgment of your report.
-2. **Investigation**: We will investigate the issue and keep you informed of our progress.
-3. **Patch**: We will develop, test, and release a fix.
-
-We appreciate your help in keeping our project secure.
+1. **Acknowledgment**: We will acknowledge receipt of your report within [X] business days.
+2. **Investigation**: We will investigate the issue and coordinate with you to gather details.
+3. **Remediation**: We will build and test a patch, then release it in a timely manner.

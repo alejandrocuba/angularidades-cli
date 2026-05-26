@@ -1,4 +1,4 @@
-# Cursor Ignore File - Excludes files from Cursor's indexing and AI features
+# Claude Ignore File - Excludes files from Claude's context
 
 # Dependency lockfiles
 package-lock.json

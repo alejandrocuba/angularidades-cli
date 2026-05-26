@@ -1,0 +1,28 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+  - 'libs/*'
+
+# ==============================================================================
+# Security & Build Isolation Controls (pnpm v11+)
+# ==============================================================================
+
+# Explicitly whitelist only trusted packages allowed to run postinstall/preinstall scripts.
+# By default, pnpm v10+ blocks all lifecycle scripts to prevent malicious code execution.
+allowBuilds:
+  esbuild: true
+  # Add other compiled dependencies as needed (e.g., swc, canvas, sharp)
+
+# Block transitive dependencies from pulling in code from untrusted/unverified sources
+# (e.g., raw git URLs, direct tarball downloads). This prevents dependency hijacking.
+blockExoticSubdeps: true
+
+# Enforce package provenance and trust verification, preventing version downgrades
+# to package versions with weaker trust metadata (e.g., lack of registry signature).
+trustPolicy: no-downgrade
+
+# Enforce a 3-day (4320 minutes) delay for installing newly published package versions.
+# This "timelock" mitigates supply-chain risks by giving the security community time
+# to identify and withdraw compromised package updates.
+minimumReleaseAge: 4320
+

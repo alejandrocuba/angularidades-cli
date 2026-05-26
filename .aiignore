@@ -1,5 +1,65 @@
-# Ignore environment variables and secrets
-.env
-.env.*
-*.pem
-*.key
+# AI Ignore File - Excludes files from AI context to optimize token usage
+
+# Dependency lockfiles (huge files that waste tokens)
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+Cargo.lock
+Gemfile.lock
+poetry.lock
+mix.lock
+
+# Directories and dependencies
+node_modules/
+.pnpm-store/
+jspm_packages/
+
+# Build outputs
+dist/
+build/
+out/
+target/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.serverless/
+.terraform/
+
+# Test coverage and reports
+coverage/
+.nyc_output/
+test-results/
+.playwright/
+
+# Media & Binary Assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.pdf
+*.zip
+*.tar.gz
+*.mp4
+*.mov
+*.avi
+*.mp3
+*.wav
+*.woff
+*.woff2
+*.eot
+*.ttf
+
+# Logs & Temporary files
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Editor & System configs
+.vscode/
+.idea/
+.settings/

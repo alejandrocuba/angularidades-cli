@@ -1,4 +1,4 @@
-# Cursor Ignore File - Excludes files from Cursor's indexing and AI features
+# GPT Ignore File - Excludes files from GPT context
 
 # Dependency lockfiles
 package-lock.json
