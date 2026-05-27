@@ -1,4 +1,4 @@
-# Cursor Ignore File - Excludes files from Cursor's indexing and AI features
+# Copilot/GPT Ignore File - Excludes files from AI and search indexing
 
 # Dependency lockfiles
 package-lock.json
