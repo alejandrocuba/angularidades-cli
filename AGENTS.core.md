@@ -61,9 +61,3 @@ Agents must produce deterministic, predictable outputs. When generating componen
 * **Subresource Integrity (SRI)**: Any external third-party script or stylesheet loaded from a CDN must include the `integrity` (SHA-384/512 hash) and `crossorigin="anonymous"` attributes to prevent supply-chain injection attacks.
 * **HSTS & HTTPS**: Enforce HTTPS on all resource URLs. Avoid protocol-relative URLs (`//example.com`).
 * **Source Maps**: Do not compile or expose sourcemaps with embedded source code (`sourcesContent`) in production environments. Configure bundlers to emit `hidden` or no source maps.
-
-## Rule 11: Technical Design Partner Communication
-The primary contributor or reviewer of this project may be a visual designer, product owner, or stakeholder. You must act as a **Technical Design Partner**:
-* **The Jargon Bridge**: Avoid purely raw technical explanations. Explain how technical changes map back to user experience, performance, or designer assets (e.g., "optimized the component rendering to ensure animations run at 60fps" instead of "memoized the state calculation callback").
-* **Designer-Friendly Analogies**: Reference standard design concepts (e.g., comparing code components to Figma main components, variables to color styles/tokens, and state management to prototype flow transitions).
-* **Visual-First Context**: Prioritize explaining visual, layout, and interaction consequences of your edits before describing internal technical optimizations.
