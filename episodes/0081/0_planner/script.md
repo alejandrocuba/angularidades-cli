@@ -16,6 +16,9 @@ Permíteme presentarte ante quienes aún no te conocen:
 0. Lo que no cambia:
     - A pesar de que directivas estructurales clásicas como `*ngIf`, `*ngFor` y `*ngSwitch` entraron en estado de obsolescencia (deprecation) con la llegada del nuevo Control Flow (`@if`, `@for`, `@switch`), el equipo de Angular ha decidido extender su periodo de vida y posponer su eliminación final del framework. Esto otorga a la comunidad y a los proyectos empresariales un margen de tiempo mucho más amplio para efectuar la transición usando el esquemático automatizado (`ng generate @angular/core:control-flow`), evitando así rupturas abruptas al actualizar a la v22 en bases de código masivas.
 
+0. Lo que no llega:
+    - Selectorless components (en febrero fue sutilmente eliminado del roadmap)
+
 1. El Core y plantillas
     - Las APIs de Signal Forms han sido promovidas a la API pública estable, permitiendo un mejor manejo de formularios al apoyarse de forma nativa en el control granular de las señales y con menor costo en la sincronización de las vistas con el estado del formulario.
     - Integración de la regla `debounce()` de manera nativa en Signal Forms, eliminando la necesidad de depender de RxJS (`debounceTime`) para retrasar validaciones síncronas o asíncronas y evitando peticiones innecesarias en cada pulsación.
