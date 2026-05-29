@@ -24,7 +24,7 @@ Permíteme presentarte ante quienes aún no te conocen:
     - Soporte oficial para arrancar (`bootstrap`) aplicaciones de Angular directamente dentro de un *shadow root*, un avance masivo para arquitecturas de micro-frontends y Web Components.
 
 2. Inyección de Dependencias
-    - Nuevo decorador `@Service`, marcando un cambio en el core para proveer servicios de manera más explícita y semántica que con @Injectable, que ha estado desde los inicios de Angular, por lo que tiene demasiado overhead. Lo que @service ofrece es la capacidad de definir un singleton en la raíz y punto. Sin useClass, useValue, ni inyección en constructores.
+    - Nuevo decorador `@Service`, que viene directamente como estable, marcando un cambio en el core para proveer servicios de manera más explícita y semántica que con @Injectable, que ha estado desde los inicios de Angular, por lo que tiene demasiado overhead. Lo que @service ofrece es la capacidad de definir un singleton en la raíz y punto. Sin useClass, useValue, ni inyección en constructores.
     - Se agregó la nueva función de utilidad `injectAsync` en el core para resolver dependencias de forma asíncrona, facilitando arquitecturas con carga diferida (es decir, ahora hay lazy loading en dependency injection).
 
 3. Enrutamiento
@@ -32,6 +32,7 @@ Permíteme presentarte ante quienes aún no te conocen:
     - Se resolvió un dolor de cabeza clásico cambiando el comportamiento por defecto de `paramsInheritanceStrategy` a `'always'`. Ahora los componentes hijos heredan automáticamente todos los parámetros de las rutas padres sin configuración extra.
 
 4. Red
+    - Las nuevas primitivas reactivas para carga de datos asíncrona (`resource`, `rxResource` y `httpResource`) pasan a ser estables. Estas APIs revolucionan la forma de hacer fetching conectando directamente promesas, observables o peticiones HTTP al ecosistema de signals sin necesidad de gestionar suscripciones o ciclos de vida manualmente.
     - La monitorización de progreso en el `HttpClient` es ahora más granular con la inclusión de las opciones `reportUploadProgress` y `reportDownloadProgress`, llevando a la obsolescencia la configuración original `reportProgress`.
 
 5. SSR
@@ -44,6 +45,6 @@ Permíteme presentarte ante quienes aún no te conocen:
 
 7. Limpieza
     - Se retira el soporte para selectores ShadowDOM que son considerados legacy. Y por consiguiente, sus polyfills de CSS.
-    - En cuanto a limpieza técnica y breaking changes: se removió el soporte para versiones de TypeScript inferiores a la 6.0, se eliminaron por completo las APIs depreciadas `ComponentFactoryResolver` y `ComponentFactory`, y la interfaz `CanMatchFn` ahora exige obligatoriamente el parámetro `currentSnapshot`.
+    - En cuanto a limpieza técnica y breaking changes: se removió el soporte para versiones de TypeScript inferiores a la 6.0, se eliminaron por completo las APIs obsoletas `ComponentFactoryResolver` y `ComponentFactory`, y la interfaz `CanMatchFn` ahora exige obligatoriamente el parámetro `currentSnapshot`.
 
 8. Antes de concluir el episodio, ¿hay algo más que no hayamos mencionado durante la conversación sobre lo que quieras comentar?
