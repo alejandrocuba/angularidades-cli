@@ -1,63 +1,45 @@
 # Core Agentic Engineering Protocols
 
-This document defines the global engineering rules, security guidelines, and development protocols that apply to all repositories. 
-
 > [!NOTE]
-> Project-specific guidelines (such as framework implementations or local patterns) are defined in the repository's root `AGENTS.md` and inherit these rules.
+> * Project overrides (frameworks, workflows) belong in `AGENTS.md` and inherit these rules.
+> * Design, accessibility, and markup standards are defined in [DESIGN-SYSTEM.core.md](DESIGN-SYSTEM.core.md) and project `DESIGN-SYSTEM.md`.
 
-## Rule 1: Deterministic Operations
-Agents must produce deterministic, predictable outputs. When generating components, services, or functions:
-* Avoid mutable shared state.
-* Rely on pure functions, immutable data patterns, and native reactive structures (e.g., signals, observables, or hooks depending on the framework).
-* Ensure side effects are isolated and well-documented.
+## 1. Determinism
+* **Predictability**: Use pure functions, immutable data, and framework-native reactivity. Avoid mutable shared states.
+* **Error Handling**: Never swallow exceptions silently. Log with diagnostic context or bubble to explicit boundaries.
 
-## Rule 2: Package Management
-* Always use pnpm (or the repository's specified package manager).
-* Do not mutate `package.json` or lockfiles without explicit human authorization.
-* Any dependency upgrade or addition requires an isolated PR and must be verified for compatibility.
+## 2. Architecture
+* **SRP/DRY**: Single responsibility per module. Abstract repeated logic/styles into shared utilities.
+* **Async Safety**: Prevent state updates or mutations on unmounted/destroyed components.
 
-## Rule 3: Platform & Runtime Compatibility
-* Respect Server-Side Rendering (SSR) or Static Site Generation (SSG) constraints if applicable.
-* Never invoke direct browser-only global objects (such as `window`, `document`, `localStorage`) in component constructor or initialization phases.
-* Always guard browser/runtime APIs using framework-native hooks or checking platform injection tokens.
-* **API Constraints**: Do not use deprecated APIs (e.g., `document.write`, synchronous XHR). Use modern features like `fetch` or dynamic script elements.
-* **Event Listeners & Performance**: Touch, wheel, and scroll event listeners must be passive (`{ passive: true }`) unless calling `preventDefault()` is explicitly required.
-* **Memory Management**: Always clean up resize, scroll, or orientation event listeners when components unmount. Use `AbortController` signals to manage listener lifetimes cleanly.
+## 3. Documentation
+* **Flag Surprises**: Comment and flag non-obvious, legacy, or confusing logic.
 
-## Rule 4: Language & Type Safety (TypeScript)
-* Enforce strict type checking at all times.
-* Prefer type inference where the type is obvious; otherwise, provide explicit typing.
-* Avoid the `any` type completely. Use `unknown` for unsafe input and narrow it with type guards before property access.
-* Keep compiler and linter rules clean; do not use `@ts-ignore` or lint suppressions unless absolutely unavoidable and explicitly commented.
-* **Prototype Pollution Prevention**: When merging, cloning, or extending untrusted dynamic objects, do not use naive recursive merges that mutate `Object.prototype` (via `__proto__` or `constructor`). Use `structuredClone` for deep copies, or use `Object.create(null)` to handle safe key-value dictionary bags.
+## 4. Dependencies
+* **Tooling**: Use `pnpm` exclusively. Human approval required for `package.json`/lockfile changes.
 
-## Rule 5: Software Design Principles (SRP & DRY)
-* **Single Responsibility Principle (SRP)**: Each component, module, or service must have one, and only one, reason to change. Split large components into focused, smaller sub-components.
-* **Don't Repeat Yourself (DRY)**: Abstract common visual styles, utilities, hooks, or business logic into reusable and modular services or libraries rather than copying them.
+## 5. Security
+* **Environment**: Stay sandboxed. No `sudo` or out-of-workspace edits.
+* **XSS**: Prefer `textContent`. Sanitize `innerHTML` via DOMPurify/Trusted Types.
+* **Supply Chain**: CDN links require `integrity` hashes, `crossorigin="anonymous"`, and HTTPS.
+* **Source Maps**: Exclude `sourcesContent` in production (`hidden` or none).
 
-## Rule 6: Accessibility (A11y)
-* All UI layouts must meet **WCAG 2.2 AA** accessibility minimums.
-* Proper semantic HTML5 tags must be used (e.g., `<main>`, `<article>`, `<nav>`, `<header>`).
-* Interactive elements must support proper focus management, keyboard navigation (tab index, Esc closures), and aria attributes for screen readers.
-* **HTML Validation**: Enforce valid HTML structure. Do not use duplicate IDs on a single page, avoid invalid child elements (e.g., non-list items directly inside `<ul>`), and do not nest interactive controls (e.g., a `<button>` inside an `<a>`).
+## 6. Runtime & Memory Safety
+* **SSR/SSG**: Guard browser globals (`window`, `document`) via lifecycle hooks or platform checks.
+* **Leaks & Cleanup**: Prevent memory leaks. Clear timeouts, remove event listeners, dispose of subscriptions, and manage lifecycle cleanup.
+* **Performance (INP)**: Avoid long, synchronous tasks that block the main thread. Yield frequently during heavy data processing to ensure a responsive Interaction to Next Paint.
+* **Modern APIs**: Use `fetch`, abandon deprecated APIs (`document.write`, sync XHR).
 
-## Rule 7: Testing
-* Protect your changes with automated unit, integration, or end-to-end tests where appropriate.
-* When modifying existing features, update corresponding test files (`.spec.ts`, `.test.ts`) to ensure zero regression.
-* For interactive UI components, mock user events (clicks, keypresses) and assert correct DOM state updates.
+## 7. Type Safety (TypeScript)
+* **Strict Mode**: No `any`. Use `unknown` with type guards. Prefer implicit inference.
+* **Overrides**: Justify and document `@ts-ignore` or lint disables.
+* **Object Safety**: Prevent prototype pollution. Use `structuredClone` for deep copies, `Object.create(null)` for maps.
 
-## Rule 8: Sandbox Boundaries
-* Run commands strictly within the designated workspace sandbox.
-* Never invoke elevated permissions (`sudo`) or attempt to access system files outside the workspace directory.
-* If a package installation fails due to network constraints, check local configurations and prompt the user rather than looping.
+## 8. Testing
+* **Coverage**: Mandate tests (`.spec.ts`) to prevent regressions.
+* **Mocks**: Simulate and assert user interactivity accurately.
 
-## Rule 9: Design System Adherence
-* Agents must strictly read and adhere to the guidelines defined in [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md) before executing UI edits.
-* Do not introduce ad-hoc styles, colors, or fonts. Use defined design tokens (CSS variables or utility classes).
-* If a visual change deviates from the design system, explicitly ask the user for confirmation first.
-
-## Rule 10: Security Protocols & DOM-XSS Defenses
-* **Input Sanitization**: Never assign unescaped, untrusted input strings to `innerHTML`. Use `textContent` for text nodes. If HTML rendering is required, sanitize it via a library like `DOMPurify` and adhere to Trusted Types policies.
-* **Subresource Integrity (SRI)**: Any external third-party script or stylesheet loaded from a CDN must include the `integrity` (SHA-384/512 hash) and `crossorigin="anonymous"` attributes to prevent supply-chain injection attacks.
-* **HSTS & HTTPS**: Enforce HTTPS on all resource URLs. Avoid protocol-relative URLs (`//example.com`).
-* **Source Maps**: Do not compile or expose sourcemaps with embedded source code (`sourcesContent`) in production environments. Configure bundlers to emit `hidden` or no source maps.
+## 9. I/O Token Efficiency
+* **Minimization**: Favor concise instructions over verbose prose.
+* **Identifiers**: Use short, deterministic IDs for inter-agent communication instead of descriptive text.
+* **Payloads**: Strip superfluous metadata from API payloads or tool inputs/outputs.
