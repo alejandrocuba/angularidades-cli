@@ -9,7 +9,6 @@ Permíteme presentarte ante quienes aún no te conocen:
 - Eres de Buenos Aires, Argentina
 - Eres conferencista, escritor de artículos técnicos y profesor de varios cursos relacionados con JS y rendimiento web
 - Eres mentor de Google Startups
-- Eres CTO en Pulppo
 - Tienes la distinción GDE (Google Developer Expert) que ofrece Google en tres categorías: Angular, Tecnologías Web y Firebase, y además tienes los reconocimientos de Nx Champion y NativeScript Developer Expert.
 
 # Guión
