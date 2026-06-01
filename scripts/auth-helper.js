@@ -57,8 +57,9 @@ async function main() {
     const { tokens } = await oauth2Client.getToken(code.trim());
     s.stop('Tokens retrieved successfully!');
 
-    p.console(
-      `Your refresh Token: ${tokens.refresh_token}`
+    p.note(
+      tokens.refresh_token || 'No refresh token returned.',
+      'Your Refresh Token'
     );
 
     p.outro(
