@@ -16,7 +16,7 @@ Temas que abordamos:
 00:37:09 httpResource, rxResource y HttpClient
 00:39:08 SSR: Caché de recursos e hidratación incremental
 00:42:43 Tooling: MCP
-00:45:55 Compiler CLI y compatibilidad con Node 26
+00:45:55 Compatibilidad con Node 26 en el Angular CLI
 
 Conecta con Jorge Cano: https://www.linkedin.com/in/jorgeucano
 
