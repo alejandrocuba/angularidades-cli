@@ -21,5 +21,3 @@ Topics We Address:
 Connect with Jorge Cano: https://www.linkedin.com/in/jorgeucano
 
 Angularidades on LinkedIn: https://www.linkedin.com/company/angularidades/
-
-Spanish audio with English subtitles.
