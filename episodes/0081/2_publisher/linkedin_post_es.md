@@ -1,4 +1,4 @@
-¿Listos para Angular 22? Esta semana el equipo del framework estabilizará Signal Forms y Resources, pero estas no son las únicas novedades. Para ayudarte a preparar tu migración, invitamos a Jorge Cano a repasar los cambios clave y detalles técnicos que trae la v22.0.0.
+¿Listos para Angular 22? Esta semana el equipo del framework estabilizará Signal Forms y Resources, pero estas no son las únicas novedades. Para ayudarte a preparar tu migración, invitamos nuevamente a Jorge Cano a repasar los cambios clave y detalles técnicos que trae la v22.0.0.
 
 Temas que abordamos durante la conversación:
 ✔️ La estabilización de Signal Forms, la incorporación nativa de debounce() y el adiós definitivo a RxJS para validaciones básicas.
