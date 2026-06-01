@@ -4,6 +4,7 @@ const path = require('path');
 // Resolve command and episode directory
 const args = process.argv.slice(2);
 const command = args[0]; // 'dump', 'build', or 'validate'
+const lang = args.find(a => a === 'en' || a === 'es') || 'en';
 let episodeArg = args.find(arg => !arg.startsWith('--') && arg !== 'dump' && arg !== 'build' && arg !== 'validate');
 
 if (!command || !['dump', 'build', 'validate'].includes(command)) {
@@ -44,7 +45,7 @@ if (command === 'dump') {
   const parsed = blocks.map((block, index) => {
     const lines = block.split('\n');
     const timestamp = lines[0];
-    const text = lines.slice(1).join(' ').replace(/\s+/g, ' ').trim();
+    const text = lines.slice(1).join('\n').trim();
     return { index, timestamp, text };
   });
 
@@ -80,7 +81,7 @@ if (command === 'dump') {
 
   const files = fs.readdirSync(publisherDir);
   const transFiles = files
-    .filter(f => f.startsWith('trans-') && f.endsWith('.json'))
+    .filter(f => (lang === 'en' ? f.startsWith('trans-') : f.startsWith('es-chunk-')) && f.endsWith('.json'))
     .sort((a, b) => {
       const aStart = parseInt(a.split('-')[1]);
       const bStart = parseInt(b.split('-')[1]);
@@ -89,7 +90,7 @@ if (command === 'dump') {
 
   if (transFiles.length === 0) {
     console.error(`Error: No trans-*.json files found in ${publisherDir}`);
-    console.log('Ensure you have saved translated chunks (e.g. trans-0-99.json, trans-100-199.json) in 2_publisher/');
+    console.log('Ensure you have saved translated chunks (e.g. trans-0-99.json or es-chunk-0-99.json) in 2_publisher/');
     process.exit(1);
   }
 
@@ -128,7 +129,7 @@ if (command === 'dump') {
   }
   sbvContent = sbvContent.trim() + '\n';
 
-  const outputPath = path.join(publisherDir, 'youtube_captions_en.sbv');
+  const outputPath = path.join(publisherDir, `youtube_captions_${lang}.sbv`);
   fs.writeFileSync(outputPath, sbvContent);
   console.log(`Successfully compiled and wrote ${outputPath} with ${translations.length} blocks!`);
 } else if (command === 'validate') {

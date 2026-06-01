@@ -15,15 +15,21 @@ Distill raw transcripts and drafts into clear, concise, technically accurate sum
 - **Tone:** Natural & Direct. Write as if a lead engineer is introducing a colleague. No flowery or AI clichés.
 - **Spanish Nuance:** Use neutral, professional technical Spanish. Avoid literal unnatural translations.
 - **Precision:** Use exact timestamps from the SRT file. Ignore timestamps from other sources.
-- **Transcript Translation Protocol (Token-Saving & Alignment Check):** 
+- **Transcript Review and Translation Protocol (Token-Saving & Alignment Check):** 
   - To translate the Spanish captions to English block-by-block, NEVER translate the entire raw SBV file containing timestamps in a single prompt (this wastes input/output tokens and causes alignment/timestamp errors).
-  - Instead, use the automated script `scripts/publisher/translate-helper.js` to dump Spanish text blocks into JSON arrays:
+  - **Step 1 (Baseline Correction):** Run the automated correction script to fix standard technical typos:
+    `node scripts/publisher/correct-es-captions.js <episode>`
+  - **Step 2 (Dump):** Dump the baseline-corrected Spanish text blocks into JSON arrays:
     `node scripts/publisher/translate-helper.js dump <episode>`
-  - Translate the generated chunk JSON files (`1_recording/chunk-X-Y.json`) in batches of 100 blocks, saving the translated JSON arrays to `<episodeDir>/2_publisher/trans-X-Y.json`.
-  - Finally, compile the translated SBV file:
-    `node scripts/publisher/translate-helper.js build <episode>`
+  - **Step 3 (Semantic Correction):** You MUST use your capabilities to thoroughly read and rewrite the dumped Spanish chunks (`1_recording/chunk-X-Y.json`) to fix words and phrases that make no sense due to the automatic YouTube transcription. Save these final corrected blocks to `<episodeDir>/2_publisher/es-chunk-X-Y.json`.
+    **CRITICAL:** You must strictly preserve all internal line breaks (`\n`) exactly as they appear in each original block so the video subtitle line structure is maintained.
+  - **Step 4 (Translation):** Translate the semantically corrected Spanish chunks into English, saving them to `<episodeDir>/2_publisher/trans-X-Y.json`. Again, you MUST strictly preserve all line breaks (`\n`).
+  - **Step 5 (Build):** Compile both corrected Spanish and translated English SBV files:
+    - `node scripts/publisher/translate-helper.js build <episode> es`
+    - `node scripts/publisher/translate-helper.js build <episode> en`
   - If a block count mismatch is detected, run the validation check:
     `node scripts/publisher/translate-helper.js validate <episode>`
+  - **Step 6 (Cleanup):** Delete all temporary JSON chunks (`blocks.json`, `chunk-*.json`, `es-chunk-*.json`, `trans-*.json`) from the `1_recording/` and `2_publisher/` directories so they do not clutter the repository.
 - **Brand Preservation:** Always keep "Angularidades" as "Angularidades". DO NOT translate to "Angularities".
 - **Language Protocol:** Follow language specifications in `output_schema.md`.
 - **Archival Integrity:** DO NOT modify any existing episode folders. Work EXCLUSIVELY on the newest episode directory, unless explicitly instructed to target a specific older episode number. Previous episodes are kept for archival purposes and must remain untouched.
