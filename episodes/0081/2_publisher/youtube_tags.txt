@@ -1,0 +1,1 @@
+angular, ssr, hybrid rendering, signal forms, angular 22, @service, httpresource, model context protocol, web components, node 26, node 27

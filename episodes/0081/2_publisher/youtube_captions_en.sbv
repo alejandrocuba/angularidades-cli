@@ -1,0 +1,1939 @@
+0:00:07.040,0:00:12.080
+If the release cadence of Angular versions
+stays as it is, I think we'll see each other
+
+0:00:12.080,0:00:18.880
+here every 6 months, Jorge, right? The truth is yes,
+we are doing well, right? I don't even know how many we've done.
+
+0:00:18.880,0:00:24.440
+How many has it been? Years of this already. I think it's
+17, so if we do a little arithmetic there,
+
+0:00:24.440,0:00:30.880
+I think it's almost 3 years in this, giving
+a few updates on what's coming,
+
+0:00:30.880,0:00:35.160
+what is not coming as well, what the
+expectations are, how to prepare for the new
+
+0:00:35.160,0:00:41.880
+versions, what to keep in mind a few days before or,
+as happened to us once, a month before the release of
+
+0:00:41.880,0:00:48.280
+the version, what to keep in mind to approach
+the major version in a way that doesn't surprise us,
+
+0:00:48.280,0:00:54.920
+that doesn't take us by storm. Yes, yes.
+How time flies! Eh, though I must say something,
+
+0:00:54.920,0:00:59.240
+the one from that month was my fault, so
+I'll take responsibility as always. Yes,
+
+0:00:59.240,0:01:03.320
+that's in one of the episodes of the
+many we've already recorded. You are competing with
+
+0:01:03.320,0:01:06.880
+Eduardo Roth in the number of episodes we
+have here on Angularidades. I think this is
+
+0:01:06.880,0:01:11.920
+like your eighth episode. So I am
+immensely grateful to have you
+
+0:01:11.920,0:01:18.360
+once more around here, and we'll keep incrementing the for loop
+for what lies ahead. If Angular
+
+0:01:18.360,0:01:24.640
+keeps making these biannual releases. Yes,
+yes, it's been a while, but well, happy,
+
+0:01:24.640,0:01:29.480
+happy again to be here, so I'm
+thrilled, you know. Great. And so,
+
+0:01:29.480,0:01:36.680
+Jorge, if you had to describe what's coming
+now, this week, possibly on Wednesday,
+
+0:01:36.680,0:01:42.640
+what word, what term would you use
+to describe Angular 22?
+
+0:01:43.480,0:01:48.240
+You know, well, I don't know, at least in Argentina,
+because I was going to say a phrase like
+
+0:01:48.240,0:01:53.720
+and I was going to throw it out as if everyone was
+the same, but eh here in Argentina they usually say
+
+0:01:53.720,0:02:01.120
+when something is lacking, right? That it lacks maturity,
+that it's green. And I think it stops being green,
+
+0:02:01.120,0:02:06.880
+right? It goes back to not being green,
+which is not the first time, right? I mean,
+
+0:02:06.880,0:02:12.600
+we've gone through several stages, but I think
+that's it, right? I mean, it has reached a maturity and a
+
+0:02:12.600,0:02:17.480
+fairly strong stability. I think those are the
+words I would have: stability, maturity.
+
+0:02:18.840,0:02:23.160
+And I agree with you, this concept of Modern
+Angular that came after the Renaissance,
+
+0:02:23.160,0:02:27.640
+which coincided with the first episode we recorded
+together about the anticipation of what was coming
+
+0:02:27.640,0:02:34.720
+in v17, I think that yes, this is the stable
+version, the version that comes to land what
+
+0:02:34.720,0:02:41.840
+has to do with Signal Forms, resources,
+and a series of elements there that were, well,
+
+0:02:41.840,0:02:49.280
+there are still a few hanging for 23,
+for 24, but now using modern Angular
+
+0:02:49.280,0:02:57.880
+is not something that is cutting-edge, it's not
+pioneering, it's not extremely experimental or
+
+0:02:57.880,0:03:04.720
+however it might be seen in the corporate world.
+Everything that already has to do with control flow,
+
+0:03:04.720,0:03:12.400
+with standalone or autonomous components, with
+this whole signal graph system, is no longer
+
+0:03:12.400,0:03:18.400
+something unknown, it's not something that will take
+by surprise any developer or any
+
+0:03:18.400,0:03:23.600
+person who is behind a technical decision
+to advance the framework to use the
+
+0:03:23.600,0:03:30.400
+new architectural patterns. The truth is that
+yes, I mean, clearly we can finally say again
+
+0:03:30.400,0:03:36.080
+that we returned to stability, that there is
+nothing new to learn and that I can use everything,
+
+0:03:36.080,0:03:43.800
+right? Totally. And well, as we always do, in
+case someone hasn't seen any of
+
+0:03:43.800,0:03:49.840
+the episodes where we had the chance
+to see you, let me introduce you to those
+
+0:03:49.840,0:03:56.880
+people who still don't know you. By your accent,
+it's clear that you are from Argentina, specifically from
+
+0:03:56.880,0:04:02.280
+Buenos Aires. You are a speaker, technical writer,
+and instructor of several courses
+
+0:04:02.280,0:04:09.400
+related to JavaScript and web performance
+in general. You have the distinction of Google
+
+0:04:09.400,0:04:17.600
+Developer Expert in three categories: the category
+of Web Technologies, Firebase, and obviously
+
+0:04:17.600,0:04:24.400
+Angular. Here we are again. If you didn't
+know me, you can go 150 episodes back,
+
+0:04:24.400,0:04:28.280
+which I think was my first time. We have many
+episodes. I already feel like a co-host, that's all
+
+0:04:28.280,0:04:34.000
+I'm going to say. But well, thanks again
+for the invitation. Sure, thank you very much,
+
+0:04:34.000,0:04:38.400
+grateful, obviously, for every moment
+that we can share together. So,
+
+0:04:38.400,0:04:45.160
+what is it that doesn't change in 22 to
+create a prelude of what's coming with this new
+
+0:04:45.160,0:04:53.200
+version? We had expected for a while,
+meaning specifically two versions ago,
+
+0:04:53.200,0:05:00.280
+when they deprecated all these structural
+directives of *ngIf, *ngFor
+
+0:05:00.280,0:05:08.840
+and *ngSwitch in favor of the new control
+flow structure: @if, @for, @switch. We had expected that
+
+0:05:08.840,0:05:17.680
+based on the lifecycle of framework features,
+they would be removed in two versions.
+
+0:05:17.680,0:05:23.560
+But from an architectural point of view,
+what happened with the team? What
+
+0:05:23.560,0:05:31.080
+was the decision made to continue
+extending the lifespan of these directives?
+
+0:05:31.640,0:05:36.800
+Ah, I don't know if you remember, but I was
+against these directives to start with,
+
+0:05:36.800,0:05:40.880
+I want to say. And then I was very in favor
+because not only at the architecture level, but at
+
+0:05:40.880,0:05:46.320
+the performance level, I mean, it has many benefits,
+many benefits. I think what happens is that
+
+0:05:46.320,0:05:54.360
+today many people don't want to break what's
+old, and for maintainability and CI/CD and there are so many
+
+0:05:54.360,0:06:01.720
+things not to break that I don't even know. I mean, it's
+like: it's deprecated, but I'll give you a little more
+
+0:06:01.720,0:06:07.760
+time. We know that Angular is very corporate today,
+meaning that many large corporations use
+
+0:06:07.760,0:06:14.200
+Angular and that makes it a reality. They move
+very differently. I don't even know if they can use AI,
+
+0:06:14.200,0:06:19.600
+right? So I think it's basic, right? For
+me, I mean, beyond everything you can say,
+
+0:06:19.600,0:06:26.240
+there is a reality, which is that not everyone is
+on the latest version of Angular, not even close.
+
+0:06:26.240,0:06:31.520
+So, many times you want to update the
+version, but your code is a bit legacy,
+
+0:06:31.520,0:06:35.440
+in quotes. So, you have no choice
+but to update for security reasons,
+
+0:06:35.440,0:06:39.560
+but then you can't use this because you have to
+use that. So, I think there is an issue there,
+
+0:06:39.560,0:06:46.680
+right? I mean, it's like: I'm giving you a little more
+time. And the framework is also cleaning itself up,
+
+0:06:46.680,0:06:52.440
+right? Eh, by marking it deprecated,
+it indicates that we should start
+
+0:06:52.440,0:06:59.160
+devising a series of directives,
+guidelines rather, that allow us to mature
+
+0:06:59.160,0:07:06.000
+the codebase towards the direction that Angular
+is taking. And for example, in the
+
+0:07:06.000,0:07:11.200
+case of this cleanup, now with v22 the
+support for Shadow DOM selectors is removed,
+
+0:07:11.200,0:07:17.240
+which are already considered legacy and,
+consequently, CSS polyfills. Remember
+
+0:07:17.240,0:07:24.480
+that file that was huge about
+10 or approximately 5 years ago? There are still
+
+0:07:24.480,0:07:31.040
+polyfills internally that are not exposed to
+us as developers in
+
+0:07:31.040,0:07:36.800
+our codebase, the part we can control,
+but there are a lot
+
+0:07:36.800,0:07:42.240
+of conditional polyfills in there, in the
+internals of the framework, that are gradually being
+
+0:07:42.240,0:07:48.800
+cleaned up, specifically those old ones like /deep/ or
+::shadow and a series of other elements that
+
+0:07:48.800,0:07:55.640
+were rarely used and were replaced
+by other much more modern conventions.
+
+0:07:56.280,0:08:00.080
+Look, to give you an idea, to give you
+an idea of what we are going to talk about polyfills,
+
+0:08:00.080,0:08:08.520
+on my channel there are 257 videos. Video number one,
+meaning the first video I uploaded is about polyfills
+
+0:08:08.520,0:08:19.640
+in AngularJS. Wow! What year was that? That
+video is from November 29, 2013. 2013.
+
+0:08:21.440,0:08:26.520
+And if you could look back in
+time, what would you say to Jorge,
+
+0:08:26.520,0:08:32.280
+to stop worrying a bit about polyfills,
+that in a decade things would be better regarding
+
+0:08:32.280,0:08:38.120
+the standardization of a series of
+conventions in the modern web or what? No,
+
+0:08:38.120,0:08:42.200
+I think I would have never believed that still
+frameworks had to use polyfills
+
+0:08:42.200,0:08:50.000
+hidden internally. I wouldn't have
+believed that if you ask me. Eh, still to give,
+
+0:08:50.000,0:08:57.200
+as you said, right?, to give extended
+support, in quotes, right?, beyond LTS,
+
+0:08:57.200,0:09:03.960
+to corporations that are still behind
+this new mechanism they are
+
+0:09:03.960,0:09:08.960
+implementing. They help with schematics,
+they help with this same lifecycle process,
+
+0:09:08.960,0:09:14.720
+but even so, resistance to change is deep.
+Yes. And not only resistance to change,
+
+0:09:14.720,0:09:20.240
+right? I mean, always, I mean, it's like, well,
+maturation-wise when you start working more
+
+0:09:20.240,0:09:26.640
+and more, you realize that many
+times, if you tell the person above you
+
+0:09:26.640,0:09:35.440
+(doesn't matter, even if you are the CTO, you have the
+CEO above you), between a feature or changing all
+
+0:09:35.440,0:09:39.920
+the *ngIf directives, they are going to look at you and say:
+"Why are you asking me? Do the feature because
+
+0:09:39.920,0:09:44.920
+I have to go out and sell, or for this or for
+that." It's not like the latest is always first, and
+
+0:09:44.920,0:09:49.640
+I think I always say it, right?: it's like the return
+on investment is for us. Today,
+
+0:09:49.640,0:09:55.840
+computers are fast, and this and that, and
+phones, right? So, unfortunately, it's always
+
+0:09:55.840,0:10:01.680
+left for last, this kind of thing, because
+there are other priorities. It's just that planning technical debt
+
+0:10:01.680,0:10:07.960
+is quite challenging for
+any team, specifically institutions
+
+0:10:07.960,0:10:13.600
+that have an extremely large codebase,
+systems that were created
+
+0:10:13.600,0:10:19.720
+a decade ago with a different way of doing things.
+But well, the Angular system,
+
+0:10:19.720,0:10:25.120
+the framework itself, cleans itself up a bit.
+For example, this TypeScript thing is no longer going to be
+
+0:10:25.120,0:10:33.480
+compatible with versions prior to 6.0.
+Yes, it's quite rare that someone would do a
+
+0:10:33.480,0:10:38.680
+little cherry-picking with dependencies and
+try to force 22 to work with 5.
+
+0:10:38.680,0:10:45.200
+Because in the end, when you run these update
+schematics, the framework automatically
+
+0:10:45.200,0:10:50.240
+makes all the adjustments for developers,
+with direct and transitive dependencies,
+
+0:10:50.240,0:10:55.320
+so there is little to worry about
+with these kinds of mechanisms, but well,
+
+0:10:55.320,0:11:02.480
+the framework itself also completely removes
+APIs that were already obsolete, like the
+
+0:11:02.480,0:11:08.360
+ComponentFactoryResolver, the
+ComponentFactory, remember that? The part in
+
+0:11:08.360,0:11:16.040
+the router to match routes now requires
+mandatorily the currentSnapshot parameter.
+
+0:11:16.040,0:11:20.240
+I think it's good, I mean, we have to move forward,
+sometimes we have to force it because otherwise it's impossible. I mean,
+
+0:11:20.240,0:11:27.400
+the problem is always, right? If Angular keeps
+giving support to such old versions, the codebase of
+
+0:11:27.400,0:11:35.600
+Angular becomes huge and there are a lot of
+ifs in the middle, so to speak, or it cuts.
+
+0:11:36.280,0:11:41.960
+They did it with RxJS, right? Do you remember when it was
+all deprecated, when they migrated the RxJS version,
+
+0:11:41.960,0:11:48.280
+which was impossible to migrate and everything was deprecated
+and your code was full of deprecation warnings? That was
+
+0:11:48.280,0:11:54.560
+from 5 to 6 of RxJS. Exactly. It was
+very hard. I mean, you literally had to use
+
+0:11:54.560,0:11:59.360
+a compat package, because otherwise it gave you deprecated warnings
+everywhere, and the compat was a compatibility package that
+
+0:11:59.360,0:12:04.200
+internally bridged one import and the other.
+It was terrible. But that's why,
+
+0:12:04.200,0:12:10.360
+that's why I think we talk about maturity and I think
+the team itself matured, like saying: "Well,
+
+0:12:10.360,0:12:14.960
+I mean, there is a clear direction, there are clear
+things, and these are it." Even having very clear
+
+0:12:14.960,0:12:22.680
+what the priorities are on the roadmap. Is
+the decision of the team clear
+
+0:12:22.680,0:12:30.360
+to have three specific priorities? Number
+one: to continue offering an experience
+
+0:12:30.360,0:12:35.320
+that is at the level of modernity regarding
+everything related to the development of
+
+0:12:35.320,0:12:42.480
+AI, of being engineers who can use the
+framework of the future, not the framework of before
+
+0:12:42.480,0:12:48.680
+all the explosion of Agentic Engineering, of working
+
+0:12:48.680,0:12:54.760
+with a series of structures that facilitate
+the inclusion of these tools
+
+0:12:54.760,0:13:00.320
+within the framework. Second: developer
+experience, and third, of course,
+
+0:13:00.320,0:13:05.400
+to keep the framework performance
+even better, because do you remember that about the
+
+0:13:05.400,0:13:11.520
+convergence with the Wiz framework, which is the
+internal framework that had already been announced
+
+0:13:11.520,0:13:17.440
+interoperably, meaning, YouTube
+started using signals? Yes. Let's see,
+
+0:13:17.440,0:13:22.720
+about these three points. The first is, I already
+told you not long ago, we were together, eh,
+
+0:13:22.720,0:13:27.400
+not together on a call, but together in person.
+The language itself ends up being a commodity,
+
+0:13:27.400,0:13:34.200
+so the better integrated it is, the more it will
+be chosen. I mean, if you have to choose something
+
+0:13:34.200,0:13:38.840
+new or if you have to think about maintainability
+or if you have to think about a migration. Therefore,
+
+0:13:38.840,0:13:43.560
+Angular has to mature that, no matter what.
+In fact, the other day I was reading that
+
+0:13:43.560,0:13:49.920
+Google gives unlimited Gemini to its employees.
+So, if Gemini doesn't work well with Angular,
+
+0:13:49.920,0:13:55.520
+we are in trouble. Exactly. Which is the foundation,
+right? The basics, so to speak. So, all those
+
+0:13:55.520,0:14:00.520
+tooling features have to be very well put together. So, for me, I mean,
+
+0:14:00.520,0:14:06.920
+the three pillars of Angular are very
+well thought out. Developer experience, because we
+
+0:14:06.920,0:14:12.600
+already know that AI is something that boosts you, not something
+that replaces you. So, the necessity is absolute,
+
+0:14:12.600,0:14:17.800
+performance and also everything that comes with
+retrocompatibility, you need it because not
+
+0:14:17.800,0:14:23.040
+everyone can update to the latest all the
+time, or sometimes it's better to fix a bug
+
+0:14:23.040,0:14:31.040
+or a feature because it gives a higher ROI than
+doing a code update. So, developer experience,
+
+0:14:31.040,0:14:36.200
+and so if you make it good and comfortable for people, they will
+want to keep working because everything works on the
+
+0:14:36.200,0:14:42.120
+first try, not after 15 questions if
+you manage the AI well. Topic aside. Second: if your
+
+0:14:42.120,0:14:46.280
+app takes too long and is very heavy, people won't
+want to use it or they will complain or need more
+
+0:14:46.280,0:14:52.640
+RAM, and we already know how this goes. Today, people
+use more Chrome tabs than applications on the
+
+0:14:52.640,0:14:57.680
+computer, right? I mean. And the third is the
+developer experience. We already know we are 10x Engineers,
+
+0:14:57.680,0:15:02.680
+we are now. It's like AI gave us that power,
+right? Like if a radio-active Spider-Man bit you,
+
+0:15:02.680,0:15:06.720
+we have that power. The issue is how we carry it,
+if we carry it well or carry it bad. And there
+
+0:15:06.720,0:15:11.640
+our experience has a lot to do with
+how we develop to be able to choose one
+
+0:15:11.640,0:15:16.560
+thing or the other, because AI doesn't do everything,
+everything depends on us. AI is the executor. That's
+
+0:15:16.560,0:15:21.360
+why I talked about commodities, right? Of languages or
+technology as a commodity. So it is:
+
+0:15:21.360,0:15:26.280
+Where are you most comfortable? You are most comfortable with
+Angular. The AI is comfortable with Angular. But you
+
+0:15:26.280,0:15:29.720
+feel comfortable with AI with Angular,
+you feel comfortable with the final delivery and the
+
+0:15:29.720,0:15:36.200
+performance it has, and for me that goes hand in
+hand, right? I mean, and that is my mindset today
+
+0:15:36.200,0:15:40.960
+as well. And these principles, meaning
+these priorities that the framework has, are not
+
+0:15:40.960,0:15:48.040
+mutually exclusive. We see in the case of Signal
+Forms the classic example that they all go
+
+0:15:48.040,0:15:56.280
+hand in hand, because promoting the Signal Forms
+API to stable allows for better form handling,
+
+0:15:56.280,0:16:03.480
+it allows us to remove the dilemma of whether
+to use Reactive Forms with RxJS or use
+
+0:16:03.480,0:16:08.840
+Template-Driven Forms, even if there are purists in
+each of the specific categories of making
+
+0:16:08.840,0:16:14.480
+forms. Here we have the third one that already comes
+to solve a series of elements that allows for
+
+0:16:14.480,0:16:19.040
+better granular control of everything related to the
+reactive mechanism, lower cost in syncing the
+
+0:16:19.040,0:16:25.640
+views with the state of the form.
+It's a win-win for everyone,
+
+0:16:25.640,0:16:30.440
+from the Angular team to the developer
+who uses this new form mechanism.
+
+0:16:30.440,0:16:37.320
+I think it's the first time Angular has a decent
+form mechanism, let's say, because it was always
+
+0:16:37.320,0:16:42.520
+missing something. Since we used Reactive, we didn't want
+to be completely in RxJS, so it wasn't at 100%.
+
+0:16:42.520,0:16:48.560
+If you used this one, no, it was like there was always
+a 'but', right? It was like: "I like this but this",
+
+0:16:48.560,0:16:54.680
+"I like this but this", "I like this but this". In Signals, in
+the Signal Forms, I haven't found the 'but' yet.
+
+0:16:54.680,0:17:00.200
+Well, you have to migrate, I mean, putting aside the work,
+I say, what is the 'but' for not using it? Not using it
+
+0:17:00.200,0:17:06.880
+means it will be completely out of line with what is
+considered a well-performing application, for apps
+
+0:17:06.880,0:17:14.560
+to work fast, in an efficient way, so you can build
+a form without surprises, without too much boilerplate,
+
+0:17:14.560,0:17:22.480
+without a lot of code that then you have to maintain,
+
+0:17:22.480,0:17:27.560
+along with test harnesses and schematics,
+
+0:17:27.560,0:17:33.280
+that entire ecosystem is capable of executing
+
+0:17:33.280,0:17:42.280
+the initial idea you had, which basically is taking
+the input from a series of elements the end user fills
+
+0:17:42.280,0:17:48.200
+out and passing them to the server. Period.
+A form, no need to complicate it further. Exactly. And well,
+
+0:17:48.200,0:17:55.560
+returning to the RxJS topic, now with the
+integration of the debounce rule,
+
+0:17:55.560,0:18:00.480
+natively in Signal Forms, in Angular 22 the
+need to rely is eliminated,
+
+0:18:00.480,0:18:06.640
+rely on debounceTime or other resources we
+had to delay validations,
+
+0:18:06.640,0:18:12.560
+avoiding unnecessary requests on every, you know,
+keypress, on every action, and having a control
+
+0:18:12.560,0:18:19.920
+that is much more direct and oriented to the
+signal graph solving all these internal reactive
+
+0:18:19.920,0:18:25.920
+mechanisms. Yes, it's over, it's over, it's over.
+RxJS, yes, almost, almost. I think there
+
+0:18:25.920,0:18:35.480
+are still some internal elements in the framework that
+
+0:18:35.480,0:18:40.600
+depend on RxJS, but gradually, as we get closer to
+v24, to Angular v25, maybe that RxJS dependency
+
+0:18:40.600,0:18:48.880
+we have every time we install Angular will be
+completely eliminated, making it optional.
+
+0:18:48.880,0:18:55.280
+If one wants to continue the RxJS path towards
+the version, maybe if v8 comes out at some point
+
+0:18:55.280,0:19:01.280
+in the future (I don't know if it will), but let it be a
+decision of the architect or developer, an
+
+0:19:01.280,0:19:07.200
+architectural decision precisely, not something that
+forces us to have the framework in the dependencies
+
+0:19:07.200,0:19:13.200
+list and thus increase the bundle size of the app,
+making it render slower on the browser side
+
+0:19:13.200,0:19:20.320
+because you are injecting more JavaScript, you are
+doing more rendering, and that is what the modern
+
+0:19:20.320,0:19:26.800
+Angular mechanisms are all about, to guarantee that
+the app is more efficient when built and deployed
+
+0:19:26.800,0:19:33.040
+later in a browser. Yes, to be honest,
+it gives me a bit of nostalgia, but at the same time
+
+0:19:33.040,0:19:38.240
+you realize that you moved forward, right? I mean,
+it was about time. Period. I think it's like,
+
+0:19:38.240,0:19:45.680
+it's done, we already knew it. In fact, RxJS itself
+
+0:19:45.680,0:19:50.880
+is deprecating, in quotes, right? I mean, I don't
+
+0:19:50.880,0:19:59.720
+want to say it wrong, but before RxJS flew, I mean,
+
+0:19:59.720,0:20:05.840
+ReactiveX was a whole movement, but well, you have to
+
+0:20:05.840,0:20:11.440
+accept it, right? Just as we abandoned jQuery,
+
+0:20:11.440,0:20:18.800
+AngularJS, and so on, right? Let's accept
+that it's time to leave RxJS behind and we must move
+
+0:20:18.800,0:20:26.720
+to Signals, which is better and works, and all
+the benefits we have, right? And as I
+
+0:20:26.720,0:20:30.440
+mentioned in one of the previous chapters, I think
+it was in one of the conversations I had with
+
+0:20:30.440,0:20:40.720
+Eduardo, just because a technology worked
+well for its time doesn't mean we
+
+0:20:40.720,0:20:46.800
+have to keep carrying that technology with us
+and vice versa. If technology is now
+
+0:20:46.800,0:20:53.240
+becoming obsolete, it doesn't mean
+the technology has become bad. The technology,
+
+0:20:53.240,0:21:00.200
+meaning, it fulfilled its purpose in the era in
+which it was established, and we must appreciate that it
+
+0:21:00.200,0:21:07.000
+existed, that RxJS was part of the Angular framework
+because it allowed, with its pros and cons,
+
+0:21:07.000,0:21:12.760
+to evolve in a way that led to Angular
+being what it is today. Yes, it's like complaining, I don't know,
+
+0:21:12.760,0:21:19.480
+about a Game Boy or a PlayStation 1. It's like, how
+are you going to complain? It was spectacular, but well,
+
+0:21:19.480,0:21:24.400
+yes, that's reality. I think that not
+accepting that RxJS, I mean, even though I built
+
+0:21:24.400,0:21:29.960
+a lot, meaning I built pure RxJS and so on, is
+a bit about maturing, right? And we are talking
+
+0:21:29.960,0:21:33.920
+about the framework maturing and everything we
+have been saying, and I think we've been saying it
+
+0:21:33.920,0:21:41.640
+for a long time, right? It's like: it's there and it works,
+we have to mature. And Jorge, with this
+
+0:21:41.640,0:21:47.040
+self-cleaning, do you remember? The removal of
+a series of obsolete selectors that had to
+
+0:21:47.040,0:21:53.160
+do with Shadow DOM, but at the same time it's not
+that Shadow DOM is something of the past in Angular,
+
+0:21:53.160,0:22:00.080
+but that it is being restructured, it is being taken
+to a higher capacity, everything related
+
+0:22:00.080,0:22:04.480
+to this type of mechanism. For example, it
+shows now that in 22 the support is incorporated,
+
+0:22:04.480,0:22:10.200
+official support now, thankfully, to be able to start,
+meaning bootstrapping Angular applications
+
+0:22:10.200,0:22:16.200
+directly inside a shadow root.
+So that's massive for any architecture
+
+0:22:16.200,0:22:27.320
+that uses micro-frontends or Web Components that
+go towards that level of encapsulation.
+
+0:22:27.320,0:22:37.040
+Look, I'm not a fan of micro-frontends, I want
+to say it. Web Components, I'm like,
+
+0:22:37.040,0:22:42.800
+there, and speaking of that, they have
+a giant shell with two hundred apps, right? I mean,
+
+0:22:42.800,0:22:49.440
+something real, but I think we have to understand
+how it moves, right? I mean, and to speak of it
+
+0:22:49.440,0:22:54.160
+in an easy way, Gmail, which we all know
+and use all the time,
+
+0:22:54.160,0:22:58.520
+every time you click 'New' you get a
+component that is rendered at that moment,
+
+0:22:58.520,0:23:02.000
+and not only is it rendered at that moment,
+but that component can be a technology that
+
+0:23:02.000,0:23:06.960
+has nothing to do with the one you are using
+in the browser, right? Which in the end is
+
+0:23:06.960,0:23:12.240
+a Web Component and which, I say, has a structure
+and an infrastructure. For me that is for
+
+0:23:12.240,0:23:18.680
+very large tools and a whole discussion.
+Again, they had to do it, it was part
+
+0:23:18.680,0:23:24.560
+of the maturation and, second, even though one
+might not like it, which is a separate issue, right?
+
+0:23:24.560,0:23:30.640
+Or if it's not useful to me, it doesn't mean
+it is not needed, and that's what we were talking about, right?
+
+0:23:30.640,0:23:36.960
+If you don't have all this, today you are kind of
+out of the game. So for me, that they removed
+
+0:23:36.960,0:23:42.880
+everything related to Shadow DOM, well, all
+the CSS polyfills and everything they committed, and
+
+0:23:42.880,0:23:49.280
+on top of that, that now in the bootstrap you can do a
+shadow root, it's like it makes me happy. That's the
+
+0:23:49.280,0:23:53.360
+word. It's that it's giving the possibility
+to people who want to incorporate verticals,
+
+0:23:53.360,0:23:59.240
+meaning, not making a micro-frontend to represent
+a button or represent a small element on the
+
+0:23:59.240,0:24:04.960
+screen, because that would be like too much,
+it has no purpose, it's an anti-pattern,
+
+0:24:04.960,0:24:10.920
+but when it comes architecturally to being able
+to deploy, to allow teams to
+
+0:24:10.920,0:24:18.520
+independently compile and deploy without having
+to affect the core of the main business or the
+
+0:24:18.520,0:24:24.560
+app. I understand, for example,
+that Amazon doesn't use Angular, but they use
+
+0:24:24.560,0:24:29.840
+micro-frontends in that architecture, that architectural
+pattern to solve that,
+
+0:24:29.840,0:24:38.800
+the deployment of elements that are large,
+of functionalities, in a way that they are
+
+0:24:38.800,0:24:45.120
+independent of the rest of the teams. And this
+of Angular allowing that bootstrapping at the level of
+
+0:24:45.120,0:24:52.920
+shadow root, I don't use it, but I know there are people
+who will appreciate this type of change in 22.
+
+0:24:52.920,0:24:58.280
+And in the end, it's what we say, right? If you don't
+have it, you're out. So, a bit is, eh,
+
+0:24:58.280,0:25:05.800
+maybe for apps of a certain size or needs
+or scale, they are not necessary,
+
+0:25:05.800,0:25:13.600
+but if you want another scale, other needs or
+whatever, you have to have it. So it is a bit
+
+0:25:13.600,0:25:19.840
+like that, right? It's having the possibility of not doing an
+A/B testing, uploading everything or putting a feature flag that
+
+0:25:19.840,0:25:26.520
+in reality, I don't have this, I upload it, Angular
+already routes it because now it has the shadow root,
+
+0:25:26.520,0:25:32.000
+starts the bootstrapping, boom, boom, boom, boom, you
+have it, you have it, you want to use it, you don't want to use it,
+
+0:25:32.000,0:25:37.720
+that's another thing, but you have it. Sure. And for
+that is this framework, to give you the solution
+
+0:25:37.720,0:25:44.680
+if you need to use it, correct? And by the way,
+something we will all appreciate, I think,
+
+0:25:44.680,0:25:48.760
+well, there are cases, of course, specific ones
+that might fall out of the rule, but something
+
+0:25:48.760,0:25:55.200
+that lands not as experimental and as developer
+preview, but directly as stable, is the
+
+0:25:55.200,0:26:05.720
+new @Service decorator, the service class, which comes to
+mark a drastic change when it comes to allowing
+
+0:26:05.720,0:26:11.920
+not only developer experience, but also
+better efficiency in the framework, because you remember
+
+0:26:11.920,0:26:15.680
+this has been there since the beginning of Angular,
+meaning @Injectable to be able to provide
+
+0:26:15.680,0:26:25.880
+services. But, how much boilerplate?
+How much overhead did
+
+0:26:25.880,0:26:33.360
+that type of decorator have? Because it had to allow
+for separate classes, separate values,
+
+0:26:33.360,0:26:38.520
+constructor injections, and all that took
+code, took a series of elements there in the
+
+0:26:38.520,0:26:44.520
+internals of the framework, and what we need
+is to put a singleton in the root and period. We don't
+
+0:26:44.520,0:26:50.120
+need more than that, and what do you think of this
+move? Honestly, it's about appreciation,
+
+0:26:50.120,0:26:55.400
+I mean, anything that means less boilerplate, and I'll
+say it clearly, is better for many
+
+0:26:55.400,0:27:00.280
+things, and we always talk about it, right? At first
+we wrote it, then it was like pressing tab,
+
+0:27:00.280,0:27:05.400
+then this, then that, but today
+if we go to the tokens model, so to speak,
+
+0:27:05.400,0:27:10.720
+which gives all that unnecessary boilerplate,
+it was a lot of things, meaning it consumes tokens,
+
+0:27:10.720,0:27:14.880
+right? If you move that, if you take it to the
+developer experience,
+
+0:27:14.880,0:27:22.760
+the DX, it's like: why do I have to do all
+this? @Service, well, like we had, I mean,
+
+0:27:22.760,0:27:26.400
+the injectable, right? The @Injectable
+that you put everywhere all the time,
+
+0:27:26.400,0:27:31.680
+right? And you already knew that, and you learned it by
+heart, it was like the @Component, I remember
+
+0:27:31.680,0:27:38.240
+the @Component by heart from Angular 2 and it was what
+you wrote. So it's like: remove things from me,
+
+0:27:38.240,0:27:43.640
+don't give me, I mean, give me, but by removing. I think
+that's a good developer experience. And here
+
+0:27:43.640,0:27:51.800
+with this dependency it's like the dependency injection
+with @Service, you are giving me, it was already there,
+
+0:27:51.800,0:27:56.120
+but well, you are giving me something by removing
+the whole problem from me because one wants
+
+0:27:56.120,0:28:07.680
+a framework for that. So, personally,
+
+0:28:07.680,0:28:16.160
+10 out of 10, and possibly a schematic comes along
+
+0:28:16.160,0:28:24.560
+that checks, I say, if you are not using
+resources to do an injection in
+constructor or to use a much more
+specific prototyping, the replacement will be very easy to
+
+0:28:24.560,0:28:30.080
+achieve, and possibly it is the direction in which
+we want to continue when it comes to
+
+0:28:30.080,0:28:35.960
+dependency injection, because in the end what
+you do is remove the useClass, the useValue,
+
+0:28:35.960,0:28:42.800
+I mean, if you are not using it, it makes no sense
+to have to continue with the @Injectable decorator.
+
+0:28:42.800,0:28:48.120
+The @Injectable decorator comes with a
+greater overhead, meaning you are putting a lot
+
+0:28:48.120,0:28:53.320
+more information in the JavaScript, which
+eventually will be part of the Angular runtime in
+
+0:28:53.320,0:29:00.320
+a browser. If you don't use it, remove it. Inject that
+as singleton, inject it directly in the root
+
+0:29:00.320,0:29:06.080
+just like it is in the style guides it should
+be, as documented in the style guide. And of
+
+0:29:06.080,0:29:14.040
+course, always do yourself the favor of not declaring
+in the component what is not going to be directly
+
+0:29:14.040,0:29:24.080
+transmitted to the view. Any element that
+could be, with your Cuban voice, all good,
+
+0:29:24.080,0:29:28.400
+I want you to threaten people who do that, to
+say that you're going to search for them at home because
+
+0:29:28.400,0:29:35.040
+they can't do that. Please, it's like: enough.
+Having a monolith component of 100 lines of
+
+0:29:35.040,0:29:41.280
+code is super easy today to extract
+and tell the artificial intelligence, and to
+
+0:29:41.280,0:29:46.440
+have your rules very clear in a markdown file
+or maybe in a script, in an agent you
+
+0:29:46.440,0:29:54.200
+have destined for that. Very precisely tell it
+the single responsibility principle. What
+
+0:29:54.200,0:30:02.320
+can be handled by services, for services,
+what will allow the flow between the state and
+
+0:30:02.320,0:30:09.800
+the view in the component and in the template,
+meaning in the final template, only what
+
+0:30:09.800,0:30:15.280
+has to do with the template, because I've
+seen everything, I've even seen things that should
+
+0:30:15.280,0:30:20.560
+go in the service in the template, I imagine,
+it's terrible. I've seen things in services that
+
+0:30:20.560,0:30:25.480
+are trying to touch the DOM directly.
+I will tell you. A story of
+
+0:30:25.480,0:30:30.480
+30 seconds. A company contacts me saying
+that their developer couldn't test the app
+
+0:30:30.480,0:30:37.000
+because it didn't run on their computer, if I could
+fix it. I went, he told me the path that didn't run,
+
+0:30:37.000,0:30:44.080
+right? I mean, very fast, eh? Imagine what
+it was. I open the file, it had 5700 lines.
+
+0:30:44.920,0:30:53.200
+There was an entire module, not an NgModule, but a complete component, right? The @Component
+
+0:30:53.200,0:31:02.840
+written completely in a single component. Templates, ifs, I mean, everything in there. When I say everything
+
+0:31:02.840,0:31:10.320
+is everything. What I did was split it into I think
+it was six or seven different components. A shell,
+
+0:31:10.320,0:31:19.080
+right? A container component. I gave it back to him and
+it started working for him. So I say,
+
+0:31:19.080,0:31:23.520
+it's just that if you do that, it's more manageable, the
+app can be maintained better, you can
+
+0:31:23.520,0:31:33.600
+incorporate better unit tests, basically
+the end result is nice. Also, imagine.
+
+0:31:33.600,0:31:36.760
+I remember that a function more or less like that,
+instead of looking for it globally, you look for it only in
+
+0:31:36.760,0:31:41.320
+that file. It was crazy. Eh, it took days eh
+to do this, but to give you an idea of
+
+0:31:41.320,0:31:45.400
+the things you can do. There is the
+problem, right? I mean, Angular is a framework
+
+0:31:45.400,0:31:51.840
+that gives you very clear structures, but in the end
+if you want to do something ugly, you can.
+
+0:31:51.840,0:31:59.320
+do. Sure. So dependency injection, using
+@Service instead of @Injectable, as long
+
+0:31:59.320,0:32:05.320
+as you don't have an extreme use case in which
+you need to continue. Even if you do,
+
+0:32:05.320,0:32:11.800
+try to study why you are doing it
+that way and simplify your life,
+
+0:32:11.800,0:32:16.160
+simplify the life of everyone who
+later will review that code so they
+
+0:32:16.160,0:32:22.400
+don't have to go through the same things you did
+to make those kinds of structures. Sure,
+
+0:32:22.400,0:32:26.920
+so that good practices are the rule and not
+the exception. Let's say the same. And well,
+
+0:32:26.920,0:32:34.120
+now with 22, also speaking of dependency
+injection, comes the function to inject
+
+0:32:34.120,0:32:40.280
+dependencies asynchronously. Therefore,
+any architecture that will benefit
+
+0:32:40.280,0:32:46.400
+from lazy loading with dependency injection, this
+will change quite a bit the way we
+
+0:32:46.400,0:32:52.480
+are facing injecting inside
+an Angular component or inside
+
+0:32:52.480,0:32:58.000
+a directive anything we have
+declared in a service. I like it a lot,
+
+0:32:58.000,0:33:04.160
+I mean, I'm going to compare it to NgIf to
+make it more humanly visible, right? NgIf,
+
+0:33:04.160,0:33:08.080
+what did it do? Everything inside that
+block didn't execute, didn't render,
+
+0:33:08.080,0:33:12.960
+nothing. It was literally commenting something above
+and commenting something below and nothing appeared
+
+0:33:12.960,0:33:19.680
+in the middle. And when that if became true,
+it rendered. Right, so you didn't consume memory,
+
+0:33:19.680,0:33:24.200
+you didn't consume rendering. Well, first of all
+everything we know we need with the
+
+0:33:24.200,0:33:30.880
+@if. This is almost the same. Like until I
+need that dependency, I'm not going to inject it.
+
+0:33:31.600,0:33:36.200
+Period, because you might never need it.
+It's what I always say, right? There might be something
+
+0:33:36.200,0:33:41.040
+that is an exception to the rule of what
+you always do on that screen, to say something,
+
+0:33:41.040,0:33:48.200
+in that component, that needs a dependency,
+and what happens? You always inject it. So this,
+
+0:33:48.200,0:33:54.360
+again, I mean, I'm very happy with
+this release of Angular, very happy, very happy
+
+0:33:54.360,0:34:01.120
+likewise. Even it's not only about
+the changes they've made now with the
+
+0:34:01.120,0:34:08.240
+signals, with the stabilization of resources,
+meaning resources, but they are also touching
+
+0:34:08.240,0:34:13.120
+several areas, among them routing.
+For example, now they allow to configure natively
+
+0:34:13.120,0:34:20.080
+something that anyone who had used the component
+input binding in a route and you don't have the input,
+
+0:34:20.080,0:34:25.320
+meaning it doesn't match any of the inputs you
+have in the component, you then had to write logic
+
+0:34:25.320,0:34:30.880
+to be able to give a solution to the end user so it wouldn't
+
+0:34:30.880,0:34:36.920
+get complicated if this happened. So now the
+new function they incorporate, unmatchedInputBehavior,
+
+0:34:36.920,0:34:43.160
+in the router allows deciding what occurs when the URL
+tries to pass properties
+
+0:34:43.160,0:34:50.360
+that don't exist there in those component inputs.
+Honestly, I didn't look at it deeply, but from what you
+
+0:34:50.360,0:34:56.840
+say, it's like, how many times have we had the
+error screen? Or this data doesn't appear, right?
+
+0:34:56.840,0:35:02.520
+We have no idea and it gives an error and, I mean, honestly, it seems interesting, I mean, I want to look into it more.
+
+0:35:03.200,0:35:10.080
+And there is another big headache that is solved
+in the router, changing the behavior
+
+0:35:10.080,0:35:17.480
+by default of the parameter inheritance strategy
+to always happen. Therefore,
+
+0:35:17.480,0:35:23.520
+now children automatically inherit all the parameters
+of the parent routes without there being an
+
+0:35:23.520,0:35:27.640
+additional configuration, an extra configuration
+that one has to incorporate.
+
+0:35:28.520,0:35:35.080
+Great. What a beautiful, what a beautiful moment to be
+a developer. That's all I'm going to say.
+
+0:35:35.080,0:35:41.360
+How much we have suffered! How much we have suffered!
+Remember that before one had to incorporate
+
+0:35:41.360,0:35:45.720
+so much code, and not only
+ow we have the framework doing it,
+
+0:35:45.720,0:35:51.200
+but also the AI adjusting and allowing
+to read in the skills what exists? And
+
+0:35:51.200,0:35:57.440
+you go 10x, even a bit beyond the speed
+normally expected for
+
+0:35:57.440,0:36:03.480
+a developer previously. Yes, yes. The
+truth is that between MCPs, eh,
+
+0:36:03.480,0:36:10.560
+the learning of the AI itself on the framework and
+these things, eh, it's like it's going to sound a bit cliché,
+
+0:36:10.560,0:36:16.400
+but I say, it's hard not to go fast in the good
+sense, fast and well, I don't mean making an
+
+0:36:16.400,0:36:20.760
+app in 30 seconds, don't get me wrong,
+making the copy of Word and all that. I mean that today
+
+0:36:20.760,0:36:28.960
+a feature or an improvement or an update of
+this style ends up making a migration easy.
+
+0:36:28.960,0:36:34.400
+It was already easier with everything the Angular team
+was doing with schematics and so on,
+
+0:36:34.400,0:36:39.400
+right? Because schematics are born a bit to make
+our lives easier, but with all this plus
+
+0:36:39.400,0:36:45.760
+what there is, it's like hard not to go at a nicer
+pace, right? I mean, it makes you want to,
+
+0:36:45.760,0:36:51.880
+right? I don't know if you get into that mood,
+as I call it, of wanting to push, wanting to push
+
+0:36:51.880,0:36:55.880
+and wanting to push, and suddenly time flies
+like in the old days when you were developing.
+
+0:36:55.880,0:37:00.960
+That is happening to me. Yes, that is something
+we are all experiencing, like returning to the
+
+0:37:00.960,0:37:09.320
+beginnings of going directly with an idea,
+implementing it, that reward. And Jorge, with this
+
+0:37:09.320,0:37:17.760
+stabilization of HTTP Resource, HTTP Resource
+is with the underlying HttpClient underneath
+
+0:37:17.760,0:37:23.480
+the facade, and there are some changes there we can
+see in the changelog of the versions that have come out
+
+0:37:23.480,0:37:30.360
+as candidates before 22.0.0.
+For example, there is this progress monitoring a bit
+
+0:37:30.360,0:37:35.560
+more granular. Previously we only had the
+original reportProgress configuration,
+
+0:37:35.560,0:37:42.800
+but now you can incorporate the option of uploadProgress
+or report download progress.
+
+0:37:42.800,0:37:47.960
+So in case we have some UI with a progress bar indicating
+
+0:37:47.960,0:37:52.840
+where a download or upload is, we already have
+the facility to do it. Even
+
+0:37:52.840,0:37:59.200
+more so with the resource API being stable.
+In fact, I'll tell you, I remember
+
+0:37:59.200,0:38:06.600
+I did uploads with pure JavaScript
+to handle the upload percentage well,
+
+0:38:06.600,0:38:12.840
+or using fetch directly and bypassing the
+HttpClient completely. Sure, before
+
+0:38:12.840,0:38:20.480
+fetch, a bit older. How was it? With XHR.
+Yes, XMLHttpRequest. Exactly, because it was the
+
+0:38:20.480,0:38:25.680
+only way to get all the necessary data to
+understand the upload really. So
+
+0:38:25.680,0:38:30.920
+we used that, bypassing Angular completely because it
+was the way to do it right. I mean,
+
+0:38:30.920,0:38:35.600
+if you just wanted to upload it, eh, you could go there.
+If you wanted to have a lot of parameters,
+
+0:38:35.600,0:38:42.640
+times, put, well, the typical stuff, you know?
+When you upload it shows remaining time, percentage,
+
+0:38:42.640,0:38:47.400
+at what speed you are uploading or downloading.
+Well, you couldn't do those things before. So,
+
+0:38:47.400,0:38:56.400
+you had no choice but to go to the core, and if
+by any chance the download and upload time prevents
+
+0:38:56.400,0:39:02.680
+the app from having a 100% score there in
+Lighthouse. For example, in our case
+
+0:39:02.680,0:39:08.520
+as users and developers of apps, we can always
+achieve a hybrid rendering mechanism
+
+0:39:08.520,0:39:17.120
+in Angular, right? And this SSR that started
+with 17, if I remember correctly,
+
+0:39:17.120,0:39:22.000
+with 16 I think they incorporated some experimental things,
+is basically stable in the
+
+0:39:22.000,0:39:26.760
+framework for a few versions now.
+They keep incorporating capabilities there.
+
+0:39:26.760,0:39:31.600
+Analog directly benefits from that as a
+metaframework, but I also know many
+
+0:39:31.600,0:39:37.080
+people who develop apps with server-side rendering using the
+
+0:39:37.080,0:39:42.680
+Angular engine. And now for 22 they add,
+as you already saw in the changelog,
+
+0:39:42.680,0:39:48.560
+the ability to do component resource caching, supporting
+
+0:39:48.560,0:39:55.840
+synchronous values in stream-based resources.
+
+0:39:55.840,0:40:03.360
+I have a question. If you were starting an app
+from scratch, would you use SSR by default?
+
+0:40:03.360,0:40:07.320
+I think I would. Good, that's what I wanted.
+It depends, of course, it always depends,
+
+0:40:07.320,0:40:13.960
+right? If it's a very tiny application that won't
+have almost any impact. But if I'm going
+
+0:40:13.960,0:40:20.600
+to start an app that will scale to, let's say, a project of
+dimensions we don't know
+
+0:40:20.600,0:40:29.040
+yet and you know there is a unique value there in the app for it to have
+
+0:40:29.040,0:40:35.120
+a luxury performance, a performance that is
+aligned with modern expectations,
+
+0:40:36.080,0:40:41.960
+I wouldn't do without everything related to
+server-side rendering.
+
+0:40:41.960,0:40:49.320
+I would use it from scratch by creating the project
+with the CLI from the beginning. Yes, SSR. Totally. Yes,
+
+0:40:49.320,0:40:56.960
+yes, use whatever architecture you want on the
+server side, but give it the opportunity with
+
+0:40:56.960,0:41:02.440
+all this incremental hydration, also with deferrable views,
+for the app to give its best, because
+
+0:41:02.440,0:41:07.440
+there will always be extra kilobytes that you never took
+into account that will impact the performance of the app.
+
+0:41:07.440,0:41:14.400
+Therefore, you try to aim for 100% to be able
+to have
+
+0:41:14.400,0:41:21.800
+95, 97 in the Lighthouse score. And of course,
+not only when measuring a metric
+
+0:41:21.800,0:41:26.240
+synthetically in a lab with these
+computers we use, but so that
+
+0:41:26.240,0:41:31.120
+any user, regardless of the type
+of device or connection capacity they have on the network,
+
+0:41:31.120,0:41:37.880
+can load the page quickly and not have to be
+exposed to underlying problems of rendering
+
+0:41:37.880,0:41:42.760
+the full page. Even more so pages that
+have gigantic component trees,
+
+0:41:42.760,0:41:49.240
+that have a forest of components, a couple
+of component trees, and if you delegate all of that
+
+0:41:49.240,0:41:56.440
+to the browser in Client-side Rendering, it won't
+work the same way. Okay, we think
+
+0:41:56.440,0:42:00.280
+the same. For me it is already almost a default—I mean,
+if you know that, again, if it's a test
+
+0:42:00.280,0:42:04.400
+you won't use it, but if you know it's one that will
+scale or the goal is for it to scale, why
+
+0:42:04.400,0:42:09.720
+not start from scratch with SSR directly?
+Exactly. And now as of 22, for example,
+
+0:42:09.720,0:42:15.840
+incremental hydration is enabled by
+default in platform-browser, which
+
+0:42:15.840,0:42:21.960
+means that it will directly improve,
+it will positively impact the Core Web Vitals in
+
+0:42:21.960,0:42:29.600
+server-side rendering applications by preventing it
+from destroying, doing all that destructive hydration
+
+0:42:29.600,0:42:35.440
+of the DOM, and it will do nothing other
+than boost the performance of the apps
+
+0:42:35.440,0:42:43.320
+you build. For me SSR is no longer
+a must, right? It becomes almost a default.
+
+0:42:43.320,0:42:50.360
+Likewise. And closing, how about we take a
+look at what's new in tooling in 22?
+
+0:42:51.280,0:42:54.680
+It's the nice part. I mean, I think this is
+what everyone looks at first.
+
+0:42:54.680,0:43:01.520
+Let's be honest, right? The tooling in DevTools,
+which is the Angular tooling that always—
+
+0:43:01.520,0:43:05.720
+hey, is there something new in Angular DevTools,
+is there something new with the MCPs? And well,
+
+0:43:05.720,0:43:13.400
+now with this provider function of
+provideAngularMCPTools, which is nothing more than
+
+0:43:13.400,0:43:18.400
+a wrapper of the experimental function. Careful, all of
+this is not stable, other things are stable,
+
+0:43:18.400,0:43:26.520
+but not this MCP specifically yet.
+And what that wrapper does is allow defining,
+
+0:43:26.520,0:43:32.920
+or rather declaring Angular MCP tools
+directly in a provider instead of
+
+0:43:32.920,0:43:39.280
+letting the MCP and everyone waste tokens
+trying to find the execution context.
+
+0:43:39.960,0:43:47.400
+It's like with MCPs everything becomes nice,
+to be honest. It's like, I don't know what else to say, I mean,
+
+0:43:47.400,0:43:53.320
+it's like we have support, we have compatibility,
+we have everything set up. What is missing not to
+
+0:43:53.320,0:43:58.520
+have fun? No, I mean, very nerd of me,
+maybe waiting for the toolings, I don't know,
+
+0:43:58.520,0:44:03.160
+but for me the fun is right there,
+I mean, commodity versus fun. This is what
+
+0:44:03.160,0:44:10.240
+gives me the fun. I don't know if
+you think the same, but for me
+
+0:44:10.240,0:44:18.320
+it's very interesting to see how one can... Remember
+the joy that Firebug with Firefox gave us
+
+0:44:18.320,0:44:24.400
+20 years ago when you could see how
+everything was working granularly
+
+0:44:24.400,0:44:30.200
+on a website at that time. If you have
+that toy on your side,
+
+0:44:30.200,0:44:35.280
+which is even a toy that allows you to speed up
+understanding the system behind it,
+
+0:44:35.280,0:44:41.120
+obviously that is super welcome. Yes.
+And here I make a callout to people, yes,
+
+0:44:41.120,0:44:47.000
+to learn, I mean, not to just get carried away
+by what the system does or what the
+
+0:44:47.000,0:44:54.000
+MCP gives you or whatever. Challenge yourself
+by asking the AI if it is right,
+
+0:44:54.000,0:44:58.560
+if it is not right or what could be improved or not,
+because this gives us a lot of things,
+
+0:44:58.560,0:45:04.120
+right? Well, they give us everything, basically
+served on a silver platter for us to improve. The point
+
+0:45:04.120,0:45:08.360
+is whether we improve or not. So here
+the idea of having fun is with that. You have everything
+
+0:45:08.360,0:45:14.440
+to play with and everything to learn. So it's about
+taking advantage, right? And learning that way. It's like
+
+0:45:14.440,0:45:18.800
+before you had to go to a YouTube video, you had
+to go to a course, you had to sit for 1000 hours.
+
+0:45:18.800,0:45:23.480
+Now you can while you are shipping, right?,
+since now everyone is like a shipper, while
+
+0:45:23.480,0:45:28.480
+you are creating, while you are shipping, you can
+learn, right? And I think there is an advantage
+
+0:45:28.480,0:45:34.480
+between the people who learn and want to
+really grow compared to those who just
+
+0:45:34.480,0:45:39.160
+go to complete—which is fine, mind you, I don't
+say it's bad, but I think you see the
+
+0:45:39.160,0:45:43.760
+differences, right? Just like before when whoever cared
+more about performance, this, that,
+
+0:45:43.760,0:45:48.320
+did more things. Nowadays I think whoever
+understands architecture best, how tools work,
+
+0:45:48.320,0:45:55.160
+and everything, will be the person who goes
+the furthest, so to speak, right? Exactly. And also
+
+0:45:55.160,0:46:02.280
+let's not forget the compiler CLI which allows
+doing all the compilation using, well,
+
+0:46:02.280,0:46:09.560
+ESBuild along with Vite nowadays for development
+environments, now with 22 it receives official
+
+0:46:09.560,0:46:17.800
+support and full compatibility with Node 26, which
+will be, by the way, as we've known for
+
+0:46:17.800,0:46:23.240
+a few months, the last of the traditional
+release scheme where even numbers
+
+0:46:23.240,0:46:30.360
+were LTS and odd numbers were experimental. Node.js,
+we are not talking about Angular as such.
+
+0:46:30.360,0:46:35.440
+And well, starting with Node 27, which will be released
+next year, because the Node release cycle
+
+0:46:35.440,0:46:42.840
+will be annual, all versions will
+be Long Term Support, that is, support for
+
+0:46:42.840,0:46:48.200
+the long term. I think the support they give is
+about 2 years or something like that. So it will be
+
+0:46:48.200,0:46:55.080
+a framework task to keep updated every
+year with Node.js in a much less convoluted
+
+0:46:55.080,0:47:00.160
+and complicated way, not only for us, but
+for themselves to have to be on top of
+
+0:47:00.160,0:47:09.000
+what appeared with a new even version
+that was in LTS. For me everyone, everyone,
+
+0:47:09.000,0:47:15.840
+when I say everyone I mean everyone, sooner or later they
+will go to a model like that because it reaches a point
+
+0:47:15.840,0:47:20.000
+of maturity, right? Before we took longer for everything and
+again I say that. So I think it reaches a
+
+0:47:20.000,0:47:28.880
+point of maturity unless, I don't know, tomorrow some
+Chrome-like thing comes along and changes everything, right? But if not,
+
+0:47:28.880,0:47:34.920
+which I don't think will happen, but it could also happen or not
+in Chrome, but yes in all this way in which
+
+0:47:34.920,0:47:40.960
+things move super fast. Maybe the Angular roadmap
+suddenly incorporates something that none of
+
+0:47:40.960,0:47:49.840
+us had seen or took time to see and it may
+allow one to continue being someone who
+
+0:47:49.840,0:47:56.400
+is evolving along with the industry
+instead of staying in a corner of a sofa like perhaps
+
+0:47:56.400,0:48:02.800
+it might have looked in another era or in other
+roles. Clean. Yes. Or like what happened to Node in its
+
+0:48:02.800,0:48:06.600
+time, never reaching version one and suddenly
+going to version 16, right? When they merged
+
+0:48:06.600,0:48:13.480
+with io.js. But what I see is that everyone will go
+to stability, many security patches,
+
+0:48:13.480,0:48:21.600
+many patches with small features, but minor
+releases we're talking about, right? The majors
+
+0:48:21.600,0:48:27.800
+for me are going to be a bit longer. You can't
+keep majors every 6 months if there are no breaking
+
+0:48:27.800,0:48:32.760
+changes. And as we discussed about a
+month ago back at Google Cloud Next, it's very difficult
+
+0:48:32.760,0:48:40.640
+to have to convince the business of this whole
+fast-paced cycle. That's where things might go in the
+
+0:48:40.640,0:48:49.520
+future. What we use will have that stable
+label and won't constantly go through this
+
+0:48:49.520,0:48:55.480
+fast-paced 6-month cycle, sometimes even
+less in the case of other types of systems,
+
+0:48:55.480,0:49:03.160
+and one has more time to land things well and
+be able to modernize code in a much more
+
+0:49:03.160,0:49:08.720
+efficient way in the long run. I think that in fact even
+the browser itself is more stable today. So,
+
+0:49:08.720,0:49:14.560
+the browser is stable, V8 is stable, right?
+So, we start with all the stabilities
+
+0:49:14.560,0:49:19.440
+that are like a domino, the chips are falling.
+What frameworks lack is
+
+0:49:19.440,0:49:25.240
+updating silently as happens in the
+case of Evergreen Browsers, so you don't
+
+0:49:25.240,0:49:31.120
+have to be on top of that or run any specific
+command to perform the update,
+
+0:49:31.120,0:49:35.880
+or downloading the .exe file or looking for it
+again on the website for the new version,
+
+0:49:35.880,0:49:43.800
+but letting it do it on its own, auto-cleaning.
+An auto-cleaning CLI wouldn't be bad, huh?
+
+0:49:44.360,0:49:51.680
+Yes, yes, that is probably... it's risky,
+of course, because you are not going to let
+
+0:49:51.680,0:49:58.960
+your cleanup kill elements that you don't
+yet have on your project roadmap, but yes
+
+0:49:58.960,0:50:05.800
+anyone can easily implement
+that. So Jorge, thank you very much
+
+0:50:05.800,0:50:12.120
+again for being here, and let's hope in a
+couple of days to see what the developer event brings, and
+
+0:50:12.120,0:50:18.880
+hopefully in one of the GDGs or in one of the
+environments of the spaces that will be created
+
+0:50:18.880,0:50:24.480
+we can meet. Totally. Thank you very much
+again. Greetings to everyone for making it this far
+
+0:50:24.480,0:50:29.840
+and we'll see if they come with some surprise. As far as
+I know there is none, but I like creating hype.
+
+0:50:29.840,0:50:33.440
+Let's see what comes out in the Developer Preview
+video and we'll watch it.

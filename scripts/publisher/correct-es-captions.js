@@ -46,7 +46,7 @@ console.log(`Targeting Episode: ${episodeNumber} (${episodeDir})`);
 // Paths
 // ---------------------------------------------------------------------------
 const sourcePath   = path.join(episodeDir, '1_recording/captions.sbv');
-const outputPath   = path.join(episodeDir, '2_publisher/youtube_transcript_es.sbv');
+const outputPath   = path.join(episodeDir, '2_publisher/youtube_captions_es.sbv');
 
 if (!fs.existsSync(sourcePath)) {
   console.error(`Error: ${sourcePath} not found.`);
