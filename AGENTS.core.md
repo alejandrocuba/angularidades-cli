@@ -1,6 +1,7 @@
 # Core Agentic Engineering Protocols
 
 > [!NOTE]
+> * Synced from `alejandrocuba/dynamic-scaffolding` GitHub repository. Do not edit directly; changes will be overwritten on updates.
 > * Project overrides (frameworks, workflows) belong in `AGENTS.md` and inherit these rules.
 > * Design, accessibility, and markup standards are defined in [DESIGN-SYSTEM.core.md](DESIGN-SYSTEM.core.md) and project `DESIGN-SYSTEM.md`.
 
