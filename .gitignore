@@ -2,6 +2,7 @@
 node_modules/
 jspm_packages/
 .pnpm-store/
+Library/
 
 # Build and Output
 dist/

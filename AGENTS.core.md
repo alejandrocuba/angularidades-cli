@@ -31,16 +31,21 @@
 * **Performance (INP)**: Avoid long, synchronous tasks that block the main thread. Yield frequently during heavy data processing to ensure a responsive Interaction to Next Paint.
 * **Modern APIs**: Use `fetch`, abandon deprecated APIs (`document.write`, sync XHR).
 
-## 7. Type Safety (TypeScript)
+## 7. CSS-First
+* **Prefer Native CSS**: Prioritize native CSS (e.g., `@keyframes`, transitions, Scroll-Driven Animations) over JavaScript for motion, reveals, hovers, and focus states.
+* **Progressive Enhancement**: Provide readable fallback/default states for modern CSS features (e.g., `animation-timeline`) using `@supports` to ensure compatibility and prevent broken layouts.
+* **Compositor Optimization**: Run animations on the GPU (compositor thread) instead of CPU to prevent frame drops and minimize JS weight.
+
+## 8. Type Safety (TypeScript)
 * **Strict Mode**: No `any`. Use `unknown` with type guards. Prefer implicit inference.
 * **Overrides**: Justify and document `@ts-ignore` or lint disables.
 * **Object Safety**: Prevent prototype pollution. Use `structuredClone` for deep copies, `Object.create(null)` for maps.
 
-## 8. Testing
+## 9. Testing
 * **Coverage**: Mandate tests (`.spec.ts`) to prevent regressions.
 * **Mocks**: Simulate and assert user interactivity accurately.
 
-## 9. I/O Token Efficiency
+## 10. I/O Token Efficiency
 * **Minimization**: Favor concise instructions over verbose prose.
 * **Identifiers**: Use short, deterministic IDs for inter-agent communication instead of descriptive text.
 * **Payloads**: Strip superfluous metadata from API payloads or tool inputs/outputs.

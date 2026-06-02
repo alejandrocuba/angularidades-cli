@@ -11,6 +11,7 @@ packages:
 # By default, pnpm v10+ blocks all lifecycle scripts to prevent malicious code execution.
 allowBuilds:
   esbuild: true
+
   # Add other compiled dependencies as needed (e.g., swc, canvas, sharp)
 
 # Block transitive dependencies from pulling in code from untrusted/unverified sources
@@ -25,4 +26,3 @@ trustPolicy: no-downgrade
 # This "timelock" mitigates supply-chain risks by giving the security community time
 # to identify and withdraw compromised package updates.
 minimumReleaseAge: 4320
-
