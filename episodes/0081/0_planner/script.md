@@ -50,3 +50,19 @@ Permíteme presentarte ante quienes aún no te conocen:
     - En cuanto a limpieza técnica y breaking changes: se removió el soporte para versiones de TypeScript inferiores a la 6.0, se eliminaron por completo las APIs obsoletas `ComponentFactoryResolver` y `ComponentFactory`, y la interfaz `CanMatchFn` ahora exige obligatoriamente el parámetro `currentSnapshot`.
 
 8. Antes de concluir el episodio, ¿hay algo más que no hayamos mencionado durante la conversación sobre lo que quieras comentar?
+
+---
+Más:
+- Templates:
+    - `@switch` con `@case` secuenciales y `@default never`
+    - Error boundaries (`@boundary` y `@error`)
+    - Arrow functions
+    - spread syntax `{{...obj}}`
+    - comments `//` y `/* */`
+- Enrutador:
+    - integración con el Navigation API para aligerar el framework y mejorar a11y
+    - `withExperimentalAutoCleanupInjectors` para automaticamente destruir inyectores de dependencia asociados con rutas que ya no están activas
+- Webpack deprecated
+- `OnPush` por defecto y `Default` -> `ChangeDetection.Eager`
+- Angular Aria estable
+- Developer Skills y Contributor Skills (adev, core, cli, PRs)
