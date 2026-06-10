@@ -1,5 +1,6 @@
 # Angularidades Ops CLI
 
+[![CI](https://github.com/alejandrocuba/angularidades-ops/actions/workflows/ci.yml/badge.svg)](https://github.com/alejandrocuba/angularidades-ops/actions/workflows/ci.yml)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Commander.js](https://img.shields.io/badge/Commander.js-v15-black)](https://github.com/tj/commander.js)
 [![Vitest](https://img.shields.io/badge/Vitest-v4-839a03?logo=vitest&logoColor=white)](https://vitest.dev)
