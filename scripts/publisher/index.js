@@ -1,14 +1,18 @@
-#!/usr/bin/env node
+import { fileURLToPath } from 'url';
+import path from 'path';
+import { spawnSync } from 'child_process';
+import clackPrompts from '@clack/prompts';
+import { resolveConfig } from './config.js';
+import { colors, logDoctor, printHeader, logLevel } from './logger.js';
+import { getEpisodeData, getLocalTranscripts } from './file-manager.js';
+import * as defaultYoutubeApi from './youtube-api.js';
 
-const { resolveConfig } = require('./config');
-const { colors, logDoctor, printHeader } = require('./logger');
-const { getEpisodeData, getLocalTranscripts } = require('./file-manager');
-const { initYouTube, fetchVideoDetails, updateVideo, downloadExistingCaptions, uploadCaptions } = require('./youtube-api');
-
-async function main() {
+async function publishEpisode(options = {}) {
+  const youtubeApi = options.youtubeApi || defaultYoutubeApi;
+  const p = options.prompts || clackPrompts;
   const args = process.argv.slice(2);
-  const isDoctor = args.includes('--doctor');
-  const isDryRun = args.includes('--dry-run');
+  const isDoctor = options.doctor !== undefined ? options.doctor : args.includes('--doctor');
+  const isDryRun = options.dryRun !== undefined ? options.dryRun : args.includes('--dry-run');
 
   let modeTitle = 'Angularidades: YouTube Publisher';
   if (isDoctor) modeTitle += ' Doctor';
@@ -16,12 +20,23 @@ async function main() {
 
   printHeader(modeTitle);
 
-  const config = await resolveConfig();
+  const config = await resolveConfig(options);
   const { episodeDir, credentials } = config;
 
-  const { metadata, videoId, titleEs, titleEn, descriptionEs, descriptionEn, tags } = await getEpisodeData(episodeDir, logDoctor, isDoctor);
+  if (logLevel.verbose) {
+    console.log(`[DEBUG] Loaded Config:`, { episodeDir, isDryRun, isDoctor });
+    console.log(`[DEBUG] YouTube Credentials:`, {
+      clientId: !!credentials.CLIENT_ID,
+      clientSecret: !!credentials.CLIENT_SECRET,
+      refreshToken: !!credentials.REFRESH_TOKEN
+    });
+  }
 
-  const hasFullAuth = credentials.CLIENT_ID && credentials.CLIENT_SECRET && credentials.REFRESH_TOKEN;
+  const { metadata, videoId, titleEs, titleEn, descriptionEs, descriptionEn, tags } =
+    await getEpisodeData(episodeDir, logDoctor, isDoctor);
+
+  const hasFullAuth =
+    credentials.CLIENT_ID && credentials.CLIENT_SECRET && credentials.REFRESH_TOKEN;
 
   if (isDoctor) {
     logDoctor(hasFullAuth, 'YouTube OAuth2 credentials in environment');
@@ -34,7 +49,8 @@ async function main() {
 
   if (!hasFullAuth) {
     if (isDryRun || isDoctor) {
-      if (!isDoctor) console.warn('Warning: Running offline dry-run because OAuth credentials are missing.');
+      if (!isDoctor)
+        console.warn('Warning: Running offline dry-run because OAuth credentials are missing.');
       if (isDryRun && !isDoctor) {
         console.log(`${colors.cyan}${colors.bold}--- DRY RUN PAYLOAD (Offline) ---${colors.reset}`);
         console.log('Video ID:', videoId);
@@ -42,11 +58,15 @@ async function main() {
         console.log('Recording Date:', metadata.recordingDate);
         console.log('Description (ES):\n', descriptionEs);
         console.log('Description (EN):\n', descriptionEn);
-        console.log(`${colors.cyan}${colors.bold}---------------------------------${colors.reset}\n`);
+        console.log(
+          `${colors.cyan}${colors.bold}---------------------------------${colors.reset}\n`
+        );
 
-        transcripts.forEach(lang => {
+        transcripts.forEach((lang) => {
           if (lang.exists) {
-            console.log(`${colors.cyan}↳${colors.reset} [DRY RUN] Would upload transcript: ${lang.file} for language: ${lang.code}`);
+            console.log(
+              `${colors.cyan}↳${colors.reset} [DRY RUN] Would upload transcript: ${lang.file} for language: ${lang.code}`
+            );
           }
         });
         console.log(`\n${colors.bold}✨ Offline dry run complete.${colors.reset}\n`);
@@ -58,13 +78,13 @@ async function main() {
     }
   }
 
-  const youtube = initYouTube(credentials);
+  const youtube = youtubeApi.initYouTube(credentials);
 
   try {
-    const video = await fetchVideoDetails(youtube, videoId, isDoctor);
+    const video = await youtubeApi.fetchVideoDetails(youtube, videoId, isDoctor);
     const snippet = video.snippet;
 
-    await downloadExistingCaptions(youtube, videoId, episodeDir, isDoctor, isDryRun);
+    await youtubeApi.downloadExistingCaptions(youtube, videoId, episodeDir, isDoctor, isDryRun);
 
     if (isDoctor) {
       console.log(`\n${colors.bold}✨ Doctor check complete.${colors.reset}\n`);
@@ -85,7 +105,8 @@ async function main() {
     if (descriptionEn || titleEn) {
       updatePayload.localizations['en'] = {
         title: titleEn || updatePayload.localizations['en']?.title || snippet.title,
-        description: descriptionEn || updatePayload.localizations['en']?.description || snippet.description
+        description:
+          descriptionEn || updatePayload.localizations['en']?.description || snippet.description
       };
     }
 
@@ -96,43 +117,50 @@ async function main() {
     }
 
     if (isDryRun) {
-      console.log(`${colors.cyan}${colors.bold}--- DRY RUN PAYLOAD (Authenticated) ---${colors.reset}`);
+      console.log(
+        `${colors.cyan}${colors.bold}--- DRY RUN PAYLOAD (Authenticated) ---${colors.reset}`
+      );
       console.log(JSON.stringify(updatePayload, null, 2));
-      console.log(`${colors.cyan}${colors.bold}---------------------------------------${colors.reset}\n`);
-      console.log(`${colors.green}✔${colors.reset} Dry run complete. No changes were pushed to YouTube.`);
+      console.log(
+        `${colors.cyan}${colors.bold}---------------------------------------${colors.reset}\n`
+      );
+      console.log(
+        `${colors.green}✔${colors.reset} Dry run complete. No changes were pushed to YouTube.`
+      );
 
-      transcripts.forEach(lang => {
+      transcripts.forEach((lang) => {
         if (lang.exists) {
-          console.log(`${colors.cyan}↳${colors.reset} [DRY RUN] Would upload transcript: ${lang.file} for language: ${lang.code}`);
+          console.log(
+            `${colors.cyan}↳${colors.reset} [DRY RUN] Would upload transcript: ${lang.file} for language: ${lang.code}`
+          );
         }
       });
       console.log(`\n${colors.bold}✨ Dry run complete.${colors.reset}\n`);
       return;
     }
 
-    await updateVideo(youtube, videoId, updatePayload);
-    await uploadCaptions(youtube, videoId, transcripts);
+    await youtubeApi.updateVideo(youtube, videoId, updatePayload);
+    await youtubeApi.uploadCaptions(youtube, videoId, transcripts);
 
     console.log(`\n${colors.bold}✨ Publishing complete.${colors.reset}\n`);
-
   } catch (error) {
     if (isDoctor) {
       logDoctor(false, `YouTube API check failed: ${error.message}`);
       if (error.message.includes('invalid_grant')) {
-        const p = require('@clack/prompts');
         const confirmAuth = await p.confirm({
-          message: 'YouTube API check failed. It might be an authentication issue. Would you like to run the auth helper to retrieve a new token?',
+          message:
+            'YouTube API check failed. It might be an authentication issue. Would you like to run the auth helper to retrieve a new token?',
           initialValue: true
         });
 
         if (confirmAuth && !p.isCancel(confirmAuth)) {
-          const { spawnSync } = require('child_process');
-          const path = require('path');
-          const authHelperPath = path.join(__dirname, '../auth-helper.js');
+          const authHelperPath = path.join(import.meta.dirname, '../auth-helper.js');
           console.log('');
           spawnSync('node', [authHelperPath], { stdio: 'inherit' });
         } else {
-          p.cancel(`Operation cancelled. Please run the auth helper script later to retrieve a new token:\n   ${colors.cyan}${colors.bold}node scripts/auth-helper.js${colors.reset}`);
+          p.cancel(
+            `Operation cancelled. Please run the auth helper script later to retrieve a new token:\n   ${colors.cyan}${colors.bold}node scripts/auth-helper.js${colors.reset}`
+          );
           process.exit(1);
         }
       }
@@ -143,4 +171,11 @@ async function main() {
   }
 }
 
-main();
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  publishEpisode().catch((err) => {
+    console.error('Error:', err);
+    process.exit(1);
+  });
+}
+
+export { publishEpisode };

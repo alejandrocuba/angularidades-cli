@@ -1,27 +1,32 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 // Resolve command and episode directory
 const args = process.argv.slice(2);
 const command = args[0]; // 'dump', 'build', or 'validate'
-const lang = args.find(a => a === 'en' || a === 'es') || 'en';
-let episodeArg = args.find(arg => !arg.startsWith('--') && arg !== 'dump' && arg !== 'build' && arg !== 'validate');
+const lang = args.find((a) => a === 'en' || a === 'es') || 'en';
+let episodeArg = args.find(
+  (arg) => !arg.startsWith('--') && arg !== 'dump' && arg !== 'build' && arg !== 'validate'
+);
 
 if (!command || !['dump', 'build', 'validate'].includes(command)) {
-  console.error('Usage: node scripts/publisher/translate-helper.js <dump|build|validate> [episodeNumber]');
+  console.error(
+    'Usage: node scripts/publisher/translate-helper.js <dump|build|validate> [episodeNumber]'
+  );
   process.exit(1);
 }
 
-const episodesDir = path.join(__dirname, '../../episodes');
+const episodesDir = path.join(import.meta.dirname, '../../episodes');
 let episodeNumber;
 
 if (episodeArg) {
   episodeNumber = episodeArg.toString().padStart(4, '0');
 } else {
   // Find the latest episode folder
-  const folders = fs.readdirSync(episodesDir)
-    .filter(f => fs.lstatSync(path.join(episodesDir, f)).isDirectory() && /^\d+$/.test(f))
-    .map(f => parseInt(f))
+  const folders = fs
+    .readdirSync(episodesDir)
+    .filter((f) => fs.lstatSync(path.join(episodesDir, f)).isDirectory() && /^\d+$/.test(f))
+    .map((f) => parseInt(f))
     .sort((a, b) => b - a); // descending
   if (folders.length === 0) {
     console.error('No episode folders found.');
@@ -40,8 +45,8 @@ if (command === 'dump') {
     process.exit(1);
   }
   const data = fs.readFileSync(srtPath, 'utf8');
-  const blocks = data.split('\n\n').filter(b => b.trim().length > 0);
-  
+  const blocks = data.split('\n\n').filter((b) => b.trim().length > 0);
+
   const parsed = blocks.map((block, index) => {
     const lines = block.split('\n');
     const timestamp = lines[0];
@@ -56,7 +61,7 @@ if (command === 'dump') {
   // Write out the chunk files of 100 blocks each to 1_recording/chunk-*.json
   const chunkSize = 100;
   for (let i = 0; i < parsed.length; i += chunkSize) {
-    const chunk = parsed.slice(i, i + chunkSize).map(b => b.text);
+    const chunk = parsed.slice(i, i + chunkSize).map((b) => b.text);
     const start = i;
     const end = Math.min(i + chunkSize - 1, parsed.length - 1);
     const chunkPath = path.join(episodeDir, `1_recording/chunk-${start}-${end}.json`);
@@ -70,7 +75,7 @@ if (command === 'dump') {
     process.exit(1);
   }
   const data = fs.readFileSync(srtPath, 'utf8');
-  const blocks = data.split('\n\n').filter(b => b.trim().length > 0);
+  const blocks = data.split('\n\n').filter((b) => b.trim().length > 0);
   const totalBlocks = blocks.length;
 
   const publisherDir = path.join(episodeDir, '2_publisher');
@@ -81,7 +86,10 @@ if (command === 'dump') {
 
   const files = fs.readdirSync(publisherDir);
   const transFiles = files
-    .filter(f => (lang === 'en' ? f.startsWith('trans-') : f.startsWith('es-chunk-')) && f.endsWith('.json'))
+    .filter(
+      (f) =>
+        (lang === 'en' ? f.startsWith('trans-') : f.startsWith('es-chunk-')) && f.endsWith('.json')
+    )
     .sort((a, b) => {
       const aStart = parseInt(a.split('-')[1]);
       const bStart = parseInt(b.split('-')[1]);
@@ -90,12 +98,14 @@ if (command === 'dump') {
 
   if (transFiles.length === 0) {
     console.error(`Error: No trans-*.json files found in ${publisherDir}`);
-    console.log('Ensure you have saved translated chunks (e.g. trans-0-99.json or es-chunk-0-99.json) in 2_publisher/');
+    console.log(
+      'Ensure you have saved translated chunks (e.g. trans-0-99.json or es-chunk-0-99.json) in 2_publisher/'
+    );
     process.exit(1);
   }
 
   let translations = [];
-  transFiles.forEach(file => {
+  transFiles.forEach((file) => {
     const filePath = path.join(publisherDir, file);
     try {
       const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -115,7 +125,9 @@ if (command === 'dump') {
   console.log(`Original blocks in captions.sbv: ${totalBlocks}`);
 
   if (translations.length !== totalBlocks) {
-    console.error(`Mismatch! Original has ${totalBlocks} blocks, but found ${translations.length} translations.`);
+    console.error(
+      `Mismatch! Original has ${totalBlocks} blocks, but found ${translations.length} translations.`
+    );
     console.log('Run the validate command to see alignment details:');
     console.log(`  node scripts/publisher/translate-helper.js validate ${episodeNumber}`);
     process.exit(1);
@@ -139,7 +151,7 @@ if (command === 'dump') {
     process.exit(1);
   }
   const data = fs.readFileSync(srtPath, 'utf8');
-  const blocks = data.split('\n\n').filter(b => b.trim().length > 0);
+  const blocks = data.split('\n\n').filter((b) => b.trim().length > 0);
   const totalBlocks = blocks.length;
 
   const publisherDir = path.join(episodeDir, '2_publisher');
@@ -150,7 +162,7 @@ if (command === 'dump') {
 
   const files = fs.readdirSync(publisherDir);
   const transFiles = files
-    .filter(f => f.startsWith('trans-') && f.endsWith('.json'))
+    .filter((f) => f.startsWith('trans-') && f.endsWith('.json'))
     .sort((a, b) => {
       const aStart = parseInt(a.split('-')[1]);
       const bStart = parseInt(b.split('-')[1]);
@@ -160,8 +172,8 @@ if (command === 'dump') {
   let translations = [];
   let chunkOffsets = [];
   let currentOffset = 0;
-  
-  transFiles.forEach(file => {
+
+  transFiles.forEach((file) => {
     const filePath = path.join(publisherDir, file);
     try {
       const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -174,15 +186,17 @@ if (command === 'dump') {
   });
 
   console.log('--- Translation Chunk Coverage ---');
-  chunkOffsets.forEach(c => {
-    console.log(`- ${c.file}: starts at index ${c.offset}, contains ${c.length} blocks (indices ${c.offset} to ${c.offset + c.length - 1})`);
+  chunkOffsets.forEach((c) => {
+    console.log(
+      `- ${c.file}: starts at index ${c.offset}, contains ${c.length} blocks (indices ${c.offset} to ${c.offset + c.length - 1})`
+    );
   });
   console.log(`Total translations loaded: ${translations.length}`);
   console.log(`Original blocks count: ${totalBlocks}`);
 
   if (translations.length === totalBlocks) {
     console.log('Perfect match! All block counts align.');
-    return;
+    process.exit(0);
   }
 
   console.log('\n--- Diagnostic Check (Divergence / Sample Mismatches) ---');
@@ -196,6 +210,8 @@ if (command === 'dump') {
     }
     const transText = translations[i] || 'N/A';
 
-    console.log(`${i.toString().padStart(3)}: [ES] "${origText.substring(0, 45)}..." => [EN] "${transText.replace(/\n/g, ' ').substring(0, 45)}..."`);
+    console.log(
+      `${i.toString().padStart(3)}: [ES] "${origText.substring(0, 45)}..." => [EN] "${transText.replace(/\n/g, ' ').substring(0, 45)}..."`
+    );
   }
 }

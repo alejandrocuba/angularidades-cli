@@ -1,9 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const p = require('@clack/prompts');
-const { colors, printHeader } = require('./logger');
-const { resolveConfig } = require('./config');
-const { initYouTube, downloadExistingCaptions } = require('./youtube-api');
+import fs from 'fs';
+import path from 'path';
+import p from '@clack/prompts';
+import { colors, printHeader } from './logger.js';
+import { resolveConfig } from './config.js';
+import { initYouTube, downloadExistingCaptions } from './youtube-api.js';
 
 // Fix Clack symbols for consistency: solid green for completed, outline green for active
 const green = (s) => `${colors.green}${s}${colors.reset}`;
@@ -20,10 +20,11 @@ p.S_BAR_END = green('└');
 async function scaffoldEpisode(predefinedEpisodeNumber) {
   printHeader('Angularidades: Create New Episode Scaffolding');
 
-  const episodesDir = path.join(__dirname, '../../episodes');
-  const folders = fs.readdirSync(episodesDir)
-    .filter(f => fs.lstatSync(path.join(episodesDir, f)).isDirectory() && /^\d+$/.test(f))
-    .map(f => parseInt(f))
+  const episodesDir = path.join(import.meta.dirname, '../../episodes');
+  const folders = fs
+    .readdirSync(episodesDir)
+    .filter((f) => fs.lstatSync(path.join(episodesDir, f)).isDirectory() && /^\d+$/.test(f))
+    .map((f) => parseInt(f))
     .sort((a, b) => a - b);
 
   const lastEpisode = folders.length > 0 ? folders[folders.length - 1] : 0;
@@ -43,7 +44,8 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
         const num = parseInt(value);
         const paddedValue = value.toString().padStart(4, '0');
         if (folders.includes(num)) return `Episode ${paddedValue} already exists.`;
-        if (num <= lastEpisode) return `Episode ${paddedValue} is lower than the latest episode (${lastEpisode.toString().padStart(4, '0')}). Going back is not allowed.`;
+        if (num <= lastEpisode)
+          return `Episode ${paddedValue} is lower than the latest episode (${lastEpisode.toString().padStart(4, '0')}). Going back is not allowed.`;
       }
     });
 
@@ -119,16 +121,15 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
     process.exit(0);
   }
 
-  let youtubeUrl = null;
   let videoId = null;
 
   if (isVideoUploaded) {
-    youtubeUrl = await p.text({
+    const youtubeUrl = await p.text({
       message: 'Enter the YouTube Video URL:',
       placeholder: 'https://www.youtube.com/watch?v=...',
       validate(value) {
         if (!value) return 'URL is required.';
-        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
         const match = value.match(regExp);
         if (!match || !match[2] || match[2].length !== 11) return 'Invalid YouTube URL.';
       }
@@ -139,7 +140,7 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
       process.exit(0);
     }
 
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
     videoId = youtubeUrl.match(regExp)[2];
   }
 
@@ -165,7 +166,7 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
   const subDirs = ['0_planner', '1_recording', '2_publisher'];
 
   fs.mkdirSync(newEpisodeDir, { recursive: true });
-  subDirs.forEach(dir => fs.mkdirSync(path.join(newEpisodeDir, dir), { recursive: true }));
+  subDirs.forEach((dir) => fs.mkdirSync(path.join(newEpisodeDir, dir), { recursive: true }));
   s.stop('Directories and metadata ready', p.S_SUCCESS);
 
   // Format titles
@@ -192,7 +193,10 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
 
     try {
       const config = await resolveConfig();
-      const hasFullAuth = config.credentials.CLIENT_ID && config.credentials.CLIENT_SECRET && config.credentials.REFRESH_TOKEN;
+      const hasFullAuth =
+        config.credentials.CLIENT_ID &&
+        config.credentials.CLIENT_SECRET &&
+        config.credentials.REFRESH_TOKEN;
 
       if (hasFullAuth) {
         const youtube = initYouTube(config.credentials);
@@ -202,7 +206,9 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
         p.log.success('Scaffolding created and YouTube captions downloaded.');
       } else {
         s.stop('YouTube skipped');
-        p.log.warn('Scaffolding created, but YouTube captions skipped (Missing OAuth credentials).');
+        p.log.warn(
+          'Scaffolding created, but YouTube captions skipped (Missing OAuth credentials).'
+        );
       }
     } catch (error) {
       s.stop('YouTube error');
@@ -218,20 +224,20 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
     p.log.info(`${colors.bold}Ready for Processing${colors.reset}`);
     p.note(
       `Next steps:\n` +
-      `1. ${colors.bold}AI Processing${colors.reset}: Instruct the @publisher AI Agent to process the episode.\n` +
-      `2. ${colors.bold}Diagnostics${colors.reset}: Run 'angularidades doctor ${episodeNumber}' to check everything.\n` +
-      `3. ${colors.bold}Dry Run${colors.reset}: Run 'angularidades dry-run ${episodeNumber}' to preview the payload.\n` +
-      `4. ${colors.bold}Publishing${colors.reset}: Run 'angularidades publish ${episodeNumber}' to publish.`,
+        `1. ${colors.bold}AI Processing${colors.reset}: Instruct the @publisher AI Agent to process the episode.\n` +
+        `2. ${colors.bold}Diagnostics${colors.reset}: Run 'angularidades doctor ${episodeNumber}' to check everything.\n` +
+        `3. ${colors.bold}Dry Run${colors.reset}: Run 'angularidades dry-run ${episodeNumber}' to preview the payload.\n` +
+        `4. ${colors.bold}Publishing${colors.reset}: Run 'angularidades publish ${episodeNumber}' to publish.`,
       ''
     );
   } else {
     p.log.info(`${colors.bold}Ready for Planning${colors.reset}`);
     p.note(
       `Next steps:\n` +
-      `1. ${colors.bold}Planning${colors.reset}: Instruct the @planner AI Agent to help you plan the episode questions and structure.\n` +
-      `2. ${colors.bold}Recording${colors.reset}: Record the episode following the plan.\n` +
-      `3. ${colors.bold}Uploading${colors.reset}: Upload the episode to YouTube.\n` +
-      `4. ${colors.bold}Update metadata${colors.reset}: Re-run tooling later or manually update metadata.json with the 'videoId'.`,
+        `1. ${colors.bold}Planning${colors.reset}: Instruct the @planner AI Agent to help you plan the episode questions and structure.\n` +
+        `2. ${colors.bold}Recording${colors.reset}: Record the episode following the plan.\n` +
+        `3. ${colors.bold}Uploading${colors.reset}: Upload the episode to YouTube.\n` +
+        `4. ${colors.bold}Update metadata${colors.reset}: Re-run tooling later or manually update metadata.json with the 'videoId'.`,
       ''
     );
   }
@@ -239,4 +245,4 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
   p.outro(`${colors.green}Disfruta el proceso!${colors.reset}`);
 }
 
-module.exports = { scaffoldEpisode };
+export { scaffoldEpisode };

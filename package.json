@@ -8,8 +8,13 @@
   },
   "scripts": {
     "youtube:publish": "node bin/cli.js publish",
-    "youtube:dry-run": "node bin/cli.js dry-run",
-    "youtube:doctor": "node bin/cli.js doctor"
+    "youtube:dry-run": "node bin/cli.js publish --dry-run",
+    "youtube:doctor": "node bin/cli.js doctor",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare": "husky",
+    "lint": "eslint .",
+    "format:check": "prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -23,14 +28,26 @@
   ],
   "author": "Alejandro Cuba Ruiz",
   "license": "MIT",
-  "type": "commonjs",
+  "engines": {
+    "node": ">=26.0.0"
+  },
+  "type": "module",
   "bugs": {
     "url": "https://github.com/alejandrocuba/angularidades-ops/issues"
   },
   "homepage": "https://github.com/alejandrocuba/angularidades-ops#readme",
   "dependencies": {
     "@clack/prompts": "^1.4.0",
+    "commander": "^15.0.0",
     "dotenv": "^17.4.2",
     "googleapis": "^171.4.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.4.1",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "prettier": "^3.8.3",
+    "vitest": "^4.1.8"
   }
 }

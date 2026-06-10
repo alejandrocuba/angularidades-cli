@@ -1,0 +1,6 @@
+node_modules/
+episodes/
+.agents/
+pnpm-lock.yaml
+pnpm-workspace.yaml
+LICENSE

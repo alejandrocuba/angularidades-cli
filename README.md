@@ -1,19 +1,30 @@
 # Angularidades Ops CLI
 
-The official Command Line Interface for automating the post-production and publishing workflow of the **Angularidades** podcast.
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Commander.js](https://img.shields.io/badge/Commander.js-v15-black)](https://github.com/tj/commander.js)
+[![Vitest](https://img.shields.io/badge/Vitest-v4-839a03?logo=vitest&logoColor=white)](https://vitest.dev)
+[![ESLint](https://img.shields.io/badge/ESLint-v10-4B32C3?logo=eslint&logoColor=white)](https://eslint.org/)
+[![Prettier](https://img.shields.io/badge/Prettier-v3-F7B93E?logo=prettier&logoColor=black)](https://prettier.io/)
+[![Node.js](https://img.shields.io/badge/Node.js-%3E%3D26.0.0-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+
+The CLI supporting the planning, post-production and publishing workflow of the **Angularidades** podcast.
 
 ## Links
+
 - [YouTube](https://www.youtube.com/@angularidades)
 - [Spotify](creators.spotify.com/pod/show/angularidades)
 
 ## Features
-- 💬 **Interactive Menu:** Select episodes from an elegant, state-of-the-art terminal UI.
-- 🆕 **Scaffolding:** Create a new episode structure with `angularidades new`.
-- 📦 **Publishing:** Sync transcripts, descriptions, and tags to YouTube via `angularidades publish`.
-- 🔍 **Dry Run:** Preview exactly what will be sent to YouTube before making changes.
-- 🛠️ **Diagnostics:** Use `angularidades doctor` to check metadata and credentials.
+
+- 💬 **Interactive Fallback Menu:** Running `angularidades` without arguments opens an elegant dashboard guide.
+- 🆕 **Scaffolding:** Create folder structures and fetch initial captions (`angularidades scaffold [episode]`, aliases: `new`, `create`).
+- 📦 **Publishing:** Sync metadata and transcripts to YouTube (`angularidades publish [episode]`, alias: `sync`).
+- 🔍 **Dry Run:** Safely test configuration and preview YouTube payloads (`angularidades publish [episode] --dry-run` or `-d`).
+- 🛠️ **Diagnostics:** Run connectivity, credentials, and alignment checks (`angularidades doctor [episode]`, aliases: `check`, `validate`).
+- ⏱️ **Latest Resolver:** Use `latest` as the episode parameter (e.g. `latest` resolves to the most recently created episode folder automatically).
 
 ## Project Structure
+
 - `.agents/`: Specialized AI agents for planning and publishing.
 - `bin/`: CLI entry points.
 - `episodes/`: Work directory organized by episode number.
@@ -29,35 +40,94 @@ To get started with the Angularidades Ops pipeline, run the initialization scrip
 
 This script will install dependencies and link the `angularidades` CLI tool globally on your system.
 
+## Shell Autocompletion (Zsh)
+
+To enable tab-completion for commands and episode directories, add the autocompletion script to your shell configuration (e.g. `~/.zshrc`):
+
+```bash
+# Load angularidades autocompletions
+source <(angularidades completion)
+```
+
+Then reload your shell session (`source ~/.zshrc`). Now, typing `angularidades publish [TAB]` will dynamically suggest commands, aliases, episode directories, and the `latest` keyword!
+
 ## Workflow
 
-The project provides a unified CLI tool: `angularidades`. If you haven't linked it yet, you can also use `pnpm run youtube:<command>`.
+The project provides a unified CLI tool: `angularidades`. If you haven't linked it yet, you can also use `pnpm run youtube:<command>` (e.g., `pnpm run youtube:publish --dry-run`).
 
 ### 1. Planning Phase (Pre-recording)
+
 1. Determine the upcoming episode's Topic or Guest Profile.
 2. Run the Planner agent pointing to `.agents/planner/system_prompt.md`.
 3. Save the output to `episodes/<episode-number>/0_planner/script.md`.
 4. Use the generated `script.md` to conduct the interview via teleprompter.
 
 ### 2. Publishing Phase (Post-recording)
+
 1. **Scaffolding:** Create the episode structure and metadata. It will automatically fetch captions from YouTube:
    ```bash
-   angularidades new
+   angularidades scaffold <episode>          # e.g., angularidades scaffold 89 (aliases: new, create)
    ```
 2. **Diagnostics:** Run the Doctor check to ensure all metadata and credentials are ready:
    ```bash
-   angularidades doctor
+   angularidades doctor <episode>            # e.g., angularidades doctor latest (aliases: check, validate)
    ```
 3. **AI Processing:** Instruct the `@publisher` AI Agent (your AI Assistant) to process the episode using the planner script and YouTube captions as inputs. The agent will place all generated files (titles, descriptions, LinkedIn posts, and corrected transcripts) into the `2_publisher/` folder.
 4. **Verification:** Run a dry-run to verify the payload that will be sent to YouTube:
    ```bash
-   angularidades dry-run
+   angularidades publish <episode> --dry-run  # e.g., angularidades publish latest -d
    ```
 5. **Publishing:** Push the metadata and transcripts to the YouTube API:
    ```bash
-   angularidades publish
+   angularidades publish <episode>            # e.g., angularidades publish latest (alias: sync)
    ```
-   *Note: If no episode is provided, the CLI will present an interactive selection menu.*
+   _Note: If no episode is provided, the CLI will prompt you to select one. Running the CLI without a command at all (`angularidades`) will launch the visual overview selection guide._
+
+## Running Tests
+
+To verify local changes and prevent regressions, run the Vitest unit test suite:
+
+```bash
+# Run tests once
+pnpm test
+
+# Run tests in interactive watch mode
+pnpm run test:watch
+```
+
+## Caption Translation & Alignment Workflow (Internal)
+
+The pipeline automatically attempts to download the existing YouTube captions (giving priority to Spanish ASR or manual tracks) and saves them to `1_recording/captions.sbv`. This serves as a source of truth for the Publisher Agent, eliminating manual copy-pasting.
+
+To translate captions to English block-by-block while maximizing token efficiency and ensuring perfect synchronization, use the internal `translate-helper.js` script:
+
+### 1. Dump Spanish captions to plain JSON chunks
+
+```bash
+node scripts/publisher/translate-helper.js dump <episode>
+```
+
+Splits the captions into `1_recording/blocks.json` and clean text arrays of 100 blocks each (e.g. `1_recording/chunk-0-99.json`, `chunk-100-199.json`, etc.) without timestamps. This minimizes token consumption during translation.
+
+### 2. Translate JSON chunks
+
+Translate the JSON text arrays to English using the AI agent, saving each chunk as `2_publisher/trans-X-Y.json` (e.g., `2_publisher/trans-0-99.json`).
+
+### 3. Compile final English captions
+
+```bash
+node scripts/publisher/translate-helper.js build <episode>
+```
+
+Stitches the translated English JSON chunks back together using the original timestamps, performing strict block count validation.
+
+### 4. Validate alignment (if mismatch occurs)
+
+```bash
+node scripts/publisher/translate-helper.js validate <episode>
+```
+
+Displays a side-by-side diagnostic report of Spanish source text and English translations to pinpoint alignment issues.
 
 ## YouTube Authentication Setup
 
@@ -66,6 +136,7 @@ The project provides a unified CLI tool: `angularidades`. If you haven't linked 
 To run the automated `pnpm run youtube:publish` script, you must configure Google Cloud OAuth2 credentials. The project utilizes a "Desktop App" OAuth flow to securely generate a Refresh Token.
 
 **1. Create Google Cloud Credentials:**
+
 1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
 2. Enable the **YouTube Data API v3** in your project.
 3. Configure the **OAuth consent screen** (External). Your email should be added under the **Test users** section to avoid `Error 403: access_denied`.
@@ -74,6 +145,7 @@ To run the automated `pnpm run youtube:publish` script, you must configure Googl
 6. Copy the generated **Client ID** and **Client Secret**.
 
 **2. Generate the Refresh Token:**
+
 1. Copy `.env.example` to `.env` and paste your Client ID and Secret.
 2. Run the included authentication helper script:
    ```bash
