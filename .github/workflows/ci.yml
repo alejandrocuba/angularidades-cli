@@ -13,21 +13,21 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        task: [format:check, lint, test]
+    name: Validate (${{ matrix.task }})
     steps:
-      # Pinned: actions/checkout@v4.2.2
       - name: Checkout Code
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        uses: actions/checkout@v4
 
-      # Pinned: pnpm/action-setup@v4.0.0
       - name: Install pnpm
-        uses: pnpm/action-setup@a73af047cccdad2823daf8ff3c61dcea65a8a58f
+        uses: pnpm/action-setup@v4
         with:
           version: 11.0.9
 
-      # Pinned: actions/setup-node@v4.1.0
       - name: Setup Node.js
-        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af
+        uses: actions/setup-node@v4
         with:
           node-version: 26.1.0
           cache: 'pnpm'
@@ -35,11 +35,5 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Check Formatting
-        run: pnpm run format:check
-
-      - name: Run Linter
-        run: pnpm run lint
-
-      - name: Run Tests
-        run: pnpm test
+      - name: Run Validate Task
+        run: pnpm run ${{ matrix.task }}
