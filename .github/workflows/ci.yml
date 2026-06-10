@@ -17,8 +17,17 @@ permissions:
 
 jobs:
   validate:
-    name: Validate Project
+    name: ${{ matrix.task.name }}
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        task:
+          - name: 'Code Style Verification (Prettier)'
+            command: 'format:check'
+          - name: 'Static Code Analysis (ESLint)'
+            command: 'lint'
+          - name: 'Automated Unit & E2E Testing (Vitest)'
+            command: 'test'
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -37,11 +46,5 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Check Formatting
-        run: pnpm run format:check
-
-      - name: Run Linter
-        run: pnpm run lint
-
-      - name: Run Tests
-        run: pnpm run test
+      - name: Execute Validation
+        run: pnpm run ${{ matrix.task.command }}
