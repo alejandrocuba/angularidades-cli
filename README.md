@@ -32,13 +32,13 @@ The CLI supporting the planning, post-production and publishing workflow of the 
 
 ## Installation & Setup
 
-To get started with the Angularidades Ops pipeline, run the initialization script:
+To get started with the Angularidades Ops pipeline, run the setup command:
 
 ```bash
-./init.sh
+pnpm run setup
 ```
 
-This script will install dependencies and link the `angularidades` CLI tool globally on your system.
+This will automatically install dependencies and link the `angularidades` CLI tool globally on your system.
 
 ## Shell Autocompletion (Zsh)
 
