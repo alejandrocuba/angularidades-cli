@@ -1,0 +1,26 @@
+# Dependencies & Package Managers
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+pnpm-workspace.yaml
+
+# Build & Output directories
+dist/
+build/
+.next/
+.nuxt/
+out/
+tmp/
+tmp-*/
+
+# Local configurations & assets
+.env*
+.idea/
+.vscode/
+.history/
+.agents/
+episodes/
+
+# Binary / License / Static Files
+LICENSE
