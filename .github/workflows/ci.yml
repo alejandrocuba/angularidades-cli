@@ -2,9 +2,14 @@ name: CI
 
 on:
   push:
-    branches: [main, cli-refactoring]
+    branches: [main]
   pull_request:
     branches: [main]
+
+# Cancel outdated workflow runs for the same branch or pull request
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 # Enforce secure least-privilege permissions
 permissions:
@@ -12,11 +17,8 @@ permissions:
 
 jobs:
   validate:
+    name: Validate Project
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        task: [format:check, lint, test]
-    name: Validate (${{ matrix.task }})
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -35,5 +37,11 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run Validate Task
-        run: pnpm run ${{ matrix.task }}
+      - name: Check Formatting
+        run: pnpm run format:check
+
+      - name: Run Linter
+        run: pnpm run lint
+
+      - name: Run Tests
+        run: pnpm run test
