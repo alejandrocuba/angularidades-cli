@@ -4,22 +4,24 @@ Thank you for considering contributing to this project! Adhering to these guidel
 
 ## 1. Reporting Issues
 
-* **Bug Reports**: If you find a bug, please search existing issues first. If it is new, open a new issue describing the bug, including steps to reproduce, expected behavior, and screenshots or log files if available.
-* **Feature Requests**: Open an issue describing the feature, why it is needed, and any proposed visual or architectural implementations.
+- **Bug Reports**: If you find a bug, please search existing issues first. If it is new, open a new issue describing the bug, including steps to reproduce, expected behavior, and screenshots or log files if available.
+- **Feature Requests**: Open an issue describing the feature, why it is needed, and any proposed visual or architectural implementations.
 
-*Note: For security vulnerabilities, please refer to [SECURITY.md](SECURITY.md) and do not file a public issue.*
+_Note: For security vulnerabilities, please refer to [SECURITY.md](SECURITY.md) and do not file a public issue._
 
 ## 2. Development Setup
 
 We recommend using the standard package manager defined in the repository.
 
 1. Clone your fork of the repository:
+
    ```bash
    git clone https://github.com/[your-username]/[repository-name].git
    cd [repository-name]
    ```
 
 2. Install dependencies:
+
    ```bash
    pnpm install
    ```
@@ -47,10 +49,10 @@ git checkout -b chore/clean-unused-imports
 
 ## 4. Coding Standards
 
-* All contributions must follow the protocols in [AGENTS.md](AGENTS.md).
-* Verify UI updates against the visual guidelines in [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md).
-* Write or update unit tests for any logic you implement or modify.
-* Run code formatting and linting scripts locally before pushing:
+- All contributions must follow the protocols in [AGENTS.md](AGENTS.md).
+- Verify UI updates against the visual guidelines in [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md).
+- Write or update unit tests for any logic you implement or modify.
+- Run code formatting and linting scripts locally before pushing:
   ```bash
   pnpm run lint
   pnpm run format
@@ -71,6 +73,6 @@ git checkout -b chore/clean-unused-imports
    ```
 3. Open a Pull Request on GitHub.
 4. Ensure your PR description clearly states:
-   * What changes are introduced.
-   * Which issues are resolved (e.g., `Closes #123`).
-   * Visual comparisons (before/after screenshots) for UI modifications.
+   - What changes are introduced.
+   - Which issues are resolved (e.g., `Closes #123`).
+   - Visual comparisons (before/after screenshots) for UI modifications.
