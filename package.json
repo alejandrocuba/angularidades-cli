@@ -10,6 +10,8 @@
     "youtube:publish": "node bin/cli.js publish",
     "youtube:dry-run": "node bin/cli.js publish --dry-run",
     "youtube:doctor": "node bin/cli.js doctor",
+    "setup": "node scripts/init.js",
+    "postinstall": "node scripts/init.js",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "vitest run bin/cli.e2e.spec.js",

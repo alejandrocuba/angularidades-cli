@@ -1,5 +1,6 @@
 # Angularidades Ops CLI
 
+[![CI](https://github.com/alejandrocuba/angularidades-ops/actions/workflows/ci.yml/badge.svg)](https://github.com/alejandrocuba/angularidades-ops/actions/workflows/ci.yml)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Commander.js](https://img.shields.io/badge/Commander.js-v15-black)](https://github.com/tj/commander.js)
 [![Vitest](https://img.shields.io/badge/Vitest-v4-839a03?logo=vitest&logoColor=white)](https://vitest.dev)
@@ -32,13 +33,13 @@ The CLI supporting the planning, post-production and publishing workflow of the 
 
 ## Installation & Setup
 
-To get started with the Angularidades Ops pipeline, run the initialization script:
+To get started with the Angularidades Ops pipeline, simply install the dependencies:
 
 ```bash
-./init.sh
+pnpm install
 ```
 
-This script will install dependencies and link the `angularidades` CLI tool globally on your system.
+The setup script will automatically run post-installation to link the `angularidades` CLI tool globally on your system and set up shell autocompletion. (If you ever need to re-run the setup manually, you can use `pnpm run setup`).
 
 ## Shell Autocompletion (Zsh)
 
