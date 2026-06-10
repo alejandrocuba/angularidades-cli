@@ -1,6 +1,6 @@
 import { describe, test, expect, vi, beforeEach, afterEach } from 'vitest';
 import fs from 'fs';
-import p from '@clack/prompts';
+import * as p from '@clack/prompts';
 import { scaffoldEpisode } from '../scripts/publisher/scaffold.js';
 import { publishEpisode } from '../scripts/publisher/index.js';
 import { main } from './cli.js';
@@ -125,8 +125,8 @@ describe('cli', () => {
     expect(process.exit).toHaveBeenCalledWith(0);
   });
 
-  test('should execute doctor subcommand when check command is run', async () => {
-    process.argv = ['node', 'cli.js', 'check', 'latest'];
+  test('should execute doctor subcommand when doctor command is run', async () => {
+    process.argv = ['node', 'cli.js', 'doctor', 'latest'];
 
     await main();
     await new Promise((resolve) => setTimeout(resolve, 50));

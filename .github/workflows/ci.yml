@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main, cli-refactoring]
+  pull_request:
+    branches: [main]
+
+# Enforce secure least-privilege permissions
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Pinned: actions/checkout@v4.2.2
+      - name: Checkout Code
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+
+      # Pinned: pnpm/action-setup@v4.0.0
+      - name: Install pnpm
+        uses: pnpm/action-setup@feea35b86940f6fb7e1b824749814d3e62f624d2
+        with:
+          version: 11.0.9
+
+      # Pinned: actions/setup-node@v4.2.0
+      - name: Setup Node.js
+        uses: actions/setup-node@392252c48c7fe452ad6a68554f087c29e4b608a8
+        with:
+          node-version: 26.1.0
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check Formatting
+        run: pnpm run format:check
+
+      - name: Run Linter
+        run: pnpm run lint
+
+      - name: Run Tests
+        run: pnpm test

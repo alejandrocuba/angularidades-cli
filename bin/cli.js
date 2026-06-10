@@ -2,7 +2,7 @@ import { fileURLToPath } from 'url';
 import { Command } from 'commander';
 import path from 'path';
 import fs from 'fs';
-import p from '@clack/prompts';
+import * as p from '@clack/prompts';
 import { colors, setLogLevel } from '../scripts/publisher/logger.js';
 import { scaffoldEpisode } from '../scripts/publisher/scaffold.js';
 import { publishEpisode } from '../scripts/publisher/index.js';
@@ -74,30 +74,18 @@ async function runDoctor(episode) {
   });
 }
 
-async function runInteractiveMenu() {
+async function runInteractiveMenu(program) {
   p.intro(`${colors.cyan}${colors.bold}Angularidades CLI${colors.reset}`);
 
-  p.note(
-    `${colors.bold}Available Commands:${colors.reset}\n` +
-      `  scaffold [episode]  Create a new episode structure (Aliases: new, create)\n` +
-      `  publish [episode]   Publish episode to YouTube (Alias: sync)\n` +
-      `  doctor [episode]    Run diagnostic check (Alias: check)\n\n` +
-      `${colors.bold}Global Options:${colors.reset}\n` +
-      `  -d, --dry-run       Run in dry-run mode`,
-    'CLI Overview'
-  );
+  console.log(program.helpInformation());
 
   const selected = await p.select({
     message: 'What would you like to do?',
     options: [
-      { value: 'publish', label: '🚀 Publish Episode', hint: 'Sync metadata and captions' },
-      { value: 'dry-run', label: '🔍 Dry Run Publish', hint: 'Preview payload without uploading' },
-      { value: 'doctor', label: '⛑️ Doctor Check', hint: 'Verify files and credentials' },
-      {
-        value: 'scaffold',
-        label: '➕ Create New Episode',
-        hint: 'Scaffold directories and metadata'
-      }
+      { value: 'publish', label: 'Publish Episode' },
+      { value: 'dry-run', label: 'Dry Run Publish' },
+      { value: 'doctor', label: 'Doctor Check' },
+      { value: 'scaffold', label: 'Create New Episode' }
     ]
   });
 
@@ -122,11 +110,20 @@ async function main() {
 
   program
     .name('angularidades')
-    .description('Official CLI for the Angularidades podcast operations')
+    .description('CLI for the Angularidades podcast operations')
     .version('1.0.0')
     .usage('[command] [options]')
     .option('-v, --verbose', 'enable verbose logging')
     .option('-s, --silent', 'suppress all normal output');
+
+  program.configureHelp({
+    styleTitle: (str) => colors.bold + colors.yellow + str + colors.reset,
+    styleCommandText: (str) => colors.bold + colors.orange + str + colors.reset,
+    styleSubcommandText: (str) => colors.orange + str + colors.reset,
+    styleOptionText: (str) => colors.green + str + colors.reset,
+    styleArgumentText: (str) => colors.blue + str + colors.reset,
+    styleDescriptionText: (str) => colors.reset + str
+  });
 
   program.hook('preAction', (_thisCommand, _actionCommand) => {
     const globalOpts = program.opts();
@@ -138,17 +135,7 @@ async function main() {
 
   program.on('command:*', (operands) => {
     const unknownCmd = operands[0];
-    const availableCommands = [
-      'scaffold',
-      'new',
-      'create',
-      'publish',
-      'sync',
-      'doctor',
-      'check',
-      'validate',
-      'completion'
-    ];
+    const availableCommands = ['scaffold', 'publish', 'doctor', 'completion'];
 
     let closestCmd = null;
     let minDistance = Infinity;
@@ -172,17 +159,11 @@ async function main() {
     process.exit(1);
   });
 
-  // Check if we should fall back to interactive menu
-  const args = process.argv;
-  if (args.length === 2) {
-    await runInteractiveMenu();
-    return;
-  }
+  // Options and subcommands will be parsed and executed below
 
   program
     .command('scaffold [episode]')
     .description('Create new episode scaffolding directory structure and fetch initial captions')
-    .aliases(['new', 'create'])
     .action(async (episode) => {
       await runScaffold(episode);
     });
@@ -190,7 +171,6 @@ async function main() {
   program
     .command('publish [episode]')
     .description('Sync and upload episode description, tags, metadata, and transcripts to YouTube')
-    .alias('sync')
     .option('-d, --dry-run', 'Preview payload and simulate publication offline or online')
     .action(async (episode, options) => {
       await runPublish(episode, { dryRun: !!options.dryRun });
@@ -199,7 +179,6 @@ async function main() {
   program
     .command('doctor [episode]')
     .description('Run visual diagnostic checks on files, metadata, and YouTube API connectivity')
-    .aliases(['check', 'validate'])
     .action(async (episode) => {
       await runDoctor(episode);
     });
@@ -215,13 +194,8 @@ _angularidades() {
   local -a commands
   commands=(
     'scaffold:Create new episode structure'
-    'new:Create new episode structure'
-    'create:Create new episode structure'
     'publish:Sync and upload episode to YouTube'
-    'sync:Sync and upload episode to YouTube'
     'doctor:Run diagnostic check'
-    'check:Run diagnostic check'
-    'validate:Run diagnostic check'
     'completion:Generate shell autocompletion script'
   )
   _arguments '1: :->command' '2: :->args'
@@ -231,7 +205,7 @@ _angularidades() {
       ;;
     args)
       case $line[1] in
-        publish|sync|doctor|check|validate)
+        publish|doctor)
           local -a episodes
           episodes=($(ls -d episodes/* 2>/dev/null | awk -F/ '{print $NF}'))
           episodes+=('latest')
@@ -245,10 +219,26 @@ _angularidades() {
       console.log(script.trim());
     });
 
+  // Check if we should fall back to interactive menu
+  const args = process.argv;
+  if (args.length === 2) {
+    await runInteractiveMenu(program);
+    return;
+  }
+
   await program.parseAsync(args);
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
+const isMain = () => {
+  if (!process.argv[1]) return false;
+  try {
+    return fs.realpathSync(process.argv[1]) === fs.realpathSync(fileURLToPath(import.meta.url));
+  } catch {
+    return false;
+  }
+};
+
+if (isMain()) {
   main().catch((err) => {
     console.error('Error:', err);
     process.exit(1);

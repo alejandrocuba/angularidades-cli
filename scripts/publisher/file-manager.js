@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import p from '@clack/prompts';
+import * as p from '@clack/prompts';
 
 export function extractVideoId(input) {
   if (!input) return null;

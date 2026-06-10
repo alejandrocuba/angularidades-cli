@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import { colors } from './logger.js';
 import dotenv from 'dotenv';
-import clackPrompts from '@clack/prompts';
+import * as clackPrompts from '@clack/prompts';
 
 dotenv.config({ quiet: true });
 

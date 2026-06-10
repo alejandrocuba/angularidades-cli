@@ -1,7 +1,6 @@
 import { fileURLToPath } from 'url';
-import path from 'path';
-import { spawnSync } from 'child_process';
-import clackPrompts from '@clack/prompts';
+import { runAuthHelper } from '../auth-helper.js';
+import * as clackPrompts from '@clack/prompts';
 import { resolveConfig } from './config.js';
 import { colors, logDoctor, printHeader, logLevel } from './logger.js';
 import { getEpisodeData, getLocalTranscripts } from './file-manager.js';
@@ -154,9 +153,8 @@ async function publishEpisode(options = {}) {
         });
 
         if (confirmAuth && !p.isCancel(confirmAuth)) {
-          const authHelperPath = path.join(import.meta.dirname, '../auth-helper.js');
           console.log('');
-          spawnSync('node', [authHelperPath], { stdio: 'inherit' });
+          await runAuthHelper(p);
         } else {
           p.cancel(
             `Operation cancelled. Please run the auth helper script later to retrieve a new token:\n   ${colors.cyan}${colors.bold}node scripts/auth-helper.js${colors.reset}`

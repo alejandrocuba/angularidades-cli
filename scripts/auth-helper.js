@@ -1,17 +1,20 @@
 import { google } from 'googleapis';
-import p from '@clack/prompts';
+import * as p from '@clack/prompts';
 import { colors } from './publisher/logger.js';
 import dotenv from 'dotenv';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+
 dotenv.config();
 
-async function main() {
-  p.intro(`${colors.cyan}${colors.bold}Angularidades: YouTube Auth Helper${colors.reset}`);
+async function runAuthHelper(prompts = p) {
+  prompts.intro(`${colors.cyan}${colors.bold}Angularidades: YouTube Auth Helper${colors.reset}`);
 
   const CLIENT_ID = process.env.YOUTUBE_CLIENT_ID;
   const CLIENT_SECRET = process.env.YOUTUBE_CLIENT_SECRET;
 
   if (!CLIENT_ID || !CLIENT_SECRET) {
-    p.log.error(
+    prompts.log.error(
       `Please provide ${colors.bold}YOUTUBE_CLIENT_ID${colors.reset} and ${colors.bold}YOUTUBE_CLIENT_SECRET${colors.reset} in your .env file first.`
     );
     process.exit(1);
@@ -44,7 +47,7 @@ async function main() {
     `${colors.bold}───────────────────────────────────────────────────────────────────────────${colors.reset}\n`
   );
 
-  const code = await p.text({
+  const code = await prompts.text({
     message: 'Enter the code from the URL query string "code" after login:',
     placeholder: 'e.g. 4/0AeoWu...',
     validate(value) {
@@ -52,31 +55,44 @@ async function main() {
     }
   });
 
-  if (p.isCancel(code)) {
-    p.cancel('Operation cancelled.');
+  if (prompts.isCancel(code)) {
+    prompts.cancel('Operation cancelled.');
     process.exit(0);
   }
 
-  const s = p.spinner();
+  const s = prompts.spinner();
   s.start('Exchanging code for tokens...');
 
   try {
     const { tokens } = await oauth2Client.getToken(code.trim());
     s.stop('Tokens retrieved successfully!');
 
-    p.note(tokens.refresh_token || 'No refresh token returned.', 'Your Refresh Token');
+    prompts.note(tokens.refresh_token || 'No refresh token returned.', 'Your Refresh Token');
 
-    p.outro(
+    prompts.outro(
       `Add this to your ${colors.bold}.env${colors.reset} file and GitHub Secrets as ${colors.bold}YOUTUBE_REFRESH_TOKEN${colors.reset}`
     );
   } catch (error) {
     s.stop('Failed to retrieve token.');
-    p.log.error(`Error exchanging code: ${error.message}`);
+    prompts.log.error(`Error exchanging code: ${error.message}`);
     process.exit(1);
   }
 }
 
-main().catch((err) => {
-  p.log.error(`Unexpected error: ${err.message}`);
-  process.exit(1);
-});
+const isMain = () => {
+  if (!process.argv[1]) return false;
+  try {
+    return fs.realpathSync(process.argv[1]) === fs.realpathSync(fileURLToPath(import.meta.url));
+  } catch {
+    return false;
+  }
+};
+
+if (isMain()) {
+  runAuthHelper().catch((err) => {
+    p.log.error(`Unexpected error: ${err.message}`);
+    process.exit(1);
+  });
+}
+
+export { runAuthHelper };

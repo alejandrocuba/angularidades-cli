@@ -1,7 +1,7 @@
 import { describe, test, expect, vi, beforeEach, afterEach } from 'vitest';
 import fs from 'fs';
 import path from 'path';
-import p from '@clack/prompts';
+import * as p from '@clack/prompts';
 import { resolveConfig } from './config.js';
 
 vi.mock('@clack/prompts', () => {

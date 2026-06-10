@@ -16,43 +16,7 @@
 import fs from 'fs';
 import path from 'path';
 
-// ---------------------------------------------------------------------------
-// Resolve episode directory
-// ---------------------------------------------------------------------------
-const args = process.argv.slice(2);
-let episodeArg = args.find((arg) => !arg.startsWith('--'));
-
-const episodesDir = path.join(import.meta.dirname, '../../episodes');
-let episodeNumber;
-
-if (episodeArg) {
-  episodeNumber = episodeArg.toString().padStart(4, '0');
-} else {
-  const folders = fs
-    .readdirSync(episodesDir)
-    .filter((f) => fs.lstatSync(path.join(episodesDir, f)).isDirectory() && /^\d+$/.test(f))
-    .map((f) => parseInt(f))
-    .sort((a, b) => b - a);
-  if (folders.length === 0) {
-    console.error('No episode folders found.');
-    process.exit(1);
-  }
-  episodeNumber = folders[0].toString().padStart(4, '0');
-}
-
-const episodeDir = path.join(episodesDir, episodeNumber);
-console.log(`Targeting Episode: ${episodeNumber} (${episodeDir})`);
-
-// ---------------------------------------------------------------------------
-// Paths
-// ---------------------------------------------------------------------------
-const sourcePath = path.join(episodeDir, '1_recording/captions.sbv');
-const outputPath = path.join(episodeDir, '2_publisher/youtube_captions_es.sbv');
-
-if (!fs.existsSync(sourcePath)) {
-  console.error(`Error: ${sourcePath} not found.`);
-  process.exit(1);
-}
+// correct-es-captions.js logic will be exported as correctEsCaptions below
 
 // ---------------------------------------------------------------------------
 // Term-correction rules
@@ -278,28 +242,78 @@ function applyCorrections(text) {
 // ---------------------------------------------------------------------------
 // Parse, correct, and write
 // ---------------------------------------------------------------------------
-const rawData = fs.readFileSync(sourcePath, 'utf8');
-const blocks = rawData.split('\n\n').filter((b) => b.trim().length > 0);
+async function correctEsCaptions(episodeArg) {
+  const episodesDir = path.join(import.meta.dirname, '../../episodes');
+  let episodeNumber;
 
-console.log(`Loaded ${blocks.length} blocks from ${sourcePath}`);
+  if (episodeArg) {
+    episodeNumber = episodeArg.toString().padStart(4, '0');
+  } else {
+    const folders = fs
+      .readdirSync(episodesDir)
+      .filter((f) => fs.lstatSync(path.join(episodesDir, f)).isDirectory() && /^\d+$/.test(f))
+      .map((f) => parseInt(f))
+      .sort((a, b) => b - a);
+    if (folders.length === 0) {
+      console.error('No episode folders found.');
+      process.exit(1);
+    }
+    episodeNumber = folders[0].toString().padStart(4, '0');
+  }
 
-let sbvContent = '';
-let corrections = 0;
+  const episodeDir = path.join(episodesDir, episodeNumber);
+  console.log(`Targeting Episode: ${episodeNumber} (${episodeDir})`);
 
-for (const block of blocks) {
-  const lines = block.split('\n');
-  const timestamp = lines[0];
-  const original = lines.slice(1).join('\n');
-  const corrected = applyCorrections(original);
+  const sourcePath = path.join(episodeDir, '1_recording/captions.sbv');
+  const outputPath = path.join(episodeDir, '2_publisher/youtube_captions_es.sbv');
 
-  if (corrected !== original) corrections++;
+  if (!fs.existsSync(sourcePath)) {
+    console.error(`Error: ${sourcePath} not found.`);
+    process.exit(1);
+  }
 
-  sbvContent += `${timestamp}\n${corrected}\n\n`;
+  const rawData = fs.readFileSync(sourcePath, 'utf8');
+  const blocks = rawData.split('\n\n').filter((b) => b.trim().length > 0);
+
+  console.log(`Loaded ${blocks.length} blocks from ${sourcePath}`);
+
+  let sbvContent = '';
+  let corrections = 0;
+
+  for (const block of blocks) {
+    const lines = block.split('\n');
+    const timestamp = lines[0];
+    const original = lines.slice(1).join('\n');
+    const corrected = applyCorrections(original);
+
+    if (corrected !== original) corrections++;
+
+    sbvContent += `${timestamp}\n${corrected}\n\n`;
+  }
+
+  sbvContent = sbvContent.trimEnd() + '\n';
+
+  fs.writeFileSync(outputPath, sbvContent, 'utf8');
+
+  console.log(`\n✅ Done! Applied corrections to ${corrections} of ${blocks.length} blocks.`);
+  console.log(`   Output: ${outputPath}`);
 }
 
-sbvContent = sbvContent.trimEnd() + '\n';
+import { fileURLToPath } from 'url';
 
-fs.writeFileSync(outputPath, sbvContent, 'utf8');
+const isMain = () => {
+  if (!process.argv[1]) return false;
+  try {
+    return fs.realpathSync(process.argv[1]) === fs.realpathSync(fileURLToPath(import.meta.url));
+  } catch {
+    return false;
+  }
+};
 
-console.log(`\n✅ Done! Applied corrections to ${corrections} of ${blocks.length} blocks.`);
-console.log(`   Output: ${outputPath}`);
+if (isMain()) {
+  const args = process.argv.slice(2);
+  let episodeArg = args.find((arg) => !arg.startsWith('--'));
+  correctEsCaptions(episodeArg).catch(console.error);
+}
+
+export { correctEsCaptions };

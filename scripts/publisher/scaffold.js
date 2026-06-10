@@ -1,21 +1,23 @@
 import fs from 'fs';
 import path from 'path';
-import p from '@clack/prompts';
+import * as p from '@clack/prompts';
 import { colors, printHeader } from './logger.js';
 import { resolveConfig } from './config.js';
 import { initYouTube, downloadExistingCaptions } from './youtube-api.js';
 
 // Fix Clack symbols for consistency: solid green for completed, outline green for active
 const green = (s) => `${colors.green}${s}${colors.reset}`;
-
-p.S_STEP_ACTIVE = green('◇');
-p.S_STEP_SUBMIT = green('◆');
-p.S_SUCCESS = green('◆');
 const blue = (s) => `${colors.blue}${s}${colors.reset}`;
-p.S_INFO = blue('●');
-p.S_BAR = green('│');
-p.S_BAR_START = green('┌');
-p.S_BAR_END = green('└');
+
+const symbols = {
+  S_STEP_ACTIVE: green('◇'),
+  S_STEP_SUBMIT: green('◆'),
+  S_SUCCESS: green('◆'),
+  S_INFO: blue('●'),
+  S_BAR: green('│'),
+  S_BAR_START: green('┌'),
+  S_BAR_END: green('└')
+};
 
 async function scaffoldEpisode(predefinedEpisodeNumber) {
   printHeader('Angularidades: Create New Episode Scaffolding');
@@ -167,7 +169,7 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
 
   fs.mkdirSync(newEpisodeDir, { recursive: true });
   subDirs.forEach((dir) => fs.mkdirSync(path.join(newEpisodeDir, dir), { recursive: true }));
-  s.stop('Directories and metadata ready', p.S_SUCCESS);
+  s.stop('Directories and metadata ready', symbols.S_SUCCESS);
 
   // Format titles
   const guestList = guests.join(', ');
@@ -202,7 +204,7 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
         const youtube = initYouTube(config.credentials);
         s.message('Downloading captions from YouTube...');
         await downloadExistingCaptions(youtube, videoId, newEpisodeDir, false, false);
-        s.stop('YouTube download finished', p.S_SUCCESS);
+        s.stop('YouTube download finished', symbols.S_SUCCESS);
         p.log.success('Scaffolding created and YouTube captions downloaded.');
       } else {
         s.stop('YouTube skipped');
