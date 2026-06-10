@@ -3,6 +3,11 @@ import fs from 'fs';
 import path from 'path';
 import os from 'os';
 
+// Exit early if running in CI or a non-interactive environment (like postinstall in CI)
+if (process.env.CI || !process.stdout.isTTY) {
+  process.exit(0);
+}
+
 // Check for pnpm
 try {
   execSync('command -v pnpm', { stdio: 'ignore' });
@@ -46,31 +51,42 @@ async function main() {
   if (alreadySetup) {
     p.log.warn('Skipping link process: the command "angularidades" is already available.');
   } else {
-    const s = p.spinner();
-    s.start('Linking CLI command "angularidades" globally...');
-    try {
-      // Find global bin directory for pnpm
-      let pnpmBinDir = '';
+    const confirmInstall = await p.confirm({
+      message: 'Would you like to install the "angularidades" CLI globally?',
+      initialValue: true
+    });
+
+    if (p.isCancel(confirmInstall) || !confirmInstall) {
+      p.log.info(
+        'Skipping global CLI installation. (You can run commands locally using "pnpm run youtube:<command>")'
+      );
+    } else {
+      const s = p.spinner();
+      s.start('Linking CLI command "angularidades" globally...');
       try {
-        pnpmBinDir = execSync('pnpm config get global-bin-dir', { encoding: 'utf8' }).trim();
-      } catch {
-        pnpmBinDir = '';
+        // Find global bin directory for pnpm
+        let pnpmBinDir = '';
+        try {
+          pnpmBinDir = execSync('pnpm config get global-bin-dir', { encoding: 'utf8' }).trim();
+        } catch {
+          pnpmBinDir = '';
+        }
+
+        if (!pnpmBinDir || pnpmBinDir === 'undefined') {
+          pnpmBinDir = path.join(os.homedir(), 'Library/pnpm/bin');
+        }
+
+        fs.mkdirSync(pnpmBinDir, { recursive: true });
+
+        // Run pnpm add -g .
+        execSync('pnpm add -g . --silent', { stdio: 'ignore' });
+        s.stop('CLI command linked successfully');
+      } catch (error) {
+        s.stop('Failed to link CLI command');
+        p.log.error(`Error linking CLI command: ${error.message}`);
+        p.log.info('Tip: Try running "pnpm setup" and then "source ~/.zshrc"');
+        process.exit(1);
       }
-
-      if (!pnpmBinDir || pnpmBinDir === 'undefined') {
-        pnpmBinDir = path.join(os.homedir(), 'Library/pnpm/bin');
-      }
-
-      fs.mkdirSync(pnpmBinDir, { recursive: true });
-
-      // Run pnpm add -g .
-      execSync('pnpm add -g . --silent', { stdio: 'ignore' });
-      s.stop('CLI command linked successfully');
-    } catch (error) {
-      s.stop('Failed to link CLI command');
-      p.log.error(`Error linking CLI command: ${error.message}`);
-      p.log.info('Tip: Try running "pnpm setup" and then "source ~/.zshrc"');
-      process.exit(1);
     }
   }
 
