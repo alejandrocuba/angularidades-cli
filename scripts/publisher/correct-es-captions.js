@@ -243,7 +243,8 @@ function applyCorrections(text) {
 // Parse, correct, and write
 // ---------------------------------------------------------------------------
 async function correctEsCaptions(episodeArg) {
-  const episodesDir = path.join(import.meta.dirname, '../../episodes');
+  const episodesDir =
+    process.env.ANGULARIDADES_EPISODES_DIR || path.join(import.meta.dirname, '../../episodes');
   let episodeNumber;
 
   if (episodeArg) {

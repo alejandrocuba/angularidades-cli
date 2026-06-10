@@ -12,7 +12,8 @@ export async function resolveConfig(options = {}) {
   const isDryRun = options.dryRun !== undefined ? options.dryRun : args.includes('--dry-run');
   const isDoctor = options.doctor !== undefined ? options.doctor : args.includes('--doctor');
 
-  const episodesDir = path.join(import.meta.dirname, '../../episodes');
+  const episodesDir =
+    process.env.ANGULARIDADES_EPISODES_DIR || path.join(import.meta.dirname, '../../episodes');
 
   if (!fs.existsSync(episodesDir)) {
     p.log.error('Episodes directory not found.');
@@ -30,12 +31,18 @@ export async function resolveConfig(options = {}) {
   }
 
   const latestEpisode = episodeFolders[0];
-  let episodeInput =
-    options.episode || args.find((arg) => !arg.startsWith('--') && !arg.startsWith('-'));
+  let episodeInput = options.episode;
 
   const episodeIndex = args.findIndex((arg) => arg === '--episode' || arg === '-e');
-  if (!options.episode && episodeIndex !== -1 && args[episodeIndex + 1]) {
+  if (!episodeInput && episodeIndex !== -1 && args[episodeIndex + 1]) {
     episodeInput = args[episodeIndex + 1];
+  }
+
+  if (!episodeInput) {
+    episodeInput = args.find((arg) => {
+      if (arg.startsWith('--') || arg.startsWith('-')) return false;
+      return arg === 'latest' || /^\d+$/.test(arg);
+    });
   }
 
   if (episodeInput === 'latest') {
@@ -66,7 +73,7 @@ export async function resolveConfig(options = {}) {
   }
 
   const episodeNumber = episodeInput.toString().padStart(4, '0');
-  const episodeDir = path.join(import.meta.dirname, '../../episodes', episodeNumber);
+  const episodeDir = path.join(episodesDir, episodeNumber);
 
   // Protection layer for previous episodes
   if (parseInt(episodeNumber) < parseInt(latestEpisode) && !isDryRun && !isDoctor) {

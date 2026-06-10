@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 
-dotenv.config();
+dotenv.config({ quiet: true });
 
 async function runAuthHelper(prompts = p) {
   prompts.intro(`${colors.cyan}${colors.bold}Angularidades: YouTube Auth Helper${colors.reset}`);

@@ -11,7 +11,8 @@ async function ensureEpisodeExists(episode) {
   if (!episode) return null;
   if (episode === 'latest') return 'latest';
 
-  const episodesDir = path.join(import.meta.dirname, '../episodes');
+  const episodesDir =
+    process.env.ANGULARIDADES_EPISODES_DIR || path.join(import.meta.dirname, '../episodes');
   const episodeNumber = episode.toString().padStart(4, '0');
   const episodeDir = path.join(episodesDir, episodeNumber);
 

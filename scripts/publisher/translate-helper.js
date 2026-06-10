@@ -10,7 +10,8 @@ async function runTranslateHelper(command, lang = 'en', episodeArg = null) {
     process.exit(1);
   }
 
-  const episodesDir = path.join(import.meta.dirname, '../../episodes');
+  const episodesDir =
+    process.env.ANGULARIDADES_EPISODES_DIR || path.join(import.meta.dirname, '../../episodes');
   let episodeNumber;
 
   if (episodeArg) {

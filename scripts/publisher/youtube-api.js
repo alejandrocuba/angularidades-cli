@@ -5,6 +5,7 @@ import { logDoctor, colors } from './logger.js';
 import { saveCaptions } from './file-manager.js';
 
 function initYouTube(credentials) {
+  google.options({ timeout: 10000 });
   const oauth2Client = new google.auth.OAuth2(credentials.CLIENT_ID, credentials.CLIENT_SECRET);
   oauth2Client.setCredentials({ refresh_token: credentials.REFRESH_TOKEN });
   return google.youtube({ version: 'v3', auth: oauth2Client });

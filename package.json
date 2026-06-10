@@ -12,6 +12,7 @@
     "youtube:doctor": "node bin/cli.js doctor",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:e2e": "vitest run bin/cli.e2e.spec.js",
     "prepare": "husky",
     "lint": "eslint .",
     "format:check": "prettier --check ."

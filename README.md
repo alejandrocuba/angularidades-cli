@@ -85,14 +85,24 @@ The project provides a unified CLI tool: `angularidades`. If you haven't linked 
 
 ## Running Tests
 
-To verify local changes and prevent regressions, run the Vitest unit test suite:
+To verify local changes and prevent regressions, you can run the test suites:
+
+### Run All Tests (Unit + E2E)
 
 ```bash
-# Run tests once
+# Run all tests once
 pnpm test
 
 # Run tests in interactive watch mode
 pnpm run test:watch
+```
+
+### Run E2E Integration Tests Only
+
+To run only the E2E CLI integration test suite:
+
+```bash
+pnpm run test:e2e
 ```
 
 ## Caption Translation & Alignment Workflow (Internal)

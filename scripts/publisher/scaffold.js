@@ -22,7 +22,8 @@ const symbols = {
 async function scaffoldEpisode(predefinedEpisodeNumber) {
   printHeader('Angularidades: Create New Episode Scaffolding');
 
-  const episodesDir = path.join(import.meta.dirname, '../../episodes');
+  const episodesDir =
+    process.env.ANGULARIDADES_EPISODES_DIR || path.join(import.meta.dirname, '../../episodes');
   const folders = fs
     .readdirSync(episodesDir)
     .filter((f) => fs.lstatSync(path.join(episodesDir, f)).isDirectory() && /^\d+$/.test(f))
