@@ -117,7 +117,7 @@ async function main() {
     .option('-s, --silent', 'suppress all normal output');
 
   program.configureHelp({
-    styleTitle: (str) => colors.bold + colors.yellow + str + colors.reset,
+    styleTitle: (str) => colors.bold + str + colors.reset,
     styleCommandText: (str) => colors.bold + colors.orange + str + colors.reset,
     styleSubcommandText: (str) => colors.orange + str + colors.reset,
     styleOptionText: (str) => colors.green + str + colors.reset,
