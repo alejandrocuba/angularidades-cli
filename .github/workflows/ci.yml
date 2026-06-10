@@ -21,13 +21,13 @@ jobs:
 
       # Pinned: pnpm/action-setup@v4.0.0
       - name: Install pnpm
-        uses: pnpm/action-setup@feea35b86940f6fb7e1b824749814d3e62f624d2
+        uses: pnpm/action-setup@a73af047cccdad2823daf8ff3c61dcea65a8a58f
         with:
           version: 11.0.9
 
-      # Pinned: actions/setup-node@v4.2.0
+      # Pinned: actions/setup-node@v4.1.0
       - name: Setup Node.js
-        uses: actions/setup-node@392252c48c7fe452ad6a68554f087c29e4b608a8
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af
         with:
           node-version: 26.1.0
           cache: 'pnpm'
