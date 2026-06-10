@@ -1,9 +1,15 @@
 # Agentic Engineering Protocols
 
 > [!IMPORTANT]
-> This repository inherits and extends the global engineering protocols defined in the central [Core Agentic Protocols (AGENTS.core.md)](AGENTS.core.md).
-> All contributors and AI agents must adhere to the core guidelines plus the project-specific extensions documented below.
+> Inherits [AGENTS.core.md](AGENTS.core.md).
 
 ## Project-Specific Rules
 
-Add your local overrides here.
+- **CLI Usage**: Perform workflow tasks using the unified CLI:
+  - `angularidades scaffold [episode]` (aliases: `new`, `create`) to generate structure.
+  - `angularidades doctor [episode]` (aliases: `check`, `validate`) to run checks.
+  - `angularidades publish [episode]` (alias: `sync`) to upload (use `-d` / `--dry-run` for preview).
+  - Use the keyword `latest` to target the newest episode automatically (e.g. `angularidades doctor latest`).
+- **Translation Pipeline**: Keep the caption translation utilities private/internal. Do not expose them on the public CLI namespace. Run manually:
+  - `node scripts/publisher/translate-helper.js <dump|build|validate> [episode]`
+- **Modularity**: Expose core workflow routines from `scripts/publisher/` and invoke them inside `bin/cli.js` rather than repeating argument handling or spawning Node child processes.

@@ -23,8 +23,8 @@ Instead, report it privately to ensure we can resolve the issue before it is pub
 
 ### Reporting Channels
 
-- Submit a report privately through GitHub's Private Vulnerability Reporting feature in the **Security** tab of the repository (preferred).
-- Or contact the repository maintainers directly via the contact methods specified in their profiles or settings.
+- Email the maintainers directly.
+- Or submit a report privately through GitHub's Private Vulnerability Reporting feature in the **Security** tab of the repository.
 
 ### What to Include
 
@@ -36,6 +36,6 @@ When reporting a vulnerability, please provide a detailed description including:
 
 ### Our Process
 
-1. **Acknowledgment**: We will acknowledge receipt of your report within 3 business days.
+1. **Acknowledgment**: We will acknowledge receipt of your report within [X] business days.
 2. **Investigation**: We will investigate the issue and coordinate with you to gather details.
 3. **Remediation**: We will build and test a patch, then release it in a timely manner.

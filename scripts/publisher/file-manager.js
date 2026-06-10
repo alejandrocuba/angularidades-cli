@@ -1,17 +1,17 @@
-const fs = require('fs');
-const path = require('path');
-const p = require('@clack/prompts');
+import fs from 'fs';
+import path from 'path';
+import * as p from '@clack/prompts';
 
-function extractVideoId(input) {
+export function extractVideoId(input) {
   if (!input) return null;
   const trimmed = input.trim();
-  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
   const match = trimmed.match(regExp);
-  const id = (match && match[2].length === 11) ? match[2] : trimmed;
+  const id = match && match[2].length === 11 ? match[2] : trimmed;
   return /^[a-zA-Z0-9_-]{11}$/.test(id) ? id : null;
 }
 
-async function getEpisodeData(episodeDir, logDoctor, isDoctor) {
+export async function getEpisodeData(episodeDir, logDoctor, isDoctor) {
   const metadataPath = path.join(episodeDir, 'metadata.json');
 
   if (!fs.existsSync(metadataPath)) {
@@ -69,18 +69,23 @@ async function getEpisodeData(episodeDir, logDoctor, isDoctor) {
   let descriptionEs = '';
   const descriptionPathEs = path.join(episodeDir, '2_publisher', 'youtube_description_es.md');
   if (fs.existsSync(descriptionPathEs)) descriptionEs = fs.readFileSync(descriptionPathEs, 'utf8');
-  else if (!isDoctor) console.warn(`Warning: youtube_description_es.md not found in ${episodeDir}/2_publisher/`);
+  else if (!isDoctor)
+    console.warn(`Warning: youtube_description_es.md not found in ${episodeDir}/2_publisher/`);
 
   let descriptionEn = '';
   const descriptionPathEn = path.join(episodeDir, '2_publisher', 'youtube_description_en.md');
   if (fs.existsSync(descriptionPathEn)) descriptionEn = fs.readFileSync(descriptionPathEn, 'utf8');
-  else if (!isDoctor) console.warn(`Warning: youtube_description_en.md not found in ${episodeDir}/2_publisher/`);
+  else if (!isDoctor)
+    console.warn(`Warning: youtube_description_en.md not found in ${episodeDir}/2_publisher/`);
 
   let tags = [];
   const tagsPath = path.join(episodeDir, '2_publisher', 'youtube_tags.txt');
   if (fs.existsSync(tagsPath)) {
     const tagsContent = fs.readFileSync(tagsPath, 'utf8');
-    tags = tagsContent.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0);
+    tags = tagsContent
+      .split(',')
+      .map((tag) => tag.trim())
+      .filter((tag) => tag.length > 0);
   } else if (metadata.tags && Array.isArray(metadata.tags)) {
     tags = metadata.tags;
   }
@@ -88,24 +93,22 @@ async function getEpisodeData(episodeDir, logDoctor, isDoctor) {
   return { metadata, videoId, titleEs, titleEn, descriptionEs, descriptionEn, tags };
 }
 
-function getLocalTranscripts(episodeDir) {
+export function getLocalTranscripts(episodeDir) {
   const langFiles = [
     { code: 'es', file: 'youtube_captions_es.sbv', name: 'Spanish' },
     { code: 'en', file: 'youtube_captions_en.sbv', name: 'English' }
   ];
-  return langFiles.map(lang => ({
+  return langFiles.map((lang) => ({
     ...lang,
     path: path.join(episodeDir, '2_publisher', lang.file),
     exists: fs.existsSync(path.join(episodeDir, '2_publisher', lang.file))
   }));
 }
 
-function saveCaptions(episodeDir, data) {
+export function saveCaptions(episodeDir, data) {
   const recordingDir = path.join(episodeDir, '1_recording');
   if (!fs.existsSync(recordingDir)) {
     fs.mkdirSync(recordingDir, { recursive: true });
   }
   fs.writeFileSync(path.join(recordingDir, 'youtube_captions.sbv'), data);
 }
-
-module.exports = { getEpisodeData, getLocalTranscripts, saveCaptions };

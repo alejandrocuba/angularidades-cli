@@ -1,0 +1,8 @@
+# Prevent staging of .env files containing secrets
+if git diff --cached --name-only | grep -E '^(\.env|\.env\..*)$' | grep -E -v '\.env\.(example|template|defaults|sample)$' >/dev/null 2>&1; then
+  echo "\033[31m[SECURITY ERROR] You are attempting to commit a .env file containing secrets!\033[0m"
+  echo "\033[31mPlease run: git restore --staged <file> to unstage it before committing.\033[0m"
+  exit 1
+fi
+
+pnpm exec eslint . && pnpm exec prettier --check . && pnpm test

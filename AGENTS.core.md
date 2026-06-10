@@ -23,7 +23,6 @@
 ## 4. Dependencies
 
 - **Tooling**: Use `pnpm` exclusively. Human approval required for `package.json`/lockfile changes.
-- **Formatting**: Use Prettier for code formatting. Code must conform to the shared `.prettierrc` rules, and formatting check must pass prior to merge.
 
 ## 5. Security
 

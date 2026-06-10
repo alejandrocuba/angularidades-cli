@@ -50,7 +50,6 @@ git checkout -b chore/clean-unused-imports
 ## 4. Coding Standards
 
 - All contributions must follow the protocols in [AGENTS.md](AGENTS.md).
-- Verify UI updates against the visual guidelines in [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md).
 - Write or update unit tests for any logic you implement or modify.
 - Run code formatting and linting scripts locally before pushing:
   ```bash
