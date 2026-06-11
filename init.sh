@@ -1,4 +1,4 @@
 #!/bin/bash
 
-# Angularidades Ops - Initialization Entry Point
+# Angularidades CLI - Initialization
 node scripts/init.js
