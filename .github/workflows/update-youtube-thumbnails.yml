@@ -24,16 +24,19 @@ jobs:
       - name: Run Update Script
         run: node .github/scripts/update-youtube-thumbnails.js
 
-      - name: Commit and Push changes
+      - name: Check for changes
+        id: git-check
         run: |
           if git diff --quiet README.md; then
-            echo "No changes to README.md. Skipping commit."
-            exit 0
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
-          echo "Changes detected in README.md. Committing..."
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "docs: update latest youtube episodes in README.md [skip ci]"
-          git push
+      - name: Commit and Push changes
+        if: steps.git-check.outputs.changed == 'true'
+        uses: test-room-7/action-update-file@v2
+        with:
+          file-path: README.md
+          commit-msg: 'docs: update latest youtube episodes in README.md [skip ci]'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
