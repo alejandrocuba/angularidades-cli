@@ -18,6 +18,7 @@ The CLI supporting the planning, post-production and publishing workflow of the 
 ### Latest Episodes
 
 <!-- YOUTUBE:START -->
+
 <a href="https://www.youtube.com/watch?v=XMMzoqvEvOE" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/XMMzoqvEvOE/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
 <a href="https://www.youtube.com/watch?v=bE6Ip5NNbck" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/bE6Ip5NNbck/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
 <a href="https://www.youtube.com/watch?v=wIaThYaieUA" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/wIaThYaieUA/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
@@ -28,6 +29,7 @@ The CLI supporting the planning, post-production and publishing workflow of the 
 <a href="https://www.youtube.com/watch?v=xzaXVSrzuTs" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/xzaXVSrzuTs/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
 <a href="https://www.youtube.com/watch?v=ub69Np2ya-c" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/ub69Np2ya-c/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
 <a href="https://www.youtube.com/watch?v=ThK58diiUyA" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/ThK58diiUyA/mqdefault.jpg" alt="Angularidades Episode"></a>
+
 <!-- YOUTUBE:END -->
 
 ## Features
