@@ -10,10 +10,27 @@
 
 The CLI supporting the planning, post-production and publishing workflow of the **Angularidades** podcast.
 
-## Links
+## Podcast Channels
 
-- [YouTube](https://www.youtube.com/@angularidades)
-- [Spotify](creators.spotify.com/pod/show/angularidades)
+[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@angularidades)
+[![Spotify](https://img.shields.io/badge/Spotify-%231ED760.svg?style=for-the-badge&logo=Spotify&logoColor=white)](https://creators.spotify.com/pod/show/angularidades)
+
+### Latest Episodes
+
+<!-- YOUTUBE:START -->
+
+<a href="https://www.youtube.com/watch?v=XMMzoqvEvOE" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/XMMzoqvEvOE/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
+<a href="https://www.youtube.com/watch?v=bE6Ip5NNbck" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/bE6Ip5NNbck/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
+<a href="https://www.youtube.com/watch?v=wIaThYaieUA" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/wIaThYaieUA/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
+<a href="https://www.youtube.com/watch?v=RNloEbj6BDU" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/RNloEbj6BDU/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
+<a href="https://www.youtube.com/watch?v=YrY3tgbkJkY" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/YrY3tgbkJkY/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
+<a href="https://www.youtube.com/watch?v=Dt5rw1UCh5Q" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/Dt5rw1UCh5Q/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
+<a href="https://www.youtube.com/watch?v=3AD-vIqvCgs" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/3AD-vIqvCgs/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
+<a href="https://www.youtube.com/watch?v=xzaXVSrzuTs" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/xzaXVSrzuTs/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
+<a href="https://www.youtube.com/watch?v=ub69Np2ya-c" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/ub69Np2ya-c/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
+<a href="https://www.youtube.com/watch?v=ThK58diiUyA" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/ThK58diiUyA/mqdefault.jpg" alt="Angularidades Episode"></a>
+
+<!-- YOUTUBE:END -->
 
 ## Features
 
