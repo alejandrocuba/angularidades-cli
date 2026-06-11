@@ -70,8 +70,18 @@ async function getYouTubeVideos() {
     console.log('YouTube page fetched successfully. HTML length:', html.length);
 
     // Check if consent redirect happened
+    const urlRegex = /https?:\/\/[^\s"'<>]+/gi;
+    const extractedUrls = html.match(urlRegex) || [];
+    const hasConsentHostUrl = extractedUrls.some((candidate) => {
+      try {
+        return new URL(candidate).hostname === 'consent.youtube.com';
+      } catch {
+        return false;
+      }
+    });
+
     if (
-      html.includes('consent.youtube.com') ||
+      hasConsentHostUrl ||
       html.includes('before_you_redirect') ||
       html.includes('consent-bump')
     ) {
@@ -79,7 +89,7 @@ async function getYouTubeVideos() {
     }
 
     // Robust balanced-braces script extractor for ytInitialData
-    const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script>/gi;
+    const scriptRegex = /<script\b[^>]*>([\s\S]*?)<\/script\s*[^>]*>/gi;
     let scriptMatch;
     let ytInitialDataStr = null;
 
