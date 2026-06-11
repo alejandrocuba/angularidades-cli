@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   update-readme:
@@ -33,10 +34,22 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Commit and Push changes
+      - name: Create Pull Request
+        id: cpr
         if: steps.git-check.outputs.changed == 'true'
-        uses: test-room-7/action-update-file@v2
+        uses: peter-evans/create-pull-request@v6
         with:
-          file-path: README.md
-          commit-msg: 'docs: update latest youtube episodes in README.md [skip ci]'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'docs: update latest youtube episodes in README.md'
+          title: 'docs: update latest youtube episodes'
+          body: 'Automated update of YouTube episodes.'
+          branch: 'update-youtube-episodes'
+          delete-branch: true
+
+      - name: Enable Pull Request Auto-Merge
+        if: steps.cpr.outputs.pull-request-operation == 'created'
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+          merge-method: squash
