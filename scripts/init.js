@@ -48,45 +48,65 @@ async function main() {
     }
   }
 
+  let shouldInstall = false;
+  let isRerunning = false;
+
   if (alreadySetup) {
-    p.log.warn('Skipping link process: the command "angularidades" is already available.');
+    const confirmInstall = await p.confirm({
+      message:
+        'The command "angularidades" is already available. Would you like to re-link/update it globally for this project?',
+      initialValue: true
+    });
+    if (!p.isCancel(confirmInstall) && confirmInstall) {
+      shouldInstall = true;
+      isRerunning = true;
+    }
   } else {
     const confirmInstall = await p.confirm({
       message: 'Would you like to install the "angularidades" CLI globally?',
       initialValue: true
     });
+    if (!p.isCancel(confirmInstall) && confirmInstall) {
+      shouldInstall = true;
+    }
+  }
 
-    if (p.isCancel(confirmInstall) || !confirmInstall) {
-      p.log.info(
-        'Skipping global CLI installation. (You can run commands locally using "pnpm run youtube:<command>")'
-      );
-    } else {
-      const s = p.spinner();
-      s.start('Linking CLI command "angularidades" globally...');
+  if (!shouldInstall) {
+    p.log.info(
+      'Skipping global CLI installation. (You can run commands locally using "pnpm run youtube:<command>")'
+    );
+  } else {
+    const s = p.spinner();
+    s.start(
+      isRerunning
+        ? 'Re-linking CLI command "angularidades" globally...'
+        : 'Linking CLI command "angularidades" globally...'
+    );
+    try {
+      // Find global bin directory for pnpm
+      let pnpmBinDir = '';
       try {
-        // Find global bin directory for pnpm
-        let pnpmBinDir = '';
-        try {
-          pnpmBinDir = execSync('pnpm config get global-bin-dir', { encoding: 'utf8' }).trim();
-        } catch {
-          pnpmBinDir = '';
-        }
-
-        if (!pnpmBinDir || pnpmBinDir === 'undefined') {
-          pnpmBinDir = path.join(os.homedir(), 'Library/pnpm/bin');
-        }
-
-        fs.mkdirSync(pnpmBinDir, { recursive: true });
-
-        // Run pnpm add -g .
-        execSync('pnpm add -g . --silent', { stdio: 'ignore' });
-        s.stop('CLI command linked successfully');
-      } catch (error) {
-        s.stop('Failed to link CLI command');
-        p.log.error(`Error linking CLI command: ${error.message}`);
-        p.log.info('Tip: Try running "pnpm setup" and then "source ~/.zshrc"');
-        process.exit(1);
+        pnpmBinDir = execSync('pnpm config get global-bin-dir', { encoding: 'utf8' }).trim();
+      } catch {
+        pnpmBinDir = '';
       }
+
+      if (!pnpmBinDir || pnpmBinDir === 'undefined') {
+        pnpmBinDir = path.join(os.homedir(), 'Library/pnpm/bin');
+      }
+
+      fs.mkdirSync(pnpmBinDir, { recursive: true });
+
+      // Run pnpm add -g .
+      execSync('pnpm add -g . --silent', { stdio: 'ignore' });
+      s.stop(
+        isRerunning ? 'CLI command re-linked successfully' : 'CLI command linked successfully'
+      );
+    } catch (error) {
+      s.stop('Failed to link CLI command');
+      p.log.error(`Error linking CLI command: ${error.message}`);
+      p.log.info('Tip: Try running "pnpm setup" and then "source ~/.zshrc"');
+      process.exit(1);
     }
   }
 
