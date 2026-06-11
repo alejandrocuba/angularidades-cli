@@ -25,6 +25,9 @@ jobs:
       - name: Run Update Script
         run: node .github/scripts/update-youtube-thumbnails.js
 
+      - name: Format README.md with Prettier
+        run: npx prettier@3.8.3 --write README.md
+
       - name: Check for changes
         id: git-check
         run: |
@@ -45,6 +48,7 @@ jobs:
           body: 'Automated update of YouTube episodes.'
           branch: 'update-youtube-episodes'
           delete-branch: true
+          sign-commits: true
 
       - name: Enable Pull Request Auto-Merge
         if: steps.cpr.outputs.pull-request-operation == 'created'
