@@ -1,6 +1,6 @@
-# Angularidades Ops CLI
+# Angularidades CLI
 
-[![CI](https://github.com/alejandrocuba/angularidades-ops/actions/workflows/ci.yml/badge.svg)](https://github.com/alejandrocuba/angularidades-ops/actions/workflows/ci.yml)
+[![CI](https://github.com/alejandrocuba/angularidades-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/alejandrocuba/angularidades-cli/actions/workflows/ci.yml)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Commander.js](https://img.shields.io/badge/Commander.js-v15-black)](https://github.com/tj/commander.js)
 [![Vitest](https://img.shields.io/badge/Vitest-v4-839a03?logo=vitest&logoColor=white)](https://vitest.dev)
@@ -33,7 +33,7 @@ The CLI supporting the planning, post-production and publishing workflow of the 
 
 ## Installation & Setup
 
-To get started with the Angularidades Ops pipeline, simply install the dependencies:
+To get started with the Angularidades CLI pipeline, simply install the dependencies:
 
 ```bash
 pnpm install
