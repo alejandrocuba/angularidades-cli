@@ -58,6 +58,7 @@ jobs:
           body: 'Automated update of YouTube episodes.'
           branch: 'update-youtube-episodes'
           delete-branch: true
+          sign-commits: true
 
       - name: Enable Pull Request Auto-Merge
         if: steps.cpr.outputs.pull-request-operation == 'created'

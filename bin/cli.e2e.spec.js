@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { execSync } from 'child_process';
+import { execFileSync } from 'child_process';
 import path from 'path';
 import fs from 'fs';
 import os from 'os';
@@ -10,7 +10,7 @@ describe('CLI E2E Tests', () => {
   // Helper to run CLI command synchronously
   const runCLI = (tempDir, args, options = {}) => {
     try {
-      const stdout = execSync(`node ${CLI_PATH} ${args.join(' ')}`, {
+      const stdout = execFileSync('node', [CLI_PATH, ...args], {
         env: {
           ...process.env,
           ANGULARIDADES_EPISODES_DIR: tempDir,
