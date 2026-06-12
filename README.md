@@ -32,14 +32,16 @@ The CLI supporting the planning, post-production and publishing workflow of the 
 
 <!-- YOUTUBE:END -->
 
+<a href="https://www.youtube.com/@angularidades" target="_blank" rel="noopener noreferrer">See more Angularidades episodes on YouTube »</a>
+
 ## Features
 
-- 💬 **Interactive Fallback Menu:** Running `angularidades` without arguments opens an elegant dashboard guide.
-- 🆕 **Scaffolding:** Create folder structures and fetch initial captions (`angularidades scaffold [episode]`, aliases: `new`, `create`).
-- 📦 **Publishing:** Sync metadata and transcripts to YouTube (`angularidades publish [episode]`, alias: `sync`).
-- 🔍 **Dry Run:** Safely test configuration and preview YouTube payloads (`angularidades publish [episode] --dry-run` or `-d`).
-- 🛠️ **Diagnostics:** Run connectivity, credentials, and alignment checks (`angularidades doctor [episode]`, aliases: `check`, `validate`).
-- ⏱️ **Latest Resolver:** Use `latest` as the episode parameter (e.g. `latest` resolves to the most recently created episode folder automatically).
+- **Interactive Fallback Menu:** Running `angularidades` without arguments opens an elegant dashboard guide.
+- **Scaffolding:** Create folder structures and fetch initial captions (`angularidades scaffold [episode]`, aliases: `new`, `create`).
+- **Publishing:** Sync metadata and transcripts to YouTube (`angularidades publish [episode]`, alias: `sync`).
+- **Dry Run:** Safely test configuration and preview YouTube payloads (`angularidades publish [episode] --dry-run` or `-d`).
+- **Diagnostics:** Run connectivity, credentials, and alignment checks (`angularidades doctor [episode]`, aliases: `check`, `validate`).
+- **Latest Resolver:** Use `latest` as the episode parameter (e.g. `latest` resolves to the most recently created episode folder automatically).
 
 ## Project Structure
 
