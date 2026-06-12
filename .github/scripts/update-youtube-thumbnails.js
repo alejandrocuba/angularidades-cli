@@ -164,9 +164,9 @@ async function main() {
 
     readmeContent =
       readmeContent.substring(0, youtubeStartIndex + youtubeStartTag.length) +
-      '\n' +
+      '\n\n' +
       youtubeHTML +
-      '\n' +
+      '\n\n' +
       readmeContent.substring(youtubeEndIndex);
 
     fs.writeFileSync(README_PATH, readmeContent, 'utf8');
