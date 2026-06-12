@@ -83,10 +83,10 @@ async function runInteractiveMenu(program) {
   const selected = await p.select({
     message: 'What would you like to do?',
     options: [
-      { value: 'publish', label: 'Publish Episode' },
+      { value: 'scaffold', label: 'Create New Episode' },
       { value: 'dry-run', label: 'Dry Run Publish' },
-      { value: 'doctor', label: 'Doctor Check' },
-      { value: 'scaffold', label: 'Create New Episode' }
+      { value: 'publish', label: 'Publish Episode' },
+      { value: 'doctor', label: 'Doctor Check' }
     ]
   });
 
