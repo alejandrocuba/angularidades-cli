@@ -28,18 +28,22 @@ The CLI supporting the planning, post-production and publishing workflow of the 
 <a href="https://www.youtube.com/watch?v=3AD-vIqvCgs" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/3AD-vIqvCgs/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
 <a href="https://www.youtube.com/watch?v=xzaXVSrzuTs" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/xzaXVSrzuTs/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
 <a href="https://www.youtube.com/watch?v=ub69Np2ya-c" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/ub69Np2ya-c/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
-<a href="https://www.youtube.com/watch?v=ThK58diiUyA" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/ThK58diiUyA/mqdefault.jpg" alt="Angularidades Episode"></a>
+<a href="https://www.youtube.com/watch?v=ThK58diiUyA" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/ThK58diiUyA/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
+<a href="https://www.youtube.com/watch?v=GoPtZ9-RKCY" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/GoPtZ9-RKCY/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
+<a href="https://www.youtube.com/watch?v=doi_5ZEGwHI" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/doi_5ZEGwHI/mqdefault.jpg" alt="Angularidades Episode"></a>
 
 <!-- YOUTUBE:END -->
 
+<a href="https://www.youtube.com/@angularidades" target="_blank" rel="noopener noreferrer">See more Angularidades episodes on YouTube »</a>
+
 ## Features
 
-- 💬 **Interactive Fallback Menu:** Running `angularidades` without arguments opens an elegant dashboard guide.
-- 🆕 **Scaffolding:** Create folder structures and fetch initial captions (`angularidades scaffold [episode]`, aliases: `new`, `create`).
-- 📦 **Publishing:** Sync metadata and transcripts to YouTube (`angularidades publish [episode]`, alias: `sync`).
-- 🔍 **Dry Run:** Safely test configuration and preview YouTube payloads (`angularidades publish [episode] --dry-run` or `-d`).
-- 🛠️ **Diagnostics:** Run connectivity, credentials, and alignment checks (`angularidades doctor [episode]`, aliases: `check`, `validate`).
-- ⏱️ **Latest Resolver:** Use `latest` as the episode parameter (e.g. `latest` resolves to the most recently created episode folder automatically).
+- **Interactive Fallback Menu:** Running `angularidades` without arguments opens an elegant dashboard guide.
+- **Scaffolding:** Create folder structures and fetch initial captions (`angularidades scaffold [episode]`, aliases: `new`, `create`).
+- **Publishing:** Sync metadata and transcripts to YouTube (`angularidades publish [episode]`, alias: `sync`).
+- **Dry Run:** Safely test configuration and preview YouTube payloads (`angularidades publish [episode] --dry-run` or `-d`).
+- **Diagnostics:** Run connectivity, credentials, and alignment checks (`angularidades doctor [episode]`, aliases: `check`, `validate`).
+- **Latest Resolver:** Use `latest` as the episode parameter (e.g. `latest` resolves to the most recently created episode folder automatically).
 
 ## Project Structure
 

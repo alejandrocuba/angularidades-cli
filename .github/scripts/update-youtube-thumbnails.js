@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 // Configuration
 const YOUTUBE_URL = 'https://www.youtube.com/@angularidades/videos';
 const README_PATH = path.join(__dirname, '../../README.md');
-const MAX_EPISODES = 10; // Number of episode thumbnails to display in README.md
+const MAX_EPISODES = 12; // Number of episode thumbnails to display in README.md
 
 // Helper to make HTTPS GET requests
 function fetch(url) {
@@ -164,9 +164,9 @@ async function main() {
 
     readmeContent =
       readmeContent.substring(0, youtubeStartIndex + youtubeStartTag.length) +
-      '\n' +
+      '\n\n' +
       youtubeHTML +
-      '\n' +
+      '\n\n' +
       readmeContent.substring(youtubeEndIndex);
 
     fs.writeFileSync(README_PATH, readmeContent, 'utf8');
