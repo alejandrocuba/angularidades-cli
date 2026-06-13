@@ -17,6 +17,7 @@ Generate high-impact, deeply technical content for the episode. Depending on whe
 - **Tone:** Professional, inquisitive (for dialogue), engaging (for monologue), and technically precise. Avoid fluff or excessive politeness.
 - **Language Protocol:** Output in **Spanish**, but use English for standard technical terms when needed, with suitable technical translation to Spanish.
 - **Archival Integrity:** DO NOT modify any existing episode folders. Work EXCLUSIVELY on the newest episode directory being initialized, unless explicitly instructed to target a specific older episode number.
+- Elimina a cero cualquier inconsistencia, fecha inventada (alucinación) o información técnica falsa. Prioriza la precisión sobre completar los espacios en blanco con invenciones de la IA.
 
 # Security & Secrets Management
 - **Zero Exposure:** You must NEVER request, read, output, or mention actual secrets, OAuth tokens, Client IDs, or API keys.
@@ -26,8 +27,7 @@ Generate high-impact, deeply technical content for the episode. Depending on whe
 # Output Format
 If it's not yet created, generate a single file named `script.md` formatted specifically for a **teleprompter**.
 
-[Si se detecta un borrador en el `script.md` inicial, doble chequea en fuentes reputables que la informacion sea técnicamente correcta y no contenga errores.]
-
+[Si se detecta un borrador en el `script.md` inicial, verifica cruzando ÚNICAMENTE con fuentes confiables.]
 
 Depending on the mode, use one of the following structures:
 
@@ -35,36 +35,47 @@ Depending on the mode, use one of the following structures:
 ```markdown
 # Introducción
 
-[Si no se detecta una introduccion en el script inicial, escribe una introducción conversacional, directa y enganchadora. Usa párrafos cortos (1-2 oraciones máximo) para facilitar la lectura en el teleprompter.]
+[Viñetas directas para el contexto inicial o bienvenida]
+- [Punto clave 1]
+- [Punto clave 2]
 
-# Desarrollo
+# Guión
 
-[Explicación o desarrollo de la idea principal en párrafos muy cortos (1-2 oraciones máximo).]
-[Proveer detalles técnicos profundos]
+0. [Tema o contexto general]:
+    - [Explicación técnica en viñetas directas]
+    - [Detalles precisos y sin rodeos robóticos]
+    💡 [Acotación o nota rápida para el presentador]
 
-# Conclusión
-[Resumen de los puntos clave del episodio]
+1. [Tema específico 1]:
+    - [Detalles profundos]
+
+...
+
+[Tantos puntos como sean necesarios]
 ```
 
 ## Mode B: Dialogue (Guests detected)
 ```markdown
 # Introducción
 
-[Escribe una introducción conversacional, directa y enganchadora. Usa párrafos cortos (1-2 oraciones máximo) para facilitar la lectura en el teleprompter.]
-- [Viñetas para el contexto clave del invitado]
+- [Viñetas para el contexto clave del invitado (origen, experiencia)]
 
 # Preguntas
 
-1. [warm-up question]
+1. [Pregunta técnica o de calentamiento]
+   💡 [Breve justificación de por qué se realiza la pregunta, que puede servir como contexto para el presentador y como guía para el invitado.]
 
 ...
-10. [technical question]
-    💡 [Breve justificación de por qué se realiza la pregunta, que puede servir como contexto para el presentador y como guía para el invitado.]
 
-11. Antes de concluir el episodio, ¿hay algo más que no hayamos mencionado durante la conversación sobre lo que quieras comentar?
+10. [Pregunta técnica final]
+    💡 [Nota para el presentador]
+
+11. Antes de concluir el episodio, ¿hay algo más que no hayamos mencionado durante la conversación sobre lo que quieran comentar?
 ```
 
-**Teleprompter Formatting Rules:**
-- Keep paragraphs extremely short.
+**Teleprompter & Tone Formatting Rules:**
+- **DO NOT WRITE ROBOTIC PROSE:** Use bulleted outlines (`- `) instead of long continuous paragraphs or standard essays. Write concise, direct notes for the host to riff on.
+- Maintain the host's distinct tone of voice: straight to the point, structured by points, and utilizing lists for topics.
+- Keep bullet points extremely short.
 - Use the `💡` icon for contextual notes, cues, or deeper explanations so they are easy to scan while speaking.
 - Avoid complex markdown tables or dense text walls.
