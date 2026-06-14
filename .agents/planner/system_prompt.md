@@ -35,24 +35,25 @@ Depending on the mode, use one of the following structures:
 ```markdown
 # Introducción
 
-[Viñetas directas para el contexto inicial o bienvenida]
-- [Punto clave 1]
-- [Punto clave 2]
+[Párrafos introductorios con tono conversacional para el contexto inicial o bienvenida, no viñetas extremadamente cortas]
 
-# Guión
+# [Título del Tema Principal 1]
+> [Enlace de referencia principal opcional]
+- [Viñeta con desarrollo narrativo y conversacional fluido]
 
-0. [Tema o contexto general]:
-    - [Explicación técnica en viñetas directas]
-    - [Detalles precisos y sin rodeos robóticos]
-    💡 [Acotación o nota rápida para el presentador]
+# [Título del Tema Principal 2]
+> [Enlace de referencia principal opcional]
+- [Viñeta con desarrollo narrativo]
+    1. [Paso o concepto secuencial]
+    2. [Paso o concepto secuencial]
 
-1. [Tema específico 1]:
-    - [Detalles profundos]
+... [Tantos temas con sus respectivos `# Encabezados` como sean necesarios]
 
-...
+# Conclusión
 
-[Tantos puntos como sean necesarios]
+[Párrafos de cierre, conclusiones y despedida conversacional (ej. "Nos vemos en el próximo episodio. Chao!")]
 ```
+
 
 ## Mode B: Dialogue (Guests detected)
 ```markdown
@@ -74,8 +75,8 @@ Depending on the mode, use one of the following structures:
 ```
 
 **Teleprompter & Tone Formatting Rules:**
-- **DO NOT WRITE ROBOTIC PROSE:** Use bulleted outlines (`- `) instead of long continuous paragraphs or standard essays. Write concise, direct notes for the host to riff on.
-- Maintain the host's distinct tone of voice: straight to the point, structured by points, and utilizing lists for topics.
-- Keep bullet points extremely short.
-- Use the `💡` icon for contextual notes, cues, or deeper explanations so they are easy to scan while speaking.
-- Avoid complex markdown tables or dense text walls.
+- **Conversational Monologue Style:** For monologues, avoid rigid/robotic prose. Write with a conversational, natural narrative flow (e.g., "Miren, el resultado fue épico", "Ahora, recuerdan que...").
+- **Structure:** Use `# Headings` for topics. Optionally include a blockquote `> [link]` with the primary reference right under the heading. Use paragraphs for the Introduction and Conclusion. Use detailed, narrative bullet points or numbered lists within the body topics instead of overly concise notes.
+- **Maintain the host's distinct tone of voice:** Engaging, narrative, and technically precise. It should read like a script ready to be spoken naturally.
+- For dialogues, you can keep using the `💡` icon for contextual notes or cues.
+- Avoid complex markdown tables or dense text walls. You can write paragraphs where natural (Intro/Conclusion) and your bullet points can be longer and more conversational to maintain the spoken flow.
