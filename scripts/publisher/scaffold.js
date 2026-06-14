@@ -43,7 +43,7 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
       placeholder: nextEpisodeProposed.replace(/^0+/, ''),
       initialValue: nextEpisodeProposed.replace(/^0+/, ''),
       validate(value) {
-        if (!/^\d+$/.test(value)) return 'Please enter a valid number.';
+        if (!value || !/^\d+$/.test(value)) return 'Please enter a valid number.';
         const num = parseInt(value);
         const paddedValue = value.toString().padStart(4, '0');
         if (folders.includes(num)) return `Episode ${paddedValue} already exists.`;
@@ -78,7 +78,7 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
     message: 'Enter the episode topic (for the title):',
     placeholder: 'Episode topic',
     validate(value) {
-      if (value.length < 5) return 'Topic is too short.';
+      if (!value || value.trim().length < 5) return 'Topic is too short.';
     }
   });
 
@@ -90,10 +90,10 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
   // Guest Collection Loop
   const guests = [];
   let currentGuest = await p.text({
-    message: 'Enter the first guest name:',
+    message: 'If there are guests, enter the first guest name:',
     placeholder: 'Guest name',
     validate(value) {
-      if (value.length < 2) return 'Guest name is too short.';
+      if (value && value.trim().length < 2) return 'Guest name is too short.';
     }
   });
 
@@ -101,17 +101,20 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
     p.cancel('Operation cancelled.');
     process.exit(0);
   }
-  guests.push(currentGuest);
 
-  while (true) {
-    let nextGuest = await p.text({
-      message: 'Enter another guest name (or press Enter to finish):',
-      placeholder: 'Next guest...'
-    });
+  if (currentGuest && currentGuest.trim() !== '') {
+    guests.push(currentGuest.trim());
 
-    if (p.isCancel(nextGuest)) break;
-    if (!nextGuest || nextGuest.trim() === '') break;
-    guests.push(nextGuest);
+    while (true) {
+      let nextGuest = await p.text({
+        message: 'Enter another guest name (or press Enter to finish):',
+        placeholder: 'Next guest...'
+      });
+
+      if (p.isCancel(nextGuest)) break;
+      if (!nextGuest || nextGuest.trim() === '') break;
+      guests.push(nextGuest.trim());
+    }
   }
 
   const isVideoUploaded = await p.confirm({
@@ -153,7 +156,8 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
     placeholder: today,
     initialValue: today,
     validate(value) {
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return 'Please enter a date in YYYY-MM-DD format.';
+      if (!value || !/^\d{4}-\d{2}-\d{2}$/.test(value))
+        return 'Please enter a date in YYYY-MM-DD format.';
     }
   });
 
@@ -173,9 +177,11 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
   s.stop('Directories and metadata ready', symbols.S_SUCCESS);
 
   // Format titles
-  const guestList = guests.join(', ');
   const displayNum = parseInt(episodeNumber);
-  const titleEs = `${titleTopic} con ${guestList} - Angularidades #${displayNum}`;
+  const titleEs =
+    guests.length > 0
+      ? `${titleTopic} con ${guests.join(', ')} - Angularidades #${displayNum}`
+      : `${titleTopic} - Angularidades #${displayNum}`;
 
   // Create metadata.json
   const metadata = {
