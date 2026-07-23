@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import * as p from '@clack/prompts';
-import { colors, printHeader } from './logger.js';
+import { colors, printHeader, logAuthHelpNote, isOAuthError } from './logger.js';
 import { resolveConfig } from './config.js';
 import { initYouTube, downloadExistingCaptions } from './youtube-api.js';
 
@@ -218,10 +218,14 @@ async function scaffoldEpisode(predefinedEpisodeNumber) {
         p.log.warn(
           'Scaffolding created, but YouTube captions skipped (Missing OAuth credentials).'
         );
+        logAuthHelpNote(p);
       }
     } catch (error) {
       s.stop('YouTube error');
       p.log.error(`Scaffolding created, but failed to fetch captions: ${error.message}`);
+      if (isOAuthError(error)) {
+        logAuthHelpNote(p);
+      }
     }
   } else {
     p.log.success('Scaffolding created for planning phase.');

@@ -52,3 +52,49 @@ export function printHeader(title) {
   console.log(`║${' '.repeat(padding)}${title}${' '.repeat(padding + extraPadding)}║`);
   console.log(`╚════════════════════════════════════════════════════╝${colors.reset}\n`);
 }
+
+export function isOAuthError(error) {
+  if (!error) return false;
+  const msg = typeof error === 'string' ? error : error.message || String(error);
+  const lower = msg.toLowerCase();
+  return (
+    lower.includes('deleted_client') ||
+    lower.includes('invalid_grant') ||
+    lower.includes('invalid_client') ||
+    lower.includes('unauthorized') ||
+    lower.includes('oauth')
+  );
+}
+
+export function logAuthHelpNote(prompts = null) {
+  if (logLevel.silent) return;
+  const noteTitle = 'YouTube OAuth Credentials Troubleshooting';
+  const noteBody = [
+    'To resolve OAuth credential errors (deleted_client, invalid_grant, invalid_client):',
+    '',
+    `1. ${colors.bold}Google Cloud Console Setup${colors.reset}:`,
+    '   • Ensure YouTube Data API v3 is enabled in your Google Cloud project.',
+    '   • Under OAuth consent screen, add your account email to "Test users".',
+    '   • Go to Credentials > Create Credentials > OAuth client ID > Desktop App.',
+    '',
+    `2. ${colors.bold}Update local .env file${colors.reset}:`,
+    '   • Set YOUTUBE_CLIENT_ID="<your-client-id>"',
+    '   • Set YOUTUBE_CLIENT_SECRET="<your-client-secret>"',
+    '',
+    `3. ${colors.bold}Obtain a new Refresh Token${colors.reset}:`,
+    `   • Run: ${colors.cyan}node scripts/auth-helper.js${colors.reset}`,
+    '   • Follow the login flow and copy your new YOUTUBE_REFRESH_TOKEN into .env.'
+  ].join('\n');
+
+  if (prompts && typeof prompts.note === 'function') {
+    prompts.note(noteBody, noteTitle);
+  } else {
+    console.log(
+      `\n${colors.cyan}${colors.bold}── ${noteTitle} ──────────────────────────────────────────${colors.reset}`
+    );
+    console.log(noteBody);
+    console.log(
+      `${colors.cyan}${colors.bold}───────────────────────────────────────────────────────────────────────────${colors.reset}\n`
+    );
+  }
+}
