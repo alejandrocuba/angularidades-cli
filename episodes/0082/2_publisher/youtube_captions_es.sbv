@@ -1,0 +1,2303 @@
+0:00:03.929,0:00:05.949
+[música]
+
+0:00:07.080,0:00:14.440
+Raúl, pues tenemos estas API históricas
+
+0:00:10.519,0:00:16.080
+que ponen frente a frente la manera de
+
+0:00:14.440,0:00:19.119
+desarrollar formularios en Angular
+
+0:00:16.080,0:00:22.400
+utilizando el Template-Driven Forms
+
+0:00:19.119,0:00:25.279
+versus los formularios que son logrados
+
+0:00:22.400,0:00:28.400
+a partir de la sincronización con todo
+
+0:00:25.279,0:00:30.240
+el ecosistema anterior que teníamos con
+
+0:00:28.400,0:00:32.559
+RxJS.
+
+0:00:30.240,0:00:35.559
+Y además ya está ya completamente
+
+0:00:32.559,0:00:35.559
+estable
+
+0:00:36.840,0:00:42.360
+gracias a Signals y hace un mes
+
+0:00:39.719,0:00:47.640
+aproximadamente pudiste lanzar la
+
+0:00:42.360,0:00:51.160
+versión 1.0 de GolemUI que recién acaba
+
+0:00:47.640,0:00:55.120
+de inaugurar el primer minor con la 1.1.
+
+0:00:51.160,0:00:57.760
+No solamente felicitarte, sino estar
+
+0:00:55.120,0:01:01.280
+prácticamente preguntándonos
+
+0:00:57.760,0:01:04.360
+qué es lo que está detrás de la
+
+0:01:01.280,0:01:06.200
+motivación relacionada con introducir
+
+0:01:04.360,0:01:08.720
+una nueva manera de gestionar
+
+0:01:06.200,0:01:11.040
+formularios, no solamente para Angular,
+
+0:01:08.720,0:01:13.240
+sino para otros frameworks basados en
+
+0:01:11.040,0:01:15.280
+JavaScript.
+
+0:01:13.240,0:01:16.880
+A ver, la motivación, todo esto viene de
+
+0:01:15.280,0:01:19.320
+un proyecto en el que yo estuve
+
+0:01:16.880,0:01:21.560
+trabajando 10 años. Ahí nosotros eh
+
+0:01:19.320,0:01:23.240
+teníamos una base de código de
+
+0:01:21.560,0:01:26.040
+formularios supergre que la
+
+0:01:23.240,0:01:28.280
+gestionábamos toda con TypeScript que
+
+0:01:26.040,0:01:30.079
+convertía JSON, ¿vale? Entonces
+
+0:01:28.280,0:01:32.960
+nosotros tratábamos al final los
+
+0:01:30.079,0:01:36.560
+formularios como datos. Eh, la forma en
+
+0:01:32.960,0:01:38.799
+que hacíamos esto nos parecía que era
+
+0:01:36.560,0:01:41.240
+una forma bastante eficiente por un
+
+0:01:38.799,0:01:42.920
+lado. Luego tenía las ventajas de
+
+0:01:41.240,0:01:44.960
+portabilidad
+
+0:01:42.920,0:01:47.360
+que puede servir ese formulario JSON
+
+0:01:44.960,0:01:50.040
+desde el servidor, pero también lo
+
+0:01:47.360,0:01:53.280
+puedes guardar en GitHub o puedes hacer
+
+0:01:50.040,0:01:55.719
+diffs, puedes hacer muchas cosas eh que
+
+0:01:53.280,0:01:58.320
+con código igual no puedes hacer. Por
+
+0:01:55.719,0:02:01.240
+otro lado, el tema es que este proyecto
+
+0:01:58.320,0:02:04.240
+era pues privado y nosotros quisimos
+
+0:02:01.240,0:02:07.439
+sacarlo open source, pero no nos dejaron
+
+0:02:04.240,0:02:10.119
+en su momento. Luego al cabo de
+
+0:02:07.439,0:02:12.599
+los años pues ya sabes, ¿no? Los
+
+0:02:10.119,0:02:15.879
+proyectos crecen, entran requerimientos
+
+0:02:12.599,0:02:17.480
+un poco especiales y a nosotros eso
+
+0:02:15.879,0:02:19.560
+también nos afectó y llegó un momento
+
+0:02:17.480,0:02:22.800
+que el proyecto no era viable tampoco de
+
+0:02:19.560,0:02:24.840
+sacar open source por la cantidad de
+
+0:02:22.800,0:02:27.200
+bueno, nuances, no sé cómo decirlo, ¿no?
+
+0:02:24.840,0:02:29.560
+de particularidades y peculiaridades que
+
+0:02:27.200,0:02:32.319
+tenía el proyecto, que eran cosas como
+
+0:02:29.560,0:02:34.000
+muy personales de ese cliente, ¿vale?
+
+0:02:32.319,0:02:35.879
+Pero nosotros, bueno, siempre nos
+
+0:02:34.000,0:02:38.160
+quedamos con la idea esta. El año
+
+0:02:35.879,0:02:39.920
+pasado, uno de los compañeros con los
+
+0:02:38.160,0:02:41.879
+que trabajaba en este proyecto, que ya
+
+0:02:39.920,0:02:43.280
+lo dejó él hace años, él estuvo, yo
+
+0:02:41.879,0:02:45.400
+estuve 10 años en este proyecto, él
+
+0:02:43.280,0:02:46.800
+estuvo un seis, me contactó y me dijo,
+
+0:02:45.400,0:02:48.599
+"Oye, mira, he hecho esto, es un
+
+0:02:46.800,0:02:49.879
+prototipo,
+
+0:02:48.599,0:02:52.159
+es parecido a lo que habíamos hecho
+
+0:02:49.879,0:02:54.040
+allí, pero bien, sin todos los
+
+0:02:52.159,0:02:56.080
+particularidades y peculiaridades que
+
+0:02:54.040,0:02:57.640
+que quería el cliente, que para que te
+
+0:02:56.080,0:03:00.400
+hagas una idea, peculiaridades que
+
+0:02:57.640,0:03:02.640
+tenían, pues por requerimientos de
+
+0:03:00.400,0:03:04.200
+negocio, por ejemplo, había algunos
+
+0:03:02.640,0:03:06.720
+radio groups pues que una opción del
+
+0:03:04.200,0:03:09.799
+radio group podía tener dos valores,
+
+0:03:06.720,0:03:11.200
+¿vale? Ese tipo de cosas que son muy
+
+0:03:09.799,0:03:12.280
+particulares del de ese
+
+0:03:11.200,0:03:14.920
+y no me digas que tenía que ser
+
+0:03:12.280,0:03:16.599
+compatible con pantallas de 640 por 480
+
+0:03:14.920,0:03:18.440
+o compatible con Internet Explorer 6.
+
+0:03:16.599,0:03:20.680
+Bueno, nosotros nosotros le dimos
+
+0:03:18.440,0:03:23.560
+soporte de Explorer 11. Luego llegó un
+
+0:03:20.680,0:03:25.799
+momento que que cuando Microsoft mató
+
+0:03:23.560,0:03:28.599
+Explorer 11, nosotros le quitamos el
+
+0:03:25.799,0:03:30.080
+soporte y fue todo un alivio porque
+
+0:03:28.599,0:03:34.400
+tuvimos muchísimos problemas de
+
+0:03:30.080,0:03:37.560
+rendimiento en Internet Explorer 11 y eso
+
+0:03:34.400,0:03:39.319
+eh en contrapartida fue un beneficio
+
+0:03:37.560,0:03:40.760
+porque encontramos maneras de hacer muy
+
+0:03:39.319,0:03:43.560
+óptimos los formularios. Entonces en
+
+0:03:40.760,0:03:45.879
+Chrome funcionaban increíblemente rápido
+
+0:03:43.560,0:03:48.000
+en Chrome y en Firefox y en Internet Explorer 11
+
+0:03:45.879,0:03:50.319
+eran usables, que no es poca cosa.
+
+0:03:48.000,0:03:53.159
+¿Vale? Entonces, bueno, la historia es
+
+0:03:50.319,0:03:55.799
+que este chico me enseñó el prototipo
+
+0:03:53.159,0:03:57.120
+que había hecho y dije, "Esto está
+
+0:03:55.799,0:03:58.519
+genial." Es lo que siempre habíamos
+
+0:03:57.120,0:04:01.159
+hablado de que queríamos hacer open
+
+0:03:58.519,0:04:04.599
+source. Y entonces me uní al proyecto
+
+0:04:01.159,0:04:07.519
+pues en junio más o menos del año pasado
+
+0:04:04.599,0:04:09.200
+y estuvimos trabajando en el proyecto
+
+0:04:07.519,0:04:11.640
+este hasta que lo hemos sacado ahora. Yo
+
+0:04:09.200,0:04:14.360
+estuve, bueno, trabajando los lo típico,
+
+0:04:11.640,0:04:16.840
+fines de semana, después del trabajo,
+
+0:04:14.360,0:04:19.639
+etcétera, hasta febrero. Yo en febrero
+
+0:04:16.840,0:04:22.479
+dejé el proyecto porque la empresa, esta
+
+0:04:19.639,0:04:25.960
+startup se tuvo un exit, se vendió y
+
+0:04:22.479,0:04:28.919
+bueno, eh eso, el exit fue en septiembre
+
+0:04:25.960,0:04:30.320
+y nada, restindieron mi contrato en en
+
+0:04:28.919,0:04:32.120
+febrero. Entonces, yo desde febrero
+
+0:04:30.320,0:04:33.800
+estoy full time con GolemUI y muy
+
+0:04:32.120,0:04:35.280
+contento porque es una cosa que siempre
+
+0:04:33.800,0:04:38.360
+había querido hacer. Ahora mismo tengo
+
+0:04:35.280,0:04:40.360
+el tiempo y tengo la capacidad de poder
+
+0:04:38.360,0:04:42.720
+estar un tiempo full time trabajando en
+
+0:04:40.360,0:04:44.600
+esto y es lo que quiero hacer, así que
+
+0:04:42.720,0:04:46.880
+estoy muy contento.
+
+0:04:44.600,0:04:48.720
+Espectacular. Y bueno, para las personas
+
+0:04:46.880,0:04:50.120
+que no te conozcan todavía, porque no
+
+0:04:48.720,0:04:51.840
+hayan visto alguno de los episodios que
+
+0:04:50.120,0:04:53.960
+hemos grabado generalmente sobre un
+
+0:04:51.840,0:04:56.880
+testing, sobre CCS,
+
+0:04:53.960,0:04:59.080
+eres de Barcelona, arquitecto de
+
+0:04:56.880,0:05:01.520
+software, también eres un ávido lector
+
+0:04:59.080,0:05:04.320
+de cómics, según tengo entendido, eh
+
+0:05:01.520,0:05:06.039
+baterista, juegas ajedrez y bueno, otros
+
+0:05:04.320,0:05:07.520
+juegos de mesa adicionales y tengo
+
+0:05:06.039,0:05:09.880
+entendido que te encanta el fútbol y que
+
+0:05:07.520,0:05:10.840
+debes estar disfrutando las noticias
+
+0:05:09.880,0:05:12.919
+recientes.
+
+0:05:10.840,0:05:15.320
+Sí.
+
+0:05:12.919,0:05:18.120
+Y además tiene, bueno, la distinción
+
+0:05:15.320,0:05:20.160
+como Google developer expert en la
+
+0:05:18.120,0:05:22.199
+categoría de Angular, un reconocimiento
+
+0:05:20.160,0:05:24.960
+que ofrece Google a esas personas que
+
+0:05:22.199,0:05:27.080
+ejercen generalmente como puente entre
+
+0:05:24.960,0:05:30.919
+la comunidad de desarrollo y el equipo
+
+0:05:27.080,0:05:33.000
+central. y comenzaste tu carrera
+
+0:05:30.919,0:05:37.400
+profesional, según me habías contado
+
+0:05:33.000,0:05:41.280
+hace muchos años con el Action Script y
+
+0:05:37.400,0:05:43.840
+además bueno de Byfault eres cofundador
+
+0:05:41.280,0:05:46.240
+de varios otros emprendimientos y hoy en
+
+0:05:43.840,0:05:49.960
+día estás involucrado full time con todo
+
+0:05:46.240,0:05:52.479
+esto de GolemUI. Sí, de hecho la eh
+
+0:05:49.960,0:05:56.000
+ayer es bastante gracioso porque ayer
+
+0:05:52.479,0:05:58.160
+cerré la empresa y abrimos GolemUI
+
+0:05:56.000,0:05:59.600
+porque hemos montado una empresa para
+
+0:05:58.160,0:06:00.720
+GolemUI.
+
+0:05:59.600,0:06:03.080
+Felicidades.
+
+0:06:00.720,0:06:05.680
+Eh, no sabemos exactamente por qué, pero
+
+0:06:03.080,0:06:08.360
+bueno, en caso de que de que el proyecto
+
+0:06:05.680,0:06:10.759
+tire para adelante y podamos hacer de
+
+0:06:08.360,0:06:12.759
+esto un proyecto sostenible, pues hemos
+
+0:06:10.759,0:06:14.919
+fundado una empresa y y ya.
+
+0:06:12.759,0:06:16.440
+Y el nombre de la empresa es homónimo
+
+0:06:14.919,0:06:17.639
+con el nombre de proyecto.
+
+0:06:16.440,0:06:20.840
+Sí, sí.
+
+0:06:17.639,0:06:21.800
+Genial. S. Qué buena noticia esa. Qué
+
+0:06:20.840,0:06:23.400
+primicia.
+
+0:06:21.800,0:06:24.919
+Sí. [risas]
+
+0:06:23.400,0:06:27.759
+Y
+
+0:06:24.919,0:06:30.120
+eh bueno, nada, eh no sé, eh ya te digo,
+
+0:06:27.759,0:06:34.080
+contento, contento con esto.
+
+0:06:30.120,0:06:36.479
+S. Bueno, ¿cuáles son los widgets que
+
+0:06:34.080,0:06:38.759
+están actualmente disponibles en la
+
+0:06:36.479,0:06:40.919
+colección que ofrece Golden UI, que
+
+0:06:38.759,0:06:43.560
+hasta el momento les han resultado a
+
+0:06:40.919,0:06:45.520
+ustedes ser los más problemáticos de
+
+0:06:43.560,0:06:48.120
+desarrollar, tanto como la
+
+0:06:45.520,0:06:49.960
+refactorización que han tenido que hacer
+
+0:06:48.120,0:06:51.840
+para poder desadaptarlo de los
+
+0:06:49.960,0:06:53.720
+requerimientos originales del proyecto?
+
+0:06:51.840,0:06:55.599
+Como algunos de los componentes que han
+
+0:06:53.720,0:06:58.280
+lanzado en la 1.1. [carraspeo]
+
+0:06:55.599,0:07:00.639
+A ver, eh, hay que decir que nosotros de
+
+0:06:58.280,0:07:03.199
+la librería esta que hicimos para para
+
+0:07:00.639,0:07:05.360
+este cliente, de eso no hay nada, no
+
+0:07:03.199,0:07:08.599
+tenemos nada, ni una ni una línea de
+
+0:07:05.360,0:07:11.879
+código eh en esta en este proyecto,
+
+0:07:08.599,0:07:16.599
+porque lo que te digo era tan particular
+
+0:07:11.879,0:07:19.360
+y tan estaba tan atado a a la a ese
+
+0:07:16.599,0:07:21.680
+aplicativo que era imposible sacarlo ya.
+
+0:07:19.360,0:07:25.080
+Y de todas maneras, eh, como también te
+
+0:07:21.680,0:07:26.599
+decía antes, no estaba ni siquiera en
+
+0:07:25.080,0:07:28.599
+nuestra
+
+0:07:26.599,0:07:32.000
+porque
+
+0:07:28.599,0:07:36.400
+por, o sea, GolemUI como funciona en el
+
+0:07:32.000,0:07:37.960
+fondo es que todo lo que tú construyes,
+
+0:07:36.400,0:07:40.440
+eh, toda la UI que tú construyes, se
+
+0:07:37.960,0:07:42.840
+basa en un JSON, ¿vale? Entonces, tú
+
+0:07:40.440,0:07:44.720
+cuando estás eh renderizando un
+
+0:07:42.840,0:07:47.199
+formulario, en realidad lo que hay por
+
+0:07:44.720,0:07:48.599
+detrás es un JSON. Entonces nosotros a
+
+0:07:47.199,0:07:51.120
+partir de ese JSON te renderizamos el
+
+0:07:48.599,0:07:53.720
+formulario. Como nadie quiere escribir
+
+0:07:51.120,0:07:56.440
+JSONs, te damos una API programática
+
+0:07:53.720,0:07:59.199
+para que tú puedas escribir esos JSONs
+
+0:07:56.440,0:08:01.440
+de una manera developer friendly. El
+
+0:07:59.199,0:08:03.840
+JSON esquema que tenemos, ese formato
+
+0:08:01.440,0:08:05.560
+de JSON es totalmente incompatible con
+
+0:08:03.840,0:08:08.319
+el que teníamos anteriormente, no se
+
+0:08:05.560,0:08:09.800
+parecen en nada. ¿Por qué? Porque uno de
+
+0:08:08.319,0:08:12.360
+los beneficios de haber estado 10 años
+
+0:08:09.800,0:08:14.120
+trabajando con con formularios JSON
+
+0:08:12.360,0:08:15.319
+basados en JSON es que hemos aprendido
+
+0:08:14.120,0:08:16.240
+muy bien cómo hacerlos. Entonces, todos
+
+0:08:15.319,0:08:18.599
+los errores que hemos hecho en el
+
+0:08:16.240,0:08:21.520
+pasado, en este ahora no los queríamos
+
+0:08:18.599,0:08:24.599
+replicar. Entonces, sobre tu pregunta
+
+0:08:21.520,0:08:27.240
+original, la inicial, el tema de los
+
+0:08:24.599,0:08:30.080
+widgets ahora mismo, bueno, sacamos la
+
+0:08:27.240,0:08:32.959
+versión la minor 11, como tú muy bien
+
+0:08:30.080,0:08:34.560
+has dicho, donde hemos metido, creo que
+
+0:08:32.959,0:08:36.919
+eran 10 componentes nuevos, con lo cual
+
+0:08:34.560,0:08:39.839
+ahora tenemos 38,
+
+0:08:36.919,0:08:41.880
+¿vale? todos los componentes que son de
+
+0:08:39.839,0:08:44.880
+tipo input,
+
+0:08:41.880,0:08:47.279
+es decir, todo lo que son inputs, eh,
+
+0:08:44.880,0:08:49.800
+calendarios, currency, lo que vendría a
+
+0:08:47.279,0:08:52.640
+ser un textarea, un markdown, todos
+
+0:08:49.800,0:08:55.519
+estos son basados en Web Components y tú
+
+0:08:52.640,0:08:57.560
+los puedes utilizar sin necesidad de
+
+0:08:55.519,0:08:59.680
+utilizar GolemUI, es decir, tú te
+
+0:08:57.560,0:09:03.680
+puedes pillar instalar nuestro paquete
+
+0:08:59.680,0:09:04.680
+GolemUI/ Components y esos componentes
+
+0:09:03.680,0:09:06.160
+tú los puedes utilizar en cualquier
+
+0:09:04.680,0:09:07.560
+proyecto y no tienes por qué utilizar
+
+0:09:06.160,0:09:09.920
+Golden UI. Eso por un lado.
+
+0:09:07.560,0:09:11.320
+Claro, completamente aislado.
+
+0:09:09.920,0:09:12.320
+No tienes que estar utilizando la
+
+0:09:11.320,0:09:14.120
+biblioteca principal.
+
+0:09:12.320,0:09:15.800
+Examente. Exactamente. Exactamente. De
+
+0:09:14.120,0:09:18.120
+hecho, nosotros esos componentes les
+
+0:09:15.800,0:09:20.680
+llamamos internamente les llamamos clay,
+
+0:09:18.120,0:09:22.320
+que es arcilla, que con arcilla es con
+
+0:09:20.680,0:09:23.560
+lo que se hacen los los golems.
+
+0:09:22.320,0:09:25.519
+Internamente lo llamamos así. Igual
+
+0:09:23.560,0:09:29.000
+algún día le lo renombramos y le le
+
+0:09:25.519,0:09:31.720
+damos un poco más de empaque y más y un
+
+0:09:29.000,0:09:33.920
+y un estilo más Igual lo separamos.
+
+0:09:31.720,0:09:36.600
+Tenemos Golden UI y Clay. Bueno, no sé,
+
+0:09:33.920,0:09:38.760
+ya veremos. De momento es Golden UI.
+
+0:09:36.600,0:09:40.720
+para componentes y de todos estos
+
+0:09:38.760,0:09:43.079
+componentes, los que son los inputs,
+
+0:09:40.720,0:09:45.240
+¿vale? Estos son todos basados, como te
+
+0:09:43.079,0:09:46.959
+digo, en en Web Components. Luego hay
+
+0:09:45.240,0:09:49.839
+otros tipo de componentes que son los
+
+0:09:46.959,0:09:53.560
+layouts, que estos están como como el
+
+0:09:49.839,0:09:56.360
+renderizado del layout, como podría ser
+
+0:09:53.560,0:09:59.760
+columnas o filas o un tabs. Todos eso,
+
+0:09:56.360,0:10:03.000
+todo, todo ese renderizado nosotros lo
+
+0:09:59.760,0:10:05.480
+delegamos al framework. ¿Por qué? porque
+
+0:10:03.000,0:10:08.480
+se va a hacer de la manera que el
+
+0:10:05.480,0:10:11.120
+framework la hace más óptima.
+
+0:10:08.480,0:10:14.560
+intentamos hacer interoperabilidad entre
+
+0:10:11.120,0:10:16.320
+Angular y y le Lit para este renderizado
+
+0:10:14.560,0:10:18.399
+se hiciese desde Web Components y poder
+
+0:10:16.320,0:10:21.200
+utilizar el por ejemplo los tabs como
+
+0:10:18.399,0:10:23.320
+Web Components dentro. Pero no era
+
+0:10:21.200,0:10:24.800
+óptimo. No era óptimo porque cada uno
+
+0:10:23.320,0:10:27.519
+tiene su sistema de renderizado
+
+0:10:24.800,0:10:28.720
+diferente, se aplicaban el change
+
+0:10:27.519,0:10:30.839
+detection ocurría en momentos
+
+0:10:28.720,0:10:32.720
+diferentes. Así que al final esto lo
+
+0:10:30.839,0:10:34.279
+delegamos y todos los componentes de
+
+0:10:32.720,0:10:35.839
+layout, esos sí que no son web
+
+0:10:34.279,0:10:37.480
+components.
+
+0:10:35.839,0:10:40.560
+Entonces, de estos de los componentes
+
+0:10:37.480,0:10:42.560
+que no son Web Components,
+
+0:10:40.560,0:10:45.760
+por supuestísimo, el más difícil de
+
+0:10:42.560,0:10:47.639
+todos es el repeater, porque el repeater
+
+0:10:45.760,0:10:49.680
+al final es un componente que te
+
+0:10:47.639,0:10:53.120
+renderiza a otros componentes dentro y
+
+0:10:49.680,0:10:55.240
+te los repite. Te te crea una lista de
+
+0:10:53.120,0:10:57.240
+formularios, no no deja de ser un
+
+0:10:55.240,0:11:00.040
+formulario de formularios que tú puedes
+
+0:10:57.240,0:11:01.440
+repetir. Y además esta era, por ejemplo,
+
+0:11:00.040,0:11:03.680
+una de las limitaciones que tuvimos
+
+0:11:01.440,0:11:05.279
+nosotros en el en el proyecto anterior
+
+0:11:03.680,0:11:07.760
+era que no podíamos meter repeaters
+
+0:11:05.279,0:11:09.720
+dentro de repeaters porque hay varias
+
+0:11:07.760,0:11:13.639
+complicaciones, una es a nivel
+
+0:11:09.720,0:11:16.800
+estructural y la otra es a nivel de cómo
+
+0:11:13.639,0:11:19.639
+tratar esa data. Golen UI internamente
+
+0:11:16.800,0:11:21.519
+como trata la data es un está todo el
+
+0:11:19.639,0:11:23.639
+formulario en un state, se procesa todo
+
+0:11:21.519,0:11:25.680
+en un reder cada vez que tú haces un
+
+0:11:23.639,0:11:28.360
+cambio, eso va al reduser y se vuelve a
+
+0:11:25.680,0:11:30.760
+ejecutar y se genera toda la cadena de
+
+0:11:28.360,0:11:32.760
+cambios en la vista. ¿Vale? Eso con los
+
+0:11:30.760,0:11:35.959
+repeaters será particularmente complejo,
+
+0:11:32.760,0:11:39.200
+pero cuando hicimos Golden UI ya tuvimos
+
+0:11:35.959,0:11:41.920
+en vista que eso tenía que estar desde
+
+0:11:39.200,0:11:44.120
+el primer día y todo el tema de
+
+0:11:41.920,0:11:46.160
+renderizado para los repeaters está muy
+
+0:11:44.120,0:11:47.800
+cuidado para que puedan ser anidados.
+
+0:11:46.160,0:11:49.399
+Entonces con con Golen UI sí podemos
+
+0:11:47.800,0:11:52.800
+renderizar un repeater dentro de un
+
+0:11:49.399,0:11:54.200
+repeater y tú puedes ponerte tres,
+
+0:11:52.800,0:11:54.600
+cuatro niveles de repeaters los que
+
+0:11:54.200,0:11:56.800
+quieras,
+
+0:11:54.600,0:11:58.880
+una profundidad ilimitada. Exactamente.
+
+0:11:56.800,0:12:01.839
+Esto es superpotente porque tú,
+
+0:11:58.880,0:12:03.680
+imagínate poder poner formularios dentro
+
+0:12:01.839,0:12:05.320
+hasta el infinito, o sea, es tiene una
+
+0:12:03.680,0:12:08.360
+potencia bestial, pero por supuesto ha
+
+0:12:05.320,0:12:11.360
+sido el más complicado de de desarrollar
+
+0:12:08.360,0:12:14.199
+por legísimos, o sea, hay un tema ahí
+
+0:12:11.360,0:12:16.560
+bastante complicado para poder gestionar
+
+0:12:14.199,0:12:18.800
+eso de una manera eficiente. Y hablando
+
+0:12:16.560,0:12:21.720
+de eficiencia, con la integración que
+
+0:12:18.800,0:12:25.199
+tienen con Angular específicamente,
+
+0:12:21.720,0:12:26.880
+¿hay algún elemento que frene la curva
+
+0:12:25.199,0:12:29.600
+aprendizaje de los desarrolladores que
+
+0:12:26.880,0:12:32.079
+ya estamos ya acostumbrados a lidiar con
+
+0:12:29.600,0:12:33.360
+signals, a lidiar con una manera de
+
+0:12:32.079,0:12:35.120
+distribuir también el estado de la
+
+0:12:33.360,0:12:36.720
+aplicación utilizando
+
+0:12:35.120,0:12:38.839
+NGRX?
+
+0:12:36.720,0:12:41.600
+A ver, el sistema yo creo que es muy
+
+0:12:38.839,0:12:44.320
+sencillo de entender, o sea, tú si te
+
+0:12:41.600,0:12:46.680
+miras la API para construir tu
+
+0:12:44.320,0:12:50.079
+formulario, eh, tienes que hacer un
+
+0:12:46.680,0:12:52.480
+árbol de funciones. Son funciones que
+
+0:12:50.079,0:12:56.519
+dentro tienen children y dentro de esos
+
+0:12:52.480,0:12:59.240
+children tienes más funciones y y tú te
+
+0:12:56.519,0:13:03.079
+creas, digamos que la vista basándote en
+
+0:12:59.240,0:13:06.240
+ese árbol que te construye todo el
+
+0:13:03.079,0:13:09.839
+formulario. Luego, ¿cómo cómo puedes
+
+0:13:06.240,0:13:12.440
+mostrar cosas? Nosotros tenemos una una
+
+0:13:09.839,0:13:14.160
+de las cosas que sabíamos por nuestra
+
+0:13:12.440,0:13:16.680
+experiencia pasada que era muy
+
+0:13:14.160,0:13:19.079
+complicado era cómo generar estados
+
+0:13:16.680,0:13:22.079
+dentro de los formularios JSON, porque
+
+0:13:19.079,0:13:25.560
+un un JSON es texto plano. Entonces,
+
+0:13:22.079,0:13:28.839
+una de las cosas que hemos añadido es
+
+0:13:25.560,0:13:30.959
+que hay una propiedad states donde tú
+
+0:13:28.839,0:13:32.560
+puedes crearte estados del formulario y
+
+0:13:30.959,0:13:34.240
+estos estados del formulario son
+
+0:13:32.560,0:13:36.279
+computados con con expresiones
+
+0:13:34.240,0:13:38.480
+JavaScript muy sencillas, ¿no? en plan,
+
+0:13:36.279,0:13:40.880
+pues si register es igual igual a igual
+
+0:13:38.480,0:13:42.639
+a true, el estado register está activo.
+
+0:13:40.880,0:13:44.959
+Entonces, cuando el estado de register
+
+0:13:42.639,0:13:48.079
+está activo, luego tenemos nosotros
+
+0:13:44.959,0:13:50.360
+algunas propiedades que hacen que las
+
+0:13:48.079,0:13:53.560
+cosas sean reactivas a esos estados. Por
+
+0:13:50.360,0:13:57.680
+ejemplo, si tú en un componente de
+
+0:13:53.560,0:13:59.320
+Chebox le pones include on register,
+
+0:13:57.680,0:14:01.920
+cuando el estado de register está
+
+0:13:59.320,0:14:03.680
+activo, ese checkbox está incluido. Si
+
+0:14:01.920,0:14:05.800
+no
+
+0:14:03.680,0:14:09.040
+está en ese estado, entonces no está
+
+0:14:05.800,0:14:10.959
+incluido. Esto tú lo puedes hacer tanto
+
+0:14:09.040,0:14:12.839
+con la API JSON con como la API
+
+0:14:10.959,0:14:15.480
+Typecript. Tenemos dos APIs. La API
+
+0:14:12.839,0:14:17.360
+JSON, digamos que es la adecuada para
+
+0:14:15.480,0:14:19.920
+cuando estás devolviendo desde el
+
+0:14:17.360,0:14:21.600
+servidor tus formularios y la API
+
+0:14:19.920,0:14:23.160
+TypeScript es la que tú vas a utilizar
+
+0:14:21.600,0:14:26.560
+cuando tú estás programando manualmente
+
+0:14:23.160,0:14:29.000
+los formularios. Entonces tú si te miras
+
+0:14:26.560,0:14:30.480
+la API al final es una API TypeScript.
+
+0:14:29.000,0:14:32.600
+Tú estás escribiendo TypeScript, no
+
+0:14:30.480,0:14:34.839
+estás escribiendo Angular, no estás
+
+0:14:32.600,0:14:36.160
+escribiendo React, no estás escribiendo
+
+0:14:34.839,0:14:37.480
+nada, es una Type,
+
+0:14:36.160,0:14:39.199
+¿vale? Y eso ayuda muchísimo con la
+
+0:14:37.480,0:14:40.759
+interoperabilidad,
+
+0:14:39.199,0:14:42.480
+específicamente las personas que
+
+0:14:40.759,0:14:44.959
+trabajamos con diferentes frameworks a
+
+0:14:42.480,0:14:48.160
+la vez y no tiene que estar pasando por
+
+0:14:44.959,0:14:49.680
+una curva adicional a la hora de estar
+
+0:14:48.160,0:14:51.519
+switando uno al otro.
+
+0:14:49.680,0:14:54.560
+Exactamente. De hecho, la única
+
+0:14:51.519,0:14:57.519
+diferencia que hay entre un framework y
+
+0:14:54.560,0:14:59.759
+otro son los item renderers. Los item
+
+0:14:57.519,0:15:03.040
+renderers, que son los renders que tú
+
+0:14:59.759,0:15:06.360
+tienes, por ejemplo, en listas, esos son
+
+0:15:03.040,0:15:08.959
+custom. Si tú quieres customizar ese ese
+
+0:15:06.360,0:15:11.199
+item render, tú te puedes generar uno.
+
+0:15:08.959,0:15:14.120
+Como te lo generas, por ejemplo, en
+
+0:15:11.199,0:15:17.199
+React es una pure function. Como te lo
+
+0:15:14.120,0:15:18.720
+generas en Angular, es un component. Esa
+
+0:15:17.199,0:15:20.959
+es la única diferencia de
+
+0:15:18.720,0:15:23.000
+interoperabilidad que hay entre todos
+
+0:15:20.959,0:15:25.240
+los frameworks. De hecho, tú podrías
+
+0:15:23.000,0:15:29.880
+tener el mismo el mismo formulario
+
+0:15:25.240,0:15:32.519
+escrito en Angular React, View, JS y Lit
+
+0:15:29.880,0:15:34.199
+y vanila JS, incluso sin usar Lit. que
+
+0:15:32.519,0:15:35.680
+podrías tener los escitos en los cinco y
+
+0:15:34.199,0:15:37.079
+no cambiar ni una sola línea de código
+
+0:15:35.680,0:15:39.600
+entre los cinco.
+
+0:15:37.079,0:15:42.120
+Y esto es algo que es muy complicado de
+
+0:15:39.600,0:15:43.880
+lograr porque si tú te miras otras
+
+0:15:42.120,0:15:45.800
+librerías de este estilo, porque
+
+0:15:43.880,0:15:49.639
+nosotros no somos los únicos que hacen
+
+0:15:45.800,0:15:51.399
+forms desde JSON, hay otras librerías
+
+0:15:49.639,0:15:53.720
+que hacen esto, pero todas estas
+
+0:15:51.399,0:15:55.959
+librerías tienen sus diferencias
+
+0:15:53.720,0:15:57.639
+sintácticas cuando tienes que programar
+
+0:15:55.959,0:15:58.079
+los formularios.
+
+0:15:57.639,0:16:00.120
+Exacto.
+
+0:15:58.079,0:16:01.519
+Eh eh es, yo creo que es una de las
+
+0:16:00.120,0:16:04.480
+grandes ventajas que tenemos nosotros,
+
+0:16:01.519,0:16:07.199
+que es que que nuestra interoperabilidad
+
+0:16:04.480,0:16:10.000
+es del 99,9%.
+
+0:16:07.199,0:16:11.399
+y también la utilización de los tokens,
+
+0:16:10.000,0:16:15.199
+es decir, la manera en la que ustedes
+
+0:16:11.399,0:16:17.720
+optimizan el output de cómo está
+
+0:16:15.199,0:16:19.759
+construido esta biblioteca para que
+
+0:16:17.720,0:16:22.440
+consuma mucho menos que, por ejemplo,
+
+0:16:19.759,0:16:25.040
+cuando lo comparas con la generación de
+
+0:16:22.440,0:16:27.360
+Signal Forms. ¿Cómo es que lograron
+
+0:16:25.040,0:16:29.480
+establecer los principios que han podido
+
+0:16:27.360,0:16:31.399
+ser validados con todo el benchmarking
+
+0:16:29.480,0:16:33.360
+que han hecho? Sí, el tema del
+
+0:16:31.399,0:16:36.519
+benchmarking este, la verdad que fue
+
+0:16:33.360,0:16:38.680
+bastante trabajoso. Estuvo uno de los
+
+0:16:36.519,0:16:41.600
+miembros del equipo trabajando en esto
+
+0:16:38.680,0:16:43.079
+igual dos semanas quemó tokens. No te
+
+0:16:41.600,0:16:46.079
+sabría decir la cantidad de tokens que
+
+0:16:43.079,0:16:48.480
+quemó para hacer este estudio, pero
+
+0:16:46.079,0:16:53.480
+porque igual lo dejaba corriendo 8 horas
+
+0:16:48.480,0:16:54.399
+por la noche su cuenta Cloud Max de 20X
+
+0:16:53.480,0:16:56.079
+corriendo por la noche
+
+0:16:54.399,0:16:59.560
+ininterrumpidamente. Y básicamente lo
+
+0:16:56.079,0:17:03.560
+que lo que nosotros aquí eh calculábamos
+
+0:16:59.560,0:17:07.799
+era que al final nuestra Appyescript es
+
+0:17:03.560,0:17:10.360
+tan compacta que el mismo código es tres
+
+0:17:07.799,0:17:12.160
+veces más pequeño. Entonces, ese mismo
+
+0:17:10.360,0:17:13.839
+código al ser tres veces más pequeño,
+
+0:17:12.160,0:17:16.000
+consume tres veces menos. Para que te
+
+0:17:13.839,0:17:18.319
+hagáis una idea, nuestra librería no
+
+0:17:16.000,0:17:20.160
+está dentro del entrenamiento de las IA.
+
+0:17:18.319,0:17:24.240
+Toda nuestra web ya está preparada para
+
+0:17:20.160,0:17:26.439
+que las IAS puedan entrar y puedan
+
+0:17:24.240,0:17:28.240
+entender cómo funciona la librería ya
+
+0:17:26.439,0:17:32.039
+con todos los mecanismos estos de
+
+0:17:28.240,0:17:33.280
+Awareness, del LLMST,
+
+0:17:32.039,0:17:36.240
+el MCP,
+
+0:17:33.280,0:17:38.120
+correcto. Todas las páginas renderizan
+
+0:17:36.240,0:17:41.080
+normal para el usuario, pero si pones
+
+0:17:38.120,0:17:43.440
+punto MD al final te genera un MD de esa
+
+0:17:41.080,0:17:45.720
+página. todos estos trucos, porque
+
+0:17:43.440,0:17:48.120
+claro, tú le decías a la IA a que
+
+0:17:45.720,0:17:50.960
+generase algo con GolemUI y alucinaba
+
+0:17:48.120,0:17:53.000
+pepinillos, no tenía ni idea de cómo
+
+0:17:50.960,0:17:55.039
+funcionaba. Entonces, el primer trabajo
+
+0:17:53.000,0:17:58.720
+que tuvimos que hacer fue ese, luego
+
+0:17:55.039,0:18:02.000
+crear MCPs. Y el MCP es super importante
+
+0:17:58.720,0:18:04.159
+para que nuestra librería sea muy token
+
+0:18:02.000,0:18:08.240
+efficient porque lo que hace es que
+
+0:18:04.159,0:18:13.799
+valida eh que la salida retornada del
+
+0:18:08.240,0:18:15.360
+JSON o del código Typecript es válida.
+
+0:18:13.799,0:18:17.559
+¿Vale? Nosotros tenemos un sistema de
+
+0:18:15.360,0:18:21.159
+validación de JSON basado en JSON
+
+0:18:17.559,0:18:24.000
+Esquima y un sistema de validación de la
+
+0:18:21.159,0:18:27.760
+DX basado también en este JSON Esquima
+
+0:18:24.000,0:18:30.200
+y otras y otras cosas, ¿no? Entonces, ya
+
+0:18:27.760,0:18:33.960
+te digo, nosotros estuvimos corriendo
+
+0:18:30.200,0:18:35.280
+estos test durante días y al final
+
+0:18:33.960,0:18:38.159
+llegamos a la conclusión de que siempre
+
+0:18:35.280,0:18:40.520
+daba el mismo resultado y era que Golden
+
+0:18:38.159,0:18:43.520
+UI era a nivel de token Efficiency, no
+
+0:18:40.520,0:18:46.600
+sé otras cosas, toque efficiency tres
+
+0:18:43.520,0:18:48.360
+veces más barato, eh, que nosotros,
+
+0:18:46.600,0:18:50.679
+vamos, yo creo que a día de hoy es una
+
+0:18:48.360,0:18:52.159
+cosa muy importante porque hay muchas
+
+0:18:50.679,0:18:53.880
+empresas que ya están empezando a
+
+0:18:52.159,0:18:56.600
+limitar el acceso de tokens a sus
+
+0:18:53.880,0:18:58.039
+empleados. Exactamente, eso es uno de
+
+0:18:56.600,0:18:59.559
+los de los elementos más importantes a
+
+0:18:58.039,0:19:02.480
+tener en cuenta. Y por cierto, ustedes
+
+0:18:59.559,0:19:05.080
+tienen disponible algún skill que se le
+
+0:19:02.480,0:19:09.120
+pase a la gente de con el que uno
+
+0:19:05.080,0:19:10.799
+trabaje para que contenga una serie de
+
+0:19:09.120,0:19:12.200
+reglas que
+
+0:19:10.799,0:19:13.159
+recomendamos el MC le de modo
+
+0:19:12.200,0:19:16.000
+secuencial.
+
+0:19:13.159,0:19:19.240
+Recomendamos el el MCP directamente y si
+
+0:19:16.000,0:19:23.600
+quieren que dirijan a su agente a a la
+
+0:19:19.240,0:19:26.919
+web. Dile a la gente, entra en golui.com
+
+0:19:23.600,0:19:27.960
+y sigue el skill es golui.com
+
+0:19:26.919,0:19:30.200
+literalmente
+
+0:19:27.960,0:19:31.120
+y el MCP
+
+0:19:30.200,0:19:32.640
+porque desde el punto de vista de
+
+0:19:31.120,0:19:34.640
+eficiencia de los token, puede que
+
+0:19:32.640,0:19:37.480
+resulte de cierta manera interesante
+
+0:19:34.640,0:19:40.360
+para ustedes publicar en los stores
+
+0:19:37.480,0:19:42.919
+estos de skills, un skill sencillo que
+
+0:19:40.360,0:19:45.120
+te contenga la metadata en Jamel, que
+
+0:19:42.919,0:19:48.039
+contenga de qué va la biblioteca, ¿para
+
+0:19:45.120,0:19:50.039
+qué? para que pueda utilizar ese tipo de
+
+0:19:48.039,0:19:52.799
+revelado progresivo, que es el patrón
+
+0:19:50.039,0:19:54.280
+que generalmente beneficia muchísimo el
+
+0:19:52.799,0:19:56.320
+uso eficiente de tokens.
+
+0:19:54.280,0:19:58.360
+Sí, sí, sí. Ahora mismo no los tenemos,
+
+0:19:56.320,0:20:00.520
+pero seguro que es muy fácil sacarlos.
+
+0:19:58.360,0:20:02.360
+Eh, lo comentaré con
+
+0:20:00.520,0:20:04.360
+tienen que tener la latencia de la red
+
+0:20:02.360,0:20:05.640
+con relación a lo del MCP, que se trata
+
+0:20:04.360,0:20:08.919
+de unos cuantos milisegundos, pero
+
+0:20:05.640,0:20:11.880
+bueno, puede que le MCP lo instalas
+
+0:20:08.919,0:20:13.840
+localmente, ¿eh?
+
+0:20:11.880,0:20:17.120
+El MCP lo instalas localmente y lo
+
+0:20:13.840,0:20:19.159
+ejecutas localmente. Entonces es muy
+
+0:20:17.120,0:20:21.760
+eficiente a nivel tokens porque no tiene
+
+0:20:19.159,0:20:23.640
+que estar consultando internet ni nada.
+
+0:20:21.760,0:20:25.760
+Todo se hace local.
+
+0:20:23.640,0:20:27.919
+Ya la base de conocimientos de la cual
+
+0:20:25.760,0:20:28.799
+es local.
+
+0:20:27.919,0:20:30.400
+Okay. Okay.
+
+0:20:28.799,0:20:31.559
+Sí, sí. Pero de todas maneras sí que es
+
+0:20:30.400,0:20:34.960
+verdad lo que dices tú, que
+
+0:20:31.559,0:20:35.919
+probablemente unos skills no hacen daño.
+
+0:20:34.960,0:20:37.360
+Totalmente.
+
+0:20:35.919,0:20:38.480
+Unos skills no hacen daño. Los podemos
+
+0:20:37.360,0:20:41.039
+publicar. Sí, es una buena idea.
+
+0:20:38.480,0:20:42.840
+Es otra manera de hacerse visible, es
+
+0:20:41.039,0:20:44.440
+decir, para llevar al discoverability,
+
+0:20:42.840,0:20:46.520
+como se dice normalmente en inglés, este
+
+0:20:44.440,0:20:49.840
+tipo de casos, mientras más puedan
+
+0:20:46.520,0:20:51.760
+ampliar ese radio, mucho más eficiente
+
+0:20:49.840,0:20:53.000
+va a ser para diferentes tipos de
+
+0:20:51.760,0:20:53.919
+personas que utilicen técnicas
+
+0:20:53.000,0:20:55.559
+distintas.
+
+0:20:53.919,0:20:57.280
+Una cuestión de gustos, ¿no? Igual a
+
+0:20:55.559,0:20:59.320
+alguien no le gusta usar el MCP y
+
+0:20:57.280,0:21:01.080
+prefiere usar skills, pues aquí tienes
+
+0:20:59.320,0:21:02.480
+el buffet.
+
+0:21:01.080,0:21:03.799
+Exacto. Y hay empresas también que
+
+0:21:02.480,0:21:06.080
+tienen toda la parte que tiene que ver
+
+0:21:03.799,0:21:08.480
+con el ecosistema en CP deshabilitado en
+
+0:21:06.080,0:21:11.559
+Visual Studio Code. Sí. Y entonces como
+
+0:21:08.480,0:21:13.440
+que expanden un poco más esa oportunidad
+
+0:21:11.559,0:21:16.520
+de poder entregarle a la gente
+
+0:21:13.440,0:21:19.039
+conocimiento, información acerca de cómo
+
+0:21:16.520,0:21:20.520
+tratar caso a caso cada uno de los
+
+0:21:19.039,0:21:22.159
+diferentes componentes que ustedes van
+
+0:21:20.520,0:21:24.240
+lanzando progresivamente.
+
+0:21:22.159,0:21:25.360
+Sí, sí, lo vamos a añadir seguro. Es una
+
+0:21:24.240,0:21:28.440
+buena idea.
+
+0:21:25.360,0:21:30.720
+Y bueno, Raúl, encantado de conocer
+
+0:21:28.440,0:21:33.240
+tanta cantidad de buenas noticias. Ojalá
+
+0:21:30.720,0:21:35.640
+que la 1.2 nos traiga muchos más
+
+0:21:33.240,0:21:38.640
+componentes, patrones que puedan
+
+0:21:35.640,0:21:41.480
+habilitar mejor uso. ¿Tienes algo en
+
+0:21:38.640,0:21:43.520
+particular que sea buen candidato para
+
+0:21:41.480,0:21:46.760
+lanzar en ese próximo minor?
+
+0:21:43.520,0:21:48.640
+Sí, eh, para la 1 o dos probablemente
+
+0:21:46.760,0:21:51.320
+vamos a añadir, bueno, tenemos unos
+
+0:21:48.640,0:21:54.760
+cuantos fixes por hacer, eh, vamos a
+
+0:21:51.320,0:21:58.159
+añadir server side validations para que
+
+0:21:54.760,0:22:00.679
+la gente Ahora se puede hacer, pero eh
+
+0:21:58.159,0:22:03.360
+es un poco hackish. tienes que tienes se
+
+0:22:00.679,0:22:05.640
+nos ha olvidado añadir un interface,
+
+0:22:03.360,0:22:08.480
+entonces va a haber ver un fix. El
+
+0:22:05.640,0:22:10.200
+último componente que nos falta para
+
+0:22:08.480,0:22:13.760
+tener todos los tipos de datos
+
+0:22:10.200,0:22:16.559
+cubiertos, porque eh nuestra nuestro
+
+0:22:13.760,0:22:17.880
+mantra es que los formularios son datos.
+
+0:22:16.559,0:22:19.360
+Entonces, para si los formularios son
+
+0:22:17.880,0:22:21.440
+datos, tenemos que tener todos los tipos
+
+0:22:19.360,0:22:24.120
+de datos cubiertos. Y ahora mismo solo
+
+0:22:21.440,0:22:27.440
+nos falta un tipo de dato, que es la
+
+0:22:24.120,0:22:29.760
+selección múltiple en listas. Entonces,
+
+0:22:27.440,0:22:33.039
+igual que tenemos ahora tenemos un un
+
+0:22:29.760,0:22:34.679
+dropdown de selección individual y un
+
+0:22:33.039,0:22:37.200
+list de selección individual, vamos a
+
+0:22:34.679,0:22:39.880
+añadir un dropdown de selección múltiple
+
+0:22:37.200,0:22:42.880
+con el list de selección múltiple. Y con
+
+0:22:39.880,0:22:45.840
+eso sí, con eso sí ya tendremos todo el
+
+0:22:42.880,0:22:47.480
+ya será a nivel de requirement será
+
+0:22:45.840,0:22:49.240
+completo el set de componentes. Otra
+
+0:22:47.480,0:22:51.840
+cosa es que luego añadamos algunos que
+
+0:22:49.240,0:22:54.320
+nos pida la gente porque les gusta y no
+
+0:22:51.840,0:22:56.600
+quieren desarrollarlo, son complicados o
+
+0:22:54.320,0:22:58.520
+un rating, pues no lo sé, un rating se
+
+0:22:56.600,0:23:00.240
+puede añadir, pero es lo mismo que un
+
+0:22:58.520,0:23:02.440
+number en el fondo, ¿sabes? Claro, pero
+
+0:23:00.240,0:23:04.760
+a nivel de madurez de la biblioteca, ya
+
+0:23:02.440,0:23:06.360
+con esos componentes que han mencionado,
+
+0:23:04.760,0:23:09.080
+deberían tener
+
+0:23:06.360,0:23:10.440
+un número bastante cercano a cómo sería
+
+0:23:09.080,0:23:12.880
+la colección completa.
+
+0:23:10.440,0:23:14.880
+Sí, de hecho son con esos dos que te
+
+0:23:12.880,0:23:16.400
+digo añadiríamos serían los 40
+
+0:23:14.880,0:23:18.960
+componentes y con eso cubrimos todos los
+
+0:23:16.400,0:23:21.600
+tipos de datos. Luego ya es si alguien
+
+0:23:18.960,0:23:24.520
+quiere algo algo así un poco más bonito
+
+0:23:21.600,0:23:25.919
+y tal, pues se puede añadir, pero pero
+
+0:23:24.520,0:23:28.279
+con eso cubrimos todos los tipos de
+
+0:23:25.919,0:23:30.039
+datos y ya nos quedamos tranquilos y ya
+
+0:23:28.279,0:23:33.480
+podemos pasar a otras cosas que también
+
+0:23:30.039,0:23:36.440
+queremos hacer, pero ya llegaremos ahí.
+
+0:23:33.480,0:23:38.640
+Buenísimo. Y para concluir, seguro que
+
+0:23:36.440,0:23:40.559
+va a haber quien se esté preguntando, es
+
+0:23:38.640,0:23:42.200
+una pregunta bastante recurrente que te
+
+0:23:40.559,0:23:45.520
+pueden hacer a manos en la comunidad de
+
+0:23:42.200,0:23:48.159
+Angular, es que cerrando el ciclo con la
+
+0:23:45.520,0:23:52.559
+nota que habíamos comenzado el episodio,
+
+0:23:48.159,0:23:54.919
+con tanta cantidad de maneras que hay de
+
+0:23:52.559,0:23:57.200
+elaborar, de desarrollar formularios en
+
+0:23:54.919,0:24:00.120
+Angular y teniendo al equipo de Angular
+
+0:23:57.200,0:24:02.360
+haciendo todo este push final hacia
+
+0:24:00.120,0:24:04.400
+Signal Forms,
+
+0:24:02.360,0:24:06.720
+¿cómo convencerías
+
+0:24:04.400,0:24:10.159
+a alguien de que le dé una oportunidad a
+
+0:24:06.720,0:24:11.919
+GolemUI a nivel de estructuración, de
+
+0:24:10.159,0:24:14.279
+creación de formularios utilizando toda
+
+0:24:11.919,0:24:17.120
+esta serie de esquemas y no tener que
+
+0:24:14.279,0:24:19.960
+complejizarse nuevamente la vida con una
+
+0:24:17.120,0:24:23.000
+cuarta forma de poder elaborarlos.
+
+0:24:19.960,0:24:25.559
+Nosotros hay que tener en cuenta que UI
+
+0:24:23.000,0:24:28.039
+lo puedes utilizar para todo, pero
+
+0:24:25.559,0:24:30.720
+cuando tienes un un martillo todos te
+
+0:24:28.039,0:24:33.399
+parecen clavos, ¿vale? Entonces, eh
+
+0:24:30.720,0:24:36.840
+nosotros sabemos que Golden UI tiene
+
+0:24:33.399,0:24:39.159
+encaje en ciertos casos de uso donde es
+
+0:24:36.840,0:24:40.399
+más apropiado. Si tú tienes que hacer un
+
+0:24:39.159,0:24:42.279
+formulario de contacto, no te voy a
+
+0:24:40.399,0:24:45.000
+decir que te instales Golden UI y hagas
+
+0:24:42.279,0:24:46.840
+un formulario con Golden UI porque de
+
+0:24:45.000,0:24:48.320
+contacto con Golden UI porque creo que
+
+0:24:46.840,0:24:51.559
+es un poco overengine engineering,
+
+0:24:48.320,0:24:53.520
+¿vale? Eh, ahora si tú tienes que cargar
+
+0:24:51.559,0:24:56.000
+muchos formularios desde el lado de
+
+0:24:53.520,0:24:58.000
+servidor, si tienes que generar, por
+
+0:24:56.000,0:25:00.880
+ejemplo, formularios desde un Open
+
+0:24:58.000,0:25:03.799
+Appic, si tienes que mantener una base
+
+0:25:00.880,0:25:05.919
+de formularios unificada a través de
+
+0:25:03.799,0:25:08.640
+diferentes frameworks,
+
+0:25:05.919,0:25:10.799
+si necesitas, por ejemplo,
+
+0:25:08.640,0:25:13.000
+composabilidad de formularios, ten en
+
+0:25:10.799,0:25:15.760
+cuenta que nosotros, nuestra API son
+
+0:25:13.000,0:25:17.760
+todo funciones, no hay templates,
+
+0:25:15.760,0:25:20.799
+tú puedes generarte todos los
+
+0:25:17.760,0:25:23.440
+formularios a base de funciones y no hay
+
+0:25:20.799,0:25:25.080
+templates. Luego a la template tú eh en
+
+0:25:23.440,0:25:26.679
+la template es una línea de código que
+
+0:25:25.080,0:25:28.240
+le pasas al config con todas las con
+
+0:25:26.679,0:25:30.559
+todo el árbol de funciones y esas
+
+0:25:28.240,0:25:32.559
+funciones son composables, es decir, tú
+
+0:25:30.559,0:25:34.760
+las puedes tener en cualquier lado y las
+
+0:25:32.559,0:25:38.200
+las puedes llamar desde donde quieras y
+
+0:25:34.760,0:25:40.520
+ya está. Entonces es muy cómodo tener,
+
+0:25:38.200,0:25:42.159
+por ejemplo, un shipping address, que
+
+0:25:40.520,0:25:45.760
+ahora en Angular es a lo mejor un
+
+0:25:42.159,0:25:48.039
+componente muy grande donde tienes eh
+
+0:25:45.760,0:25:49.840
+ifelses, por ejemplo, para hacer bilin
+
+0:25:48.039,0:25:52.000
+address o shipping address, ese tipo de
+
+0:25:49.840,0:25:53.240
+cosas. Eh, de esta manera es muy
+
+0:25:52.000,0:25:55.520
+sencilla porque tú puedes llamar a una
+
+0:25:53.240,0:25:58.279
+función y en la función le llamas le
+
+0:25:55.520,0:26:00.760
+pasas si es shipping o billink y ahí ya
+
+0:25:58.279,0:26:01.960
+lo computas internamente. ¿Vale?
+
+0:26:00.760,0:26:04.440
+Exacto. Exacto.
+
+0:26:01.960,0:26:06.200
+Entonces, es muy sencillo componer. Si
+
+0:26:04.440,0:26:08.120
+tú tienes una base de código de
+
+0:26:06.200,0:26:10.320
+formularios muy grande, yo creo que te
+
+0:26:08.120,0:26:11.720
+va a ayudar muchísimo y te va a quitar
+
+0:26:10.320,0:26:14.240
+muchísimo código y muchísima
+
+0:26:11.720,0:26:16.240
+complejidad. Para cosas pequeñas, yo no
+
+0:26:14.240,0:26:19.000
+lo recomendaría tanto. Yo creo que es
+
+0:26:16.240,0:26:20.840
+una librería pensada para bases de
+
+0:26:19.000,0:26:22.640
+código de formularios que donde tengas
+
+0:26:20.840,0:26:24.960
+muchos formularios o donde tengas que
+
+0:26:22.640,0:26:26.279
+generar formularios de servidor porque
+
+0:26:24.960,0:26:28.559
+la particularidad que tienes que tienes
+
+0:26:26.279,0:26:32.799
+estas dos cosas, tienes la APJS y la
+
+0:26:28.559,0:26:35.039
+APS, pues ahí ya puedes un poco eh tirar
+
+0:26:32.799,0:26:36.559
+eso. Dos o tres formularios. Yo no te la
+
+0:26:35.039,0:26:39.679
+recomendaría. Creo que puedes tirar con
+
+0:26:36.559,0:26:42.240
+Signal Forms y no añades otra librería
+
+0:26:39.679,0:26:44.120
+más a tu esto. También te digo que con
+
+0:26:42.240,0:26:46.919
+esto no necesitas Signal Forms, no
+
+0:26:44.120,0:26:48.159
+necesitas porque no no hay que añadir la
+
+0:26:46.919,0:26:49.880
+librería de formularios, ya tenemos
+
+0:26:48.159,0:26:51.720
+nosotros validadores, tenemos de todo.
+
+0:26:49.880,0:26:53.880
+Igual te acostumbras y acabas cambiando
+
+0:26:51.720,0:26:57.440
+todos los formularios de Signal Forms a
+
+0:26:53.880,0:27:00.200
+Golden UI. Y bueno, es una opción. Yo la
+
+0:26:57.440,0:27:02.039
+verdad que estoy deseando ya ver
+
+0:27:00.200,0:27:04.600
+proyectos que lo estén usando. Hemos
+
+0:27:02.039,0:27:06.559
+visto uno que lo está usando bien, pero
+
+0:27:04.600,0:27:08.279
+estoy deseando verlo ya en una empresa,
+
+0:27:06.559,0:27:09.840
+¿sabes? En un sitio grande. Pero bueno,
+
+0:27:08.279,0:27:10.880
+acabamos de salir hace un mes. Poco a
+
+0:27:09.840,0:27:13.080
+poco, poco a poco.
+
+0:27:10.880,0:27:15.960
+Exacto. Y la 1.2 viene con muchas cosas
+
+0:27:13.080,0:27:19.360
+buenísimas próximamente, espero, en unos
+
+0:27:15.960,0:27:21.600
+cuantos meses o semanas en depas. Yo
+
+0:27:19.360,0:27:23.600
+creo Bueno, yo creo que yo espero que en
+
+0:27:21.600,0:27:25.480
+los en cuestión de tres cu meses van a
+
+0:27:23.600,0:27:26.760
+aparecer cosas
+
+0:27:25.480,0:27:28.159
+genial. La gente
+
+0:27:26.760,0:27:29.440
+encanta escuchar eso.
+
+0:27:28.159,0:27:30.440
+Está trabajando en ello. Está trabajando
+
+0:27:29.440,0:27:34.440
+en ello.
+
+0:27:30.440,0:27:37.440
+Buenísimo. Y Raúl, agradecido. Te deseo
+
+0:27:34.440,0:27:39.039
+muchísimos éxitos por con todo esto que
+
+0:27:37.440,0:27:43.399
+están ustedes preparando ahora ya que
+
+0:27:39.039,0:27:44.840
+son 100% empresas autónomos o como
+
+0:27:43.399,0:27:45.960
+quiera que se diga allá en España.
+
+0:27:44.840,0:27:47.000
+Sí, sí. un poco adelante.
+
+0:27:45.960,0:27:50.039
+Ya tienen, [risas]
+
+0:27:47.000,0:27:52.600
+sí, ya tienen ya bastante capacidad como
+
+0:27:50.039,0:27:55.080
+para poder continuar emprendiendo en el
+
+0:27:52.600,0:27:56.559
+camino que nos va a acercar a tener una
+
+0:27:55.080,0:27:58.360
+herramienta mucho más robusta, ¿no? Como
+
+0:27:56.559,0:28:01.440
+estabas mencionando, para poder utilizar
+
+0:27:58.360,0:28:04.559
+en entornos empresariales y así que
+
+0:28:01.440,0:28:06.840
+hay algo más que no hayamos comentado
+
+0:28:04.559,0:28:09.960
+que quisiera señalar antes de terminar.
+
+0:28:06.840,0:28:14.000
+Eh, nada. Hm. nos gusta dar bastante la
+
+0:28:09.960,0:28:18.519
+matraca a nosotros de que de que con
+
+0:28:14.000,0:28:20.799
+todo esto del tema de las IAs hay gente
+
+0:28:18.519,0:28:22.360
+creándose las las librerías en sus
+
+0:28:20.799,0:28:25.159
+proyectos.
+
+0:28:22.360,0:28:26.960
+Yo no lo recomiendo. Eh, yo lo sabes, lo
+
+0:28:25.159,0:28:29.519
+he visto que gente decir, "Ah, pues yo
+
+0:28:26.960,0:28:33.000
+me he picado aquí mis charts. ¿Para qué
+
+0:28:29.519,0:28:35.960
+te vas a picar tus charts si ya si ya
+
+0:28:33.000,0:28:38.760
+hay librerías, no?" Entonces, eh yo yo
+
+0:28:35.960,0:28:40.919
+creo que lo que hay que hacer hay que
+
+0:28:38.760,0:28:43.480
+evangelizar por un por un par de sitios.
+
+0:28:40.919,0:28:45.760
+Primero, las IAs son muy eficientes si
+
+0:28:43.480,0:28:48.880
+conocen tu librería y te vas a ahorrar
+
+0:28:45.760,0:28:52.399
+muchísimos tokens y muchísimo tiempo de
+
+0:28:48.880,0:28:55.000
+desarrollo. Y luego, por otro lado, que
+
+0:28:52.399,0:28:57.840
+si estás haciendo unos una librería de
+
+0:28:55.000,0:29:00.640
+charts, que no es tu business o de forms
+
+0:28:57.840,0:29:02.120
+o grids o componentes o lo que quieras,
+
+0:29:00.640,0:29:03.720
+toda la cantidad de unit testing de
+
+0:29:02.120,0:29:05.399
+avaliaciones que hay que hacer ahí. No,
+
+0:29:03.720,0:29:08.240
+no es tu no es tu business. No estás
+
+0:29:05.399,0:29:09.000
+aportando ningún valor a tu negocio. Lo
+
+0:29:08.240,0:29:10.240
+único que estás aportando
+
+0:29:09.000,0:29:12.919
+componentes incluso que ni siquiera
+
+0:29:10.240,0:29:14.360
+tienes idea que puedan ser importantes
+
+0:29:12.919,0:29:16.640
+para ti, que todavía tendrías que
+
+0:29:14.360,0:29:18.880
+añadirle mucho más tiempo al desarrollo
+
+0:29:16.640,0:29:20.360
+y ya está solucionado ya por otro por
+
+0:29:18.880,0:29:22.120
+una biblioteca pública.
+
+0:29:20.360,0:29:24.279
+Exacto. Entonces, yo creo que hay que
+
+0:29:22.120,0:29:25.799
+hay que evangelizar un poco de esto
+
+0:29:24.279,0:29:28.159
+porque estoy viendo una tendencia un
+
+0:29:25.799,0:29:30.360
+poco peligrosa a hacer castillos de
+
+0:29:28.159,0:29:33.440
+cartas que de aquí uno o dos años igual
+
+0:29:30.360,0:29:36.679
+se caen todos para abajo porque ostras,
+
+0:29:33.440,0:29:39.840
+es que eh este esta librería char la
+
+0:29:36.679,0:29:41.559
+hice yo porque el diseño quedaba
+
+0:29:39.840,0:29:44.200
+perfectamente integrado y no sé qué.
+
+0:29:41.559,0:29:45.679
+Demasiado acoplamiento ahí es difícil.
+
+0:29:44.200,0:29:47.720
+Bueno, ustedes han vivido la experiencia
+
+0:29:45.679,0:29:49.399
+en algo extremadamente acoplado
+
+0:29:47.720,0:29:50.960
+requerimiento de un negocio y después
+
+0:29:49.399,0:29:52.480
+tenes que sacarlo. Básicamente tienes
+
+0:29:50.960,0:29:53.480
+que escribirlo como nos estabas
+
+0:29:52.480,0:29:55.679
+mencionando.
+
+0:29:53.480,0:29:58.480
+Exactamente. [resoplido] Sí, sí, tal
+
+0:29:55.679,0:30:01.480
+cual. Y ya está. Nada más. Muchas
+
+0:29:58.480,0:30:03.519
+gracias a ti por la invitación. Un
+
+0:30:01.480,0:30:06.200
+placer siempre venir aquí.
+
+0:30:03.519,0:30:08.159
+Vale, gracias Raúl y mucho suerte,
+
+0:30:06.200,0:30:10.519
+muchos éxitos en lo próximo que va a
+
+0:30:08.159,0:30:15.025
+venir con Golem. Así que estamos en
+
+0:30:10.519,0:30:17.045
+contacto. Chao. No.
+
+0:30:15.025,0:30:17.045
+[música]

@@ -23,7 +23,11 @@ Distill raw transcripts and drafts into clear, concise, technically accurate sum
     `node scripts/publisher/translate-helper.js dump <episode>`
   - **Step 3 (Semantic Correction):** You MUST use your capabilities to thoroughly read and rewrite the dumped Spanish chunks (`1_recording/chunk-X-Y.json`) to fix words and phrases that make no sense due to the automatic YouTube transcription. Save these final corrected blocks to `<episodeDir>/2_publisher/es-chunk-X-Y.json`.
     **CRITICAL:** You must strictly preserve all internal line breaks (`\n`) exactly as they appear in each original block so the video subtitle line structure is maintained.
-  - **Step 4 (Translation):** Translate the semantically corrected Spanish chunks into English, saving them to `<episodeDir>/2_publisher/trans-X-Y.json`. Again, you MUST strictly preserve all line breaks (`\n`).
+  - **Step 4 (Full Translation):** Translate 100% of the text in each semantically corrected Spanish block into fluent, natural English, saving them to `<episodeDir>/2_publisher/trans-X-Y.json`.
+    **CRITICAL TRANSLATION MANDATES:**
+    - **Complete Translation:** Every single block must be completely translated into English. NEVER use partial string/regex search-and-replace scripts that leave Spanish words (e.g. "utilizando el", "que la", "estoy full time con") untranslated in the English file.
+    - **Technical & Brand Accuracy:** Preserve technical terms and exact brand names intact (`Template-Driven Forms`, `RxJS`, `Signals`, `GolemUI`, `TypeScript`, `JSON`, `Web Components`, `Lit`, `Reducers`, `MCP`, `LLMs`, `Signal Forms`, `Internet Explorer 11`).
+    - **Line Structure:** You MUST strictly preserve all internal line breaks (`\n`) exactly as they appear in each original block so subtitle line structure is maintained.
   - **Step 5 (Build):** Compile both corrected Spanish and translated English SBV files:
     - `node scripts/publisher/translate-helper.js build <episode> es`
     - `node scripts/publisher/translate-helper.js build <episode> en`

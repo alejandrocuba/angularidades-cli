@@ -109,6 +109,18 @@ async function runTranslateHelper(command, lang = 'en', episodeArg = null) {
           console.error(`Error: File ${file} does not contain a JSON array.`);
           process.exit(1);
         }
+        const rangeMatch = file.match(/(?:trans|es-chunk)-(\d+)-(\d+)\.json/);
+        if (rangeMatch) {
+          const start = parseInt(rangeMatch[1], 10);
+          const end = parseInt(rangeMatch[2], 10);
+          const expectedLen = end - start + 1;
+          if (content.length !== expectedLen) {
+            console.error(
+              `Error in ${file}: Expected ${expectedLen} elements (indices ${start} to ${end}), but found ${content.length}.`
+            );
+            process.exit(1);
+          }
+        }
         translations = translations.concat(content);
         console.log(`Loaded ${content.length} translations from ${file}`);
       } catch (e) {
