@@ -2,7 +2,14 @@ import { fileURLToPath } from 'url';
 import { runAuthHelper } from '../auth-helper.js';
 import * as clackPrompts from '@clack/prompts';
 import { resolveConfig } from './config.js';
-import { colors, logDoctor, printHeader, logLevel } from './logger.js';
+import {
+  colors,
+  logDoctor,
+  printHeader,
+  logLevel,
+  logAuthHelpNote,
+  isOAuthError
+} from './logger.js';
 import { getEpisodeData, getLocalTranscripts } from './file-manager.js';
 import * as defaultYoutubeApi from './youtube-api.js';
 
@@ -73,6 +80,7 @@ async function publishEpisode(options = {}) {
       return;
     } else {
       console.error('Error: Missing YouTube OAuth2 credentials in environment variables.');
+      logAuthHelpNote(p);
       process.exit(1);
     }
   }
@@ -143,12 +151,14 @@ async function publishEpisode(options = {}) {
 
     console.log(`\n${colors.bold}✨ Publishing complete.${colors.reset}\n`);
   } catch (error) {
+    const isAuthErr = isOAuthError(error);
     if (isDoctor) {
       logDoctor(false, `YouTube API check failed: ${error.message}`);
-      if (error.message.includes('invalid_grant')) {
+      if (isAuthErr) {
+        logAuthHelpNote(p);
         const confirmAuth = await p.confirm({
           message:
-            'YouTube API check failed. It might be an authentication issue. Would you like to run the auth helper to retrieve a new token?',
+            'YouTube API check failed due to an authentication error. Would you like to run the auth helper to retrieve a new token?',
           initialValue: true
         });
 
@@ -164,6 +174,9 @@ async function publishEpisode(options = {}) {
       }
     } else {
       console.error('Error updating YouTube video:', error.message);
+      if (isAuthErr) {
+        logAuthHelpNote(p);
+      }
     }
     process.exit(1);
   }

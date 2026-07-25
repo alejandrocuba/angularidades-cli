@@ -1,6 +1,6 @@
 import { google } from 'googleapis';
 import * as p from '@clack/prompts';
-import { colors } from './publisher/logger.js';
+import { colors, logAuthHelpNote } from './publisher/logger.js';
 import dotenv from 'dotenv';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
@@ -17,6 +17,7 @@ async function runAuthHelper(prompts = p) {
     prompts.log.error(
       `Please provide ${colors.bold}YOUTUBE_CLIENT_ID${colors.reset} and ${colors.bold}YOUTUBE_CLIENT_SECRET${colors.reset} in your .env file first.`
     );
+    logAuthHelpNote(prompts);
     process.exit(1);
   }
 
@@ -75,6 +76,7 @@ async function runAuthHelper(prompts = p) {
   } catch (error) {
     s.stop('Failed to retrieve token.');
     prompts.log.error(`Error exchanging code: ${error.message}`);
+    logAuthHelpNote(prompts);
     process.exit(1);
   }
 }

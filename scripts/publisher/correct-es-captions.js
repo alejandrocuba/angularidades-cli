@@ -51,6 +51,14 @@ const CORRECTIONS = [
   [/\bRolldown\b/g, 'Rolldown'],
 
   // ── Frameworks & libraries ─────────────────────────────────────────────────
+  // GolemUI (ASR mis-transcribes as "Golem UI")
+  [/\bGolem\s*UI\b/g, 'GolemUI'],
+  [/\bgolem\s*ui\b/gi, 'GolemUI'],
+
+  // Internet Explorer / Explorer 11 (ASR mis-transcribes "Explorer 11" as "Exper 11")
+  [/\bExper\s*11\b/gi, 'Explorer 11'],
+  [/\bInternet\s*Exper\b/gi, 'Internet Explorer'],
+
   // Analog – many ASR variants
   [/\bAnalga\b/g, 'Analog'],
   [/\bAnalgo\b/g, 'Analog'],

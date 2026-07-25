@@ -1,0 +1,2303 @@
+0:00:03.929,0:00:05.949
+[music]
+
+0:00:07.080,0:00:14.440
+Raúl, so we have these historical APIs
+
+0:00:10.519,0:00:16.080
+that compare side-by-side the way to
+
+0:00:14.440,0:00:19.119
+develop forms in Angular
+
+0:00:16.080,0:00:22.400
+using Template-Driven Forms
+
+0:00:19.119,0:00:25.279
+versus forms that are achieved
+
+0:00:22.400,0:00:28.400
+from synchronization with the entire
+
+0:00:25.279,0:00:30.240
+previous ecosystem we had with
+
+0:00:28.400,0:00:32.559
+RxJS.
+
+0:00:30.240,0:00:35.559
+And furthermore, it is now completely
+
+0:00:32.559,0:00:35.559
+stable
+
+0:00:36.840,0:00:42.360
+thanks to Signals, and about a month ago
+
+0:00:39.719,0:00:47.640
+you were able to release
+
+0:00:42.360,0:00:51.160
+version 1.0 of GolemUI, which just
+
+0:00:47.640,0:00:55.120
+launched its first minor release with 1.1.
+
+0:00:51.160,0:00:57.760
+Not only to congratulate you, but to be
+
+0:00:55.120,0:01:01.280
+practically wondering
+
+0:00:57.760,0:01:04.360
+what is behind the
+
+0:01:01.280,0:01:06.200
+motivation to introduce
+
+0:01:04.360,0:01:08.720
+a new way of managing
+
+0:01:06.200,0:01:11.040
+forms, not only for Angular,
+
+0:01:08.720,0:01:13.240
+but for other frameworks based on
+
+0:01:11.040,0:01:15.280
+JavaScript.
+
+0:01:13.240,0:01:16.880
+Well, the motivation, all of this comes from
+
+0:01:15.280,0:01:19.320
+a project where I was
+
+0:01:16.880,0:01:21.560
+working for 10 years. There we, um,
+
+0:01:19.320,0:01:23.240
+had a codebase of
+
+0:01:21.560,0:01:26.040
+super heavy forms that we
+
+0:01:23.240,0:01:28.280
+managed entirely with TypeScript that
+
+0:01:26.040,0:01:30.079
+converted to JSON, right? So
+
+0:01:28.280,0:01:32.960
+in the end we treated
+
+0:01:30.079,0:01:36.560
+forms as data. Um, the way
+
+0:01:32.960,0:01:38.799
+we did this seemed like
+
+0:01:36.560,0:01:41.240
+a fairly efficient way on one
+
+0:01:38.799,0:01:42.920
+hand. Then it had the portability
+
+0:01:41.240,0:01:44.960
+advantages
+
+0:01:42.920,0:01:47.360
+where you can serve that JSON form
+
+0:01:44.960,0:01:50.040
+from the server, but you can also
+
+0:01:47.360,0:01:53.280
+save it in GitHub or you can do
+
+0:01:50.040,0:01:55.719
+diffs, you can do many things that
+
+0:01:53.280,0:01:58.320
+you might not be able to do with code. On the
+
+0:01:55.719,0:02:01.240
+other hand, the thing is that this project
+
+0:01:58.320,0:02:04.240
+was private and we wanted to
+
+0:02:01.240,0:02:07.439
+open-source it, but they wouldn't let us
+
+0:02:04.240,0:02:10.119
+at the time. Then after
+
+0:02:07.439,0:02:12.599
+a few years, you know, right? The
+
+0:02:10.119,0:02:15.879
+projects grow, special requirements
+
+0:02:12.599,0:02:17.480
+come in, and that affected us too,
+
+0:02:15.879,0:02:19.560
+and there came a time when
+
+0:02:17.480,0:02:22.800
+the project wasn't viable to
+
+0:02:19.560,0:02:24.840
+open-source either due to the amount of,
+
+0:02:22.800,0:02:27.200
+well, nuances, I don't know how to put it, right?
+
+0:02:24.840,0:02:29.560
+of particularities and quirks that
+
+0:02:27.200,0:02:32.319
+the project had, which were things that were
+
+0:02:29.560,0:02:34.000
+very specific to that client, right?
+
+0:02:32.319,0:02:35.879
+But we, well, always kept
+
+0:02:34.000,0:02:38.160
+this idea in mind. Last
+
+0:02:35.879,0:02:39.920
+year, one of the colleagues I worked with
+
+0:02:38.160,0:02:41.879
+on this project, who had left it
+
+0:02:39.920,0:02:43.280
+years ago—I was on this project 10 years,
+
+0:02:41.879,0:02:45.400
+he was on it for six—he contacted
+
+0:02:43.280,0:02:46.800
+me and said,
+
+0:02:45.400,0:02:48.599
+"Hey, look, I made this, it's a
+
+0:02:46.800,0:02:49.879
+prototype,
+
+0:02:48.599,0:02:52.159
+it's similar to what we built
+
+0:02:49.879,0:02:54.040
+there, but done right, without all the
+
+0:02:52.159,0:02:56.080
+particularities and quirks
+
+0:02:54.040,0:02:57.640
+that the client wanted—which, to give
+
+0:02:56.080,0:03:00.400
+you an idea of the quirks they
+
+0:02:57.640,0:03:02.640
+had, due to business requirements,
+
+0:03:00.400,0:03:04.200
+for example, there were radio groups
+
+0:03:02.640,0:03:06.720
+where an option in the radio group
+
+0:03:04.200,0:03:09.799
+could have two values,
+
+0:03:06.720,0:03:11.200
+right? That kind of thing that's very
+
+0:03:09.799,0:03:12.280
+specific to that—"
+
+0:03:11.200,0:03:14.920
+And don't tell me it had to be
+
+0:03:12.280,0:03:16.599
+compatible with 640x480 screens
+
+0:03:14.920,0:03:18.440
+or compatible with Internet Explorer 6.
+
+0:03:16.599,0:03:20.680
+Well, we actually provided
+
+0:03:18.440,0:03:23.560
+Explorer 11 support. Then came a
+
+0:03:20.680,0:03:25.799
+time when, when Microsoft killed
+
+0:03:23.560,0:03:28.599
+Explorer 11, we dropped
+
+0:03:25.799,0:03:30.080
+support for it, and it was such a relief because
+
+0:03:28.599,0:03:34.400
+we had tons of performance
+
+0:03:30.080,0:03:37.560
+issues in Explorer 11, and that,
+
+0:03:34.400,0:03:39.319
+um, on the upside was a benefit
+
+0:03:37.560,0:03:40.760
+because we found ways to make
+
+0:03:39.319,0:03:43.560
+forms extremely optimal. So in
+
+0:03:40.760,0:03:45.879
+Chrome they ran amazingly fast,
+
+0:03:43.560,0:03:48.000
+in Chrome and Firefox, and in Explorer 11
+
+0:03:45.879,0:03:50.319
+they were usable, which is no small feat.
+
+0:03:48.000,0:03:53.159
+Right? So, well, the story is
+
+0:03:50.319,0:03:55.799
+that this guy showed me the prototype
+
+0:03:53.159,0:03:57.120
+he had built and I said, "This is
+
+0:03:55.799,0:03:58.519
+great." It's what we had always
+
+0:03:57.120,0:04:01.159
+talked about wanting to open-
+
+0:03:58.519,0:04:04.599
+source. So I joined the project
+
+0:04:01.159,0:04:07.519
+around June of last year,
+
+0:04:04.599,0:04:09.200
+and we worked on this project
+
+0:04:07.519,0:04:11.640
+until we released it now. I
+
+0:04:09.200,0:04:14.360
+was, well, working on it, the usual stuff,
+
+0:04:11.640,0:04:16.840
+weekends, after work,
+
+0:04:14.360,0:04:19.639
+etcetera, until February. In February I
+
+0:04:16.840,0:04:22.479
+left the project because the company, this
+
+0:04:19.639,0:04:25.960
+startup had an exit, it got acquired, and
+
+0:04:22.479,0:04:28.919
+well, that, the exit was in September
+
+0:04:25.960,0:04:30.320
+and yeah, they terminated my contract in
+
+0:04:28.919,0:04:32.120
+February. So since February I've been
+
+0:04:30.320,0:04:33.800
+full-time with GolemUI and very
+
+0:04:32.120,0:04:35.280
+happy because it's something I had always
+
+0:04:33.800,0:04:38.360
+wanted to do. Right now I have
+
+0:04:35.280,0:04:40.360
+the time and the ability to be able
+
+0:04:38.360,0:04:42.720
+to spend some time working full-time on
+
+0:04:40.360,0:04:44.600
+this, and it's what I want to do, so
+
+0:04:42.720,0:04:46.880
+I'm very happy.
+
+0:04:44.600,0:04:48.720
+Spectacular. And well, for people
+
+0:04:46.880,0:04:50.120
+who might not know you yet because they haven't
+
+0:04:48.720,0:04:51.840
+seen any of the episodes we've
+
+0:04:50.120,0:04:53.960
+recorded, usually about unit testing
+
+0:04:51.840,0:04:56.880
+or CSS,
+
+0:04:53.960,0:04:59.080
+you're from Barcelona, software architect,
+
+0:04:56.880,0:05:01.520
+you're also an avid comic reader,
+
+0:04:59.080,0:05:04.320
+as I understand, um,
+
+0:05:01.520,0:05:06.039
+drummer, chess player, and well, other
+
+0:05:04.320,0:05:07.520
+board games as well, and I
+
+0:05:06.039,0:05:09.880
+understand you love football and that
+
+0:05:07.520,0:05:10.840
+you must be enjoying the recent
+
+0:05:09.880,0:05:12.919
+news.
+
+0:05:10.840,0:05:15.320
+Yeah.
+
+0:05:12.919,0:05:18.120
+And you also have, well, the distinction
+
+0:05:15.320,0:05:20.160
+of being a Google Developer Expert in the
+
+0:05:18.120,0:05:22.199
+Angular category, a recognition
+
+0:05:20.160,0:05:24.960
+offered by Google to people who
+
+0:05:22.199,0:05:27.080
+generally act as a bridge between
+
+0:05:24.960,0:05:30.919
+the developer community and the core
+
+0:05:27.080,0:05:33.000
+team. And you started your professional
+
+0:05:30.919,0:05:37.400
+career, as you told me
+
+0:05:33.000,0:05:41.280
+many years ago, with ActionScript, and
+
+0:05:37.400,0:05:43.840
+also, well, at Byfault, you're co-founder
+
+0:05:41.280,0:05:46.240
+of several other ventures, and today
+
+0:05:43.840,0:05:49.960
+you're involved full-time with all
+
+0:05:46.240,0:05:52.479
+this around GolemUI. Yeah, in fact, um,
+
+0:05:49.960,0:05:56.000
+yesterday, it's quite funny because yesterday
+
+0:05:52.479,0:05:58.160
+I closed the company and we opened GolemUI
+
+0:05:56.000,0:05:59.600
+because we set up a company for
+
+0:05:58.160,0:06:00.720
+GolemUI.
+
+0:05:59.600,0:06:03.080
+Congratulations!
+
+0:06:00.720,0:06:05.680
+Um, we don't know exactly why, but
+
+0:06:03.080,0:06:08.360
+well, in case the project
+
+0:06:05.680,0:06:10.759
+moves forward and we can make
+
+0:06:08.360,0:06:12.759
+this a sustainable project, we founded
+
+0:06:10.759,0:06:14.919
+a company, and that's it.
+
+0:06:12.759,0:06:16.440
+And the company name is homonymous
+
+0:06:14.919,0:06:17.639
+with the project name.
+
+0:06:16.440,0:06:20.840
+Yeah, yeah.
+
+0:06:17.639,0:06:21.800
+Awesome! Wow, what great news that is. What a
+
+0:06:20.840,0:06:23.400
+scoop!
+
+0:06:21.800,0:06:24.919
+Yeah. [laughs]
+
+0:06:23.400,0:06:27.759
+And,
+
+0:06:24.919,0:06:30.120
+well, yeah, I don't know, as I said,
+
+0:06:27.759,0:06:34.080
+really happy, happy with this.
+
+0:06:30.120,0:06:36.479
+Nice. Well, what widgets are
+
+0:06:34.080,0:06:38.759
+currently available in the
+
+0:06:36.479,0:06:40.919
+collection offered by GolemUI, that
+
+0:06:38.759,0:06:43.560
+so far have turned out for
+
+0:06:40.919,0:06:45.520
+you to be the most troublesome to
+
+0:06:43.560,0:06:48.120
+develop, as well as the
+
+0:06:45.520,0:06:49.960
+refactoring you had to do
+
+0:06:48.120,0:06:51.840
+to detach it from the
+
+0:06:49.960,0:06:53.720
+original project requirements?
+
+0:06:51.840,0:06:55.599
+Like some of the components you
+
+0:06:53.720,0:06:58.280
+launched in 1.1. [throat clearing]
+
+0:06:55.599,0:07:00.639
+Well, um, it must be said that we, from
+
+0:06:58.280,0:07:03.199
+the library we built for
+
+0:07:00.639,0:07:05.360
+that client, there's nothing left—not a single
+
+0:07:03.199,0:07:08.599
+line of code in
+
+0:07:05.360,0:07:11.879
+this project,
+
+0:07:08.599,0:07:16.599
+because, like I said, it was so specific
+
+0:07:11.879,0:07:19.360
+and tied so tightly to that
+
+0:07:16.599,0:07:21.680
+application that it was impossible to extract.
+
+0:07:19.360,0:07:25.080
+And anyway, um, as I also
+
+0:07:21.680,0:07:26.599
+told you before, it wasn't even in
+
+0:07:25.080,0:07:28.599
+our plans,
+
+0:07:26.599,0:07:32.000
+because,
+
+0:07:28.599,0:07:36.400
+I mean, how GolemUI works under the
+
+0:07:32.000,0:07:37.960
+hood is that everything you build,
+
+0:07:36.400,0:07:40.440
+um, all the UI you build, is
+
+0:07:37.960,0:07:42.840
+based on JSON, right? So when you're
+
+0:07:40.440,0:07:44.720
+rendering a
+
+0:07:42.840,0:07:47.199
+form, what's actually behind
+
+0:07:44.720,0:07:48.599
+it is JSON. So based on that
+
+0:07:47.199,0:07:51.120
+JSON, we render the
+
+0:07:48.599,0:07:53.720
+form for you. Since nobody wants to write
+
+0:07:51.120,0:07:56.440
+JSON, we give you a programmatic API
+
+0:07:53.720,0:07:59.199
+so you can write those JSONs
+
+0:07:56.440,0:08:01.440
+in a developer-friendly way. The
+
+0:07:59.199,0:08:03.840
+JSON schema we have, that JSON
+
+0:08:01.440,0:08:05.560
+format is completely incompatible with
+
+0:08:03.840,0:08:08.319
+the one we had before; they look
+
+0:08:05.560,0:08:09.800
+nothing alike. Why? Because one of
+
+0:08:08.319,0:08:12.360
+the benefits of having spent 10 years
+
+0:08:09.800,0:08:14.120
+working with JSON-based forms
+
+0:08:12.360,0:08:15.319
+is that we learned very well
+
+0:08:14.120,0:08:16.240
+how to build them. So all
+
+0:08:15.319,0:08:18.599
+the mistakes we made in the
+
+0:08:16.240,0:08:21.520
+past, we didn't want to replicate them here.
+
+0:08:18.599,0:08:24.599
+So regarding your original question,
+
+0:08:21.520,0:08:27.240
+the initial one, the topic of
+
+0:08:24.599,0:08:30.080
+widgets right now, well, we released
+
+0:08:27.240,0:08:32.959
+the minor version 1.1, as you very well
+
+0:08:30.080,0:08:34.560
+said, where we added, I think it was
+
+0:08:32.959,0:08:36.919
+10 new components, so
+
+0:08:34.560,0:08:39.839
+now we have 38,
+
+0:08:36.919,0:08:41.880
+right? All components that are input-type,
+
+0:08:39.839,0:08:44.880
+meaning inputs,
+
+0:08:41.880,0:08:47.279
+that is, inputs, um,
+
+0:08:44.880,0:08:49.800
+calendars, currency, what would be
+
+0:08:47.279,0:08:52.640
+a textarea, markdown, all
+
+0:08:49.800,0:08:55.519
+of these are based on web components and you
+
+0:08:52.640,0:08:57.560
+can use them without needing
+
+0:08:55.519,0:08:59.680
+to use GolemUI, meaning you can
+
+0:08:57.560,0:09:03.680
+install our package
+
+0:08:59.680,0:09:04.680
+@golem-ui/components and use those components
+
+0:09:03.680,0:09:06.160
+in any project,
+
+0:09:04.680,0:09:07.560
+and you don't have to use
+
+0:09:06.160,0:09:09.920
+GolemUI. That's on one hand.
+
+0:09:07.560,0:09:11.320
+Sure, completely isolated.
+
+0:09:09.920,0:09:12.320
+You don't have to use the
+
+0:09:11.320,0:09:14.120
+main library.
+
+0:09:12.320,0:09:15.800
+Exactly. Exactly. Exactly. In
+
+0:09:14.120,0:09:18.120
+fact, internally we call those components
+
+0:09:15.800,0:09:20.680
+'clay', which is clay,
+
+0:09:18.120,0:09:22.320
+which is what clay is,
+
+0:09:20.680,0:09:23.560
+what golems are made of.
+
+0:09:22.320,0:09:25.519
+Internally we call it that. Maybe
+
+0:09:23.560,0:09:29.000
+one day we'll rename it and give it
+
+0:09:25.519,0:09:31.720
+a bit more structure and a
+
+0:09:29.000,0:09:33.920
+more polished style. Maybe we'll separate it.
+
+0:09:31.720,0:09:36.600
+We'd have GolemUI and Clay. Well, I don't know,
+
+0:09:33.920,0:09:38.760
+we'll see. For now it's GolemUI
+
+0:09:36.600,0:09:40.720
+for components, and of all these
+
+0:09:38.760,0:09:43.079
+components, the ones that are inputs,
+
+0:09:40.720,0:09:45.240
+right? These are all based, as I
+
+0:09:43.079,0:09:46.959
+told you, on web components. Then there are
+
+0:09:45.240,0:09:49.839
+other types of components which are
+
+0:09:46.959,0:09:53.560
+layouts, which are, like, the
+
+0:09:49.839,0:09:56.360
+layout rendering, such as
+
+0:09:53.560,0:09:59.760
+columns or rows or tabs. All of that,
+
+0:09:56.360,0:10:03.000
+all that rendering, we
+
+0:09:59.760,0:10:05.480
+delegate to the framework. Why? Because
+
+0:10:03.000,0:10:08.480
+it will be done in the way the framework
+
+0:10:05.480,0:10:11.120
+does it most optimally.
+
+0:10:08.480,0:10:14.560
+We tried doing interoperability between
+
+0:10:11.120,0:10:16.320
+Angular and Lit so this rendering
+
+0:10:14.560,0:10:18.399
+would be done from web components and be able to
+
+0:10:16.320,0:10:21.200
+use tabs, for example, as
+
+0:10:18.399,0:10:23.320
+web components inside. But it wasn't
+
+0:10:21.200,0:10:24.800
+optimal. It wasn't optimal because each one
+
+0:10:23.320,0:10:27.519
+has its own rendering system,
+
+0:10:24.800,0:10:28.720
+change detection occurred
+
+0:10:27.519,0:10:30.839
+at different moments.
+
+0:10:28.720,0:10:32.720
+So in the end we delegated this, and all
+
+0:10:30.839,0:10:34.279
+layout components, those
+
+0:10:32.720,0:10:35.839
+are indeed not web
+
+0:10:34.279,0:10:37.480
+components.
+
+0:10:35.839,0:10:40.560
+So, among the components
+
+0:10:37.480,0:10:42.560
+that are not web components,
+
+0:10:40.560,0:10:45.760
+by far, the hardest of
+
+0:10:42.560,0:10:47.639
+all is the repeater, because the repeater
+
+0:10:45.760,0:10:49.680
+in the end is a component that
+
+0:10:47.639,0:10:53.120
+renders other components inside and
+
+0:10:49.680,0:10:55.240
+repeats them. It creates a list of
+
+0:10:53.120,0:10:57.240
+forms; it's basically a form of
+
+0:10:55.240,0:11:00.040
+forms that you can
+
+0:10:57.240,0:11:01.440
+repeat. And also this was, for example,
+
+0:11:00.040,0:11:03.680
+one of the limitations we had
+
+0:11:01.440,0:11:05.279
+in our previous project:
+
+0:11:03.680,0:11:07.760
+we couldn't put repeaters
+
+0:11:05.279,0:11:09.720
+inside repeaters because of several
+
+0:11:07.760,0:11:13.639
+complications—one structural
+
+0:11:09.720,0:11:16.800
+and the other in terms of how
+
+0:11:13.639,0:11:19.639
+to process that data. Internally in GolemUI,
+
+0:11:16.800,0:11:21.519
+how it handles data is that the entire form
+
+0:11:19.639,0:11:23.639
+is in one state; everything is processed in
+
+0:11:21.519,0:11:25.680
+a reducer each time you make a
+
+0:11:23.639,0:11:28.360
+change, it goes to the reducer and re-executes,
+
+0:11:25.680,0:11:30.760
+generating the entire chain of
+
+0:11:28.360,0:11:32.760
+changes in the view. Right? That, with
+
+0:11:30.760,0:11:35.959
+repeaters, was particularly complex,
+
+0:11:32.760,0:11:39.200
+but when we built GolemUI, we kept
+
+0:11:35.959,0:11:41.920
+in mind that this had to be there from day
+
+0:11:39.200,0:11:44.120
+one, and the whole rendering system
+
+0:11:41.920,0:11:46.160
+for repeaters is carefully designed so
+
+0:11:44.120,0:11:47.800
+they can be nested.
+
+0:11:46.160,0:11:49.399
+So with GolemUI we can indeed
+
+0:11:47.800,0:11:52.800
+render a repeater inside a
+
+0:11:49.399,0:11:54.200
+repeater, and you can put three,
+
+0:11:52.800,0:11:54.600
+four levels of repeaters, as many as
+
+0:11:54.200,0:11:56.800
+you want,
+
+0:11:54.600,0:11:58.880
+an unlimited depth. Exactly.
+
+0:11:56.800,0:12:01.839
+This is super powerful because you,
+
+0:11:58.880,0:12:03.680
+imagine being able to put forms inside
+
+0:12:01.839,0:12:05.320
+to infinity; I mean, it has
+
+0:12:03.680,0:12:08.360
+immense power, but of course it has
+
+0:12:05.320,0:12:11.360
+been the most complicated to develop
+
+0:12:08.360,0:12:14.199
+by far, I mean, there's a pretty complex
+
+0:12:11.360,0:12:16.560
+issue there to manage
+
+0:12:14.199,0:12:18.800
+that in an efficient way. And speaking
+
+0:12:16.560,0:12:21.720
+of efficiency, with the integration you have
+
+0:12:18.800,0:12:25.199
+specifically with Angular,
+
+0:12:21.720,0:12:26.880
+is there any element that slows down the learning
+
+0:12:25.199,0:12:29.600
+curve for developers who
+
+0:12:26.880,0:12:32.079
+are already used to dealing with
+
+0:12:29.600,0:12:33.360
+Signals, dealing with a way to
+
+0:12:32.079,0:12:35.120
+also distribute the state of the
+
+0:12:33.360,0:12:36.720
+application using
+
+0:12:35.120,0:12:38.839
+NgRx?
+
+0:12:36.720,0:12:41.600
+Well, I think the system is very
+
+0:12:38.839,0:12:44.320
+simple to understand; I mean, if you
+
+0:12:41.600,0:12:46.680
+look at the API to build your
+
+0:12:44.320,0:12:50.079
+form, um, you make a
+
+0:12:46.680,0:12:52.480
+tree of functions. They are functions that
+
+0:12:50.079,0:12:56.519
+have children inside, and inside those
+
+0:12:52.480,0:12:59.240
+children you have more functions, and you
+
+0:12:56.519,0:13:03.079
+create, let's say, the view based on
+
+0:12:59.240,0:13:06.240
+that tree which builds the entire
+
+0:13:03.079,0:13:09.839
+form. Then, how can you
+
+0:13:06.240,0:13:12.440
+show things? We have—one
+
+0:13:09.839,0:13:14.160
+of the things we knew from our
+
+0:13:12.440,0:13:16.680
+past experience that was very
+
+0:13:14.160,0:13:19.079
+complicated was how to generate states
+
+0:13:16.680,0:13:22.079
+inside JSON forms, because
+
+0:13:19.079,0:13:25.560
+a JSON is plain text. So
+
+0:13:22.079,0:13:28.839
+one of the things we added is
+
+0:13:25.560,0:13:30.959
+that there's a states property where you
+
+0:13:28.839,0:13:32.560
+can create form states, and
+
+0:13:30.959,0:13:34.240
+these form states are
+
+0:13:32.560,0:13:36.279
+computed with very simple JavaScript
+
+0:13:34.240,0:13:38.480
+expressions, right? Like,
+
+0:13:36.279,0:13:40.880
+well, if register === true,
+
+0:13:38.480,0:13:42.639
+the register state is active.
+
+0:13:40.880,0:13:44.959
+So, when the register state
+
+0:13:42.639,0:13:48.079
+is active, then we have
+
+0:13:44.959,0:13:50.360
+some properties that make
+
+0:13:48.079,0:13:53.560
+things reactive to those states. For
+
+0:13:50.360,0:13:57.680
+example, if on a checkbox component
+
+0:13:53.560,0:13:59.320
+you set include on register,
+
+0:13:57.680,0:14:01.920
+when the register state is
+
+0:13:59.320,0:14:03.680
+active, that checkbox is included. If
+
+0:14:01.920,0:14:05.800
+it's not
+
+0:14:03.680,0:14:09.040
+in that state, then it's not
+
+0:14:05.800,0:14:10.959
+included. You can do this both
+
+0:14:09.040,0:14:12.839
+with the JSON API and the
+
+0:14:10.959,0:14:15.480
+TypeScript API. We have two APIs. The JSON
+
+0:14:12.839,0:14:17.360
+API, let me say, is suitable for
+
+0:14:15.480,0:14:19.920
+when you're returning your forms
+
+0:14:17.360,0:14:21.600
+from the server, and the TypeScript
+
+0:14:19.920,0:14:23.160
+API is the one you'll use
+
+0:14:21.600,0:14:26.560
+when you're manually programming
+
+0:14:23.160,0:14:29.000
+the forms. So if you look at
+
+0:14:26.560,0:14:30.480
+the API, in the end it's a TypeScript API.
+
+0:14:29.000,0:14:32.600
+You're writing TypeScript, not
+
+0:14:30.480,0:14:34.839
+writing Angular, not writing
+
+0:14:32.600,0:14:36.160
+React, not writing
+
+0:14:34.839,0:14:37.480
+anything else, it's TypeScript,
+
+0:14:36.160,0:14:39.199
+right? And that helps a lot with
+
+0:14:37.480,0:14:40.759
+interoperability,
+
+0:14:39.199,0:14:42.480
+specifically for people who
+
+0:14:40.759,0:14:44.959
+work with different frameworks at
+
+0:14:42.480,0:14:48.160
+the same time, so they don't have to go through
+
+0:14:44.959,0:14:49.680
+an additional curve when
+
+0:14:48.160,0:14:51.519
+switching from one to the other.
+
+0:14:49.680,0:14:54.560
+Exactly. In fact, the only
+
+0:14:51.519,0:14:57.519
+difference between one framework and
+
+0:14:54.560,0:14:59.759
+another is item renderers. Item
+
+0:14:57.519,0:15:03.040
+renderers, which are the renderers you have,
+
+0:14:59.759,0:15:06.360
+for example, in lists, those are
+
+0:15:03.040,0:15:08.959
+custom. If you want to customize that
+
+0:15:06.360,0:15:11.199
+item renderer, you can create one.
+
+0:15:08.959,0:15:14.120
+How you create it, for example, in
+
+0:15:11.199,0:15:17.199
+React is a pure function. How you create it
+
+0:15:14.120,0:15:18.720
+in Angular is a component. That's
+
+0:15:17.199,0:15:20.959
+the only interoperability
+
+0:15:18.720,0:15:23.000
+difference between all
+
+0:15:20.959,0:15:25.240
+the frameworks. In fact, you could
+
+0:15:23.000,0:15:29.880
+have the exact same form
+
+0:15:25.240,0:15:32.519
+written for Angular, React, Vue.js, Lit,
+
+0:15:29.880,0:15:34.199
+and Vanilla JS, even without using Lit,
+
+0:15:32.519,0:15:35.680
+you could have them written in all five and
+
+0:15:34.199,0:15:37.079
+not change a single line of code
+
+0:15:35.680,0:15:39.600
+between the five.
+
+0:15:37.079,0:15:42.120
+And this is something that's very difficult to
+
+0:15:39.600,0:15:43.880
+achieve, because if you look at other
+
+0:15:42.120,0:15:45.800
+libraries of this kind—because
+
+0:15:43.880,0:15:49.639
+we aren't the only ones doing
+
+0:15:45.800,0:15:51.399
+forms from JSON, there are other libraries
+
+0:15:49.639,0:15:53.720
+doing this—yet all these
+
+0:15:51.399,0:15:55.959
+libraries have their syntactic
+
+0:15:53.720,0:15:57.639
+differences when you have to program
+
+0:15:55.959,0:15:58.079
+the forms.
+
+0:15:57.639,0:16:00.120
+Exactly.
+
+0:15:58.079,0:16:01.519
+Um, it's, I think it's one of the
+
+0:16:00.120,0:16:04.480
+great advantages we have,
+
+0:16:01.519,0:16:07.199
+which is that our interoperability
+
+0:16:04.480,0:16:10.000
+is 99.9%.
+
+0:16:07.199,0:16:11.399
+And also the token usage,
+
+0:16:10.000,0:16:15.199
+that is, the way you
+
+0:16:11.399,0:16:17.720
+optimize the output of how
+
+0:16:15.199,0:16:19.759
+this library is built so that
+
+0:16:17.720,0:16:22.440
+it consumes much less than, for instance,
+
+0:16:19.759,0:16:25.040
+when you compare it to generating
+
+0:16:22.440,0:16:27.360
+Signal Forms. How did you manage to
+
+0:16:25.040,0:16:29.480
+establish principles that have been
+
+0:16:27.360,0:16:31.399
+validated with all the benchmarking
+
+0:16:29.480,0:16:33.360
+you've done? Yeah, that benchmarking
+
+0:16:31.399,0:16:36.519
+topic, honestly it was
+
+0:16:33.360,0:16:38.680
+quite laborious. One of our
+
+0:16:36.519,0:16:41.600
+team members worked on this for
+
+0:16:38.680,0:16:43.079
+like two weeks burning tokens. I couldn't
+
+0:16:41.600,0:16:46.079
+even tell you the amount of tokens he
+
+0:16:43.079,0:16:48.480
+burned to do this study, because
+
+0:16:46.079,0:16:53.480
+he would leave it running 8 hours
+
+0:16:48.480,0:16:54.399
+overnight on his Claude Max 20X account,
+
+0:16:53.480,0:16:56.079
+running overnight
+
+0:16:54.399,0:16:59.560
+uninterrupted. And basically what
+
+0:16:56.079,0:17:03.560
+what we calculated here
+
+0:16:59.560,0:17:07.799
+was that in the end our TypeScript API is
+
+0:17:03.560,0:17:10.360
+so compact that the same code is three
+
+0:17:07.799,0:17:12.160
+times smaller. So that same
+
+0:17:10.360,0:17:13.839
+code, being three times smaller,
+
+0:17:12.160,0:17:16.000
+consumes three times less. To give
+
+0:17:13.839,0:17:18.319
+you an idea, our library is not
+
+0:17:16.000,0:17:20.160
+part of AI training data yet.
+
+0:17:18.319,0:17:24.240
+Our entire website is already prepared so
+
+0:17:20.160,0:17:26.439
+AIs can crawl it and
+
+0:17:24.240,0:17:28.240
+understand how the library works with
+
+0:17:26.439,0:17:32.039
+all these mechanisms like
+
+0:17:28.240,0:17:33.280
+llms.txt,
+
+0:17:32.039,0:17:36.240
+and MCP.
+
+0:17:33.280,0:17:38.120
+Right. All pages render
+
+0:17:36.240,0:17:41.080
+normally for the user, but if you put
+
+0:17:38.120,0:17:43.440
+.md at the end, it generates a Markdown of that
+
+0:17:41.080,0:17:45.720
+page. All these tricks, because
+
+0:17:43.440,0:17:48.120
+of course, if you asked the AI to
+
+0:17:45.720,0:17:50.960
+generate something with GolemUI, it hallucinated
+
+0:17:48.120,0:17:53.000
+wildly; it had no idea how
+
+0:17:50.960,0:17:55.039
+it worked. So the first task
+
+0:17:53.000,0:17:58.720
+we had to do was that, then
+
+0:17:55.039,0:18:02.000
+creating MCPs. And the MCP is super important
+
+0:17:58.720,0:18:04.159
+for our library to be very token-
+
+0:18:02.000,0:18:08.240
+efficient, because what it does is
+
+0:18:04.159,0:18:13.799
+it validates that the output returned from
+
+0:18:08.240,0:18:15.360
+the JSON or TypeScript code is valid.
+
+0:18:13.799,0:18:17.559
+Right? We have a system for
+
+0:18:15.360,0:18:21.159
+JSON validation based on JSON
+
+0:18:17.559,0:18:24.000
+Schema, and a DX validation system
+
+0:18:21.159,0:18:27.760
+also based on this JSON Schema
+
+0:18:24.000,0:18:30.200
+and other things, right? So, as I said,
+
+0:18:27.760,0:18:33.960
+we were running
+
+0:18:30.200,0:18:35.280
+these tests for days, and in the end
+
+0:18:33.960,0:18:38.159
+we concluded that it always
+
+0:18:35.280,0:18:40.520
+gave the same result: GolemUI
+
+0:18:38.159,0:18:43.520
+was, in terms of token efficiency—I don't know about
+
+0:18:40.520,0:18:46.600
+other things—in token efficiency, three
+
+0:18:43.520,0:18:48.360
+times cheaper. And for us,
+
+0:18:46.600,0:18:50.679
+I think today that's a
+
+0:18:48.360,0:18:52.159
+very important factor, because many
+
+0:18:50.679,0:18:53.880
+companies are starting to
+
+0:18:52.159,0:18:56.600
+limit token usage for their
+
+0:18:53.880,0:18:58.039
+employees. Exactly, that's one of
+
+0:18:56.600,0:18:59.559
+the most important elements to
+
+0:18:58.039,0:19:02.480
+take into account. And by the way, do you
+
+0:18:59.559,0:19:05.080
+have any skill available to pass to people
+
+0:19:02.480,0:19:09.120
+they work with, containing a set of
+
+0:19:05.080,0:19:10.799
+rules that...
+
+0:19:09.120,0:19:12.200
+We recommend the MCP...
+
+0:19:10.799,0:19:13.159
+...in a sequential
+
+0:19:12.200,0:19:16.000
+manner.
+
+0:19:13.159,0:19:19.240
+We recommend the MCP directly, and if
+
+0:19:16.000,0:19:23.600
+they want, they can direct their agent to the
+
+0:19:19.240,0:19:26.919
+website. Tell the agent: go to golemui.com
+
+0:19:23.600,0:19:27.960
+and follow it; the skill is golemui.com
+
+0:19:26.919,0:19:30.200
+literally
+
+0:19:27.960,0:19:31.120
+and the MCP.
+
+0:19:30.200,0:19:32.640
+Because from the perspective of
+
+0:19:31.120,0:19:34.640
+token efficiency, it might
+
+0:19:32.640,0:19:37.480
+be interesting for
+
+0:19:34.640,0:19:40.360
+you to publish on those skill stores
+
+0:19:37.480,0:19:42.919
+a simple skill containing
+
+0:19:40.360,0:19:45.120
+YAML metadata detailing
+
+0:19:42.919,0:19:48.039
+what the library is about, so
+
+0:19:45.120,0:19:50.039
+it can leverage progressive disclosure,
+
+0:19:48.039,0:19:52.799
+which is the pattern that usually
+
+0:19:50.039,0:19:54.280
+greatly benefits efficient token
+
+0:19:52.799,0:19:56.320
+usage.
+
+0:19:54.280,0:19:58.360
+Yeah, yeah, yeah. Right now we don't have them,
+
+0:19:56.320,0:20:00.520
+but for sure it's very easy to release them.
+
+0:19:58.360,0:20:02.360
+Um, I'll talk to...
+
+0:20:00.520,0:20:04.360
+They have to consider network latency
+
+0:20:02.360,0:20:05.640
+regarding the MCP, which involves
+
+0:20:04.360,0:20:08.919
+a matter of a few milliseconds, but
+
+0:20:05.640,0:20:11.880
+well, you install the MCP
+
+0:20:08.919,0:20:13.840
+locally, right?
+
+0:20:11.880,0:20:17.120
+You install the MCP locally and
+
+0:20:13.840,0:20:19.159
+run it locally. So it's very
+
+0:20:17.120,0:20:21.760
+token-efficient because it doesn't have
+
+0:20:19.159,0:20:23.640
+to query the internet or anything.
+
+0:20:21.760,0:20:25.760
+Everything is done locally.
+
+0:20:23.640,0:20:27.919
+Right, the knowledge base it uses
+
+0:20:25.760,0:20:28.799
+is local.
+
+0:20:27.919,0:20:30.400
+Okay. Okay.
+
+0:20:28.799,0:20:31.559
+Yeah, yeah. But anyway, it's true
+
+0:20:30.400,0:20:34.960
+what you say, that
+
+0:20:31.559,0:20:35.919
+a few skills wouldn't hurt.
+
+0:20:34.960,0:20:37.360
+Totally.
+
+0:20:35.919,0:20:38.480
+A few skills wouldn't hurt. We can
+
+0:20:37.360,0:20:41.039
+publish them. Yeah, it's a good idea.
+
+0:20:38.480,0:20:42.840
+It's another way to gain visibility, that is,
+
+0:20:41.039,0:20:44.440
+to boost discoverability,
+
+0:20:42.840,0:20:46.520
+as it's usually called in English, in this
+
+0:20:44.440,0:20:49.840
+type of case, the more you can
+
+0:20:46.520,0:20:51.760
+expand that reach, the more efficient it
+
+0:20:49.840,0:20:53.000
+will be for different types of
+
+0:20:51.760,0:20:53.919
+people using different
+
+0:20:53.000,0:20:55.559
+techniques.
+
+0:20:53.919,0:20:57.280
+A matter of taste, right? Maybe
+
+0:20:55.559,0:20:59.320
+someone doesn't like using MCP and
+
+0:20:57.280,0:21:01.080
+prefers using skills, so here's
+
+0:20:59.320,0:21:02.480
+the buffet.
+
+0:21:01.080,0:21:03.799
+Exactly. And there are also companies that
+
+0:21:02.480,0:21:06.080
+have everything related to
+
+0:21:03.799,0:21:08.480
+the MCP ecosystem disabled in
+
+0:21:06.080,0:21:11.559
+Visual Studio Code. Yeah. And so that
+
+0:21:08.480,0:21:13.440
+expands that opportunity a bit more
+
+0:21:11.559,0:21:16.520
+to provide people with
+
+0:21:13.440,0:21:19.039
+knowledge and information on how to
+
+0:21:16.520,0:21:20.520
+handle case by case each of the
+
+0:21:19.039,0:21:22.159
+different components you're
+
+0:21:20.520,0:21:24.240
+releasing progressively.
+
+0:21:22.159,0:21:25.360
+Yeah, yeah, we'll add it for sure. It's a
+
+0:21:24.240,0:21:28.440
+good idea.
+
+0:21:25.360,0:21:30.720
+And well, Raúl, delighted to hear
+
+0:21:28.440,0:21:33.240
+so much good news. Hopefully
+
+0:21:30.720,0:21:35.640
+1.2 brings us many more
+
+0:21:33.240,0:21:38.640
+components and patterns that can
+
+0:21:35.640,0:21:41.480
+enable better usage. Do you have anything in
+
+0:21:38.640,0:21:43.520
+particular that's a good candidate for
+
+0:21:41.480,0:21:46.760
+release in that next minor?
+
+0:21:43.520,0:21:48.640
+Yeah, um, for 1.2 we'll probably
+
+0:21:46.760,0:21:51.320
+add—well, we have a few
+
+0:21:48.640,0:21:54.760
+fixes to make, um, we're going to
+
+0:21:51.320,0:21:58.159
+add server-side validations so that
+
+0:21:54.760,0:22:00.679
+people—now it can be done, but um,
+
+0:21:58.159,0:22:03.360
+it's a bit hacky. You have to—we
+
+0:22:00.679,0:22:05.640
+forgot to add an interface,
+
+0:22:03.360,0:22:08.480
+so there will be a fix. The
+
+0:22:05.640,0:22:10.200
+last component we need to
+
+0:22:08.480,0:22:13.760
+cover all data types,
+
+0:22:10.200,0:22:16.559
+because, um, our mantra
+
+0:22:13.760,0:22:17.880
+is that forms are data.
+
+0:22:16.559,0:22:19.360
+So if forms are
+
+0:22:17.880,0:22:21.440
+data, we must have all data types
+
+0:22:19.360,0:22:24.120
+covered. And right now we're only
+
+0:22:21.440,0:22:27.440
+missing one data type, which is
+
+0:22:24.120,0:22:29.760
+multi-selection in lists. So,
+
+0:22:27.440,0:22:33.039
+just like we currently have a single-select
+
+0:22:29.760,0:22:34.679
+dropdown and a single-select
+
+0:22:33.039,0:22:37.200
+list, we're going to
+
+0:22:34.679,0:22:39.880
+add a multi-select dropdown
+
+0:22:37.200,0:22:42.880
+along with a multi-select list. And with
+
+0:22:39.880,0:22:45.840
+that, yes, with that we'll have the whole—
+
+0:22:42.880,0:22:47.480
+in terms of requirements, the component set
+
+0:22:45.840,0:22:49.240
+will be complete. Another
+
+0:22:47.480,0:22:51.840
+thing is if we later add some that
+
+0:22:49.240,0:22:54.320
+people ask for because they like them and don't
+
+0:22:51.840,0:22:56.600
+want to develop them, or they're complex, or
+
+0:22:54.320,0:22:58.520
+a rating, well, I don't know, a rating can
+
+0:22:56.600,0:23:00.240
+be added, but it's basically the same as a
+
+0:22:58.520,0:23:02.440
+number under the hood, you know? Sure, but
+
+0:23:00.240,0:23:04.760
+in terms of library maturity, with
+
+0:23:02.440,0:23:06.360
+those components you mentioned,
+
+0:23:04.760,0:23:09.080
+you should have
+
+0:23:06.360,0:23:10.440
+a number very close to what the
+
+0:23:09.080,0:23:12.880
+complete collection would look like.
+
+0:23:10.440,0:23:14.880
+Yeah, in fact with those two I
+
+0:23:12.880,0:23:16.400
+mentioned, adding them makes 40
+
+0:23:14.880,0:23:18.960
+components, and with that we cover all
+
+0:23:16.400,0:23:21.600
+data types. After that it's if someone
+
+0:23:18.960,0:23:24.520
+wants something a bit nicer
+
+0:23:21.600,0:23:25.919
+or whatever, it can be added, but
+
+0:23:24.520,0:23:28.279
+with that we cover all data types
+
+0:23:25.919,0:23:30.039
+and we can rest easy, and then
+
+0:23:28.279,0:23:33.480
+move on to other things we also
+
+0:23:30.039,0:23:36.440
+want to do, but we'll get there.
+
+0:23:33.480,0:23:38.640
+Awesome. And in conclusion, I'm sure
+
+0:23:36.440,0:23:40.559
+someone out there is wondering—it's
+
+0:23:38.640,0:23:42.200
+a fairly recurring question you might get
+
+0:23:40.559,0:23:45.520
+often in the Angular
+
+0:23:42.200,0:23:48.159
+community—closing the loop with the
+
+0:23:45.520,0:23:52.559
+note we started the episode on,
+
+0:23:48.159,0:23:54.919
+with so many ways there are to
+
+0:23:52.559,0:23:57.200
+build, to develop forms in
+
+0:23:54.919,0:24:00.120
+Angular, and having the Angular team
+
+0:23:57.200,0:24:02.360
+making this final push towards
+
+0:24:00.120,0:24:04.400
+Signal Forms,
+
+0:24:02.360,0:24:06.720
+how would you convince
+
+0:24:04.400,0:24:10.159
+someone to give a chance to
+
+0:24:06.720,0:24:11.919
+GolemUI in terms of structuring and
+
+0:24:10.159,0:24:14.279
+creating forms using all
+
+0:24:11.919,0:24:17.120
+these schemas, without having to
+
+0:24:14.279,0:24:19.960
+complicate their life again with a
+
+0:24:17.120,0:24:23.000
+fourth way of building them?
+
+0:24:19.960,0:24:25.559
+We have to keep in mind that GolemUI
+
+0:24:23.000,0:24:28.039
+can be used for everything, but
+
+0:24:25.559,0:24:30.720
+when you have a hammer, everything looks
+
+0:24:28.039,0:24:33.399
+like a nail, right? So, um,
+
+0:24:30.720,0:24:36.840
+we know that GolemUI fits
+
+0:24:33.399,0:24:39.159
+certain use cases where it's
+
+0:24:36.840,0:24:40.399
+more appropriate. If you need to make a
+
+0:24:39.159,0:24:42.279
+contact form, I'm not going to
+
+0:24:40.399,0:24:45.000
+tell you to install GolemUI and build a
+
+0:24:42.279,0:24:46.840
+contact form with GolemUI, because I think
+
+0:24:45.000,0:24:48.320
+a contact form with GolemUI
+
+0:24:46.840,0:24:51.559
+is a bit over-engineered,
+
+0:24:48.320,0:24:53.520
+right? Now, if you need to load
+
+0:24:51.559,0:24:56.000
+many forms from the server side,
+
+0:24:53.520,0:24:58.000
+if you need to generate, for
+
+0:24:56.000,0:25:00.880
+example, forms from an OpenAPI
+
+0:24:58.000,0:25:03.799
+spec, if you need to maintain a unified
+
+0:25:00.880,0:25:05.919
+formbase across
+
+0:25:03.799,0:25:08.640
+different frameworks,
+
+0:25:05.919,0:25:10.799
+if you need, for example,
+
+0:25:08.640,0:25:13.000
+form composability—keep in
+
+0:25:10.799,0:25:15.760
+mind that our API consists entirely of
+
+0:25:13.000,0:25:17.760
+functions, there are no templates,
+
+0:25:15.760,0:25:20.799
+you can generate all your
+
+0:25:17.760,0:25:23.440
+forms based on functions and no
+
+0:25:20.799,0:25:25.080
+templates. Then in the template, um, in
+
+0:25:23.440,0:25:26.679
+the template it's one line of code where
+
+0:25:25.080,0:25:28.240
+you pass the config with the
+
+0:25:26.679,0:25:30.559
+entire function tree, and those
+
+0:25:28.240,0:25:32.559
+functions are composable, meaning you
+
+0:25:30.559,0:25:34.760
+can have them anywhere and
+
+0:25:32.559,0:25:38.200
+call them from wherever you want, and
+
+0:25:34.760,0:25:40.520
+that's it. So it's very convenient to have,
+
+0:25:38.200,0:25:42.159
+for instance, a shipping address, which
+
+0:25:40.520,0:25:45.760
+now in Angular might be a
+
+0:25:42.159,0:25:48.039
+huge component with
+
+0:25:45.760,0:25:49.840
+if-else statements, for example, for billing
+
+0:25:48.039,0:25:52.000
+address or shipping address, that sort of
+
+0:25:49.840,0:25:53.240
+thing. Um, this way it's very
+
+0:25:52.000,0:25:55.520
+simple because you can call a
+
+0:25:53.240,0:25:58.279
+function, and in the function you pass
+
+0:25:55.520,0:26:00.760
+whether it's shipping or billing, and there you
+
+0:25:58.279,0:26:01.960
+compute it internally. Right?
+
+0:26:00.760,0:26:04.440
+Exactly. Exactly.
+
+0:26:01.960,0:26:06.200
+So, it's very easy to compose. If
+
+0:26:04.440,0:26:08.120
+you have a very large form
+
+0:26:06.200,0:26:10.320
+codebase, I think it will help
+
+0:26:08.120,0:26:11.720
+you a lot and remove
+
+0:26:10.320,0:26:14.240
+tons of code and tons of
+
+0:26:11.720,0:26:16.240
+complexity. For small things, I wouldn't
+
+0:26:14.240,0:26:19.000
+recommend it as much. I think it's
+
+0:26:16.240,0:26:20.840
+a library designed for form codebases
+
+0:26:19.000,0:26:22.640
+where you have
+
+0:26:20.840,0:26:24.960
+many forms, or where you need to
+
+0:26:22.640,0:26:26.279
+generate server-side forms because
+
+0:26:24.960,0:26:28.559
+the unique thing is that you have these
+
+0:26:26.279,0:26:32.799
+two things: the JSON API and the
+
+0:26:28.559,0:26:35.039
+TS API, so there you can leverage
+
+0:26:32.799,0:26:36.559
+that. For two or three forms, I wouldn't
+
+0:26:35.039,0:26:39.679
+recommend it. I think you can go with
+
+0:26:36.559,0:26:42.240
+Signal Forms and not add another library
+
+0:26:39.679,0:26:44.120
+to your stack. I'll also tell you that with
+
+0:26:42.240,0:26:46.919
+this you don't need Signal Forms, you don't
+
+0:26:44.120,0:26:48.159
+need to, because you don't have to add a
+
+0:26:46.919,0:26:49.880
+form library, we already
+
+0:26:48.159,0:26:51.720
+have validators, we have everything.
+
+0:26:49.880,0:26:53.880
+Maybe you get used to it and end up switching
+
+0:26:51.720,0:26:57.440
+all your forms from Signal Forms to
+
+0:26:53.880,0:27:00.200
+GolemUI. And well, that's an option. Honestly,
+
+0:26:57.440,0:27:02.039
+I'm really looking forward to seeing
+
+0:27:00.200,0:27:04.600
+projects that are using it. We've
+
+0:27:02.039,0:27:06.559
+seen one that's using it well, but
+
+0:27:04.600,0:27:08.279
+I'm eager to see it in a company,
+
+0:27:06.559,0:27:09.840
+you know? In a large place. But well,
+
+0:27:08.279,0:27:10.880
+we just launched a month ago. Step by
+
+0:27:09.840,0:27:13.080
+step, step by step.
+
+0:27:10.880,0:27:15.960
+Exactly. And 1.2 comes with many
+
+0:27:13.080,0:27:19.360
+great things coming up soon, I hope, in a
+
+0:27:15.960,0:27:21.600
+few months or weeks. I
+
+0:27:19.360,0:27:23.600
+think—well, I hope that in
+
+0:27:21.600,0:27:25.480
+a matter of three or four months,
+
+0:27:23.600,0:27:26.760
+things will appear.
+
+0:27:25.480,0:27:28.159
+Great! People
+
+0:27:26.760,0:27:29.440
+love hearing that.
+
+0:27:28.159,0:27:30.440
+They're working on it, working
+
+0:27:29.440,0:27:34.440
+on it.
+
+0:27:30.440,0:27:37.440
+Awesome. And Raúl, grateful! I wish you
+
+0:27:34.440,0:27:39.039
+tremendous success with everything
+
+0:27:37.440,0:27:43.399
+that you're building now, now that
+
+0:27:39.039,0:27:44.840
+you are 100% a company, self-employed or
+
+0:27:43.399,0:27:45.960
+whatever it's called over there in Spain.
+
+0:27:44.840,0:27:47.000
+Yeah, yeah. Moving forward.
+
+0:27:45.960,0:27:50.039
+You already have, [laughs]
+
+0:27:47.000,0:27:52.600
+yeah, you already have plenty of capability to
+
+0:27:50.039,0:27:55.080
+continue building along the path that
+
+0:27:52.600,0:27:56.559
+will bring us a much more robust
+
+0:27:55.080,0:27:58.360
+tool, right? As
+
+0:27:56.559,0:28:01.440
+you were mentioning, to be able to use it
+
+0:27:58.360,0:28:04.559
+in enterprise environments, so
+
+0:28:01.440,0:28:06.840
+is there anything else we haven't mentioned
+
+0:28:04.559,0:28:09.960
+that you'd like to highlight before we wrap up?
+
+0:28:06.840,0:28:14.000
+Um, nothing. Hm. We like to emphasize
+
+0:28:09.960,0:28:18.519
+quite a lot that with
+
+0:28:14.000,0:28:20.799
+all this AI topic, there are people
+
+0:28:18.519,0:28:22.360
+building custom libraries in their
+
+0:28:20.799,0:28:25.159
+projects.
+
+0:28:22.360,0:28:26.960
+I don't recommend it. Um, you know, I've
+
+0:28:25.159,0:28:29.519
+seen people say, "Oh, I wrote my own
+
+0:28:26.960,0:28:33.000
+charts here. Why write your own
+
+0:28:29.519,0:28:35.960
+charts when there are already libraries
+
+0:28:33.000,0:28:38.760
+available, right?" So, um, I
+
+0:28:35.960,0:28:40.919
+think what needs to be done is to
+
+0:28:38.760,0:28:43.480
+evangelize on a couple of fronts.
+
+0:28:40.919,0:28:45.760
+First, AIs are very efficient if
+
+0:28:43.480,0:28:48.880
+they know your library, and you'll save
+
+0:28:45.760,0:28:52.399
+tons of tokens and tons of development
+
+0:28:48.880,0:28:55.000
+time. And second, on the other hand, if
+
+0:28:52.399,0:28:57.840
+you're making a chart library—which is
+
+0:28:55.000,0:29:00.640
+not your core business—or forms or
+
+0:28:57.840,0:29:02.120
+grids or components or whatever,
+
+0:29:00.640,0:29:03.720
+think of all the unit testing and
+
+0:29:02.120,0:29:05.399
+evaluations you have to do there. No,
+
+0:29:03.720,0:29:08.240
+it's not your core business. You're not
+
+0:29:05.399,0:29:09.000
+adding any value to your business. The
+
+0:29:08.240,0:29:10.240
+only thing you're adding is...
+
+0:29:09.000,0:29:12.919
+...components you might not even realize
+
+0:29:10.240,0:29:14.360
+could be important for you,
+
+0:29:12.919,0:29:16.640
+where you'd have to sink even more
+
+0:29:14.360,0:29:18.880
+time into development,
+
+0:29:16.640,0:29:20.360
+when it's already solved by another,
+
+0:29:18.880,0:29:22.120
+by a public library.
+
+0:29:20.360,0:29:24.279
+Exactly. So I think we have to
+
+0:29:22.120,0:29:25.799
+evangelize a bit about this,
+
+0:29:24.279,0:29:28.159
+because I'm seeing a somewhat dangerous
+
+0:29:25.799,0:29:30.360
+trend towards building house-of-cards
+
+0:29:28.159,0:29:33.440
+systems that in a year or two might all
+
+0:29:30.360,0:29:36.679
+collapse down, because, wow,
+
+0:29:33.440,0:29:39.840
+'I built this chart library myself because
+
+0:29:36.679,0:29:41.559
+the design integrated perfectly'
+
+0:29:39.840,0:29:44.200
+and whatever.
+
+0:29:41.559,0:29:45.679
+Too much coupling there makes it hard.
+
+0:29:44.200,0:29:47.720
+Well, you've lived the experience with
+
+0:29:45.679,0:29:49.399
+something extremely coupled to a
+
+0:29:47.720,0:29:50.960
+business requirement, and then having to
+
+0:29:49.399,0:29:52.480
+extract it. Basically you have
+
+0:29:50.960,0:29:53.480
+to rewrite it, as you were
+
+0:29:52.480,0:29:55.679
+telling us.
+
+0:29:53.480,0:29:58.480
+Exactly. [sigh] Yeah, yeah, exactly
+
+0:29:55.679,0:30:01.480
+like that. And that's it. Nothing else. Thank
+
+0:29:58.480,0:30:03.519
+you very much for inviting me. Always a
+
+0:30:01.480,0:30:06.200
+pleasure to come here.
+
+0:30:03.519,0:30:08.159
+Alright, thanks Raúl, and good luck,
+
+0:30:06.200,0:30:10.519
+much success in what's coming next
+
+0:30:08.159,0:30:15.025
+with Golem. So we'll keep in
+
+0:30:10.519,0:30:17.045
+touch. Bye. No.
+
+0:30:15.025,0:30:17.045
+[music]

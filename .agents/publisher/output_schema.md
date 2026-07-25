@@ -64,10 +64,11 @@ Final file must be structurally identical to the original for YouTube auto-sync.
 Technically reviewed and translated English transcript WITH TIMESTAMPS.
 FORMAT: Valid SBV (SubViewer) format, strictly maintaining the exact same timestamps from the original `captions.sbv`.
 Save tokens, use the same corrected terms from the spanish corrected transcript.
-DO NOT translate the brand name "Angularidades" (keep it as "Angularidades", do not use "Angularities").
+MUST translate 100% of all text blocks into fluent English. Partial/incomplete translations leaving Spanish words (e.g. "utilizando el") are strictly prohibited.
+DO NOT translate the brand name "Angularidades" (keep as "Angularidades"). Keep "GolemUI" as "GolemUI" without spaces.
 DO NOT add speaker tags (e.g., "Name:").
 ONLY correct technical terms and translate accurately to English.
-Final file must contain the exact same timestamp blocks as the original Spanish SBV, but with the text translated.
+Final file must contain the exact same timestamp blocks as the original Spanish SBV, but with the text completely translated into English.
 
 ---
 ---
