@@ -73,26 +73,32 @@ async function downloadExistingCaptions(youtube, videoId, episodeDir, isDoctor, 
     });
     const captions = response.data.items;
 
-    if (isDoctor || isDryRun) {
-      if (captions && captions.length > 0) {
-        logDoctor(true, `Found ${captions.length} caption track(s) on YouTube`);
-        captions.forEach((c) => {
-          console.log(
-            `    ${colors.cyan}↳${colors.reset} [${c.snippet.language}] ${c.snippet.name || c.snippet.trackKind}`
-          );
-        });
-        if (isDryRun && !isDoctor) {
-          console.log(
-            `${colors.cyan}↳${colors.reset} [DRY RUN] Would download YouTube captions to ${episodeDir}/1_recording/`
-          );
-        }
-      } else {
-        logDoctor(false, 'Found existing caption tracks on YouTube', true);
+    if (!captions || captions.length === 0) {
+      if (isDoctor) {
+        logDoctor(
+          false,
+          'No caption tracks found on YouTube yet (auto-captions may still be processing)',
+          true
+        );
       }
       return;
     }
 
-    if (!captions || captions.length === 0) return;
+    if (isDoctor) {
+      logDoctor(true, `Found ${captions.length} caption track(s) on YouTube`);
+      captions.forEach((c) => {
+        console.log(
+          `    ${colors.cyan}↳${colors.reset} [${c.snippet.language}] ${c.snippet.name || c.snippet.trackKind}`
+        );
+      });
+    }
+
+    if (isDryRun) {
+      console.log(
+        `${colors.cyan}↳${colors.reset} [DRY RUN] Would download YouTube captions to ${episodeDir}/1_recording/`
+      );
+      return;
+    }
 
     let track =
       captions.find((c) => c.snippet.trackKind === 'ASR' && c.snippet.language === 'es') ||
@@ -100,10 +106,11 @@ async function downloadExistingCaptions(youtube, videoId, episodeDir, isDoctor, 
       captions[0];
 
     if (track) {
-      if (isDoctor)
+      if (isDoctor) {
         console.log(
-          `Downloading YouTube captions (${track.snippet.language} - ${track.snippet.trackKind})...`
+          `    ${colors.cyan}↳${colors.reset} Downloading YouTube captions (${track.snippet.language} - ${track.snippet.trackKind || 'standard'})...`
         );
+      }
       const downloadRes = await youtube.captions.download({
         id: track.id,
         tfmt: 'sbv'
@@ -116,7 +123,12 @@ async function downloadExistingCaptions(youtube, videoId, episodeDir, isDoctor, 
       }
 
       saveCaptions(episodeDir, data);
-      if (isDoctor) console.log(`Successfully downloaded youtube_captions.sbv`);
+      if (isDoctor) {
+        logDoctor(
+          true,
+          `Downloaded YouTube captions (${track.snippet.language}) to 1_recording/youtube_captions.sbv`
+        );
+      }
     }
   } catch (error) {
     if (isDoctor) logDoctor(false, `Failed to fetch captions list: ${error.message}`);

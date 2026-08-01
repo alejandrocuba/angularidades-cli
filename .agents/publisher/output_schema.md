@@ -39,11 +39,11 @@ Temas que abordamos durante la conversación:
 ✔️ {{Point 2}}
 ✔️ {{Point 3}}
 
-🎧 Escucha el episodio #{{episode_number}} en YouTube (Audio en español con subtítulos en inglés): {{link}} o en tu plataforma de podcast favorita.
+🎧 Escucha el episodio #{{episode_number}} en YouTube (audio en español con subtítulos en inglés): {{link}}, Spotify o en tu plataforma de podcast favorita.
 ```
 *Rules:*
 - GENERATE BOTH SPANISH AND ENGLISH FILES.
-- English version must mention: "Spanish audio with English subtitles". Spanish version must mention "Audio en español con subtítulos en inglés".
+- English version must mention: "Spanish audio with subtitles". Spanish version must mention "Audio en español con subtítulos".
 - Intro: factual, concise, relevant for technical audience.
 - Mention guest's name and episode number. Use bullet points (✔️).
 
