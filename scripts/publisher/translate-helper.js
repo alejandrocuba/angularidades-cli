@@ -87,8 +87,10 @@ async function runTranslateHelper(command, lang = 'en', episodeArg = null) {
           f.endsWith('.json')
       )
       .sort((a, b) => {
-        const aStart = parseInt(a.split('-')[1]);
-        const bStart = parseInt(b.split('-')[1]);
+        const aMatch = a.match(/-(\d+)-\d+\.json$/);
+        const bMatch = b.match(/-(\d+)-\d+\.json$/);
+        const aStart = aMatch ? parseInt(aMatch[1], 10) : 0;
+        const bStart = bMatch ? parseInt(bMatch[1], 10) : 0;
         return aStart - bStart;
       });
 
@@ -241,7 +243,13 @@ if (isMain()) {
   const command = args[0]; // 'dump', 'build', or 'validate'
   const lang = args.find((a) => a === 'en' || a === 'es') || 'en';
   let episodeArg = args.find(
-    (arg) => !arg.startsWith('--') && arg !== 'dump' && arg !== 'build' && arg !== 'validate'
+    (arg) =>
+      !arg.startsWith('--') &&
+      arg !== 'dump' &&
+      arg !== 'build' &&
+      arg !== 'validate' &&
+      arg !== 'en' &&
+      arg !== 'es'
   );
   runTranslateHelper(command, lang, episodeArg).catch(console.error);
 }

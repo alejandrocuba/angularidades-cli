@@ -1,0 +1,3375 @@
+0:00:06.879,0:00:14.200
+Nico, pues acá ya tenemos Angula 22.1,
+
+0:00:12.200,0:00:15.960
+la primera de las cinco versiones
+
+0:00:14.200,0:00:18.080
+minors, precursoras de lo que en junio
+
+0:00:15.960,0:00:21.800
+del año que viene va a ser literado a la
+
+0:00:18.080,0:00:23.560
+versión 23 o quién sabe Angular 2027. Si
+
+0:00:21.800,0:00:24.760
+no tenemos idea de qué es lo que nos va
+
+0:00:23.560,0:00:26.119
+a deparar este nuevo ciclo de
+
+0:00:24.760,0:00:29.640
+lanzamiento, que al menos durante los
+
+0:00:26.119,0:00:31.000
+primeros 11 meses continuará adoptando
+
+0:00:29.640,0:00:33.040
+lo que se conoce como el sistema
+
+0:00:31.000,0:00:34.559
+deionado semántico. ¿Qué crees de todo
+
+0:00:33.040,0:00:36.559
+esto?
+
+0:00:34.559,0:00:39.120
+Wow, pues ya ya empezaste fuerte porque
+
+0:00:36.559,0:00:41.680
+literalmente esta
+
+0:00:39.120,0:00:44.760
+rompe un poco el el horario que tenía
+
+0:00:41.680,0:00:46.559
+The Cashuls de Angular y ya veníamos
+
+0:00:44.760,0:00:48.879
+desde años. Angular ya lleva que unos
+
+0:00:46.559,0:00:50.280
+12, 15 años en la industria, no me
+
+0:00:48.879,0:00:52.280
+acuerdo mucho,
+
+0:00:50.280,0:00:53.800
+desde 2015, ¿no?
+
+0:00:52.280,0:00:55.680
+2014, 2015.
+
+0:00:53.800,0:00:58.320
+Entonces, ya lleva un montón de tiempo y
+
+0:00:55.680,0:01:01.239
+en todo ese tiempo todos los releases ya
+
+0:00:58.320,0:01:05.400
+habían sido como periódicamente cada 6
+
+0:01:01.239,0:01:07.560
+meses un mayor, ¿verdad? Y ahora nos
+
+0:01:05.400,0:01:08.880
+vienen con esta noticia que realmente a
+
+0:01:07.560,0:01:12.720
+mí me ha causado mucha curiosidad, no
+
+0:01:08.880,0:01:15.640
+sea a ti, que la mayoría casi el 99%, el
+
+0:01:12.720,0:01:18.680
+95% lo ha recibido de muy grata manera,
+
+0:01:15.640,0:01:20.920
+o sea, como felices con el cambio de que
+
+0:01:18.680,0:01:23.079
+ahora los major reals sean cada 12
+
+0:01:20.920,0:01:25.400
+meses. ¿A ti cómo te va eso?
+
+0:01:23.079,0:01:27.200
+Total de totalmente de acuerdo. Lo único
+
+0:01:25.400,0:01:30.439
+que pasa es que hay algo fatídico con el
+
+0:01:27.200,0:01:32.439
+número tres, ¿no? Angular 3 no existió
+
+0:01:30.439,0:01:34.240
+debido a algo que se nos va
+
+0:01:32.439,0:01:37.159
+completamente del scoke de este
+
+0:01:34.240,0:01:39.759
+episodio. En la 13 se fue con todo lo
+
+0:01:37.159,0:01:41.520
+que vino después de una pausa casi que
+
+0:01:39.759,0:01:44.479
+de cinco versiones con toda la
+
+0:01:41.520,0:01:46.320
+refactorización de compilado para IV y
+
+0:01:44.479,0:01:47.920
+ahora tenemos la 23 que
+
+0:01:46.320,0:01:50.719
+como había mencionado al principio, ¿no?
+
+0:01:47.920,0:01:53.280
+No se sabe si eso va a ser un buen
+
+0:01:50.719,0:01:55.280
+recordatorio de que es la versión que va
+
+0:01:53.280,0:01:57.079
+directamente correlacionada con el año
+
+0:01:55.280,0:01:59.240
+para recordarnos si estamos realmente
+
+0:01:57.079,0:02:01.439
+atrasados y cuán atrasados estamos.
+
+0:01:59.240,0:02:03.039
+Entonces como que todavía hay unos
+
+0:02:01.439,0:02:05.280
+cuantos meses por delante para poder
+
+0:02:03.039,0:02:06.079
+entender cuál va a ser el impacto real
+
+0:02:05.280,0:02:08.119
+de todo esto.
+
+0:02:06.079,0:02:10.959
+¿Sabes que me hubiera gustado? O sea, ya
+
+0:02:08.119,0:02:12.800
+que ya que en esa versión, bueno, en la
+
+0:02:10.959,0:02:15.000
+versión esta tres que nunca tuvimos de
+
+0:02:12.800,0:02:17.840
+Angular, me hubiera gustado que hubieran
+
+0:02:15.000,0:02:19.239
+tomado el approach que tuvo Note, que
+
+0:02:17.840,0:02:21.720
+Note también hizo ese cambio de
+
+0:02:19.239,0:02:24.280
+releases. Ahora es una vez al al año y
+
+0:02:21.720,0:02:25.920
+no también se fue por ese camino que fue
+
+0:02:24.280,0:02:27.800
+interesante, pero
+
+0:02:25.920,0:02:30.440
+tienes lo el tema de los pares impares,
+
+0:02:27.800,0:02:31.879
+que si es LTS, que si es experimental,
+
+0:02:30.440,0:02:34.080
+ellos estaban un poco más complicados
+
+0:02:31.879,0:02:39.239
+que lo que es Angular cada 6 meses
+
+0:02:34.080,0:02:41.040
+y ellos dijeron eh, no sé si si si
+
+0:02:39.239,0:02:43.680
+hicieron saltos o si simplemente
+
+0:02:41.040,0:02:45.640
+coincidió, pero ellos van a dejar la
+
+0:02:43.680,0:02:51.879
+versión del año. Es decir,
+
+0:02:45.640,0:02:53.800
+B26 es el año 2026, ¿no? B25 es la B25
+
+0:02:51.879,0:02:56.800
+es la del año 2025. Entonces como que el
+
+0:02:53.800,0:02:58.159
+año coincide con el release
+
+0:02:56.800,0:02:59.760
+total. Y yo creo que eso fue más
+
+0:02:58.159,0:03:01.560
+sorpresa que otra cosa, ¿no? Porque
+
+0:02:59.760,0:03:04.000
+sí, yo creo que se coincidió,
+
+0:03:01.560,0:03:05.640
+¿sabes? Si lo hicieron a propósito,
+
+0:03:04.000,0:03:08.519
+tienen que haber tenido un roadmap de
+
+0:03:05.640,0:03:11.080
+años para poder esperar. Angular debería
+
+0:03:08.519,0:03:13.200
+esperar posiblemente al año 202 para
+
+0:03:11.080,0:03:15.720
+entrar ahí en la cadencia anual y yo no
+
+0:03:13.200,0:03:17.080
+creo que vaya a suceder un espera tan
+
+0:03:15.720,0:03:19.959
+grande. De hecho, ya no porque ya está
+
+0:03:17.080,0:03:23.560
+aprobado por request, así que andando lo
+
+0:03:19.959,0:03:26.519
+que entonces tenemos 202, ¿qué es esto?
+
+0:03:23.560,0:03:31.000
+2025 estamos, ¿sí? O 2026. Ya, ya no sé
+
+0:03:26.519,0:03:34.439
+qué. 26 ya. Okay. En el este es el 2026
+
+0:03:31.000,0:03:36.799
+que entonces a partir del 2027 el otro
+
+0:03:34.439,0:03:37.200
+año tendríamos la 23, ¿no?
+
+0:03:36.799,0:03:39.680
+Correcto.
+
+0:03:37.200,0:03:41.159
+Eh, entonces ahí van a ir los pares. Me
+
+0:03:39.680,0:03:43.159
+hubiera encantado que hubiera hecho par
+
+0:03:41.159,0:03:45.560
+como Note, que el año coincidera con el
+
+0:03:43.159,0:03:47.599
+número de de versión, pero obviamente
+
+0:03:45.560,0:03:50.120
+eso es una cosa más cosmética que
+
+0:03:47.599,0:03:53.400
+realmente funcional. Pero eh pues sí,
+
+0:03:50.120,0:03:55.040
+ahora tenemos releases una vez al año
+
+0:03:53.400,0:03:57.799
+y es mucho más entretenido que todas las
+
+0:03:55.040,0:04:00.200
+fatigas esta actualización que estaba
+
+0:03:57.799,0:04:02.200
+generando un costo bastante alto,
+
+0:04:00.200,0:04:05.400
+fundamentalmente para productos
+
+0:04:02.200,0:04:07.799
+empresariales que tienen que normalmente
+
+0:04:05.400,0:04:12.040
+venderle al negocio, explicarle de nuevo
+
+0:04:07.799,0:04:16.440
+una vez más cada 6 meses la necesidad de
+
+0:04:12.040,0:04:18.320
+romper con lógica que funciona, que está
+
+0:04:16.440,0:04:20.280
+ahí bien, pero bueno, gracias a las
+
+0:04:18.320,0:04:22.520
+esquemáticas, no tenemos que pasar por
+
+0:04:20.280,0:04:24.680
+tanto tipo de dificultades, pero en
+
+0:04:22.520,0:04:27.160
+bases de código que son generalmente
+
+0:04:24.680,0:04:29.600
+grandes, este tipo de impacto cada 6
+
+0:04:27.160,0:04:31.000
+meses es a veces como que demasiado
+
+0:04:29.600,0:04:33.880
+demasiada frecuencia.
+
+0:04:31.000,0:04:36.240
+¿Sabes? Yo siempre tuve esa duda de por
+
+0:04:33.880,0:04:38.160
+qué la gente sea tanto del de estas
+
+0:04:36.240,0:04:40.400
+migraciones o de estas actualizaciones
+
+0:04:38.160,0:04:42.240
+si los esquematics son, o sea, Angular
+
+0:04:40.400,0:04:44.720
+ha hecho un trabajo hermoso con los
+
+0:04:42.240,0:04:46.440
+esquematics haciendo migraciones y yo
+
+0:04:44.720,0:04:48.199
+dije, pero es que solo y con AI ahorita
+
+0:04:46.440,0:04:50.360
+es aún más fácil, ¿no? Si se rompe algo
+
+0:04:48.199,0:04:52.800
+como que uno puede darle la tarea a la
+
+0:04:50.360,0:04:54.280
+AI y lo arregla. Pero yo creo que es más
+
+0:04:52.800,0:04:56.000
+que todo porque nosotros vivimos y
+
+0:04:54.280,0:04:57.639
+llamamos Angular y entonces y llevamos
+
+0:04:56.000,0:05:00.320
+un montón de tiempo y somos Angular
+
+0:04:57.639,0:05:02.440
+nerds básicamente. Pero si yo ya leo a
+
+0:05:00.320,0:05:04.479
+la comunidad y a otras personas y más
+
+0:05:02.440,0:05:06.280
+enterprise la verdad sí era o lo que he
+
+0:05:04.479,0:05:08.800
+recibido es que la gente está
+
+0:05:06.280,0:05:11.039
+contentísimo, está feliz de que uf, ya
+
+0:05:08.800,0:05:13.479
+no tengo que hacer rele cada 6 meses o
+
+0:05:11.039,0:05:16.039
+convencer a mi jefe. Y si me dejas
+
+0:05:13.479,0:05:18.240
+agregar un punto, yo desde la parte
+
+0:05:16.039,0:05:21.000
+académica, desde la parte de cursos, por
+
+0:05:18.240,0:05:24.120
+ejemplo, cuando dicaba mis cursos, yo
+
+0:05:21.000,0:05:26.000
+siempre escuchaba ese problema de el
+
+0:05:24.120,0:05:27.840
+curso está desactualizado, este curso
+
+0:05:26.000,0:05:29.520
+porque claro, en 6 meses ya se
+
+0:05:27.840,0:05:32.400
+desactualiza el curso y casi que
+
+0:05:29.520,0:05:35.319
+tendrías que haber sacado el curso casi
+
+0:05:32.400,0:05:37.319
+con el el el mes que angularizo ese
+
+0:05:35.319,0:05:39.639
+ruliza para que entonces durante esos 6
+
+0:05:37.319,0:05:41.520
+meses esté lo más actualizado posible.
+
+0:05:39.639,0:05:43.600
+Pero si ya pasaron esos 6 meses y tomas
+
+0:05:41.520,0:05:46.120
+el curso, no sé, ya ha pasado tres,
+
+0:05:43.600,0:05:47.880
+cuatro y ya luego te viene otro release,
+
+0:05:46.120,0:05:49.680
+como que el estudiante lo toma desde,
+
+0:05:47.880,0:05:52.360
+uf, pues estoy aprendiendo, me acabo de
+
+0:05:49.680,0:05:53.720
+comprar un curso hace dos meses y ahora
+
+0:05:52.360,0:05:55.639
+resulta que hay una nueva versión de
+
+0:05:53.720,0:05:58.000
+Angular. Entonces, como que había una
+
+0:05:55.639,0:06:00.400
+frustración en la academia de que los
+
+0:05:58.000,0:06:02.000
+cursos tenían muy poca duración por
+
+0:06:00.400,0:06:03.759
+porque Angular pues viene haciendo
+
+0:06:02.000,0:06:05.680
+releces cada 6 meses. Yo siempre les
+
+0:06:03.759,0:06:07.000
+vendía, oigan, pues al final estos son
+
+0:06:05.680,0:06:08.639
+los foundations, o sea, los foundations
+
+0:06:07.000,0:06:09.919
+no cambian.
+
+0:06:08.639,0:06:12.199
+Lo que cambia es que de pronto habían
+
+0:06:09.919,0:06:14.440
+nuevas features o nuevas cositas que
+
+0:06:12.199,0:06:16.639
+implementar, pero sí siempre fue un
+
+0:06:14.440,0:06:18.919
+poquito complicado en la academia ese
+
+0:06:16.639,0:06:20.199
+esa cadencia porque tocaba para el
+
+0:06:18.919,0:06:22.000
+estudiante era este curso está
+
+0:06:20.199,0:06:24.280
+desactualizado. Punto.
+
+0:06:22.000,0:06:25.960
+Y es una lección que había que estar
+
+0:06:24.280,0:06:28.360
+ideando con ella todo el tiempo de
+
+0:06:25.960,0:06:30.560
+tratar de que en la parte del video uno
+
+0:06:28.360,0:06:33.160
+no mencionar tanto la versión sino en la
+
+0:06:30.560,0:06:35.080
+metadata, etcétera. Le pasaba lo mismo a
+
+0:06:33.160,0:06:37.240
+Débora Curata, le pasaba también a
+
+0:06:35.080,0:06:39.400
+Besael, a prácticamente todas las
+
+0:06:37.240,0:06:41.919
+personas que tenían una colección de de
+
+0:06:39.400,0:06:43.599
+información asociada con una versión que
+
+0:06:41.919,0:06:45.680
+no cambiaba tanto, no era como el cambio
+
+0:06:43.599,0:06:49.639
+drástico ese que hubo entre la 15, la 16
+
+0:06:45.680,0:06:51.680
+con la 17 con el ángulo moderno, pero ya
+
+0:06:49.639,0:06:54.520
+esto viene como que a ralentizar un
+
+0:06:51.680,0:06:57.720
+poco, a tener ese núcleo congelado por
+
+0:06:54.520,0:06:59.879
+un tiempo un poco mayor para que también
+
+0:06:57.720,0:07:02.520
+le brinde estabilidad de contexto a los
+
+0:06:59.879,0:07:05.400
+LLMs, a los
+
+0:07:02.520,0:07:07.479
+y operar con un poco más ahí de de
+
+0:07:05.400,0:07:09.520
+flexibilidad a la hora de poder tomar
+
+0:07:07.479,0:07:11.000
+decisiones técnicas.
+
+0:07:09.520,0:07:13.240
+Me me hiciste acordar de que
+
+0:07:11.000,0:07:14.919
+literalmente cuando grabábamos cursos,
+
+0:07:13.240,0:07:19.319
+cuando yo grabo cursos, a veces nos
+
+0:07:14.919,0:07:21.400
+tocaba no pasar el screen recorder por
+
+0:07:19.319,0:07:23.479
+archivos como el package.json para no
+
+0:07:21.400,0:07:25.879
+mostrar la versión de Angler,
+
+0:07:23.479,0:07:27.560
+como para que no se viera porque igual
+
+0:07:25.879,0:07:29.960
+tenía sentido porque realmente eso no
+
+0:07:27.560,0:07:32.960
+cambia entre versiones, pero como para
+
+0:07:29.960,0:07:34.440
+que no no diera la ilusión de que es
+
+0:07:32.960,0:07:36.199
+Angular y no importa en qué versión
+
+0:07:34.440,0:07:39.199
+esté. Y teóricamente eso es cierto, solo
+
+0:07:36.199,0:07:41.400
+que eh bueno, había esta carga cognitiva
+
+0:07:39.199,0:07:43.319
+de esta versión no es la más
+
+0:07:41.400,0:07:45.360
+actualizada, ¿no? Pero sí recuerdo que a
+
+0:07:43.319,0:07:46.800
+veces te decíamos, "No, no, no pases por
+
+0:07:45.360,0:07:49.120
+el package.jonjason porque ahí va a
+
+0:07:46.800,0:07:51.599
+salir la versión." Incluso para quienes
+
+0:07:49.120,0:07:53.639
+mantienen bibliotecas del ecosistema de
+
+0:07:51.599,0:07:56.039
+Angular, tienen que estar todo el tiempo
+
+0:07:53.639,0:07:59.720
+arriba de eso y teniendo no solamente
+
+0:07:56.039,0:08:01.199
+rangos, sino especificar, si tener bien
+
+0:07:59.720,0:08:03.479
+claro cuándo es que va a ocurrir un
+
+0:08:01.199,0:08:06.120
+breaking change que pueda impactar
+
+0:08:03.479,0:08:08.919
+directamente la compatibilidad de ellos
+
+0:08:06.120,0:08:12.639
+con las últimas versiones y todo eso
+
+0:08:08.919,0:08:14.759
+genera fricción innecesaria en el DX, en
+
+0:08:12.639,0:08:17.800
+la experiencia del desarrollador. Y
+
+0:08:14.759,0:08:20.720
+bueno, nada, si lo que pasa es que si un
+
+0:08:17.800,0:08:22.960
+equipo interpreta esa cadencia nueva, la
+
+0:08:20.720,0:08:25.120
+cadencia anual como una excusa para no
+
+0:08:22.960,0:08:26.759
+actualizar un proyecto durante los
+
+0:08:25.120,0:08:28.639
+próximos 12 meses, se va a perder la
+
+0:08:26.759,0:08:32.080
+ventaja de la adopción incremental
+
+0:08:28.639,0:08:33.279
+utilizando este upgrade de los minors. Y
+
+0:08:32.080,0:08:35.159
+generalmente lo que va a terminar
+
+0:08:33.279,0:08:36.760
+pasando es la parte contraproducente,
+
+0:08:35.159,0:08:39.919
+¿no?
+
+0:08:36.760,0:08:42.719
+acumularían el impacto de cuatro a seis
+
+0:08:39.919,0:08:44.600
+versiones menores de un golpe y si un
+
+0:08:42.719,0:08:46.920
+equipo esperar a la versión major para
+
+0:08:44.600,0:08:50.839
+actualizar. Así que no sé si sientas que
+
+0:08:46.920,0:08:52.440
+hay alguna otra desventaja con esto de
+
+0:08:50.839,0:08:54.440
+el release anual.
+
+0:08:52.440,0:08:56.160
+Hay la mayoría creo que son ventajas y
+
+0:08:54.440,0:08:57.800
+lo que tú mencionas es importante, no es
+
+0:08:56.160,0:09:00.399
+como que el equipo de Angular entonces
+
+0:08:57.800,0:09:02.560
+eh va a tomar vacaciones y hasta el otro
+
+0:09:00.399,0:09:05.760
+año vuelve para hacer un release. Si si
+
+0:09:02.560,0:09:08.240
+hay una versión 22.1 uno pues hace las
+
+0:09:05.760,0:09:10.320
+great si es posible, solo que ya no va a
+
+0:09:08.240,0:09:12.040
+ser tan traumático, no es un mayor, pero
+
+0:09:10.320,0:09:14.320
+igual sí mantente lo más actualizado
+
+0:09:12.040,0:09:16.120
+posible. Yo creo que esa sigue siendo la
+
+0:09:14.320,0:09:18.600
+como la best practice, solo que ya no va
+
+0:09:16.120,0:09:20.000
+a ser no van a breaking change
+
+0:09:18.600,0:09:22.079
+básicamente.
+
+0:09:20.000,0:09:23.839
+Exacto. Sí, usando los renovate
+
+0:09:22.079,0:09:25.680
+actualiza manualmente a la versión
+
+0:09:23.839,0:09:28.560
+menor, pero no tienes que correr todo un
+
+0:09:25.680,0:09:31.320
+set nuevo esquemáticas que permitan
+
+0:09:28.560,0:09:34.200
+tener el código bien estructurado con
+
+0:09:31.320,0:09:36.040
+algo que rompa con un breaking change. Y
+
+0:09:34.200,0:09:38.079
+ojo con este salto, no es que se esté
+
+0:09:36.040,0:09:40.760
+reduciendo la capacidad del equipo
+
+0:09:38.079,0:09:42.760
+central de Angular para entregar nuevos
+
+0:09:40.760,0:09:44.399
+features, sino ellos están incrementando
+
+0:09:42.760,0:09:47.920
+el tiempo entre esos cambios abruptos
+
+0:09:44.399,0:09:50.720
+que ocurren con la oportunidad de no
+
+0:09:47.920,0:09:53.720
+solo de de lanzar ese major una vez al
+
+0:09:50.720,0:09:56.600
+año, sino incrementar, por consiguiente
+
+0:09:53.720,0:10:00.120
+el LTS, es decir, el soporte extendido
+
+0:09:56.600,0:10:03.519
+de las versiones. Antes se tenía un LTS
+
+0:10:00.120,0:10:06.920
+de 18 meses, es decir, un año y medio. Y
+
+0:10:03.519,0:10:09.600
+ahora el LTS pasa a ser de 2 años.
+
+0:10:06.920,0:10:12.440
+Hm. Eso es importante porque de por sí
+
+0:10:09.600,0:10:15.320
+hay compañías que todavía
+
+0:10:12.440,0:10:18.279
+ganan gran parte de dinero por mantener
+
+0:10:15.320,0:10:20.320
+Angular GS o por mantener versiones muy
+
+0:10:18.279,0:10:22.880
+viejas de Angular, porque ya Angular no
+
+0:10:20.320,0:10:25.399
+les da soporte. Angular by default, el
+
+0:10:22.880,0:10:27.640
+el LTE solo pues son como a versiones
+
+0:10:25.399,0:10:29.760
+dos, tres atrás, pero hay compañías
+
+0:10:27.640,0:10:31.440
+todavía que tienen Angular. Yo he visto
+
+0:10:29.760,0:10:34.079
+bancos aquí en Bolivia que tienen
+
+0:10:31.440,0:10:36.440
+Angular 4 o aplicaciones que todavía
+
+0:10:34.079,0:10:38.279
+corren en Angular GS y Angular
+
+0:10:36.440,0:10:40.440
+obviamente ya no no les da soporte a
+
+0:10:38.279,0:10:43.800
+estas versiones. Entonces hay compañías
+
+0:10:40.440,0:10:46.399
+solo a brindar soporte a esas versiones
+
+0:10:43.800,0:10:48.480
+muy viejas de Angular, pero eh con esto
+
+0:10:46.399,0:10:49.920
+se incrementa un poquito más ese tiempo,
+
+0:10:48.480,0:10:52.279
+digamos, ¿no? Entre versiones.
+
+0:10:49.920,0:10:55.880
+Exacto. Y también existe la otra parte
+
+0:10:52.279,0:10:56.959
+que es un caso un poco más feliz en el
+
+0:10:55.880,0:10:59.240
+hecho de que tú puedes estar, por
+
+0:10:56.959,0:11:00.880
+ejemplo, en la versión 22, pero tener
+
+0:10:59.240,0:11:02.320
+una base de código que no está
+
+0:11:00.880,0:11:05.839
+modernizada, que todavía sigue
+
+0:11:02.320,0:11:08.000
+utilizando módulos, es decir, NGOs, eh,
+
+0:11:05.839,0:11:11.920
+que tiene las directivas estructurales
+
+0:11:08.000,0:11:15.399
+aquellas de NG if, etcétera, y incluso
+
+0:11:11.920,0:11:17.040
+con todos los las advertencias de
+
+0:11:15.399,0:11:19.040
+obsolescencia, es decir, los deprecation
+
+0:11:17.040,0:11:21.760
+warnings que les aparece cada vez que
+
+0:11:19.040,0:11:23.800
+corren en la aplicación insisten en no
+
+0:11:21.760,0:11:25.560
+tocar lo que funciona todavía para
+
+0:11:23.800,0:11:27.639
+ellos. Es decir, están en la última
+
+0:11:25.560,0:11:31.720
+versión, no significa que vas a tener
+
+0:11:27.639,0:11:34.720
+todo montado encima de signals, API y
+
+0:11:31.720,0:11:38.160
+que estés utilizando ya resources o que
+
+0:11:34.720,0:11:41.760
+estés empleando sless change detection.
+
+0:11:38.160,0:11:44.240
+lleva un proceso mental estructurar toda
+
+0:11:41.760,0:11:46.440
+la deuda técnica de una manera en la que
+
+0:11:44.240,0:11:49.200
+ese salto de versión de aplicaciones que
+
+0:11:46.440,0:11:51.959
+comenzaron hace muchos años puedan
+
+0:11:49.200,0:11:54.000
+utilizar lo mejor de las últimas
+
+0:11:51.959,0:11:56.639
+versiones, independientemente de que
+
+0:11:54.000,0:11:59.120
+esos productos estén utilizando el
+
+0:11:56.639,0:12:01.120
+framework en la última versión.
+
+0:11:59.120,0:12:03.600
+Hay que alinear también lo que es el
+
+0:12:01.120,0:12:05.680
+Angulo Moderno con lo nuevo que está
+
+0:12:03.600,0:12:07.480
+ofreciendo como retrocompatibilidad con
+
+0:12:05.680,0:12:09.040
+lo que existía desde mucho antes de la
+
+0:12:07.480,0:12:10.360
+versión 17,
+
+0:12:09.040,0:12:12.639
+que ahí Angular ha hecho un gran
+
+0:12:10.360,0:12:14.880
+trabajo, creo yo, eh en mantener
+
+0:12:12.639,0:12:16.199
+retrocompatibilidad. Es decir, como tú
+
+0:12:14.880,0:12:18.600
+acabas de mencionar, tú puedes seguir
+
+0:12:16.199,0:12:20.639
+teniendo la sintaxis vieja junto con la
+
+0:12:18.600,0:12:23.480
+sintaxis nueva. Puedes tener
+
+0:12:20.639,0:12:24.880
+aplicaciones Stanalont y aplicaciones
+
+0:12:23.480,0:12:26.680
+con módulos dentro de la misma
+
+0:12:24.880,0:12:29.399
+aplicación. O sea, funcionan,
+
+0:12:26.680,0:12:30.839
+simplemente funciona un standalone.
+
+0:12:29.399,0:12:32.240
+Puedes tener un módulo con la nueva
+
+0:12:30.839,0:12:34.720
+sintaxis, pero con la vieja. Puedes
+
+0:12:32.240,0:12:37.480
+tener signals, pero puedes tener igual
+
+0:12:34.720,0:12:40.720
+son GS. En fin, o sea, Angular en ese
+
+0:12:37.480,0:12:44.880
+sentido creo que ha sido muy flexible.
+
+0:12:40.720,0:12:46.880
+Obviamente lo mejor sería como pasar a,
+
+0:12:44.880,0:12:49.680
+no sé, la nueva sintaxis, están los
+
+0:12:46.880,0:12:51.680
+components, etcétera, pero igual puedes
+
+0:12:49.680,0:12:55.000
+seguir trabajando con el viejo estilo,
+
+0:12:51.680,0:12:57.519
+digamos, y funciona, pero pues bueno,
+
+0:12:55.000,0:12:59.720
+hay más ventajas para que sigas
+
+0:12:57.519,0:13:02.079
+manteniendo tu producto como que sin que
+
+0:12:59.720,0:13:03.880
+se rompa y y cuando hay la oportunidad
+
+0:13:02.079,0:13:05.120
+pues hacer ese
+
+0:13:03.880,0:13:06.680
+y lo que va a pasar es que en algún
+
+0:13:05.120,0:13:08.839
+punto se va a romper y como bien decías
+
+0:13:06.680,0:13:10.600
+Nico, hay migraciones que ya te permiten
+
+0:13:08.839,0:13:15.199
+hacer todo eso.
+
+0:13:10.600,0:13:18.279
+con un dolor bastante controlado, ¿no?
+
+0:13:15.199,0:13:20.360
+tienes la posibilidad incluso utilizando
+
+0:13:18.279,0:13:21.560
+AI de la manera correcta, si no de la
+
+0:13:20.360,0:13:23.120
+manera incorrecta, generando, por
+
+0:13:21.560,0:13:24.519
+ejemplo, la cantidad de artículos que
+
+0:13:23.120,0:13:26.440
+salen normalmente cada vez que aparece
+
+0:13:24.519,0:13:28.360
+una nueva versión de Angular, lo mismo
+
+0:13:26.440,0:13:30.800
+un major que un minor, que empiezan a
+
+0:13:28.360,0:13:32.880
+aparecer versiones a lo a lo loco, así
+
+0:13:30.800,0:13:36.480
+artículos utilizando
+
+0:13:32.880,0:13:38.839
+AI, que emplean un montón de
+
+0:13:36.480,0:13:41.480
+alucinaciones derivadas de todo este
+
+0:13:38.839,0:13:44.760
+sesgo que tienen los modelos con
+
+0:13:41.480,0:13:46.959
+relación a detalles ahí que ya no están
+
+0:13:44.760,0:13:48.959
+o que sencillamente el corte de la data
+
+0:13:46.959,0:13:51.120
+de entrenamiento está introduciendo un
+
+0:13:48.959,0:13:54.000
+problema temporal y por lo tanto hay
+
+0:13:51.120,0:13:55.519
+mucha documentación que hay afuera que
+
+0:13:54.000,0:13:57.160
+no está bien precisa. Es decir, la
+
+0:13:55.519,0:14:00.600
+fuente de la verdad de todo lo que está
+
+0:13:57.160,0:14:02.959
+saliendo en una nueva versión, tanto ya
+
+0:14:00.600,0:14:05.160
+sea un parche como una versión minor un
+
+0:14:02.959,0:14:09.320
+major siguiendo el sistema deionado
+
+0:14:05.160,0:14:11.000
+semántico, está en el changock de la
+
+0:14:09.320,0:14:13.639
+base de código de ángula que está en
+
+0:14:11.000,0:14:14.480
+GitHub. Ahí es donde está el núcleo de
+
+0:14:13.639,0:14:17.160
+todo.
+
+0:14:14.480,0:14:19.759
+Okay. Eso es algo importantísimo de
+
+0:14:17.160,0:14:21.839
+tener siempre en cuenta para no caer en
+
+0:14:19.759,0:14:25.279
+la falacia de que uno está leyendo
+
+0:14:21.839,0:14:27.519
+documentación que pueda estar guiando a
+
+0:14:25.279,0:14:28.720
+uno por el camino incorrecto.
+
+0:14:27.519,0:14:30.360
+Tienes toda la razón. Si, ahorita hay
+
+0:14:28.720,0:14:32.000
+que tener mucho cuidado con con eso
+
+0:14:30.360,0:14:33.440
+porque la mayoría de estos artículos
+
+0:14:32.000,0:14:35.720
+ahorita se generan con ella y entonces
+
+0:14:33.440,0:14:38.600
+no sabemos si lo que estamos leyendo es
+
+0:14:35.720,0:14:40.800
+fidedico. Pero bueno, son problemas de
+
+0:14:38.600,0:14:43.680
+esta generación. para doble chequear,
+
+0:14:40.800,0:14:46.920
+para confirmar de que somos
+
+0:14:43.680,0:14:48.440
+reales, vamos a presentarte a las
+
+0:14:46.920,0:14:50.839
+personas que aún, por ejemplo, no han
+
+0:14:48.440,0:14:54.560
+podido ver el capítulo que grabamos en
+
+0:14:50.839,0:14:57.880
+Angularidades número 45 sobre Clutflir.
+
+0:14:54.560,0:14:59.639
+Los que no han podido ver todavía a Nico
+
+0:14:57.880,0:15:01.360
+en alguno de los capítulos que hemos
+
+0:14:59.639,0:15:03.720
+grabado también a nivel de grupo con
+
+0:15:01.360,0:15:06.759
+otros GDS, vamos a presentarte ante
+
+0:15:03.720,0:15:10.000
+quienes aún no te conozcan, ¿vale?
+
+0:15:06.759,0:15:11.920
+De una. Pues bueno, ¿me presento o me
+
+0:15:10.000,0:15:14.040
+presentas? ¿Cómo quieres?
+
+0:15:11.920,0:15:17.399
+Va a ser un placer grandísimo poder
+
+0:15:14.040,0:15:20.240
+decir que eres originalmente de Colombia
+
+0:15:17.399,0:15:22.920
+y desde hace varios años radicas en
+
+0:15:20.240,0:15:26.279
+Cochabamba, en Bolivia, arriba en lo
+
+0:15:22.920,0:15:29.440
+alto de Latinoamérica. Eres
+
+0:15:26.279,0:15:31.160
+desarrollador de software, como bien
+
+0:15:29.440,0:15:33.000
+dijiste al principio, instructor de
+
+0:15:31.160,0:15:34.519
+cursos sobre Angular y también otras
+
+0:15:33.000,0:15:37.360
+tecnologías.
+
+0:15:34.519,0:15:40.160
+publicas artículos técnicos y material
+
+0:15:37.360,0:15:43.240
+en tu canal de YouTube que acumula ya
+
+0:15:40.160,0:15:46.399
+más de 200 videos con contenido de muy
+
+0:15:43.240,0:15:49.000
+alta calidad. Eres parte de la comunidad
+
+0:15:46.399,0:15:53.279
+de Angular Bolivia, fundada en el año
+
+0:15:49.000,0:15:57.160
+2017 por nuestro colega Luis Avilés y
+
+0:15:53.279,0:15:59.880
+tienes el reconocimiento por Google como
+
+0:15:57.160,0:16:02.759
+Google Developer Expert en la categoría
+
+0:15:59.880,0:16:05.839
+de Angular y en tecnologías web y además
+
+0:16:02.759,0:16:07.680
+por Microsoft como MVP, most valuable
+
+0:16:05.839,0:16:09.360
+professional. Así que muchas gracias,
+
+0:16:07.680,0:16:12.279
+Nico, por estar acá con nosotros
+
+0:16:09.360,0:16:14.040
+compartiendo algunos de los detalles que
+
+0:16:12.279,0:16:16.680
+tienen que ver con lo nuevo que aparece
+
+0:16:14.040,0:16:19.319
+ahora en la versión 22.1.
+
+0:16:16.680,0:16:21.120
+No, yo totalmente feliz de estar en este
+
+0:16:19.319,0:16:23.759
+espacio, de compartir. Eh, creo que una
+
+0:16:21.120,0:16:25.680
+de las cosas que más nos gusta es
+
+0:16:23.759,0:16:28.120
+compartir este conocimiento, actuar
+
+0:16:25.680,0:16:31.680
+también como divulgadores de de
+
+0:16:28.120,0:16:34.360
+tecnología. Eh, eso creo que ayuda un
+
+0:16:31.680,0:16:36.680
+montón, ayuda un montón a a lo que tú
+
+0:16:34.360,0:16:38.240
+dices también, a contrarrestar a veces
+
+0:16:36.680,0:16:40.800
+estas fake news o artículos que se
+
+0:16:38.240,0:16:43.440
+generan ahí, porque pues hablamos de una
+
+0:16:40.800,0:16:45.440
+forma mucho más profunda y desde el
+
+0:16:43.440,0:16:47.600
+conocimiento de cómo son estas versiones
+
+0:16:45.440,0:16:50.199
+y cómo impactan, cómo lo estamos viendo
+
+0:16:47.600,0:16:52.120
+dentro de las comunidades, dentro de las
+
+0:16:50.199,0:16:54.160
+empresas en las que trabajamos, que al
+
+0:16:52.120,0:16:56.880
+final usamos Angular en nuestro día a
+
+0:16:54.160,0:16:59.959
+día de primera mano. De por si yo justo
+
+0:16:56.880,0:17:02.600
+también estoy recientemente como
+
+0:16:59.959,0:17:04.240
+tratando de construir como un producto y
+
+0:17:02.600,0:17:07.000
+todo el front lo estoy haciendo en
+
+0:17:04.240,0:17:08.760
+Angler. Entonces, eh no solo lo utilizo
+
+0:17:07.000,0:17:10.160
+en mi día a día, sino también en algunos
+
+0:17:08.760,0:17:12.120
+side projects.
+
+0:17:10.160,0:17:15.079
+Genial. Una de las cosas que me di
+
+0:17:12.120,0:17:20.160
+cuenta a la hora de hacer el upgrade
+
+0:17:15.079,0:17:22.520
+para la 22.1 un es que el Jason P, que
+
+0:17:20.160,0:17:26.360
+es el Jason Compading que se introdujo
+
+0:17:22.520,0:17:30.200
+en el año 2005 hace ya 21 años viene
+
+0:17:26.360,0:17:31.480
+siendo eliminado completamente de el
+
+0:17:30.200,0:17:33.360
+framework. Una de las razones
+
+0:17:31.480,0:17:36.080
+fundamentales tiene que ver con lo de
+
+0:17:33.360,0:17:38.840
+crow scripting, el problema que tiene
+
+0:17:36.080,0:17:41.760
+con lo de content security policy. Has
+
+0:17:38.840,0:17:42.840
+tenido que enfrentar algo así en alguno
+
+0:17:41.760,0:17:44.919
+de los proyectos con los que has
+
+0:17:42.840,0:17:47.039
+trabajado anteriormente en Angular. Es
+
+0:17:44.919,0:17:48.440
+decir, está dando compatibilidad con
+
+0:17:47.039,0:17:51.440
+Jason P.
+
+0:17:48.440,0:17:53.480
+No, fíjate que ese protocolo no lo, o
+
+0:17:51.440,0:17:56.200
+sea, nunca lo he visto. Sé que Angular
+
+0:17:53.480,0:17:59.120
+lo soportaba el protocolo de Jason P,
+
+0:17:56.200,0:18:02.400
+pero nunca tuve que no, porque
+
+0:17:59.120,0:18:06.720
+normalmente consumíamos directamente
+
+0:18:02.400,0:18:10.000
+R API que ya por default son Jon y ya. Y
+
+0:18:06.720,0:18:11.720
+eso es lo que eh el content siempre iba
+
+0:18:10.000,0:18:13.640
+en JSON y también o por mucho
+
+0:18:11.720,0:18:16.400
+consumíamos Radqel, que al final también
+
+0:18:13.640,0:18:18.120
+es otro tipo de Jonas así lo más
+
+0:18:16.400,0:18:19.880
+complejo es cuando uno ya gestiona
+
+0:18:18.120,0:18:23.000
+archivos que el formato, el content type
+
+0:18:19.880,0:18:25.440
+es diferente, no es un multiple form,
+
+0:18:23.000,0:18:27.720
+algo así, pero nunca he tenido problemas
+
+0:18:25.440,0:18:30.240
+con este o nunca utilicé este Gonp
+
+0:18:27.720,0:18:32.240
+precisamente porque creo que no era como
+
+0:18:30.240,0:18:34.120
+la versión más estándar de consumir
+
+0:18:32.240,0:18:36.080
+datos a través de HTP y yo creo que hace
+
+0:18:34.120,0:18:37.520
+sentido que entonces también no solo por
+
+0:18:36.080,0:18:39.679
+razones de seguridad, sino que pues
+
+0:18:37.520,0:18:42.120
+tampoco es que sea un protocolo
+
+0:18:39.679,0:18:44.000
+masivamente usado, entonces se haga esta
+
+0:18:42.120,0:18:45.320
+deprecación, ¿no?
+
+0:18:44.000,0:18:49.240
+Exacto. Yo te lo pregunto porque yo lo
+
+0:18:45.320,0:18:52.039
+usé hace muchos años, eso fue tipo 2009,
+
+0:18:49.240,0:18:53.760
+2010 aproximadamente, pero era una época
+
+0:18:52.039,0:18:57.000
+diferente donde ni siquiera Angular
+
+0:18:53.760,0:18:58.640
+existía ni Angular JS incluso. Y o al
+
+0:18:57.000,0:19:01.799
+menos yo no lo estaba usando Angular JS
+
+0:18:58.640,0:19:05.159
+en esas versiones iniciales y es raro
+
+0:19:01.799,0:19:07.159
+encontrar hoy en día algún producto que
+
+0:19:05.159,0:19:09.720
+tenga una decisión técnica de utilizar
+
+0:19:07.159,0:19:11.720
+este tipo de contexto para poder
+
+0:19:09.720,0:19:13.799
+inyectar información ahí en el sitio.
+
+0:19:11.720,0:19:15.480
+Pero bueno, en caso de que alguien lo
+
+0:19:13.799,0:19:18.559
+haya estado haciendo porque tiene que
+
+0:19:15.480,0:19:20.240
+darle soporte a a bases de código que ya
+
+0:19:18.559,0:19:23.360
+están ya bastante desactualizado, que
+
+0:19:20.240,0:19:24.840
+son legacy, tienen unos work arounds que
+
+0:19:23.360,0:19:28.200
+están propuestos por el equipo de
+
+0:19:24.840,0:19:32.320
+Angular. Hay mucha más información en el
+
+0:19:28.200,0:19:35.360
+pull request que se cerró eliminando esa
+
+0:19:32.320,0:19:38.919
+esa opción de Jason P dentro del HCTP
+
+0:19:35.360,0:19:41.200
+client. Así que vayan y echen un vistazo
+
+0:19:38.919,0:19:43.080
+en caso de que tengan que sufrir ese
+
+0:19:41.200,0:19:46.159
+tipo de problema a la hora de actualizar
+
+0:19:43.080,0:19:47.720
+a la 22.1. Me recuerda cuando también
+
+0:19:46.159,0:19:49.640
+que en algún punto todos los frameworks
+
+0:19:47.720,0:19:52.000
+ya dejaron de soportar Intern Explorer
+
+0:19:49.640,0:19:53.720
+porque simplemente era una no tiene
+
+0:19:52.000,0:19:56.440
+sentido soportar como estas tecnologías
+
+0:19:53.720,0:19:58.520
+que ya son muy viejas así de pronto
+
+0:19:56.440,0:20:00.280
+alguien por allá tenga un edge case muy
+
+0:19:58.520,0:20:03.520
+raro de es que yo lo utilizo de esta
+
+0:20:00.280,0:20:05.400
+manera no tiene sentido porque a todos
+
+0:20:03.520,0:20:07.640
+nos arrastra digamos hay código hay
+
+0:20:05.400,0:20:09.440
+death code que se está ejecutando, de
+
+0:20:07.640,0:20:11.360
+pronto optimizaciones que simplemente no
+
+0:20:09.440,0:20:13.720
+se pueden implementar por hacer ese
+
+0:20:11.360,0:20:15.720
+soporte. Entonces es natural que
+
+0:20:13.720,0:20:17.760
+tengamos estas depercaciones, ¿no?
+
+0:20:15.720,0:20:19.440
+Entonces me hace acordar mucho cuando en
+
+0:20:17.760,0:20:21.400
+algún momento Angular también dijo, "Ey,
+
+0:20:19.440,0:20:23.960
+ya no vamos a dar soporte interno
+
+0:20:21.400,0:20:26.159
+Explorer y ya no y punto." Y así van a
+
+0:20:23.960,0:20:28.360
+Exo. De lo contrario, el core de de
+
+0:20:26.159,0:20:29.799
+Framework necesitaría megabytes para
+
+0:20:28.360,0:20:33.400
+poder arrastrar todo ese lastre
+
+0:20:29.799,0:20:35.480
+tecnológico que viene de de décadas. Y
+
+0:20:33.400,0:20:37.440
+por suerte tenemos
+
+0:20:35.480,0:20:40.320
+unas nuevas
+
+0:20:37.440,0:20:42.480
+metodologías y y nuevas tecnologías que
+
+0:20:40.320,0:20:44.960
+están viniendo para poder incluso llevar
+
+0:20:42.480,0:20:47.360
+el performance, ese rendimiento de la
+
+0:20:44.960,0:20:49.280
+aplicación mucho más allá de lo que era
+
+0:20:47.360,0:20:53.919
+originalmente pensado, gracias, por
+
+0:20:49.280,0:20:55.720
+ejemplo, al oxidation compiler, esa
+
+0:20:53.919,0:20:58.360
+super rápida manera de compilar hoy en
+
+0:20:55.720,0:21:01.320
+día y se está llevando ese compiler
+
+0:20:58.360,0:21:03.679
+hacia el internationalization, es decir,
+
+0:21:01.320,0:21:05.919
+hacia el 18N
+
+0:21:03.679,0:21:08.880
+dentro del código de Angular, o sea,
+
+0:21:05.919,0:21:10.960
+todo el pipeline, todo el llining de
+
+0:21:08.880,0:21:14.039
+este tipo de traducciones, en vez de
+
+0:21:10.960,0:21:15.559
+utilizar Babel Core, que era la técnica
+
+0:21:14.039,0:21:17.840
+que se estaba ampliando anteriormente
+
+0:21:15.559,0:21:20.679
+con Tys
+
+0:21:17.840,0:21:22.320
+de por sí me parece un movimiento
+
+0:21:20.679,0:21:23.880
+que se está generalizando en toda la
+
+0:21:22.320,0:21:25.720
+industria, sobre todo en la parte del
+
+0:21:23.880,0:21:28.440
+tooling, en la parte del transcripting,
+
+0:21:25.720,0:21:30.240
+de compiling, es que ya la mayoría de
+
+0:21:28.440,0:21:32.679
+todas estas procesos ya no se está
+
+0:21:30.240,0:21:35.240
+haciendo en JavaScript. como Wedck o
+
+0:21:32.679,0:21:37.960
+como Babel, sino que todo esto se está
+
+0:21:35.240,0:21:42.039
+yendo hacia lenguajes de más bajo nivel
+
+0:21:37.960,0:21:44.200
+como Rust, como Go, en donde eh todas
+
+0:21:42.039,0:21:46.200
+estas toins ya corren como en estos
+
+0:21:44.200,0:21:47.799
+lenguajes que hacen el proceso muchísimo
+
+0:21:46.200,0:21:50.240
+más rápido, muchísimo más óptimo, ¿no?
+
+0:21:47.799,0:21:54.080
+De por sí en algunas pruebas creo que la
+
+0:21:50.240,0:21:57.279
+mejora era como de 5x cuando uno pasaba
+
+0:21:54.080,0:21:58.240
+hacia el el oxidation compiler.
+
+0:21:57.279,0:22:00.400
+Una locura total,
+
+0:21:58.240,0:22:02.320
+lo cual está Ajá. lo cual está bien y y
+
+0:22:00.400,0:22:05.000
+de por sí uno de los cambios chiquitos,
+
+0:22:02.320,0:22:07.320
+si no recuerdan, pero en el Angular 22
+
+0:22:05.000,0:22:10.960
+también se introdujo a Typescript 6 y
+
+0:22:07.320,0:22:14.279
+Typecript 6 va a ser como este gap entre
+
+0:22:10.960,0:22:17.039
+la versión 7 que la versión 7 Typecript
+
+0:22:14.279,0:22:18.640
+va a venir en Go. Entonces se viene
+
+0:22:17.039,0:22:20.720
+alineando como a este tipo de
+
+0:22:18.640,0:22:22.919
+herramientas que están compilan que
+
+0:22:20.720,0:22:24.840
+traspilan a lenguajes mucho más de bajo
+
+0:22:22.919,0:22:27.679
+nivel como Go, en el caso de Typescript,
+
+0:22:24.840,0:22:30.159
+como eh Oxidation, que es del equipo de
+
+0:22:27.679,0:22:31.640
+Void, que el equipo de Boid es es
+
+0:22:30.159,0:22:34.159
+bastante increíble, que fue comprado
+
+0:22:31.640,0:22:36.360
+recientemente por Cotf, eh todo el
+
+0:22:34.159,0:22:39.080
+equipo de de de Void, que es el creador
+
+0:22:36.360,0:22:41.720
+de Evan You, que es el que crea Beats,
+
+0:22:39.080,0:22:43.960
+el que crea view. Entonces, ellos están
+
+0:22:41.720,0:22:47.600
+proponiendo este nuevo compilador basado
+
+0:22:43.960,0:22:50.480
+en en pues en Rust. De por sí se utiliza
+
+0:22:47.600,0:22:52.400
+mucho Rollup para empaquetar como
+
+0:22:50.480,0:22:55.080
+librerías y dentro de la comunidad
+
+0:22:52.400,0:22:57.440
+Angular se utilizaba mucho rollup para
+
+0:22:55.080,0:23:00.240
+cuando tienes que tener una librería
+
+0:22:57.440,0:23:02.039
+como que se usa no se utiliza como un
+
+0:23:00.240,0:23:04.320
+empaquetador normal sino roll up porque
+
+0:23:02.039,0:23:06.760
+es mejor para eso. Pero los de Boid
+
+0:23:04.320,0:23:10.000
+quedaron una cosa llamada rollown que es
+
+0:23:06.760,0:23:12.240
+básicamente la mismo concepto pero en
+
+0:23:10.000,0:23:13.880
+Rust, ¿no?
+
+0:23:12.240,0:23:16.400
+Entonces están trayendo todo este montón
+
+0:23:13.880,0:23:18.679
+de mejoras que van a mejorar tiempos de
+
+0:23:16.400,0:23:21.640
+compilación, tiempos de building en los
+
+0:23:18.679,0:23:23.360
+piles. Y creo que también hace sentido
+
+0:23:21.640,0:23:25.159
+en la generación o en el tiempo que
+
+0:23:23.360,0:23:27.720
+estamos viviendo ahorita, porque ahora
+
+0:23:25.159,0:23:30.640
+ya no solo nosotros programamos, ella
+
+0:23:27.720,0:23:33.559
+también manda sus pull request. O es
+
+0:23:30.640,0:23:36.960
+más, nosotros al ser potenciados por AI
+
+0:23:33.559,0:23:39.440
+estamos frecuentemente enviando más PRS
+
+0:23:36.960,0:23:41.760
+que antes. La capacidad de enviar más
+
+0:23:39.440,0:23:44.240
+PRS aumentó, ¿no? Entonces, no solo la
+
+0:23:41.760,0:23:45.840
+AI está enviando más PRS, nosotros
+
+0:23:44.240,0:23:48.400
+estamos eh siendo un poco más
+
+0:23:45.840,0:23:51.000
+productivos y eso hace que la frecuencia
+
+0:23:48.400,0:23:53.679
+de PRs aumente. hay muchos más PRS, la
+
+0:23:51.000,0:23:55.480
+evolución ha sido un montón y eso hace
+
+0:23:53.679,0:23:57.000
+que los tiempos también sean
+
+0:23:55.480,0:23:59.080
+necesariamente, o sea, que ese building,
+
+0:23:57.000,0:24:01.159
+que ese pilan ocurra rápido para que
+
+0:23:59.080,0:24:03.000
+tengamos procesos de desarrollo rápidos.
+
+0:24:01.159,0:24:05.640
+El piline de testing corra rápido, que
+
+0:24:03.000,0:24:08.080
+el piline de end corra rápido, que si
+
+0:24:05.640,0:24:10.400
+tenemos 2000 pruebas pues eso corra
+
+0:24:08.080,0:24:12.400
+veloz, ¿no? Y parte de que eso corra
+
+0:24:10.400,0:24:14.480
+veloz es este tipo de herramientas. Si
+
+0:24:12.400,0:24:16.480
+Angular se está moviendo Oxidosa, si
+
+0:24:14.480,0:24:18.279
+Typescript se está moviendo a Gaú, vamos
+
+0:24:16.480,0:24:20.799
+a ver muchas mejoras en tiempos de
+
+0:24:18.279,0:24:22.640
+ejecución en los Pil va a estar chévere
+
+0:24:20.799,0:24:24.159
+para todos.
+
+0:24:22.640,0:24:26.080
+Totalmente. Y lo mismo ocurre con los
+
+0:24:24.159,0:24:27.880
+linterns, ocurre también con el
+
+0:24:26.080,0:24:29.279
+procesado de CCS, que bueno que esa es
+
+0:24:27.880,0:24:32.480
+otra de las nuevas noticias que vienen
+
+0:24:29.279,0:24:35.320
+ahora con la 22.1 un relacionado con la
+
+0:24:32.480,0:24:37.760
+prevención de colisión en nombres de
+
+0:24:35.320,0:24:40.360
+variables CCS, que bueno, gracias a uno
+
+0:24:37.760,0:24:43.520
+de los PRs que se había aprobado hace un
+
+0:24:40.360,0:24:45.760
+poco tiempo ya tenemos la posibilidad de
+
+0:24:43.520,0:24:48.080
+poder definir cuál es el valor de
+
+0:24:45.760,0:24:50.600
+prefijo que se va a incorporar
+
+0:24:48.080,0:24:53.960
+automáticamente cada vez que se declare
+
+0:24:50.600,0:24:58.440
+una variable SCS del lado del componente
+
+0:24:53.960,0:25:00.320
+y entonces no ocurre esa colisión con
+
+0:24:58.440,0:25:02.320
+nombres que están declarados en
+
+0:25:00.320,0:25:04.480
+variables globales.
+
+0:25:02.320,0:25:06.520
+Eso es algo que puede que afecte en caso
+
+0:25:04.480,0:25:08.760
+de que uno tenga sistemas de diseño que
+
+0:25:06.520,0:25:11.120
+estén utilizando token dinámico o que
+
+0:25:08.760,0:25:14.720
+uno quiera establecer un token que da la
+
+0:25:11.120,0:25:16.559
+casualidad que confluya y choque
+
+0:25:14.720,0:25:18.520
+directamente con un token que ya está
+
+0:25:16.559,0:25:20.440
+definido por una biblioteca de tercero o
+
+0:25:18.520,0:25:23.200
+con incluso una biblioteca propia de
+
+0:25:20.440,0:25:25.559
+sistema de diseño que uno utilice.
+
+0:25:23.200,0:25:27.159
+Mirad que a mí esto se me hace super
+
+0:25:25.559,0:25:30.120
+beneficioso, sobre todo ahorita que
+
+0:25:27.159,0:25:32.799
+Telwin es como el frame de de CCS más
+
+0:25:30.120,0:25:36.080
+usado pues en en toda la industria.
+
+0:25:32.799,0:25:37.960
+Tawin jala un montón de Sí, sí, eso es
+
+0:25:36.080,0:25:39.840
+bars, ¿no? Un montón. Y la mayoría de
+
+0:25:37.960,0:25:42.039
+esas no tienen prefijo, simplemente
+
+0:25:39.840,0:25:43.880
+tienen primary color y y ya digamos,
+
+0:25:42.039,0:25:47.520
+¿no? Normalmente la buena práctica es
+
+0:25:43.880,0:25:50.080
+reusar esas mismas eh CCS Awards para no
+
+0:25:47.520,0:25:52.919
+colisionar, pero ahora con este nuevo
+
+0:25:50.080,0:25:54.200
+feature en la 22.1 un ya es mucho más
+
+0:25:52.919,0:25:56.960
+fácil de manejar. O sea, si mi
+
+0:25:54.200,0:26:00.799
+aplicación de Angular tiene un namespace
+
+0:25:56.960,0:26:02.520
+específico para esa variable, eh, o sea,
+
+0:26:00.799,0:26:04.480
+como que en automático se le coloca ese
+
+0:26:02.520,0:26:06.080
+prefijo y no va a chocar con, no sé, las
+
+0:26:04.480,0:26:07.279
+que te exportes de Tailwin o tu
+
+0:26:06.080,0:26:08.960
+framework de tokens, como tú
+
+0:26:07.279,0:26:10.679
+mencionabas.
+
+0:26:08.960,0:26:13.840
+Es una capa de protección adicional que
+
+0:26:10.679,0:26:15.840
+no sobra. De hecho, lo que te va a
+
+0:26:13.840,0:26:18.559
+incorporar ahí a Bondle al final cuando
+
+0:26:15.840,0:26:21.240
+eso esté comprimido en Broadly o en GC
+
+0:26:18.559,0:26:23.960
+va a ser nada, a lo mejor un kil extra
+
+0:26:21.240,0:26:26.200
+si acaso. Entonces eso me parece una
+
+0:26:23.960,0:26:28.880
+protección extra para cuidar el scope,
+
+0:26:26.200,0:26:31.120
+¿no? De de de tus variables, las que las
+
+0:26:28.880,0:26:33.360
+que uses del framework de CCS que
+
+0:26:31.120,0:26:35.799
+utilices o si tú tienes tu propio design
+
+0:26:33.360,0:26:37.880
+system, pues como que proteges ese scope
+
+0:26:35.799,0:26:41.159
+de tu design system versus de pronto las
+
+0:26:37.880,0:26:42.799
+que necesites ya de tu aplicación eh en
+
+0:26:41.159,0:26:44.880
+específico, ¿no? Entonces, creo que esa
+
+0:26:42.799,0:26:46.440
+capa de scope me parece bastante
+
+0:26:44.880,0:26:48.120
+interesante y qué bien que haya venido
+
+0:26:46.440,0:26:50.520
+en esta 22.1.
+
+0:26:48.120,0:26:52.679
+Sí. Y otra cosa que leí también, Nico,
+
+0:26:50.520,0:26:54.960
+era con mejoras de rendimiento. Bueno,
+
+0:26:52.679,0:26:57.120
+que eso es lo esperado, ¿no? una versión
+
+0:26:54.960,0:27:00.640
+menor ya tiene la acumulación de varios
+
+0:26:57.120,0:27:02.559
+de los PRs que se les hicieron merch a
+
+0:27:00.640,0:27:04.440
+la rama principal, que bueno que es la
+
+0:27:02.559,0:27:05.840
+rama que normalmente está utilizando, no
+
+0:27:04.440,0:27:07.480
+la que vemos en GitHub, sino en el
+
+0:27:05.840,0:27:08.919
+monotrip interno de Google, que es la
+
+0:27:07.480,0:27:12.080
+que utilizan todas las aplicaciones
+
+0:27:08.919,0:27:15.159
+desde la UI de Yemini hasta
+
+0:27:12.080,0:27:17.320
+fíjate que hay un montón y y de por sí
+
+0:27:15.159,0:27:19.640
+deberíamos hacer un capítulo solo de qué
+
+0:27:17.320,0:27:22.279
+aplicaciones gigantes hay en Angular, no
+
+0:27:19.640,0:27:24.120
+solo el ecosistema de Google, pero en el
+
+0:27:22.279,0:27:25.679
+ecosistema de Google hace poco hace poco
+
+0:27:24.120,0:27:27.919
+Yo estoy trabajando mucho con el Google
+
+0:27:25.679,0:27:30.159
+ADK, que es pues el frameworks de
+
+0:27:27.919,0:27:32.480
+agentes de Google y su Playground cuando
+
+0:27:30.159,0:27:33.880
+uno levanta como la parte para hacer de
+
+0:27:32.480,0:27:36.200
+buging de agentes que es un entorno
+
+0:27:33.880,0:27:38.399
+gráfico, está hecha en Angular y está
+
+0:27:36.200,0:27:39.840
+genial, está superlinda y uno puede
+
+0:27:38.399,0:27:41.679
+jugar con el agente y ver queé
+
+0:27:39.840,0:27:45.159
+instrucción, o sea, como que toda la
+
+0:27:41.679,0:27:47.080
+parte de deboging del Google, cuando uno
+
+0:27:45.159,0:27:49.519
+levanta la parte del debogen está
+
+0:27:47.080,0:27:52.360
+Chanular y eso me pareció impresionante
+
+0:27:49.519,0:27:54.320
+y maravilloso y me alegré mucho ya
+
+0:27:52.360,0:27:55.960
+aplicaciones hacia el público Pues yo
+
+0:27:54.320,0:27:59.760
+creo que la más grande que conocemos de
+
+0:27:55.960,0:28:00.039
+Google es e Gemini, ¿no? Y Gemini está
+
+0:27:59.760,0:28:01.799
+ella
+
+0:28:00.039,0:28:05.120
+y en Analytics también
+
+0:28:01.799,0:28:07.159
+está corriendo sobre Angular y si uno ve
+
+0:28:05.120,0:28:08.919
+impresiona la versión que está
+
+0:28:07.159,0:28:11.760
+utilizando, siempre va a salir el
+
+0:28:08.919,0:28:13.399
+placeholder 0.0.0
+
+0:28:11.760,0:28:15.159
+porque están hablando directamente de la
+
+0:28:13.399,0:28:17.480
+rama principal.
+
+0:28:15.159,0:28:19.240
+Nosotros estamos utilizando un framework
+
+0:28:17.480,0:28:22.039
+completamente versionado bajo este
+
+0:28:19.240,0:28:23.640
+sistema de versionado semántico por lo
+
+0:28:22.039,0:28:25.559
+que quiere decir es que cada vez que se
+
+0:28:23.640,0:28:27.880
+hace un pigaros están coleccionándolos y
+
+0:28:25.559,0:28:30.360
+trayéndolos hacia por ejemplo ahora lo
+
+0:28:27.880,0:28:33.600
+que ocurre hacia un minor que contiene
+
+0:28:30.360,0:28:36.320
+una colección de put request que fueron
+
+0:28:33.600,0:28:39.360
+poco a poco siendo parte de esa rama
+
+0:28:36.320,0:28:41.080
+principal y ahí tenemos eh fixes,
+
+0:28:39.360,0:28:42.960
+tenemos mejoras de rendimiento, por
+
+0:28:41.080,0:28:44.760
+ejemplo, esto es lo que ocurrió con el
+
+0:28:42.960,0:28:48.480
+control flow que se hizo hizo un mejor
+
+0:28:44.760,0:28:50.360
+procesamiento en los booklet, se salva
+
+0:28:48.480,0:28:52.919
+si se hace algún marking, que no he
+
+0:28:50.360,0:28:54.600
+visto específicamente cuáles son la
+
+0:28:52.919,0:28:56.640
+cantidad de milisegundos basado en
+
+0:28:54.600,0:28:58.559
+situaciones específicas, se debe salvar
+
+0:28:56.640,0:29:00.399
+una cierta cantidad de milisegundos que
+
+0:28:58.559,0:29:02.679
+siempre es importante tener del lado de
+
+0:29:00.399,0:29:04.440
+acá. Total, ¿no? Ellos tienen cuando
+
+0:29:02.679,0:29:06.440
+lanzaron la nueva sintaxis hicieron una
+
+0:29:04.440,0:29:09.880
+publicación de Peschmark que está creo
+
+0:29:06.440,0:29:11.559
+que en uno de los PRS, eh, y las el
+
+0:29:09.880,0:29:14.279
+beneficio de performance era bastante
+
+0:29:11.559,0:29:16.679
+bueno, era, o sea, en recorrer un for de
+
+0:29:14.279,0:29:18.600
+tantos elementos o de encontrar o solo
+
+0:29:16.679,0:29:20.360
+cambiar un elemento en particular usando
+
+0:29:18.600,0:29:22.399
+la nueva sintaxis. O sea, la nueva
+
+0:29:20.360,0:29:25.000
+sintaxis no solo es porque se vea más
+
+0:29:22.399,0:29:27.080
+linda o la developer experience sea
+
+0:29:25.000,0:29:29.120
+mejor, que sí que eso también es un
+
+0:29:27.080,0:29:31.600
+punto muy interesante. Entre más sea más
+
+0:29:29.120,0:29:33.399
+fácil para leer y para usar como
+
+0:29:31.600,0:29:36.279
+desarrolladores, eso es un buen punto.
+
+0:29:33.399,0:29:38.200
+Pero extra tiene unos gran al reescribir
+
+0:29:36.279,0:29:40.120
+esas sintaxis también tiene unos gran
+
+0:29:38.200,0:29:42.080
+puntos en performance. Entonces, eso
+
+0:29:40.120,0:29:44.519
+también entra entre esas actualizaciones
+
+0:29:42.080,0:29:47.399
+que podemos ir haciendo. que yo siempre
+
+0:29:44.519,0:29:49.480
+lo miro de si tú estás desarrollando un
+
+0:29:47.399,0:29:51.039
+proyecto y eso viene gracias al open
+
+0:29:49.480,0:29:53.159
+source y bueno y el open source tiene
+
+0:29:51.039,0:29:56.080
+sus problemas también, pero al menos en
+
+0:29:53.159,0:29:58.880
+este caso Angular está pues power by
+
+0:29:56.080,0:30:00.240
+Google, pero yo siempre lo miro en e yo
+
+0:29:58.880,0:30:02.279
+estoy desarrollando un producto, yo
+
+0:30:00.240,0:30:05.840
+estoy creando una empresa que utiliza
+
+0:30:02.279,0:30:08.240
+Angular, casi que tengo un montón de
+
+0:30:05.840,0:30:10.279
+googlers trabajando en ese framework y
+
+0:30:08.240,0:30:12.840
+que me lanzan un release para potenciar
+
+0:30:10.279,0:30:14.640
+mi propia aplicación. Entonces es como e
+
+0:30:12.840,0:30:17.200
+una actualización que va a mejorar
+
+0:30:14.640,0:30:19.760
+ciertas cosas de mi aplicación de forma
+
+0:30:17.200,0:30:21.360
+gratuita por un montón de googlers.
+
+0:30:19.760,0:30:23.159
+Entonces yo a mí me gusta verlo de esa
+
+0:30:21.360,0:30:25.559
+manera.
+
+0:30:23.159,0:30:27.159
+Sí, incluso más allá de las personas que
+
+0:30:25.559,0:30:29.600
+están dentro del equipo de Google, hay
+
+0:30:27.159,0:30:31.240
+una comunidad gigantesca de personas que
+
+0:30:29.600,0:30:32.600
+contribuyen a Framework, que están ahí
+
+0:30:31.240,0:30:35.640
+tratando de ver de que no haya una
+
+0:30:32.600,0:30:38.159
+vulnerabilidad que se ha escapado y ese
+
+0:30:35.640,0:30:41.320
+tipo de colaboración que siempre es
+
+0:30:38.159,0:30:43.559
+super bien vista y resultados son
+
+0:30:41.320,0:30:46.159
+fenomenales a la hora de contribuir con
+
+0:30:43.559,0:30:50.279
+código abierto gracias a a todo el
+
+0:30:46.159,0:30:52.799
+mecanismo de este open source y quienes
+
+0:30:50.279,0:30:55.039
+estén representando aplicación ciones de
+
+0:30:52.799,0:30:56.960
+manera híbrida utilizando SSR también
+
+0:30:55.039,0:30:59.440
+van a ver alguna que otra mejora de
+
+0:30:56.960,0:31:01.240
+rendimiento. Igual ahora con este Minor
+
+0:30:59.440,0:31:03.080
+de la 22.1
+
+0:31:01.240,0:31:05.760
+dado que ellos incorporaron un poquito
+
+0:31:03.080,0:31:08.399
+más de control sobre la caché de
+
+0:31:05.760,0:31:11.120
+transferencia de HTTP, empleando dos
+
+0:31:08.399,0:31:15.120
+opciones adicionales que están montando
+
+0:31:11.120,0:31:18.279
+ahí dentro de la API para todo el manejo
+
+0:31:15.120,0:31:19.919
+del HTTP y echen un vistazo en caso de
+
+0:31:18.279,0:31:23.399
+que tengan alguna aplicación que esté
+
+0:31:19.919,0:31:25.039
+utilizando SS SR.
+
+0:31:23.399,0:31:27.480
+Eso es bastante importante. Nosotros
+
+0:31:25.039,0:31:29.880
+tuvimos hace poco un caso en la empresa
+
+0:31:27.480,0:31:32.919
+en la que yo trabajo de DMS, nosotros
+
+0:31:29.880,0:31:34.600
+hacemos un SDK por pues por framework,
+
+0:31:32.919,0:31:37.559
+¿no? Uno para Angular, uno para view,
+
+0:31:34.600,0:31:39.480
+uno para React y en su punto necesitamos
+
+0:31:37.559,0:31:41.240
+usar esas funciones específicas del
+
+0:31:39.480,0:31:43.600
+server site para dar un buen soporte de
+
+0:31:41.240,0:31:45.639
+nuestro SDK y que haya server side
+
+0:31:43.600,0:31:47.600
+render y demás. Entonces, que vayan
+
+0:31:45.639,0:31:49.200
+mejorando y que vayan abriendo esto, me
+
+0:31:47.600,0:31:52.200
+parece, o que hayan más opciones de
+
+0:31:49.200,0:31:54.360
+optimización. Eh, también nos nos
+
+0:31:52.200,0:31:57.080
+habilita a nosotros, a los que de pronto
+
+0:31:54.360,0:31:59.000
+construyen paquetes sobre el ecosistema
+
+0:31:57.080,0:32:00.679
+de Angular, pues poder hacer este tipo
+
+0:31:59.000,0:32:02.440
+de optimizaciones, ¿no? De nuevo, a
+
+0:32:00.679,0:32:04.360
+nosotros nos tocó tocar ciertas
+
+0:32:02.440,0:32:05.840
+partecitas del server ining the Angular
+
+0:32:04.360,0:32:07.880
+para soportar unas cosas en nuestra
+
+0:32:05.840,0:32:09.919
+librería y está bien que estas nuevas
+
+0:32:07.880,0:32:12.399
+opciones nos permitan también como
+
+0:32:09.919,0:32:14.519
+controlar mejor ese tipo de cosas para
+
+0:32:12.399,0:32:15.880
+mejorar como la experiencia y y también
+
+0:32:14.519,0:32:19.000
+hacia nuestros clientes que utilizan
+
+0:32:15.880,0:32:22.200
+nuestro SDK. Y durante la fase esta de
+
+0:32:19.000,0:32:24.639
+desarrollo, cuando uno se beneficia de
+
+0:32:22.200,0:32:26.639
+la integración que sacaron hace como dos
+
+0:32:24.639,0:32:29.039
+o tres versiones con el Angular, es
+
+0:32:26.639,0:32:31.880
+decir, con el Chrome Death Tools dentro
+
+0:32:29.039,0:32:34.240
+del panel de rendimiento con todo lo de
+
+0:32:31.880,0:32:37.760
+profiling, ahora están incorporando la
+
+0:32:34.240,0:32:39.960
+posibilidad dentro de esa herramienta de
+
+0:32:37.760,0:32:41.880
+poder ir directamente a instancia de
+
+0:32:39.960,0:32:44.600
+componentes que están superanidado por
+
+0:32:41.880,0:32:46.399
+ahí abajo y uno a veces pierde la traza
+
+0:32:44.600,0:32:48.919
+de cuál de los componentes uno estaba
+
+0:32:46.399,0:32:50.320
+pudiendo ver, uno va a poder tener la
+
+0:32:48.919,0:32:52.200
+posibilidad de cliquear en ese
+
+0:32:50.320,0:32:54.519
+componente y de ver esa instancia
+
+0:32:52.200,0:32:56.600
+específica en la extensión de Angular de
+
+0:32:54.519,0:32:59.360
+Def Tools y que eso es otra de las cosas
+
+0:32:56.600,0:33:01.519
+que no puedo esperar a probarlo ya
+
+0:32:59.360,0:33:03.840
+cuando ya tenga esas aplicaciones
+
+0:33:01.519,0:33:05.200
+miradas hacia la 22.1 para ver cómo
+
+0:33:03.840,0:33:08.399
+luce.
+
+0:33:05.200,0:33:10.639
+De por sí hay
+
+0:33:08.399,0:33:14.120
+algo hay un concepto que se llama la
+
+0:33:10.639,0:33:16.399
+ventaja injusta y creo que Google y
+
+0:33:14.120,0:33:18.279
+Angular tienen esa ventaja injusta de
+
+0:33:16.399,0:33:20.799
+que como son parte de la misma casa
+
+0:33:18.279,0:33:22.919
+trabajan muy bien muy bien juntos, que
+
+0:33:20.799,0:33:24.840
+de pronto con otros frameworks pues
+
+0:33:22.919,0:33:26.799
+obviamente existen esos lazos porque al
+
+0:33:24.840,0:33:28.799
+final todos somos parte del ecosistema
+
+0:33:26.799,0:33:30.679
+web, pero digamos que es mucho más
+
+0:33:28.799,0:33:33.240
+cerquita el de el de Angular con el
+
+0:33:30.679,0:33:34.480
+equipo de Chrome, con el grupo de de son
+
+0:33:33.240,0:33:36.279
+parte de la misma misma familia, la
+
+0:33:34.480,0:33:38.480
+misma compañía, entonces se pueden hacer
+
+0:33:36.279,0:33:40.080
+este tipo de optimizaciones fáciles. Hay
+
+0:33:38.480,0:33:41.799
+un equipo de por sí dentro de Google que
+
+0:33:40.080,0:33:44.519
+se llama, si no estoy mal, y si se sigue
+
+0:33:41.799,0:33:46.919
+llamando así, Aurora, que literalmente
+
+0:33:44.519,0:33:49.240
+se encarga como de hablar mucho con
+
+0:33:46.919,0:33:51.440
+otros frameworks para optimizar Chrome,
+
+0:33:49.240,0:33:53.320
+para mejorar estos toolings, pero en el
+
+0:33:51.440,0:33:55.120
+caso de Angular es la ventaja injusta y
+
+0:33:53.320,0:33:56.440
+es estamos en la misma casa, podemos
+
+0:33:55.120,0:33:57.960
+hablar, podemos hacer esas opciones.
+
+0:33:56.440,0:33:59.760
+El interabilidad sea no requiere
+
+0:33:57.960,0:34:01.480
+demasiada cantidad de puertas,
+
+0:33:59.760,0:34:03.039
+sencillamente un acceso directo ahí
+
+0:34:01.480,0:34:04.880
+entre los dos equipos.
+
+0:34:03.039,0:34:07.159
+Entonces, con el Angular Depools tienen
+
+0:34:04.880,0:34:09.639
+eso y creo y y si no estoy mal, hay un
+
+0:34:07.159,0:34:11.200
+feature eh que ni siquiera se necesita
+
+0:34:09.639,0:34:13.079
+de Angular, o sea, como de instalar una
+
+0:34:11.200,0:34:15.399
+extensión, sino que directamente desde
+
+0:34:13.079,0:34:17.000
+las depools ya reconoce como ciertos
+
+0:34:15.399,0:34:19.919
+cosas de performance de Angular
+
+0:34:17.000,0:34:21.760
+directamente como sin extensión ni nada,
+
+0:34:19.919,0:34:24.399
+pero si quieres mejor experiencia pues
+
+0:34:21.760,0:34:26.159
+normalmente jalas la extensión y pues eh
+
+0:34:24.399,0:34:28.000
+ya una más enfocada pues en el
+
+0:34:26.159,0:34:29.480
+ecosistema de Angular.
+
+0:34:28.000,0:34:31.800
+Exacto. Fundamentalmente para quienes
+
+0:34:29.480,0:34:35.040
+utilicen el Firefox como herramienta,
+
+0:34:31.800,0:34:39.119
+como navegador principal de desarrollo,
+
+0:34:35.040,0:34:40.839
+para que pueda llegar el punto en el que
+
+0:34:39.119,0:34:43.520
+haya la interoperabilidad esa
+
+0:34:40.839,0:34:45.879
+directamente con el Firefo Depols debe
+
+0:34:43.520,0:34:48.280
+pasar tiempo o alguna API abierta que
+
+0:34:45.879,0:34:50.079
+lancen para permitir eso dentro del
+
+0:34:48.280,0:34:53.079
+panel de rendimiento. Pero bueno,
+
+0:34:50.079,0:34:54.760
+mientras tanto, utilizar Chrome para
+
+0:34:53.079,0:34:56.679
+poder depurar aplicaciones de Angular
+
+0:34:54.760,0:34:59.920
+viene siendo una de las opciones óptimas
+
+0:34:56.679,0:35:02.720
+para nosotros. Total. Y esa eso es una
+
+0:34:59.920,0:35:04.359
+de las cosas que creo que de Angular es
+
+0:35:02.720,0:35:06.680
+bastante interesante porque tienen ahí
+
+0:35:04.359,0:35:10.200
+un link muy estrecho con el equipo de de
+
+0:35:06.680,0:35:12.680
+Chrom. Y hay alguna de las otras
+
+0:35:10.200,0:35:14.280
+características o
+
+0:35:12.680,0:35:17.720
+detalles que hayan lanzado en esta
+
+0:35:14.280,0:35:19.599
+versión menor que te interese probar,
+
+0:35:17.720,0:35:22.079
+que sea algo que estés buscando o algo
+
+0:35:19.599,0:35:24.760
+que hayas estado esperando que sacaran.
+
+0:35:22.079,0:35:27.040
+Pues no, no es como que estuvieras
+
+0:35:24.760,0:35:29.640
+esperando, pero Angular siempre trae
+
+0:35:27.040,0:35:32.760
+muchas cosas interesantes, cosas que uno
+
+0:35:29.640,0:35:35.119
+diría como yo estoy bien así, pero
+
+0:35:32.760,0:35:37.280
+claro, está mucho mejor en la manera en
+
+0:35:35.119,0:35:40.359
+que Angular lo propone. Un ejemplo claro
+
+0:35:37.280,0:35:44.400
+es este nuevo inyectable, este nuevo
+
+0:35:40.359,0:35:46.359
+decorator llamado service, en el cual
+
+0:35:44.400,0:35:48.240
+optimiza un montón, o sea, no es que sea
+
+0:35:46.359,0:35:50.040
+mucho más fácil de leer el código porque
+
+0:35:48.240,0:35:53.079
+ellos se dieron cuenta que al final la
+
+0:35:50.040,0:35:55.359
+mayoría de service son providing root,
+
+0:35:53.079,0:35:57.839
+entonces como que esa metadata pues
+
+0:35:55.359,0:35:59.280
+básicamente era decorativa porque todos
+
+0:35:57.839,0:36:01.680
+lo usamos de esa manera. Entonces
+
+0:35:59.280,0:36:04.119
+básicamente se convierte en un una forma
+
+0:36:01.680,0:36:04.920
+de ahorrar como sintaxis innecesaria.
+
+0:36:04.119,0:36:06.400
+Entonces ahora
+
+0:36:04.920,0:36:08.240
+la cantidad lógica que había detrás de
+
+0:36:06.400,0:36:10.880
+la Rob Inyectable era bastante grande
+
+0:36:08.240,0:36:15.000
+para poder ofrecer la posibilidad de
+
+0:36:10.880,0:36:16.160
+incorporar ahí otros inyectors e clase
+
+0:36:15.000,0:36:18.319
+es un
+
+0:36:16.160,0:36:21.839
+para mayor parte de los casos como estás
+
+0:36:18.319,0:36:25.240
+diciendo, es un singleton y ya es no es
+
+0:36:21.839,0:36:27.119
+necesario traer en el código fuente del
+
+0:36:25.240,0:36:28.760
+framework
+
+0:36:27.119,0:36:30.640
+una gran cantidad de lógica que te va a
+
+0:36:28.760,0:36:33.160
+permitir hacer otro tipo de cosas que
+
+0:36:30.640,0:36:34.640
+son raras de emplear hoy en día en este
+
+0:36:33.160,0:36:37.400
+angular modern
+
+0:36:34.640,0:36:38.760
+Y eso lo trajo la versión 22. Bien, pero
+
+0:36:37.400,0:36:42.760
+entonces, ¿qué qué se trajo en esta
+
+0:36:38.760,0:36:44.400
+versión 22.1? Y es yo esperaba, porque
+
+0:36:42.760,0:36:47.560
+ya Angular me tiene mal acostumbrado
+
+0:36:44.400,0:36:51.119
+básicamente de que como que lanzan una
+
+0:36:47.560,0:36:52.680
+nueva cosa y yo esperaba la migration
+
+0:36:51.119,0:36:55.359
+para eso, ¿no? Yo esperaba como, okay,
+
+0:36:52.680,0:36:56.680
+listo, chévere, quiere usarla, pero no
+
+0:36:55.359,0:36:59.040
+estaba el schematic, no estaba la
+
+0:36:56.680,0:37:01.119
+migration para poder hacerla. Y yo,
+
+0:36:59.040,0:37:02.079
+bueno, recomando y ya está, que haga el
+
+0:37:01.119,0:37:04.560
+trabajo sucio.
+
+0:37:02.079,0:37:07.280
+Pero si yo dije, me encanta usarla, pero
+
+0:37:04.560,0:37:09.200
+si me va a tocar migrarla a mí, voy a
+
+0:37:07.280,0:37:12.000
+esperarme un rato o mirar si alguien
+
+0:37:09.200,0:37:14.400
+saca la migration en la comunidad, pero
+
+0:37:12.000,0:37:16.040
+no. En esta 22.1, literalmente lo que
+
+0:37:14.400,0:37:19.160
+sacaron fue la migration. Entonces,
+
+0:37:16.040,0:37:21.839
+ahora eh si queremos hacer estas
+
+0:37:19.160,0:37:24.480
+migraciones y y utilizar este nuevo
+
+0:37:21.839,0:37:26.200
+decorator service eh para hornarnos como
+
+0:37:24.480,0:37:28.319
+todo ese border plate a la hora de los
+
+0:37:26.200,0:37:30.880
+singletons, pues corremos la migration y
+
+0:37:28.319,0:37:32.680
+ahora tenemos ya nueva forma que de
+
+0:37:30.880,0:37:35.680
+nuevo es más fácil de leer, menos
+
+0:37:32.680,0:37:37.319
+código, eh menos carga cognitiva,
+
+0:37:35.680,0:37:39.520
+simplemente un service sabemos que ya es
+
+0:37:37.319,0:37:42.640
+singreton y ya pare de contar. Si
+
+0:37:39.520,0:37:44.720
+tenemos otro caso más complejo, pues ahí
+
+0:37:42.640,0:37:46.119
+sí utilizamos el inyectable con con el
+
+0:37:44.720,0:37:48.119
+patrón que nosotros queramos de
+
+0:37:46.119,0:37:50.400
+inyección de dependencias, pero creo que
+
+0:37:48.119,0:37:51.920
+eso ya es en ciertos cases, ciertas
+
+0:37:50.400,0:37:53.520
+cosas en particular. La mayoría
+
+0:37:51.920,0:37:56.160
+utilizamos
+
+0:37:53.520,0:37:58.720
+un singleton y ya. Eh, entonces creo que
+
+0:37:56.160,0:38:00.520
+ahorita que ya esté la migration eh, es
+
+0:37:58.720,0:38:02.880
+una cosa que me que me gusta mucho y que
+
+0:38:00.520,0:38:04.960
+ahora sí voy a poder migrar porque es un
+
+0:38:02.880,0:38:09.520
+comando y ya digamos, ¿no?
+
+0:38:04.960,0:38:12.800
+Totalmente. Y si usas link signals,
+
+0:38:09.520,0:38:16.640
+también vas a poder reducir lógica en
+
+0:38:12.800,0:38:19.800
+caso de que hayas necesitado tocar la
+
+0:38:16.640,0:38:22.359
+signal primaria que está enlazada a esa
+
+0:38:19.800,0:38:24.000
+señal enlazada vacar redundancia
+
+0:38:22.359,0:38:26.200
+producto de lo nuevo que está
+
+0:38:24.000,0:38:27.839
+incorporando la 22.1. ¿Quieres hacer un
+
+0:38:26.200,0:38:29.640
+poco de mención acerca de esta nueva
+
+0:38:27.839,0:38:31.119
+parte de la API?
+
+0:38:29.640,0:38:33.880
+de todavía creo que hay un poquito de
+
+0:38:31.119,0:38:36.280
+confusión de por sí con el computed y el
+
+0:38:33.880,0:38:38.160
+lintasi
+
+0:38:36.280,0:38:40.520
+que son lo mismo, solo que un lintal se
+
+0:38:38.160,0:38:43.760
+puede modificar, un computed no. Pero
+
+0:38:40.520,0:38:45.359
+ahora con este función dentro del link
+
+0:38:43.760,0:38:46.800
+signal, o sea, esto no va dentro del
+
+0:38:45.359,0:38:48.599
+computer, un computer sigue siendo
+
+0:38:46.800,0:38:50.640
+computada, no se puede modificar, el
+
+0:38:48.599,0:38:53.280
+lting signal sí se puede modificar, pero
+
+0:38:50.640,0:38:55.760
+con este set nos da como más
+
+0:38:53.280,0:38:58.319
+flexibilidad y lógica si tenemos ciertos
+
+0:38:55.760,0:39:00.319
+casos, ¿no? Específicos. A mí me parece
+
+0:38:58.319,0:39:02.800
+que los casos en los que yo podría
+
+0:39:00.319,0:39:04.760
+utilizarlo son muy pocos, es decir, como
+
+0:39:02.800,0:39:07.560
+que no he llegado a esos cases, pero
+
+0:39:04.760,0:39:09.280
+precisamente hay ciertas ed cases que
+
+0:39:07.560,0:39:11.319
+hay por ahí y que por eso introdujeron
+
+0:39:09.280,0:39:12.839
+este pues este nuevo método para como
+
+0:39:11.319,0:39:16.560
+controlar un poco mejor cómo se
+
+0:39:12.839,0:39:18.839
+actualiza ese link. Entonces, me parece
+
+0:39:16.560,0:39:21.280
+grandioso porque pues obviamente hay
+
+0:39:18.839,0:39:23.000
+algunos cases que que de pronto nosotros
+
+0:39:21.280,0:39:24.640
+no nos ha tocado, pero que están ahí y
+
+0:39:23.000,0:39:27.359
+que ahora pues Angular les va dando
+
+0:39:24.640,0:39:29.480
+soporte a este tipo de mutabilidad.
+
+0:39:27.359,0:39:31.839
+Total, existe esa posibilidad, incluso
+
+0:39:29.480,0:39:33.599
+la AI gracias a los skills que también
+
+0:39:31.839,0:39:36.720
+están siendo modificados, lo que no lo
+
+0:39:33.599,0:39:39.160
+vemos en la 22.1 porque están en un
+
+0:39:36.720,0:39:41.040
+repositorio aparte en GitHub. No sé cómo
+
+0:39:39.160,0:39:43.079
+lo manejarán ellos a nivel local. a lo
+
+0:39:41.040,0:39:44.880
+mejor lo están sacando directamente ahí
+
+0:39:43.079,0:39:47.599
+de GitHub dado que están utilizando el
+
+0:39:44.880,0:39:51.560
+ecosistema de skills.
+
+0:39:47.599,0:39:53.319
+Pero a través de esa documentación
+
+0:39:51.560,0:39:56.920
+adicional que se le está entregando a la
+
+0:39:53.319,0:39:59.720
+gente de AI, uno puede ofrecerle estas
+
+0:39:56.920,0:40:02.240
+herramientas que en algún punto de la
+
+0:39:59.720,0:40:05.440
+vida profesional de nosotros puede que
+
+0:40:02.240,0:40:08.200
+no sea útil y puede que la gente no
+
+0:40:05.440,0:40:10.359
+solucione un caso e que en vez de tomar
+
+0:40:08.200,0:40:13.760
+varias líneas de código o una ruta que
+
+0:40:10.359,0:40:15.359
+no es bastante óptima emplea de link
+
+0:40:13.760,0:40:17.520
+signals.
+
+0:40:15.359,0:40:18.880
+Okay. En general todos son buenas
+
+0:40:17.520,0:40:23.880
+noticias.
+
+0:40:18.880,0:40:25.520
+Sí, y es una minor. Tiene posiblemente
+
+0:40:23.880,0:40:28.480
+unas cuantas cosas más que no hemos
+
+0:40:25.520,0:40:31.040
+tocado, más bien en la parte del CI, del
+
+0:40:28.480,0:40:34.040
+compilador en específico, si van a ir a
+
+0:40:31.040,0:40:37.040
+el chang para probarlo, pero sí háganle
+
+0:40:34.040,0:40:39.560
+NG update, vayan manualmente cambiando
+
+0:40:37.040,0:40:42.319
+la versión si prefieren hacerlo de esa
+
+0:40:39.560,0:40:43.520
+forma, pero no sé si hay algo más que no
+
+0:40:42.319,0:40:44.960
+hayamos mencionado durante esta
+
+0:40:43.520,0:40:46.280
+conversación sobre lo que quieras
+
+0:40:44.960,0:40:48.720
+comentar, Nico, antes de cerrar el
+
+0:40:46.280,0:40:50.800
+episodio. Yo creo que la mayoría de las
+
+0:40:48.720,0:40:52.280
+cosas, al menos las más importantes, las
+
+0:40:50.800,0:40:54.760
+mencionamos. Si se nos salió otro
+
+0:40:52.280,0:40:56.560
+detalle, díganlo en los comentarios o si
+
+0:40:54.760,0:40:58.599
+les interesó alguna más en particular o
+
+0:40:56.560,0:41:00.839
+cuál les interesó más, déjenlo ahí en
+
+0:40:58.599,0:41:03.880
+los en la cajita de comentarios. Creo
+
+0:41:00.839,0:41:08.200
+que en la que más ha causado ruido es la
+
+0:41:03.880,0:41:11.560
+de el cambio de versionamiento cada cada
+
+0:41:08.200,0:41:13.440
+12 meses, lo cual a mi sorpresa ha
+
+0:41:11.560,0:41:16.480
+traído felicidad. Yo creí que iba a
+
+0:41:13.440,0:41:19.200
+traer como impacto negativo, pero no.
+
+0:41:16.480,0:41:20.400
+realmente tuvo mucha felicidad, al menos
+
+0:41:19.200,0:41:23.200
+dentro de la comunidad en la que he
+
+0:41:20.400,0:41:25.400
+estado conversando. Eh, y en mi LinkedIn
+
+0:41:23.200,0:41:28.079
+hice un post sobre eso y todos han
+
+0:41:25.400,0:41:29.520
+dicho, "Excelente decisión, es es mejor
+
+0:41:28.079,0:41:32.319
+para las empresas, es mejor para la
+
+0:41:29.520,0:41:34.640
+academia." Así que al parecer eh fue una
+
+0:41:32.319,0:41:36.000
+gran una decisión bastante acertada y
+
+0:41:34.640,0:41:38.520
+pues esperemos que esto haga más fuerte
+
+0:41:36.000,0:41:41.960
+a la comunidad, más fuerte también a AI.
+
+0:41:38.520,0:41:44.400
+Sabemos que AI tiene cortes de de su
+
+0:41:41.960,0:41:47.319
+knowledge, de su conocimiento. También
+
+0:41:44.400,0:41:48.800
+parte de ese cambio es que Angular no
+
+0:41:47.319,0:41:51.560
+tenga tantos cambios, sino que sea
+
+0:41:48.800,0:41:53.640
+estable y entonces con AI eh pueda
+
+0:41:51.560,0:41:56.680
+diferir o pueda usar como versiones más
+
+0:41:53.640,0:41:58.040
+estables eh y pues duraderas a través de
+
+0:41:56.680,0:41:59.400
+un año. Entonces, yo creo que ese es el
+
+0:41:58.040,0:42:01.960
+cambio más importante, el que más me
+
+0:41:59.400,0:42:03.880
+impactó. Eh, a nivel técnico. Me gusta
+
+0:42:01.960,0:42:06.280
+la simplicidad de service, el nuevo
+
+0:42:03.880,0:42:08.760
+decorator. Lo voy a es uno de los que
+
+0:42:06.280,0:42:10.720
+primeramente voy a usar. Eh, pero esos
+
+0:42:08.760,0:42:13.760
+son como mis dos preferidos. ¿Cuáles son
+
+0:42:10.720,0:42:16.240
+tus dos preferidos de este miner?
+
+0:42:13.760,0:42:19.000
+Yo coincido completamente conido en la
+
+0:42:16.240,0:42:21.040
+parte de la release, de la cadencia de
+
+0:42:19.000,0:42:23.040
+lanzamientos, que bueno, no es como tal
+
+0:42:21.040,0:42:25.319
+un feature de la versión, men, ¿no?,
+
+0:42:23.040,0:42:28.160
+pero una una manera de enfrentar las
+
+0:42:25.319,0:42:31.520
+versiones de Angular en sí mismo. Y
+
+0:42:28.160,0:42:33.680
+nunca podía haber previsto aquella vez
+
+0:42:31.520,0:42:36.000
+en el Google Next hace dos o tres meses
+
+0:42:33.680,0:42:38.839
+que nos reunimos en la mesa todos para
+
+0:42:36.000,0:42:41.359
+comenzar acerca de esta estrategia que
+
+0:42:38.839,0:42:43.400
+iba a salir tan rápido. Pensé que
+
+0:42:41.359,0:42:46.240
+posiblemente iba a demorar unos cuantos
+
+0:42:43.400,0:42:48.640
+meses más, pero acá tenemos para
+
+0:42:46.240,0:42:52.800
+disfrutar la 22.1.
+
+0:42:48.640,0:42:54.680
+Yo estoy a favor de poder decirte que lo
+
+0:42:52.800,0:42:56.359
+del Oxidation Compiler es una de mis
+
+0:42:54.680,0:42:58.000
+favoritas, aunque no tenga que hacer
+
+0:42:56.359,0:43:01.359
+nada en el código para poder disfrutar
+
+0:42:58.000,0:43:03.240
+de de la mejora de rendimiento y de todo
+
+0:43:01.359,0:43:05.280
+lo que nos dice el No bench markings. Y
+
+0:43:03.240,0:43:07.760
+yo sencillamente
+
+0:43:05.280,0:43:09.640
+se lesionaría esa y esperando a las
+
+0:43:07.760,0:43:12.839
+próximas versiones, posiblemente la que
+
+0:43:09.640,0:43:15.599
+va a salir en junio del 2027, que va a
+
+0:43:12.839,0:43:17.920
+ser el próximo major de Angular, que si
+
+0:43:15.599,0:43:20.839
+incluya más beneficios de rendimiento
+
+0:43:17.920,0:43:22.480
+relacionados con la manera de compilar
+
+0:43:20.839,0:43:25.640
+gracias a todos los movimientos que
+
+0:43:22.480,0:43:29.880
+están pasando subyacentes en Node y en
+
+0:43:25.640,0:43:33.520
+TScripts. Así que con vistas ahora en un
+
+0:43:29.880,0:43:36.079
+par de meses para poder tener chan de
+
+0:43:33.520,0:43:38.319
+disfrutar todo lo que podemos sacarle
+
+0:43:36.079,0:43:41.520
+provecho ahora a la 22.1 antes de que
+
+0:43:38.319,0:43:44.079
+venga la 22.2.
+
+0:43:41.520,0:43:46.240
+Perfecto. Bueno, entonces ya estamos
+
+0:43:44.079,0:43:48.800
+frente a nuevas actualizaciones dentro
+
+0:43:46.240,0:43:50.119
+del ecosistema de Angular y pues
+
+0:43:48.800,0:43:52.280
+nosotros vamos a estar aquí muy
+
+0:43:50.119,0:43:54.359
+pendientes de notificar esas
+
+0:43:52.280,0:43:56.880
+actualizaciones a la comunidad. Así
+
+0:43:54.359,0:43:58.880
+mismo. Vale, Nico, muchas gracias por
+
+0:43:56.880,0:44:01.280
+estar acá con nosotros y nos vemos en la
+
+0:43:58.880,0:44:03.680
+próxima aventura. Chào chào
+
+0:44:01.280,0:44:03.680
+cho.
+
