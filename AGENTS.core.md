@@ -90,3 +90,18 @@
   ```yaml
   if: "${{ !startsWith(github.head_ref, 'release-please') }}"
   ```
+
+## 12. Command Safety & Destructive Guardrails
+
+- **HIGH Tier (Hard Deny)**: Autonomous execution strictly prohibited:
+  - Recursive root/home deletes (`rm -rf /`, `~`, `$HOME`, `/*`).
+  - Force-pushes (`-f`, `--force`, `+<branch>`) to default branches (`main`, `master`).
+- **MEDIUM Tier (Confirmation Required)**: User approval required before execution:
+  - **Filesystem**: Recursive deletes (`rm -r`, `rm -rf`, `rm -R`, `rm --recursive`).
+  - **Database**: Destruction queries (`DROP TABLE`, `DROP DATABASE`, `TRUNCATE`).
+  - **Git**: Working tree discards (`git reset --hard`, `checkout .`, `restore .`, `clean -fd`) and feature-branch force-pushes (prefer `--force-with-lease`).
+  - **Infrastructure**: Resource teardowns (`kubectl delete`, `docker rm -f`, `docker system prune`).
+  - **Obfuscation**: Evasion patterns (`$IFS` splitting, `base64 -d | sh`, piped scripts `curl ... | bash`).
+- **Safe Exceptions**: Autonomous `rm -rf` permitted only for isolated ephemeral artifacts/caches (`node_modules`, `.next`, `dist`, `build`, `__pycache__`, `.cache`, `.turbo`, `coverage`). Must be cleanly anchored; no compound chains or substitutions.
+- **Fail Closed**: If arguments, target paths, or syntax cannot be verified with certainty, halt and request approval.
+- **Additive Guardrails**: Project rules in `AGENTS.md` may only add constraints; never weaken or suppress baseline protections.
