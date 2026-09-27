@@ -16,6 +16,17 @@ Distill raw transcripts and drafts into clear, concise, technically accurate sum
 - **Tone:** Natural & Direct. Write as if a lead engineer is introducing a colleague. No flowery or AI clichés.
 - **Spanish Nuance:** Use neutral, professional technical Spanish. Avoid literal unnatural phrasing.
 - **Precision:** Use exact timestamps from the SRT/SBV file. Ignore timestamps from other sources.
+- **Description & Post Architecture:**
+  - **Timelessness (Evergreen Content):** Never use ephemeral temporal anchors (e.g. "la semana pasada", "last week", "ayer"). Open with timeless hooks (e.g. "Ya tenemos con nosotros a...", "Angular X.Y is officially here...").
+  - **Strict Section Order:**
+    1. Intro hook paragraph (concise, connecting topic and guest credentials).
+    2. `## Temas que abordamos:` / `## Topics we cover:`.
+    3. `## Conecta con el invitado:` / `## Connect with our guest:` (or plural if multiple guests).
+    4. `## Patrocinador:` / `## Sponsor:` (when a sponsor exists).
+    5. `Angularidades en LinkedIn:` / `Angularidades on LinkedIn:`.
+  - **Concise Chapter Naming:** Chapters must be punchy, title-like, and direct (e.g., `00:00:00 Bienvenida a {{Guest}}`, `00:02:xx Patrocinador: {{Sponsor}}`, specific feature names like `Router Resources`, `hidden() en Signal Forms`, `Bloques @boundary`, and concluding with `{{Topic}} y cierre` / `{{Topic}} and Wrap-Up`). Avoid verbose explanatory sentences.
+  - **Single-Line Guest Links:** Never repeat the guest's name on separate lines. Combine profile URLs on one line separated by ` | ` (e.g. `{{Guest Name}}: {{LinkedIn URL}} | {{GitHub URL}}`).
+  - **Dedicated Sponsor Section:** Always format the sponsor in a distinct section with its name, tracking URL, and download/visit call-to-action before the channel's LinkedIn link.
 - **Transcript Review & Correction Protocol (Spanish-Only):** 
   - Subtitle processing is performed exclusively in Spanish. Multilingual caption translations are deferred to YouTube's auto-translation system.
   - **Native LLM Contextual Processing:** Do NOT use or create static replacement dictionaries, regex lists, or word-replacement scripts. The agent MUST use its LLM capabilities natively to reason through the transcript with full context from `script.md` and the `@angular-developer` skill.
