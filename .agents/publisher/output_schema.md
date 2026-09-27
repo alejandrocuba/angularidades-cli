@@ -51,6 +51,43 @@ Angularidades on LinkedIn: https://www.linkedin.com/company/angularidades/
 - For Chapters: Extract precise timestamps directly from the SRT/SBV. Chapters reflect the exact second a topic begins. Do not round or infer times.
 
 ---
+# spotify_description_es.md
+[OPTIMIZED FOR SPOTIFY & PODCAST SHOW NOTES - SPANISH ONLY - NO EMOJIS - NO MARKDOWN HEADERS (NO ##)]
+Generate only one file in Spanish (Spotify does not support multilingual localized episode descriptions).
+
+{{ Concise, evergreen intro paragraph (1-2 sentences) introducing the topic and guest with credentials. Must fit comfortably above Spotify's mobile fold. Avoid ephemeral time anchors like "la semana pasada" or "last week". }}
+
+Patrocinador:
+{{Sponsor Name}}: Visita {{Spotify Tracking Link}} para descargar la aplicación en iOS o Android. (omit section if no sponsor)
+
+Temas que abordamos:
+00:00:00 Bienvenida a {{Guest Name}}
+hh:mm:ss Patrocinador: {{Sponsor Name}} (omit if no sponsor)
+hh:mm:ss {{Concise Chapter title 1}}
+hh:mm:ss {{Concise Chapter title 2}}
+hh:mm:ss {{Final topic}} y cierre
+
+Conecta con el invitado:
+{{Guest Name}}: {{LinkedIn URL}} | {{GitHub URL}}
+
+Angularidades en LinkedIn: https://www.linkedin.com/company/angularidades/
+
+*Rules:*
+- GENERATE SPANISH FILE ONLY (spotify_description_es.md). Spotify/RSS feeds do not have multilingual localized descriptions.
+- STRICT SECTION ORDER:
+  1. Intro hook paragraph (concise, 1-2 sentences, above the fold)
+  2. Patrocinador: (immediately after intro so listeners see it without scrolling past 20 chapters)
+  3. Temas que abordamos:
+  4. Conecta con el invitado: (use plural "Conecta con los invitados" if multiple guests)
+  5. Angularidades en LinkedIn: https://www.linkedin.com/company/angularidades/
+- NO EMOJIS: Do NOT include emojis in Spotify descriptions. Keep section titles plain and clean.
+- SPOTIFY TRACKING LINK: Use the Spotify-specific UTM tracking link from `metadata.json` (`sponsor.trackingLinks.spotify`), NOT the YouTube or LinkedIn link.
+- NO MARKDOWN HEADERS: Do NOT use `##` or `#` headers. Spotify does not render markdown headings (they show as literal `##`). Use clean plain text labels without `#`.
+- CLICKABLE TIMESTAMPS: Use `hh:mm:ss` or `mm:ss` timestamps. Spotify automatically renders standard timestamps as interactive seek buttons in the player.
+- EVERGREEN HOOK: Do NOT use time-anchored phrases like "la semana pasada", "last week", or "ayer".
+- SINGLE-LINE GUEST LINKS: Combine profile links on one line: `{{Guest Name}}: {{LinkedIn Link}} | {{GitHub Link}}`.
+
+---
 # linkedin_post_es.md / linkedin_post_en.md
 Generate two separate files, one in Spanish and one in English.
 ```
