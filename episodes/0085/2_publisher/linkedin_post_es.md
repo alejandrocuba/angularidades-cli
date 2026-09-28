@@ -1,19 +1,19 @@
-Ya tenemos con nosotros a Angular 22.2 y, además de las novedades técnicas que analizamos en este episodio, el segundo parche de esta versión nos dejará una curiosidad matemática fascinante.
+El segundo parche del segundo minor de la vigesimosegunda versión de Angular dejará una curiosidad matemática alrededor de los repdigits: una alineación que no se veía desde la v11.1.1 en 2021 y que no vuelve a repetirse hasta posiblemente dentro de 11 años con la v33.3.3 🤓
 
-En matemáticas recreativas, un repdigit (o monodígito) es un número compuesto exclusivamente por la repetición de una misma cifra (como 777 o 222). Aunque las cadenas de versionado de software no son números decimales estándar, sino tuplas de enteros separadas por puntos, la llegada de la versión 22.2.2 reproducirá exactamente esta propiedad: una alineación que no se veía desde la versión 11.1.1 en 2021 y que no volverá a ocurrir posiblemente hasta dentro de más de una década con la 33.3.3.
-
-Aprovechando esta particularidad, nos acompaña Damián Siré, ingeniero de software, licenciado en Matemáticas y Google Developer Expert en Angular. Desde Japón, conectamos esta charla de divulgación con las innovaciones técnicas más importantes del release:
+Este episodio de Angularidades va sobre lo nuevo que nos trae la v22.2 del framework, teniendo como invitado especial desde Japón a Damián Siré, Angular GDE.
 
 Temas que abordamos durante la conversación:
-✔️ Manejo declarativo de errores con el nuevo bloque de plantillas @boundary y recuperación con $reset()
-✔️ Carga reactiva y paralela en rutas con Router Resources, dejando atrás los resolvers bloqueantes
-✔️ Soporte de campos ocultos permanentes en Signal Forms para modelos de datos limpios
-✔️ Acceso a propiedades private desde las plantillas y su impacto positivo en minificación y mangling
-✔️ Diagnóstico estricto de eventos con strictUnclaimedEventNames en compiler-cli
-✔️ Integración de herramientas tipadas para agentes de IA mediante el protocolo WebMCP
-✔️ Deduplicación de imports diferidos en bloques @defer y estadísticas de bundle para SSR
-✔️ CSS Nesting nativo y la evolución del aislamiento con ViewEncapsulation
 
-🛍️ Conoce más sobre xhop-n-go, patrocinador de este episodio: https://www.xhopngo.com/angularidades?utm_source=angularidades&utm_medium=linkedin&utm_campaign=angular_22_2_release
+✔️ Manejo declarativo de errores en plantillas con @boundary
+✔️ Enrutamiento reactivo y paralelo con Router Resources, dejando atrás los resolvers
+✔️ Campos ocultos permanentes en Signal Forms
+✔️ Acceso a propiedades private desde las plantillas y su impacto en minificación y mangling
+✔️ Diagnóstico extendido de eventos no reclamados
+✔️ Novedades de la integración de WebMCP
+✔️ Deduplicación de imports en bloques @defer
+✔️ Estadísticas de bundle independientes para CSR y SSR
+✔️ Soporte a CSS Nesting nativo
 
-🎧 Escucha el episodio #85 en YouTube (Audio en español con subtítulos): {{link}}, Spotify o en tu plataforma de podcast favorita.
+Conoce más sobre xhop-n-go, patrocinador de este episodio: https://www.xhopngo.com/angularidades?utm_source=angularidades&utm_medium=linkedin&utm_campaign=angular_22_2_release
+
+🎧 Escucha el episodio #85 en YouTube (con subtítulos revisados en español e inglés): https://youtu.be/5ruG1wq5Q_A, Spotify o en tu plataforma de podcast favorita.

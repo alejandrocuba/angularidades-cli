@@ -88,10 +88,11 @@ Angularidades en LinkedIn: https://www.linkedin.com/company/angularidades/
 - SINGLE-LINE GUEST LINKS: Combine profile links on one line: `{{Guest Name}}: {{LinkedIn Link}} | {{GitHub Link}}`.
 
 ---
-# linkedin_post_es.md / linkedin_post_en.md
-Generate two separate files, one in Spanish and one in English.
+# linkedin_post_es.md
+[SPANISH ONLY]
+Generate only one file in Spanish (linkedin_post_es.md).
 ```
-{{ same evergreen pitch of the description }}
+{{ same evergreen pitch of the description, developed organically }}
 
 Temas que abordamos durante la conversación:
 ✔️ {{Point 1}}
@@ -100,14 +101,14 @@ Temas que abordamos durante la conversación:
 
 🛍️ Conoce más sobre {{Sponsor}}, patrocinador de este episodio: {{LinkedIn Tracking URL}} (omit if no sponsor)
 
-🎧 Escucha el episodio #{{episode_number}} en YouTube (Audio en español con subtítulos): {{link}}, Spotify o en tu plataforma de podcast favorita.
+🎧 Escucha el episodio #{{episode_number}} en YouTube (con subtítulos revisados en español e inglés): https://youtu.be/{{videoId}}, Spotify o en tu plataforma de podcast favorita.
 ```
 *Rules:*
-- GENERATE BOTH SPANISH AND ENGLISH FILES.
-- English version must mention: "Spanish audio with subtitles". Spanish version must mention "Audio en español con subtítulos".
-- Intro: factual, concise, timeless, relevant for technical audience.
+- GENERATE SPANISH FILE ONLY (linkedin_post_es.md). Do NOT generate English LinkedIn posts.
+- Intro: organic, fluid narrative based directly on the YouTube description evergreen hook, connecting the release and guest naturally. Avoid academic clichés or overly wordy definitions.
 - Mention guest's name and episode number. Use bullet points (✔️).
 - Include sponsor line with LinkedIn UTM tracking link if a sponsor exists for the episode.
+- Must mention "(con subtítulos revisados en español e inglés)" and the YouTube link `https://youtu.be/{{videoId}}`.
 
 ---
 ---

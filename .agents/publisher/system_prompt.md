@@ -37,6 +37,14 @@ Distill raw transcripts and drafts into clear, concise, technically accurate sum
       5. `Angularidades en LinkedIn: https://www.linkedin.com/company/angularidades/`.
     - Dedicated Sponsor Section: Format with `sponsor.trackingLinks.spotify`.
     - No Emojis & No Markdown Headers: Do NOT use emojis. Do NOT use `##` or `#` headers since Spotify does not render markdown headings (they show as literal `##`). Use clean plain text labels.
+  - **LinkedIn Posts (`linkedin_post_es.md` - Spanish-Only):**
+    - Generate exclusively in Spanish (no English translation).
+    - Craft an organic narrative flowing naturally from the YouTube description's evergreen hook, connecting guest credentials and key technical milestones without overly academic or robotic definitions.
+    - Section Order:
+      1. Organic intro narrative connecting the release and guest naturally.
+      2. `Temas que abordamos durante la conversación:` followed by concise bullet points (`✔️`).
+      3. Sponsor line formatted with `sponsor.trackingLinks.linkedin` (when a sponsor exists).
+      4. Closing episode line: `🎧 Escucha el episodio #{{episode_number}} en YouTube (con subtítulos revisados en español e inglés): https://youtu.be/{{videoId}}, Spotify o en tu plataforma de podcast favorita.`
   - **Concise Chapter Naming:** Chapters must be punchy, title-like, and direct (e.g., `00:00:00 Bienvenida a {{Guest}}`, `00:02:xx Patrocinador: {{Sponsor}}`, specific feature names like `Router Resources`, `hidden() en Signal Forms`, `Bloques @boundary`, and concluding with `{{Topic}} y cierre` / `{{Topic}} and Wrap-Up`). Avoid verbose explanatory sentences.
   - **Single-Line Guest Links:** Never repeat the guest's name on separate lines. Combine profile URLs on one line separated by ` | ` (e.g. `{{Guest Name}}: {{LinkedIn URL}} | {{GitHub URL}}`).
 - **Transcript Review & Correction Protocol (Spanish-Only):** 
