@@ -19,6 +19,7 @@ The CLI supporting the planning, post-production and publishing workflow of the 
 
 <!-- YOUTUBE:START -->
 
+<a href="https://www.youtube.com/watch?v=5ruG1wq5Q_A" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/5ruG1wq5Q_A/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
 <a href="https://www.youtube.com/watch?v=XwkSfUxWHRk" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/XwkSfUxWHRk/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
 <a href="https://www.youtube.com/watch?v=J3CApzKtcCU" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/J3CApzKtcCU/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
 <a href="https://www.youtube.com/watch?v=BQfM_5IzoaE" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/BQfM_5IzoaE/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
@@ -29,8 +30,7 @@ The CLI supporting the planning, post-production and publishing workflow of the 
 <a href="https://www.youtube.com/watch?v=YrY3tgbkJkY" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/YrY3tgbkJkY/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
 <a href="https://www.youtube.com/watch?v=Dt5rw1UCh5Q" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/Dt5rw1UCh5Q/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
 <a href="https://www.youtube.com/watch?v=3AD-vIqvCgs" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/3AD-vIqvCgs/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
-<a href="https://www.youtube.com/watch?v=xzaXVSrzuTs" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/xzaXVSrzuTs/mqdefault.jpg" alt="Angularidades Episode"></a>&nbsp;&nbsp;
-<a href="https://www.youtube.com/watch?v=ub69Np2ya-c" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/ub69Np2ya-c/mqdefault.jpg" alt="Angularidades Episode"></a>
+<a href="https://www.youtube.com/watch?v=xzaXVSrzuTs" target="_blank" rel="noopener noreferrer"><img width="180" src="https://i.ytimg.com/vi/xzaXVSrzuTs/mqdefault.jpg" alt="Angularidades Episode"></a>
 
 <!-- YOUTUBE:END -->
 
