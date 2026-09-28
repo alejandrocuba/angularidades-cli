@@ -1,0 +1,3260 @@
+0:00:07.120,0:00:11.599
+Damián, ya tenemos por acá a la segunda
+
+0:00:09.679,0:00:14.160
+de cinco versiones menores que vamos a
+
+0:00:11.599,0:00:16.240
+estar recibiendo cada dos meses durante
+
+0:00:14.160,0:00:19.160
+este ciclo de actualizaciones
+
+0:00:16.240,0:00:21.840
+correspondientes a la versión 22. Y en
+
+0:00:19.160,0:00:23.599
+este episodio vamos a enfocarnos en las
+
+0:00:21.840,0:00:26.119
+novedades que nos trae este nuevo
+
+0:00:23.599,0:00:28.920
+release que fue gestionado hace unos
+
+0:00:26.119,0:00:31.800
+pocos días por Jessica Janiuk, encargada
+
+0:00:28.920,0:00:34.120
+en esta ocasión del lanzamiento de la
+
+0:00:31.800,0:00:36.399
+22.2.
+
+0:00:34.120,0:00:39.000
+Así que muchísimas gracias por haber
+
+0:00:36.399,0:00:40.000
+aceptado la invitación a conversar hoy
+
+0:00:39.000,0:00:41.440
+por acá.
+
+0:00:40.000,0:00:43.440
+Bueno, primero que nada, muchas gracias
+
+0:00:41.440,0:00:45.719
+a vos por la invitación. Siempre
+
+0:00:43.440,0:00:48.199
+estábamos tratando de coordinar para
+
+0:00:45.719,0:00:50.199
+hacerla y medio que no podíamos
+
+0:00:48.199,0:00:53.039
+coincidir, también la diferencia horaria
+
+0:00:50.199,0:00:54.680
+y demás, así que te agradezco mucho por
+
+0:00:53.039,0:00:57.039
+haberme invitado.
+
+0:00:54.680,0:00:59.079
+De hecho, especialmente para quienes no
+
+0:00:57.039,0:01:01.000
+hayan visto el contenido técnico sobre
+
+0:00:59.079,0:01:02.640
+desarrollo de software que estuviste
+
+0:01:01.000,0:01:04.760
+publicando activamente durante la época
+
+0:01:02.640,0:01:08.159
+de la pandemia, voy a presentarte
+
+0:01:04.760,0:01:11.240
+rápidamente ante quienes aún no te
+
+0:01:08.159,0:01:14.159
+conocen. Pues eres originalmente de
+
+0:01:11.240,0:01:16.759
+Montevideo, Uruguay. Actualmente resides
+
+0:01:14.159,0:01:20.759
+en Japón, eres desarrollador de
+
+0:01:16.759,0:01:24.200
+software, estudiaste matemáticas, fuiste
+
+0:01:20.759,0:01:28.000
+coorganizador del Montevideo JavaScript
+
+0:01:24.200,0:01:31.799
+Meetup y también del Angular MVD allá en
+
+0:01:28.000,0:01:33.280
+Montevideo, en Uruguay. Y por todas las
+
+0:01:31.799,0:01:37.399
+colaboraciones que tú has hecho con la
+
+0:01:33.280,0:01:40.000
+comunidad, por el conocimiento que traes
+
+0:01:37.399,0:01:43.119
+desde y bueno, también hacia el equipo
+
+0:01:40.000,0:01:45.640
+central de Angular, tienes la distinción
+
+0:01:43.119,0:01:48.439
+de Google Developer Expert en la
+
+0:01:45.640,0:01:50.759
+categoría que corresponde al framework.
+
+0:01:48.439,0:01:55.040
+Así que es un honor grandísimo tenerte
+
+0:01:50.759,0:01:56.640
+acá con nosotros en Angularidades.
+
+0:01:55.040,0:01:58.759
+Bueno, muchas gracias y de nuevo muchas
+
+0:01:56.640,0:02:00.759
+gracias por la invitación. Es una muy
+
+0:01:58.759,0:02:03.240
+buena oportunidad también para
+
+0:02:00.759,0:02:05.039
+interactuar con la comunidad y poder
+
+0:02:03.240,0:02:07.159
+seguir aportando mi granito de arena a
+
+0:02:05.039,0:02:08.560
+todo esto.
+
+0:02:07.159,0:02:11.160
+Antes de continuar explorando las
+
+0:02:08.560,0:02:13.160
+novedades técnicas de Angular 22.2,
+
+0:02:11.160,0:02:15.920
+quisiera hacer una pausa para
+
+0:02:13.160,0:02:19.160
+presentarles al patrocinador del
+
+0:02:15.920,0:02:20.959
+episodio de hoy: xhop-n-go.
+
+0:02:19.160,0:02:22.680
+Pues resulta que quienes hemos utilizado
+
+0:02:20.959,0:02:25.160
+plataformas tradicionales de compra y
+
+0:02:22.680,0:02:28.000
+venta entre particulares, conocemos muy
+
+0:02:25.160,0:02:31.080
+bien la clásica frustración: ofertas que
+
+0:02:28.000,0:02:33.599
+se aceptan, pero nunca se concretan.
+
+0:02:31.080,0:02:35.680
+Personas que dejan de responder o
+
+0:02:33.599,0:02:39.159
+usuarios que simplemente no aparecen a
+
+0:02:35.680,0:02:42.080
+la hora que nosotros fijamos. Pues esta
+
+0:02:39.159,0:02:45.360
+aplicación xhop-n-go aborda esos
+
+0:02:42.080,0:02:48.280
+problemas frontalmente con una dinámica
+
+0:02:45.360,0:02:52.480
+bien concreta: un período de compromiso
+
+0:02:48.280,0:02:54.599
+de 24 horas. La idea es que cuando el
+
+0:02:52.480,0:02:56.159
+comprador y el vendedor aceptan un
+
+0:02:54.599,0:02:58.400
+acuerdo,
+
+0:02:56.159,0:03:00.800
+tienen esa ventana de tiempo para poder
+
+0:02:58.400,0:03:03.080
+asegurar que ambas partes cumplan y al
+
+0:03:00.800,0:03:06.040
+terminar la compraventa cada quien
+
+0:03:03.080,0:03:08.319
+califica la experiencia. Por cierto,
+
+0:03:06.040,0:03:10.400
+dentro de esta aplicación, un
+
+0:03:08.319,0:03:12.840
+incumplimiento reiterado afecta
+
+0:03:10.400,0:03:15.120
+directamente la reputación del usuario e
+
+0:03:12.840,0:03:17.560
+incluso su permanencia en una plataforma
+
+0:03:15.120,0:03:19.760
+que no solo se enfoca en habilitar el
+
+0:03:17.560,0:03:22.080
+éxito de la transferencia, sino también
+
+0:03:19.760,0:03:24.360
+en fomentar una cultura de
+
+0:03:22.080,0:03:27.680
+responsabilidad real entre los
+
+0:03:24.360,0:03:30.000
+compradores y los vendedores. Que no se
+
+0:03:27.680,0:03:32.120
+me olvide mencionar que en términos de
+
+0:03:30.000,0:03:34.760
+seguridad esta aplicación integra
+
+0:03:32.120,0:03:37.840
+filtros automatizados para prevenir
+
+0:03:34.760,0:03:40.080
+artículos falsificados, publicaciones
+
+0:03:37.840,0:03:41.879
+duplicadas y comportamientos
+
+0:03:40.080,0:03:45.159
+sospechosos, cuidando que las
+
+0:03:41.879,0:03:48.120
+transacciones se mantengan dentro de un
+
+0:03:45.159,0:03:51.920
+entorno bien confiable. Y detrás de este
+
+0:03:48.120,0:03:54.519
+proyecto se encuentra Alex Villibord, un
+
+0:03:51.920,0:03:57.159
+emprendedor de larga trayectoria en
+
+0:03:54.519,0:04:01.599
+estrategias de negocio, procesos, gestión
+
+0:03:57.159,0:04:04.640
+de riesgo y su historial demuestra cómo
+
+0:04:01.599,0:04:07.319
+un founder sin formación académica en
+
+0:04:04.640,0:04:10.439
+ingeniería de software puede definir tanto
+
+0:04:07.319,0:04:13.079
+la visión de un producto como el diseño
+
+0:04:10.439,0:04:14.840
+de la experiencia de usuario y liderar
+
+0:04:13.079,0:04:16.919
+equipos técnicos para llevar una
+
+0:04:14.840,0:04:19.239
+plataforma completa
+
+0:04:16.919,0:04:20.759
+hacia producción. En el episodio que
+
+0:04:19.239,0:04:23.560
+lanzaremos en la segunda mitad de
+
+0:04:20.759,0:04:27.120
+octubre, tendremos una conversación
+
+0:04:23.560,0:04:28.680
+dedicada con Alex, que va a ser muy útil
+
+0:04:27.120,0:04:32.800
+a muchas personas que desarrollan
+
+0:04:28.680,0:04:34.759
+software. La idea es profundizar en cómo
+
+0:04:32.800,0:04:37.120
+estructurar un producto digital, los
+
+0:04:34.759,0:04:39.840
+retos de salir al mercado y las claves
+
+0:04:37.120,0:04:42.039
+para colaborar de forma efectiva entre
+
+0:04:39.840,0:04:44.919
+perfiles de negocio y equipos de
+
+0:04:42.039,0:04:46.840
+ingeniería de software. Mientras tanto,
+
+0:04:44.919,0:04:49.199
+pueden echarle un vistazo a la
+
+0:04:46.840,0:04:52.320
+aplicación hoy mismo y descargarla en
+
+0:04:49.199,0:04:55.039
+Android o iOS a través de los enlaces
+
+0:04:52.320,0:04:57.600
+que dejo acá abajo disponibles en la
+
+0:04:55.039,0:05:00.400
+descripción del episodio. Es de esperar
+
+0:04:57.600,0:05:01.960
+que dentro de unos pocos días aparezca,
+
+0:05:00.400,0:05:03.479
+si es que no ha aparecido ya, pues
+
+0:05:01.960,0:05:06.960
+estamos grabando un día después de que
+
+0:05:03.479,0:05:09.600
+sale la versión 22.2.0 y el episodio
+
+0:05:06.960,0:05:13.600
+debe estar disponible a partir de unos
+
+0:05:09.600,0:05:17.080
+cuantos días, pero sí es de esperar que
+
+0:05:13.600,0:05:20.240
+salga el segundo parche pronto, teniendo
+
+0:05:17.080,0:05:22.080
+ya la versión 22.2.2,
+
+0:05:20.240,0:05:24.880
+que en matemáticas recreativas se
+
+0:05:22.080,0:05:27.039
+considera como un repdigit, que es un
+
+0:05:24.880,0:05:29.160
+número formado por la repetición de un
+
+0:05:27.039,0:05:32.720
+mismo dígito, es decir, un monodígito,
+
+0:05:29.160,0:05:37.759
+algo que ya sucedió en el año 2021
+
+0:05:32.720,0:05:41.280
+cuando se lanzó la 11.1.1 en enero de
+
+0:05:37.759,0:05:44.280
+hace 5 años ya y no va a ocurrir de
+
+0:05:41.280,0:05:47.039
+nuevo esto hasta dentro de posiblemente
+
+0:05:44.280,0:05:48.800
+11 años, y de aquí a allá con el desarrollo
+
+0:05:47.039,0:05:51.440
+de la IA tiene sentido que continúen
+
+0:05:48.800,0:05:53.560
+existiendo este tipo de frameworks de
+
+0:05:51.440,0:05:56.960
+JavaScript, al menos como los conocemos
+
+0:05:53.560,0:06:00.360
+hoy en día, pues la 33.3.3 no va
+
+0:05:56.960,0:06:03.319
+a ser lanzada hasta dentro de qué sé yo,
+
+0:06:00.360,0:06:05.240
+año 2037
+
+0:06:03.319,0:06:08.000
+posiblemente, siempre y cuando no se
+
+0:06:05.240,0:06:11.720
+tome la decisión de ajustarla con los
+
+0:06:08.000,0:06:13.240
+años, ¿no? Ahora que va a ser una por
+
+0:06:11.720,0:06:17.440
+año,
+
+0:06:13.240,0:06:19.120
+capaz tendría sentido año 2027 ver 27,
+
+0:06:17.440,0:06:21.599
+pero visto que hacer ese salto de nuevo
+
+0:06:19.120,0:06:24.599
+sería bastante, si bien ahora es una por
+
+0:06:21.599,0:06:26.240
+año, que coincida la versión con el año,
+
+0:06:24.599,0:06:28.319
+para los que ya usamos Angular, sabemos
+
+0:06:26.240,0:06:31.319
+cómo funciona, estaría bueno,
+
+0:06:28.319,0:06:34.240
+pero para capaz el nuevo público, la
+
+0:06:31.319,0:06:35.919
+gente que todavía no lo usa, les puede
+
+0:06:34.240,0:06:37.639
+resultar como en un pequeño shock
+
+0:06:35.919,0:06:38.479
+emocional.
+
+0:06:37.639,0:06:40.240
+Pero
+
+0:06:38.479,0:06:43.960
+puede chocar muchísimo y puede también
+
+0:06:40.240,0:06:46.120
+resultar como una, sabes, como algo de
+
+0:06:43.960,0:06:47.759
+trivia para el futuro, porque por
+
+0:06:46.120,0:06:49.960
+ejemplo, ¿qué sucedió con la versión 3
+
+0:06:47.759,0:06:52.199
+de Angular? No existió, se saltó
+
+0:06:49.960,0:06:54.680
+directamente, existió, pero a nivel
+
+0:06:52.199,0:06:57.479
+interno y se saltó públicamente de la
+
+0:06:54.680,0:07:00.560
+dos a la cuatro. Y puede que eso suceda
+
+0:06:57.479,0:07:03.400
+también saltando directamente de la 23 a
+
+0:07:00.560,0:07:05.199
+la 28 o algo así si pasa algo como lo
+
+0:07:03.400,0:07:07.879
+que estás describiendo.
+
+0:07:05.199,0:07:12.039
+Pues nada, que la llegada ahora con la
+
+0:07:07.879,0:07:14.680
+22.2 del control flow de errores con
+
+0:07:12.039,0:07:16.840
+los bloques de @boundary, más mejoras en
+
+0:07:14.680,0:07:19.120
+el compilador, también la introducción
+
+0:07:16.840,0:07:21.599
+de esto de Router Resources reactivos
+
+0:07:19.120,0:07:23.840
+en el enrutador que era uno de los
+
+0:07:21.599,0:07:25.440
+elementos que más estábamos esperando.
+
+0:07:23.840,0:07:27.039
+Ahora que vamos a tener los Resources
+
+0:07:25.440,0:07:28.919
+metidos ahí, creo que voy a empezar a
+
+0:07:27.039,0:07:30.639
+usar más
+
+0:07:28.919,0:07:32.840
+ese tipo de estructuras, porque la
+
+0:07:30.639,0:07:34.000
+verdad lo que me pasaba es que ya lo
+
+0:07:32.840,0:07:35.879
+vamos a hablar en su momento, pero
+
+0:07:34.000,0:07:37.759
+cuando las quería usar yo se me
+
+0:07:35.879,0:07:40.319
+obsesionado así, la página está en
+
+0:07:37.759,0:07:41.639
+blanco un segundo, un milisegundo y a mí ya
+
+0:07:40.319,0:07:43.400
+me genera como un estrés.
+
+0:07:41.639,0:07:46.120
+Bueno, vamos a empezar por ahí mismo por
+
+0:07:43.400,0:07:49.319
+los cambios en el paquete de
+
+0:07:46.120,0:07:53.479
+enrutamiento del framework. Primeramente,
+
+0:07:49.319,0:07:55.039
+como bien decías, es una oportunidad de
+
+0:07:53.479,0:07:57.280
+optimización
+
+0:07:55.039,0:07:59.919
+de la cual no nos vamos a beneficiar
+
+0:07:57.280,0:08:02.199
+solamente nosotros como desarrolladores,
+
+0:07:59.919,0:08:05.280
+sino también los usuarios finales de
+
+0:08:02.199,0:08:08.039
+nuestras aplicaciones van a poder
+
+0:08:05.280,0:08:11.199
+prescindir de ese problema antiguo que
+
+0:08:08.039,0:08:13.919
+lo que hacía era, debido a que se cargaba
+
+0:08:11.199,0:08:16.440
+de manera secuencial y generaba un
+
+0:08:13.919,0:08:18.879
+waterfall, fundamentalmente cuando había
+
+0:08:16.440,0:08:21.479
+una relación entre rutas padre e hijo.
+
+0:08:18.879,0:08:24.120
+Ahora con los Router Resources, el
+
+0:08:21.479,0:08:26.599
+proceso ocurre en paralelo, es decir,
+
+0:08:24.120,0:08:30.759
+todas las rutas que están descritas de
+
+0:08:26.599,0:08:31.759
+esta manera asíncrona se van procesando
+
+0:08:30.759,0:08:34.200
+en paralelo.
+
+0:08:31.759,0:08:37.360
+Creo que el mayor problema que estaban
+
+0:08:34.200,0:08:40.880
+teniendo en el enrutador con estas cosas
+
+0:08:37.360,0:08:43.839
+era que bloqueaban la navegación porque
+
+0:08:40.880,0:08:46.640
+los resolvers trancaban las cosas.
+
+0:08:43.839,0:08:49.480
+Eh, había como un montón de problemas de
+
+0:08:46.640,0:08:51.000
+cuando corrían secuenciales, o sea, no
+
+0:08:49.480,0:08:52.880
+se integraban con los Signals, no
+
+0:08:51.000,0:08:54.120
+estaban buenos. Entonces, empecé a ver
+
+0:08:52.880,0:08:55.200
+mis aplicaciones y me di cuenta que
+
+0:08:54.120,0:08:57.399
+siempre estaba resolviendo las cosas de
+
+0:08:55.200,0:08:59.440
+otra forma. Y ahora al tener esto de que
+
+0:08:57.399,0:09:01.279
+ya al menos dentro de todo aparece al
+
+0:08:59.440,0:09:04.839
+instante y después empiezan a manejar las
+
+0:09:01.279,0:09:07.680
+cosas, me siento más cómodo poder elegir
+
+0:09:04.839,0:09:09.920
+yo si bloqueo o no básicamente.
+
+0:09:07.680,0:09:12.600
+Y Damián, por cierto, en el área de los
+
+0:09:09.920,0:09:15.079
+formularios reactivos basados en
+
+0:09:12.600,0:09:17.240
+señales, es decir, los Signal Forms,
+
+0:09:15.079,0:09:20.720
+recientemente se habilitó el soporte
+
+0:09:17.240,0:09:23.560
+para campos ocultos. Esto ha salido hace
+
+0:09:20.720,0:09:26.839
+muy poco, no hemos tenido casi tiempo de
+
+0:09:23.560,0:09:29.760
+explorarlos, pero ¿cómo piensas que esto
+
+0:09:26.839,0:09:33.880
+pueda impactar positivamente o de alguna
+
+0:09:29.760,0:09:37.040
+manera tener cierta fricción con la
+
+0:09:33.880,0:09:38.680
+forma de uno de pasar datos que
+
+0:09:37.040,0:09:40.920
+correspondan, por ejemplo, a
+
+0:09:38.680,0:09:45.320
+persistencia de identificadores
+
+0:09:40.920,0:09:47.760
+internos del lado backend o tokens CSRF
+
+0:09:45.320,0:09:51.040
+para Cross-Site Request Forgery o
+
+0:09:47.760,0:09:54.640
+metadatos de auditoría, de telemetría,
+
+0:09:51.040,0:09:56.839
+cómo esto puede facilitar el paso de
+
+0:09:54.640,0:09:59.200
+información y de metadata relevantes y
+
+0:09:56.839,0:10:01.079
+ayudar con la experiencia de desarrollo.
+
+0:09:59.200,0:10:02.880
+Sí, a ver, desde mi perspectiva, los
+
+0:10:01.079,0:10:06.320
+campos ocultos vienen siendo algo más de
+
+0:10:02.880,0:10:07.680
+UI, ¿no? Porque como yo lo uso hasta
+
+0:10:06.320,0:10:13.200
+ahora, yo lo que vengo haciendo con ese
+
+0:10:07.680,0:10:17.600
+hidden de campos ocultos es @if
+
+0:10:13.200,0:10:19.800
+signalForm campo.hidden() y eso le dice
+
+0:10:17.600,0:10:21.480
+a la UI si lo tiene que renderizar o no
+
+0:10:19.800,0:10:23.880
+porque yo le vengo dando ese concepto.
+
+0:10:21.480,0:10:26.920
+Digo, yo soy el que pone el @if para
+
+0:10:23.880,0:10:30.200
+renderizarlo, ¿no? Ahora, ¿qué pasa?
+
+0:10:26.920,0:10:31.959
+Hasta ahora era un poco incómodo usar
+
+0:10:30.200,0:10:33.600
+porque vos tenías que usar el when. No sé
+
+0:10:31.959,0:10:38.839
+si viste que era como que vos ponías
+
+0:10:33.600,0:10:41.160
+hidden al campo y le ponías coma, eh,
+
+0:10:38.839,0:10:43.480
+abrías corchetes, le ponías when y la
+
+0:10:41.160,0:10:46.279
+variable que te
+
+0:10:43.480,0:10:48.639
+decía si se renderizaba o no la función.
+
+0:10:46.279,0:10:50.800
+En este caso, si querías que fuera un
+
+0:10:48.639,0:10:52.279
+campo oculto permanente, o sea, que
+
+0:10:50.800,0:10:54.360
+estuviera siempre oculto, pero
+
+0:10:52.279,0:10:58.440
+mantenerlo en tu modelo, lo que hacías
+
+0:10:54.360,0:10:59.200
+le ponías when: () => true.
+
+0:10:58.440,0:10:59.480
+Sí,
+
+0:10:59.200,0:11:01.360
+correcto.
+
+0:10:59.480,0:11:03.240
+Entonces, hasta ahora la forma de
+
+0:11:01.360,0:11:05.480
+hacerlo oculto permanente que habíamos
+
+0:11:03.240,0:11:07.399
+encontrado era una función que siempre
+
+0:11:05.480,0:11:10.240
+devolvía true. De esa forma va a estar
+
+0:11:07.399,0:11:15.079
+oculto permanentemente para siempre.
+
+0:11:10.240,0:11:16.600
+Ahora tenemos la ventaja que con la v22.2
+
+0:11:15.079,0:11:21.600
+lo que hacemos es tener una función
+
+0:11:16.600,0:11:23.680
+hidden y llamamos a hidden con
+
+0:11:21.600,0:11:26.680
+el campo en cuestión y queda oculto para
+
+0:11:23.680,0:11:30.279
+siempre. Esta creo que es como la
+
+0:11:26.680,0:11:31.880
+ventaja de la 22.2, que es algo que ya
+
+0:11:30.279,0:11:34.880
+hacíamos nosotros como comunidad que
+
+0:11:31.880,0:11:36.920
+era, okay, esto recibe como parámetro
+
+0:11:34.880,0:11:39.200
+una función que se encargue de verificar
+
+0:11:36.920,0:11:41.760
+si es un campo oculto o no. Si queremos
+
+0:11:39.200,0:11:43.240
+que sea oculto de forma permanente, le
+
+0:11:41.760,0:11:44.680
+ponemos una función que devuelva siempre
+
+0:11:43.240,0:11:46.399
+true
+
+0:11:44.680,0:11:49.560
+y cantidad de sintaxis que había que
+
+0:11:46.399,0:11:51.519
+escribir para ello, no era algo que
+
+0:11:49.560,0:11:53.959
+fuese, como mismo habías mencionado, si
+
+0:11:51.519,0:11:56.800
+no lento de hacer ni complejo, sino de que
+
+0:11:53.959,0:11:58.800
+necesitaba escribir lógica que hoy en
+
+0:11:56.800,0:12:00.000
+día se resuelve con el simple llamado a una
+
+0:11:58.800,0:12:02.480
+función.
+
+0:12:00.000,0:12:05.440
+Claro. Y ahora que te cobran por token
+
+0:12:02.480,0:12:07.240
+es como escribí menos, escribí lo menor
+
+0:12:05.440,0:12:08.760
+posible.
+
+0:12:07.240,0:12:13.959
+Y
+
+0:12:08.760,0:12:17.800
+creo que el punto a debatir de todo esto
+
+0:12:13.959,0:12:20.120
+es, bueno, ¿qué pasa con la validación
+
+0:12:17.800,0:12:22.440
+del formulario? No, porque nosotros
+
+0:12:20.120,0:12:25.560
+tenemos validaciones en los formularios.
+
+0:12:22.440,0:12:27.600
+Ahora vamos a tener un campo oculto.
+
+0:12:25.560,0:12:30.440
+Tenemos los campos ocultos dinámicamente
+
+0:12:27.600,0:12:33.360
+y los campos ocultos permanentemente,
+
+0:12:30.440,0:12:36.839
+que puede ser, por ejemplo, una feature
+
+0:12:33.360,0:12:38.560
+flag. Sí. Eh, yo tengo una feature flag
+
+0:12:36.839,0:12:41.199
+y tengo una feature flag que está
+
+0:12:38.560,0:12:46.040
+fallando. Tomá, esto queda oculto para
+
+0:12:41.199,0:12:47.440
+siempre, por ejemplo, ¿no? Entonces,
+
+0:12:46.040,0:12:50.240
+¿qué pasa con la validación de ese
+
+0:12:47.440,0:12:52.320
+formulario? Yo por lo que vi en
+
+0:12:50.240,0:12:55.279
+proyectitos de prueba, en realidad tengo
+
+0:12:52.320,0:12:59.079
+que seguir filtrando yo en el payload
+
+0:12:55.279,0:13:01.040
+antes de enviarlo, no es que agarro y
+
+0:12:59.079,0:13:03.680
+automáticamente se me genera como el
+
+0:13:01.040,0:13:07.680
+campo está oculto, eh, no lo toma en
+
+0:13:03.680,0:13:10.399
+cuenta, ¿no? Yo tengo que filtrarlo
+
+0:13:07.680,0:13:14.120
+antes de enviarlo y ahí como que me
+
+0:13:10.399,0:13:16.600
+aseguro yo previamente de que ese campo
+
+0:13:14.120,0:13:19.480
+no se envía. Está raro también. Lo otro
+
+0:13:16.600,0:13:21.959
+que que pasaba que probé así por arriba
+
+0:13:19.480,0:13:24.639
+por arriba. Hay que ver proyectos reales
+
+0:13:21.959,0:13:26.360
+con el tiempo y demás. No es que voy
+
+0:13:24.639,0:13:29.160
+mañana en la empresa y digo, "Voy a
+
+0:13:26.360,0:13:32.440
+implementar esto ya mismo." No, lleva un
+
+0:13:29.160,0:13:35.000
+tiempo que se aprueben esos PRs y demás.
+
+0:13:32.440,0:13:37.320
+Lo que me estaba pasando es que cuando
+
+0:13:35.000,0:13:40.519
+vos ocultás un campo que ya tenía un
+
+0:13:37.320,0:13:43.560
+valor, ya sea predefinido o que lo
+
+0:13:40.519,0:13:46.959
+ocultaste dinámicamente, ese campo queda
+
+0:13:43.560,0:13:48.959
+sucio con ese valor. Y claro, tenés un
+
+0:13:46.959,0:13:52.639
+campo que forma parte de tu modelo de
+
+0:13:48.959,0:13:56.560
+datos, que está oculto en la UI y que
+
+0:13:52.639,0:13:58.480
+estás mandando al backend y al backend no
+
+0:13:56.560,0:14:00.600
+le interesa si ese campo se ve o no se
+
+0:13:58.480,0:14:02.720
+ve.
+
+0:14:00.600,0:14:04.440
+Al backend lo que le importa es que es un
+
+0:14:02.720,0:14:06.160
+campo de tu modelo de datos.
+
+0:14:04.440,0:14:08.839
+Exacto. Que se está enviando de una
+
+0:14:06.160,0:14:11.160
+manera un tanto diferente para la UI,
+
+0:14:08.839,0:14:13.399
+pero al final es un campo común y
+
+0:14:11.160,0:14:15.120
+corriente que está recibiendo el backend de
+
+0:14:13.399,0:14:17.079
+su lado. Muy buen punto también el que
+
+0:14:15.120,0:14:19.480
+mencionabas el no necesariamente
+
+0:14:17.079,0:14:22.160
+incorporar eso ahora en un proyecto en
+
+0:14:19.480,0:14:24.800
+producción de inmediato. Por ejemplo, lo
+
+0:14:22.160,0:14:26.800
+mismo sucede con los @boundary que
+
+0:14:24.800,0:14:29.240
+acaban de llegar pero como Developer
+
+0:14:26.800,0:14:31.920
+Preview. ¿Qué quiere decir eso? Que el
+
+0:14:29.240,0:14:35.720
+framework puede continuar haciendo algún
+
+0:14:31.920,0:14:39.560
+ajuste dentro del marco este de
+
+0:14:35.720,0:14:41.519
+versionado semántico y en respuesta a lo
+
+0:14:39.560,0:14:43.680
+que la comunidad de desarrolladores vaya
+
+0:14:41.519,0:14:45.680
+dándole, la retroalimentación que vaya
+
+0:14:43.680,0:14:49.199
+teniendo, el feedback, puedan ellos
+
+0:14:45.680,0:14:52.440
+llegar a madurarlo hacia una
+
+0:14:49.199,0:14:56.680
+característica estable en el sistema.
+
+0:14:52.440,0:15:00.040
+Pero de regreso a este nuevo tipo de
+
+0:14:56.680,0:15:02.399
+bloques en el lenguaje de plantillas,
+
+0:15:00.040,0:15:04.959
+que por cierto quienes desarrollen en
+
+0:15:02.399,0:15:07.920
+React van a encontrar un alto grado de
+
+0:15:04.959,0:15:10.440
+similaridad porque esta característica
+
+0:15:07.920,0:15:13.600
+se viene a traducir en español digamos
+
+0:15:10.440,0:15:15.880
+como límite de fronteras. Fue basado en
+
+0:15:13.600,0:15:19.880
+los Error Boundaries del framework de
+
+0:15:15.880,0:15:22.639
+React y fue como que adaptado para ser
+
+0:15:19.880,0:15:25.440
+útil del lado de Angular. Y a mí me
+
+0:15:22.639,0:15:27.279
+gusta cantidad de la idea, me gusta el
+
+0:15:25.440,0:15:29.920
+mecanismo que ellos están introduciendo
+
+0:15:27.279,0:15:33.680
+a nivel de vistas en el framework,
+
+0:15:29.920,0:15:35.480
+vistas, ¿saben? en Angular es esa
+
+0:15:33.680,0:15:38.079
+pequeña porción, el bloque de la
+
+0:15:35.480,0:15:40.480
+plantilla de un componente que puede
+
+0:15:38.079,0:15:43.800
+actualizarse de forma independiente y al
+
+0:15:40.480,0:15:45.600
+nosotros tener un mecanismo de control
+
+0:15:43.800,0:15:48.079
+sobre cualquier fallo que ocurra,
+
+0:15:45.600,0:15:51.199
+estamos como que garantizando que el
+
+0:15:48.079,0:15:54.160
+producto que uno está entregando a la UI
+
+0:15:51.199,0:15:56.079
+del usuario sea mucho más resiliente.
+
+0:15:54.160,0:15:58.199
+¿Qué piensas tú de todo el nuevo
+
+0:15:56.079,0:16:01.199
+mecanismo este de @boundary?
+
+0:15:58.199,0:16:04.920
+Yo estoy obsesionado, obsesionado con el
+
+0:16:01.199,0:16:07.319
+control de errores. Cada error tiene que
+
+0:16:04.920,0:16:09.360
+estar controlado y tengo que haberlo
+
+0:16:07.319,0:16:10.759
+previsto en el flujo y tengo que saber
+
+0:16:09.360,0:16:12.279
+reaccionar a ese error. Porque
+
+0:16:10.759,0:16:14.000
+básicamente lo que me pasaba antes es
+
+0:16:12.279,0:16:15.880
+que lo que te comentaba de que cada vez
+
+0:16:14.000,0:16:17.480
+que quedaba la pantalla en blanco o cada
+
+0:16:15.880,0:16:20.120
+vez que no se cargaba una parte de la
+
+0:16:17.480,0:16:22.279
+aplicación o que un error recursivo,
+
+0:16:20.120,0:16:25.120
+cualquier cosa que podía pasar, me
+
+0:16:22.279,0:16:28.720
+generaba cierta molestia, ostras, o sea,
+
+0:16:25.120,0:16:31.000
+no sentía que no me sentía cómodo con
+
+0:16:28.720,0:16:33.920
+eso. Claro, lo que hacíamos mucho era
+
+0:16:31.000,0:16:36.680
+tener un ErrorHandler global que nos
+
+0:16:33.920,0:16:37.759
+permitía tener un manejo centralizado de
+
+0:16:36.680,0:16:41.240
+todos los errores,
+
+0:16:37.759,0:16:43.680
+al menos así lo manejaba yo en general.
+
+0:16:41.240,0:16:45.600
+¿Vos cómo lo hacías?
+
+0:16:43.680,0:16:47.519
+Siendo muy creativo con algún tipo de
+
+0:16:45.600,0:16:50.319
+directiva personalizada para poder
+
+0:16:47.519,0:16:52.560
+controlar de qué forma uno tuviese que
+
+0:16:50.319,0:16:54.720
+hacer el fallback de algo que fallase de
+
+0:16:52.560,0:16:57.680
+pronto. Pero lo que sí podría suceder
+
+0:16:54.720,0:17:00.399
+era que ocurriese un error en uno de los
+
+0:16:57.680,0:17:02.800
+subcomponentes de ese árbol de hijos y
+
+0:17:00.399,0:17:05.160
+de pronto tuviésemos
+
+0:17:02.800,0:17:07.520
+en tiempo de desarrollo uno ve el
+
+0:17:05.160,0:17:09.600
+error, pero cuando uno lo está tirando a
+
+0:17:07.520,0:17:11.959
+producción nada, es un componente ahí
+
+0:17:09.600,0:17:13.520
+que no se está presentando, que está en
+
+0:17:11.959,0:17:15.640
+blanco.
+
+0:17:13.520,0:17:18.039
+Sí, o sea, tenías un fallo y todo para
+
+0:17:15.640,0:17:20.640
+abajo ese error se caía. A mí me pasaba
+
+0:17:18.039,0:17:24.360
+mucho en desarrollo, o sea, ahora con la IA
+
+0:17:20.640,0:17:27.160
+capaz que no tanto porque
+
+0:17:24.360,0:17:30.480
+ella misma queda en loop arreglando ese
+
+0:17:27.160,0:17:33.039
+tipo de cosas y detecta que de acá para
+
+0:17:30.480,0:17:35.200
+abajo en el árbol se cayó todo. Bueno,
+
+0:17:33.039,0:17:36.840
+ella misma lo arregla. Pero cuando
+
+0:17:35.200,0:17:39.200
+escribía todo el código manualmente me
+
+0:17:36.840,0:17:42.400
+pasaba muy seguido de que de repente en
+
+0:17:39.200,0:17:44.160
+un componente y todos los hijos morían y
+
+0:17:42.400,0:17:45.919
+eso me generaba cierta incomodidad.
+
+0:17:44.160,0:17:47.760
+Incluso a veces la pantalla en blanco
+
+0:17:45.919,0:17:50.200
+completamente y tener que entrar a la consola
+
+0:17:47.760,0:17:53.880
+y ver qué estaba pasando. Entonces, el
+
+0:17:50.200,0:17:56.919
+hecho de yo ahora poder controlar eso de
+
+0:17:53.880,0:18:00.919
+si este componente falla, me fijo qué
+
+0:17:56.919,0:18:02.600
+tipo de error es, sí que de cierta forma
+
+0:18:00.919,0:18:05.640
+lo veníamos
+
+0:18:02.600,0:18:07.799
+haciendo, o al menos yo, lo que hacía
+
+0:18:05.640,0:18:11.240
+era declararme una variable de error,
+
+0:18:07.799,0:18:15.159
+identificar el tipo del error con @if, @else if,
+
+0:18:11.240,0:18:18.320
+@else if, @else o @switch (depende
+
+0:18:15.159,0:18:22.000
+de la persona), y en base a eso manejaba
+
+0:18:18.320,0:18:23.880
+el error. Pero claro, semánticamente,
+
+0:18:22.000,0:18:27.640
+¿qué era?
+
+0:18:23.880,0:18:30.600
+Era una condición, era, okay, esta
+
+0:18:27.640,0:18:32.440
+condición no se cumple, entonces
+
+0:18:30.600,0:18:34.280
+chequeamos esta condición, pero ¿es una
+
+0:18:32.440,0:18:36.520
+condición de datos o es una condición de
+
+0:18:34.280,0:18:39.080
+error? A veces incluso me pasaba que se
+
+0:18:36.520,0:18:42.400
+mezclaba eso. Capaz vos lo resolvías de
+
+0:18:39.080,0:18:44.760
+otra forma, ¿no? Pero el hecho de
+
+0:18:42.400,0:18:47.960
+de tener esto que ahora voy a ver en el
+
+0:18:44.760,0:18:51.840
+template, okay, esto es un error porque
+
+0:18:47.960,0:18:53.720
+dice @error y tengo un when
+
+0:18:51.840,0:18:55.640
+de que chequea cuál es el tipo del
+
+0:18:53.720,0:18:57.200
+error. Sí, @error.
+
+0:18:55.640,0:19:00.000
+Exacto. El mismo tipo de
+
+0:18:57.200,0:19:02.799
+cláusula que estabas describiendo, que
+
+0:19:00.000,0:19:05.919
+también se utiliza en otras partes del
+
+0:19:02.799,0:19:07.799
+framework, lo podemos emplear para acá.
+
+0:19:05.919,0:19:10.760
+Lo mismo que ocurre con las vistas
+
+0:19:07.799,0:19:12.320
+diferidas con los bloques @defer que uno
+
+0:19:10.760,0:19:15.360
+también puede incorporar ese tipo de
+
+0:19:12.320,0:19:17.679
+cláusulas para controlarlo con flags o
+
+0:19:15.360,0:19:20.240
+el resultado de una función que uno
+
+0:19:17.679,0:19:21.880
+establezca del lado del componente.
+
+0:19:20.240,0:19:25.159
+Claro. Y es mucho más fácil de leer,
+
+0:19:21.880,0:19:27.679
+¿no? Porque ahora sabés que si es un
+
+0:19:25.159,0:19:30.640
+@if, es relacionado con tus datos o
+
+0:19:27.679,0:19:33.720
+con tu aplicación en sí. Si tenés un
+
+0:19:30.640,0:19:36.000
+@error, sabés que es un error y te fijás
+
+0:19:33.720,0:19:38.799
+la condición del when. Si no hay una
+
+0:19:36.000,0:19:41.720
+condición en el error es porque es,
+
+0:19:38.799,0:19:44.000
+okay, el último fallback de lo que pasó.
+
+0:19:41.720,0:19:47.240
+Entonces, claro, es como que si te fijás
+
+0:19:44.000,0:19:49.200
+ahora los templates pasan a ser más
+
+0:19:47.240,0:19:51.120
+fáciles de entender, ¿no? Porque es como
+
+0:19:49.200,0:19:53.679
+que vos lo ves, incluso una persona que
+
+0:19:51.120,0:19:57.320
+no sabe Angular y viene de otro framework,
+
+0:19:53.679,0:19:59.039
+dice, "Ah, acá dice si hay error. Okay,
+
+0:19:57.320,0:20:01.520
+si hay error, ah, este es el tipo del
+
+0:19:59.039,0:20:05.600
+error. Okay, si hay este error renderizo
+
+0:20:01.520,0:20:08.520
+esto. A mí me gustó." Y claro, a ver,
+
+0:20:05.600,0:20:11.679
+cuando vos incorporás algo en el
+
+0:20:08.520,0:20:14.080
+template, también tenés que por cómo
+
+0:20:11.679,0:20:15.640
+funciona Angular, pienso yo, también
+
+0:20:14.080,0:20:17.919
+tenés que dar la posibilidad de
+
+0:20:15.640,0:20:19.840
+manejarlo de forma programática, ¿no?
+
+0:20:17.919,0:20:22.039
+Que también la dieron. Antes ya existía
+
+0:20:19.840,0:20:23.640
+el ErrorHandler que estábamos hablando y
+
+0:20:22.039,0:20:25.600
+en el createComponent, cuando vos
+
+0:20:23.640,0:20:28.840
+creabas el componente, tenías la
+
+0:20:25.600,0:20:31.520
+posibilidad de darle como una función de
+
+0:20:28.840,0:20:34.600
+cómo actuar en caso de error. Pero
+
+0:20:31.520,0:20:36.480
+claro, ahora eh vi que ellos pusieron la
+
+0:20:34.600,0:20:40.600
+opción de crear una vista dinámica, o
+
+0:20:36.480,0:20:43.039
+sea, mira, eh esto falla, ¿sí? Se llama
+
+0:20:40.600,0:20:44.840
+al onError y se crea una vista
+
+0:20:43.039,0:20:47.640
+dinámica.
+
+0:20:44.840,0:20:49.799
+Incluso hay un hook nuevo opcional que
+
+0:20:47.640,0:20:53.000
+es cuando hay un error en la vista se
+
+0:20:49.799,0:20:57.200
+reacciona. Básicamente es como, okay, se
+
+0:20:53.000,0:20:58.760
+incorporaron formas de solucionar esto
+
+0:20:57.200,0:21:01.200
+desde la perspectiva de la plantilla del
+
+0:20:58.760,0:21:03.640
+template, pero también de forma
+
+0:21:01.200,0:21:05.880
+programática, o sea, tenemos ambos
+
+0:21:03.640,0:21:07.159
+mundos que están pudiendo manejarse en
+
+0:21:05.880,0:21:08.720
+caso de que haya un error en la vista,
+
+0:21:07.159,0:21:10.200
+digamos.
+
+0:21:08.720,0:21:13.279
+Sí, la API está bien enriquecida y
+
+0:21:10.200,0:21:15.440
+también tenemos la función esta $reset()
+
+0:21:13.279,0:21:19.080
+que viene siendo implícita dentro del
+
+0:21:15.440,0:21:22.360
+bloque @error que permite intentar la
+
+0:21:19.080,0:21:26.760
+reejecución de esa vista. Por lo tanto,
+
+0:21:22.360,0:21:30.080
+si vuelve a producirse el renderizado de
+
+0:21:26.760,0:21:33.600
+manera exitosa, ya no hay por qué
+
+0:21:30.080,0:21:36.200
+mostrar algo de fallback o invocar algunas
+
+0:21:33.600,0:21:40.960
+otras funciones que puedan de cierta
+
+0:21:36.200,0:21:44.240
+manera remendar el problema. Pero sí, el
+
+0:21:40.960,0:21:47.039
+tema es que se produce el renderizado del
+
+0:21:44.240,0:21:49.120
+bloque de una manera declarativa con muy
+
+0:21:47.039,0:21:51.000
+poca cantidad de lógica del lado
+
+0:21:49.120,0:21:53.080
+nuestro del lado del componente.
+
+0:21:51.000,0:21:55.360
+Sí, solo que ahora hay que tener un poco
+
+0:21:53.080,0:21:57.919
+de cuidado en el $reset(), ¿no? O sea, si
+
+0:21:55.360,0:22:00.200
+es algo que puede cambiar, tienes, o
+
+0:21:57.919,0:22:02.279
+sea, si vos tenés un error por una
+
+0:22:00.200,0:22:05.520
+condición, digamos dinámica o que puede
+
+0:22:02.279,0:22:08.000
+cambiar, tiene sentido hacer un reset, pero a
+
+0:22:05.520,0:22:10.640
+veces es un bug determinístico, ¿no?
+
+0:22:08.000,0:22:14.120
+que eso va a estar fallando siempre por
+
+0:22:10.640,0:22:17.159
+x razón. Entonces, claro, es como hay
+
+0:22:14.120,0:22:19.799
+que tener cuidado a la hora de hacer
+
+0:22:17.159,0:22:21.520
+el reset, ¿sí? Y de no ocultar los
+
+0:22:19.799,0:22:23.760
+errores, ¿no? Porque a veces uno dice,
+
+0:22:21.520,0:22:25.279
+"Falla esto, hago un reset." Pero
+
+0:22:23.760,0:22:27.840
+también acordarse de hacer un logging de
+
+0:22:25.279,0:22:29.360
+ese error y de por qué falló. Sí, hay
+
+0:22:27.840,0:22:32.120
+antipatrones, por supuesto, que van a
+
+0:22:29.360,0:22:34.520
+derivarse de un mal uso de estos
+
+0:22:32.120,0:22:36.559
+@boundary. Creo que el cambio de modelo
+
+0:22:34.520,0:22:39.240
+mental va a ser significativo, es decir,
+
+0:22:36.559,0:22:40.919
+vamos a pasar de fallos completamente
+
+0:22:39.240,0:22:44.120
+incontrolables, fundamentalmente cuando
+
+0:22:40.919,0:22:47.360
+estamos trabajando con subárboles de
+
+0:22:44.120,0:22:51.080
+componentes de terceros a través de
+
+0:22:47.360,0:22:52.320
+bibliotecas externas o algo así o partes
+
+0:22:51.080,0:22:53.919
+de la aplicación que nosotros no
+
+0:22:52.320,0:22:56.520
+controlamos, sino que pertenecen a otros
+
+0:22:53.919,0:22:58.919
+equipos y así no tenemos que estar
+
+0:22:56.520,0:23:00.799
+dejando la aplicación en un estado
+
+0:22:58.919,0:23:04.039
+indefinido, en un estado que nosotros no
+
+0:23:00.799,0:23:05.840
+tengamos cierto nivel de control y el
+
+0:23:04.039,0:23:09.080
+usuario no tenga cierto nivel de
+
+0:23:05.840,0:23:09.360
+feedback. Yo lo veo perfecto. Coincido
+
+0:23:09.080,0:23:13.600
+contigo.
+
+0:23:09.360,0:23:15.799
+Y lo bueno es que por lo que vi en los
+
+0:23:13.600,0:23:18.120
+PRs, o sea, estuve viendo el PR, eso
+
+0:23:15.799,0:23:20.240
+específicamente el commit decía, "Me
+
+0:23:18.120,0:23:21.880
+aseguro de que funcione con SSR
+
+0:23:20.240,0:23:23.000
+Hydration."
+
+0:23:21.880,0:23:27.200
+Y de hecho, en la parte esta de
+
+0:23:23.000,0:23:31.120
+hydration con SSR, ahora la 22.2 permite
+
+0:23:27.200,0:23:32.919
+la generación de estadísticas del
+
+0:23:31.120,0:23:35.120
+build, ¿saben? del proyecto cuando se va a
+
+0:23:32.919,0:23:37.919
+construir, no solamente en un solo
+
+0:23:35.120,0:23:41.559
+fichero, sino que genera dos ficheros
+
+0:23:37.919,0:23:45.840
+independientes para poder tener un
+
+0:23:41.559,0:23:47.480
+análisis empleando bibliotecas como
+
+0:23:45.840,0:23:50.159
+esbuild-visualizer,
+
+0:23:47.480,0:23:53.600
+que facilita el análisis de tamaño de
+
+0:23:50.159,0:23:56.440
+bundle de cada build por separado, y
+
+0:23:53.600,0:23:58.000
+tendríamos, en vez de un fichero
+
+0:23:56.440,0:24:01.360
+stats.json,
+
+0:23:58.000,0:24:04.559
+tendríamos uno para el browser y otro
+
+0:24:01.360,0:24:06.400
+para el server. Eso es algo que no puedo
+
+0:24:04.559,0:24:08.520
+dejar de
+
+0:24:06.400,0:24:11.120
+pensar utilizarlo bien pronto
+
+0:24:08.520,0:24:13.039
+cuando ya migre completamente hacia la
+
+0:24:11.120,0:24:16.320
+22.2.
+
+0:24:13.039,0:24:18.559
+Hay demasiadas cosas buenas en esta.
+
+0:24:16.320,0:24:21.080
+O sea, viste, es una mini versión, pero se
+
+0:24:18.559,0:24:22.840
+siente como una versión
+
+0:24:21.080,0:24:24.840
+grande, no sé, o sea, capaz que es
+
+0:24:22.840,0:24:28.640
+porque justo tocó puntos que yo sentía
+
+0:24:24.840,0:24:31.080
+dolor, ¿no? O sea, tenía un montón de
+
+0:24:28.640,0:24:34.039
+dolor con, o sea, me ha pasado en estas
+
+0:24:31.080,0:24:36.799
+últimas versiones de Angular que o al
+
+0:24:34.039,0:24:39.200
+menos en el 2024, desde que pusieron los
+
+0:24:36.799,0:24:42.320
+Signals, siento que en cada versión y en cada
+
+0:24:39.200,0:24:44.000
+subversión y demás
+
+0:24:42.320,0:24:47.120
+están atacando puntos que me generan
+
+0:24:44.000,0:24:49.760
+dolor. Entonces es como que me emociona,
+
+0:24:47.120,0:24:51.480
+¿no? Sale una nueva versión y veo cosas y
+
+0:24:49.760,0:24:53.960
+digo,
+
+0:24:51.480,0:24:56.399
+"Me gusta, me siento cómodo con esto."
+
+0:24:53.960,0:25:00.480
+Han pasado dos meses entre la versión
+
+0:24:56.399,0:25:01.840
+anterior y esta y son temáticas también
+
+0:25:00.480,0:25:03.799
+que se vienen cocinando desde hace
+
+0:25:01.840,0:25:06.880
+tiempo, las tienen acumuladas, que los
+
+0:25:03.799,0:25:10.120
+tienen ahí guardadas. De hecho,
+
+0:25:06.880,0:25:12.919
+una de las cosas que ha salido acá
+
+0:25:10.120,0:25:17.640
+en la 22.2... ¿recuerdas cuando uno
+
+0:25:12.919,0:25:21.279
+tenía que modificar a regañadientes
+
+0:25:17.640,0:25:24.720
+una propiedad de una clase de componente
+
+0:25:21.279,0:25:26.520
+que debía haber sido privada?
+
+0:25:24.720,0:25:27.919
+Solamente para el acceso de esa clase en
+
+0:25:26.520,0:25:31.360
+específico, pero uno la tenía que
+
+0:25:27.919,0:25:33.360
+convertir a pública, a protegida para
+
+0:25:31.360,0:25:34.720
+poder tener la capacidad de leerla desde
+
+0:25:33.360,0:25:37.360
+la vista.
+
+0:25:34.720,0:25:39.760
+Eso era algo que se estaba casi que
+
+0:25:37.360,0:25:44.279
+pidiendo a gritos desde hace varios años
+
+0:25:39.760,0:25:47.480
+y por suerte ya no hay que complacer al
+
+0:25:44.279,0:25:50.120
+compilador y abrir la puerta a que
+
+0:25:47.480,0:25:51.880
+cualquier otra clase que herede de ella o
+
+0:25:50.120,0:25:54.760
+cualquier otra parte de la aplicación
+
+0:25:51.880,0:25:56.760
+pueda tocar o romper ese estado interno.
+
+0:25:54.760,0:25:59.240
+Yo estoy totalmente de acuerdo, o sea,
+
+0:25:56.760,0:26:01.640
+me gusta, me gusta. Muchas veces me
+
+0:25:59.240,0:26:04.159
+obligaba a escribir el tipo explícito de
+
+0:26:01.640,0:26:07.640
+cada una de esas propiedades
+
+0:26:04.159,0:26:10.000
+y claro, teníamos public, teníamos
+
+0:26:07.640,0:26:11.520
+protected, no quiero usar private solo
+
+0:26:10.000,0:26:13.080
+en el constructor. Cuando teníamos el
+
+0:26:11.520,0:26:15.159
+constructor poníamos private para
+
+0:26:13.080,0:26:17.399
+inyección de dependencias y demás, pero
+
+0:26:15.159,0:26:19.320
+está el hecho de poder tener un private
+
+0:26:17.399,0:26:21.880
+y no tener que estar generando getters
+
+0:26:19.320,0:26:27.159
+y setters innecesarios para poder
+
+0:26:21.880,0:26:30.399
+acceder a ese tipo de variables.
+
+0:26:27.159,0:26:32.679
+Visual Studio todo con error y
+
+0:26:30.399,0:26:37.880
+y ¿qué hago acá? Bueno, le pongo
+
+0:26:32.679,0:26:40.760
+protected, cosas del estilo, ¿no? O claro,
+
+0:26:37.880,0:26:45.960
+eh las computadas, ¿no? O sea, a veces
+
+0:26:40.760,0:26:49.120
+tenías propiedades que eran computadas
+
+0:26:45.960,0:26:52.080
+y querías poner un private para eso
+
+0:26:49.120,0:26:56.080
+trabajarlo. Ahora viene bastante limpieza
+
+0:26:52.080,0:26:58.799
+del lado nuestro en caso de que alguien
+
+0:26:56.080,0:27:01.159
+del equipo o uno mismo permisivamente
+
+0:26:58.799,0:27:03.240
+uno haya tenido que generar esta
+
+0:27:01.159,0:27:06.039
+cantidad de métodos adicionales para
+
+0:27:03.240,0:27:07.640
+poder acceder desde la plantilla a estas
+
+0:27:06.039,0:27:11.440
+propiedades que son internas de un
+
+0:27:07.640,0:27:14.240
+componente, porque al uno volver a
+
+0:27:11.440,0:27:17.159
+marcarlas como privadas, no solo está
+
+0:27:14.240,0:27:19.360
+reduciendo inconsistencias y haciendo
+
+0:27:17.159,0:27:22.360
+las cosas de la manera correcta, sino
+
+0:27:19.360,0:27:24.840
+también generando menos cantidad de
+
+0:27:22.360,0:27:26.080
+tamaño en el bundle final, producto de
+
+0:27:24.840,0:27:30.320
+qué, de que en el proceso este de
+
+0:27:26.080,0:27:32.360
+minification que hace esbuild, Terser y
+
+0:27:30.320,0:27:35.120
+también el mangling, que es como
+
+0:27:32.360,0:27:36.679
+renombrar una propiedad a un solo carácter
+
+0:27:35.120,0:27:38.200
+para
+
+0:27:36.679,0:27:40.799
+que pueda comprimirse después
+
+0:27:38.200,0:27:42.960
+posteriormente con gzip, con Brotli de
+
+0:27:40.799,0:27:45.519
+una manera bien eficiente. Pero bueno,
+
+0:27:42.960,0:27:47.080
+tú no puedes estar haciendo eso con
+
+0:27:45.519,0:27:48.760
+propiedades públicas, con propiedades
+
+0:27:47.080,0:27:51.720
+protegidas porque básicamente puedes
+
+0:27:48.760,0:27:53.840
+romper el estado de la aplicación. Y al
+
+0:27:51.720,0:27:55.840
+declarar la propiedad de vuelta a
+
+0:27:53.840,0:27:58.480
+privada, uno básicamente le está
+
+0:27:55.840,0:28:00.559
+facilitando la vida a los usuarios que
+
+0:27:58.480,0:28:03.080
+van a tener que descargar ese JavaScript
+
+0:28:00.559,0:28:04.720
+a través de su navegador y se va a poder
+
+0:28:03.080,0:28:08.120
+solucionar también el encapsulamiento
+
+0:28:04.720,0:28:11.440
+real producto de que lo que es interno
+
+0:28:08.120,0:28:14.080
+se queda dentro de la clase y no se fuga
+
+0:28:11.440,0:28:15.919
+por ninguna vía de escape.
+
+0:28:14.080,0:28:18.919
+Totalmente de acuerdo. O sea, no sé si
+
+0:28:15.919,0:28:21.600
+vos te acordás de JIT allá en 2016,
+
+0:28:18.919,0:28:24.080
+cuando recién salía Angular 2. Yo di una
+
+0:28:21.600,0:28:26.679
+charla sobre esto en Angular Montevideo,
+
+0:28:24.080,0:28:29.080
+que claro que en ese momento nos
+
+0:28:26.679,0:28:31.799
+preguntábamos por qué no podíamos usar
+
+0:28:29.080,0:28:34.640
+en Angular el private y claro, era porque
+
+0:28:31.799,0:28:35.919
+TypeScript compilaba a JavaScript y en ese
+
+0:28:34.640,0:28:38.840
+momento JavaScript no tenía la
+
+0:28:35.919,0:28:40.880
+oportunidad de poner private. Entonces
+
+0:28:38.840,0:28:43.840
+ahora cuando salió esto, lo primero que
+
+0:28:40.880,0:28:47.799
+hice fue mandar como en el channel que
+
+0:28:43.840,0:28:50.240
+tenemos el link de Oh, miren esto. 10
+
+0:28:47.799,0:28:51.440
+años después, hace 10 años, di hace 10 años
+
+0:28:50.240,0:28:54.480
+esta charla
+
+0:28:51.440,0:28:55.880
+y 10 años después, ahora ya podemos usar
+
+0:28:54.480,0:28:59.320
+el private. Creo que es como que
+
+0:28:55.880,0:29:01.399
+cerramos un ciclo, ¿no? O abrimos la
+
+0:28:59.320,0:29:03.640
+oportunidad a un montón de cosas nuevas.
+
+0:29:01.399,0:29:06.200
+Yo creo que esto va a dar tema
+
+0:29:03.640,0:29:08.440
+de discusión y vamos a
+
+0:29:06.200,0:29:10.200
+total, en los próximos días y semanas
+
+0:29:08.440,0:29:11.799
+definitivamente va a estar por ahí. Porque
+
+0:29:10.200,0:29:14.039
+estamos aquí siendo pioneros a la hora
+
+0:29:11.799,0:29:17.880
+de estar analizando esto. Y por cierto,
+
+0:29:14.039,0:29:22.720
+Damián, ¿no te ha pasado nunca que el
+
+0:29:17.880,0:29:24.360
+compilador no te detecta si hiciste un
+
+0:29:22.720,0:29:27.720
+enlace de eventos, es decir, un event
+
+0:29:24.360,0:29:30.240
+binding con un nombre que no coincide
+
+0:29:27.720,0:29:33.360
+con lo que está establecido por el
+
+0:29:30.240,0:29:35.399
+DOM y tampoco hay ninguna
+
+0:29:33.360,0:29:38.799
+directiva coincidente, ningún evento
+
+0:29:35.399,0:29:42.159
+nativo, nada, pero lo deja pasar. Ya,
+
+0:29:38.799,0:29:45.000
+por suerte ahora el compilador
+
+0:29:42.159,0:29:47.279
+introduce un nuevo diagnóstico extendido
+
+0:29:45.000,0:29:49.080
+con la opción estricta de detección de
+
+0:29:47.279,0:29:50.679
+nombres de eventos que no han sido
+
+0:29:49.080,0:29:56.039
+reclamados. Sí, lo que viene siendo en
+
+0:29:50.679,0:29:57.279
+inglés como strictUnclaimedEventNames.
+
+0:29:56.039,0:29:58.200
+Y esto
+
+0:29:57.279,0:30:02.080
+lo estoy viendo en la
+
+0:29:58.200,0:30:05.240
+es importantísimo para poder tener un
+
+0:30:02.080,0:30:07.679
+buen manejo de este tipo de
+
+0:30:05.240,0:30:09.799
+situaciones y de control con eventos
+
+0:30:07.679,0:30:13.279
+enlazados, outputs también que estén mal
+
+0:30:09.799,0:30:16.240
+escritos, donde no hay un linting bien
+
+0:30:13.279,0:30:18.399
+estricto ni una revisión de código
+
+0:30:16.240,0:30:19.440
+exhaustiva. Le estoy viendo el PR de eso
+
+0:30:18.399,0:30:21.039
+mismo ahora, justo lo abrí en la
+
+0:30:19.440,0:30:22.799
+computadora y la verdad está
+
+0:30:21.039,0:30:24.320
+interesante, pero no tengo nada que
+
+0:30:22.799,0:30:27.360
+acotar a lo que dijiste.
+
+0:30:24.320,0:30:30.640
+Lo que sucede es que el compilador antes
+
+0:30:27.360,0:30:33.559
+trataba eventos desconocidos como
+
+0:30:30.640,0:30:35.519
+eventos que pudiesen ser nativos del
+
+0:30:33.559,0:30:37.840
+DOM. Sí, claro.
+
+0:30:35.519,0:30:40.600
+Que no emitían un error estricto como
+
+0:30:37.840,0:30:43.679
+tal, pero dejaba fallos silenciosos que
+
+0:30:40.600,0:30:46.120
+eran extremadamente difíciles de depurar
+
+0:30:43.679,0:30:47.600
+porque nada, el handler ese nunca se
+
+0:30:46.120,0:30:49.200
+disparaba y uno a veces se preguntaba,
+
+0:30:47.600,0:30:50.840
+¿qué es lo que está sucediendo? ¿Cuál
+
+0:30:49.200,0:30:53.080
+es el punto de ruptura, cuál es
+
+0:30:50.840,0:30:56.639
+el fallo ahí? Así que yo creo que esto
+
+0:30:53.080,0:30:58.679
+va a mejorar muchísimo la manera de
+
+0:30:56.639,0:31:01.320
+desarrollar, la experiencia como tal de
+
+0:30:58.679,0:31:02.919
+desarrollo y de depuración en general
+
+0:31:01.320,0:31:05.200
+desde la aplicación.
+
+0:31:02.919,0:31:08.200
+Yo estoy usando WebMCP para debuggear
+
+0:31:05.200,0:31:10.799
+muchas veces. Sí, para probar los flujos
+
+0:31:08.200,0:31:11.360
+cuando quiero testear algo y demás. Está
+
+0:31:10.799,0:31:12.840
+muy bueno.
+
+0:31:11.360,0:31:15.120
+Y en unas pocas palabras, antes de
+
+0:31:12.840,0:31:17.760
+entrar en esa parte de WebMCP,
+
+0:31:15.120,0:31:19.679
+¿pudieras describir a personas que están
+
+0:31:17.760,0:31:22.919
+escuchando y todavía no tengan bien
+
+0:31:19.679,0:31:24.720
+claro qué cosa es WebMCP?
+
+0:31:22.919,0:31:26.279
+¿Qué significa técnicamente que una
+
+0:31:24.720,0:31:28.320
+aplicación de Angular pueda exponer
+
+0:31:26.279,0:31:30.039
+herramientas y también formularios
+
+0:31:28.320,0:31:32.240
+tipados como con Signal Forms con todas
+
+0:31:30.039,0:31:35.159
+las características estas nuevas con los
+
+0:31:32.240,0:31:36.840
+flags que se están introduciendo en la 22.2
+
+0:31:35.159,0:31:39.039
+para agentes de inteligencia artificial?
+
+0:31:36.840,0:31:42.159
+¿Qué significa todo esto?
+
+0:31:39.039,0:31:44.919
+Bien, primero en palabras sencillas. Si
+
+0:31:42.159,0:31:47.120
+vos has usado
+
+0:31:44.919,0:31:49.159
+herramientas de inteligencia artificial,
+
+0:31:47.120,0:31:51.639
+vas a ver que muchas veces cuando ellas
+
+0:31:49.159,0:31:54.519
+tienen que interactuar con una web, lo
+
+0:31:51.639,0:31:57.200
+que hacen es mirarla, o sea, como la
+
+0:31:54.519,0:31:59.960
+miramos nosotros. Pero claro, hay como
+
+0:31:57.200,0:32:01.799
+distintos enfoques para mirar una web.
+
+0:31:59.960,0:32:03.480
+Una puede ser: saco una captura de
+
+0:32:01.799,0:32:05.120
+pantalla,
+
+0:32:03.480,0:32:09.720
+interpreto la captura de pantalla como
+
+0:32:05.120,0:32:14.039
+una imagen. Sí. Otra puede ser: leo el
+
+0:32:09.720,0:32:16.559
+DOM, veo que hay un formulario, me fijo
+
+0:32:14.039,0:32:19.880
+cuál es. Por ejemplo, yo le digo: quiero
+
+0:32:16.559,0:32:22.600
+registrarme en esta página. Él puede
+
+0:32:19.880,0:32:24.279
+sacar una captura de pantalla,
+
+0:32:22.600,0:32:26.120
+interpretarla. Ah, acá veo un
+
+0:32:24.279,0:32:28.639
+formulario. Perfecto. Debe ser acá. Voy
+
+0:32:26.120,0:32:31.480
+a analizar esta parte en específico.
+
+0:32:28.639,0:32:34.760
+Otra puede ser: miro directamente el DOM
+
+0:32:31.480,0:32:36.880
+de la página. Sí. Okay. Tengo el DOM de
+
+0:32:34.760,0:32:39.600
+la página. Hay un formulario. Hay otro
+
+0:32:36.880,0:32:42.000
+formulario acá. Hay otro formulario acá.
+
+0:32:39.600,0:32:44.519
+Este dice
+
+0:32:42.000,0:32:46.840
+iniciar sesión. Este dice registrarse.
+
+0:32:44.519,0:32:49.399
+Okay. Es este que dice registrarse. Este
+
+0:32:46.840,0:32:51.480
+es el formulario de registro. Perfecto.
+
+0:32:49.399,0:32:53.880
+¿Qué datos me pide? Empieza a buscar en
+
+0:32:51.480,0:32:55.919
+el DOM de la página. Okay. Tengo nombre,
+
+0:32:53.880,0:32:59.080
+tengo apellido, tengo contraseña, tengo
+
+0:32:55.919,0:33:01.360
+email. Eso es lento. O sea, que cada vez
+
+0:32:59.080,0:33:04.159
+que vos entrás a una página, tu IA
+
+0:33:01.360,0:33:07.080
+tenga que interpretarla, ¿sí? Tu IA
+
+0:33:04.159,0:33:09.880
+tenga que parsearla, tenga que hacer los
+
+0:33:07.080,0:33:11.840
+clicks porque, por ejemplo, el formulario
+
+0:33:09.880,0:33:14.200
+de registro se abre después que hice
+
+0:33:11.840,0:33:16.000
+click en login. Eso es algo pensado para
+
+0:33:14.200,0:33:18.200
+humanos, ¿no? Porque los humanos tenemos
+
+0:33:16.000,0:33:20.960
+que tomarnos el tiempo de entender,
+
+0:33:18.200,0:33:23.480
+porque no todos los humanos
+
+0:33:20.960,0:33:26.399
+pueden usar funciones de una página. Sí,
+
+0:33:23.480,0:33:27.960
+eso básicamente. La IA muchas veces
+
+0:33:26.399,0:33:30.799
+estaba interactuando con las páginas
+
+0:33:27.960,0:33:33.120
+como si fuera una humana, pero la IA no
+
+0:33:30.799,0:33:35.639
+necesita eso. La IA lo que necesita es
+
+0:33:33.120,0:33:38.200
+un catálogo de todas las acciones que
+
+0:33:35.639,0:33:41.600
+puede hacer. Por ejemplo, registrar
+
+0:33:38.200,0:33:46.679
+usuario, pedir comida. Okay, Claude,
+
+0:33:41.600,0:33:49.679
+búscame comidas baratas en... Puedo nombrar
+
+0:33:46.679,0:33:51.960
+empresas de comida random, tipo Uber Eats,
+
+0:33:49.679,0:33:53.840
+PedidosYa, cualquiera.
+
+0:33:51.960,0:33:54.679
+¿Cuál es la más famosa? Uber Eats, PedidosYa,
+
+0:33:53.840,0:33:56.840
+no sé, la verdad.
+
+0:33:54.679,0:33:59.000
+Sí, DoorDash. Okay.
+
+0:33:56.840,0:33:59.880
+Sí, en dependencia del país donde estés
+
+0:33:59.000,0:34:01.720
+ubicado.
+
+0:33:59.880,0:34:05.039
+Me imagino que allá en Japón sea
+
+0:34:01.720,0:34:07.679
+diferentes mercados y haya otro tipo de
+
+0:34:05.039,0:34:09.839
+nombres todavía porque están en kanji,
+
+0:34:07.679,0:34:12.839
+pero
+
+0:34:09.839,0:34:15.240
+no sé pronunciarlo bien. Eh, está
+
+0:34:12.839,0:34:18.359
+acá cambien por su empresa en su país.
+
+0:34:15.240,0:34:20.079
+Rappi, PedidosYa, Uber Eats, DoorDash,
+
+0:34:18.359,0:34:21.679
+cualquiera que ustedes quieran.
+
+0:34:20.079,0:34:23.320
+Entonces, si vos le pedís a tu IA que
+
+0:34:21.679,0:34:25.760
+te busque comidas baratas, no tiene
+
+0:34:23.320,0:34:27.399
+sentido que la IA entre al buscador y
+
+0:34:25.760,0:34:30.200
+haga click y escriba el nombre de la
+
+0:34:27.399,0:34:33.040
+comida o que lo haga mediante URLs o
+
+0:34:30.200,0:34:35.560
+cosas de esas, no tiene sentido. Mejor
+
+0:34:33.040,0:34:36.560
+que nosotros como programadores, por
+
+0:34:35.560,0:34:38.399
+ejemplo, estamos programando una página
+
+0:34:36.560,0:34:40.280
+de comida, lo que nos interesa es que la
+
+0:34:38.399,0:34:41.879
+gente pida la comida. Desde el punto de
+
+0:34:40.280,0:34:45.879
+vista de finanzas no nos interesa si es
+
+0:34:41.879,0:34:47.800
+por IA o búsqueda del usuario manual.
+
+0:34:45.879,0:34:50.320
+Le damos directamente una función a la IA,
+
+0:34:47.800,0:34:52.879
+le decimos, "Mira, la forma de pedir
+
+0:34:50.320,0:34:55.440
+comida es esta: ejecutá la función
+
+0:34:52.879,0:34:58.040
+buscar con los parámetros que te
+
+0:34:55.440,0:34:59.760
+voy a decir acá y vos
+
+0:34:58.040,0:35:01.920
+vas a buscar la comida."
+
+0:34:59.760,0:35:03.880
+Sí. Cuando quieras comprar, ejecutá la
+
+0:35:01.920,0:35:07.680
+función comprar. Entonces, de cierta
+
+0:35:03.880,0:35:11.280
+forma desde mi perspectiva, WebMCP
+
+0:35:07.680,0:35:14.119
+es ofrecerle al usuario, a la IA del
+
+0:35:11.280,0:35:17.480
+usuario o a cualquiera funciones
+
+0:35:14.119,0:35:19.839
+concretas. Sí, esas funciones pueden
+
+0:35:17.480,0:35:22.880
+representar flujos de nuestra página,
+
+0:35:19.839,0:35:24.760
+¿okay? Es como en vez de que la IA tenga que sacar
+
+0:35:22.880,0:35:26.560
+captura o leer el DOM, directamente
+
+0:35:24.760,0:35:28.400
+decirle las cosas. Este es el formulario
+
+0:35:26.560,0:35:30.119
+de registro y necesita estos datos. Si
+
+0:35:28.400,0:35:33.520
+querés registrarte, llamá a esta función
+
+0:35:30.119,0:35:36.160
+con los datos. Punto. Y ya está.
+
+0:35:33.520,0:35:38.720
+Esa es mi perspectiva de WebMCP de una
+
+0:35:36.160,0:35:41.440
+manera cotidiana. Ahora, si lo querés de
+
+0:35:38.720,0:35:45.040
+una forma más formal es tipo una API de
+
+0:35:41.440,0:35:48.280
+browser. Sí. El WebMCP es una API de
+
+0:35:45.040,0:35:51.520
+browser document
+
+0:35:48.280,0:35:53.400
+context. Sí, ahí va a estar el
+
+0:35:51.520,0:35:55.200
+contexto
+
+0:35:53.400,0:35:56.880
+que la IA va a necesitar para
+
+0:35:55.200,0:35:59.720
+interactuar con esa página de una forma
+
+0:35:56.880,0:36:01.079
+más natural y no tan lenta. Yo, por
+
+0:35:59.720,0:36:03.960
+ejemplo, ahora he estado usando mucho la
+
+0:36:01.079,0:36:06.640
+API de Claude para interactuar con el
+
+0:36:03.960,0:36:08.359
+navegador y tengo muchas quejas. Llegó
+
+0:36:06.640,0:36:10.599
+un punto en el que yo me estaba haciendo
+
+0:36:08.359,0:36:13.319
+las funciones WebMCP para cierta página
+
+0:36:10.599,0:36:16.400
+para que sea todo más fácil, pero está
+
+0:36:13.319,0:36:18.720
+es básicamente eso, una API de browser
+
+0:36:16.400,0:36:20.920
+document context en la cual
+
+0:36:18.720,0:36:24.240
+vamos a poder registrar tools, eh,
+
+0:36:20.920,0:36:26.200
+funciones JavaScript, piénsenlo así, las
+
+0:36:24.240,0:36:29.359
+cuales les vamos a poder dar una
+
+0:36:26.200,0:36:32.240
+descripción. Por ejemplo, user_register
+
+0:36:29.359,0:36:35.920
+permite registrar un usuario. search_product
+
+0:36:32.240,0:36:38.680
+permite buscar un producto. Sí,
+
+0:36:35.920,0:36:41.720
+acepta estos parámetros. Entonces, tu
+
+0:36:38.680,0:36:43.200
+agente va a invocar esa función y va a
+
+0:36:41.720,0:36:44.720
+hacer la acción directamente sin tener
+
+0:36:43.200,0:36:47.119
+que estar parseando el DOM, sin tener
+
+0:36:44.720,0:36:48.480
+que estar haciendo nada de eso o incluso
+
+0:36:47.119,0:36:51.359
+introduciendo en las propiedades
+
+0:36:48.480,0:36:55.240
+directas que permiten inferir del
+
+0:36:51.359,0:36:57.319
+formulario si tienen las capacidades
+
+0:36:55.240,0:36:59.480
+requeridas para eso y nada, el sistema
+
+0:36:57.319,0:37:00.800
+vuela. También se le pueden incorporar
+
+0:36:59.480,0:37:03.920
+los guardrails, es decir, los
+
+0:37:00.800,0:37:06.800
+salvaguardas estos de seguridad para que
+
+0:37:03.920,0:37:08.920
+ese scraping que normalmente ocurría en
+
+0:37:06.800,0:37:11.240
+el Document Object Model o bueno, los
+
+0:37:08.920,0:37:14.079
+screenshots que pudieran derivar en otro
+
+0:37:11.240,0:37:16.800
+tipo, incluso en un consumo excesivo de
+
+0:37:14.079,0:37:18.440
+tokens, en una memoria innecesaria, a
+
+0:37:16.800,0:37:20.640
+veces la aplicación no tenía un buen
+
+0:37:18.440,0:37:22.599
+accessibility tree, que era otra de las
+
+0:37:20.640,0:37:25.880
+maneras que los agentes de inteligencia
+
+0:37:22.599,0:37:27.599
+artificial lograban, y logran todavía
+
+0:37:25.880,0:37:30.880
+en aplicaciones que no sean compatibles
+
+0:37:27.599,0:37:32.839
+con WebMCP, poder entender de qué va la
+
+0:37:30.880,0:37:36.000
+cosa. Y si no tienes un buen árbol de
+
+0:37:32.839,0:37:38.760
+accesibilidad, le dificultas ese trabajo
+
+0:37:36.000,0:37:42.280
+a la inteligencia artificial.
+
+0:37:38.760,0:37:45.480
+Sí es una, para mí es un añadido de
+
+0:37:42.280,0:37:47.640
+vanguardia, entendiendo que esto es
+
+0:37:45.480,0:37:50.280
+parte de la prioridad de roadmap número
+
+0:37:47.640,0:37:53.640
+uno para el equipo de Angular y lo está
+
+0:37:50.280,0:37:55.800
+logrando de una manera bastante exitosa.
+
+0:37:53.640,0:37:58.040
+Sí, ahora todo el tema de la gobernanza
+
+0:37:55.800,0:37:59.480
+y demás de la IA, ¿no? También es como
+
+0:37:58.040,0:38:02.280
+lo que están pensando un poco en el
+
+0:37:59.480,0:38:04.440
+sentido de que no es lo mismo una
+
+0:38:02.280,0:38:09.160
+búsqueda, por ejemplo, leer datos de la
+
+0:38:04.440,0:38:12.760
+página que acciones que persisten cosas
+
+0:38:09.160,0:38:15.280
+como pago una compra de Amazon con mi
+
+0:38:12.760,0:38:19.920
+tarjeta de crédito, hago una reserva en
+
+0:38:15.280,0:38:21.520
+un hotel, envío una orden de productos.
+
+0:38:19.920,0:38:26.280
+A ver, hay un punto donde el usuario
+
+0:38:21.520,0:38:28.720
+tiene que o debería de interactuar, ¿no?
+
+0:38:26.280,0:38:30.319
+Como: mira, voy a enviar esta orden,
+
+0:38:28.720,0:38:31.920
+chequealo.
+
+0:38:30.319,0:38:34.240
+Entonces, claro, esto es algo que se
+
+0:38:31.920,0:38:37.119
+incorporó ahora en esta versión, una
+
+0:38:34.240,0:38:40.119
+propiedad que se puede configurar en el
+
+0:38:37.119,0:38:40.119
+formulario
+
+0:38:40.280,0:38:46.880
+y diga, "Ey, esta acción es
+
+0:38:44.520,0:38:48.960
+peligrosa o no es segura. Las acciones
+
+0:38:46.880,0:38:50.920
+que son irreversibles o de alto impacto
+
+0:38:48.960,0:38:53.520
+como el pago y la reserva
+
+0:38:50.920,0:38:57.480
+o que esta respuesta que te va a dar la IA
+
+0:38:53.520,0:38:59.400
+no es confiable, por ejemplo, untrustedContentHint,
+
+0:38:57.480,0:39:00.680
+todas esas cosas que en realidad uno
+
+0:38:59.400,0:39:01.920
+tiene que empezar a tener en cuenta que
+
+0:39:00.680,0:39:03.920
+capaz que uno cuando está jugando en su
+
+0:39:01.920,0:39:05.480
+casa no le importan, es como omitir
+
+0:39:03.920,0:39:08.079
+todos los permisos porque estoy en un
+
+0:39:05.480,0:39:09.839
+entorno controlado,
+
+0:39:08.079,0:39:13.880
+pero que en una página real nos importa
+
+0:39:09.839,0:39:16.319
+mucho, ¿no? Está bueno porque es como le
+
+0:39:13.880,0:39:19.680
+estamos empezando a dar forma a la web
+
+0:39:16.319,0:39:21.680
+para que pueda interactuar con agentes
+
+0:39:19.680,0:39:24.920
+porque hasta ahora era como todo muy
+
+0:39:21.680,0:39:26.520
+saco captura, eh, inspecciono el DOM,
+
+0:39:24.920,0:39:29.640
+cada vez que entro a una página reviso
+
+0:39:26.520,0:39:33.400
+cómo están las cosas. Entonces nosotros
+
+0:39:29.640,0:39:36.400
+manualmente le decíamos, "Guardá esto
+
+0:39:33.400,0:39:38.200
+para que si la página no cambia sigas
+
+0:39:36.400,0:39:39.480
+usando el esquema que ya tenías."
+
+0:39:38.200,0:39:40.800
+Entonces era como que cada vez que
+
+0:39:39.480,0:39:42.800
+entraba a una página había que chequear
+
+0:39:40.800,0:39:45.200
+si cambió o no, había que aprender el
+
+0:39:42.800,0:39:46.640
+esquema, almacenar localmente o donde
+
+0:39:45.200,0:39:48.920
+queramos almacenar nosotros como
+
+0:39:46.640,0:39:51.920
+usuarios el esquema para que la próxima
+
+0:39:48.920,0:39:53.680
+vez esté cacheado y no tengan que
+
+0:39:51.920,0:39:56.280
+rehacerlo, pero a la vez teníamos que chequear
+
+0:39:53.680,0:39:57.880
+la página para
+
+0:39:56.280,0:40:00.200
+saber si cambió o no. O sea, había un
+
+0:39:57.880,0:40:03.599
+montón de cosas y workarounds que estábamos
+
+0:40:00.200,0:40:06.359
+haciendo que ahora con WebMCP
+
+0:40:03.599,0:40:11.000
+parece que van a dejar de ser necesarios
+
+0:40:06.359,0:40:13.359
+y mucho más directo y optimizado, ¿no?
+
+0:40:11.000,0:40:14.880
+Pero hablando de optimización, por
+
+0:40:13.359,0:40:16.480
+cierto, se nos han quedado varias cosas
+
+0:40:14.880,0:40:18.400
+por cubrir, pero bueno, las voy a
+
+0:40:16.480,0:40:21.440
+mencionar de por arribita para
+
+0:40:18.400,0:40:23.520
+cualquiera que quiera empezar a
+
+0:40:21.440,0:40:25.400
+investigar sobre ello, puede
+
+0:40:23.520,0:40:27.920
+encontrarlo en el changelog o en alguno
+
+0:40:25.400,0:40:30.400
+de los blogs que se están publicando por
+
+0:40:27.920,0:40:35.079
+estos días acerca de la nueva versión.
+
+0:40:30.400,0:40:38.040
+Una de las mejoras del bundle analyzer
+
+0:40:35.079,0:40:40.079
+también, esa es una de ellas.
+
+0:40:38.040,0:40:42.200
+También está la optimización de
+
+0:40:40.079,0:40:45.560
+los bloques @defer para poder aislar
+
+0:40:42.200,0:40:49.160
+el chequeo de tipos para bloques con
+
+0:40:45.560,0:40:52.119
+claves, ¿no? Y evitar el duplicado de
+
+0:40:49.160,0:40:54.240
+esos imports que son diferidos a través
+
+0:40:52.119,0:40:56.800
+de múltiples bloques. Desde el punto de
+
+0:40:54.240,0:40:59.400
+vista de optimización y Core Web Vitals, eso
+
+0:40:56.800,0:41:02.079
+reduce muchísimo la generación de
+
+0:40:59.400,0:41:05.440
+múltiples chunks, el tamaño de esos chunks
+
+0:41:02.079,0:41:07.440
+e incluso la eficiencia de carga bajo
+
+0:41:05.440,0:41:09.800
+demanda, en el caso de que uno tenga una
+
+0:41:07.440,0:41:13.480
+aplicación que esté ahí bastante
+
+0:41:09.800,0:41:16.760
+estresada. Y el tema del manejo
+
+0:41:13.480,0:41:19.200
+de estilos también porque ya viene
+
+0:41:16.760,0:41:23.920
+siendo parte
+
+0:41:19.200,0:41:27.480
+de Baseline Widely available, todo lo
+
+0:41:23.920,0:41:30.280
+relacionado con el nesting dentro de
+
+0:41:27.480,0:41:33.079
+CSS, ¿sí? Dentro del CSS básico que
+
+0:41:30.280,0:41:34.760
+soportan nativamente los navegadores y
+
+0:41:33.079,0:41:37.040
+esa estrategia de ViewEncapsulation de
+
+0:41:34.760,0:41:41.400
+Angular... realmente encapsular con los
+
+0:41:37.040,0:41:45.720
+::ng-deep era siempre como una
+
+0:41:41.400,0:41:48.040
+tortura necesaria, pero bueno.
+
+0:41:45.720,0:41:50.040
+Y esto demuestra, ¿no? La convivencia de
+
+0:41:48.040,0:41:52.119
+Angular con los nuevos estándares de la
+
+0:41:50.040,0:41:54.400
+plataforma web sin depender de
+
+0:41:52.119,0:41:57.839
+preprocesadores para cosas que ya son
+
+0:41:54.400,0:42:00.400
+nativas ya del lado de CSS. Sí, Angular
+
+0:41:57.839,0:42:04.160
+es un framework que
+
+0:42:00.400,0:42:05.920
+respeta mucho lo que ya hay nativo
+
+0:42:04.160,0:42:08.240
+desde mi perspectiva. Lo hemos visto
+
+0:42:05.920,0:42:11.280
+muchas veces que, por ejemplo, con los
+
+0:42:08.240,0:42:13.520
+forms y demás respetan mucho lo que
+
+0:42:11.280,0:42:15.520
+es nativo. Es como esto es nativo, ya
+
+0:42:13.520,0:42:17.920
+está de forma nativa. Mucha gente usa
+
+0:42:15.520,0:42:20.559
+Sass y cosas así para hacer nesting.
+
+0:42:17.920,0:42:23.480
+Entonces, ¿por qué? ¿Por qué estamos
+
+0:42:20.559,0:42:25.880
+entrando en esas cosas?
+
+0:42:23.480,0:42:27.640
+Mejor usar lo que ya hay nativo, ¿no?
+
+0:42:25.880,0:42:29.920
+Conecta directamente con la filosofía
+
+0:42:27.640,0:42:33.200
+del framework de abrazar la plataforma
+
+0:42:29.920,0:42:35.319
+web moderna nativa, reduciendo la
+
+0:42:33.200,0:42:37.280
+necesidad esta de aplicar
+
+0:42:35.319,0:42:38.440
+transformaciones pesadas, de utilizar
+
+0:42:37.280,0:42:40.559
+polyfills, de utilizar otras
+
+0:42:38.440,0:42:43.319
+bibliotecas, utilizar preprocesadores,
+
+0:42:40.559,0:42:45.559
+manteniendo también el aislamiento de
+
+0:42:43.319,0:42:47.200
+los estilos de los componentes a través
+
+0:42:45.559,0:42:49.680
+de los métodos tradicionales esto de
+
+0:42:47.200,0:42:52.559
+ViewEncapsulation. Esto ya se intentó
+
+0:42:49.680,0:42:54.319
+hacer hace como 3 años y vos viste cómo
+
+0:42:52.559,0:42:57.040
+funciona Angular, que está dentro de
+
+0:42:54.319,0:42:59.280
+Google y se corren tests por todos los
+
+0:42:57.040,0:43:01.359
+repositorios que lo usan. Eh, hace 3
+
+0:42:59.280,0:43:03.319
+años cuando intentaron hacer esto, está
+
+0:43:01.359,0:43:06.319
+público lo que voy a decir ahora, para
+
+0:43:03.319,0:43:09.839
+soportar el CSS nesting nativo, falló un repositorio
+
+0:43:06.319,0:43:12.599
+de Google que tenía imágenes en base64 y
+
+0:43:09.839,0:43:14.800
+entonces eso quedó cerrado y se pospuso
+
+0:43:12.599,0:43:17.520
+y ahora en 2026 lo pudieron hacer. A mí
+
+0:43:14.800,0:43:21.240
+esta incorporación lo que me hace
+
+0:43:17.520,0:43:23.559
+pensar es el tema de los
+
+0:43:21.240,0:43:25.200
+preprocesadores.
+
+0:43:23.559,0:43:29.200
+Es que es una discusión para otro
+
+0:43:25.200,0:43:31.200
+día, pero cada vez estamos teniendo más
+
+0:43:29.200,0:43:33.119
+más cosas en Angular, más eh
+
+0:43:31.200,0:43:34.960
+herramientas y variables de CSS nativo y
+
+0:43:33.119,0:43:36.720
+demás, e incluso CSS nativo ha estado
+
+0:43:34.960,0:43:38.319
+evolucionando.
+
+0:43:36.720,0:43:41.680
+En mi caso, si arranco un proyecto
+
+0:43:38.319,0:43:44.800
+nuevo, Sass capaz que lo necesito para
+
+0:43:41.680,0:43:46.000
+el tema de los mixins y los loops, pero
+
+0:43:44.800,0:43:47.760
+por fuera de eso,
+
+0:43:46.000,0:43:49.280
+por ahora,
+
+0:43:47.760,0:43:51.440
+porque a medida que va avanzando el
+
+0:43:49.280,0:43:52.960
+tiempo y con la velocidad con la que se
+
+0:43:51.440,0:43:54.880
+está moviendo la plataforma web, al
+
+0:43:52.960,0:43:57.119
+final los preprocesadores surgen
+
+0:43:54.880,0:44:00.119
+producto de deficiencias, igual que lo
+
+0:43:57.119,0:44:02.400
+que ocurría con, ¿sabes? con otros
+
+0:44:00.119,0:44:06.400
+elementos relacionados con JavaScript
+
+0:44:02.400,0:44:08.240
+que necesitaban subsets y hoy en día no.
+
+0:44:06.400,0:44:09.960
+El problema es que los estándares no
+
+0:44:08.240,0:44:12.760
+evolucionaban tan rápido como el
+
+0:44:09.960,0:44:14.319
+ecosistema, como lo que querían los
+
+0:44:12.760,0:44:17.359
+desarrolladores y los productores de
+
+0:44:14.319,0:44:20.200
+paquetes y de bibliotecas, y los
+
+0:44:17.359,0:44:23.480
+preprocesadores vienen siendo un
+
+0:44:20.200,0:44:24.760
+grito de auxilio para no tener que estar
+
+0:44:23.480,0:44:26.880
+trabajando con
+
+0:44:24.760,0:44:29.640
+generar reglas en loop, que ahora lo
+
+0:44:26.880,0:44:33.000
+puede hacer la IA, ojo.
+
+0:44:29.640,0:44:36.280
+Ojo, porque antes la verdad que tener un
+
+0:44:33.000,0:44:39.760
+for para generar las propiedades de CSS
+
+0:44:36.280,0:44:42.960
+estaba bueno, estaba muy bueno,
+
+0:44:39.760,0:44:44.440
+pero ahora lo puede hacer la IA. Es difícil
+
+0:44:42.960,0:44:46.800
+el mantenimiento, pero también lo puede
+
+0:44:44.440,0:44:49.040
+estar haciendo la IA. Es como que
+
+0:44:46.800,0:44:50.559
+creo que hay ciertas discusiones que se
+
+0:44:49.040,0:44:52.200
+se empiezan a dar.
+
+0:44:50.559,0:44:55.359
+Está interesante
+
+0:44:52.200,0:44:57.319
+total. Y bueno, se nos ha quedado Vitest en
+
+0:44:55.359,0:44:59.160
+la versión 5, que viene con cosas de
+
+0:44:57.319,0:45:01.640
+estabilidad. Se nos han quedado varios
+
+0:44:59.160,0:45:03.880
+elementos ahí que cada uno de nosotros
+
+0:45:01.640,0:45:06.920
+por separado vamos a poder continuar
+
+0:45:03.880,0:45:09.400
+explorando. Y yo de nuevo, Damián, te
+
+0:45:06.920,0:45:12.079
+agradezco muchísimo el tiempo que le has
+
+0:45:09.400,0:45:13.839
+dedicado a esto, fundamentalmente con la
+
+0:45:12.079,0:45:16.319
+gran diferencia de horario que nosotros
+
+0:45:13.839,0:45:19.839
+tenemos entre el continente americano y el
+
+0:45:16.319,0:45:21.920
+sudeste asiático. Y bueno, espero que
+
+0:45:19.839,0:45:24.319
+disfrutes muchísimo la transición hacia
+
+0:45:21.920,0:45:26.040
+la versión 22.2.
+
+0:45:24.319,0:45:27.359
+Te agradezco, te agradezco mucho por la
+
+0:45:26.040,0:45:29.640
+invitación. También fue una buena
+
+0:45:27.359,0:45:31.720
+oportunidad porque salió ayer, me
+
+0:45:29.640,0:45:33.240
+puse a probarla y empecé a probar las
+
+0:45:31.720,0:45:35.400
+distintas cosas y la verdad me dejó
+
+0:45:33.240,0:45:37.280
+bastante conforme. Aún tengo mucho más
+
+0:45:35.400,0:45:39.240
+para probar, eh, porque viste que hay
+
+0:45:37.280,0:45:42.040
+cosas en las que uno puede jugar un
+
+0:45:39.240,0:45:44.640
+montón, pero cuando realmente se empieza
+
+0:45:42.040,0:45:46.359
+a dar cuenta de cosas que se le pasaron
+
+0:45:44.640,0:45:48.160
+es cuando está en proyectos reales, ¿no?
+
+0:45:46.359,0:45:51.319
+Entonces, capaz que me di cuenta de
+
+0:45:48.160,0:45:53.520
+cosas de las que hoy no me di cuenta. Así
+
+0:45:51.319,0:45:56.200
+que los invito a todos a que la prueben
+
+0:45:53.520,0:45:58.960
+y exploren un poco. Es una buena forma
+
+0:45:56.200,0:46:02.319
+de aprender.
+
+0:45:58.960,0:46:04.400
+Así mismo. Bueno, nos vemos entonces en
+
+0:46:02.319,0:46:09.680
+la próxima oportunidad que tengamos de
+
+0:46:04.400,0:46:09.680
+coincidir y hasta luego. ¡Chao, chao!
