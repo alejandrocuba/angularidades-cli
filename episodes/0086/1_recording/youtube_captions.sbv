@@ -1,0 +1,2061 @@
+0:00:07.240,0:00:13.799
+Alex, permíteme presentarte ante
+
+0:00:10.200,0:00:16.520
+aquellas personas que aún no te conocen.
+
+0:00:13.799,0:00:19.119
+Eres originalmente de Tegucigalpa,
+
+0:00:16.520,0:00:22.560
+Honduras, y actualmente resides en
+
+0:00:19.119,0:00:25.400
+Miami. Cuentas con la certificación de
+
+0:00:22.560,0:00:28.560
+Six Sigma Black Belt en análisis de
+
+0:00:25.400,0:00:31.640
+negocio y en optimización de procesos.
+
+0:00:28.560,0:00:34.399
+Tienes estudios en gestión de riesgo en
+
+0:00:31.640,0:00:36.879
+Columbia University y actualmente
+
+0:00:34.399,0:00:40.520
+lideras un producto y su visión de
+
+0:00:36.879,0:00:42.680
+negocio como fundador no técnico. Por
+
+0:00:40.520,0:00:44.680
+cierto, tienes una larga lista de
+
+0:00:42.680,0:00:47.399
+emprendimientos destacando, por ejemplo,
+
+0:00:44.680,0:00:49.600
+la aplicación de Shop and Go como uno de
+
+0:00:47.399,0:00:51.600
+tus más recientes productos lanzados al
+
+0:00:49.600,0:00:54.199
+mercado, a la cual le dedicamos en el
+
+0:00:51.600,0:00:58.079
+episodio anterior un segmento de 3
+
+0:00:54.199,0:01:01.039
+minutos. Muchísimas gracias por tu
+
+0:00:58.079,0:01:03.480
+patrocinio a podcast de Angularidades y
+
+0:01:01.039,0:01:05.720
+por estar acá con nosotros conversando
+
+0:01:03.480,0:01:08.240
+sobre un par de temas que muy
+
+0:01:05.720,0:01:10.360
+posiblemente van a resultarle valiosos a
+
+0:01:08.240,0:01:13.479
+quienes desarrollan software y quieren
+
+0:01:10.360,0:01:15.960
+emprender, ofrecer sus productos, sus
+
+0:01:13.479,0:01:17.880
+servicios al resto del mundo. Así que
+
+0:01:15.960,0:01:20.200
+gracias por estar acá.
+
+0:01:17.880,0:01:22.200
+Gracias a ti, Alejandro, un placer y
+
+0:01:20.200,0:01:24.920
+primero que todo déjame felicitarte
+
+0:01:22.200,0:01:27.200
+porque la semana pasada viajo hacia el
+
+0:01:24.920,0:01:28.720
+futuro y ya veo que tienes un millón de
+
+0:01:27.200,0:01:30.200
+subscribers,
+
+0:01:28.720,0:01:32.600
+entonces regreso del futuro ahora
+
+0:01:30.200,0:01:34.640
+presente para felicitarte y te digo que
+
+0:01:32.600,0:01:36.720
+no es un futuro muy lejano, ya cerquita
+
+0:01:34.640,0:01:39.840
+estás en el millón. Me me encanta tu
+
+0:01:36.720,0:01:42.320
+podcast. Gracias por todo tu apoyo y sí,
+
+0:01:39.840,0:01:44.320
+aunque estamos dirigiendo toda esta
+
+0:01:42.320,0:01:46.240
+serie de temáticas hacia un nicho de
+
+0:01:44.320,0:01:48.920
+desarrolladores y desarrolladoras en el
+
+0:01:46.240,0:01:50.640
+framework de Angular, es válido para
+
+0:01:48.920,0:01:53.079
+cualquier persona que desarrolle
+
+0:01:50.640,0:01:56.520
+productos y que tenga la posibilidad de
+
+0:01:53.079,0:01:58.479
+lidiar con un grupo de profesionales que
+
+0:01:56.520,0:02:01.079
+están enfocados directamente en el
+
+0:01:58.479,0:02:02.600
+desarrollo de tecnología frontend. Así
+
+0:02:01.079,0:02:03.840
+que gracias por
+
+0:02:02.600,0:02:07.479
+por eso.
+
+0:02:03.840,0:02:11.160
+Y bueno, nada, tengo yo entendido que tu
+
+0:02:07.479,0:02:14.840
+idea de desarrollar un mercado en línea
+
+0:02:11.160,0:02:18.160
+surgió hace bastante cantidad de años.
+
+0:02:14.840,0:02:20.120
+¿Cómo es que influyó tu paso por otras
+
+0:02:18.160,0:02:23.560
+empresas y por otros emprendimientos
+
+0:02:20.120,0:02:26.959
+tuyos para retomar esa visión con la
+
+0:02:23.560,0:02:30.160
+madurez que hoy tiene Shop and Go como
+
+0:02:26.959,0:02:32.040
+producto? Sí, mira, te explico. A mí
+
+0:02:30.160,0:02:34.239
+siempre me ha fascinado todo lo que
+
+0:02:32.040,0:02:36.560
+tiene que ver con la optimización de un
+
+0:02:34.239,0:02:38.800
+proceso o proceso en general,
+
+0:02:36.560,0:02:40.640
+específicamente cuando puedo conectar
+
+0:02:38.800,0:02:42.080
+esos procesos con una visión y una
+
+0:02:40.640,0:02:45.480
+misión.
+
+0:02:42.080,0:02:48.280
+Y fue precisamente esa pasión combinada
+
+0:02:45.480,0:02:50.440
+con mi experiencia empresarial y mis
+
+0:02:48.280,0:02:53.000
+conocimientos en estrategia, que me
+
+0:02:50.440,0:02:55.319
+permitió transformar una idea que había
+
+0:02:53.000,0:02:58.360
+tenido hace muchos años atrás en lo que
+
+0:02:55.319,0:03:01.360
+hoy conocemos como Shop and Go.
+
+0:02:58.360,0:03:04.360
+Pero para entender cómo nació esa idea,
+
+0:03:01.360,0:03:06.280
+tengo que llevarte el año 1999.
+
+0:03:04.360,0:03:09.560
+En aquel entonces yo estoy vendiendo
+
+0:03:06.280,0:03:12.360
+artículos de segunda mano y estaba
+
+0:03:09.560,0:03:14.840
+siempre constantemente buscando manera
+
+0:03:12.360,0:03:16.360
+de cómo hacer que ese proceso fuera más
+
+0:03:14.840,0:03:18.720
+eficiente.
+
+0:03:16.360,0:03:20.799
+Entonces, en conversación con un amigo
+
+0:03:18.720,0:03:22.879
+me dice un día, "Alex, pero no te tienes
+
+0:03:20.799,0:03:26.040
+que ir tan lejos. Te puedes meter a la
+
+0:03:22.879,0:03:27.519
+página de de Craigslist, página de web,
+
+0:03:26.040,0:03:29.239
+y ahí puedes empezar a vender los
+
+0:03:27.519,0:03:31.879
+artículos.
+
+0:03:29.239,0:03:35.640
+Entonces, inmediatamente me meto a la
+
+0:03:31.879,0:03:37.159
+página y empiezo a a poner artículos y
+
+0:03:35.640,0:03:39.959
+se empiezan a vender, aunque lentos,
+
+0:03:37.159,0:03:42.920
+pero se empiezan a vender. Después de 6
+
+0:03:39.959,0:03:45.159
+meses, Alejandro, identifico un problema
+
+0:03:42.920,0:03:47.560
+muy grande, dos.
+
+0:03:45.159,0:03:49.560
+El primero es uno de fraude y el segundo
+
+0:03:47.560,0:03:51.879
+es la falta de responsabilidad entre
+
+0:03:49.560,0:03:54.400
+compradores y vendedores. Pero te hago
+
+0:03:51.879,0:03:58.000
+un cuento del del primer problema que es
+
+0:03:54.400,0:04:00.920
+el fraude, que ya había tenido instantes
+
+0:03:58.000,0:04:04.400
+que la persona quería
+
+0:04:00.920,0:04:06.120
+no darme la cantidad completa, no, pero
+
+0:04:04.400,0:04:08.640
+este tipo de fraude es completamente
+
+0:04:06.120,0:04:10.360
+diferente. Te explico, la señora muy
+
+0:04:08.640,0:04:12.799
+puntual, todavía me acuerdo, nos
+
+0:04:10.360,0:04:15.959
+quedamos de ver atrás de una iglesia
+
+0:04:12.799,0:04:18.400
+cercana a la 27 avenida y la señora se
+
+0:04:15.959,0:04:20.519
+baja, mu muy guapa la señora se baja de
+
+0:04:18.400,0:04:22.120
+Mercedes-Benz y me bajo yo con los
+
+0:04:20.519,0:04:25.639
+artículos que tenía dos cámaras caras
+
+0:04:22.120,0:04:27.360
+Ncon y ella empieza a ver las cámaras y
+
+0:04:25.639,0:04:29.240
+le encantan las cámaras y me empieza a
+
+0:04:27.360,0:04:31.600
+pagar en efectivo.
+
+0:04:29.240,0:04:33.960
+Cuando llega a la mitad de la cantidad
+
+0:04:31.600,0:04:36.280
+que eran $125, me dice, "¿Me puedes
+
+0:04:33.960,0:04:38.720
+hacer un favor?" Dijo, "Sí, claro. Eh,
+
+0:04:36.280,0:04:40.320
+te puedo pagar con un cheque." Y en
+
+0:04:38.720,0:04:41.919
+aquel entonces no pensé nada de la
+
+0:04:40.320,0:04:45.199
+situación.
+
+0:04:41.919,0:04:48.400
+Me paga los las dos cámaras y me dice,
+
+0:04:45.199,0:04:50.720
+"Túan un poquito más para la gasolina.
+
+0:04:48.400,0:04:53.360
+El día siguiente voy al banco, deposito
+
+0:04:50.720,0:04:55.320
+el dinero y no hay fondos.
+
+0:04:53.360,0:04:57.800
+Trato de llamar a la señora y
+
+0:04:55.320,0:04:59.360
+completamente desaparecida, no la puedo
+
+0:04:57.800,0:05:02.280
+localizar."
+
+0:04:59.360,0:05:04.800
+en 1999, es decir, que no existían una
+
+0:05:02.280,0:05:07.199
+serie de de elementos que hoy en día te
+
+0:05:04.800,0:05:09.560
+permiten tracear eso una mejor manera y
+
+0:05:07.199,0:05:12.720
+una manera en tiempo real.
+
+0:05:09.560,0:05:14.960
+Exacto. Exacto. O sea, el el banco eh
+
+0:05:12.720,0:05:19.120
+investigó, ¿no? Pero, ¿qué iban a hacer
+
+0:05:14.960,0:05:22.160
+con 200 y y suelto, no? De de dinero. Es
+
+0:05:19.120,0:05:23.880
+más, ese dinero se perdió. Y y el
+
+0:05:22.160,0:05:25.280
+segundo problema también era la falta de
+
+0:05:23.880,0:05:28.479
+responsabilidad entre el comprador y el
+
+0:05:25.280,0:05:29.919
+vendedor. De hecho, realicé una pequeña
+
+0:05:28.479,0:05:32.639
+investigación en aquel entonces y
+
+0:05:29.919,0:05:34.360
+descubrí que muchas personas también
+
+0:05:32.639,0:05:35.759
+compartían esas mismas preocupaciones,
+
+0:05:34.360,0:05:38.560
+¿no? Me van a pagar o no se va a
+
+0:05:35.759,0:05:42.360
+presentar. En fin, seguí, ¿no?, con el
+
+0:05:38.560,0:05:45.280
+proceso de de de vender los artículos y
+
+0:05:42.360,0:05:47.039
+y lo que es interesante es que 25 años
+
+0:05:45.280,0:05:48.520
+después, ahora en el presente, esos
+
+0:05:47.039,0:05:50.120
+problemas todavía existen con muchas
+
+0:05:48.520,0:05:52.360
+plataformas.
+
+0:05:50.120,0:05:56.039
+Entonces ahí fue cuando me hice una
+
+0:05:52.360,0:05:59.360
+pregunta, ¿por qué no crear algo, no que
+
+0:05:56.039,0:06:01.039
+elimine esos problemas? Y esa pregunta
+
+0:05:59.360,0:06:04.000
+fue lo que dio origen a lo que es ahora
+
+0:06:01.039,0:06:06.800
+Sha and Go. Nosotros tenemos un sistema
+
+0:06:04.000,0:06:09.080
+de commitment que es traducido, se dice
+
+0:06:06.800,0:06:12.520
+compromiso, ¿no? Es decir, nosotros
+
+0:06:09.080,0:06:16.319
+funcionamos como una casa de subastas
+
+0:06:12.520,0:06:18.280
+como Sut, eBay. Una vez, Alejandro, que
+
+0:06:16.319,0:06:19.680
+te comprometes a comprar el artículo, lo
+
+0:06:18.280,0:06:23.599
+tienes que pagar.
+
+0:06:19.680,0:06:25.240
+No es es un compromiso y lo que hacemos
+
+0:06:23.599,0:06:28.000
+nosotros es que te damos dos
+
+0:06:25.240,0:06:30.280
+oportunidades, ¿no? Antes de llegar al a
+
+0:06:28.000,0:06:32.199
+la última fase que es que te sacamos de
+
+0:06:30.280,0:06:33.919
+la aplicación. Primero que todo, si me
+
+0:06:32.199,0:06:36.800
+quieres comprar un artículo, los dos
+
+0:06:33.919,0:06:39.120
+tenemos que aceptar la cantidad del
+
+0:06:36.800,0:06:41.560
+artículo, por decir, ¿me quieres comprar
+
+0:06:39.120,0:06:44.759
+un iPhone? ¿no? Entonces, me haces una
+
+0:06:41.560,0:06:46.440
+oferta de $100, yo la acepto, tú la
+
+0:06:44.759,0:06:48.319
+aceptas de tu lado y después viene la
+
+0:06:46.440,0:06:51.120
+parte del compromiso. Automáticamente la
+
+0:06:48.319,0:06:53.440
+aplicación te da una notificación que
+
+0:06:51.120,0:06:56.599
+tienes que comprometerte a terminar, a
+
+0:06:53.440,0:07:00.639
+finalizar el el la el artículo, a
+
+0:06:56.599,0:07:02.440
+comprarlo, ¿no? Y una vez que nosotros
+
+0:07:00.639,0:07:04.680
+tenemos la notificación que ya estamos
+
+0:07:02.440,0:07:07.400
+en compromiso, hay un timer, un reloj de
+
+0:07:04.680,0:07:09.560
+24 horas. En esas 24 horas la
+
+0:07:07.400,0:07:12.039
+transacción se tiene que finalizar. O
+
+0:07:09.560,0:07:13.680
+sea, no tiene que ser a las 24 horas,
+
+0:07:12.039,0:07:16.960
+como te digo, tiene que puede ser antes
+
+0:07:13.680,0:07:18.520
+de las 24 horas, pero tiene que ser una
+
+0:07:16.960,0:07:21.080
+una vía de comunicación o entre
+
+0:07:18.520,0:07:23.800
+comprador y vendedor para ver en qué
+
+0:07:21.080,0:07:26.080
+lugar se van a ver y estar seguros que
+
+0:07:23.800,0:07:29.400
+la persona se va a llegar, ¿no? Eh,
+
+0:07:26.080,0:07:31.639
+puede que como vendedor y comprador eh
+
+0:07:29.400,0:07:33.800
+hay un error, ¿no?, una emergencia y
+
+0:07:31.639,0:07:36.120
+nosotros no penalizamos esos tipos de de
+
+0:07:33.800,0:07:37.919
+de emergencia, ¿no? Pero ya la segunda
+
+0:07:36.120,0:07:39.759
+vez y la tercera vez, ¿qué pasa?
+
+0:07:37.919,0:07:42.720
+Nosotros sacamos automáticamente de la
+
+0:07:39.759,0:07:45.000
+aplicación. ¿Por qué? Porque entonces ya
+
+0:07:42.720,0:07:47.159
+no existe un compromiso, ¿no? Y eso es
+
+0:07:45.000,0:07:49.520
+lo que el problema que quiero evitar,
+
+0:07:47.159,0:07:51.440
+que no haya lo que se dice ghosting. Es
+
+0:07:49.520,0:07:53.639
+decir, Alejandro, todavía está ese
+
+0:07:51.440,0:07:55.159
+artículo disponible, sí está disponible.
+
+0:07:53.639,0:07:56.080
+Yo llego a las 3 de la tarde y nunca te
+
+0:07:55.159,0:07:57.800
+presentes, ¿no?
+
+0:07:56.080,0:08:01.039
+Y se te desaparece la persona del otro
+
+0:07:57.800,0:08:03.960
+lado. Exacto. Entonces, eso es lo que
+
+0:08:01.039,0:08:07.599
+trata de eliminar Shop and Go.
+
+0:08:03.960,0:08:10.960
+Y de hecho, cuando te pones a
+
+0:08:07.599,0:08:13.000
+implementar esta serie de requerimientos
+
+0:08:10.960,0:08:14.960
+funcionales, ¿sí? como está para
+
+0:08:13.000,0:08:17.319
+satisfacer lo que tú necesitas como
+
+0:08:14.960,0:08:19.960
+negocio. Sin venir del desarrollo de
+
+0:08:17.319,0:08:22.759
+software, tú defines la visión, el
+
+0:08:19.960,0:08:25.120
+diseño de experiencia de cliente, los
+
+0:08:22.759,0:08:28.120
+requerimientos de producto, pero cuál es
+
+0:08:25.120,0:08:30.960
+el mecanismo más efectivo que has podido
+
+0:08:28.120,0:08:34.080
+encontrar hasta ahora para comunicarte
+
+0:08:30.960,0:08:38.839
+con un equipo de ingeniería y asegurar
+
+0:08:34.080,0:08:40.880
+que ese requerimiento se traduce en una
+
+0:08:38.839,0:08:43.279
+arquitectura técnica que refleja con
+
+0:08:40.880,0:08:44.880
+precisión la estrategia que tú tienes de
+
+0:08:43.279,0:08:45.959
+negocio.
+
+0:08:44.880,0:08:48.480
+Sí.
+
+0:08:45.959,0:08:51.000
+Excelente pregunta.
+
+0:08:48.480,0:08:52.920
+Y en esta etapa de mi carrera
+
+0:08:51.000,0:08:56.399
+profesional, Alejandro, mi enfoque ha
+
+0:08:52.920,0:08:58.920
+cambiado bastante. Te explico, mi
+
+0:08:56.399,0:09:00.640
+responsabilidad principal es establecer
+
+0:08:58.920,0:09:03.519
+la dirección
+
+0:09:00.640,0:09:06.079
+estratégica, definir los objetivos y
+
+0:09:03.519,0:09:09.720
+asegurarme de que contamos con los
+
+0:09:06.079,0:09:12.320
+indicadores necesarios como los KPI, KIS
+
+0:09:09.720,0:09:14.200
+para medir nuestro desempeño identificar
+
+0:09:12.320,0:09:16.440
+posibles riesgos.
+
+0:09:14.200,0:09:18.279
+Ahora bien, yo confío que mi equipo
+
+0:09:16.440,0:09:20.360
+tenga la capacidad de la autonomía para
+
+0:09:18.279,0:09:24.440
+ejecutar esa visión.
+
+0:09:20.360,0:09:27.480
+Eh, también utilizamos metodologías de
+
+0:09:24.440,0:09:29.560
+priorización como mascout, no sé si la
+
+0:09:27.480,0:09:31.440
+usas tú en tu trabajo, donde
+
+0:09:29.560,0:09:34.480
+clasificamos nuestros requerimientos en
+
+0:09:31.440,0:09:38.880
+cuatro categorías, lo que es mustes,
+
+0:09:34.480,0:09:42.160
+should, coulds y wones, ¿no?
+
+0:09:38.880,0:09:44.600
+Esto nos permite distinguir entre lo que
+
+0:09:42.160,0:09:46.040
+es indispensable para el producto y
+
+0:09:44.600,0:09:47.760
+aquello que podemos desarrollar más
+
+0:09:46.040,0:09:50.560
+adelante.
+
+0:09:47.760,0:09:52.279
+Al final, mi función es definir hacia
+
+0:09:50.560,0:09:55.920
+dónde vamos, establecer esas
+
+0:09:52.279,0:09:58.040
+expectativas y medir los resultados.
+
+0:09:55.920,0:10:01.480
+La función de mis ingenieros es
+
+0:09:58.040,0:10:04.040
+determinar cómo llegamos ahí y te digo
+
+0:10:01.480,0:10:06.399
+que yo creo que esa combinación de
+
+0:10:04.040,0:10:09.560
+confianza, ¿sí? Autonomía y
+
+0:10:06.399,0:10:11.720
+responsabilidad es lo que nos permite eh
+
+0:10:09.560,0:10:13.839
+mantener nuestra estrategia alineada con
+
+0:10:11.720,0:10:15.839
+el desarrollo tecnológico de Shop and
+
+0:10:13.839,0:10:18.320
+Go.
+
+0:10:15.839,0:10:22.800
+Sí, eso me recuerda
+
+0:10:18.320,0:10:25.680
+también el tipo de diagrama de este, las
+
+0:10:22.800,0:10:27.920
+coordenadas cartesianas que representa
+
+0:10:25.680,0:10:29.720
+la toma de decisiones con creo que se
+
+0:10:27.920,0:10:32.839
+llama Insanower
+
+0:10:29.720,0:10:35.279
+Diagram, que te permite
+
+0:10:32.839,0:10:39.000
+nomenclar bien, agrupar, clasificar
+
+0:10:35.279,0:10:41.560
+elementos que sean de alta prioridad, lo
+
+0:10:39.000,0:10:43.480
+que realmente se pueda quitar, lo que se
+
+0:10:41.560,0:10:47.720
+pueda aclarar como importante para poder
+
+0:10:43.480,0:10:49.760
+entender qué nivel de relevancia tiene
+
+0:10:47.720,0:10:52.440
+cada uno de los de los requisitos que
+
+0:10:49.760,0:10:54.279
+después vaya a tomar el equipo, porque
+
+0:10:52.440,0:10:55.720
+no todo se puede desarrollar a la vez.
+
+0:10:54.279,0:10:58.079
+Si una aplicación,
+
+0:10:55.720,0:11:00.920
+debe tener una un cierto nivel de
+
+0:10:58.079,0:11:04.440
+iteración para poder llegar de punto
+
+0:11:00.920,0:11:06.560
+inicial hacia el MVP, hacia los primeros
+
+0:11:04.440,0:11:09.120
+pasos para poder continuar después a
+
+0:11:06.560,0:11:11.519
+partir de ahí progresando.
+
+0:11:09.120,0:11:14.320
+Sí, ellos son y ellos ya saben, ¿no?,
+
+0:11:11.519,0:11:15.519
+que ellos son extensión de la estrategia
+
+0:11:14.320,0:11:19.079
+mía.
+
+0:11:15.519,0:11:21.959
+Y lo que les doy a ellos es la libertad
+
+0:11:19.079,0:11:24.200
+de poder ejecutar, ¿no? Porque me
+
+0:11:21.959,0:11:26.519
+interesa más verlos a ellos crecer por
+
+0:11:24.200,0:11:28.639
+parte individual que estar
+
+0:11:26.519,0:11:31.120
+constantemente, ¿no?, hablando de
+
+0:11:28.639,0:11:32.639
+estrategias que yo sé que al final de
+
+0:11:31.120,0:11:34.880
+día ellas los pueden ejecutar ellos
+
+0:11:32.639,0:11:37.320
+mismos, ¿no? Y una cosa que siempre le
+
+0:11:34.880,0:11:39.720
+digo a ellos es que si si yo tengo que
+
+0:11:37.320,0:11:42.000
+decirle lo que se tiene que hacer
+
+0:11:39.720,0:11:44.160
+semanalmente, mensualmente, en en
+
+0:11:42.000,0:11:46.160
+realidad no lo necesito. Necesito que
+
+0:11:44.160,0:11:48.680
+ellos puedan resolver los problemas. Si
+
+0:11:46.160,0:11:51.000
+obviamente que pasen por la etapa de
+
+0:11:48.680,0:11:52.480
+aprendizaje de cómo ejecutar la
+
+0:11:51.000,0:11:54.079
+estrategia, pero que aprendan para que
+
+0:11:52.480,0:11:56.839
+lo puedan hacer ellos.
+
+0:11:54.079,0:12:00.279
+Exacto. Y con relación a como tal al
+
+0:11:56.839,0:12:03.680
+producto, a la manera en la que tú
+
+0:12:00.279,0:12:06.839
+enfrentas ese reto de balancear ofertas
+
+0:12:03.680,0:12:10.040
+y demandas desde cero con con tu visión
+
+0:12:06.839,0:12:13.600
+de la aplicación, ¿cuáles son las
+
+0:12:10.040,0:12:16.519
+prioridades operativas que encuentras a
+
+0:12:13.600,0:12:19.519
+la hora de acelerar esa tracción inicial
+
+0:12:16.519,0:12:21.880
+de usuario y generar confianza dentro de
+
+0:12:19.519,0:12:24.240
+una aplicación una vez que la lanzas a
+
+0:12:21.880,0:12:27.000
+un mercado? que muy pocas personas la
+
+0:12:24.240,0:12:30.000
+conocen desde el principio.
+
+0:12:27.000,0:12:32.920
+Sí, mira, lo más importante siempre ha
+
+0:12:30.000,0:12:35.880
+sido para mí es es escuchar la voz del
+
+0:12:32.920,0:12:38.360
+cliente de un principio, si no sabes
+
+0:12:35.880,0:12:41.839
+cómo escuchar la voz del cliente, no
+
+0:12:38.360,0:12:44.880
+tienes negocio, no tienes aplicación, eh
+
+0:12:41.839,0:12:47.160
+no te puedes desarrollar, ¿no? A ti
+
+0:12:44.880,0:12:49.240
+mismo al negocio porque no entiendes lo
+
+0:12:47.160,0:12:51.240
+que está pidiendo el cliente, ¿no? De
+
+0:12:49.240,0:12:54.519
+hecho, Shap and Go fue diseñado
+
+0:12:51.240,0:12:57.279
+precisamente alrededor de ese principio,
+
+0:12:54.519,0:13:00.279
+entender las frustraciones del usuario y
+
+0:12:57.279,0:13:03.000
+desarrollar soluciones que realmente
+
+0:13:00.279,0:13:04.720
+respondan a sus necesidades.
+
+0:13:03.000,0:13:06.600
+Y una de las mayores frustraciones que
+
+0:13:04.720,0:13:07.880
+identificamos fue la falta de compromiso
+
+0:13:06.600,0:13:10.079
+entre el comprador y vendedor, que es lo
+
+0:13:07.880,0:13:13.199
+que te había hablado anteriormente, ¿no?
+
+0:13:10.079,0:13:15.839
+Por eso nuestro principal diferenciador
+
+0:13:13.199,0:13:18.000
+es precisamente el compromiso. Queremos
+
+0:13:15.839,0:13:21.360
+ser una plataforma donde la palabra del
+
+0:13:18.000,0:13:23.040
+de la persona tenga valor. Entonces,
+
+0:13:21.360,0:13:26.440
+fuera de del compromiso, también
+
+0:13:23.040,0:13:29.560
+nosotros tenemos AIS construidos para
+
+0:13:26.440,0:13:32.360
+que si la persona está hablando bastante
+
+0:13:29.560,0:13:34.320
+o está repitiendo lo que son Zell y
+
+0:13:32.360,0:13:36.600
+cuentas de banco, automáticamente tiene
+
+0:13:34.320,0:13:38.760
+un red flag y nosotros sacamos a la
+
+0:13:36.600,0:13:41.760
+persona directamente de la aplicación
+
+0:13:38.760,0:13:43.160
+para darle al cliente la paz, ¿no? que
+
+0:13:41.760,0:13:45.360
+no va a haber una persona que le va a
+
+0:13:43.160,0:13:46.720
+pedir la información de Cell y que le
+
+0:13:45.360,0:13:48.040
+quiera sacar el dinero del banco
+
+0:13:46.720,0:13:49.920
+directamente.
+
+0:13:48.040,0:13:52.600
+Entonces, tenemos es esas estrategias de
+
+0:13:49.920,0:13:54.240
+AI creadas adentro de la aplicación para
+
+0:13:52.600,0:13:56.240
+que detecte todo lo que tiene que ver
+
+0:13:54.240,0:13:58.800
+con fraude.
+
+0:13:56.240,0:14:01.560
+Entonces, compromiso y fraude es lo que
+
+0:13:58.800,0:14:03.680
+completa el círculo de de operaciones de
+
+0:14:01.560,0:14:05.759
+lo que es Shop and Go
+
+0:14:03.680,0:14:07.720
+y llevar una aplicación que tenga este
+
+0:14:05.759,0:14:09.639
+tipo de regulaciones, ¿no? más todavía
+
+0:14:07.720,0:14:11.680
+que se trabaja con transacciones
+
+0:14:09.639,0:14:14.600
+bancarias, con otros elementos
+
+0:14:11.680,0:14:18.560
+operativos a la hora de desplegar esto
+
+0:14:14.600,0:14:20.079
+requiere un nivel de comprensión de de
+
+0:14:18.560,0:14:22.120
+las diferentes etapas en las que vas a
+
+0:14:20.079,0:14:23.720
+dividir el proceso, no solamente proceso
+
+0:14:22.120,0:14:26.040
+de desarrollo de software, sino a la
+
+0:14:23.720,0:14:28.519
+hora de lanzar cada uno de los
+
+0:14:26.040,0:14:31.320
+mecanismos subyacentes de de de toda la
+
+0:14:28.519,0:14:32.880
+estructura que que está alredor de ella.
+
+0:14:31.320,0:14:37.680
+¿Qué recomendaciones tendrías para
+
+0:14:32.880,0:14:42.279
+alguien que tiene una idea bien clara?
+
+0:14:37.680,0:14:45.079
+Pero no conoce el marco legal, no conoce
+
+0:14:42.279,0:14:48.560
+las personas indicadas para poder llevar
+
+0:14:45.079,0:14:51.320
+a cabo el desarrollo completo de punta a
+
+0:14:48.560,0:14:53.880
+cabo de esa idea.
+
+0:14:51.320,0:14:56.959
+Sí, lo más importante, Alejandro, es
+
+0:14:53.880,0:15:00.279
+empezar con la con la idea y la idea que
+
+0:14:56.959,0:15:02.839
+tenga un fin en mente, ¿no? Si ya tienes
+
+0:15:00.279,0:15:04.959
+ese fin de mente, puedes empezar a
+
+0:15:02.839,0:15:08.000
+aplicar
+
+0:15:04.959,0:15:10.880
+todo tipo de de conocimientos que tengas
+
+0:15:08.000,0:15:13.480
+para decir, bueno, si esta aplicación
+
+0:15:10.880,0:15:15.040
+requiere y todo tipo de información
+
+0:15:13.480,0:15:17.399
+ahora está disponible en el internet, no
+
+0:15:15.040,0:15:19.240
+lo puedes buscar en cosas de segundos,
+
+0:15:17.399,0:15:20.600
+pero por decir una aplicación como
+
+0:15:19.240,0:15:22.079
+Shopeng Go, ¿qué es lo que requiere?
+
+0:15:20.600,0:15:24.000
+Primero que todo, tienes que abrir una
+
+0:15:22.079,0:15:25.920
+corporación, ¿no?
+
+0:15:24.000,0:15:28.040
+Eh, esa es la primera etapa. La segunda
+
+0:15:25.920,0:15:30.880
+etapa siempre va a ser legal. Tienes que
+
+0:15:28.040,0:15:32.920
+consultar con gente que conozca el
+
+0:15:30.880,0:15:35.399
+sistema legal, porque un punto que
+
+0:15:32.920,0:15:37.440
+pongas, ¿no?, fuera de lugar te puede
+
+0:15:35.399,0:15:39.199
+traer problemas muy grandes en el en el
+
+0:15:37.440,0:15:41.120
+futuro. La segunda es la parte
+
+0:15:39.199,0:15:43.160
+operativa. ¿Qué qué personas puedes
+
+0:15:41.120,0:15:45.880
+tener que trabajen contigo, que sean
+
+0:15:43.160,0:15:48.199
+personas que que te puedan sacar el
+
+0:15:45.880,0:15:50.199
+producto adelante? Y y eso es una de las
+
+0:15:48.199,0:15:53.120
+partes más difíciles porque a mí me ha
+
+0:15:50.199,0:15:56.399
+pasado que yo he trabajado con personas
+
+0:15:53.120,0:15:57.959
+que en papel no se ven extremadamente
+
+0:15:56.399,0:16:00.000
+bien, ¿no? Y vienen con experiencia,
+
+0:15:57.959,0:16:02.440
+pero una vez que se ponen a trabajar ya
+
+0:16:00.000,0:16:03.480
+es una historia totalmente diferente,
+
+0:16:02.440,0:16:06.360
+¿no?
+
+0:16:03.480,0:16:09.240
+Y y por último es agarrar todas esas
+
+0:16:06.360,0:16:12.199
+estrategias, todos esos diagramas, todos
+
+0:16:09.240,0:16:13.600
+esos operativos y ponerlos a trabajar.
+
+0:16:12.199,0:16:15.600
+Lo lo primero que tienes que hacer,
+
+0:16:13.600,0:16:18.720
+Alejandro, es es eliminar lo que es el
+
+0:16:15.600,0:16:20.279
+miedo, porque el miedo te paraliza
+
+0:16:18.720,0:16:23.759
+completamente.
+
+0:16:20.279,0:16:26.399
+Y te lo digo que 80% de los negocios que
+
+0:16:23.759,0:16:28.680
+he tenido no lo he hecho con una
+
+0:16:26.399,0:16:30.440
+sabiduría de una persona que lleva años
+
+0:16:28.680,0:16:33.639
+haciéndola
+
+0:16:30.440,0:16:34.800
+y y eso es lo más importante que siempre
+
+0:16:33.639,0:16:37.279
+yo le he dicho a la persona, ¿no?,
+
+0:16:34.800,0:16:38.680
+Aunque aunque ellos piensan que no no
+
+0:16:37.279,0:16:41.480
+pueden salir adelante, especialmente
+
+0:16:38.680,0:16:44.759
+ahora en la etapa de del de AI que todo
+
+0:16:41.480,0:16:47.279
+te lo puede decir, ¿no? Es si si puedes
+
+0:16:44.759,0:16:51.000
+primero que todo tener una idea con un
+
+0:16:47.279,0:16:54.600
+fin en mente, empieza desde ahí y
+
+0:16:51.000,0:16:56.079
+después pon esa idea en y que te haga un
+
+0:16:54.600,0:16:58.240
+plano de las cosas que tienes que hacer
+
+0:16:56.079,0:17:00.519
+para poder ejecutar.
+
+0:16:58.240,0:17:02.720
+Eh, sobre eso te digo que siempre es muy
+
+0:17:00.519,0:17:06.240
+importante tener una persona que te
+
+0:17:02.720,0:17:08.839
+pueda dar asesoría legal,
+
+0:17:06.240,0:17:10.679
+porque eh si quieres hacer un
+
+0:17:08.839,0:17:13.839
+partnership con alguien, si quieres
+
+0:17:10.679,0:17:16.039
+tener, ¿cómo se llama? eh
+
+0:17:13.839,0:17:18.199
+dar parte de lo que son tus acciones de
+
+0:17:16.039,0:17:20.160
+la compañía cuando ya incorporas. Todo
+
+0:17:18.199,0:17:22.640
+eso tiene que ser tienes que pasarla por
+
+0:17:20.160,0:17:25.360
+una una persona que tenga conocimiento
+
+0:17:22.640,0:17:27.480
+de las leyes, porque en esa parte sí no
+
+0:17:25.360,0:17:29.200
+te aconsejo que lo corras por AI. Pero
+
+0:17:27.480,0:17:31.080
+pero ahora otro comentario que te quiero
+
+0:17:29.200,0:17:33.720
+hacer para decirte que no es no es tan
+
+0:17:31.080,0:17:38.520
+difícil como la gente piensa. Mi sobrino
+
+0:17:33.720,0:17:40.440
+sacó una aplicación de de tutoring hace
+
+0:17:38.520,0:17:42.440
+dos semanas y la corrió completamente
+
+0:17:40.440,0:17:44.760
+por AI.
+
+0:17:42.440,0:17:46.039
+O sea, no una función completa como
+
+0:17:44.760,0:17:48.320
+Shopping Go quisiéndola sacar
+
+0:17:46.039,0:17:50.559
+directamente al App Store y a Google
+
+0:17:48.320,0:17:52.480
+Play, ¿no? Pero una aplicación que corre
+
+0:17:50.559,0:17:54.760
+directamente en el teléfono y ahora
+
+0:17:52.480,0:17:56.679
+estaba investigando también con AI cómo
+
+0:17:54.760,0:17:58.880
+es que la puede actualizar en Apple Pay
+
+0:17:56.679,0:18:02.640
+y Google Play. Entonces, lo más
+
+0:17:58.880,0:18:04.880
+importante es tener miedo. Número dos,
+
+0:18:02.640,0:18:08.360
+tener un fin en mente y número tres,
+
+0:18:04.880,0:18:10.320
+ejecutar. en el proceso vas a aprender
+
+0:18:08.360,0:18:12.679
+y esa publicación cuando ya tú tienes ya
+
+0:18:10.320,0:18:15.760
+la aplicación desplegada,
+
+0:18:12.679,0:18:17.440
+¿cuál es el mecanismo?
+
+0:18:15.760,0:18:19.679
+Por supuesto, depende de una serie de
+
+0:18:17.440,0:18:21.640
+factores, de condiciones también de
+
+0:18:19.679,0:18:24.280
+contexto desde donde uno esté, en que la
+
+0:18:21.640,0:18:26.320
+plataforma uno tenga la aplicación, cuál
+
+0:18:24.280,0:18:28.240
+sea la red de personas que están
+
+0:18:26.320,0:18:31.120
+alrededor tuyo y la audiencia a la cual
+
+0:18:28.240,0:18:33.840
+está dirigida la aplicación. Hay muchos
+
+0:18:31.120,0:18:36.080
+parámetros ahí involucrados, pero cómo
+
+0:18:33.840,0:18:38.840
+tú pudieras resumir una serie de
+
+0:18:36.080,0:18:41.559
+recomendaciones que giren en torno a
+
+0:18:38.840,0:18:43.960
+poder llegar a esa audiencia que
+
+0:18:41.559,0:18:48.200
+nosotros queremos capturar.
+
+0:18:43.960,0:18:51.520
+Sí, mira, te miento si te digo de que
+
+0:18:48.200,0:18:53.919
+uno va a visualizar, ¿no?, una audiencia
+
+0:18:51.520,0:18:55.600
+eh mundial y va a pasar de la noche a la
+
+0:18:53.919,0:18:57.559
+mañana.
+
+0:18:55.600,0:19:00.320
+te mentirías si te digo que eso es es
+
+0:18:57.559,0:19:02.039
+algo de que mucha gente ha hecho, ¿no? Y
+
+0:19:00.320,0:19:05.720
+que en 6 meses ya tienen, ¿cómo se
+
+0:19:02.039,0:19:09.200
+llama? Ese nivel de de reconocimiento,
+
+0:19:05.720,0:19:11.440
+¿no? Pero muchas cosas que puedes hacer
+
+0:19:09.200,0:19:14.080
+lo que son los influencers,
+
+0:19:11.440,0:19:16.600
+¿no? Los influencers te pueden ser tu
+
+0:19:14.080,0:19:19.919
+portavoz en lo que es la aplicación.
+
+0:19:16.600,0:19:22.559
+Número uno. Número dos, podcast. Tienes
+
+0:19:19.919,0:19:24.559
+que vender tu producto. Tú como una
+
+0:19:22.559,0:19:27.000
+persona que tiene un podcast, tú ves el
+
+0:19:24.559,0:19:29.080
+crecimiento de del podcast muy lento,
+
+0:19:27.000,0:19:31.039
+¿no? Aunque lo quieras desarrollar de la
+
+0:19:29.080,0:19:33.440
+noche a la mañana es una cosa de que
+
+0:19:31.039,0:19:36.960
+toma tiempo, ¿no? Todo producto toma
+
+0:19:33.440,0:19:41.280
+tiempo. Pero, ¿cómo puedes multiplicar
+
+0:19:36.960,0:19:43.600
+la la audiencia? No, la forma más fácil
+
+0:19:41.280,0:19:45.760
+de multiplicar esa audiencia es lo
+
+0:19:43.600,0:19:47.520
+siguiente. Est es una estrategia de de
+
+0:19:45.760,0:19:48.960
+mercadeo, se dice marketing.
+
+0:19:47.520,0:19:50.679
+Sí, marketing. El mercadeo
+
+0:19:48.960,0:19:53.799
+que que tengo yo, que siempre lo he
+
+0:19:50.679,0:19:56.320
+usado. Es decir, si yo quiero crecer
+
+0:19:53.799,0:19:58.679
+este producto en la Florida, yo quiero
+
+0:19:56.320,0:20:02.080
+que la analítica del del Shopping Go me
+
+0:19:58.679,0:20:04.440
+diga cuál es la los demographics de la
+
+0:20:02.080,0:20:06.400
+persona que lo están usando,
+
+0:20:04.440,0:20:09.039
+¿no? A dónde es que se están las
+
+0:20:06.400,0:20:11.039
+personas concentradas. que venden y
+
+0:20:09.039,0:20:13.840
+compran.
+
+0:20:11.039,0:20:16.919
+Una vez que ya hemos explotado ese ese
+
+0:20:13.840,0:20:18.520
+mercado, movernos a otro zip code. Si no
+
+0:20:16.919,0:20:21.240
+funciona ese zip code, entonces
+
+0:20:18.520,0:20:22.760
+agarramos ahora a otro estado. Si no
+
+0:20:21.240,0:20:24.080
+funcionó en ese estado, entonces ahora
+
+0:20:22.760,0:20:26.120
+Centroamérica. Si no funciona en
+
+0:20:24.080,0:20:27.400
+Centroamérica, ahora Suramérica. Y eso
+
+0:20:26.120,0:20:31.760
+es lo que vamos haciendo poquito a poco,
+
+0:20:27.400,0:20:34.919
+¿no? Y y la forma más eficiente que no
+
+0:20:31.760,0:20:35.799
+ha podido crecer es por la word of
+
+0:20:34.919,0:20:38.880
+mouth.
+
+0:20:35.799,0:20:40.640
+Te encantó que tienes ahora ese
+
+0:20:38.880,0:20:42.919
+commitment, ¿no? Y que no tienes que
+
+0:20:40.640,0:20:45.720
+esperar. Ya le dices a tu amigo que hay
+
+0:20:42.919,0:20:48.640
+una aplicación donde las personas eh no
+
+0:20:45.720,0:20:51.400
+te van a a decir que van a llegar y
+
+0:20:48.640,0:20:53.280
+nunca se presentan. baja la aplicación,
+
+0:20:51.400,0:20:56.240
+esa aplicación analiza otra persona y
+
+0:20:53.280,0:20:58.480
+así es los crecidos, ¿no? Y un producto
+
+0:20:56.240,0:21:01.159
+que es un excelente producto se vende a
+
+0:20:58.480,0:21:02.760
+sí mismo, por sí mismo.
+
+0:21:01.159,0:21:05.159
+Totalmente.
+
+0:21:02.760,0:21:07.159
+Y para que sea un producto que bien
+
+0:21:05.159,0:21:09.520
+apetecible tiene que tener una serie de
+
+0:21:07.159,0:21:11.360
+elementos relacionados con la manera en
+
+0:21:09.520,0:21:13.320
+la que se despliega toda la interfaz de
+
+0:21:11.360,0:21:17.799
+usuario, que es la que separa los
+
+0:21:13.320,0:21:20.000
+sistemas que no tiene idea el usuario
+
+0:21:17.799,0:21:22.679
+que existen detrás de la aplicación. que
+
+0:21:20.000,0:21:24.600
+facilitan toda la serie de transacciones
+
+0:21:22.679,0:21:27.880
+y entonces de esa forma pues puedes
+
+0:21:24.600,0:21:29.720
+tener una experiencia bastante grata y
+
+0:21:27.880,0:21:34.120
+va a ser que ese Word of Mouse que
+
+0:21:29.720,0:21:36.200
+estaba mencionando sea algo bastante
+
+0:21:34.120,0:21:38.360
+orgánico que permita que la aplicación
+
+0:21:36.200,0:21:39.000
+vaya creciendo de una manera bastante
+
+0:21:38.360,0:21:43.320
+fluida.
+
+0:21:39.000,0:21:46.360
+Ex. Exacto. Nosotros estamos en una
+
+0:21:43.320,0:21:47.960
+Elena como como se dice en inglés. Eh,
+
+0:21:46.360,0:21:49.720
+no hay ninguna otra aplicación que
+
+0:21:47.960,0:21:52.960
+exista, Alejandro, que tenga esa
+
+0:21:49.720,0:21:55.600
+facilidad de de poder vender un artículo
+
+0:21:52.960,0:21:58.080
+sin tener que esperar que la persona se
+
+0:21:55.600,0:22:00.440
+presente o no se presente. No, nosotros,
+
+0:21:58.080,0:22:05.440
+como te digo, actuamos como una casa de
+
+0:22:00.440,0:22:07.279
+de subastas como Sabes y eBay, en donde
+
+0:22:05.440,0:22:10.320
+una vez que haces la apuesta tienes que
+
+0:22:07.279,0:22:11.480
+comprometerte a comprar el artículo. Y
+
+0:22:10.320,0:22:13.320
+eso es lo que muchas de estas
+
+0:22:11.480,0:22:15.400
+aplicaciones no tienen, un 90% de
+
+0:22:13.320,0:22:18.840
+aplicaciones no tienen esto, ¿no? Ahora
+
+0:22:15.400,0:22:21.200
+la cosa es, ¿quién puede sacar ese ese
+
+0:22:18.840,0:22:23.159
+producto adelante con el menos dinero
+
+0:22:21.200,0:22:26.120
+más eficiente, sin menos dolores de
+
+0:22:23.159,0:22:28.039
+cabeza, porque competencia siempre va a
+
+0:22:26.120,0:22:29.480
+existir,
+
+0:22:28.039,0:22:31.200
+siempre va a existir la competencia,
+
+0:22:29.480,0:22:33.520
+¿no? Entonces, depende de la dirección,
+
+0:22:31.200,0:22:36.000
+de la manera en la que se planifique
+
+0:22:33.520,0:22:37.960
+todo el sistema y después la capacidad
+
+0:22:36.000,0:22:41.159
+que uno tenga de poder mantener eso
+
+0:22:37.960,0:22:43.559
+operativo y y tener todo el monitoreo
+
+0:22:41.159,0:22:46.240
+apropiado para que la aplicación pueda
+
+0:22:43.559,0:22:48.520
+continuar el camino que uno se trazó y
+
+0:22:46.240,0:22:51.679
+evolucionando en dependencia de las
+
+0:22:48.520,0:22:55.159
+condiciones del mercado. Y te digo lo
+
+0:22:51.679,0:22:56.840
+siguiente y ojalá que en 3 cu años pueda
+
+0:22:55.159,0:22:59.679
+regresar o voy a regresar más
+
+0:22:56.840,0:23:01.120
+frecuentemente, ojalá, pero quisiera
+
+0:22:59.679,0:23:03.640
+hablar de dónde vamos a estar con este
+
+0:23:01.120,0:23:06.640
+producto, porque yo yo tengo
+
+0:23:03.640,0:23:08.200
+aspiraciones de crecer, ¿no?, eh
+
+0:23:06.640,0:23:10.159
+mundialmente.
+
+0:23:08.200,0:23:12.279
+Y si Alejandro, si ves ahora la
+
+0:23:10.159,0:23:14.919
+estadística de todas las aplicaciones
+
+0:23:12.279,0:23:17.960
+que salen al mercado y buscas ahorita
+
+0:23:14.919,0:23:20.919
+mismo en Google Play o en Apple Store y
+
+0:23:17.960,0:23:25.080
+ves las categorías donde donde nosotros
+
+0:23:20.919,0:23:29.440
+nos clasificamos que es buy and sell,
+
+0:23:25.080,0:23:31.760
+cuando ya llegas a 10,000 usuarios
+
+0:23:29.440,0:23:34.880
+e y ves la última fecha que bajaron esa
+
+0:23:31.760,0:23:36.840
+aplicación, decir 2014, al llegar al
+
+0:23:34.880,0:23:39.039
+10,000 es donde ya las personas no
+
+0:23:36.840,0:23:40.880
+quieren seguir adelante con el producto.
+
+0:23:39.039,0:23:42.400
+Porque todo se multiplica
+
+0:23:40.880,0:23:44.720
+exponencialmente.
+
+0:23:42.400,0:23:46.679
+Tienes que pagar renter, los servidores.
+
+0:23:44.720,0:23:48.880
+Acuérdate que es una aplicación free.
+
+0:23:46.679,0:23:51.400
+Cada vez que pones una foto tienes que
+
+0:23:48.880,0:23:53.480
+llamar un API y entonces ya tienes
+
+0:23:51.400,0:23:57.200
+10,000 personas y le das la oportunidad
+
+0:23:53.480,0:24:02.200
+a que pongan eh por decir siete fotos,
+
+0:23:57.200,0:24:04.720
+multiplica pun035 por si fotos, render,
+
+0:24:02.200,0:24:06.480
+los ingenieros, la aplicación. Entonces
+
+0:24:04.720,0:24:07.919
+ya ahí las muchas personas dicen, "No,
+
+0:24:06.480,0:24:08.880
+llegué a los 10,000 y ya no puedo
+
+0:24:07.919,0:24:10.200
+seguir."
+
+0:24:08.880,0:24:12.600
+Ahí es donde viene la capacidad de
+
+0:24:10.200,0:24:15.039
+estimación apropiada y de poder tener
+
+0:24:12.600,0:24:17.559
+una estrategia de escalar en función.
+
+0:24:15.039,0:24:20.279
+Eso era parte del mantenimiento de la
+
+0:24:17.559,0:24:23.120
+idea, de cómo tú logras que esa idea
+
+0:24:20.279,0:24:26.440
+pueda fructiferar cuando ya se cumplan
+
+0:24:23.120,0:24:28.919
+una serie de condiciones que salten la
+
+0:24:26.440,0:24:30.760
+barrera que tiene que ver con lo el
+
+0:24:28.919,0:24:31.880
+financiamiento y
+
+0:24:30.760,0:24:33.880
+Exacto.
+
+0:24:31.880,0:24:36.919
+buscar personas que puedan ser
+
+0:24:33.880,0:24:38.799
+inversionistas a externos y pasar por
+
+0:24:36.919,0:24:41.520
+toda una serie de procesos que se
+
+0:24:38.799,0:24:43.159
+enredan y se complican un nivel
+
+0:24:41.520,0:24:46.360
+maravilloso.
+
+0:24:43.159,0:24:49.520
+Y 10,000 es la lo que como dijiste es la
+
+0:24:46.360,0:24:52.240
+no la meta, ¿cómo se dice? La barrera.
+
+0:24:49.520,0:24:55.080
+10,000 es esa barrera. Si puedes pasar
+
+0:24:52.240,0:24:56.840
+sobre los 10,000 ya eres una aplicación.
+
+0:24:55.080,0:25:00.279
+Pero lo que tienes que hacer para llegar
+
+0:24:56.840,0:25:04.279
+a esos 10,000 es bastante bastante
+
+0:25:00.279,0:25:06.120
+trabajo. Es cómo resuelves esos tickets,
+
+0:25:04.279,0:25:07.399
+cómo resuelves el masca, ¿no? Las cosas
+
+0:25:06.120,0:25:09.799
+que tienes que hacer, las cosas que no
+
+0:25:07.399,0:25:12.480
+tienes que hacer. Eh, nosotros hemos
+
+0:25:09.799,0:25:15.919
+pasado por varios ingenieros,
+
+0:25:12.480,0:25:18.080
+eh, se cansan, no tienen la suficiente
+
+0:25:15.919,0:25:20.960
+experiencia, tienen otras cosas que
+
+0:25:18.080,0:25:22.960
+tienen que hacer. El dinero no es uno de
+
+0:25:20.960,0:25:25.480
+los motivaciones por lo cual la gente
+
+0:25:22.960,0:25:27.159
+trabaja, ¿no? Entonces, si no tienes esa
+
+0:25:25.480,0:25:29.240
+capacidad de poder pagar un ingeniero,
+
+0:25:27.159,0:25:32.440
+¿cómo le das una porcentaje a la
+
+0:25:29.240,0:25:34.440
+compañía? Hay hay varias cosas, ¿no?, de
+
+0:25:32.440,0:25:37.679
+que uno tiene que pensar bien y como te
+
+0:25:34.440,0:25:40.279
+dije, apuntarlos y ver esa visión, cómo
+
+0:25:37.679,0:25:44.240
+puede uno eliminar todo lo que es la
+
+0:25:40.279,0:25:46.120
+grasa, por decir, y hacerlo lo más limp.
+
+0:25:44.240,0:25:48.840
+Entonces, todas esas cosas uno tiene que
+
+0:25:46.120,0:25:51.919
+ponerlas en en frente de uno, ¿no? Con
+
+0:25:48.840,0:25:54.360
+con metas, porque
+
+0:25:51.919,0:25:56.799
+esa barrera de 10,000 es la barrera que
+
+0:25:54.360,0:25:59.360
+si en verdad la persona es tiene la
+
+0:25:56.799,0:26:01.120
+pasión por lo que está haciendo, esa es
+
+0:25:59.360,0:26:03.440
+la primera barrera que tienen que
+
+0:26:01.120,0:26:05.880
+derribar esos 10,000 y para llegar ahí
+
+0:26:03.440,0:26:09.799
+es bastante trabajo.
+
+0:26:05.880,0:26:12.159
+Buenísimo. Yo bueno, te deseo que no
+
+0:26:09.799,0:26:14.880
+solamente llegues a ese umbral, sino que
+
+0:26:12.159,0:26:17.640
+logres despegar a partir de ahí en la
+
+0:26:14.880,0:26:19.360
+dirección que consideres la correcta en
+
+0:26:17.640,0:26:22.279
+función de cada uno de los escalones que
+
+0:26:19.360,0:26:24.360
+vayas dando a lo largo de esa de
+
+0:26:22.279,0:26:27.640
+navegar, ese tipo de oportunidades,
+
+0:26:24.360,0:26:29.399
+Alex, y te agradezco nuevamente
+
+0:26:27.640,0:26:32.600
+todo tu apoyo y que estés acá con
+
+0:26:29.399,0:26:34.320
+nosotros. ¿Piensas que hay algo que se
+
+0:26:32.600,0:26:36.240
+haya quedado que no hayamos mencionado
+
+0:26:34.320,0:26:38.520
+durante la conversación?
+
+0:26:36.240,0:26:43.120
+No, mira, eh, que bajen la aplicación.
+
+0:26:38.520,0:26:45.000
+Eh, yo tengo eh yo soy parte de LI
+
+0:26:43.120,0:26:47.200
+adentro de la aplicación, así que si la
+
+0:26:45.000,0:26:49.720
+bajan y tienen algún problema tus tus
+
+0:26:47.200,0:26:51.840
+usuarios, tus tus tus seguidores, ¿no?,
+
+0:26:49.720,0:26:54.559
+me pueden contactar directamente a mí.
+
+0:26:51.840,0:26:57.720
+Nosotros estamos estamos creciendo eh
+
+0:26:54.559,0:27:01.200
+más rápido en Centroamérica, Honduras,
+
+0:26:57.720,0:27:02.360
+México, El Salvador, Nicaragua, que que
+
+0:27:01.200,0:27:05.320
+el crecimiento que tenemos aquí en los
+
+0:27:02.360,0:27:08.919
+Estados Unidos. La semana que viene
+
+0:27:05.320,0:27:12.720
+empezamos la campaña de desarrollo en
+
+0:27:08.919,0:27:14.320
+Zurk, en Suecia y uno el ingeniero se
+
+0:27:12.720,0:27:16.399
+mudó ahora para Alemania. Entonces, él
+
+0:27:14.320,0:27:18.320
+está haciendo la campaña en Alemania.
+
+0:27:16.399,0:27:20.880
+Entonces ya muy pronto vamos a hacer
+
+0:27:18.320,0:27:22.360
+mundiales, ¿no? Y si y si quisiera que
+
+0:27:20.880,0:27:23.880
+todos tus tus seguidores no bajen la
+
+0:27:22.360,0:27:25.720
+aplicación y que me den recomendaciones
+
+0:27:23.880,0:27:27.559
+cómo se pudiera mejorar la la
+
+0:27:25.720,0:27:29.600
+explicación, ¿no? Y y que me digan
+
+0:27:27.559,0:27:30.840
+también si les gusta o no. Y te
+
+0:27:29.600,0:27:33.320
+agradezco por haberme tenido aquí,
+
+0:27:30.840,0:27:35.840
+Alejandro. Por supuesto. Y además de ese
+
+0:27:33.320,0:27:37.559
+formulario, Alex, ¿por dónde otra vía,
+
+0:27:35.840,0:27:39.159
+por qué red social las personas pueden
+
+0:27:37.559,0:27:41.279
+seguirte o pueden mantener una
+
+0:27:39.159,0:27:43.360
+conversación directa contigo?
+
+0:27:41.279,0:27:46.799
+Sí, me pueden buscar en LinkedIn como
+
+0:27:43.360,0:27:48.720
+Alejandro Billywor, eh, también pueden
+
+0:27:46.799,0:27:51.200
+ver a Shopping Go. Estamos ahora la
+
+0:27:48.720,0:27:55.200
+semana pasada ya salimos en TikTok,
+
+0:27:51.200,0:27:57.399
+estamos en Instagram y en Facebook. Pues
+
+0:27:55.200,0:27:59.880
+nada, ahí saben. Quienes estén
+
+0:27:57.399,0:28:03.640
+escuchándonos o viéndonos a través de
+
+0:27:59.880,0:28:06.240
+los diferentes canales, sigan a Alex y
+
+0:28:03.640,0:28:08.000
+yo te agradezco muchísimo por toda la
+
+0:28:06.240,0:28:10.360
+cantidad de luces que has arrojado aquí
+
+0:28:08.000,0:28:12.039
+sobre este tema que muchas personas que
+
+0:28:10.360,0:28:13.960
+desarrollemos software generalmente
+
+0:28:12.039,0:28:15.440
+tenemos dudas. Así que gracias por
+
+0:28:13.960,0:28:17.360
+aclarar varias de las preguntas que
+
+0:28:15.440,0:28:18.799
+tenías. Así que nos vemos en la próxima
+
+0:28:17.360,0:28:20.519
+ocasión, Alex.
+
+0:28:18.799,0:28:24.600
+Por supuesto. Vale,
+
+0:28:20.519,0:28:24.600
+abrazo. Bye bye.
+
