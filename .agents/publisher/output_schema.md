@@ -26,7 +26,11 @@ Angularidades en LinkedIn (Angularidades on LinkedIn): https://www.linkedin.com/
 - Group guests naturally in the intro sentence.
 - Use Title Case for section headers, not CAPS.
 - Simple line breaks between sections.
-- For Chapters: Extract precise timestamps directly from the SRT. Chapters reflect the exact second a topic begins. Do not round or infer times.
+- For Chapters:
+  - Extract precise timestamps directly from the SRT/SBV file. Chapters reflect the exact second a topic begins. Do not round or infer times.
+  - The first chapter MUST start at `00:00:00 Intro` (or `00:00 Intro`).
+  - **Brevity & Scannability (YouTube UX Best Practices):** Chapter titles MUST be concise, punchy, and scannable: **2 to 5 words** (strictly **under 40 characters**).
+  - **No Compound Descriptions:** NEVER write long sentences, subtitle explanations, or compound clauses with colons (e.g. AVOID `Topic: how to do X and why Y matters`). Long titles get truncated with ellipses (`...`) on mobile devices and YouTube scrubber bars.
 
 ---
 # linkedin_post_es.md / linkedin_post_en.md

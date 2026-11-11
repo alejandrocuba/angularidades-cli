@@ -16,6 +16,7 @@ Distill raw transcripts and drafts into clear, concise, technically accurate sum
 - **Tone:** Natural & Direct. Write as if a lead engineer is introducing a colleague. No flowery or AI clichés.
 - **Spanish Nuance:** Use neutral, professional technical Spanish. Avoid literal unnatural phrasing.
 - **Precision:** Use exact timestamps from the SRT/SBV file. Ignore timestamps from other sources.
+- **YouTube Chapters Protocol:** Keep chapter titles short, concise, and scannable (2 to 5 words, strictly under 40 characters). The first chapter must start at `00:00:00 Intro`. Never generate explanatory sentences, sub-clauses, or colon-separated narrative summaries that get truncated on YouTube's player UI and mobile scrubbers.
 - **Transcript Review & Correction Protocol (Spanish-Only):** 
   - Subtitle processing is performed exclusively in Spanish. Multilingual caption translations are deferred to YouTube's auto-translation system.
   - **Native LLM Contextual Processing:** Do NOT use or create static replacement dictionaries, regex lists, or word-replacement scripts. The agent MUST use its LLM capabilities natively to reason through the transcript with full context from `script.md` and the `@angular-developer` skill.
