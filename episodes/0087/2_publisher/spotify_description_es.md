@@ -1,5 +1,7 @@
 Ya está disponible Angular 22.3 y en este episodio de Angularidades conversamos con Dany Walls y Eduardo Roth, ambos Google Developer Experts en Angular, sobre lo que trae esta nueva versión minor dentro del ciclo de lanzamientos del framework.
 
+Más allá de mejoras puntuales de experiencia de desarrollo, la v22.3 marca pasos concretos en el futuro de su compilación con el ngp basado en Rust, refuerza la seguridad en plantillas, trae al CLI el mecanismo de construcción de bibliotecas y continúa acercando el framework a las capacidades modernas de la plataforma web.
+
 Temas que abordamos:
 00:00:00 Intro
 00:03:04 Compilador ngp en Rust
