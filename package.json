@@ -40,19 +40,19 @@
   },
   "homepage": "https://github.com/alejandrocuba/angularidades-cli#readme",
   "dependencies": {
-    "@clack/prompts": "^1.7.0",
-    "commander": "^15.0.0",
+    "@clack/prompts": "^1.9.0",
+    "commander": "^15.1.0",
     "dotenv": "^17.4.2",
     "googleapis": "^171.4.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.2.2",
-    "@commitlint/config-conventional": "^21.2.2",
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
     "@eslint/js": "^10.0.1",
-    "eslint": "^10.8.0",
+    "eslint": "^10.15.0",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
-    "prettier": "^3.9.6",
-    "vitest": "^5.0.0"
+    "prettier": "^3.10.1",
+    "vitest": "^5.1.0"
   }
 }
