@@ -42,13 +42,16 @@ Angularidades on LinkedIn: https://www.linkedin.com/company/angularidades/
   3. ## Conecta con el invitado: / ## Connect with our guest: (use plural "los invitados" / "our guests" only if multiple guests)
   4. ## Patrocinador: / ## Sponsor: (only if the episode has a sponsor)
   5. Angularidades en LinkedIn: / Angularidades on LinkedIn:
-- EVERGREEN HOOK: Do NOT use time-anchored phrases like "la semana pasada", "last week", or "ayer". Frame intros as timeless milestones (e.g. "Ya tenemos con nosotros a...", "Angular X.Y is officially here...").
-- CONCISE CHAPTER TITLES: Keep chapter names short, punchy, and title-like, focusing directly on the feature/API name (e.g. "Router Resources", "hidden() en Signal Forms", "Bloques @boundary", "CSS Nesting nativo"). Start with "Bienvenida a..." / "Welcome..." and end with "... y cierre" / "... and Wrap-Up".
+- EVERGREEN HOOK: Do NOT use time-anchored phrases like "la semana pasada", "last week", or "ayer". Frame intros as timeless milestones (e.g. "Ya tenemos con nosotros a...", "Angular X.Y is officially here..."). Group guests naturally in the intro sentence.
 - SINGLE-LINE GUEST LINKS: Do NOT mention the guest's name on multiple lines. Format all guest profile links on a single line separated by pipe: `{{Guest Name}}: {{LinkedIn Link}} | {{GitHub Link}}`.
 - DEDICATED SPONSOR SECTION: If a sponsor is present, place it under `## Patrocinador:` / `## Sponsor:` with the platform-appropriate tracking link and call-to-action.
 - NEVER hallucinate URLs. If guest last names or LinkedIn/GitHub URLs are not provided, stop and ASK the user for them.
-- No markdown formatting in description content (only plain text and URLs; headings use standard `##`).
-- For Chapters: Extract precise timestamps directly from the SRT/SBV. Chapters reflect the exact second a topic begins. Do not round or infer times.
+- No markdown formatting in description content (only plain text and URLs; headings use standard `##` with Title Case, not CAPS, and simple line breaks between sections).
+- For Chapters:
+  - Extract precise timestamps directly from the SRT/SBV file. Chapters reflect the exact second a topic begins. Do not round or infer times.
+  - The first chapter MUST start at `00:00:00 Intro` (or `00:00:00 Bienvenida a {{Guest}}` / `00:00:00 Welcome {{Guest}}` when appropriate) and end with `... y cierre` / `... and Wrap-Up`.
+  - **Brevity & Scannability (YouTube UX Best Practices):** Chapter titles MUST be concise, punchy, and title-like, focusing directly on the feature/API name (e.g. "Router Resources", "hidden() en Signal Forms", "Bloques @boundary", "CSS Nesting nativo"): **2 to 5 words** (strictly **under 40 characters**).
+  - **No Compound Descriptions:** NEVER write long sentences, subtitle explanations, or compound clauses with colons (e.g. AVOID `Topic: how to do X and why Y matters`). Long titles get truncated with ellipses (`...`) on mobile devices and YouTube scrubber bars.
 
 ---
 # spotify_description_es.md
