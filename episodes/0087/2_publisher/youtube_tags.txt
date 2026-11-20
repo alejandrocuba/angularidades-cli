@@ -1,0 +1,1 @@
+angular, angular 22.3, ngp, rust, oxc, strictUnknownElements, angular router, httpclient query, ng-packagr, angularidades

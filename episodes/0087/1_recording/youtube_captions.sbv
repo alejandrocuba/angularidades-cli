@@ -1,0 +1,2541 @@
+0:00:00.000,0:00:03.000
+Esta
+
+0:00:07.040,0:00:12.679
+conversación debería haber sido sobre
+
+0:00:09.639,0:00:14.759
+Angular 23, pero con todos los cambios
+
+0:00:12.679,0:00:17.560
+que hubo con la frecuencia de
+
+0:00:14.759,0:00:21.400
+lanzamiento cuando se lanzó la 22,
+
+0:00:17.560,0:00:24.840
+resulta que no tenemos una versión mayor
+
+0:00:21.400,0:00:29.519
+cada 6 meses, sino aproximadamente entre
+
+0:00:24.840,0:00:32.759
+cuatro, cinco, tal vez seis miners entre
+
+0:00:29.519,0:00:36.239
+dos grandes releas. Si, la 23 debe salir
+
+0:00:32.759,0:00:38.360
+posiblemente en junio del año 202 y lo
+
+0:00:36.239,0:00:41.840
+que acaba de salir ahora en noviembre en
+
+0:00:38.360,0:00:44.399
+vez de la versión 23 es, ya saben todos,
+
+0:00:41.840,0:00:47.879
+la 22.3.
+
+0:00:44.399,0:00:51.879
+Y por acá tengo la excelente oportunidad
+
+0:00:47.879,0:00:53.440
+de estar compartiendo con Danny Wols que
+
+0:00:51.879,0:00:56.320
+se está uniendo desde Barcelona,
+
+0:00:53.440,0:00:58.399
+originalmente de República Dominicana y
+
+0:00:56.320,0:01:01.399
+Eduardo Rot que te estás conectando
+
+0:00:58.399,0:01:05.400
+desde Monterrey en México. Así que
+
+0:01:01.399,0:01:08.560
+gracias por estar acá. Ambos estuvieron
+
+0:01:05.400,0:01:11.080
+motivadísimos por participar en esta
+
+0:01:08.560,0:01:13.280
+nueva edición de Angularidades y les
+
+0:01:11.080,0:01:15.320
+aprecio muchísimo eso.
+
+0:01:13.280,0:01:17.759
+Gracias a ti por invitarnos.
+
+0:01:15.320,0:01:22.439
+Sí, gracias por la invitación.
+
+0:01:17.759,0:01:24.439
+Y entonces, ayer acaba de lanzarse.
+
+0:01:22.439,0:01:27.560
+Posiblemente vayan a ver esto un par de
+
+0:01:24.439,0:01:29.720
+días después de ese lanzamiento, pero
+
+0:01:27.560,0:01:33.320
+nosotros lo tenemos bastante fresca la
+
+0:01:29.720,0:01:35.920
+versión 22.3. Ni siquiera, al menos yo,
+
+0:01:33.320,0:01:38.159
+he tenido la oportunidad de probarla. A
+
+0:01:35.920,0:01:40.320
+veces me pongo a chequear de qué va el
+
+0:01:38.159,0:01:42.560
+release candidate, pero bueno, estaba de
+
+0:01:40.320,0:01:46.719
+viaje. casualmente Dani en República
+
+0:01:42.560,0:01:49.119
+Dominicana en Santo Domingo y nada, no
+
+0:01:46.719,0:01:52.000
+he tenido casi que chance de oportunidad
+
+0:01:49.119,0:01:53.640
+de poder familiarizarme como tal en
+
+0:01:52.000,0:01:56.399
+caliente con lo que tiene la versión más
+
+0:01:53.640,0:01:57.719
+allá de la parte vaya como que hice el
+
+0:01:56.399,0:01:59.920
+examen teórico, pero no he hecho
+
+0:01:57.719,0:02:02.360
+práctico todavía, así que estoy casi
+
+0:01:59.920,0:02:04.439
+convencido de que la luz que vayan a
+
+0:02:02.360,0:02:06.920
+arrojar ustedes sobre esta conversación
+
+0:02:04.439,0:02:08.440
+va a ser significativa para nosotros
+
+0:02:06.920,0:02:10.720
+tres y para las personas que nos estén
+
+0:02:08.440,0:02:12.480
+escuchando. Y tenemos a Eduardo aquí,
+
+0:02:10.720,0:02:15.840
+que Eduardo siempre está fresco, que eso
+
+0:02:12.480,0:02:18.840
+es lo bueno. Entonces, vamos a ver las
+
+0:02:15.840,0:02:21.720
+cosas que los cambios que que nos
+
+0:02:18.840,0:02:24.519
+impactan, que nos ayudan y sobre todo
+
+0:02:21.720,0:02:28.080
+pese esas cositas que quizás cuando
+
+0:02:24.519,0:02:30.400
+estemos entrando en pequeña profundidad
+
+0:02:28.080,0:02:32.519
+no va a cambiar o nos va a beneficiar en
+
+0:02:30.400,0:02:34.560
+nuestro desarrollo del día a día o va a
+
+0:02:32.519,0:02:37.400
+ayudar a los agentes mejor.
+
+0:02:34.560,0:02:39.360
+Sí, total.
+
+0:02:37.400,0:02:43.239
+Y bueno, ya que te pusieron en el
+
+0:02:39.360,0:02:44.879
+spotlight, Eduardo, ¿qué piensas de esta
+
+0:02:43.239,0:02:46.959
+nueva versión? Es, si la pudiera resumir
+
+0:02:44.879,0:02:50.120
+en una sola oración o en unas pocas
+
+0:02:46.959,0:02:51.920
+palabras, ¿cómo la presentarías hacia
+
+0:02:50.120,0:02:54.560
+otras personas?
+
+0:02:51.920,0:02:57.000
+Pues yo creo que sería como UX o
+
+0:02:54.560,0:02:59.840
+developer developer experience
+
+0:02:57.000,0:03:02.319
+improvements o mejoras para el
+
+0:02:59.840,0:03:04.560
+developer. Eh, uno de ellos, el cambio,
+
+0:03:02.319,0:03:07.720
+yo creo que más significativo es la
+
+0:03:04.560,0:03:10.360
+incorporación de Rust. en el compilador.
+
+0:03:07.720,0:03:12.640
+Eh, digo, obviamente viene la parte de
+
+0:03:10.360,0:03:16.159
+Typescript 7 que fue rescrito en Go,
+
+0:03:12.640,0:03:19.680
+pero como hay un tema de las librerías
+
+0:03:16.159,0:03:23.360
+que no existen en el, bueno, en
+
+0:03:19.680,0:03:26.120
+Typescript 7.1, Uno, el la gente de
+
+0:03:23.360,0:03:28.840
+Angular se puso a ver otras opciones. De
+
+0:03:26.120,0:03:31.519
+hecho, sí fue así como que entre las
+
+0:03:28.840,0:03:35.280
+redes eh era el comentario de por qué si
+
+0:03:31.519,0:03:37.560
+se va goular usa Rost y todo un tema de
+
+0:03:35.280,0:03:40.439
+debate porque ahora también parece que
+
+0:03:37.560,0:03:41.959
+todos lo queremos rostificar, ¿verdad?
+
+0:03:40.439,0:03:43.599
+Pero
+
+0:03:41.959,0:03:47.080
+Ajá. Eh,
+
+0:03:43.599,0:03:49.400
+lo queremos. Creo que ese sí, creo que
+
+0:03:47.080,0:03:51.840
+este es el cambio más significativo del
+
+0:03:49.400,0:03:53.720
+nuevo compiler con Rust, que brinda aún
+
+0:03:51.840,0:03:55.799
+más velocidad en la compilación de tus
+
+0:03:53.720,0:03:58.400
+aplicaciones. Siento que es así como que
+
+0:03:55.799,0:04:01.159
+el más llamativo. Los demás son eh temas
+
+0:03:58.400,0:04:03.040
+para el developer, que si los templates
+
+0:04:01.159,0:04:04.720
+que sean más estrictos, que los
+
+0:04:03.040,0:04:06.680
+componentes, que si no lo encuentras en
+
+0:04:04.720,0:04:08.640
+lugar de que solo te dé un warning,
+
+0:04:06.680,0:04:10.519
+rompa la compil, bueno, no rompa, pero
+
+0:04:08.640,0:04:14.360
+sino que te avise para que lo puedas
+
+0:04:10.519,0:04:16.959
+corregir. cosas de CSS,
+
+0:04:14.360,0:04:18.359
+el view transition API. Entonces, yo
+
+0:04:16.959,0:04:21.560
+creo que así como que el cambio más
+
+0:04:18.359,0:04:24.759
+fuerte que podremos notar a partir de la
+
+0:04:21.560,0:04:27.479
+versión 22.3 es este del compilador
+
+0:04:24.759,0:04:29.880
+Rust, que es el inicio de todo lo que
+
+0:04:27.479,0:04:32.919
+están buscando mejorar, porque también
+
+0:04:29.880,0:04:36.400
+quieren usar el Oxi, oxidation compiler
+
+0:04:32.919,0:04:38.039
+para la compilación de Angular.
+
+0:04:36.400,0:04:40.800
+Exacto. Es un artículo muy bueno que
+
+0:04:38.039,0:04:43.800
+lanzaron en septiembre, es decir, que
+
+0:04:40.800,0:04:47.880
+creo que fue escrito por Alex Ricaba y y
+
+0:04:43.800,0:04:51.080
+Mark, que iba acerca de las decisiones
+
+0:04:47.880,0:04:54.039
+fundamentales detrás de por qué adoptar
+
+0:04:51.080,0:04:57.479
+este tipo de mecanismos en el compilador
+
+0:04:54.039,0:04:59.800
+de Angular y por qué hacer un paso no de
+
+0:04:57.479,0:05:03.560
+avance, sino un salto completo en otra
+
+0:04:59.800,0:05:05.360
+dirección que ya no sería el NGC, si el
+
+0:05:03.560,0:05:07.280
+el compilador tradicional este de
+
+0:05:05.360,0:05:09.320
+Angula, que bueno que nosotros vimos
+
+0:05:07.280,0:05:12.440
+en Angular 12 ya finalmente todo lo que
+
+0:05:09.320,0:05:15.080
+tenía que ver con la estabilidad del
+
+0:05:12.440,0:05:18.960
+motor de renderizado IV, que fue
+
+0:05:15.080,0:05:20.240
+importantísimo para poder echar a andar
+
+0:05:18.960,0:05:23.039
+toda la parte que tenía que ver con las
+
+0:05:20.240,0:05:26.080
+vistas diferidas, con el SSR, ¿sí? Con
+
+0:05:23.039,0:05:28.360
+los internals que favorecen
+
+0:05:26.080,0:05:31.759
+prácticamente todo lo que estamos hoy en
+
+0:05:28.360,0:05:35.160
+día beneficiándonos con el framework. Es
+
+0:05:31.759,0:05:41.240
+decir, el salto viene siendo más bien en
+
+0:05:35.160,0:05:44.360
+otra dirección. hacia el NGP y la PSA es
+
+0:05:41.240,0:05:46.560
+debido a lo de la palabra preprocesador,
+
+0:05:44.360,0:05:48.720
+que más bien viene siendo como un
+
+0:05:46.560,0:05:50.759
+contexto eh bien diferente des el punto
+
+0:05:48.720,0:05:52.560
+de vista arquitectónico de la manera en
+
+0:05:50.759,0:05:54.440
+la que se generan esos ficheros. Hay
+
+0:05:52.560,0:05:56.400
+mucha documentación
+
+0:05:54.440,0:05:59.400
+muy bien escrita, muy bien redactada
+
+0:05:56.400,0:06:03.199
+acerca de las diferencias entre ambos
+
+0:05:59.400,0:06:05.720
+compiladores y por qué adoptar lo más
+
+0:06:03.199,0:06:09.440
+pronto posible la 22.3 tres para poder
+
+0:06:05.720,0:06:10.680
+ver rendimiento y poder monitorear lo
+
+0:06:09.440,0:06:12.479
+que uno está haciendo de una manera
+
+0:06:10.680,0:06:14.720
+mucho más rápida.
+
+0:06:12.479,0:06:17.280
+Sí, pero es bueno recalcar a las
+
+0:06:14.720,0:06:19.479
+personas que si tienes una aplicación
+
+0:06:17.280,0:06:22.840
+muy pequeña, quizás eso no lo notes, o
+
+0:06:19.479,0:06:25.000
+sea, va a ser como imperceptible, pero
+
+0:06:22.840,0:06:28.000
+cuando estás trabajando con un mono repo
+
+0:06:25.000,0:06:29.919
+con muchas aplicaciones
+
+0:06:28.000,0:06:32.800
+o o una aplicación Enterprise, ahí sí es
+
+0:06:29.919,0:06:35.599
+que vas a notar esa diferencia. lo en el
+
+0:06:32.800,0:06:38.479
+en el pipeline ahí tú vas a notar cómo
+
+0:06:35.599,0:06:39.880
+cómo mejoras, pero digo por porque
+
+0:06:38.479,0:06:42.280
+muchas personas lo van a instalar en el
+
+0:06:39.880,0:06:44.960
+Hello War y no y van a decir, "Pero
+
+0:06:42.280,0:06:48.199
+igual, pero no en
+
+0:06:44.960,0:06:52.120
+la aplicación de notas está igual.
+
+0:06:48.199,0:06:54.199
+Está igual. Exactamente. En mi en mi CRU
+
+0:06:52.120,0:06:56.440
+no veo la diferencia, pero realmente
+
+0:06:54.199,0:06:59.639
+cuando teng esas aplicaciones enterprise
+
+0:06:56.440,0:07:01.120
+grandes ahí lo vas a anotar.
+
+0:06:59.639,0:07:03.759
+Es bueno que que la gente tome eso en
+
+0:07:01.120,0:07:06.160
+cuenta. Eh, tú comentabas, Alejandro,
+
+0:07:03.759,0:07:08.440
+sobre y y en parte con el con el
+
+0:07:06.160,0:07:10.120
+artículo de Ninja Squad, a mí me
+
+0:07:08.440,0:07:14.919
+sorprendió porque yo sí le tiré un poco
+
+0:07:10.120,0:07:16.639
+la vista de que ahora desde Angular 17
+
+0:07:14.919,0:07:19.000
+yo he sido muy fan del View Transition y
+
+0:07:16.639,0:07:21.639
+ahora fue que se vinieron estables,
+
+0:07:19.000,0:07:24.280
+pero todo el mundo la usa.
+
+0:07:21.639,0:07:24.680
+Yo yo jamás lo he usado.
+
+0:07:24.280,0:07:27.400
+Wow.
+
+0:07:24.680,0:07:30.080
+Perdón, perdón. Sí, he visto que se
+
+0:07:27.400,0:07:32.440
+mueve y que hace todo esto y sí está muy
+
+0:07:30.080,0:07:35.919
+muy padre los efectos, pero no la he
+
+0:07:32.440,0:07:38.280
+usado. Algú algún día quizás la usaré
+
+0:07:35.919,0:07:39.840
+para detalles de bueno, estas
+
+0:07:38.280,0:07:41.400
+aplicaciones que requiere que tengan
+
+0:07:39.840,0:07:43.800
+estos efectos en la transición del
+
+0:07:41.400,0:07:45.560
+router, la verdad
+
+0:07:43.800,0:07:47.280
+va muy pero muy bien. Me sorprende que
+
+0:07:45.560,0:07:50.520
+ahora es que venido como estable. Yo
+
+0:07:47.280,0:07:52.360
+estoy usando desde las 17, estamos ahora
+
+0:07:50.520,0:07:54.080
+en la las 22
+
+0:07:52.360,0:07:55.800
+y te ahorra cantidad de Ble Play porque
+
+0:07:54.080,0:07:57.440
+no tienes que estar escribiendo toda
+
+0:07:55.800,0:07:59.759
+esta serie de características que
+
+0:07:57.440,0:08:02.560
+pertenecen a la plataforma web y ya como
+
+0:07:59.759,0:08:04.400
+bien dices Daniel en ese baseline debe
+
+0:08:02.560,0:08:06.479
+estar bastante establea
+
+0:08:04.400,0:08:10.000
+y lo mismo sucede pero bueno, en
+
+0:08:06.479,0:08:12.319
+carácter experimental con otra serie de
+
+0:08:10.000,0:08:15.599
+elementos relacionados con por ejemplo
+
+0:08:12.319,0:08:18.720
+con el control del scroll, con foco en
+
+0:08:15.599,0:08:22.520
+navegación, es decir, para poder evitar
+
+0:08:18.720,0:08:23.720
+el scroll ese eh que vaya por defecto al
+
+0:08:22.520,0:08:26.080
+tope de la página cuando uno está
+
+0:08:23.720,0:08:29.479
+cambiando entre rutas, todo eso está
+
+0:08:26.080,0:08:30.720
+bastante bien orquestado y por supuesto
+
+0:08:29.479,0:08:33.240
+un modo experimental. ¿Que quiere decir
+
+0:08:30.720,0:08:34.760
+eso? Que puede sufrir la API, al menos
+
+0:08:33.240,0:08:37.680
+la manera en la que nosotros hacemos la
+
+0:08:34.760,0:08:39.080
+anotación o escogemos cuáles son los
+
+0:08:37.680,0:08:40.919
+valores de esos atributos
+
+0:08:39.080,0:08:43.680
+correspondientes, puede cambiar
+
+0:08:40.919,0:08:45.800
+posiblemente cuando salga la versión
+
+0:08:43.680,0:08:48.560
+23.0.0.
+
+0:08:45.800,0:08:50.920
+Eso está en veremos. Y hay un par de
+
+0:08:48.560,0:08:52.560
+cositas más con relación a la
+
+0:08:50.920,0:08:54.360
+integración con la plataforma web que
+
+0:08:52.560,0:08:57.160
+pueden ver ahí en el change log en la
+
+0:08:54.360,0:08:58.920
+descripción de release en giub.com o en
+
+0:08:57.160,0:09:00.680
+cualquiera de estos blogs. Los
+
+0:08:58.920,0:09:03.519
+oficiales, no los escritos con AI,
+
+0:09:00.680,0:09:06.240
+porque si te pones a ver lo que sale lo
+
+0:09:03.519,0:09:07.600
+mismo en medium que en TO2 es horror. O
+
+0:09:06.240,0:09:09.600
+sea, sí
+
+0:09:07.600,0:09:12.800
+cosas que que hablan de Selectroless en
+
+0:09:09.600,0:09:14.240
+la 22.3 que imagínate tú. Sí, que era
+
+0:09:12.800,0:09:16.040
+justo era lo que iba a mencionar, que es
+
+0:09:14.240,0:09:18.040
+una noticia triste para todos los que
+
+0:09:16.040,0:09:20.360
+quieren, querían utilizar selectorless y
+
+0:09:18.040,0:09:23.760
+que esperaban que el API o que se
+
+0:09:20.360,0:09:25.240
+hiciera algo, algo más, ya Google
+
+0:09:23.760,0:09:28.800
+oficialmente o el equipo de Angular
+
+0:09:25.240,0:09:31.240
+oficialmente ya descartó esa ese
+
+0:09:28.800,0:09:34.480
+approach o los signal components, pero
+
+0:09:31.240,0:09:36.040
+yo creo que pega más el del selectorless
+
+0:09:34.480,0:09:41.560
+que todos se imaginaban que ya no íbamos
+
+0:09:36.040,0:09:43.839
+a tener que hacer el ponerle la selector
+
+0:09:41.560,0:09:46.320
+Ajá. Y que ya iba a ser todo inferido de
+
+0:09:43.839,0:09:48.120
+manera automática. Realmente no es así
+
+0:09:46.320,0:09:51.600
+como que nos vayamos a morir por no
+
+0:09:48.120,0:09:54.120
+tenerlo, pero pues sí es sí era
+
+0:09:51.600,0:09:56.000
+simplificar un poquito más, eliminar un
+
+0:09:54.120,0:09:57.880
+poco más de boiler plate como fueron
+
+0:09:56.000,0:10:00.279
+quitando varias propiedades que antes
+
+0:09:57.880,0:10:01.720
+eran como obligatorias y ahora ya no se
+
+0:10:00.279,0:10:04.160
+tienen que utilizar como el
+
+0:10:01.720,0:10:06.680
+no. más que todo que cuando haces la
+
+0:10:04.160,0:10:09.560
+comparativa con otros framework ya el
+
+0:10:06.680,0:10:12.839
+hecho de el selector solo angular que
+
+0:10:09.560,0:10:18.640
+que lo mantienían entonces era como más
+
+0:10:12.839,0:10:22.120
+fácil de más a yo quería quea
+
+0:10:18.640,0:10:23.680
+yo prefiero más un autoimport porque
+
+0:10:22.120,0:10:25.519
+luego se te anda olvidando a veces darle
+
+0:10:23.680,0:10:27.880
+en los imports y así de los componentes
+
+0:10:25.519,0:10:30.480
+que estás utilizando ya que no tuvieras
+
+0:10:27.880,0:10:31.760
+que hacer ningún import de manera
+
+0:10:30.480,0:10:32.040
+manual.
+
+0:10:31.760,0:10:35.800
+Bueno,
+
+0:10:32.040,0:10:38.440
+sí, eso sería tremenda mejor.
+
+0:10:35.800,0:10:41.320
+Mira, hablando así el mismo orden, la
+
+0:10:38.440,0:10:44.839
+parte de de los templates de los streak
+
+0:10:41.320,0:10:47.480
+no element, para a mí esa parte me me
+
+0:10:44.839,0:10:49.839
+gusta más que todo ahora que todo lo
+
+0:10:47.480,0:10:52.760
+está haciendo copile o la gente que a
+
+0:10:49.839,0:10:55.959
+veces se imagina las propiedades y no
+
+0:10:52.760,0:10:59.880
+tenía cómo verificarlo ahora que te que
+
+0:10:55.959,0:11:01.720
+sea más estricto, eso está bien. Sí,
+
+0:10:59.880,0:11:03.519
+es que con los tipos de plantilla,
+
+0:11:01.720,0:11:05.839
+porque a veces puedes estar utilizando
+
+0:11:03.519,0:11:07.839
+un modelo que te alucine un poco, que se
+
+0:11:05.839,0:11:10.560
+te vaya algo de contexto, aunque lo
+
+0:11:07.839,0:11:13.040
+estés amarrando ahí con un skill o con
+
+0:11:10.560,0:11:15.120
+una serie de de instrucciones propias,
+
+0:11:13.040,0:11:19.839
+puede ser que se te vaya por otro camino
+
+0:11:15.120,0:11:22.160
+y saben lo fuerte que era trabajar más
+
+0:11:19.839,0:11:24.519
+todavía en un proyecto en MVP o en algo
+
+0:11:22.160,0:11:26.480
+que necesitase salir ya con todo en
+
+0:11:24.519,0:11:27.639
+estricto, cuando éramos nosotros los
+
+0:11:26.480,0:11:29.360
+humanos los únicos que estábamos
+
+0:11:27.639,0:11:31.240
+involucrados en el proceso.
+
+0:11:29.360,0:11:33.560
+del ciclo de vida de desarrollo de un
+
+0:11:31.240,0:11:36.360
+producto de software, pero ahora
+
+0:11:33.560,0:11:40.000
+necesitamos ponerle el hardness como es
+
+0:11:36.360,0:11:42.000
+a todos estos mecanismos automatizados.
+
+0:11:40.000,0:11:43.920
+Sí, no me llegó a pasar varias veces que
+
+0:11:42.000,0:11:45.240
+compilaba la aplicación y ¿por qué no
+
+0:11:43.920,0:11:46.920
+abre? ¿Por qué no se abre? ¿Por qué no
+
+0:11:45.240,0:11:48.760
+se abre? Y ya me iba el código. Ah, se
+
+0:11:46.920,0:11:51.560
+me olvidó darle el import al al
+
+0:11:48.760,0:11:55.440
+componente. Por eso por eso no se ve, no
+
+0:11:51.560,0:11:57.959
+compila. Y también digo el otro que
+
+0:11:55.440,0:12:00.839
+coincido con el artículo que menciona
+
+0:11:57.959,0:12:04.240
+que pensó que ya existía las propiedades
+
+0:12:00.839,0:12:06.320
+de un componente que no si no existen
+
+0:12:04.240,0:12:08.560
+que ahora sí marca, bueno, te da el
+
+0:12:06.320,0:12:11.279
+warning para que lo corrijas, pero según
+
+0:12:08.560,0:12:13.920
+yo eso ya también existía, pero entonces
+
+0:12:11.279,0:12:16.519
+probablemente era WebStorm porque yo uso
+
+0:12:13.920,0:12:18.440
+Webstorm y ahí de manera automática
+
+0:12:16.519,0:12:20.399
+también aplicaba eso, pero qué bueno que
+
+0:12:18.440,0:12:22.399
+ya se está expandiendo para
+
+0:12:20.399,0:12:25.160
+Sí, con Webstorm tú descub cubrías que
+
+0:12:22.399,0:12:26.560
+era que la esa propiedad o no existía y
+
+0:12:25.160,0:12:28.440
+él te decía, "Pero si habías con otro
+
+0:12:26.560,0:12:30.399
+editor, a veces no no te saltaba de
+
+0:12:28.440,0:12:32.000
+error." Y cuando haces librerías, por
+
+0:12:30.399,0:12:35.199
+ejemplo, que yo estaba mucho en ese en
+
+0:12:32.000,0:12:38.480
+ese mundo, pues a veces desactivabas una
+
+0:12:35.199,0:12:41.199
+opción, te preca una opción de del
+
+0:12:38.480,0:12:43.800
+componente, lo seguías pasando y y
+
+0:12:41.199,0:12:47.000
+claro, ¿por qué no funciona? Pero le ya
+
+0:12:43.800,0:12:51.000
+no existe, o sea, ahora automáticamente
+
+0:12:47.000,0:12:52.639
+los tanto el ID como los agentes se van
+
+0:12:51.000,0:12:55.839
+a dar cuenta que va a fallar y va
+
+0:12:52.639,0:12:58.040
+entonces a tratar de reconducir mejor el
+
+0:12:55.839,0:13:00.920
+error. Para mí eso va a ahorrar un
+
+0:12:58.040,0:13:01.839
+poquito de aunque sea 10 o 20 toques
+
+0:13:00.920,0:13:03.720
+menos.
+
+0:13:01.839,0:13:05.399
+Total. Por suerte tenemos una amplia
+
+0:13:03.720,0:13:06.839
+colección de diagnósticos extendidos del
+
+0:13:05.399,0:13:09.680
+compilador. De hecho, si más no
+
+0:13:06.839,0:13:11.680
+recuerdo, en el episodio 76, hace más de
+
+0:13:09.680,0:13:14.040
+10 episodios, estuve conversando sobre
+
+0:13:11.680,0:13:16.560
+eso con uno de los colaboradores más
+
+0:13:14.040,0:13:18.560
+activos actualmente en el open source
+
+0:13:16.560,0:13:21.160
+con relación al framework de Angular,
+
+0:13:18.560,0:13:22.760
+Jaime Burgos, acerca de esta temática en
+
+0:13:21.160,0:13:24.800
+específico de cómo proteger desde el
+
+0:13:22.760,0:13:26.839
+punto de vista de compilación una serie
+
+0:13:24.800,0:13:29.959
+de errores que después darían el trasto
+
+0:13:26.839,0:13:31.279
+en run time sin ningún conocimiento del
+
+0:13:29.959,0:13:33.240
+desarrollador que estaba ocurriendo
+
+0:13:31.279,0:13:37.320
+allá. No sé, que pudieras incorporar
+
+0:13:33.240,0:13:40.839
+algún tipo de de como reportes, pero es
+
+0:13:37.320,0:13:43.160
+mejor no entregarle ninguna de esas
+
+0:13:40.839,0:13:45.839
+cosas feas al usuario final
+
+0:13:43.160,0:13:48.000
+y tenerlo todo del lado del lado de la
+
+0:13:45.839,0:13:50.000
+parte de compilación.
+
+0:13:48.000,0:13:51.759
+Oye, y aparte otras dos cosas que
+
+0:13:50.000,0:13:53.839
+también siento que están muy
+
+0:13:51.759,0:13:56.440
+interesantes, pero son relacionadas con
+
+0:13:53.839,0:13:58.759
+el router. Son varios ajustes los que
+
+0:13:56.440,0:14:00.360
+están integrando, pero los dos que yo
+
+0:13:58.759,0:14:03.040
+siento que son como lo más los más
+
+0:14:00.360,0:14:05.560
+importantes es el utilizar resources,
+
+0:14:03.040,0:14:07.000
+poder mandarle resources a la ruta, de
+
+0:14:05.560,0:14:09.560
+manera que ya podemos al momento de
+
+0:14:07.000,0:14:12.600
+entrar tenemos una signal que ya podemos
+
+0:14:09.560,0:14:15.399
+consumir y obtener la información y la
+
+0:14:12.600,0:14:17.600
+estamos podemos hacer acceso no solo de
+
+0:14:15.399,0:14:19.560
+los parámetros de la ruta, sino la de
+
+0:14:17.600,0:14:21.560
+las rutas padre. Entonces, ya podemos ir
+
+0:14:19.560,0:14:23.680
+a hacer combinaciones para, no sé, si
+
+0:14:21.560,0:14:26.320
+queremos los libros, ¿no? En algún caso,
+
+0:14:23.680,0:14:29.320
+una de libros, autor, entonces tenemos
+
+0:14:26.320,0:14:32.160
+autor, libros, ya podemos obtener el ID
+
+0:14:29.320,0:14:34.720
+del autor y obtener todo. Y otro que
+
+0:14:32.160,0:14:36.519
+siento que va a simplificar mucho o
+
+0:14:34.720,0:14:39.920
+muchísimo el tema del manejo de los
+
+0:14:36.519,0:14:42.480
+errores es el error boundaries
+
+0:14:39.920,0:14:44.240
+que se extiende a la ruta. Entonces, ya
+
+0:14:42.480,0:14:46.839
+en la misma configuración podemos ahí
+
+0:14:44.240,0:14:51.160
+ponerle que ya no tenemos que que si
+
+0:14:46.839,0:14:52.959
+falló la en el HTTP resource o X, que si
+
+0:14:51.160,0:14:55.160
+falla hay que mandarlo para allá. La
+
+0:14:52.959,0:14:57.759
+misma ruta ya dice, si hay algún error,
+
+0:14:55.160,0:15:00.000
+lo mando a mi página, mi componente de
+
+0:14:57.759,0:15:03.399
+error y podemos obtener todos los datos
+
+0:15:00.000,0:15:06.279
+del error y va a simplificar ese manejo
+
+0:15:03.399,0:15:08.440
+de errores porque ya es a nivel de toda
+
+0:15:06.279,0:15:11.160
+la ruta y como lo podemos mezclar con
+
+0:15:08.440,0:15:15.040
+resources, si ponemos el resource, no
+
+0:15:11.160,0:15:17.440
+sé, de una del perfil o de algo, si no
+
+0:15:15.040,0:15:20.480
+tenemos permiso, marca error, falla ese
+
+0:15:17.440,0:15:22.480
+resource y ya en automático nos manda a
+
+0:15:20.480,0:15:26.000
+la página de de error.
+
+0:15:22.480,0:15:28.839
+Entonces, no son así como que eh las
+
+0:15:26.000,0:15:30.959
+novedades tan extensas o nuevos
+
+0:15:28.839,0:15:33.920
+features, pero son cosas que para los
+
+0:15:30.959,0:15:35.040
+developers simplifican y te dan más
+
+0:15:33.920,0:15:36.519
+calidad
+
+0:15:35.040,0:15:38.680
+y que te quedas como en el mismo
+
+0:15:36.519,0:15:41.319
+contexto, pues estás estás en el
+
+0:15:38.680,0:15:43.839
+resource, automáticamente ya sabes que
+
+0:15:41.319,0:15:46.959
+eh vas a gestionar aquí pues el el error
+
+0:15:43.839,0:15:49.040
+bounder, o sea, hasta nivel de lectura
+
+0:15:46.959,0:15:51.639
+total es más ergonómico, más fácil de
+
+0:15:49.040,0:15:53.160
+poder revisar los purquest lo mismo de o
+
+0:15:51.639,0:15:54.800
+pilot que de otras personas que estén
+
+0:15:53.160,0:15:56.639
+contribuyendo a la base de código. Hasta
+
+0:15:54.800,0:16:00.399
+el código que uno escribe de lo revisa
+
+0:15:56.639,0:16:01.680
+uno en cu 5 meses y no tienes idea de lo
+
+0:16:00.399,0:16:05.519
+que escribiste.
+
+0:16:01.680,0:16:07.800
+Geminite, revisa, revisa la PR,
+
+0:16:05.519,0:16:09.360
+¿no? Y reducir ese boiler play que a
+
+0:16:07.800,0:16:11.360
+veces tenemos que tener tantas
+
+0:16:09.360,0:16:14.079
+validaciones de los parámetros, de lo
+
+0:16:11.360,0:16:16.040
+que está llegando. Ya todo eso está
+
+0:16:14.079,0:16:17.680
+controlado directamente. Lo probé el
+
+0:16:16.040,0:16:21.720
+framework, pero de pasaj también el
+
+0:16:17.680,0:16:25.519
+compleador te ayuda a que todo vaya de
+
+0:16:21.720,0:16:28.399
+la mano. Eso está muy bien. Hablando de
+
+0:16:25.519,0:16:30.440
+elementos que facilitan la experiencia
+
+0:16:28.399,0:16:32.319
+de desarrollo, hay algo que estaba ahora
+
+0:16:30.440,0:16:33.920
+chequeando en el chang que
+
+0:16:32.319,0:16:36.880
+definitivamente
+
+0:16:33.920,0:16:39.720
+lo voy a usar, pero escrito a mano. Ni
+
+0:16:36.880,0:16:42.000
+siquiera le voy a decir a la e, o sea,
+
+0:16:39.720,0:16:44.759
+confeccióname algo que lo use o algo por
+
+0:16:42.000,0:16:48.079
+el estilo. Voy a ir directamente a
+
+0:16:44.759,0:16:49.720
+emplear los operadores incrementales y
+
+0:16:48.079,0:16:52.399
+de decremento
+
+0:16:49.720,0:16:53.040
+de eventos. Eso es algo como que ya no
+
+0:16:52.399,0:16:54.040
+tienes que ir ya
+
+0:16:53.040,0:16:56.399
+nostálgico,
+
+0:16:54.040,0:16:58.800
+es decir, no tienes que ir a la parte de
+
+0:16:56.399,0:17:00.560
+componente con la lógica en TScript
+
+0:16:58.800,0:17:04.280
+directamente lo puedes escribir en la
+
+0:17:00.560,0:17:06.319
+plantilla. Ojo que viene siendo no algo
+
+0:17:04.280,0:17:09.240
+procesado en TSEN.
+
+0:17:06.319,0:17:11.280
+Angular utiliza para las plantillas un
+
+0:17:09.240,0:17:14.240
+mecanismo en la parte del compilador
+
+0:17:11.280,0:17:15.679
+para poder procesar lo que uno está
+
+0:17:14.240,0:17:18.280
+escribiendo. Cada vez que uno pone el
+
+0:17:15.679,0:17:21.520
+for o uno pone incluso hasta los puntos
+
+0:17:18.280,0:17:24.400
+y coma, todo el análisis es el léxico y
+
+0:17:21.520,0:17:28.280
+sintáctico. está siendo como parte del
+
+0:17:24.400,0:17:31.080
+NGC y bueno, ahora el NGP y no se le
+
+0:17:28.280,0:17:34.200
+pasa por eso es que a veces uno ve que
+
+0:17:31.080,0:17:36.160
+se están eh introduciendo nuevas maneras
+
+0:17:34.200,0:17:38.679
+de, por ejemplo, de declarar variables
+
+0:17:36.160,0:17:40.960
+que coinciden exactamente con la forma
+
+0:17:38.679,0:17:44.600
+en la que nosotros escribimos JavaScript
+
+0:17:40.960,0:17:47.600
+o TyScript, pero no lo es, sino es parte
+
+0:17:44.600,0:17:48.919
+de el lenguaje propio de Angular. A
+
+0:17:47.600,0:17:52.440
+medida que ellos vayan evolucionando
+
+0:17:48.919,0:17:55.360
+también lo hará Angular a nivel de la
+
+0:17:52.440,0:17:56.520
+manera en la que se escribe la sintaxis
+
+0:17:55.360,0:17:57.760
+en plantilla.
+
+0:17:56.520,0:18:00.080
+Así como dice Alejandro que quería
+
+0:17:57.760,0:18:02.159
+probar algo manualmente artesanal como
+
+0:18:00.080,0:18:05.760
+para excelente. El que yo quiero probar
+
+0:18:02.159,0:18:07.679
+es el nuevo CLI para crear librerías. A
+
+0:18:05.760,0:18:09.720
+ver qué tanto ha cambiado. No quiero que
+
+0:18:07.679,0:18:12.760
+me hagan a ella, sino quiero quiero yo
+
+0:18:09.720,0:18:15.080
+ver qué tanto qué tanto ha simplificado,
+
+0:18:12.760,0:18:16.799
+cómo se reduce ahora. Quiero probarlo.
+
+0:18:15.080,0:18:16.960
+No lo he probado. No sé si tú lo has
+
+0:18:16.799,0:18:18.720
+probado.
+
+0:18:16.960,0:18:20.640
+Me imagino que sea algo sencillo. Ellos
+
+0:18:18.720,0:18:24.400
+tienen una esquemática de migración para
+
+0:18:20.640,0:18:28.520
+eso, que es cambiar ahí en el ángulo.
+
+0:18:24.400,0:18:31.640
+Jason el builder en vez de ser el NG
+
+0:18:28.520,0:18:33.880
+packager que ya está deprecated, es
+
+0:18:31.640,0:18:36.600
+decir, marcado como obsoleto, en algún
+
+0:18:33.880,0:18:38.880
+punto se removerá. Generalmente pasa a
+
+0:18:36.600,0:18:41.280
+los 12 meses. Vamos a ver con los nuevos
+
+0:18:38.880,0:18:44.720
+ciclos estos de lanzamiento.
+
+0:18:41.280,0:18:47.720
+Lí para los que tenemos librería. Sí,
+
+0:18:44.720,0:18:51.159
+pero debe ser tan fácil como hacer el
+
+0:18:47.720,0:18:53.200
+cambio a browser builder, ¿te acuerdas?
+
+0:18:51.159,0:18:55.880
+Que no era tan fuerte como hacerlo a la
+
+0:18:53.200,0:18:57.720
+application, pero sí es un punto
+
+0:18:55.880,0:18:59.320
+intermedio y en este caso es nada, es el
+
+0:18:57.720,0:19:00.919
+punto final. Y lo bueno que tiene es que
+
+0:18:59.320,0:19:03.480
+el NG Packagher, como estaba en un
+
+0:19:00.919,0:19:05.080
+proyecto completamente aislado, no podía
+
+0:19:03.480,0:19:07.559
+reutilizar muchos elementos que hoy en
+
+0:19:05.080,0:19:10.520
+día sí se reutilizan del compilador, de
+
+0:19:07.559,0:19:15.320
+código, fuente de del resto del
+
+0:19:10.520,0:19:17.679
+compilador de CLI. Y eso bueno, le a los
+
+0:19:15.320,0:19:19.600
+mantenedores de framework les
+
+0:19:17.679,0:19:22.000
+simplificará muchísimo la vida por
+
+0:19:19.600,0:19:23.720
+suerte. y a las personas que mantenemos
+
+0:19:22.000,0:19:24.880
+bibliotecas de Angulars y los Angular
+
+0:19:23.720,0:19:25.640
+Libraries,
+
+0:19:24.880,0:19:27.720
+sí,
+
+0:19:25.640,0:19:30.480
+al saltar para allá en bibliotecas que
+
+0:19:27.720,0:19:32.880
+sean superclicada, que tengan cantidad
+
+0:19:30.480,0:19:35.440
+de puntos de entrada secundarios,
+
+0:19:32.880,0:19:38.400
+terciarios, cuaternarios, qué sé yo,
+
+0:19:35.440,0:19:42.280
+tengan mucho multiple entry points,
+
+0:19:38.400,0:19:45.360
+debe mejorar la velocidad de
+
+0:19:42.280,0:19:47.280
+compilación, no significativamente,
+
+0:19:45.360,0:19:49.200
+pero sí te vas a salvarte unos cuantos
+
+0:19:47.280,0:19:50.640
+segundos, un buen porcentaje, tiempo que
+
+0:19:49.200,0:19:52.000
+normalmente uno estaba esperando cuando
+
+0:19:50.640,0:19:53.159
+uno lanzaba una nueva versión de la
+
+0:19:52.000,0:19:54.559
+biblioteca.
+
+0:19:53.159,0:19:57.679
+Sí, es lo que yo quiero probar, la
+
+0:19:54.559,0:20:00.080
+verdad que así como porque me interesa
+
+0:19:57.679,0:20:02.360
+ver qué tanto porque yo hago tengo
+
+0:20:00.080,0:20:03.840
+muchas pequeñas librerías y estoy más
+
+0:20:02.360,0:20:07.240
+metido en ese mundo y es algo que quiero
+
+0:20:03.840,0:20:09.039
+probar. No sé tú, Edu, qué qué vas a
+
+0:20:07.240,0:20:10.799
+probar por ti mismo.
+
+0:20:09.039,0:20:13.159
+Yo no, bueno, como tal lo de las
+
+0:20:10.799,0:20:16.039
+librerías creo que hace tiempo hice una
+
+0:20:13.159,0:20:18.880
+así chiquita para uso de de en donde
+
+0:20:16.039,0:20:21.440
+trabajo, eh, pero yo siento que es un un
+
+0:20:18.880,0:20:23.960
+buen approach querer integrar todo.
+
+0:20:21.440,0:20:26.159
+Digo, porque volvemos a las raíces, que
+
+0:20:23.960,0:20:27.840
+Angular era la plataforma donde tenía
+
+0:20:26.159,0:20:29.840
+todo ya listo para que pudieras hacer.
+
+0:20:27.840,0:20:31.600
+tienes el router, tienes el state
+
+0:20:29.840,0:20:34.480
+management, tienes más cosas ahí que
+
+0:20:31.600,0:20:37.159
+puedes utilizar y esa parte de integrar
+
+0:20:34.480,0:20:41.280
+el el NG packager, que ahora pues ya es
+
+0:20:37.159,0:20:43.480
+el la elation Bill Library, sigue
+
+0:20:41.280,0:20:45.039
+uniendo todo y también le va a dar un
+
+0:20:43.480,0:20:47.360
+poquito más de estabilidad a las
+
+0:20:45.039,0:20:50.960
+actualizaciones. como ya se vuelve parte
+
+0:20:47.360,0:20:53.159
+de las librerías eh core, pues ya ahora
+
+0:20:50.960,0:20:55.840
+sí ya va a ir progresando y va a ir
+
+0:20:53.159,0:20:58.400
+siendo en el versionamiento actual y ya
+
+0:20:55.840,0:21:00.679
+está ya se va a sentir como una como una
+
+0:20:58.400,0:21:03.000
+herramienta porque dentro de lo que yo
+
+0:21:00.679,0:21:05.080
+estuve haciendo como las librerías pues
+
+0:21:03.000,0:21:07.120
+si tenías que instalar el NG Packager y
+
+0:21:05.080,0:21:09.520
+si ya le movías algo tenías que
+
+0:21:07.120,0:21:11.720
+reestructurar el Angular Jon y era el
+
+0:21:09.520,0:21:13.480
+tenías que hacer muchas cosas distintas
+
+0:21:11.720,0:21:15.600
+y no se diga si querías
+
+0:21:13.480,0:21:18.159
+Sí, y si querías publicarlo a NPM
+
+0:21:15.600,0:21:20.279
+también tenías ahí que meter más cosas.
+
+0:21:18.159,0:21:23.200
+Entonces, pues bienvenido todo lo que
+
+0:21:20.279,0:21:25.360
+mejore y simplifique eso. Eh, de lo
+
+0:21:23.200,0:21:28.400
+otro, otra de las cosas que vi muy
+
+0:21:25.360,0:21:29.799
+pequeña, pero eh te va te vas dando
+
+0:21:28.400,0:21:32.520
+cuenta que Angular se mantiene como
+
+0:21:29.799,0:21:35.320
+quiera en lo nuevo que está dentro de lo
+
+0:21:32.520,0:21:38.600
+web, es que ahora ya podemos soportar el
+
+0:21:35.320,0:21:41.760
+verbo query de las solicitudes http o
+
+0:21:38.600,0:21:44.279
+HTTP. Entonces te das cuenta que no solo
+
+0:21:41.760,0:21:45.799
+es cosas internas, sino si hay nuevas
+
+0:21:44.279,0:21:47.679
+cosas que se están integrando a la
+
+0:21:45.799,0:21:50.120
+plataforma. Bueno, que también ahí
+
+0:21:47.679,0:21:51.760
+dentro va la parte del web MCP, que
+
+0:21:50.120,0:21:53.320
+también están hay integraciones
+
+0:21:51.760,0:21:55.320
+adicionales.
+
+0:21:53.320,0:21:57.760
+Eh, bueno, con el con el verbo query
+
+0:21:55.320,0:22:01.200
+pues ya podemos hacer un tipo request
+
+0:21:57.760,0:22:01.880
+post, pero un get con parámetros, o sea,
+
+0:22:01.200,0:22:03.080
+bueno, con un cuerpo.
+
+0:22:01.880,0:22:05.240
+Fundamentalmente cuando tienes mucha
+
+0:22:03.080,0:22:07.200
+cantidad de parámetros y estás saturando
+
+0:22:05.240,0:22:08.240
+el URL, query.
+
+0:22:07.200,0:22:09.760
+Sí, exacto.
+
+0:22:08.240,0:22:10.760
+No puedes escribir. Sí, sí, está muy
+
+0:22:09.760,0:22:13.480
+bien eso
+
+0:22:10.760,0:22:15.720
+que vayan adoptando eso. Y regresando a
+
+0:22:13.480,0:22:17.799
+la parte de de las de las bibliotecas,
+
+0:22:15.720,0:22:20.320
+Eduardo, algo que estaba pensando
+
+0:22:17.799,0:22:23.720
+mientras estaba refiriéndote ahí a lo
+
+0:22:20.320,0:22:26.720
+final del pensamiento tuyo era que este
+
+0:22:23.720,0:22:30.440
+es el punto de partida de
+
+0:22:26.720,0:22:34.880
+lo que tiene que ver con la estabilidad
+
+0:22:30.440,0:22:36.320
+de las bibliotecas en un entorno rodeado
+
+0:22:34.880,0:22:39.320
+de características modernas en
+
+0:22:36.320,0:22:42.799
+framework. Si más nos recuerdan una de
+
+0:22:39.320,0:22:45.120
+las esto es especulando bastante
+
+0:22:42.799,0:22:49.279
+empírico, ¿no? Porque no sea ciencia
+
+0:22:45.120,0:22:51.520
+cierta cuán cuán verdad eh debe ser y
+
+0:22:49.279,0:22:55.080
+corríjame en los comentarios o ustedes
+
+0:22:51.520,0:22:56.880
+mismos acá si estoy en lo incorrecto que
+
+0:22:55.080,0:23:00.320
+que es parte, ¿no?, de la conversación y
+
+0:22:56.880,0:23:03.080
+la lluvia de ideas. Una de las razones
+
+0:23:00.320,0:23:05.520
+fundamentales por la cual no se puede
+
+0:23:03.080,0:23:09.000
+eliminar de framework,
+
+0:23:05.520,0:23:10.840
+lo del concepto de NG Muls es por la
+
+0:23:09.000,0:23:13.880
+retrocompatibilidad
+
+0:23:10.840,0:23:16.360
+con bibliotecas que están escritas
+
+0:23:13.880,0:23:20.960
+utilizando ese tipo de arquitectura que
+
+0:23:16.360,0:23:22.960
+no corresponde al nuevo standalone
+
+0:23:20.960,0:23:26.279
+architecture, la nueva arquitectura de
+
+0:23:22.960,0:23:27.760
+componentes autónomos. Y no sé, a lo
+
+0:23:26.279,0:23:30.799
+mejor esto es el punto de partida de lo
+
+0:23:27.760,0:23:33.000
+que va viniendo a hacer una evolución y
+
+0:23:30.799,0:23:37.760
+poder hacer algo parecido a lo que se
+
+0:23:33.000,0:23:39.520
+logró con el salto del BNG en a IV,
+
+0:23:37.760,0:23:42.440
+¿sabes? Con todas las diferencias, pero
+
+0:23:39.520,0:23:45.240
+bueno, utilizando eso como una analogía,
+
+0:23:42.440,0:23:47.520
+posiblemente en la 22.3 tr est
+
+0:23:45.240,0:23:52.120
+empezando, como mismo han hecho en otros
+
+0:23:47.520,0:23:55.200
+minors, empezando a dar una especie como
+
+0:23:52.120,0:23:57.000
+que de estabilidad a elementos que van a
+
+0:23:55.200,0:23:59.400
+venir posteriormente. ¿Quién sabe cómo
+
+0:23:57.000,0:24:01.520
+va a lucir la relación entre Angular
+
+0:23:59.400,0:24:03.960
+Libraries y consumidores de esas
+
+0:24:01.520,0:24:05.960
+bibliotecas en un futuro y muy
+
+0:24:03.960,0:24:08.400
+posiblemente estemos experimentando hoy
+
+0:24:05.960,0:24:12.080
+en día lo que viene siendo el punto de
+
+0:24:08.400,0:24:15.039
+inicio de esa nueva relación?
+
+0:24:12.080,0:24:18.320
+También siento que va a dar, hablando de
+
+0:24:15.039,0:24:20.720
+la estabilidad, va a dar un upgrade path
+
+0:24:18.320,0:24:23.919
+más sencillo. Ahorita que estabas
+
+0:24:20.720,0:24:27.000
+mencionando eh lo lo de las librerías y
+
+0:24:23.919,0:24:28.720
+de que el view Engine, me acordé que
+
+0:24:27.000,0:24:30.640
+digo, a lo mejor tengo los recuerdos
+
+0:24:28.720,0:24:32.640
+medio borrosos, pero cuando salió la
+
+0:24:30.640,0:24:34.320
+versión Angular 16, me acuerdo que
+
+0:24:32.640,0:24:37.520
+alguien de la comunidad de Angular, no
+
+0:24:34.320,0:24:39.640
+recuerdo si era GDE o no, pero creó una
+
+0:24:37.520,0:24:42.039
+página donde podías ver cuáles librerías
+
+0:24:39.640,0:24:44.440
+ya ya habían tenido una actualización
+
+0:24:42.039,0:24:47.840
+porque algo no me acuerdo precisamente
+
+0:24:44.440,0:24:50.120
+qué hubo en Angular 16 o qué se movió,
+
+0:24:47.840,0:24:51.679
+pero librerías que antes creo que ya fue
+
+0:24:50.120,0:24:54.320
+la eliminación del viewengine engine
+
+0:24:51.679,0:24:57.360
+completamente de del framework, o sea,
+
+0:24:54.320,0:25:00.960
+ya las librerías no podían utilizarlo eh
+
+0:24:57.360,0:25:02.720
+absolutamente para nada o algo similar y
+
+0:25:00.960,0:25:05.320
+había muchas librerías obsoletas que se
+
+0:25:02.720,0:25:07.279
+habían quedado y parte del del apoyo que
+
+0:25:05.320,0:25:09.679
+ellos hicieron era, bueno, copiábamos,
+
+0:25:07.279,0:25:12.080
+hacíamos un fork de la librería, la
+
+0:25:09.679,0:25:13.880
+actualizábamos y ya la podías usar.
+
+0:25:12.080,0:25:16.919
+Entonces, siento que al manejar esto
+
+0:25:13.880,0:25:18.919
+dentro del mismo dentro del mismo core
+
+0:25:16.919,0:25:20.120
+de Angular, pues ya vas a poder ya el
+
+0:25:18.919,0:25:22.279
+mismo equipo de Angular va a ir
+
+0:25:20.120,0:25:24.240
+generando esquematics que nos van a ir
+
+0:25:22.279,0:25:26.760
+apoyando y que van a apoyar a los que
+
+0:25:24.240,0:25:29.600
+mantienen las librerías. Ah, bueno, ya
+
+0:25:26.760,0:25:32.120
+salió Angular 23, corro este comando
+
+0:25:29.600,0:25:33.600
+y me actualiza. Entonces, ya no me tengo
+
+0:25:32.120,0:25:36.520
+que preocupar de, ay, bueno, tengo una
+
+0:25:33.600,0:25:39.000
+librería en Angular 14, 16. Exacto.
+
+0:25:36.520,0:25:41.200
+Quemar tokens en eso y no solo tokens,
+
+0:25:39.000,0:25:44.520
+sino tiempo, una cantidad de información
+
+0:25:41.200,0:25:46.919
+que habría que darle ahí al modelo y
+
+0:25:44.520,0:25:48.520
+posiblemente vayan direcciones que no
+
+0:25:46.919,0:25:50.640
+son las mismas que harían otras personas
+
+0:25:48.520,0:25:52.960
+dentro de un equipo y así,
+
+0:25:50.640,0:25:55.880
+¿no? y estandarizar la forma de de ir
+
+0:25:52.960,0:25:58.000
+migrando poco a poco. fue como así como
+
+0:25:55.880,0:26:00.480
+te recuerdas al principio con con los
+
+0:25:58.000,0:26:02.000
+componentes que eran standar al tú al
+
+0:26:00.480,0:26:03.760
+principio tenías que ponerle true, pero
+
+0:26:02.000,0:26:06.159
+internamente
+
+0:26:03.760,0:26:07.799
+Angular ya lo convertía y hasta que
+
+0:26:06.159,0:26:10.240
+ahora se volvió por defecto, pero a
+
+0:26:07.799,0:26:13.960
+veces darle ese tiempo porque un
+
+0:26:10.240,0:26:16.240
+mantiner le toma tiempo porque tienes
+
+0:26:13.960,0:26:18.480
+que mantener mucha compatibilidad y y
+
+0:26:16.240,0:26:23.480
+según tú viendo que tienes usuarios que
+
+0:26:18.480,0:26:29.039
+están todavía con con 15, con 16,
+
+0:26:23.480,0:26:30.640
+algunos como 14, eh, subir y cambiar una
+
+0:26:29.039,0:26:33.039
+librería a veces no es tan fácil.
+
+0:26:30.640,0:26:36.039
+Entonces, si si ellos van facilitando y
+
+0:26:33.039,0:26:37.000
+estandarizándolas, pues es más fácil el
+
+0:26:36.039,0:26:38.520
+camino.
+
+0:26:37.000,0:26:40.320
+Recuerden que en aquella época, lo mismo
+
+0:26:38.520,0:26:43.159
+que estabas diciendo, Eduardo, 15, es
+
+0:26:40.320,0:26:46.520
+decir, la 16 específicamente,
+
+0:26:43.159,0:26:47.720
+qué fácil era acordarse de la historia
+
+0:26:46.520,0:26:49.640
+de de todo lo que había salido en las
+
+0:26:47.720,0:26:52.039
+versiones anteriores, pero a medida que
+
+0:26:49.640,0:26:54.600
+va pasando el tiempo y los años se nos
+
+0:26:52.039,0:26:56.799
+van acumulando versiones de Angular, eh,
+
+0:26:54.600,0:26:58.880
+o versiones menores ahora de Angular,
+
+0:26:56.799,0:27:02.000
+como que, ¿qué fue lo que salió en la
+
+0:26:58.880,0:27:05.559
+22.1? Uno tiene que ir a refrescar un
+
+0:27:02.000,0:27:07.440
+poquito porque es una masividad de
+
+0:27:05.559,0:27:09.440
+funcionalidades, características nuevas
+
+0:27:07.440,0:27:11.279
+que han venido. Por suerte, eso quiere
+
+0:27:09.440,0:27:14.520
+decir que el framework está bastante
+
+0:27:11.279,0:27:16.080
+activo y continúa moviéndose hacia la
+
+0:27:14.520,0:27:18.960
+modernización
+
+0:27:16.080,0:27:22.919
+y tratando de estar ahí arriba de todas
+
+0:27:18.960,0:27:26.640
+las últimas técnicas y moviéndose al al
+
+0:27:22.919,0:27:30.080
+unísono con View, con Solid, con con
+
+0:27:26.640,0:27:32.120
+todo el resto del ecosistema de de web,
+
+0:27:30.080,0:27:34.640
+no solo de la plataforma web de HTML,
+
+0:27:32.120,0:27:37.480
+SCS, sino también con lo que tiene que
+
+0:27:34.640,0:27:39.399
+ver con los framework de JavaScript.
+
+0:27:37.480,0:27:41.320
+Sí, que es el primer año desde hace
+
+0:27:39.399,0:27:42.559
+mucho que no tenemos un release mayor en
+
+0:27:41.320,0:27:46.200
+noviembre.
+
+0:27:42.559,0:27:48.840
+Sí, pero en el fondo
+
+0:27:46.200,0:27:50.559
+pero también a veces se agradece porque
+
+0:27:48.840,0:27:53.440
+lo que hablamos hace un rato para
+
+0:27:50.559,0:27:56.960
+proyectos nuevos quizás tú quieres, pero
+
+0:27:53.440,0:27:59.320
+los que yo y tú también donde usas
+
+0:27:56.960,0:28:01.760
+Angular son productos estables de largo
+
+0:27:59.320,0:28:03.519
+camino que tú no aunque salga la última
+
+0:28:01.760,0:28:05.519
+versión hoy tú mañana vas a hacer la
+
+0:28:03.519,0:28:07.679
+migración te tomarás tu tiempo y el
+
+0:28:05.519,0:28:10.279
+hecho de que los features nuevos que
+
+0:28:07.679,0:28:12.080
+entren no sean break changes como antes
+
+0:28:10.279,0:28:14.440
+que a veces te costaba tanto una
+
+0:28:12.080,0:28:16.399
+migración era dolorosa. Yo creo que eso
+
+0:28:14.440,0:28:19.679
+Angular ha hecho un camino excelente.
+
+0:28:16.399,0:28:25.240
+Creo que desde la 14 en adelante,
+
+0:28:19.679,0:28:26.840
+14 15 ya una actualización no es algo
+
+0:28:25.240,0:28:30.240
+doloroso. Y ahora
+
+0:28:26.840,0:28:32.640
+corrias unos esquematics y listo. Pues
+
+0:28:30.240,0:28:35.320
+justo eso del Enterprise fue un tema en
+
+0:28:32.640,0:28:36.960
+el GD Summit que se hizo este año. Uno
+
+0:28:35.320,0:28:38.519
+de los temas que platicamos con Mark
+
+0:28:36.960,0:28:42.080
+Thompson, que es parte del equipo de
+
+0:28:38.519,0:28:44.799
+Angular, era precisamente que para el
+
+0:28:42.080,0:28:46.399
+Enterprise daba la sensación de que iban
+
+0:28:44.799,0:28:48.519
+a tener que estar haciendo muchas
+
+0:28:46.399,0:28:51.679
+actualizaciones y que tener dos releases
+
+0:28:48.519,0:28:53.159
+mayores en un año era pues no lo voy a
+
+0:28:51.679,0:28:55.240
+meter porque cada rato voy a tener que
+
+0:28:53.159,0:28:57.440
+estar actualizando y no me va a dar el
+
+0:28:55.240,0:29:00.600
+tiempo. Y parte de lo que les
+
+0:28:57.440,0:29:03.399
+mencionábamos es que desde la 14, 15 y 6
+
+0:29:00.600,0:29:05.159
+y de ahí en adelante, o sea, no hubo o
+
+0:29:03.399,0:29:07.760
+no recuerdo yo un breaking change que
+
+0:29:05.159,0:29:08.440
+dijera algo que funcionaba, me dejó de
+
+0:29:07.760,0:29:10.039
+funcionar.
+
+0:29:08.440,0:29:11.799
+La fricción viene siendo con las
+
+0:29:10.039,0:29:14.840
+bibliotecas de tercero, más bien si
+
+0:29:11.799,0:29:17.600
+utilizas NG Prime y con todo el rollo
+
+0:29:14.840,0:29:20.559
+este que puede suceder cuando tienes una
+
+0:29:17.600,0:29:22.960
+biblioteca que ya deja de existir o algo
+
+0:29:20.559,0:29:25.360
+que está viendo con unos breaking change
+
+0:29:22.960,0:29:27.760
+violentos, ahí es cuando viene el
+
+0:29:25.360,0:29:29.840
+problema. fuerte con las actualizaciones
+
+0:29:27.760,0:29:30.760
+de Angular, ¿no? Por Angular en sí
+
+0:29:29.840,0:29:32.919
+mismo.
+
+0:29:30.760,0:29:36.960
+Exactamente. Que hay mucha confusión en
+
+0:29:32.919,0:29:40.760
+eso. veces eh las personas incluyen en
+
+0:29:36.960,0:29:42.679
+en sus productos librerías que a veces
+
+0:29:40.760,0:29:45.039
+no tienen esa misma velocidad de
+
+0:29:42.679,0:29:47.919
+actualización, entonces ya te sientes
+
+0:29:45.039,0:29:52.519
+limitado porque recuerdo de versión
+
+0:29:47.919,0:29:55.039
+Angular 9, de la 9 a la 13 fue muy para
+
+0:29:52.519,0:29:57.399
+mí fue una época difícil y muchas
+
+0:29:55.039,0:29:59.880
+empresas quizás por esa experiencia ya
+
+0:29:57.399,0:30:02.840
+le daba miedo migrar y si vas en un
+
+0:29:59.880,0:30:07.840
+entorno muy corporativo, tú inicias que
+
+0:30:02.840,0:30:09.640
+va a subir a Angular 20 en enero, pero
+
+0:30:07.840,0:30:12.360
+cuando va a salir a release sale a
+
+0:30:09.640,0:30:15.559
+mitad, o sea, cuando llega a producción
+
+0:30:12.360,0:30:17.840
+se toman 4 meses en cierto entorno muy
+
+0:30:15.559,0:30:22.000
+enterprise y ya te dicen, no, que salió
+
+0:30:17.840,0:30:24.640
+una nueva versión un año, ya entonces o
+
+0:30:22.000,0:30:26.200
+te espera la última versión o una
+
+0:30:24.640,0:30:28.080
+ya siempre estás behind, ¿verdad?
+
+0:30:26.200,0:30:30.159
+Siempre estás atrás. Lo que hay un
+
+0:30:28.080,0:30:32.039
+riesgo fuertísimo de estar detrás que es
+
+0:30:30.159,0:30:35.720
+el de las vulnerabilidades. ¿Qué pasa si
+
+0:30:32.039,0:30:39.120
+de pronto se detecta algún problema no
+
+0:30:35.720,0:30:43.279
+problemón detrás de una dependencia
+
+0:30:39.120,0:30:46.279
+transitiva en no JS y estás utilizando,
+
+0:30:43.279,0:30:48.519
+digamos, Angular 21 o Angular 20 que ya
+
+0:30:46.279,0:30:52.279
+no tienen ya el soporte como tal
+
+0:30:48.519,0:30:54.519
+extendido para correcciones de problemas
+
+0:30:52.279,0:30:56.399
+de sabes de seguridad como tal que
+
+0:30:54.519,0:30:57.880
+puedan surgir, ¿qué te haces en ese
+
+0:30:56.399,0:31:00.720
+momento? tenes que estar parcheando tú
+
+0:30:57.880,0:31:04.480
+mismo, porque si no has resuelto esa
+
+0:31:00.720,0:31:07.000
+deuda técnica en años, es bastante
+
+0:31:04.480,0:31:09.120
+improbable que puedas hacerlo en una
+
+0:31:07.000,0:31:10.840
+cuestión de posiblemente de minutos o
+
+0:31:09.120,0:31:13.080
+horas, que es lo que normalmente se
+
+0:31:10.840,0:31:14.639
+requiere cuando sale este tipo de
+
+0:31:13.080,0:31:17.320
+problemas.
+
+0:31:14.639,0:31:19.039
+Sí, pero va ser la ventaja que ahora si
+
+0:31:17.320,0:31:22.559
+solamente tienes una sola versión al
+
+0:31:19.039,0:31:25.080
+año, la se sale ahora la la 22, pues
+
+0:31:22.559,0:31:29.720
+sabes que las las minas no van a tener
+
+0:31:25.080,0:31:32.480
+esos cambios eh grandes. Y como
+
+0:31:29.720,0:31:37.720
+hablábamos, yo creo que las los últimos
+
+0:31:32.480,0:31:40.399
+6 años desde desde las 14 para acá,
+
+0:31:37.720,0:31:42.960
+ya cada vez yo escucho más proyectos
+
+0:31:40.399,0:31:46.919
+desarrollados con Angular
+
+0:31:42.960,0:31:48.399
+20, 21. No, no tengo tiempo que no
+
+0:31:46.919,0:31:52.000
+escucho a alguien diciendo al menos que
+
+0:31:48.399,0:31:55.120
+tengo estoy en Angular 13 o Angular 14.
+
+0:31:52.000,0:31:57.360
+Creo que no. Estoy en Angular JJS
+
+0:31:55.120,0:31:58.960
+1.2
+
+0:31:57.360,0:32:01.159
+y todavía los hay, eh, Eduardo.
+
+0:31:58.960,0:32:02.360
+Todavía los hay, ¿no? Sí, todavía los
+
+0:32:01.159,0:32:04.720
+Sí,
+
+0:32:02.360,0:32:08.200
+pero bueno, eh, me imagino, ¿no? Que la
+
+0:32:04.720,0:32:12.240
+fricción sea mínima para saltar de
+
+0:32:08.200,0:32:14.279
+cualquier minor de la 22 o la misma 22.0
+
+0:32:12.240,0:32:16.799
+hacia ahora la 22.3. ¿Qué es lo que le
+
+0:32:14.279,0:32:18.480
+recomendarían a las personas que todavía
+
+0:32:16.799,0:32:21.080
+no lo han hecho porque acaba de salir
+
+0:32:18.480,0:32:24.360
+recién ayer?
+
+0:32:21.080,0:32:24.360
+NG update
+
+0:32:25.240,0:32:30.760
+la forma más fácil porque al hacerlo,
+
+0:32:28.159,0:32:34.679
+específicamente cuando uno está moviendo
+
+0:32:30.760,0:32:39.279
+majors, están corriendo una serie de
+
+0:32:34.679,0:32:41.679
+esquemáticas de migración que solamente
+
+0:32:39.279,0:32:43.519
+corresponden a saltos de una versión
+
+0:32:41.679,0:32:47.360
+hacia otra.
+
+0:32:43.519,0:32:50.639
+Es bastante raro que eso les imparte de
+
+0:32:47.360,0:32:53.000
+una manera fuertísima en un minor, pero
+
+0:32:50.639,0:32:55.440
+de todos modos existe la posibilidad de
+
+0:32:53.000,0:32:55.919
+que de que hayan esquemáticas que puedan
+
+0:32:55.440,0:32:57.840
+correr.
+
+0:32:55.919,0:32:59.799
+Sí, pero lo que siempre hablo con otro
+
+0:32:57.840,0:33:02.760
+amigo mío, que la ventaja es que los
+
+0:32:59.799,0:33:04.760
+esquematis son deterministas, es hace
+
+0:33:02.760,0:33:06.960
+eso y devuelve esto. No va a haber
+
+0:33:04.760,0:33:10.440
+errores, no va a haber alucidaciones.
+
+0:33:06.960,0:33:12.320
+Cuando cuando tu agente intenta ser un
+
+0:33:10.440,0:33:13.559
+fix, pero en vez de ser el fix, tira
+
+0:33:12.320,0:33:15.120
+directamente de las esquematis
+
+0:33:13.559,0:33:17.720
+oficiales,
+
+0:33:15.120,0:33:19.720
+tú no vas a tener problemas. O sea, no.
+
+0:33:17.720,0:33:22.799
+O cuando tú le estás haciendo el bomb
+
+0:33:19.720,0:33:25.080
+ese ahí mismo en el package.jonjon,
+
+0:33:22.799,0:33:27.480
+estás perdiendo la oportunidad. En un en
+
+0:33:25.080,0:33:29.320
+un major no lo hagas nunca, pero en un
+
+0:33:27.480,0:33:32.799
+minor estás perdiendo la oportunidad de
+
+0:33:29.320,0:33:34.880
+que corran elementos de verificación
+
+0:33:32.799,0:33:38.240
+detrás de la fachada con el comando del
+
+0:33:34.880,0:33:40.039
+CLI para actualizar la versión.
+
+0:33:38.240,0:33:41.760
+Sí, que en automático te haga los
+
+0:33:40.039,0:33:45.159
+ajustes necesarios que el equipo de
+
+0:33:41.760,0:33:46.919
+Angular considera eh óptimos para tu
+
+0:33:45.159,0:33:49.919
+proyecto. O sea, como cuando fue el
+
+0:33:46.919,0:33:52.120
+standal un true, corrías el schematic y
+
+0:33:49.919,0:33:54.440
+en automático todo te lo reemplazaba
+
+0:33:52.120,0:33:57.799
+como lo necesitabas. O sea, si leía
+
+0:33:54.440,0:34:00.399
+módulos, te lo ponía stand a un false.
+
+0:33:57.799,0:34:02.039
+Luego cuando se quita, pues ya corres el
+
+0:34:00.399,0:34:04.880
+schematic, te actualiza y te elimina
+
+0:34:02.039,0:34:07.360
+todos los que no tenían false. Entonces,
+
+0:34:04.880,0:34:09.800
+o sea, la verdad es que el equipo de
+
+0:34:07.360,0:34:11.960
+Angular sí se lució, tiene un un 100 con
+
+0:34:09.800,0:34:15.720
+el CLI que desarrolló y que han ido
+
+0:34:11.960,0:34:18.000
+manteniendo y que continúan mejorando en
+
+0:34:15.720,0:34:20.480
+cada versión que lanzan.
+
+0:34:18.000,0:34:22.560
+Sí, cada vez hacen más checks, eh,
+
+0:34:20.480,0:34:25.320
+explican más los pasos. O sea, para mí
+
+0:34:22.560,0:34:26.440
+es en ese aspecto el C de Angular es
+
+0:34:25.320,0:34:29.280
+perfecto.
+
+0:34:26.440,0:34:33.119
+Pues nada, que tengan entonces una muy
+
+0:34:29.280,0:34:35.480
+buena actualización a la 22.3.
+
+0:34:33.119,0:34:38.440
+Yo voy a esperar al lunes para descansar
+
+0:34:35.480,0:34:39.919
+ahora en lo que queda de semana y voy a
+
+0:34:38.440,0:34:41.399
+hacer el benchmarking. Les propongo
+
+0:34:39.919,0:34:43.159
+también al resto de las personas que nos
+
+0:34:41.399,0:34:45.919
+están escuchando que lo hagan igual para
+
+0:34:43.159,0:34:47.720
+que puedan entender cuán rápido es esta
+
+0:34:45.919,0:34:48.760
+nueva versión minor con relación a lo
+
+0:34:47.720,0:34:50.800
+que tenían anteriormente,
+
+0:34:48.760,0:34:53.839
+específicamente si trabajan con
+
+0:34:50.800,0:34:57.680
+proyectos que a su vez exporten una
+
+0:34:53.839,0:35:00.400
+biblioteca y y ahí vamos a ver qué tal.
+
+0:34:57.680,0:35:03.160
+Exacto. Y que lo prueben, que que den
+
+0:35:00.400,0:35:05.040
+feedback, que que es lo bueno que tiene
+
+0:35:03.160,0:35:08.240
+que poder que tú puedes dar tu feedback
+
+0:35:05.040,0:35:11.200
+en la en la comunidad y y así entre
+
+0:35:08.240,0:35:15.920
+todos poder buscar una una solución en
+
+0:35:11.200,0:35:17.640
+caso de y si no happy day, como dirían.
+
+0:35:15.920,0:35:20.839
+Así mismo.
+
+0:35:17.640,0:35:22.160
+Bueno, Dani, Eduardo, nos vemos.
+
+0:35:20.839,0:35:24.800
+Bueno, a la próxima y gracias por la
+
+0:35:22.160,0:35:29.680
+invitación nuevamente, Alejandro.
+
+0:35:24.800,0:35:29.680
+Muchas gracias, Alejandro. Un gusto.
+
